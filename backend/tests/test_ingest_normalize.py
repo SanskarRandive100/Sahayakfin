@@ -62,6 +62,23 @@ def test_categorise(narration, direction, category, kind, channel):
     assert (t.category, t.kind, t.channel) == (category, kind, channel)
 
 
+def test_ids_sort_in_statement_order_and_are_unique():
+    raw = [RawTxn(date(2026, 10, 4), f"ATM CASH WDL {i}", 100.0 + i, "DR", 5000.0 - i) for i in range(300)]
+    a, b = normalize(raw, None, KEY), normalize(raw, None, KEY)
+    ids = [t.id for t in a]
+    assert all(re.fullmatch(r"[0-9a-f]{32}", i) for i in ids)
+    assert ids == sorted(ids)
+    assert len(set(ids) | {t.id for t in b}) == 600
+
+
+@needs_samples
+def test_score_survives_storage_order_by_date_then_id():
+    """Sanskar's store returns rows ordered by (txn_date, id); the score must not change."""
+    for slug in OWNERS:
+        t = txns_of(slug)
+        assert compute_score(sorted(t, key=lambda x: (x.date, x.id))) == compute_score(t)
+
+
 def test_amounts_in_paise():
     assert one("ATM CASH WDL", amount=4999.99).amount_paise == 499999
     assert one("ATM CASH WDL", amount=4999.99).balance_paise == 100000

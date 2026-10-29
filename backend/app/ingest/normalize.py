@@ -1,7 +1,8 @@
 """RawTxn -> Txn: categorise (raw text) -> flag -> mask -> token -> kind, then round-trip detection (CONTRACTS §2)."""
 import math
 import re
-import uuid
+import secrets
+import time
 from collections import Counter
 from dataclasses import replace
 from typing import Optional
@@ -15,6 +16,14 @@ from app.scoring.types import RawTxn, Txn
 ROUND_TRIP_DAYS = 7
 ROUND_TRIP_TOLERANCE = 0.10
 PINNED_FLAGS = {"ROUND_TRIP", "REVERSAL"}  # gaming defences a recategorisation cannot undo
+
+
+def ordered_ids(n: int) -> list[str]:
+    """32-hex ids that sort in statement order: batch prefix (time + random) + 6-hex sequence + random tail.
+    Storage that orders rows by (date, id) then keeps the bank's order within a day, which the weekly
+    closing balance (savings rule) depends on."""
+    batch = f"{time.time_ns() // 1000:014x}"[-14:] + secrets.token_hex(1)
+    return [f"{batch}{i:06x}{secrets.token_hex(5)}"[:32] for i in range(n)]
 
 
 def to_paise(rupees: float) -> int:
@@ -94,7 +103,8 @@ def normalize(raw: list[RawTxn], owner_name: Optional[str], hmac_key: bytes) -> 
         hmac_key = hmac_key.encode()
     out: list[Txn] = []
     person_tokens: set[str] = set()
-    for r in raw:
+    ids = ordered_ids(len(raw))
+    for r, txn_id in zip(raw, ids):
         narration = " ".join(str(r.narration).split())
         name = extract_payee(narration)
         category = categorize(narration, r.direction, owner_name, name)
@@ -103,7 +113,7 @@ def normalize(raw: list[RawTxn], owner_name: Optional[str], hmac_key: bytes) -> 
         if token and not is_business(name):
             person_tokens.add(token)
         out.append(Txn(
-            id=uuid.uuid4().hex,
+            id=txn_id,
             date=r.date,
             amount_paise=to_paise(abs(r.amount)),
             direction=r.direction,
