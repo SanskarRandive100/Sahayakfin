@@ -84,11 +84,17 @@ def stress_test(txns: list[Txn], shock: float, weekly_instalment_paise: int) -> 
     inst = weekly_instalment_paise / 100
     covered = 0
     shortfall = 0.0
+    series = []
     for w in weeks:
+        surplus = w.income - w.expense_fixed - w.expense_flex - w.debt
         f = (1 - shock) * w.income - w.expense_fixed - (1 - shock) * w.expense_flex - w.debt
+        # When flexible spending exceeds income, the formula would make a drop look helpful; it never is.
+        f = min(f, surplus)
         if f >= inst - 1e-9:
             covered += 1
         shortfall += max(0.0, inst - f)
+        series.append({"week_start": w.week_start.isoformat(), "surplus_paise": paise(surplus),
+                       "stressed_surplus_paise": paise(f)})
     shortfall_paise = paise(shortfall)
 
     last_balance = current_balance_paise(txns)
@@ -110,4 +116,4 @@ def stress_test(txns: list[Txn], shock: float, weekly_instalment_paise: int) -> 
         advice = "BUILD_BUFFER_FIRST" if safe < SMALL_SAFE_WEEKLY_PAISE else "TAKE_SMALLER_AMOUNT"
 
     return {"weeks_covered": covered, "weeks_total": W, "light": light, "buffer_covers": buffer_covers,
-            "shortfall_paise": shortfall_paise, "advice": advice}
+            "shortfall_paise": shortfall_paise, "advice": advice, "series": series}

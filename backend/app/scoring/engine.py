@@ -163,6 +163,19 @@ def _tip(code: str, inp: WeeklyInputs, s: dict) -> dict:
 
 # ---------------------------------------------------------------- results
 
+def weekly_series(inp: WeeklyInputs) -> list[dict]:
+    """Per-week chart data (CONTRACTS §3.1 metrics.weekly): unsmoothed income/expense, smoothed surplus."""
+    W = len(inp.I)
+    starts = inp.week_starts or [None] * W
+    D = inp.D_smooth if inp.D_smooth is not None else inp.D
+    return [{"week_start": starts[w].isoformat() if starts[w] else None,
+             "income_paise": paise(inp.I[w]),
+             "expense_paise": paise(inp.E[w]),
+             "surplus_paise": paise(inp.I[w] - inp.E_smooth[w] - D[w]),
+             "saved": bool(inp.saved[w])}
+            for w in range(W)]
+
+
 def score_inputs(inp: WeeklyInputs) -> dict:
     """ScoreResult (CONTRACTS §3.1) from precomputed weekly inputs."""
     comps = components(inp.I, inp.E, inp.saved, inp.bills_on_time, inp.bills_total, inp.bounces, inp.E_smooth)
@@ -213,6 +226,7 @@ def score_inputs(inp: WeeklyInputs) -> dict:
             "bounces": inp.bounces,
             "savings_weeks": sum(1 for x in inp.saved if x),
             "categorised_share": round(inp.categorised_share, 2),
+            "weekly": weekly_series(inp),
         },
         "reasons": reasons,
         "tips": tips,

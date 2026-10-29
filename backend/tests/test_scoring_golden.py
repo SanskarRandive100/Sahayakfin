@@ -139,4 +139,13 @@ def test_result_shape_matches_contract():
     assert set(r["components"]) == {"income_stability", "savings_habit", "bill_discipline", "expense_health"}
     assert set(r["metrics"]) == {"median_weekly_income_paise", "p25_weekly_income_paise", "expense_ratio",
                                  "weeks_in_surplus", "bills_on_time", "bills_total", "bounces", "savings_weeks",
-                                 "categorised_share"}
+                                 "categorised_share", "weekly"}
+
+
+def test_weekly_series_from_weekly_lists():
+    w = score_from_weekly(A_I, A_E, A_S, 5, 6, 0)["metrics"]["weekly"]
+    assert len(w) == 12
+    assert w[0] == {"week_start": None, "income_paise": 500000, "expense_paise": 400000,
+                    "surplus_paise": 100000, "saved": True}
+    assert [x["saved"] for x in w] == [bool(s) for s in A_S]
+    assert w[9]["surplus_paise"] == -70000

@@ -145,8 +145,36 @@ def test_arjun_stress_is_not_ok():
 
 def test_stress_shape():
     r = stress_test(txns("ravi"), 0.2, 30678)
-    assert set(r) == {"weeks_covered", "weeks_total", "light", "buffer_covers", "shortfall_paise", "advice"}
+    assert set(r) == {"weeks_covered", "weeks_total", "light", "buffer_covers", "shortfall_paise", "advice",
+                      "series"}
     assert r["light"] in ("GREEN", "AMBER", "RED")
+
+
+@pytest.mark.parametrize("slug", list(OWNERS))
+def test_stress_series(slug):
+    t = txns(slug)
+    base = stress_test(t, 0, 30678)["series"]
+    assert len(base) == score(slug)["weeks_observed"]
+    assert [w["week_start"] for w in base] == sorted(w["week_start"] for w in base)
+    assert all(w["surplus_paise"] == w["stressed_surplus_paise"] for w in base)   # shock 0 = unstressed view
+    weekly = score(slug)["metrics"]["weekly"]
+    assert [w["surplus_paise"] for w in base] == [w["surplus_paise"] for w in weekly]
+    for shock in (0.1, 0.2, 0.3):
+        for w in stress_test(t, shock, 30678)["series"]:
+            assert w["stressed_surplus_paise"] <= w["surplus_paise"]
+
+
+@pytest.mark.parametrize("slug", list(OWNERS))
+def test_metrics_weekly(slug):
+    s = score(slug)
+    w = s["metrics"]["weekly"]
+    assert len(w) == s["weeks_observed"]
+    assert [x["week_start"] for x in w] == sorted(x["week_start"] for x in w)
+    assert w[-1]["week_start"] == "2026-10-19"
+    assert set(w[0]) == {"week_start", "income_paise", "expense_paise", "surplus_paise", "saved"}
+    assert sum(x["saved"] for x in w) == s["metrics"]["savings_weeks"]
+    incomes = sorted(x["income_paise"] for x in w)
+    assert abs(s["metrics"]["median_weekly_income_paise"] - (incomes[(len(w) - 1) // 2] + incomes[len(w) // 2]) / 2) <= 1
 
 
 # ---------------------------------------------------------------- §2.4 wellness

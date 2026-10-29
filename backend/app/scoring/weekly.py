@@ -158,6 +158,8 @@ class WeeklyInputs:
     categorised_share: float
     cash_share: float
     as_of: Optional[date]
+    week_starts: Optional[list[date]] = None   # None for score_from_weekly
+    D_smooth: Optional[list[float]] = None
 
 
 def weekly_inputs(txns: list[Txn], as_of: Optional[date] = None) -> WeeklyInputs:
@@ -178,4 +180,5 @@ def weekly_inputs(txns: list[Txn], as_of: Optional[date] = None) -> WeeklyInputs
                         bills_on_time=on_time, bills_total=total, bounces=bounces,
                         categorised_share=categorised / value if value else 0.0,
                         cash_share=cash / income_total if income_total else 0.0,
-                        as_of=as_of)
+                        as_of=as_of, week_starts=[w.week_start for w in raw],
+                        D_smooth=[w.debt for w in smooth])
