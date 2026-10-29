@@ -101,10 +101,13 @@ def test_malformed_csv_rows_skipped_with_warning():
 
 def test_amount_suffixes_and_latin1_csv():
     csv = ("date,narration,debit,credit,balance\n"
-           "2026-10-01,CAFÉ KIRANA,\"1,250.50 Dr\",,\"3,000.00 Cr\"\n").encode("latin-1")
+           "2026-10-01,CAFÉ KIRANA,\"1,250.50 Dr\",,\"3,000.00 Cr\"\n"
+           "2026-10-02,ATM CASH WDL,\"₹4,000.00\",,\"(1,000.00)\"\n").encode("utf-8")
     r = parse_statement(csv, "x.csv", None)
-    assert r.raw[0].direction == "CR" or r.raw[0].amount == 1250.50
-    assert r.raw[0].balance == 3000.00
+    assert (r.raw[0].direction, r.raw[0].amount, r.raw[0].balance) == ("DR", 1250.50, 3000.00)
+    assert (r.raw[1].direction, r.raw[1].amount, r.raw[1].balance) == ("DR", 4000.00, -1000.00)
+    latin = "date,narration,debit,credit,balance\n2026-10-01,CAFÉ KIRANA,100.00,,500.00\n".encode("latin-1")
+    assert parse_statement(latin, "x.csv", None).raw[0].narration == "CAFÉ KIRANA"
 
 
 def test_aa_json_minimal():
