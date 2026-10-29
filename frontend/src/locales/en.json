@@ -1,0 +1,508 @@
+{
+  "common": {
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "retry": "Try again",
+    "back": "Back",
+    "loading": "Loading…",
+    "continue": "Continue"
+  },
+  "nav": {
+    "home": "Home",
+    "money": "Money",
+    "loans": "Loans",
+    "privacy": "Privacy",
+    "transactions": "Transactions"
+  },
+  "band": {
+    "STRONG": "Strong",
+    "GOOD": "Good",
+    "FAIR": "Fair",
+    "BUILDING": "Building"
+  },
+  "confidence": {
+    "high": "High confidence · {{weeks}} weeks of data",
+    "medium": "Medium confidence · {{weeks}} weeks of data",
+    "low": "Low confidence · {{weeks}} weeks of data",
+    "none": "Not enough data",
+    "provisional": "Provisional: needs more weeks",
+    "revoked": "Data deleted"
+  },
+  "screen": {
+    "language": {
+      "tagline": "Your work history is your credit history."
+    },
+    "login": {
+      "title": "Log in with your phone",
+      "phone": "Phone number",
+      "sendOtp": "Send OTP",
+      "otp": "Enter the 6-digit code",
+      "verify": "Verify",
+      "demoOtp": "Demo OTP: 123456"
+    },
+    "consent": {
+      "title": "Before we look at your bank data",
+      "read": "We read: bank transactions from the last 90 days",
+      "why": "Why: to check which small loans are safe for you",
+      "keep": "We keep it: 30 days, then it's deleted",
+      "stop": "You can stop anytime: one tap in Privacy deletes it",
+      "never": "We never ask for your bank password, UPI PIN or OTP.",
+      "allow": "Allow",
+      "notNow": "Not now"
+    },
+    "connect": {
+      "title": "Share your statement",
+      "upload": "Upload bank statement (PDF or CSV)",
+      "uploadHint": "Tap to choose a file",
+      "password": "Statement password",
+      "passwordHint": "Usually your name + date of birth. Demo: RAVI0101",
+      "aa": "Connect bank (Account Aggregator demo)",
+      "sample": "Download a sample statement",
+      "submit": "Upload"
+    },
+    "processing": {
+      "READ": "Reading your statement",
+      "MASK": "Hiding account numbers and names",
+      "CATEGORISE": "Sorting spending: fuel, food, rent…",
+      "SCORE": "Calculating your Financial Trust Score",
+      "done": "Done: {{count}} transactions from {{weeks}} weeks"
+    },
+    "review": {
+      "title": "Check your transactions",
+      "subtitle": "Tap anything that looks wrong. Your score updates instantly.",
+      "week": "Week of {{date}}",
+      "in": "In {{amount}}",
+      "out": "Out {{amount}}",
+      "seeScore": "See my score",
+      "notCounted": "Not counted",
+      "bounced": "Bounced",
+      "pickCategory": "What was this for?",
+      "edited": "Edited",
+      "updated": "Score updated: {{before}} → {{after}}"
+    },
+    "score": {
+      "title": "Your Financial Trust Score",
+      "builds": "What builds your score",
+      "whyNot": "Why not higher",
+      "improve": "How to improve",
+      "footer": "This is not a CIBIL score. It is built only from your own transactions, never from your name, gender, religion, caste or address.",
+      "seeLoans": "See safe loans",
+      "ifYouDo": "If you do this: {{before}} → {{after}}",
+      "unavailable": "No regular bills found: not counted",
+      "speak": "Your score is {{score}}, {{band}}. Main reason: {{reason}}. Tip: {{tip}}"
+    },
+    "loans": {
+      "title": "Safe loans",
+      "need": "How much do you need?",
+      "safe": "Safe for you: up to {{amount}}",
+      "safeNote": "Based on your low weeks, so repayments stay easy",
+      "suggest": "You asked for {{asked}}. We suggest {{safe}} so weekly payments stay safe.",
+      "choose": "Choose this loan",
+      "preApproved": "Pre-approved",
+      "needsReview": "Needs review",
+      "notAvailable": "Not available",
+      "confirmBody": "You will pay {{weekly}} every {{day}} for {{weeks}} weeks. Total {{total}}.",
+      "confirmTitle": "Confirm this loan"
+    },
+    "kfs": {
+      "receive": "You receive",
+      "payEvery": "Pay every {{day}}",
+      "payLine": "{{amount}} × {{weeks}} weeks",
+      "total": "Total you pay back",
+      "cost": "Total cost of this loan",
+      "apr": "Interest shown by lender → true yearly cost (APR)",
+      "aprInfo": "APR includes the processing fee, as RBI's Key Fact Statement requires",
+      "late": "Late fee",
+      "lateNote": "{{fee}} · {{days}}-day cooling-off: return it without penalty",
+      "fits": "Fits your weekly budget"
+    },
+    "myLoan": {
+      "title": "My loan",
+      "next": "Next due",
+      "weekly": "Weekly payment",
+      "UPCOMING": "Upcoming",
+      "DUE": "Due today",
+      "PAID": "Paid",
+      "OVERDUE": "Overdue",
+      "none": "You have no active loan yet.",
+      "payNow": "Pay {{amount}} now",
+      "paidToast": "Payment received. Thank you!",
+      "nextDay": "Next day (demo)"
+    },
+    "money": {
+      "title": "Your money this week",
+      "empty": "Upload a statement to see your weekly spending",
+      "spending": "Spending by week",
+      "vsUsual": "This week vs your usual",
+      "startGoal": "Start an emergency buffer",
+      "suggest": "Suggested target: {{amount}} (2 weeks of spending)",
+      "goalName": "Goal name",
+      "goalAmount": "Target amount in ₹",
+      "createGoal": "Start saving",
+      "goalSaved": "Goal created",
+      "goalLine": "Save {{amount}} every week · {{weeks}} weeks left",
+      "moveToGoal": "Move {{amount}} to my goal (demo)",
+      "moved": "Moved (demo)",
+      "weeksShort": "wk"
+    },
+    "privacy": {
+      "title": "Privacy",
+      "noConsent": "You have not shared any data yet.",
+      "purpose": "Loan assessment",
+      "status": {
+        "ACTIVE": "Active",
+        "REVOKED": "Deleted",
+        "EXPIRED": "Expired"
+      },
+      "range": "Data from {{from}} to {{to}}",
+      "expires": "Deleted automatically on {{date}}",
+      "revoke": "Stop sharing and delete my data",
+      "revokeConfirm": "Delete my data",
+      "confirmTitle": "Delete your data?",
+      "confirmBody": "This deletes all your transactions from SahayakFin. Your past score stays only as a loan record.",
+      "deleted": "{{count}} transactions deleted",
+      "lenders": "Lenders who can see your score summary",
+      "lendersNote": "They see only your score, band and reasons, never your transactions.",
+      "audit": "Who saw my data",
+      "auditEmpty": "Nobody has seen your data.",
+      "reset": "Reset demo"
+    },
+    "fairness": {
+      "title": "Fairness Lab: the score measures habits, not wealth",
+      "income": "Monthly income {{amount}}",
+      "highlight": "Lower income, higher score: because steadiness and habits count, not size of income.",
+      "neverUsed": "Never used: name, gender, age, religion, caste, address/pincode, contacts, device, what you spend on."
+    },
+    "lender": {
+      "loginTitle": "Lender login",
+      "title": "Applicants who shared their score",
+      "banner": "You see summaries only. No transactions, names or phone numbers.",
+      "minBand": "Minimum band",
+      "maxAmount": "Max amount (₹)",
+      "minWeeks": "Minimum weeks of data",
+      "eligible": "Eligible applicants: {{before}} → {{after}}",
+      "col": {
+        "ref": "Ref",
+        "score": "Score",
+        "confidence": "Confidence",
+        "reasons": "Reasons",
+        "safe": "Safe weekly",
+        "requested": "Requested",
+        "status": "Status"
+      },
+      "conf": {
+        "HIGH": "High",
+        "MEDIUM": "Medium",
+        "LOW": "Low",
+        "NONE": "None"
+      },
+      "portal": "Lender portal",
+      "applicantsNav": "Applicants",
+      "logout": "Log out",
+      "rules": "Lending rules",
+      "kpi": {
+        "applicants": "Applicants",
+        "eligible": "Eligible",
+        "avgScore": "Average score",
+        "avgSafe": "Average safe weekly"
+      }
+    }
+  },
+  "weekday": {
+    "MONDAY": "Monday",
+    "TUESDAY": "Tuesday",
+    "WEDNESDAY": "Wednesday",
+    "THURSDAY": "Thursday",
+    "FRIDAY": "Friday",
+    "SATURDAY": "Saturday",
+    "SUNDAY": "Sunday"
+  },
+  "component": {
+    "income_stability": {
+      "label": "Income steadiness",
+      "desc": "How close your low weeks are to your normal weeks"
+    },
+    "savings_habit": {
+      "label": "Saving habit",
+      "desc": "Weeks you saved anything, even ₹20"
+    },
+    "bill_discipline": {
+      "label": "Bills on time",
+      "desc": "Rent, electricity, recharge, EMIs paid on time"
+    },
+    "expense_health": {
+      "label": "Living within income",
+      "desc": "Weeks you spent less than you earned"
+    }
+  },
+  "reason": {
+    "INCOME_UNEVEN": "Your income changes a lot from week to week",
+    "NO_SAVINGS_SEEN": "We did not see any savings in this period",
+    "FEW_SAVINGS_WEEKS": "You saved in {{weeks}} of {{of}} weeks",
+    "BILL_BOUNCE": "Some bill payments bounced",
+    "BILLS_LATE": "{{late}} of {{of}} bills were paid late",
+    "SPENDING_ABOVE_INCOME": "You spend close to or above what you earn",
+    "FEW_SURPLUS_WEEKS": "Few weeks where you spent less than you earned",
+    "THIN_FILE": "We have only a few weeks of data so far"
+  },
+  "tip": {
+    "SAVE_EVERY_WEEK": "Save ₹20 or more every week → about +{{points}} points",
+    "PAY_BILLS_ON_TIME": "Pay bills near the same date each month → about +{{points}} points",
+    "KEEP_SURPLUS_WEEKS": "Spend less than you earn each week → about +{{points}} points",
+    "STEADY_INCOME": "Keep your weekly income steady → about +{{points}} points",
+    "ADD_MORE_HISTORY": "Add {{weeks_needed}} more weeks of history"
+  },
+  "category": {
+    "PLATFORM_PAYOUT": "Platform payout",
+    "CUSTOMER_RECEIPT": "Customer payment",
+    "CASH_DEPOSIT": "Cash deposit",
+    "OTHER_INCOME": "Other income",
+    "FUEL": "Fuel",
+    "FOOD": "Food",
+    "RENT": "Rent",
+    "BILLS": "Bills",
+    "PHONE": "Phone",
+    "TRANSPORT": "Transport",
+    "FAMILY": "Family",
+    "HEALTH": "Health",
+    "EDUCATION": "Education",
+    "SHOPPING": "Shopping",
+    "CASH_WITHDRAWAL": "Cash withdrawal",
+    "EMI": "Loan EMI",
+    "SAVINGS": "Savings",
+    "FEES_CHARGES": "Bank charges",
+    "SELF_TRANSFER": "Own transfer",
+    "OTHER": "Other"
+  },
+  "error": {
+    "OTP_INVALID": "That code is not right. Try 123456 in the demo.",
+    "UNSUPPORTED_FILE": "Please upload a PDF or CSV file.",
+    "FILE_TOO_LARGE": "That file is too large (max 5 MB).",
+    "TOO_MANY_PAGES": "That PDF has too many pages (max 20).",
+    "PDF_PASSWORD_REQUIRED": "This PDF is locked. Enter its password.",
+    "PDF_PASSWORD_WRONG": "That password is not right. Try again.",
+    "PDF_HAS_SCRIPT": "This PDF can't be used for safety reasons.",
+    "NO_TRANSACTIONS": "We could not find any transactions in this file.",
+    "CONSENT_REQUIRED": "Please give consent first.",
+    "CONSENT_REVOKED": "Consent was withdrawn. Please give it again.",
+    "UNAUTHENTICATED": "Please log in again.",
+    "TOO_MANY_REQUESTS": "Too many tries. Please wait a moment.",
+    "VALIDATION_ERROR": "Please check what you entered.",
+    "NOT_FOUND": "We could not find that.",
+    "NO_SCORE": "Upload a statement to see your score.",
+    "OFFER_NOT_ACCEPTABLE": "This loan can't be taken right now.",
+    "EXCEEDS_SAFE_INSTALMENT": "That weekly payment is more than is safe for you.",
+    "UNKNOWN_PERSONA": "We don't know that demo profile.",
+    "INTERNAL_ERROR": "Something went wrong on our side. Please try again.",
+    "generic": "Something went wrong. Please try again."
+  },
+  "readAloud": "Read aloud",
+  "stress": {
+    "title": "What if your income drops?",
+    "covered": "You could still pay in {{done}} of {{total}} weeks"
+  },
+  "light": {
+    "GREEN": "Safe",
+    "AMBER": "Tight",
+    "RED": "Risky"
+  },
+  "advice": {
+    "OK": "This payment looks comfortable.",
+    "CONSIDER_LONGER_TENURE": "Choose a longer tenure to lower the weekly amount",
+    "BUILD_BUFFER_FIRST": "Build a small savings buffer first",
+    "TAKE_SMALLER_AMOUNT": "Take a smaller amount"
+  },
+  "insurance": {
+    "title": "Protect your income",
+    "govt": "Govt scheme",
+    "demo": "Demo product",
+    "YEAR": "year",
+    "WEEK": "week",
+    "cover": "Cover {{amount}}",
+    "add": "Add",
+    "added": "Added (demo)"
+  },
+  "reminder": {
+    "header": "SahayakFin · Payment reminders",
+    "none": "No reminders yet.",
+    "REMINDER_T_MINUS_2": "Namaste {{name}} 🙏 Your payment of {{amount}} to {{lender}} is due on {{date}}. Reply PAY to pay, or HELP to talk to us.",
+    "REMINDER_DUE_TODAY": "Namaste {{name}} 🙏 Your payment of {{amount}} to {{lender}} is due today. Reply PAY to pay, or HELP to talk to us.",
+    "REMINDER_OVERDUE_1": "Hello {{name}}, your payment of {{amount}} to {{lender}} was due on {{date}}. If it is hard this week, reply HELP and we will find a way together.",
+    "REMINDER_OVERDUE_7": "Hello {{name}}, your payment of {{amount}} to {{lender}} is still pending since {{date}}. Reply HELP to talk to us; we are here to support you."
+  },
+  "nudge": {
+    "PAYDAY_SAVE": "Money came in this week. Save {{suggest}} of it right now?",
+    "CATEGORY_SPIKE": "You spent {{pct}}% more on {{category}} than usual.",
+    "BILL_SOON": "{{category}} bill is usually paid around day {{day}}. Keep some money ready.",
+    "GOAL_PROGRESS": "Goal progress: {{done}} of {{total}} weeks done."
+  },
+  "audit": {
+    "VIEW_SCORE_SUMMARY": "{{name}} viewed your score summary",
+    "SHARED_WITH_LENDER": "You shared your score with a lender",
+    "SHARE_REVOKED": "You stopped sharing with a lender",
+    "CONSENT_CREATED": "You gave consent",
+    "CONSENT_REVOKED": "You withdrew consent",
+    "CONSENT_EXPIRED": "Consent expired",
+    "STATEMENT_UPLOADED": "You added a bank statement",
+    "TXN_RECATEGORISED": "You corrected a transaction",
+    "LOAN_ACCEPTED": "You accepted a loan",
+    "REPAYMENT_PAID": "You paid an instalment"
+  },
+  "fairness": {
+    "SCALE_HALF": "Halving every rupee doesn't change the score",
+    "SCALE_DOUBLE": "Doubling every rupee doesn't change the score",
+    "NAME_SWAP": "Changing names doesn't change the score",
+    "STEADY_BEATS_RICH": "Steady beats rich",
+    "MONOTONIC_SAVINGS": "Saving more never lowers the score",
+    "MONOTONIC_BILLS": "Paying bills on time never lowers the score",
+    "MISSING_IS_NOT_BAD": "Missing bills aren't treated as bad",
+    "NO_PROTECTED_INPUTS": "No protected attributes used"
+  },
+  "wizard": {
+    "step0": "Language",
+    "step1": "Log in",
+    "step2": "Consent",
+    "step3": "Statement",
+    "step4": "Score"
+  },
+  "dashboard": {
+    "risk": "Bad-week test",
+    "riskEmpty": "Check loans to see your bad-week test.",
+    "nextPayment": "Next payment",
+    "viewLoan": "View my loan",
+    "ready": "Ready for a loan?",
+    "readyNote": "See loans that are safe for you, sized to your low weeks."
+  },
+  "chart": {
+    "empty": "Not enough data yet.",
+    "contribution": {
+      "aria": "Score built from four parts, total {{score}}",
+      "remaining": "Points you can still earn",
+      "notCounted": "Not counted",
+      "caption": "Your score is built from four habits. You can still earn {{points}} more points."
+    },
+    "steady": {
+      "title": "Income steadiness",
+      "normal": "Normal week {{amount}}",
+      "bad": "Bad week {{amount}}",
+      "caption": "Your bad weeks are {{pct}}% of a normal week, so steadiness is {{pct}}."
+    },
+    "streak": {
+      "title": "Saving streak",
+      "caption": "Saved in {{saved}} of {{total}} weeks"
+    },
+    "risk": {
+      "shock": "If income drops by",
+      "yourPayment": "Your payment {{amount}}",
+      "caption": "Red bars are weeks when money left would not cover this payment."
+    },
+    "safe": {
+      "safe": "Safe for you",
+      "stretch": "Stretch",
+      "risky": "Too risky",
+      "caption": "Up to {{amount}} is safe to borrow without stress."
+    },
+    "kfs": {
+      "receive": "You receive {{amount}}",
+      "fee": "Fee {{amount}}",
+      "interest": "Interest {{amount}}",
+      "apr": "Shown {{shown}}% → true yearly cost {{apr}}%",
+      "aria": "Total you pay back {{total}}"
+    },
+    "cash": {
+      "income": "Money in",
+      "caption": "Bars show where your money went each week; the line shows what came in."
+    },
+    "timeline": {
+      "caption": "{{paid}} of {{total}} paid · {{left}} left"
+    },
+    "scatter": {
+      "title": "Income vs score",
+      "x": "Monthly income",
+      "y": "Score",
+      "caption": "More income does not mean a higher score: habits matter, not size."
+    },
+    "bands": {
+      "title": "Applicants by band",
+      "caption": "How your applicant pool is spread across score bands."
+    }
+  },
+  "site": {
+    "nav": {
+      "how": "How it works",
+      "fairness": "Fairness",
+      "privacy": "Privacy",
+      "lenders": "For lenders",
+      "lenderLogin": "Lender login",
+      "cta": "Check my score"
+    },
+    "hero": {
+      "h1a": "Your UPI history is your",
+      "h1b": "credit history.",
+      "sub": "No salary slip? No CIBIL score? SahayakFin reads your bank statement fairly, explains every point, and shows only loans you can repay in a bad week.",
+      "cta1": "Check my score (demo)",
+      "cta2": "See how it's fair",
+      "card": "Sample score · built only from your own transactions"
+    },
+    "problem": {
+      "gig": "gig workers in 2020–21 → by 2029–30",
+      "source": "Source: NITI Aayog, 2022",
+      "most": "Most",
+      "nohistory": "have no formal credit history."
+    },
+    "how": {
+      "title": "How it works",
+      "one": {
+        "t": "Share with consent",
+        "d": "Upload a statement or connect a bank. You can stop any time."
+      },
+      "two": {
+        "t": "We read habits, not wealth",
+        "d": "Steady income, saving, bills and spending: nothing else."
+      },
+      "three": {
+        "t": "Get loans you can repay",
+        "d": "Lenders see a summary only, never your transactions."
+      }
+    },
+    "pillars": {
+      "title": "The four things we look at",
+      "steady": {
+        "t": "Steady income",
+        "d": "How close your low weeks are to your normal weeks."
+      },
+      "saving": {
+        "t": "Saving habit",
+        "d": "Weeks you saved anything, even ₹20."
+      },
+      "bills": {
+        "t": "Bills on time",
+        "d": "Rent, electricity, recharge and EMIs paid on time."
+      },
+      "living": {
+        "t": "Living within income",
+        "d": "Weeks you spent less than you earned."
+      }
+    },
+    "fair": {
+      "title": "Lower income, higher score",
+      "line": "Doubling every rupee doesn't change a score. Neither does a name.",
+      "cta": "Open the Fairness Lab"
+    },
+    "privacy": {
+      "title": "Our privacy promise",
+      "a": "We never ask for passwords, PINs or OTPs",
+      "b": "Account numbers are masked",
+      "c": "Lenders see a summary only",
+      "d": "One tap deletes your data"
+    },
+    "lenders": {
+      "title": "For lenders",
+      "sub": "Pre-screened, explainable applicants. Weekly repayments sized to bad weeks."
+    },
+    "footer": {
+      "proto": "Prototype with synthetic data · Not a CIBIL score · Built for the Fintech & Financial Inclusion track",
+      "team": "Team: Mihir · Rajat · Sanskar"
+    }
+  }
+}
