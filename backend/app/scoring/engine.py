@@ -107,8 +107,10 @@ def apply_tip(inp: WeeklyInputs, code: str) -> WeeklyInputs:
     if code == "STEADY_INCOME":
         if not inp.I:
             return inp
-        p50 = float(np.median(inp.I))
-        return replace(inp, I=[max(i, p50) for i in inp.I])
+        # Raise the low weeks to the middle week so that P25 becomes P50 (stability 100). The upper-middle
+        # value is used because raising to an even-count median would move the median itself.
+        target = sorted(inp.I)[len(inp.I) // 2]
+        return replace(inp, I=[max(i, target) for i in inp.I])
     return inp  # ADD_MORE_HISTORY: nothing to simulate
 
 

@@ -108,6 +108,16 @@ def test_reasons_b():
     assert [(t["code"], t["points"]) for t in r["tips"]] == [("SAVE_EVERY_WEEK", 25), ("PAY_BILLS_ON_TIME", 19)]
 
 
+def test_steady_income_tip_reaches_full_stability():
+    from app.scoring.engine import apply_tip
+    from app.scoring.weekly import WeeklyInputs
+
+    inp = WeeklyInputs(I=B_I, E=B_E, D=[0] * 12, saved=B_S, E_smooth=B_E, bills_on_time=3, bills_total=6,
+                       bounces=1, categorised_share=1, cash_share=0, as_of=None)
+    new = apply_tip(inp, "STEADY_INCOME")
+    assert components(new.I, new.E, new.saved, 3, 6, 1)["income_stability"] == approx(100)
+
+
 def test_median_income_zero_means_no_score():
     r = score_from_weekly([0, 0, 0, 0, 5000, 0], [100] * 6, [0] * 6, 0, 0, 0)
     assert r["score"] is None and r["band"] is None

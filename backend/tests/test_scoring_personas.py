@@ -76,6 +76,12 @@ def test_ravi_story():
     assert all(t["points"] > 0 for t in s["tips"])
 
 
+def test_sunita_tip_has_points():
+    s = score("sunita")
+    assert [r["code"] for r in s["reasons"]] == ["INCOME_UNEVEN"]
+    assert s["tips"][0]["code"] == "STEADY_INCOME" and s["tips"][0]["points"] >= 1
+
+
 def test_deterministic():
     runs = [compute_score(txns("ravi")) for _ in range(3)]
     assert runs[0] == runs[1] == runs[2]
