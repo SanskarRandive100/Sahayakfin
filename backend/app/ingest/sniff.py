@@ -1,17 +1,54 @@
-"""STUB (1.1): returns 20 fake RawTxn over 3 weeks."""
-from datetime import date, timedelta
+"""Detect the statement type from its bytes and dispatch to the right parser."""
+import json
+from typing import Optional
 
-from app.scoring.types import ParseResult, RawTxn
+from app.ingest.aa_parser import parse_aa
+from app.ingest.csv_parser import parse_csv
+from app.ingest.errors import IngestError
+from app.ingest.pdf_parser import parse_pdf
+from app.scoring.types import ParseResult
 
 
-def parse_statement(data: bytes, filename: str, password: str | None = None) -> ParseResult:
-    start = date(2026, 10, 5)
-    raw = []
-    for i in range(20):
-        d = start + timedelta(days=i)
-        if i % 7 == 4:
-            raw.append(RawTxn(d, "NEFT CR-QUICKBITE TECHNOLOGIES PVT LTD-WEEKLY PAYOUT", 5000.0, "CR"))
-        else:
-            raw.append(RawTxn(d, "UPI/DR/123456789012/HP PETROL PUMP/hppay@icici/fuel", 150.0, "DR"))
-    return ParseResult(raw=raw, kind="CSV", layout="DEMO_BANK", period_from=raw[0].date,
-                       period_to=raw[-1].date, warnings=[])
+def decode_text(data: bytes) -> Optional[str]:
+    for encoding in ("utf-8-sig", "latin-1"):
+        try:
+            return data.decode(encoding)
+        except UnicodeDecodeError:
+            continue
+    return None
+
+
+def sniff(data: bytes, filename: str = "") -> str:
+    """'PDF' | 'CSV' | 'AA', else IngestError('UNSUPPORTED_FILE')."""
+    if data.lstrip()[:5] == b"%PDF-":
+        return "PDF"
+    text = decode_text(data)
+    if text is None or "\x00" in text:
+        raise IngestError("UNSUPPORTED_FILE")
+    first = text.lstrip().split("\n", 1)[0].lower().replace(" ", "")
+    if "date,narration" in first:
+        return "CSV"
+    try:
+        doc = json.loads(text)
+    except ValueError:
+        raise IngestError("UNSUPPORTED_FILE")
+    if isinstance(doc, dict) and "transactions" in doc:
+        return "AA"
+    raise IngestError("UNSUPPORTED_FILE")
+
+
+def parse_statement(data: bytes, filename: str, password: Optional[str] = None) -> ParseResult:
+    kind = sniff(data, filename)
+    if kind == "PDF":
+        raw, layout, warnings = parse_pdf(data, password)
+    elif kind == "CSV":
+        raw, warnings = parse_csv(decode_text(data))
+        layout = "CSV"
+    else:
+        raw, warnings = parse_aa(json.loads(decode_text(data)))
+        layout = "AA"
+    if not raw:
+        raise IngestError("NO_TRANSACTIONS")
+    dates = [r.date for r in raw]
+    return ParseResult(raw=raw, kind=kind, layout=layout, period_from=min(dates), period_to=max(dates),
+                       warnings=warnings)
