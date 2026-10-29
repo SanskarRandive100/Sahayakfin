@@ -151,6 +151,7 @@ Sanskar can't import anything until these exist.
   5. Components → FTS → score (round-half-up) → band → confidence → reasons → tips → metrics.
 - **Reasons and tips exactly as CONTRACTS §3.** Tips re-run `score_from_weekly` with the modified weekly lists.
 - `engine_version = "fts-2.0"`.
+- `metrics.weekly` (website charts C3 and C8): one entry per window week, oldest first, `{week_start, income_paise, expense_paise (unsmoothed), surplus_paise (smoothed), saved}`. Test: its length equals `weeks_observed`. ✅
 
 `tests/test_scoring_golden.py`:
 - Vectors A, B, C, D and Scale; band(R) at 0.85, 1.00, 1.20 and 1.35; Reasons A and B with tip points.
@@ -319,6 +320,7 @@ Do the Review 1 fixes first, then items 2.1 → 2.7 in order. For each: implemen
   - `payout_weekday` (MON..SUN)
   - `loan_max_paise` for "13", "26" and "52" weeks at 24%.
 - `stress_test(...)` exactly per CONTRACTS §4. Flexible vs fixed comes from WeekFeature, and the current balance is the last balance.
+- `stress_test` also returns `series` (the risk graph, website chart C4): `[{week_start, surplus_paise, stressed_surplus_paise}]` per window week, oldest first. `shock = 0` must be allowed (it gives the unstressed view). Test: for every week, stressed ≤ unstressed whenever shock > 0. ✅
 - Tests:
   - Ravi's safe weekly is within ₹250–₹400 (tune the generator if not).
   - A stronger shock never covers more weeks (monotonic).

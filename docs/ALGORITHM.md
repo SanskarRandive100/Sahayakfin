@@ -161,7 +161,7 @@ loan_max      = safe_weekly × (1 − (1 + r)^−n) / r,  r = rate/100/52,  floo
 
 **Offer rules:** band below the lender's minimum or too few weeks → not available. FAIR band → at most ₹5,000; MEDIUM confidence → at most half of loan_max; LOW → at most ₹3,000. Scores within 5 points of the lender's threshold go to human review. Offers are sorted eligible first, then cheapest true cost.
 
-**Income-drop stress test:** income falls 10/20/30%. Flexible spending (fuel, food, shopping, transport, cash) falls with it; fixed costs (rent, bills, family, health, education, charges) do not. We count the weeks that would still cover the instalment:
+**Income-drop stress test:** income falls 10/20/30%. Flexible spending (fuel, food, shopping, transport, cash) falls with it; fixed costs (rent, bills, family, health, education, charges) do not. A drop is never allowed to make a week look better than it was (this matters only in weeks where flexible spending already exceeds income). We count the weeks that would still cover the instalment:
 
 - GREEN: ≥ 10 of 12 weeks covered, or today's balance covers the total shortfall.
 - AMBER: ≥ 7 of 12 weeks covered → suggest a longer tenure.

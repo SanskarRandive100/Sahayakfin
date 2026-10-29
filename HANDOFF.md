@@ -26,6 +26,7 @@ Append a request under the **owner's** heading. Include the exact function or en
 - What-if: `points` matches the tip card; `score_after` is the true re-score, so it can differ from `score_before + points` by 1 (Ravi: 85 → 92 with "+6"). Copy "about +N points" covers this.
 - **Stress slider:** Ravi stays GREEN at −10/−20/−30% because his ₹16.5k closing balance covers the shortfall (`buffer_covers: true`, CONTRACTS §4). At −30% he covers only 3 of 12 weeks, so show `weeks_covered` too. For a RED example use Arjun (`BUILD_BUFFER_FIRST`).
 - Ravi nudges on 2026-10-25: PAYDAY_SAVE `{amount_paise: 507875, suggest_paise: 10000}`. CATEGORY_SPIKE only looks at FUEL, FOOD, SHOPPING, TRANSPORT, OTHER.
+- **v3 charts data is live:** ScoreResult `metrics.weekly` (C3, C8) = 12 entries oldest first, `{week_start, income_paise, expense_paise, surplus_paise, saved}` (`week_start` is null from `score_from_weekly`). `stress_test` returns `series` (C4) = `[{week_start, surplus_paise, stressed_surplus_paise}]`; shock 0 gives the unstressed view; stressed is never above unstressed.
 - Fairness Lab: all 8 tests pass. STEADY_BEATS_RICH detail: "Sunita earns about ₹12,502 a month and scores 99; Arjun earns about ₹40,079 a month and scores 43."
 
 ## For Rajat (ingest / scoring / finance / data)
@@ -41,4 +42,5 @@ Append a request under the **owner's** heading. Include the exact function or en
 - `match_offers` returns `[]` when the score is null / confidence NONE / band BUILDING / safe_weekly 0. It skips products whose `kind` isn't LOAN, and also caps by `lender["max_amount_paise"]` when present (for `PUT /lender/rules`). Amounts are whole ₹100s.
 - `what_if` raises `IngestError("BAD_TIP")` for unknown codes. `nudges(txns, today, goal)` reads `goal["target_paise"]`, `goal["weekly_target_paise"]`, `goal["saved_paise"]`.
 - `fairness_report` takes ~1.2 s for the 4 AA files: cache the result (it only changes when samples change).
+- v3: `compute_score` now includes `metrics.weekly`, and `stress_test` returns `series` and accepts `shock = 0` (please allow 0 in the `/affordability/stress` validation). `rbi_cap_amount_paise` for `/offers` = `finance.loan_max(afford["rbi_cap_weekly_paise"], 24, 26)` (Ravi: RBI cap ₹2,673.67/week → ₹65,300, vs our safe amount ₹7,200).
 - `stress_test` advice for RED is BUILD_BUFFER_FIRST when safe_weekly < ₹100, else TAKE_SMALLER_AMOUNT.
