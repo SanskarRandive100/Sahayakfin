@@ -82,8 +82,9 @@ def test_sunita_tip_has_points():
     assert s["tips"][0]["code"] == "STEADY_INCOME" and s["tips"][0]["points"] >= 1
 
 
-def test_deterministic():
-    runs = [compute_score(txns("ravi")) for _ in range(3)]
+@pytest.mark.parametrize("slug", list(OWNERS))
+def test_deterministic(slug):
+    runs = [compute_score(txns(slug)) for _ in range(3)]
     assert runs[0] == runs[1] == runs[2]
 
 

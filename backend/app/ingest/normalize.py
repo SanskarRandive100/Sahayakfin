@@ -131,11 +131,12 @@ def normalize(raw: list[RawTxn], owner_name: Optional[str], hmac_key: bytes) -> 
 
 
 def recategorize(txn: Txn, category: str) -> Txn:
-    """User correction: new category, kind recomputed, user_corrected=True. Round trips/reversals stay ignored."""
+    """User correction; intentionally ignored transactions stay ignored across correction chains."""
     if category not in CATEGORIES:
         raise IngestError("BAD_CATEGORY")
     flags = [f for f in txn.flags if f != "CASH_INCOME"]
     if category == "CASH_DEPOSIT" and txn.direction == "CR":
         flags.append("CASH_INCOME")
-    return replace(txn, category=category, kind=kind_of(category, txn.direction, flags), flags=flags,
+    kind = "IGNORED" if txn.kind == "IGNORED" else kind_of(category, txn.direction, flags)
+    return replace(txn, category=category, kind=kind, flags=flags,
                    user_corrected=True)
