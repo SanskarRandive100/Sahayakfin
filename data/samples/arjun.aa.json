@@ -1,0 +1,1488 @@
+{
+ "account": {
+  "masked": "XXXX4521",
+  "type": "SAVINGS"
+ },
+ "transactions": [
+  {
+   "txnId": "ARJUN000001",
+   "valueDate": "2026-07-28",
+   "narration": "NEFT CR-ZIPRIDE MOBILITY-DRIVER PAYOUT W31",
+   "amount": 9270.79,
+   "type": "CREDIT",
+   "currentBalance": 17270.79
+  },
+  {
+   "txnId": "ARJUN000002",
+   "valueDate": "2026-07-28",
+   "narration": "UPI/DR/981993949845/BHARAT CNG STATION/bharatcngs@okicici/CNG",
+   "amount": 531.17,
+   "type": "DEBIT",
+   "currentBalance": 16739.62
+  },
+  {
+   "txnId": "ARJUN000003",
+   "valueDate": "2026-07-28",
+   "narration": "UPI/DR/233113861059/NEW SAGAR HOTEL/newsagarho@oksbi/FOOD",
+   "amount": 117.98,
+   "type": "DEBIT",
+   "currentBalance": 16621.64
+  },
+  {
+   "txnId": "ARJUN000004",
+   "valueDate": "2026-07-29",
+   "narration": "UPI/DR/575759924694/HP PETROL PUMP HADAPSAR/hppetrolpu@okaxis/CNG",
+   "amount": 513.11,
+   "type": "DEBIT",
+   "currentBalance": 16108.53
+  },
+  {
+   "txnId": "ARJUN000005",
+   "valueDate": "2026-07-29",
+   "narration": "UPI/DR/374100584189/NEW SAGAR HOTEL/newsagarho@oksbi/FOOD",
+   "amount": 175.26,
+   "type": "DEBIT",
+   "currentBalance": 15933.27
+  },
+  {
+   "txnId": "ARJUN000006",
+   "valueDate": "2026-07-30",
+   "narration": "UPI/DR/566175674369/BHARAT CNG STATION/bharatcngs@okicici/CNG",
+   "amount": 560.96,
+   "type": "DEBIT",
+   "currentBalance": 15372.31
+  },
+  {
+   "txnId": "ARJUN000007",
+   "valueDate": "2026-07-30",
+   "narration": "UPI/DR/999062471337/HIGHWAY DHABA/highwaydha@okaxis/FOOD",
+   "amount": 176.82,
+   "type": "DEBIT",
+   "currentBalance": 15195.49
+  },
+  {
+   "txnId": "ARJUN000008",
+   "valueDate": "2026-07-31",
+   "narration": "UPI/DR/605309633073/HP PETROL PUMP HADAPSAR/hppetrolpu@okaxis/CNG",
+   "amount": 512.6,
+   "type": "DEBIT",
+   "currentBalance": 14682.89
+  },
+  {
+   "txnId": "ARJUN000009",
+   "valueDate": "2026-07-31",
+   "narration": "UPI/DR/928324793699/NEW SAGAR HOTEL/newsagarho@oksbi/FOOD",
+   "amount": 154.66,
+   "type": "DEBIT",
+   "currentBalance": 14528.23
+  },
+  {
+   "txnId": "ARJUN000010",
+   "valueDate": "2026-08-01",
+   "narration": "UPI/DR/031811220679/QUICKTALK MOBILE RECHARGE/quicktalkm@oksbi/PREPAID",
+   "amount": 399.0,
+   "type": "DEBIT",
+   "currentBalance": 14129.23
+  },
+  {
+   "txnId": "ARJUN000011",
+   "valueDate": "2026-08-01",
+   "narration": "UPI/DR/558443743399/HP PETROL PUMP HADAPSAR/hppetrolpu@okaxis/CNG",
+   "amount": 450.6,
+   "type": "DEBIT",
+   "currentBalance": 13678.63
+  },
+  {
+   "txnId": "ARJUN000012",
+   "valueDate": "2026-08-01",
+   "narration": "UPI/DR/759809267902/HIGHWAY DHABA/highwaydha@okaxis/FOOD",
+   "amount": 190.6,
+   "type": "DEBIT",
+   "currentBalance": 13488.03
+  },
+  {
+   "txnId": "ARJUN000013",
+   "valueDate": "2026-08-02",
+   "narration": "UPI/DR/279406200780/HP PETROL PUMP HADAPSAR/hppetrolpu@okaxis/CNG",
+   "amount": 438.57,
+   "type": "DEBIT",
+   "currentBalance": 13049.46
+  },
+  {
+   "txnId": "ARJUN000014",
+   "valueDate": "2026-08-02",
+   "narration": "UPI/DR/793499155524/HIGHWAY DHABA/highwaydha@okaxis/FOOD",
+   "amount": 170.95,
+   "type": "DEBIT",
+   "currentBalance": 12878.51
+  },
+  {
+   "txnId": "ARJUN000015",
+   "valueDate": "2026-08-02",
+   "narration": "ATM CASH WDL HADAPSAR PUNE",
+   "amount": 4800.0,
+   "type": "DEBIT",
+   "currentBalance": 8078.51
+  },
+  {
+   "txnId": "ARJUN000016",
+   "valueDate": "2026-08-03",
+   "narration": "UPI/DR/019710069020/HP PETROL PUMP HADAPSAR/hppetrolpu@okaxis/CNG",
+   "amount": 584.63,
+   "type": "DEBIT",
+   "currentBalance": 7493.88
+  },
+  {
+   "txnId": "ARJUN000017",
+   "valueDate": "2026-08-03",
+   "narration": "UPI/DR/930573618241/HIGHWAY DHABA/highwaydha@okaxis/FOOD",
+   "amount": 120.0,
+   "type": "DEBIT",
+   "currentBalance": 7373.88
+  },
+  {
+   "txnId": "ARJUN000018",
+   "valueDate": "2026-08-04",
+   "narration": "NEFT CR-ZIPRIDE MOBILITY-DRIVER PAYOUT W32",
+   "amount": 15825.75,
+   "type": "CREDIT",
+   "currentBalance": 23199.63
+  },
+  {
+   "txnId": "ARJUN000019",
+   "valueDate": "2026-08-04",
+   "narration": "UPI/DR/210659515965/BHARAT CNG STATION/bharatcngs@okicici/CNG",
+   "amount": 562.43,
+   "type": "DEBIT",
+   "currentBalance": 22637.2
+  },
+  {
+   "txnId": "ARJUN000020",
+   "valueDate": "2026-08-04",
+   "narration": "UPI/DR/941375053959/NEW SAGAR HOTEL/newsagarho@oksbi/FOOD",
+   "amount": 167.22,
+   "type": "DEBIT",
+   "currentBalance": 22469.98
+  },
+  {
+   "txnId": "ARJUN000021",
+   "valueDate": "2026-08-05",
+   "narration": "UPI/DR/336658681809/HP PETROL PUMP HADAPSAR/hppetrolpu@okaxis/CNG",
+   "amount": 447.3,
+   "type": "DEBIT",
+   "currentBalance": 22022.68
+  },
+  {
+   "txnId": "ARJUN000022",
+   "valueDate": "2026-08-05",
+   "narration": "UPI/DR/545996283860/HIGHWAY DHABA/highwaydha@okaxis/FOOD",
+   "amount": 102.66,
+   "type": "DEBIT",
+   "currentBalance": 21920.02
+  },
+  {
+   "txnId": "ARJUN000023",
+   "valueDate": "2026-08-06",
+   "narration": "UPI/DR/708481556042/HP PETROL PUMP HADAPSAR/hppetrolpu@okaxis/CNG",
+   "amount": 576.95,
+   "type": "DEBIT",
+   "currentBalance": 21343.07
+  },
+  {
+   "txnId": "ARJUN000024",
+   "valueDate": "2026-08-06",
+   "narration": "UPI/DR/492790846039/NEW SAGAR HOTEL/newsagarho@oksbi/FOOD",
+   "amount": 166.92,
+   "type": "DEBIT",
+   "currentBalance": 21176.15
+  },
+  {
+   "txnId": "ARJUN000025",
+   "valueDate": "2026-08-07",
+   "narration": "ACH D- ZENITH MICROFIN EMI 316656",
+   "amount": 2500.0,
+   "type": "DEBIT",
+   "currentBalance": 18676.15
+  },
+  {
+   "txnId": "ARJUN000026",
+   "valueDate": "2026-08-07",
+   "narration": "UPI/DR/623155733902/HP PETROL PUMP HADAPSAR/hppetrolpu@okaxis/CNG",
+   "amount": 468.34,
+   "type": "DEBIT",
+   "currentBalance": 18207.81
+  },
+  {
+   "txnId": "ARJUN000027",
+   "valueDate": "2026-08-07",
+   "narration": "UPI/DR/883734519613/HIGHWAY DHABA/highwaydha@okaxis/FOOD",
+   "amount": 131.35,
+   "type": "DEBIT",
+   "currentBalance": 18076.46
+  },
+  {
+   "txnId": "ARJUN000028",
+   "valueDate": "2026-08-08",
+   "narration": "UPI/DR/754864248424/BHARAT CNG STATION/bharatcngs@okicici/CNG",
+   "amount": 585.54,
+   "type": "DEBIT",
+   "currentBalance": 17490.92
+  },
+  {
+   "txnId": "ARJUN000029",
+   "valueDate": "2026-08-08",
+   "narration": "UPI/DR/459678005225/NEW SAGAR HOTEL/newsagarho@oksbi/FOOD",
+   "amount": 171.92,
+   "type": "DEBIT",
+   "currentBalance": 17319.0
+  },
+  {
+   "txnId": "ARJUN000030",
+   "valueDate": "2026-08-09",
+   "narration": "UPI/DR/441866978771/BHARAT CNG STATION/bharatcngs@okicici/CNG",
+   "amount": 552.84,
+   "type": "DEBIT",
+   "currentBalance": 16766.16
+  },
+  {
+   "txnId": "ARJUN000031",
+   "valueDate": "2026-08-09",
+   "narration": "UPI/DR/822078220025/HIGHWAY DHABA/highwaydha@okaxis/FOOD",
+   "amount": 140.1,
+   "type": "DEBIT",
+   "currentBalance": 16626.06
+  },
+  {
+   "txnId": "ARJUN000032",
+   "valueDate": "2026-08-09",
+   "narration": "ATM CASH WDL HADAPSAR PUNE",
+   "amount": 8500.0,
+   "type": "DEBIT",
+   "currentBalance": 8126.06
+  },
+  {
+   "txnId": "ARJUN000033",
+   "valueDate": "2026-08-10",
+   "narration": "UPI/DR/025330773060/HP PETROL PUMP HADAPSAR/hppetrolpu@okaxis/CNG",
+   "amount": 530.99,
+   "type": "DEBIT",
+   "currentBalance": 7595.07
+  },
+  {
+   "txnId": "ARJUN000034",
+   "valueDate": "2026-08-10",
+   "narration": "UPI/DR/551407696927/NEW SAGAR HOTEL/newsagarho@oksbi/FOOD",
+   "amount": 188.19,
+   "type": "DEBIT",
+   "currentBalance": 7406.88
+  },
+  {
+   "txnId": "ARJUN000035",
+   "valueDate": "2026-08-11",
+   "narration": "NEFT CR-ZIPRIDE MOBILITY-DRIVER PAYOUT W33",
+   "amount": 3302.95,
+   "type": "CREDIT",
+   "currentBalance": 10709.83
+  },
+  {
+   "txnId": "ARJUN000036",
+   "valueDate": "2026-08-11",
+   "narration": "UPI/DR/663350591618/HP PETROL PUMP HADAPSAR/hppetrolpu@okaxis/CNG",
+   "amount": 480.56,
+   "type": "DEBIT",
+   "currentBalance": 10229.27
+  },
+  {
+   "txnId": "ARJUN000037",
+   "valueDate": "2026-08-11",
+   "narration": "UPI/DR/374669656186/NEW SAGAR HOTEL/newsagarho@oksbi/FOOD",
+   "amount": 118.31,
+   "type": "DEBIT",
+   "currentBalance": 10110.96
+  },
+  {
+   "txnId": "ARJUN000038",
+   "valueDate": "2026-08-12",
+   "narration": "UPI/DR/338432875796/BHARAT CNG STATION/bharatcngs@okicici/CNG",
+   "amount": 571.18,
+   "type": "DEBIT",
+   "currentBalance": 9539.78
+  },
+  {
+   "txnId": "ARJUN000039",
+   "valueDate": "2026-08-12",
+   "narration": "UPI/DR/605593246049/NEW SAGAR HOTEL/newsagarho@oksbi/FOOD",
+   "amount": 194.06,
+   "type": "DEBIT",
+   "currentBalance": 9345.72
+  },
+  {
+   "txnId": "ARJUN000040",
+   "valueDate": "2026-08-13",
+   "narration": "UPI/DR/766232661874/HP PETROL PUMP HADAPSAR/hppetrolpu@okaxis/CNG",
+   "amount": 551.68,
+   "type": "DEBIT",
+   "currentBalance": 8794.04
+  },
+  {
+   "txnId": "ARJUN000041",
+   "valueDate": "2026-08-13",
+   "narration": "UPI/DR/293340198800/HIGHWAY DHABA/highwaydha@okaxis/FOOD",
+   "amount": 182.2,
+   "type": "DEBIT",
+   "currentBalance": 8611.84
+  },
+  {
+   "txnId": "ARJUN000042",
+   "valueDate": "2026-08-14",
+   "narration": "UPI/DR/541784604691/BHARAT CNG STATION/bharatcngs@okicici/CNG",
+   "amount": 404.31,
+   "type": "DEBIT",
+   "currentBalance": 8207.53
+  },
+  {
+   "txnId": "ARJUN000043",
+   "valueDate": "2026-08-14",
+   "narration": "UPI/DR/109441529217/NEW SAGAR HOTEL/newsagarho@oksbi/FOOD",
+   "amount": 133.67,
+   "type": "DEBIT",
+   "currentBalance": 8073.86
+  },
+  {
+   "txnId": "ARJUN000044",
+   "valueDate": "2026-08-15",
+   "narration": "UPI/DR/609190371636/HP PETROL PUMP HADAPSAR/hppetrolpu@okaxis/CNG",
+   "amount": 483.13,
+   "type": "DEBIT",
+   "currentBalance": 7590.73
+  },
+  {
+   "txnId": "ARJUN000045",
+   "valueDate": "2026-08-15",
+   "narration": "UPI/DR/360337495482/NEW SAGAR HOTEL/newsagarho@oksbi/FOOD",
+   "amount": 157.32,
+   "type": "DEBIT",
+   "currentBalance": 7433.41
+  },
+  {
+   "txnId": "ARJUN000046",
+   "valueDate": "2026-08-16",
+   "narration": "UPI/DR/340265019480/HP PETROL PUMP HADAPSAR/hppetrolpu@okaxis/CNG",
+   "amount": 413.5,
+   "type": "DEBIT",
+   "currentBalance": 7019.91
+  },
+  {
+   "txnId": "ARJUN000047",
+   "valueDate": "2026-08-16",
+   "narration": "UPI/DR/376457569244/NEW SAGAR HOTEL/newsagarho@oksbi/FOOD",
+   "amount": 153.19,
+   "type": "DEBIT",
+   "currentBalance": 6866.72
+  },
+  {
+   "txnId": "ARJUN000048",
+   "valueDate": "2026-08-17",
+   "narration": "UPI/DR/891426155495/HP PETROL PUMP HADAPSAR/hppetrolpu@okaxis/CNG",
+   "amount": 446.49,
+   "type": "DEBIT",
+   "currentBalance": 6420.23
+  },
+  {
+   "txnId": "ARJUN000049",
+   "valueDate": "2026-08-17",
+   "narration": "UPI/DR/874348517019/NEW SAGAR HOTEL/newsagarho@oksbi/FOOD",
+   "amount": 105.9,
+   "type": "DEBIT",
+   "currentBalance": 6314.33
+  },
+  {
+   "txnId": "ARJUN000050",
+   "valueDate": "2026-08-18",
+   "narration": "NEFT CR-ZIPRIDE MOBILITY-DRIVER PAYOUT W34",
+   "amount": 6099.67,
+   "type": "CREDIT",
+   "currentBalance": 12414.0
+  },
+  {
+   "txnId": "ARJUN000051",
+   "valueDate": "2026-08-18",
+   "narration": "UPI/DR/181833395674/PRAKASH JOSHI/prakash.j@okhdfc/RENT",
+   "amount": 9000.0,
+   "type": "DEBIT",
+   "currentBalance": 3414.0
+  },
+  {
+   "txnId": "ARJUN000052",
+   "valueDate": "2026-08-18",
+   "narration": "UPI/DR/758352438213/HP PETROL PUMP HADAPSAR/hppetrolpu@okaxis/CNG",
+   "amount": 415.27,
+   "type": "DEBIT",
+   "currentBalance": 2998.73
+  },
+  {
+   "txnId": "ARJUN000053",
+   "valueDate": "2026-08-18",
+   "narration": "UPI/DR/387097920709/NEW SAGAR HOTEL/newsagarho@oksbi/FOOD",
+   "amount": 127.08,
+   "type": "DEBIT",
+   "currentBalance": 2871.65
+  },
+  {
+   "txnId": "ARJUN000054",
+   "valueDate": "2026-08-19",
+   "narration": "UPI/DR/567717828626/BHARAT CNG STATION/bharatcngs@okicici/CNG",
+   "amount": 415.2,
+   "type": "DEBIT",
+   "currentBalance": 2456.45
+  },
+  {
+   "txnId": "ARJUN000055",
+   "valueDate": "2026-08-19",
+   "narration": "UPI/DR/012766486164/NEW SAGAR HOTEL/newsagarho@oksbi/FOOD",
+   "amount": 165.32,
+   "type": "DEBIT",
+   "currentBalance": 2291.13
+  },
+  {
+   "txnId": "ARJUN000056",
+   "valueDate": "2026-08-20",
+   "narration": "UPI/DR/175320163054/HP PETROL PUMP HADAPSAR/hppetrolpu@okaxis/CNG",
+   "amount": 443.01,
+   "type": "DEBIT",
+   "currentBalance": 1848.12
+  },
+  {
+   "txnId": "ARJUN000057",
+   "valueDate": "2026-08-20",
+   "narration": "UPI/DR/092105979192/HIGHWAY DHABA/highwaydha@okaxis/FOOD",
+   "amount": 192.91,
+   "type": "DEBIT",
+   "currentBalance": 1655.21
+  },
+  {
+   "txnId": "ARJUN000058",
+   "valueDate": "2026-08-21",
+   "narration": "UPI/DR/565521072810/BHARAT CNG STATION/bharatcngs@okicici/CNG",
+   "amount": 541.75,
+   "type": "DEBIT",
+   "currentBalance": 1113.46
+  },
+  {
+   "txnId": "ARJUN000059",
+   "valueDate": "2026-08-21",
+   "narration": "UPI/DR/869407431589/NEW SAGAR HOTEL/newsagarho@oksbi/FOOD",
+   "amount": 130.47,
+   "type": "DEBIT",
+   "currentBalance": 982.99
+  },
+  {
+   "txnId": "ARJUN000060",
+   "valueDate": "2026-08-22",
+   "narration": "UPI/DR/619735384829/HP PETROL PUMP HADAPSAR/hppetrolpu@okaxis/CNG",
+   "amount": 521.47,
+   "type": "DEBIT",
+   "currentBalance": 461.52
+  },
+  {
+   "txnId": "ARJUN000061",
+   "valueDate": "2026-08-22",
+   "narration": "UPI/DR/034477248517/NEW SAGAR HOTEL/newsagarho@oksbi/FOOD",
+   "amount": 186.34,
+   "type": "DEBIT",
+   "currentBalance": 275.18
+  },
+  {
+   "txnId": "ARJUN000062",
+   "valueDate": "2026-08-23",
+   "narration": "UPI/DR/561364185659/HIGHWAY DHABA/highwaydha@okaxis/FOOD",
+   "amount": 132.19,
+   "type": "DEBIT",
+   "currentBalance": 142.99
+  },
+  {
+   "txnId": "ARJUN000063",
+   "valueDate": "2026-08-25",
+   "narration": "NEFT CR-ZIPRIDE MOBILITY-DRIVER PAYOUT W35",
+   "amount": 11880.8,
+   "type": "CREDIT",
+   "currentBalance": 12023.79
+  },
+  {
+   "txnId": "ARJUN000064",
+   "valueDate": "2026-08-25",
+   "narration": "UPI/DR/942829836403/BHARAT CNG STATION/bharatcngs@okicici/CNG",
+   "amount": 437.41,
+   "type": "DEBIT",
+   "currentBalance": 11586.38
+  },
+  {
+   "txnId": "ARJUN000065",
+   "valueDate": "2026-08-25",
+   "narration": "UPI/DR/072541693046/HIGHWAY DHABA/highwaydha@okaxis/FOOD",
+   "amount": 148.72,
+   "type": "DEBIT",
+   "currentBalance": 11437.66
+  },
+  {
+   "txnId": "ARJUN000066",
+   "valueDate": "2026-08-26",
+   "narration": "UPI/DR/052176055292/HP PETROL PUMP HADAPSAR/hppetrolpu@okaxis/CNG",
+   "amount": 545.24,
+   "type": "DEBIT",
+   "currentBalance": 10892.42
+  },
+  {
+   "txnId": "ARJUN000067",
+   "valueDate": "2026-08-26",
+   "narration": "UPI/DR/338265660705/HIGHWAY DHABA/highwaydha@okaxis/FOOD",
+   "amount": 133.53,
+   "type": "DEBIT",
+   "currentBalance": 10758.89
+  },
+  {
+   "txnId": "ARJUN000068",
+   "valueDate": "2026-08-27",
+   "narration": "UPI/DR/232725485378/BHARAT CNG STATION/bharatcngs@okicici/CNG",
+   "amount": 543.7,
+   "type": "DEBIT",
+   "currentBalance": 10215.19
+  },
+  {
+   "txnId": "ARJUN000069",
+   "valueDate": "2026-08-27",
+   "narration": "UPI/DR/061861740506/HIGHWAY DHABA/highwaydha@okaxis/FOOD",
+   "amount": 138.56,
+   "type": "DEBIT",
+   "currentBalance": 10076.63
+  },
+  {
+   "txnId": "ARJUN000070",
+   "valueDate": "2026-08-28",
+   "narration": "UPI/DR/890424349931/HP PETROL PUMP HADAPSAR/hppetrolpu@okaxis/CNG",
+   "amount": 536.81,
+   "type": "DEBIT",
+   "currentBalance": 9539.82
+  },
+  {
+   "txnId": "ARJUN000071",
+   "valueDate": "2026-08-28",
+   "narration": "UPI/DR/993760574528/NEW SAGAR HOTEL/newsagarho@oksbi/FOOD",
+   "amount": 188.35,
+   "type": "DEBIT",
+   "currentBalance": 9351.47
+  },
+  {
+   "txnId": "ARJUN000072",
+   "valueDate": "2026-08-29",
+   "narration": "UPI/DR/130872482992/QUICKTALK MOBILE RECHARGE/quicktalkm@oksbi/PREPAID",
+   "amount": 399.0,
+   "type": "DEBIT",
+   "currentBalance": 8952.47
+  },
+  {
+   "txnId": "ARJUN000073",
+   "valueDate": "2026-08-29",
+   "narration": "UPI/DR/521372548470/BHARAT CNG STATION/bharatcngs@okicici/CNG",
+   "amount": 500.5,
+   "type": "DEBIT",
+   "currentBalance": 8451.97
+  },
+  {
+   "txnId": "ARJUN000074",
+   "valueDate": "2026-08-29",
+   "narration": "UPI/DR/490253108437/NEW SAGAR HOTEL/newsagarho@oksbi/FOOD",
+   "amount": 179.18,
+   "type": "DEBIT",
+   "currentBalance": 8272.79
+  },
+  {
+   "txnId": "ARJUN000075",
+   "valueDate": "2026-08-30",
+   "narration": "UPI/DR/733526132676/HP PETROL PUMP HADAPSAR/hppetrolpu@okaxis/CNG",
+   "amount": 518.76,
+   "type": "DEBIT",
+   "currentBalance": 7754.03
+  },
+  {
+   "txnId": "ARJUN000076",
+   "valueDate": "2026-08-30",
+   "narration": "UPI/DR/915609225581/HIGHWAY DHABA/highwaydha@okaxis/FOOD",
+   "amount": 121.82,
+   "type": "DEBIT",
+   "currentBalance": 7632.21
+  },
+  {
+   "txnId": "ARJUN000077",
+   "valueDate": "2026-08-30",
+   "narration": "ATM CASH WDL HADAPSAR PUNE",
+   "amount": 7400.0,
+   "type": "DEBIT",
+   "currentBalance": 232.21
+  },
+  {
+   "txnId": "ARJUN000078",
+   "valueDate": "2026-08-31",
+   "narration": "UPI/DR/918551392901/NEW SAGAR HOTEL/newsagarho@oksbi/FOOD",
+   "amount": 120.89,
+   "type": "DEBIT",
+   "currentBalance": 111.32
+  },
+  {
+   "txnId": "ARJUN000079",
+   "valueDate": "2026-09-01",
+   "narration": "NEFT CR-ZIPRIDE MOBILITY-DRIVER PAYOUT W36",
+   "amount": 4127.44,
+   "type": "CREDIT",
+   "currentBalance": 4238.76
+  },
+  {
+   "txnId": "ARJUN000080",
+   "valueDate": "2026-09-01",
+   "narration": "UPI/DR/213376826404/BHARAT CNG STATION/bharatcngs@okicici/CNG",
+   "amount": 579.59,
+   "type": "DEBIT",
+   "currentBalance": 3659.17
+  },
+  {
+   "txnId": "ARJUN000081",
+   "valueDate": "2026-09-01",
+   "narration": "UPI/DR/713305636076/HIGHWAY DHABA/highwaydha@okaxis/FOOD",
+   "amount": 117.97,
+   "type": "DEBIT",
+   "currentBalance": 3541.2
+  },
+  {
+   "txnId": "ARJUN000082",
+   "valueDate": "2026-09-02",
+   "narration": "UPI/DR/220655045107/HP PETROL PUMP HADAPSAR/hppetrolpu@okaxis/CNG",
+   "amount": 582.46,
+   "type": "DEBIT",
+   "currentBalance": 2958.74
+  },
+  {
+   "txnId": "ARJUN000083",
+   "valueDate": "2026-09-02",
+   "narration": "UPI/DR/229583882236/NEW SAGAR HOTEL/newsagarho@oksbi/FOOD",
+   "amount": 180.68,
+   "type": "DEBIT",
+   "currentBalance": 2778.06
+  },
+  {
+   "txnId": "ARJUN000084",
+   "valueDate": "2026-09-03",
+   "narration": "UPI/DR/573308688737/BHARAT CNG STATION/bharatcngs@okicici/CNG",
+   "amount": 591.22,
+   "type": "DEBIT",
+   "currentBalance": 2186.84
+  },
+  {
+   "txnId": "ARJUN000085",
+   "valueDate": "2026-09-03",
+   "narration": "UPI/DR/011229197293/HIGHWAY DHABA/highwaydha@okaxis/FOOD",
+   "amount": 173.8,
+   "type": "DEBIT",
+   "currentBalance": 2013.04
+  },
+  {
+   "txnId": "ARJUN000086",
+   "valueDate": "2026-09-04",
+   "narration": "UPI/DR/111158319241/BHARAT CNG STATION/bharatcngs@okicici/CNG",
+   "amount": 411.1,
+   "type": "DEBIT",
+   "currentBalance": 1601.94
+  },
+  {
+   "txnId": "ARJUN000087",
+   "valueDate": "2026-09-04",
+   "narration": "UPI/DR/855795746623/HIGHWAY DHABA/highwaydha@okaxis/FOOD",
+   "amount": 103.85,
+   "type": "DEBIT",
+   "currentBalance": 1498.09
+  },
+  {
+   "txnId": "ARJUN000088",
+   "valueDate": "2026-09-05",
+   "narration": "UPI/DR/888874471627/HP PETROL PUMP HADAPSAR/hppetrolpu@okaxis/CNG",
+   "amount": 565.04,
+   "type": "DEBIT",
+   "currentBalance": 933.05
+  },
+  {
+   "txnId": "ARJUN000089",
+   "valueDate": "2026-09-05",
+   "narration": "UPI/DR/269219667040/HIGHWAY DHABA/highwaydha@okaxis/FOOD",
+   "amount": 113.82,
+   "type": "DEBIT",
+   "currentBalance": 819.23
+  },
+  {
+   "txnId": "ARJUN000090",
+   "valueDate": "2026-09-06",
+   "narration": "UPI/DR/455712024668/BHARAT CNG STATION/bharatcngs@okicici/CNG",
+   "amount": 548.27,
+   "type": "DEBIT",
+   "currentBalance": 270.96
+  },
+  {
+   "txnId": "ARJUN000091",
+   "valueDate": "2026-09-06",
+   "narration": "UPI/DR/305648303928/NEW SAGAR HOTEL/newsagarho@oksbi/FOOD",
+   "amount": 114.08,
+   "type": "DEBIT",
+   "currentBalance": 156.88
+  },
+  {
+   "txnId": "ARJUN000092",
+   "valueDate": "2026-09-07",
+   "narration": "UPI/DR/835273889141/HIGHWAY DHABA/highwaydha@okaxis/FOOD",
+   "amount": 146.9,
+   "type": "DEBIT",
+   "currentBalance": 9.98
+  },
+  {
+   "txnId": "ARJUN000093",
+   "valueDate": "2026-09-08",
+   "narration": "NEFT CR-ZIPRIDE MOBILITY-DRIVER PAYOUT W37",
+   "amount": 15902.03,
+   "type": "CREDIT",
+   "currentBalance": 15912.01
+  },
+  {
+   "txnId": "ARJUN000094",
+   "valueDate": "2026-09-08",
+   "narration": "UPI/DR/423481509420/PRAKASH JOSHI/prakash.j@okhdfc/RENT",
+   "amount": 9000.0,
+   "type": "DEBIT",
+   "currentBalance": 6912.01
+  },
+  {
+   "txnId": "ARJUN000095",
+   "valueDate": "2026-09-08",
+   "narration": "NACH RTN CHG INSUFFICIENT BAL",
+   "amount": 590.0,
+   "type": "DEBIT",
+   "currentBalance": 6322.01
+  },
+  {
+   "txnId": "ARJUN000096",
+   "valueDate": "2026-09-08",
+   "narration": "UPI/DR/763782951621/BHARAT CNG STATION/bharatcngs@okicici/CNG",
+   "amount": 563.63,
+   "type": "DEBIT",
+   "currentBalance": 5758.38
+  },
+  {
+   "txnId": "ARJUN000097",
+   "valueDate": "2026-09-08",
+   "narration": "UPI/DR/905297779960/NEW SAGAR HOTEL/newsagarho@oksbi/FOOD",
+   "amount": 167.38,
+   "type": "DEBIT",
+   "currentBalance": 5591.0
+  },
+  {
+   "txnId": "ARJUN000098",
+   "valueDate": "2026-09-09",
+   "narration": "UPI/DR/627071304806/HP PETROL PUMP HADAPSAR/hppetrolpu@okaxis/CNG",
+   "amount": 430.15,
+   "type": "DEBIT",
+   "currentBalance": 5160.85
+  },
+  {
+   "txnId": "ARJUN000099",
+   "valueDate": "2026-09-09",
+   "narration": "UPI/DR/168677835137/NEW SAGAR HOTEL/newsagarho@oksbi/FOOD",
+   "amount": 153.66,
+   "type": "DEBIT",
+   "currentBalance": 5007.19
+  },
+  {
+   "txnId": "ARJUN000100",
+   "valueDate": "2026-09-10",
+   "narration": "UPI/DR/966861350557/BHARAT CNG STATION/bharatcngs@okicici/CNG",
+   "amount": 512.27,
+   "type": "DEBIT",
+   "currentBalance": 4494.92
+  },
+  {
+   "txnId": "ARJUN000101",
+   "valueDate": "2026-09-10",
+   "narration": "UPI/DR/803772525615/NEW SAGAR HOTEL/newsagarho@oksbi/FOOD",
+   "amount": 125.62,
+   "type": "DEBIT",
+   "currentBalance": 4369.3
+  },
+  {
+   "txnId": "ARJUN000102",
+   "valueDate": "2026-09-11",
+   "narration": "UPI/DR/812561180737/HP PETROL PUMP HADAPSAR/hppetrolpu@okaxis/CNG",
+   "amount": 573.63,
+   "type": "DEBIT",
+   "currentBalance": 3795.67
+  },
+  {
+   "txnId": "ARJUN000103",
+   "valueDate": "2026-09-11",
+   "narration": "UPI/DR/621201050952/HIGHWAY DHABA/highwaydha@okaxis/FOOD",
+   "amount": 136.98,
+   "type": "DEBIT",
+   "currentBalance": 3658.69
+  },
+  {
+   "txnId": "ARJUN000104",
+   "valueDate": "2026-09-12",
+   "narration": "UPI/DR/278610840532/HP PETROL PUMP HADAPSAR/hppetrolpu@okaxis/CNG",
+   "amount": 593.9,
+   "type": "DEBIT",
+   "currentBalance": 3064.79
+  },
+  {
+   "txnId": "ARJUN000105",
+   "valueDate": "2026-09-12",
+   "narration": "UPI/DR/838249870731/HIGHWAY DHABA/highwaydha@okaxis/FOOD",
+   "amount": 102.76,
+   "type": "DEBIT",
+   "currentBalance": 2962.03
+  },
+  {
+   "txnId": "ARJUN000106",
+   "valueDate": "2026-09-13",
+   "narration": "UPI/DR/623484101112/BHARAT CNG STATION/bharatcngs@okicici/CNG",
+   "amount": 484.38,
+   "type": "DEBIT",
+   "currentBalance": 2477.65
+  },
+  {
+   "txnId": "ARJUN000107",
+   "valueDate": "2026-09-13",
+   "narration": "UPI/DR/158590758378/HIGHWAY DHABA/highwaydha@okaxis/FOOD",
+   "amount": 106.66,
+   "type": "DEBIT",
+   "currentBalance": 2370.99
+  },
+  {
+   "txnId": "ARJUN000108",
+   "valueDate": "2026-09-13",
+   "narration": "ATM CASH WDL HADAPSAR PUNE",
+   "amount": 2200.0,
+   "type": "DEBIT",
+   "currentBalance": 170.99
+  },
+  {
+   "txnId": "ARJUN000109",
+   "valueDate": "2026-09-15",
+   "narration": "NEFT CR-ZIPRIDE MOBILITY-DRIVER PAYOUT W38",
+   "amount": 8182.02,
+   "type": "CREDIT",
+   "currentBalance": 8353.01
+  },
+  {
+   "txnId": "ARJUN000110",
+   "valueDate": "2026-09-15",
+   "narration": "UPI/DR/876970712586/HP PETROL PUMP HADAPSAR/hppetrolpu@okaxis/CNG",
+   "amount": 594.02,
+   "type": "DEBIT",
+   "currentBalance": 7758.99
+  },
+  {
+   "txnId": "ARJUN000111",
+   "valueDate": "2026-09-15",
+   "narration": "UPI/DR/460205676125/HIGHWAY DHABA/highwaydha@okaxis/FOOD",
+   "amount": 200.06,
+   "type": "DEBIT",
+   "currentBalance": 7558.93
+  },
+  {
+   "txnId": "ARJUN000112",
+   "valueDate": "2026-09-16",
+   "narration": "ACH D- ZENITH MICROFIN EMI 723149",
+   "amount": 2500.0,
+   "type": "DEBIT",
+   "currentBalance": 5058.93
+  },
+  {
+   "txnId": "ARJUN000113",
+   "valueDate": "2026-09-16",
+   "narration": "UPI/DR/447723185153/BHARAT CNG STATION/bharatcngs@okicici/CNG",
+   "amount": 439.96,
+   "type": "DEBIT",
+   "currentBalance": 4618.97
+  },
+  {
+   "txnId": "ARJUN000114",
+   "valueDate": "2026-09-16",
+   "narration": "UPI/DR/292889770851/HIGHWAY DHABA/highwaydha@okaxis/FOOD",
+   "amount": 154.03,
+   "type": "DEBIT",
+   "currentBalance": 4464.94
+  },
+  {
+   "txnId": "ARJUN000115",
+   "valueDate": "2026-09-17",
+   "narration": "UPI/DR/153564821690/HP PETROL PUMP HADAPSAR/hppetrolpu@okaxis/CNG",
+   "amount": 522.66,
+   "type": "DEBIT",
+   "currentBalance": 3942.28
+  },
+  {
+   "txnId": "ARJUN000116",
+   "valueDate": "2026-09-17",
+   "narration": "UPI/DR/946807763336/NEW SAGAR HOTEL/newsagarho@oksbi/FOOD",
+   "amount": 184.0,
+   "type": "DEBIT",
+   "currentBalance": 3758.28
+  },
+  {
+   "txnId": "ARJUN000117",
+   "valueDate": "2026-09-18",
+   "narration": "UPI/DR/847889242108/BHARAT CNG STATION/bharatcngs@okicici/CNG",
+   "amount": 590.99,
+   "type": "DEBIT",
+   "currentBalance": 3167.29
+  },
+  {
+   "txnId": "ARJUN000118",
+   "valueDate": "2026-09-18",
+   "narration": "UPI/DR/301672327748/NEW SAGAR HOTEL/newsagarho@oksbi/FOOD",
+   "amount": 178.23,
+   "type": "DEBIT",
+   "currentBalance": 2989.06
+  },
+  {
+   "txnId": "ARJUN000119",
+   "valueDate": "2026-09-19",
+   "narration": "UPI/DR/557249873597/BHARAT CNG STATION/bharatcngs@okicici/CNG",
+   "amount": 510.61,
+   "type": "DEBIT",
+   "currentBalance": 2478.45
+  },
+  {
+   "txnId": "ARJUN000120",
+   "valueDate": "2026-09-19",
+   "narration": "UPI/DR/325594684694/NEW SAGAR HOTEL/newsagarho@oksbi/FOOD",
+   "amount": 133.03,
+   "type": "DEBIT",
+   "currentBalance": 2345.42
+  },
+  {
+   "txnId": "ARJUN000121",
+   "valueDate": "2026-09-20",
+   "narration": "UPI/DR/733588935106/BHARAT CNG STATION/bharatcngs@okicici/CNG",
+   "amount": 511.67,
+   "type": "DEBIT",
+   "currentBalance": 1833.75
+  },
+  {
+   "txnId": "ARJUN000122",
+   "valueDate": "2026-09-20",
+   "narration": "UPI/DR/437485971154/HIGHWAY DHABA/highwaydha@okaxis/FOOD",
+   "amount": 194.14,
+   "type": "DEBIT",
+   "currentBalance": 1639.61
+  },
+  {
+   "txnId": "ARJUN000123",
+   "valueDate": "2026-09-20",
+   "narration": "ATM CASH WDL HADAPSAR PUNE",
+   "amount": 1400.0,
+   "type": "DEBIT",
+   "currentBalance": 239.61
+  },
+  {
+   "txnId": "ARJUN000124",
+   "valueDate": "2026-09-21",
+   "narration": "UPI/DR/143074088139/NEW SAGAR HOTEL/newsagarho@oksbi/FOOD",
+   "amount": 189.14,
+   "type": "DEBIT",
+   "currentBalance": 50.47
+  },
+  {
+   "txnId": "ARJUN000125",
+   "valueDate": "2026-09-22",
+   "narration": "NEFT CR-ZIPRIDE MOBILITY-DRIVER PAYOUT W39",
+   "amount": 3611.81,
+   "type": "CREDIT",
+   "currentBalance": 3662.28
+  },
+  {
+   "txnId": "ARJUN000126",
+   "valueDate": "2026-09-22",
+   "narration": "UPI/DR/114638971679/HP PETROL PUMP HADAPSAR/hppetrolpu@okaxis/CNG",
+   "amount": 401.25,
+   "type": "DEBIT",
+   "currentBalance": 3261.03
+  },
+  {
+   "txnId": "ARJUN000127",
+   "valueDate": "2026-09-22",
+   "narration": "UPI/DR/545594734508/NEW SAGAR HOTEL/newsagarho@oksbi/FOOD",
+   "amount": 195.75,
+   "type": "DEBIT",
+   "currentBalance": 3065.28
+  },
+  {
+   "txnId": "ARJUN000128",
+   "valueDate": "2026-09-23",
+   "narration": "UPI/DR/599311418881/HP PETROL PUMP HADAPSAR/hppetrolpu@okaxis/CNG",
+   "amount": 567.73,
+   "type": "DEBIT",
+   "currentBalance": 2497.55
+  },
+  {
+   "txnId": "ARJUN000129",
+   "valueDate": "2026-09-23",
+   "narration": "UPI/DR/596512183486/HIGHWAY DHABA/highwaydha@okaxis/FOOD",
+   "amount": 144.43,
+   "type": "DEBIT",
+   "currentBalance": 2353.12
+  },
+  {
+   "txnId": "ARJUN000130",
+   "valueDate": "2026-09-24",
+   "narration": "UPI/CR/719083200171/VIKAS SALUNKE/vikas.s@oksbi/BACK",
+   "amount": 5000.0,
+   "type": "CREDIT",
+   "currentBalance": 7353.12
+  },
+  {
+   "txnId": "ARJUN000131",
+   "valueDate": "2026-09-24",
+   "narration": "UPI/DR/612898531162/VIKAS SALUNKE/vikas.s@oksbi/FRIEND",
+   "amount": 5000.0,
+   "type": "DEBIT",
+   "currentBalance": 2353.12
+  },
+  {
+   "txnId": "ARJUN000132",
+   "valueDate": "2026-09-24",
+   "narration": "UPI/DR/779011699865/BHARAT CNG STATION/bharatcngs@okicici/CNG",
+   "amount": 509.27,
+   "type": "DEBIT",
+   "currentBalance": 1843.85
+  },
+  {
+   "txnId": "ARJUN000133",
+   "valueDate": "2026-09-24",
+   "narration": "UPI/DR/417465655144/HIGHWAY DHABA/highwaydha@okaxis/FOOD",
+   "amount": 114.5,
+   "type": "DEBIT",
+   "currentBalance": 1729.35
+  },
+  {
+   "txnId": "ARJUN000134",
+   "valueDate": "2026-09-25",
+   "narration": "UPI/DR/626392977853/BHARAT CNG STATION/bharatcngs@okicici/CNG",
+   "amount": 449.41,
+   "type": "DEBIT",
+   "currentBalance": 1279.94
+  },
+  {
+   "txnId": "ARJUN000135",
+   "valueDate": "2026-09-25",
+   "narration": "UPI/DR/756823341627/NEW SAGAR HOTEL/newsagarho@oksbi/FOOD",
+   "amount": 128.04,
+   "type": "DEBIT",
+   "currentBalance": 1151.9
+  },
+  {
+   "txnId": "ARJUN000136",
+   "valueDate": "2026-09-26",
+   "narration": "UPI/DR/822798308215/QUICKTALK MOBILE RECHARGE/quicktalkm@oksbi/PREPAID",
+   "amount": 399.0,
+   "type": "DEBIT",
+   "currentBalance": 752.9
+  },
+  {
+   "txnId": "ARJUN000137",
+   "valueDate": "2026-09-26",
+   "narration": "UPI/DR/390575874436/BHARAT CNG STATION/bharatcngs@okicici/CNG",
+   "amount": 592.05,
+   "type": "DEBIT",
+   "currentBalance": 160.85
+  },
+  {
+   "txnId": "ARJUN000138",
+   "valueDate": "2026-09-26",
+   "narration": "UPI/DR/686056885974/HIGHWAY DHABA/highwaydha@okaxis/FOOD",
+   "amount": 136.57,
+   "type": "DEBIT",
+   "currentBalance": 24.28
+  },
+  {
+   "txnId": "ARJUN000139",
+   "valueDate": "2026-09-29",
+   "narration": "NEFT CR-ZIPRIDE MOBILITY-DRIVER PAYOUT W40",
+   "amount": 11117.25,
+   "type": "CREDIT",
+   "currentBalance": 11141.53
+  },
+  {
+   "txnId": "ARJUN000140",
+   "valueDate": "2026-09-29",
+   "narration": "UPI/DR/719294975718/HP PETROL PUMP HADAPSAR/hppetrolpu@okaxis/CNG",
+   "amount": 454.8,
+   "type": "DEBIT",
+   "currentBalance": 10686.73
+  },
+  {
+   "txnId": "ARJUN000141",
+   "valueDate": "2026-09-29",
+   "narration": "UPI/DR/924965609938/HIGHWAY DHABA/highwaydha@okaxis/FOOD",
+   "amount": 120.4,
+   "type": "DEBIT",
+   "currentBalance": 10566.33
+  },
+  {
+   "txnId": "ARJUN000142",
+   "valueDate": "2026-09-30",
+   "narration": "UPI/DR/693876711367/BHARAT CNG STATION/bharatcngs@okicici/CNG",
+   "amount": 412.94,
+   "type": "DEBIT",
+   "currentBalance": 10153.39
+  },
+  {
+   "txnId": "ARJUN000143",
+   "valueDate": "2026-09-30",
+   "narration": "UPI/DR/252260971850/HIGHWAY DHABA/highwaydha@okaxis/FOOD",
+   "amount": 174.58,
+   "type": "DEBIT",
+   "currentBalance": 9978.81
+  },
+  {
+   "txnId": "ARJUN000144",
+   "valueDate": "2026-10-01",
+   "narration": "UPI/DR/132106719774/BHARAT CNG STATION/bharatcngs@okicici/CNG",
+   "amount": 442.99,
+   "type": "DEBIT",
+   "currentBalance": 9535.82
+  },
+  {
+   "txnId": "ARJUN000145",
+   "valueDate": "2026-10-01",
+   "narration": "UPI/DR/649074750974/NEW SAGAR HOTEL/newsagarho@oksbi/FOOD",
+   "amount": 142.67,
+   "type": "DEBIT",
+   "currentBalance": 9393.15
+  },
+  {
+   "txnId": "ARJUN000146",
+   "valueDate": "2026-10-02",
+   "narration": "UPI/DR/354136538196/BHARAT CNG STATION/bharatcngs@okicici/CNG",
+   "amount": 458.54,
+   "type": "DEBIT",
+   "currentBalance": 8934.61
+  },
+  {
+   "txnId": "ARJUN000147",
+   "valueDate": "2026-10-02",
+   "narration": "UPI/DR/090463296713/HIGHWAY DHABA/highwaydha@okaxis/FOOD",
+   "amount": 197.63,
+   "type": "DEBIT",
+   "currentBalance": 8736.98
+  },
+  {
+   "txnId": "ARJUN000148",
+   "valueDate": "2026-10-03",
+   "narration": "UPI/DR/052324207165/HP PETROL PUMP HADAPSAR/hppetrolpu@okaxis/CNG",
+   "amount": 567.05,
+   "type": "DEBIT",
+   "currentBalance": 8169.93
+  },
+  {
+   "txnId": "ARJUN000149",
+   "valueDate": "2026-10-03",
+   "narration": "UPI/DR/633560938215/NEW SAGAR HOTEL/newsagarho@oksbi/FOOD",
+   "amount": 169.38,
+   "type": "DEBIT",
+   "currentBalance": 8000.55
+  },
+  {
+   "txnId": "ARJUN000150",
+   "valueDate": "2026-10-04",
+   "narration": "UPI/DR/046379233563/HP PETROL PUMP HADAPSAR/hppetrolpu@okaxis/CNG",
+   "amount": 474.69,
+   "type": "DEBIT",
+   "currentBalance": 7525.86
+  },
+  {
+   "txnId": "ARJUN000151",
+   "valueDate": "2026-10-04",
+   "narration": "UPI/DR/271805523337/HIGHWAY DHABA/highwaydha@okaxis/FOOD",
+   "amount": 162.64,
+   "type": "DEBIT",
+   "currentBalance": 7363.22
+  },
+  {
+   "txnId": "ARJUN000152",
+   "valueDate": "2026-10-04",
+   "narration": "ATM CASH WDL HADAPSAR PUNE",
+   "amount": 7300.0,
+   "type": "DEBIT",
+   "currentBalance": 63.22
+  },
+  {
+   "txnId": "ARJUN000153",
+   "valueDate": "2026-10-06",
+   "narration": "NEFT CR-ZIPRIDE MOBILITY-DRIVER PAYOUT W41",
+   "amount": 9434.43,
+   "type": "CREDIT",
+   "currentBalance": 9497.65
+  },
+  {
+   "txnId": "ARJUN000154",
+   "valueDate": "2026-10-06",
+   "narration": "UPI/DR/787074161682/PRAKASH JOSHI/prakash.j@okhdfc/RENT",
+   "amount": 9000.0,
+   "type": "DEBIT",
+   "currentBalance": 497.65
+  },
+  {
+   "txnId": "ARJUN000155",
+   "valueDate": "2026-10-06",
+   "narration": "UPI/DR/308109645470/BHARAT CNG STATION/bharatcngs@okicici/CNG",
+   "amount": 453.61,
+   "type": "DEBIT",
+   "currentBalance": 44.04
+  },
+  {
+   "txnId": "ARJUN000156",
+   "valueDate": "2026-10-13",
+   "narration": "NEFT CR-ZIPRIDE MOBILITY-DRIVER PAYOUT W42",
+   "amount": 7008.23,
+   "type": "CREDIT",
+   "currentBalance": 7052.27
+  },
+  {
+   "txnId": "ARJUN000157",
+   "valueDate": "2026-10-13",
+   "narration": "ACH D- ZENITH MICROFIN EMI 628384",
+   "amount": 2500.0,
+   "type": "DEBIT",
+   "currentBalance": 4552.27
+  },
+  {
+   "txnId": "ARJUN000158",
+   "valueDate": "2026-10-13",
+   "narration": "UPI/DR/735250235676/HP PETROL PUMP HADAPSAR/hppetrolpu@okaxis/CNG",
+   "amount": 528.5,
+   "type": "DEBIT",
+   "currentBalance": 4023.77
+  },
+  {
+   "txnId": "ARJUN000159",
+   "valueDate": "2026-10-13",
+   "narration": "UPI/DR/104305315960/NEW SAGAR HOTEL/newsagarho@oksbi/FOOD",
+   "amount": 171.37,
+   "type": "DEBIT",
+   "currentBalance": 3852.4
+  },
+  {
+   "txnId": "ARJUN000160",
+   "valueDate": "2026-10-14",
+   "narration": "UPI/DR/148499976152/HP PETROL PUMP HADAPSAR/hppetrolpu@okaxis/CNG",
+   "amount": 464.3,
+   "type": "DEBIT",
+   "currentBalance": 3388.1
+  },
+  {
+   "txnId": "ARJUN000161",
+   "valueDate": "2026-10-14",
+   "narration": "UPI/DR/854764067175/HIGHWAY DHABA/highwaydha@okaxis/FOOD",
+   "amount": 182.22,
+   "type": "DEBIT",
+   "currentBalance": 3205.88
+  },
+  {
+   "txnId": "ARJUN000162",
+   "valueDate": "2026-10-15",
+   "narration": "UPI/DR/307310502017/BHARAT CNG STATION/bharatcngs@okicici/CNG",
+   "amount": 600.8,
+   "type": "DEBIT",
+   "currentBalance": 2605.08
+  },
+  {
+   "txnId": "ARJUN000163",
+   "valueDate": "2026-10-15",
+   "narration": "UPI/DR/454859133612/HIGHWAY DHABA/highwaydha@okaxis/FOOD",
+   "amount": 111.53,
+   "type": "DEBIT",
+   "currentBalance": 2493.55
+  },
+  {
+   "txnId": "ARJUN000164",
+   "valueDate": "2026-10-16",
+   "narration": "UPI/DR/335941535514/BHARAT CNG STATION/bharatcngs@okicici/CNG",
+   "amount": 431.41,
+   "type": "DEBIT",
+   "currentBalance": 2062.14
+  },
+  {
+   "txnId": "ARJUN000165",
+   "valueDate": "2026-10-16",
+   "narration": "UPI/DR/154259815333/NEW SAGAR HOTEL/newsagarho@oksbi/FOOD",
+   "amount": 146.19,
+   "type": "DEBIT",
+   "currentBalance": 1915.95
+  },
+  {
+   "txnId": "ARJUN000166",
+   "valueDate": "2026-10-17",
+   "narration": "UPI/DR/224013207439/BHARAT CNG STATION/bharatcngs@okicici/CNG",
+   "amount": 408.65,
+   "type": "DEBIT",
+   "currentBalance": 1507.3
+  },
+  {
+   "txnId": "ARJUN000167",
+   "valueDate": "2026-10-17",
+   "narration": "UPI/DR/672659677374/HIGHWAY DHABA/highwaydha@okaxis/FOOD",
+   "amount": 146.44,
+   "type": "DEBIT",
+   "currentBalance": 1360.86
+  },
+  {
+   "txnId": "ARJUN000168",
+   "valueDate": "2026-10-18",
+   "narration": "UPI/DR/175868733008/HP PETROL PUMP HADAPSAR/hppetrolpu@okaxis/CNG",
+   "amount": 461.64,
+   "type": "DEBIT",
+   "currentBalance": 899.22
+  },
+  {
+   "txnId": "ARJUN000169",
+   "valueDate": "2026-10-18",
+   "narration": "UPI/DR/174840045446/HIGHWAY DHABA/highwaydha@okaxis/FOOD",
+   "amount": 193.09,
+   "type": "DEBIT",
+   "currentBalance": 706.13
+  },
+  {
+   "txnId": "ARJUN000170",
+   "valueDate": "2026-10-18",
+   "narration": "ATM CASH WDL HADAPSAR PUNE",
+   "amount": 600.0,
+   "type": "DEBIT",
+   "currentBalance": 106.13
+  },
+  {
+   "txnId": "ARJUN000171",
+   "valueDate": "2026-10-20",
+   "narration": "NEFT CR-ZIPRIDE MOBILITY-DRIVER PAYOUT W43",
+   "amount": 14496.22,
+   "type": "CREDIT",
+   "currentBalance": 14602.35
+  },
+  {
+   "txnId": "ARJUN000172",
+   "valueDate": "2026-10-20",
+   "narration": "UPI/DR/554118381923/HP PETROL PUMP HADAPSAR/hppetrolpu@okaxis/CNG",
+   "amount": 475.63,
+   "type": "DEBIT",
+   "currentBalance": 14126.72
+  },
+  {
+   "txnId": "ARJUN000173",
+   "valueDate": "2026-10-20",
+   "narration": "UPI/DR/093551582015/NEW SAGAR HOTEL/newsagarho@oksbi/FOOD",
+   "amount": 188.69,
+   "type": "DEBIT",
+   "currentBalance": 13938.03
+  },
+  {
+   "txnId": "ARJUN000174",
+   "valueDate": "2026-10-21",
+   "narration": "UPI/DR/100895475588/BHARAT CNG STATION/bharatcngs@okicici/CNG",
+   "amount": 415.32,
+   "type": "DEBIT",
+   "currentBalance": 13522.71
+  },
+  {
+   "txnId": "ARJUN000175",
+   "valueDate": "2026-10-21",
+   "narration": "UPI/DR/303286219098/HIGHWAY DHABA/highwaydha@okaxis/FOOD",
+   "amount": 100.83,
+   "type": "DEBIT",
+   "currentBalance": 13421.88
+  },
+  {
+   "txnId": "ARJUN000176",
+   "valueDate": "2026-10-22",
+   "narration": "UPI/DR/213636704241/BHARAT CNG STATION/bharatcngs@okicici/CNG",
+   "amount": 600.73,
+   "type": "DEBIT",
+   "currentBalance": 12821.15
+  },
+  {
+   "txnId": "ARJUN000177",
+   "valueDate": "2026-10-22",
+   "narration": "UPI/DR/936169614878/HIGHWAY DHABA/highwaydha@okaxis/FOOD",
+   "amount": 139.04,
+   "type": "DEBIT",
+   "currentBalance": 12682.11
+  },
+  {
+   "txnId": "ARJUN000178",
+   "valueDate": "2026-10-23",
+   "narration": "UPI/DR/609539344571/HP PETROL PUMP HADAPSAR/hppetrolpu@okaxis/CNG",
+   "amount": 546.21,
+   "type": "DEBIT",
+   "currentBalance": 12135.9
+  },
+  {
+   "txnId": "ARJUN000179",
+   "valueDate": "2026-10-23",
+   "narration": "UPI/DR/317519374500/NEW SAGAR HOTEL/newsagarho@oksbi/FOOD",
+   "amount": 106.72,
+   "type": "DEBIT",
+   "currentBalance": 12029.18
+  },
+  {
+   "txnId": "ARJUN000180",
+   "valueDate": "2026-10-24",
+   "narration": "UPI/DR/487190742722/QUICKTALK MOBILE RECHARGE/quicktalkm@oksbi/PREPAID",
+   "amount": 399.0,
+   "type": "DEBIT",
+   "currentBalance": 11630.18
+  },
+  {
+   "txnId": "ARJUN000181",
+   "valueDate": "2026-10-24",
+   "narration": "UPI/DR/529903223269/BHARAT CNG STATION/bharatcngs@okicici/CNG",
+   "amount": 456.88,
+   "type": "DEBIT",
+   "currentBalance": 11173.3
+  },
+  {
+   "txnId": "ARJUN000182",
+   "valueDate": "2026-10-24",
+   "narration": "UPI/DR/487036447048/HIGHWAY DHABA/highwaydha@okaxis/FOOD",
+   "amount": 155.02,
+   "type": "DEBIT",
+   "currentBalance": 11018.28
+  },
+  {
+   "txnId": "ARJUN000183",
+   "valueDate": "2026-10-25",
+   "narration": "UPI/DR/287973943981/HP PETROL PUMP HADAPSAR/hppetrolpu@okaxis/CNG",
+   "amount": 550.77,
+   "type": "DEBIT",
+   "currentBalance": 10467.51
+  },
+  {
+   "txnId": "ARJUN000184",
+   "valueDate": "2026-10-25",
+   "narration": "UPI/DR/496259659509/HIGHWAY DHABA/highwaydha@okaxis/FOOD",
+   "amount": 106.61,
+   "type": "DEBIT",
+   "currentBalance": 10360.9
+  },
+  {
+   "txnId": "ARJUN000185",
+   "valueDate": "2026-10-25",
+   "narration": "ATM CASH WDL HADAPSAR PUNE",
+   "amount": 10200.0,
+   "type": "DEBIT",
+   "currentBalance": 160.9
+  }
+ ]
+}

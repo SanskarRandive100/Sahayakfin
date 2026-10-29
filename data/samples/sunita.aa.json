@@ -1,0 +1,5984 @@
+{
+ "account": {
+  "masked": "XXXX4521",
+  "type": "SAVINGS"
+ },
+ "transactions": [
+  {
+   "txnId": "SUNITA000001",
+   "valueDate": "2026-07-28",
+   "narration": "UPI/CR/086159941744/NEHA WAGH/neha.w@okhdfc/VEG",
+   "amount": 66.0,
+   "type": "CREDIT",
+   "currentBalance": 4066.0
+  },
+  {
+   "txnId": "SUNITA000002",
+   "valueDate": "2026-07-28",
+   "narration": "UPI/CR/652516302593/LATA KAMBLE/9906904273@okaxis/VEG",
+   "amount": 41.0,
+   "type": "CREDIT",
+   "currentBalance": 4107.0
+  },
+  {
+   "txnId": "SUNITA000003",
+   "valueDate": "2026-07-28",
+   "narration": "UPI/CR/080640155322/MEERA KADAM/7024591221@okicici/VEG",
+   "amount": 52.0,
+   "type": "CREDIT",
+   "currentBalance": 4159.0
+  },
+  {
+   "txnId": "SUNITA000004",
+   "valueDate": "2026-07-28",
+   "narration": "UPI/CR/661120261624/KAVITA SHIRKE/kavita.s@okaxis/VEG",
+   "amount": 53.0,
+   "type": "CREDIT",
+   "currentBalance": 4212.0
+  },
+  {
+   "txnId": "SUNITA000005",
+   "valueDate": "2026-07-28",
+   "narration": "UPI/CR/066055583814/VINOD SHINDE/vinod.s@ybl/VEG",
+   "amount": 69.0,
+   "type": "CREDIT",
+   "currentBalance": 4281.0
+  },
+  {
+   "txnId": "SUNITA000006",
+   "valueDate": "2026-07-28",
+   "narration": "UPI/CR/784280098537/VANDANA NAIK/vandana.n@oksbi/VEG",
+   "amount": 58.0,
+   "type": "CREDIT",
+   "currentBalance": 4339.0
+  },
+  {
+   "txnId": "SUNITA000007",
+   "valueDate": "2026-07-28",
+   "narration": "UPI/CR/739355346582/KAVITA SHIRKE/kavita.s@okaxis/VEG",
+   "amount": 37.0,
+   "type": "CREDIT",
+   "currentBalance": 4376.0
+  },
+  {
+   "txnId": "SUNITA000008",
+   "valueDate": "2026-07-28",
+   "narration": "UPI/CR/159305400113/MANGESH GHULE/mangesh.g@paytm/VEG",
+   "amount": 30.0,
+   "type": "CREDIT",
+   "currentBalance": 4406.0
+  },
+  {
+   "txnId": "SUNITA000009",
+   "valueDate": "2026-07-28",
+   "narration": "UPI/CR/223960952096/SEEMA BORATE/seema.b@ybl/VEG",
+   "amount": 61.0,
+   "type": "CREDIT",
+   "currentBalance": 4467.0
+  },
+  {
+   "txnId": "SUNITA000010",
+   "valueDate": "2026-07-28",
+   "narration": "UPI/DR/810707244051/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 225.81,
+   "type": "DEBIT",
+   "currentBalance": 4241.19
+  },
+  {
+   "txnId": "SUNITA000011",
+   "valueDate": "2026-07-29",
+   "narration": "UPI/CR/355494918780/PRAKASH THORAT/prakash.t@paytm/VEG",
+   "amount": 23.0,
+   "type": "CREDIT",
+   "currentBalance": 4264.19
+  },
+  {
+   "txnId": "SUNITA000012",
+   "valueDate": "2026-07-29",
+   "narration": "UPI/CR/157455657346/LATA KAMBLE/9906904273@okaxis/VEG",
+   "amount": 62.0,
+   "type": "CREDIT",
+   "currentBalance": 4326.19
+  },
+  {
+   "txnId": "SUNITA000013",
+   "valueDate": "2026-07-29",
+   "narration": "UPI/CR/742985432601/SEEMA BORATE/seema.b@ybl/VEG",
+   "amount": 34.0,
+   "type": "CREDIT",
+   "currentBalance": 4360.19
+  },
+  {
+   "txnId": "SUNITA000014",
+   "valueDate": "2026-07-29",
+   "narration": "UPI/CR/024753967750/UMESH JADHAV/9926153247@ybl/VEG",
+   "amount": 43.0,
+   "type": "CREDIT",
+   "currentBalance": 4403.19
+  },
+  {
+   "txnId": "SUNITA000015",
+   "valueDate": "2026-07-29",
+   "narration": "UPI/CR/000503243622/MANGESH GHULE/mangesh.g@paytm/VEG",
+   "amount": 59.0,
+   "type": "CREDIT",
+   "currentBalance": 4462.19
+  },
+  {
+   "txnId": "SUNITA000016",
+   "valueDate": "2026-07-29",
+   "narration": "UPI/CR/631866047574/SARIKA PATOLE/sarika.p@okhdfc/VEG",
+   "amount": 26.0,
+   "type": "CREDIT",
+   "currentBalance": 4488.19
+  },
+  {
+   "txnId": "SUNITA000017",
+   "valueDate": "2026-07-29",
+   "narration": "UPI/CR/566858605057/UMESH JADHAV/9926153247@ybl/VEG",
+   "amount": 49.0,
+   "type": "CREDIT",
+   "currentBalance": 4537.19
+  },
+  {
+   "txnId": "SUNITA000018",
+   "valueDate": "2026-07-29",
+   "narration": "UPI/DR/497287764270/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 208.08,
+   "type": "DEBIT",
+   "currentBalance": 4329.11
+  },
+  {
+   "txnId": "SUNITA000019",
+   "valueDate": "2026-07-29",
+   "narration": "UPI/DR/612153516836/GANESH DAIRY/ganeshdair@okaxis/MILK",
+   "amount": 69.97,
+   "type": "DEBIT",
+   "currentBalance": 4259.14
+  },
+  {
+   "txnId": "SUNITA000020",
+   "valueDate": "2026-07-30",
+   "narration": "UPI/CR/006450599685/SEEMA BORATE/seema.b@ybl/VEG",
+   "amount": 38.0,
+   "type": "CREDIT",
+   "currentBalance": 4297.14
+  },
+  {
+   "txnId": "SUNITA000021",
+   "valueDate": "2026-07-30",
+   "narration": "UPI/CR/133885979553/UMESH JADHAV/9926153247@ybl/VEG",
+   "amount": 32.0,
+   "type": "CREDIT",
+   "currentBalance": 4329.14
+  },
+  {
+   "txnId": "SUNITA000022",
+   "valueDate": "2026-07-30",
+   "narration": "UPI/CR/364427846066/MANGESH GHULE/mangesh.g@paytm/VEG",
+   "amount": 80.0,
+   "type": "CREDIT",
+   "currentBalance": 4409.14
+  },
+  {
+   "txnId": "SUNITA000023",
+   "valueDate": "2026-07-30",
+   "narration": "UPI/CR/581955367999/ASHA SHELKE/8862358523@ybl/VEG",
+   "amount": 52.0,
+   "type": "CREDIT",
+   "currentBalance": 4461.14
+  },
+  {
+   "txnId": "SUNITA000024",
+   "valueDate": "2026-07-30",
+   "narration": "UPI/CR/412687059111/ASHA SHELKE/8862358523@ybl/VEG",
+   "amount": 35.0,
+   "type": "CREDIT",
+   "currentBalance": 4496.14
+  },
+  {
+   "txnId": "SUNITA000025",
+   "valueDate": "2026-07-30",
+   "narration": "UPI/CR/353353550661/MEERA KADAM/7024591221@okicici/VEG",
+   "amount": 79.0,
+   "type": "CREDIT",
+   "currentBalance": 4575.14
+  },
+  {
+   "txnId": "SUNITA000026",
+   "valueDate": "2026-07-30",
+   "narration": "UPI/DR/432846874086/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 225.28,
+   "type": "DEBIT",
+   "currentBalance": 4349.86
+  },
+  {
+   "txnId": "SUNITA000027",
+   "valueDate": "2026-07-31",
+   "narration": "UPI/CR/952593454919/GANESH LONDHE/6333393040@okhdfc/VEG",
+   "amount": 32.0,
+   "type": "CREDIT",
+   "currentBalance": 4381.86
+  },
+  {
+   "txnId": "SUNITA000028",
+   "valueDate": "2026-07-31",
+   "narration": "UPI/CR/865872294405/MANGESH GHULE/mangesh.g@paytm/VEG",
+   "amount": 47.0,
+   "type": "CREDIT",
+   "currentBalance": 4428.86
+  },
+  {
+   "txnId": "SUNITA000029",
+   "valueDate": "2026-07-31",
+   "narration": "UPI/CR/422001197790/SUNIL PAWAR/sunil.p@oksbi/VEG",
+   "amount": 61.0,
+   "type": "CREDIT",
+   "currentBalance": 4489.86
+  },
+  {
+   "txnId": "SUNITA000030",
+   "valueDate": "2026-07-31",
+   "narration": "UPI/CR/049803313565/RUPALI DESAI/rupali.d@okaxis/VEG",
+   "amount": 67.0,
+   "type": "CREDIT",
+   "currentBalance": 4556.86
+  },
+  {
+   "txnId": "SUNITA000031",
+   "valueDate": "2026-07-31",
+   "narration": "UPI/CR/367352954587/RUPALI DESAI/rupali.d@okaxis/VEG",
+   "amount": 46.0,
+   "type": "CREDIT",
+   "currentBalance": 4602.86
+  },
+  {
+   "txnId": "SUNITA000032",
+   "valueDate": "2026-07-31",
+   "narration": "UPI/CR/257648977835/SEEMA BORATE/seema.b@ybl/VEG",
+   "amount": 56.0,
+   "type": "CREDIT",
+   "currentBalance": 4658.86
+  },
+  {
+   "txnId": "SUNITA000033",
+   "valueDate": "2026-07-31",
+   "narration": "UPI/CR/090718432324/MANGESH GHULE/mangesh.g@paytm/VEG",
+   "amount": 73.0,
+   "type": "CREDIT",
+   "currentBalance": 4731.86
+  },
+  {
+   "txnId": "SUNITA000034",
+   "valueDate": "2026-07-31",
+   "narration": "UPI/CR/136456418470/JYOTI GAVADE/jyoti.g@oksbi/VEG",
+   "amount": 76.0,
+   "type": "CREDIT",
+   "currentBalance": 4807.86
+  },
+  {
+   "txnId": "SUNITA000035",
+   "valueDate": "2026-07-31",
+   "narration": "UPI/CR/294997791788/UMESH JADHAV/9926153247@ybl/VEG",
+   "amount": 75.0,
+   "type": "CREDIT",
+   "currentBalance": 4882.86
+  },
+  {
+   "txnId": "SUNITA000036",
+   "valueDate": "2026-07-31",
+   "narration": "UPI/DR/409127200862/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 221.27,
+   "type": "DEBIT",
+   "currentBalance": 4661.59
+  },
+  {
+   "txnId": "SUNITA000037",
+   "valueDate": "2026-07-31",
+   "narration": "UPI/DR/647831980749/GANESH DAIRY/ganeshdair@okaxis/MILK",
+   "amount": 66.02,
+   "type": "DEBIT",
+   "currentBalance": 4595.57
+  },
+  {
+   "txnId": "SUNITA000038",
+   "valueDate": "2026-08-01",
+   "narration": "UPI/CR/056787581940/GANESH LONDHE/6333393040@okhdfc/VEG",
+   "amount": 31.0,
+   "type": "CREDIT",
+   "currentBalance": 4626.57
+  },
+  {
+   "txnId": "SUNITA000039",
+   "valueDate": "2026-08-01",
+   "narration": "UPI/CR/816875383679/VANDANA NAIK/vandana.n@oksbi/VEG",
+   "amount": 21.0,
+   "type": "CREDIT",
+   "currentBalance": 4647.57
+  },
+  {
+   "txnId": "SUNITA000040",
+   "valueDate": "2026-08-01",
+   "narration": "UPI/CR/458112714665/SUREKHA DHUMAL/6683920139@okicici/VEG",
+   "amount": 49.0,
+   "type": "CREDIT",
+   "currentBalance": 4696.57
+  },
+  {
+   "txnId": "SUNITA000041",
+   "valueDate": "2026-08-01",
+   "narration": "UPI/CR/244049941065/SEEMA BORATE/seema.b@ybl/VEG",
+   "amount": 31.0,
+   "type": "CREDIT",
+   "currentBalance": 4727.57
+  },
+  {
+   "txnId": "SUNITA000042",
+   "valueDate": "2026-08-01",
+   "narration": "UPI/CR/355073643872/UMESH JADHAV/9926153247@ybl/VEG",
+   "amount": 49.0,
+   "type": "CREDIT",
+   "currentBalance": 4776.57
+  },
+  {
+   "txnId": "SUNITA000043",
+   "valueDate": "2026-08-01",
+   "narration": "UPI/CR/356830875668/SARIKA PATOLE/sarika.p@okhdfc/VEG",
+   "amount": 39.0,
+   "type": "CREDIT",
+   "currentBalance": 4815.57
+  },
+  {
+   "txnId": "SUNITA000044",
+   "valueDate": "2026-08-01",
+   "narration": "RD INSTALMENT TO A/C 004512345678",
+   "amount": 150.0,
+   "type": "DEBIT",
+   "currentBalance": 4665.57
+  },
+  {
+   "txnId": "SUNITA000045",
+   "valueDate": "2026-08-01",
+   "narration": "UPI/DR/496775385160/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 213.92,
+   "type": "DEBIT",
+   "currentBalance": 4451.65
+  },
+  {
+   "txnId": "SUNITA000046",
+   "valueDate": "2026-08-02",
+   "narration": "UPI/DR/066728634843/QUICKTALK MOBILE RECHARGE/quicktalkm@okhdfc/PREPAID",
+   "amount": 199.0,
+   "type": "DEBIT",
+   "currentBalance": 4252.65
+  },
+  {
+   "txnId": "SUNITA000047",
+   "valueDate": "2026-08-02",
+   "narration": "UPI/DR/333274254295/GANESH DAIRY/ganeshdair@okaxis/MILK",
+   "amount": 33.33,
+   "type": "DEBIT",
+   "currentBalance": 4219.32
+  },
+  {
+   "txnId": "SUNITA000048",
+   "valueDate": "2026-08-03",
+   "narration": "UPI/CR/484573678640/SEEMA BORATE/seema.b@ybl/VEG",
+   "amount": 32.0,
+   "type": "CREDIT",
+   "currentBalance": 4251.32
+  },
+  {
+   "txnId": "SUNITA000049",
+   "valueDate": "2026-08-03",
+   "narration": "UPI/CR/947463862999/SUREKHA DHUMAL/6683920139@okicici/VEG",
+   "amount": 73.0,
+   "type": "CREDIT",
+   "currentBalance": 4324.32
+  },
+  {
+   "txnId": "SUNITA000050",
+   "valueDate": "2026-08-03",
+   "narration": "UPI/CR/826364183989/JYOTI GAVADE/jyoti.g@oksbi/VEG",
+   "amount": 38.0,
+   "type": "CREDIT",
+   "currentBalance": 4362.32
+  },
+  {
+   "txnId": "SUNITA000051",
+   "valueDate": "2026-08-03",
+   "narration": "UPI/CR/344409756165/RUPALI DESAI/rupali.d@okaxis/VEG",
+   "amount": 34.0,
+   "type": "CREDIT",
+   "currentBalance": 4396.32
+  },
+  {
+   "txnId": "SUNITA000052",
+   "valueDate": "2026-08-03",
+   "narration": "UPI/CR/425230172700/LATA KAMBLE/9906904273@okaxis/VEG",
+   "amount": 37.0,
+   "type": "CREDIT",
+   "currentBalance": 4433.32
+  },
+  {
+   "txnId": "SUNITA000053",
+   "valueDate": "2026-08-03",
+   "narration": "UPI/CR/042943994265/ASHA SHELKE/8862358523@ybl/VEG",
+   "amount": 26.0,
+   "type": "CREDIT",
+   "currentBalance": 4459.32
+  },
+  {
+   "txnId": "SUNITA000054",
+   "valueDate": "2026-08-03",
+   "narration": "UPI/CR/284642662945/SANTOSH KOLTE/santosh.k@okaxis/VEG",
+   "amount": 73.0,
+   "type": "CREDIT",
+   "currentBalance": 4532.32
+  },
+  {
+   "txnId": "SUNITA000055",
+   "valueDate": "2026-08-03",
+   "narration": "UPI/CR/777842362043/LATA KAMBLE/9906904273@okaxis/VEG",
+   "amount": 36.0,
+   "type": "CREDIT",
+   "currentBalance": 4568.32
+  },
+  {
+   "txnId": "SUNITA000056",
+   "valueDate": "2026-08-03",
+   "narration": "CASH DEP MARKET YARD BRANCH",
+   "amount": 560.0,
+   "type": "CREDIT",
+   "currentBalance": 5128.32
+  },
+  {
+   "txnId": "SUNITA000057",
+   "valueDate": "2026-08-03",
+   "narration": "UPI/DR/571863815283/KAMAL GAIKWAD/kamal.g@paytm/RENT",
+   "amount": 3000.0,
+   "type": "DEBIT",
+   "currentBalance": 2128.32
+  },
+  {
+   "txnId": "SUNITA000058",
+   "valueDate": "2026-08-03",
+   "narration": "UPI/DR/332102428033/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 229.28,
+   "type": "DEBIT",
+   "currentBalance": 1899.04
+  },
+  {
+   "txnId": "SUNITA000059",
+   "valueDate": "2026-08-03",
+   "narration": "UPI/DR/401935050796/GANESH DAIRY/ganeshdair@okaxis/MILK",
+   "amount": 54.12,
+   "type": "DEBIT",
+   "currentBalance": 1844.92
+  },
+  {
+   "txnId": "SUNITA000060",
+   "valueDate": "2026-08-04",
+   "narration": "UPI/CR/048606650104/TUSHAR GAWALI/7668088689@okaxis/VEG",
+   "amount": 65.0,
+   "type": "CREDIT",
+   "currentBalance": 1909.92
+  },
+  {
+   "txnId": "SUNITA000061",
+   "valueDate": "2026-08-04",
+   "narration": "UPI/CR/847089546218/MANGESH GHULE/mangesh.g@paytm/VEG",
+   "amount": 69.0,
+   "type": "CREDIT",
+   "currentBalance": 1978.92
+  },
+  {
+   "txnId": "SUNITA000062",
+   "valueDate": "2026-08-04",
+   "narration": "UPI/CR/666698326142/LATA KAMBLE/9906904273@okaxis/VEG",
+   "amount": 22.0,
+   "type": "CREDIT",
+   "currentBalance": 2000.92
+  },
+  {
+   "txnId": "SUNITA000063",
+   "valueDate": "2026-08-04",
+   "narration": "UPI/CR/221935244939/GANESH LONDHE/6333393040@okhdfc/VEG",
+   "amount": 68.0,
+   "type": "CREDIT",
+   "currentBalance": 2068.92
+  },
+  {
+   "txnId": "SUNITA000064",
+   "valueDate": "2026-08-04",
+   "narration": "UPI/CR/922377383038/GANESH LONDHE/6333393040@okhdfc/VEG",
+   "amount": 39.0,
+   "type": "CREDIT",
+   "currentBalance": 2107.92
+  },
+  {
+   "txnId": "SUNITA000065",
+   "valueDate": "2026-08-04",
+   "narration": "UPI/CR/845361489845/SARIKA PATOLE/sarika.p@okhdfc/VEG",
+   "amount": 67.0,
+   "type": "CREDIT",
+   "currentBalance": 2174.92
+  },
+  {
+   "txnId": "SUNITA000066",
+   "valueDate": "2026-08-04",
+   "narration": "UPI/CR/863172787522/MANGESH GHULE/mangesh.g@paytm/VEG",
+   "amount": 79.0,
+   "type": "CREDIT",
+   "currentBalance": 2253.92
+  },
+  {
+   "txnId": "SUNITA000067",
+   "valueDate": "2026-08-04",
+   "narration": "UPI/CR/247046651828/VINOD SHINDE/vinod.s@ybl/VEG",
+   "amount": 47.0,
+   "type": "CREDIT",
+   "currentBalance": 2300.92
+  },
+  {
+   "txnId": "SUNITA000068",
+   "valueDate": "2026-08-04",
+   "narration": "UPI/DR/809103795517/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 228.62,
+   "type": "DEBIT",
+   "currentBalance": 2072.3
+  },
+  {
+   "txnId": "SUNITA000069",
+   "valueDate": "2026-08-05",
+   "narration": "UPI/CR/394359352913/MEERA KADAM/7024591221@okicici/VEG",
+   "amount": 20.0,
+   "type": "CREDIT",
+   "currentBalance": 2092.3
+  },
+  {
+   "txnId": "SUNITA000070",
+   "valueDate": "2026-08-05",
+   "narration": "UPI/CR/169134416502/ASHA SHELKE/8862358523@ybl/VEG",
+   "amount": 39.0,
+   "type": "CREDIT",
+   "currentBalance": 2131.3
+  },
+  {
+   "txnId": "SUNITA000071",
+   "valueDate": "2026-08-05",
+   "narration": "UPI/CR/765721294990/MEERA KADAM/7024591221@okicici/VEG",
+   "amount": 36.0,
+   "type": "CREDIT",
+   "currentBalance": 2167.3
+  },
+  {
+   "txnId": "SUNITA000072",
+   "valueDate": "2026-08-05",
+   "narration": "UPI/CR/546690385360/NEHA WAGH/neha.w@okhdfc/VEG",
+   "amount": 39.0,
+   "type": "CREDIT",
+   "currentBalance": 2206.3
+  },
+  {
+   "txnId": "SUNITA000073",
+   "valueDate": "2026-08-05",
+   "narration": "UPI/CR/694704148431/ASHA SHELKE/8862358523@ybl/VEG",
+   "amount": 22.0,
+   "type": "CREDIT",
+   "currentBalance": 2228.3
+  },
+  {
+   "txnId": "SUNITA000074",
+   "valueDate": "2026-08-05",
+   "narration": "UPI/CR/043551541054/PRAKASH THORAT/prakash.t@paytm/VEG",
+   "amount": 23.0,
+   "type": "CREDIT",
+   "currentBalance": 2251.3
+  },
+  {
+   "txnId": "SUNITA000075",
+   "valueDate": "2026-08-05",
+   "narration": "UPI/CR/719118103047/SANTOSH KOLTE/santosh.k@okaxis/VEG",
+   "amount": 64.0,
+   "type": "CREDIT",
+   "currentBalance": 2315.3
+  },
+  {
+   "txnId": "SUNITA000076",
+   "valueDate": "2026-08-05",
+   "narration": "UPI/CR/945074292874/PRAKASH THORAT/prakash.t@paytm/VEG",
+   "amount": 54.0,
+   "type": "CREDIT",
+   "currentBalance": 2369.3
+  },
+  {
+   "txnId": "SUNITA000077",
+   "valueDate": "2026-08-05",
+   "narration": "UPI/DR/936629987026/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 230.54,
+   "type": "DEBIT",
+   "currentBalance": 2138.76
+  },
+  {
+   "txnId": "SUNITA000078",
+   "valueDate": "2026-08-05",
+   "narration": "UPI/DR/096068173344/SAI KIRANA STORES/saikiranas@okaxis/MILK",
+   "amount": 57.65,
+   "type": "DEBIT",
+   "currentBalance": 2081.11
+  },
+  {
+   "txnId": "SUNITA000079",
+   "valueDate": "2026-08-06",
+   "narration": "UPI/CR/986741928714/KAVITA SHIRKE/kavita.s@okaxis/VEG",
+   "amount": 43.0,
+   "type": "CREDIT",
+   "currentBalance": 2124.11
+  },
+  {
+   "txnId": "SUNITA000080",
+   "valueDate": "2026-08-06",
+   "narration": "UPI/CR/090881837584/UMESH JADHAV/9926153247@ybl/VEG",
+   "amount": 64.0,
+   "type": "CREDIT",
+   "currentBalance": 2188.11
+  },
+  {
+   "txnId": "SUNITA000081",
+   "valueDate": "2026-08-06",
+   "narration": "UPI/CR/434396635703/LATA KAMBLE/9906904273@okaxis/VEG",
+   "amount": 79.0,
+   "type": "CREDIT",
+   "currentBalance": 2267.11
+  },
+  {
+   "txnId": "SUNITA000082",
+   "valueDate": "2026-08-06",
+   "narration": "UPI/CR/205434949510/RAJESH KHOT/8842036887@okaxis/VEG",
+   "amount": 36.0,
+   "type": "CREDIT",
+   "currentBalance": 2303.11
+  },
+  {
+   "txnId": "SUNITA000083",
+   "valueDate": "2026-08-06",
+   "narration": "UPI/CR/910168229149/SHOBHA JAGTAP/shobha.j@okhdfc/VEG",
+   "amount": 41.0,
+   "type": "CREDIT",
+   "currentBalance": 2344.11
+  },
+  {
+   "txnId": "SUNITA000084",
+   "valueDate": "2026-08-06",
+   "narration": "UPI/CR/681207749451/VINOD SHINDE/vinod.s@ybl/VEG",
+   "amount": 47.0,
+   "type": "CREDIT",
+   "currentBalance": 2391.11
+  },
+  {
+   "txnId": "SUNITA000085",
+   "valueDate": "2026-08-06",
+   "narration": "UPI/CR/580782821461/KAVITA SHIRKE/kavita.s@okaxis/VEG",
+   "amount": 52.0,
+   "type": "CREDIT",
+   "currentBalance": 2443.11
+  },
+  {
+   "txnId": "SUNITA000086",
+   "valueDate": "2026-08-06",
+   "narration": "UPI/DR/356673842588/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 221.78,
+   "type": "DEBIT",
+   "currentBalance": 2221.33
+  },
+  {
+   "txnId": "SUNITA000087",
+   "valueDate": "2026-08-07",
+   "narration": "UPI/CR/868879428687/UMESH JADHAV/9926153247@ybl/VEG",
+   "amount": 68.0,
+   "type": "CREDIT",
+   "currentBalance": 2289.33
+  },
+  {
+   "txnId": "SUNITA000088",
+   "valueDate": "2026-08-07",
+   "narration": "UPI/CR/522068699957/ROHINI SALVI/rohini.s@ybl/VEG",
+   "amount": 49.0,
+   "type": "CREDIT",
+   "currentBalance": 2338.33
+  },
+  {
+   "txnId": "SUNITA000089",
+   "valueDate": "2026-08-07",
+   "narration": "UPI/CR/612656049384/TUSHAR GAWALI/7668088689@okaxis/VEG",
+   "amount": 48.0,
+   "type": "CREDIT",
+   "currentBalance": 2386.33
+  },
+  {
+   "txnId": "SUNITA000090",
+   "valueDate": "2026-08-07",
+   "narration": "UPI/CR/948958863025/ROHINI SALVI/rohini.s@ybl/VEG",
+   "amount": 70.0,
+   "type": "CREDIT",
+   "currentBalance": 2456.33
+  },
+  {
+   "txnId": "SUNITA000091",
+   "valueDate": "2026-08-07",
+   "narration": "UPI/CR/448077020282/ASHA SHELKE/8862358523@ybl/VEG",
+   "amount": 45.0,
+   "type": "CREDIT",
+   "currentBalance": 2501.33
+  },
+  {
+   "txnId": "SUNITA000092",
+   "valueDate": "2026-08-07",
+   "narration": "UPI/CR/407629434524/KAVITA SHIRKE/kavita.s@okaxis/VEG",
+   "amount": 34.0,
+   "type": "CREDIT",
+   "currentBalance": 2535.33
+  },
+  {
+   "txnId": "SUNITA000093",
+   "valueDate": "2026-08-07",
+   "narration": "UPI/DR/769982110984/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 224.52,
+   "type": "DEBIT",
+   "currentBalance": 2310.81
+  },
+  {
+   "txnId": "SUNITA000094",
+   "valueDate": "2026-08-07",
+   "narration": "UPI/DR/616866387469/SAI KIRANA STORES/saikiranas@okaxis/MILK",
+   "amount": 63.02,
+   "type": "DEBIT",
+   "currentBalance": 2247.79
+  },
+  {
+   "txnId": "SUNITA000095",
+   "valueDate": "2026-08-08",
+   "narration": "UPI/CR/651887630592/VINOD SHINDE/vinod.s@ybl/VEG",
+   "amount": 53.0,
+   "type": "CREDIT",
+   "currentBalance": 2300.79
+  },
+  {
+   "txnId": "SUNITA000096",
+   "valueDate": "2026-08-08",
+   "narration": "UPI/CR/274833717154/NEHA WAGH/neha.w@okhdfc/VEG",
+   "amount": 24.0,
+   "type": "CREDIT",
+   "currentBalance": 2324.79
+  },
+  {
+   "txnId": "SUNITA000097",
+   "valueDate": "2026-08-08",
+   "narration": "UPI/CR/040499053878/PRAKASH THORAT/prakash.t@paytm/VEG",
+   "amount": 37.0,
+   "type": "CREDIT",
+   "currentBalance": 2361.79
+  },
+  {
+   "txnId": "SUNITA000098",
+   "valueDate": "2026-08-08",
+   "narration": "UPI/CR/252184170948/MEERA KADAM/7024591221@okicici/VEG",
+   "amount": 66.0,
+   "type": "CREDIT",
+   "currentBalance": 2427.79
+  },
+  {
+   "txnId": "SUNITA000099",
+   "valueDate": "2026-08-08",
+   "narration": "UPI/CR/988554283843/RUPALI DESAI/rupali.d@okaxis/VEG",
+   "amount": 41.0,
+   "type": "CREDIT",
+   "currentBalance": 2468.79
+  },
+  {
+   "txnId": "SUNITA000100",
+   "valueDate": "2026-08-08",
+   "narration": "UPI/CR/177241668870/SANTOSH KOLTE/santosh.k@okaxis/VEG",
+   "amount": 23.0,
+   "type": "CREDIT",
+   "currentBalance": 2491.79
+  },
+  {
+   "txnId": "SUNITA000101",
+   "valueDate": "2026-08-08",
+   "narration": "UPI/CR/979333617319/MAHESH CHAVAN/mahesh.c@okhdfc/VEG",
+   "amount": 37.0,
+   "type": "CREDIT",
+   "currentBalance": 2528.79
+  },
+  {
+   "txnId": "SUNITA000102",
+   "valueDate": "2026-08-08",
+   "narration": "UPI/CR/276015380146/ANIL KHARAT/8772886042@okaxis/VEG",
+   "amount": 67.0,
+   "type": "CREDIT",
+   "currentBalance": 2595.79
+  },
+  {
+   "txnId": "SUNITA000103",
+   "valueDate": "2026-08-08",
+   "narration": "UPI/CR/892068712328/SANTOSH KOLTE/santosh.k@okaxis/VEG",
+   "amount": 32.0,
+   "type": "CREDIT",
+   "currentBalance": 2627.79
+  },
+  {
+   "txnId": "SUNITA000104",
+   "valueDate": "2026-08-08",
+   "narration": "RD INSTALMENT TO A/C 004512345678",
+   "amount": 150.0,
+   "type": "DEBIT",
+   "currentBalance": 2477.79
+  },
+  {
+   "txnId": "SUNITA000105",
+   "valueDate": "2026-08-08",
+   "narration": "UPI/DR/304902449586/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 249.96,
+   "type": "DEBIT",
+   "currentBalance": 2227.83
+  },
+  {
+   "txnId": "SUNITA000106",
+   "valueDate": "2026-08-09",
+   "narration": "UPI/DR/033650445644/SAI KIRANA STORES/saikiranas@okaxis/MILK",
+   "amount": 60.69,
+   "type": "DEBIT",
+   "currentBalance": 2167.14
+  },
+  {
+   "txnId": "SUNITA000107",
+   "valueDate": "2026-08-10",
+   "narration": "UPI/CR/149419963892/JYOTI GAVADE/jyoti.g@oksbi/VEG",
+   "amount": 28.0,
+   "type": "CREDIT",
+   "currentBalance": 2195.14
+  },
+  {
+   "txnId": "SUNITA000108",
+   "valueDate": "2026-08-10",
+   "narration": "UPI/CR/295352458682/SUNIL PAWAR/sunil.p@oksbi/VEG",
+   "amount": 63.0,
+   "type": "CREDIT",
+   "currentBalance": 2258.14
+  },
+  {
+   "txnId": "SUNITA000109",
+   "valueDate": "2026-08-10",
+   "narration": "UPI/CR/410945885330/GANESH LONDHE/6333393040@okhdfc/VEG",
+   "amount": 32.0,
+   "type": "CREDIT",
+   "currentBalance": 2290.14
+  },
+  {
+   "txnId": "SUNITA000110",
+   "valueDate": "2026-08-10",
+   "narration": "UPI/CR/190033899186/ASHA SHELKE/8862358523@ybl/VEG",
+   "amount": 39.0,
+   "type": "CREDIT",
+   "currentBalance": 2329.14
+  },
+  {
+   "txnId": "SUNITA000111",
+   "valueDate": "2026-08-10",
+   "narration": "UPI/CR/286647019163/RUPALI DESAI/rupali.d@okaxis/VEG",
+   "amount": 51.0,
+   "type": "CREDIT",
+   "currentBalance": 2380.14
+  },
+  {
+   "txnId": "SUNITA000112",
+   "valueDate": "2026-08-10",
+   "narration": "UPI/CR/644525723719/KAVITA SHIRKE/kavita.s@okaxis/VEG",
+   "amount": 72.0,
+   "type": "CREDIT",
+   "currentBalance": 2452.14
+  },
+  {
+   "txnId": "SUNITA000113",
+   "valueDate": "2026-08-10",
+   "narration": "UPI/CR/852912266614/GANESH LONDHE/6333393040@okhdfc/VEG",
+   "amount": 31.0,
+   "type": "CREDIT",
+   "currentBalance": 2483.14
+  },
+  {
+   "txnId": "SUNITA000114",
+   "valueDate": "2026-08-10",
+   "narration": "UPI/CR/088575251504/SUREKHA DHUMAL/6683920139@okicici/VEG",
+   "amount": 42.0,
+   "type": "CREDIT",
+   "currentBalance": 2525.14
+  },
+  {
+   "txnId": "SUNITA000115",
+   "valueDate": "2026-08-10",
+   "narration": "CASH DEP MARKET YARD BRANCH",
+   "amount": 600.0,
+   "type": "CREDIT",
+   "currentBalance": 3125.14
+  },
+  {
+   "txnId": "SUNITA000116",
+   "valueDate": "2026-08-10",
+   "narration": "UPI/DR/327402822841/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 249.09,
+   "type": "DEBIT",
+   "currentBalance": 2876.05
+  },
+  {
+   "txnId": "SUNITA000117",
+   "valueDate": "2026-08-10",
+   "narration": "UPI/DR/226529287358/SAI KIRANA STORES/saikiranas@okaxis/MILK",
+   "amount": 53.12,
+   "type": "DEBIT",
+   "currentBalance": 2822.93
+  },
+  {
+   "txnId": "SUNITA000118",
+   "valueDate": "2026-08-11",
+   "narration": "UPI/CR/336770367241/MAHESH CHAVAN/mahesh.c@okhdfc/VEG",
+   "amount": 20.0,
+   "type": "CREDIT",
+   "currentBalance": 2842.93
+  },
+  {
+   "txnId": "SUNITA000119",
+   "valueDate": "2026-08-11",
+   "narration": "UPI/CR/702567522166/MEERA KADAM/7024591221@okicici/VEG",
+   "amount": 29.0,
+   "type": "CREDIT",
+   "currentBalance": 2871.93
+  },
+  {
+   "txnId": "SUNITA000120",
+   "valueDate": "2026-08-11",
+   "narration": "UPI/CR/658458690940/UMESH JADHAV/9926153247@ybl/VEG",
+   "amount": 42.0,
+   "type": "CREDIT",
+   "currentBalance": 2913.93
+  },
+  {
+   "txnId": "SUNITA000121",
+   "valueDate": "2026-08-11",
+   "narration": "UPI/CR/496879114465/SUNIL PAWAR/sunil.p@oksbi/VEG",
+   "amount": 63.0,
+   "type": "CREDIT",
+   "currentBalance": 2976.93
+  },
+  {
+   "txnId": "SUNITA000122",
+   "valueDate": "2026-08-11",
+   "narration": "UPI/CR/836229350807/UMESH JADHAV/9926153247@ybl/VEG",
+   "amount": 42.0,
+   "type": "CREDIT",
+   "currentBalance": 3018.93
+  },
+  {
+   "txnId": "SUNITA000123",
+   "valueDate": "2026-08-11",
+   "narration": "UPI/CR/831993211185/MAHESH CHAVAN/mahesh.c@okhdfc/VEG",
+   "amount": 35.0,
+   "type": "CREDIT",
+   "currentBalance": 3053.93
+  },
+  {
+   "txnId": "SUNITA000124",
+   "valueDate": "2026-08-11",
+   "narration": "UPI/CR/603278181885/SANTOSH KOLTE/santosh.k@okaxis/VEG",
+   "amount": 72.0,
+   "type": "CREDIT",
+   "currentBalance": 3125.93
+  },
+  {
+   "txnId": "SUNITA000125",
+   "valueDate": "2026-08-11",
+   "narration": "UPI/CR/577149295075/VINOD SHINDE/vinod.s@ybl/VEG",
+   "amount": 34.0,
+   "type": "CREDIT",
+   "currentBalance": 3159.93
+  },
+  {
+   "txnId": "SUNITA000126",
+   "valueDate": "2026-08-11",
+   "narration": "UPI/CR/976184052417/MANGESH GHULE/mangesh.g@paytm/VEG",
+   "amount": 80.0,
+   "type": "CREDIT",
+   "currentBalance": 3239.93
+  },
+  {
+   "txnId": "SUNITA000127",
+   "valueDate": "2026-08-11",
+   "narration": "UPI/DR/801087235912/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 212.79,
+   "type": "DEBIT",
+   "currentBalance": 3027.14
+  },
+  {
+   "txnId": "SUNITA000128",
+   "valueDate": "2026-08-12",
+   "narration": "UPI/CR/476469151921/SUREKHA DHUMAL/6683920139@okicici/VEG",
+   "amount": 59.0,
+   "type": "CREDIT",
+   "currentBalance": 3086.14
+  },
+  {
+   "txnId": "SUNITA000129",
+   "valueDate": "2026-08-12",
+   "narration": "UPI/CR/141164457495/ROHINI SALVI/rohini.s@ybl/VEG",
+   "amount": 39.0,
+   "type": "CREDIT",
+   "currentBalance": 3125.14
+  },
+  {
+   "txnId": "SUNITA000130",
+   "valueDate": "2026-08-12",
+   "narration": "UPI/CR/384718368343/VANDANA NAIK/vandana.n@oksbi/VEG",
+   "amount": 76.0,
+   "type": "CREDIT",
+   "currentBalance": 3201.14
+  },
+  {
+   "txnId": "SUNITA000131",
+   "valueDate": "2026-08-12",
+   "narration": "UPI/CR/090440899869/GANESH LONDHE/6333393040@okhdfc/VEG",
+   "amount": 54.0,
+   "type": "CREDIT",
+   "currentBalance": 3255.14
+  },
+  {
+   "txnId": "SUNITA000132",
+   "valueDate": "2026-08-12",
+   "narration": "UPI/CR/820531671018/UMESH JADHAV/9926153247@ybl/VEG",
+   "amount": 76.0,
+   "type": "CREDIT",
+   "currentBalance": 3331.14
+  },
+  {
+   "txnId": "SUNITA000133",
+   "valueDate": "2026-08-12",
+   "narration": "UPI/CR/218081111242/RAJESH KHOT/8842036887@okaxis/VEG",
+   "amount": 32.0,
+   "type": "CREDIT",
+   "currentBalance": 3363.14
+  },
+  {
+   "txnId": "SUNITA000134",
+   "valueDate": "2026-08-12",
+   "narration": "UPI/CR/412764364524/SUNIL PAWAR/sunil.p@oksbi/VEG",
+   "amount": 25.0,
+   "type": "CREDIT",
+   "currentBalance": 3388.14
+  },
+  {
+   "txnId": "SUNITA000135",
+   "valueDate": "2026-08-12",
+   "narration": "UPI/CR/206263384100/DEEPAK MANE/7218105484@oksbi/VEG",
+   "amount": 79.0,
+   "type": "CREDIT",
+   "currentBalance": 3467.14
+  },
+  {
+   "txnId": "SUNITA000136",
+   "valueDate": "2026-08-12",
+   "narration": "UPI/CR/268980069449/SUREKHA DHUMAL/6683920139@okicici/VEG",
+   "amount": 27.0,
+   "type": "CREDIT",
+   "currentBalance": 3494.14
+  },
+  {
+   "txnId": "SUNITA000137",
+   "valueDate": "2026-08-12",
+   "narration": "UPI/DR/781575404211/CITY POWER BILL/citypowerb@paytm/ELECTRICITY",
+   "amount": 337.31,
+   "type": "DEBIT",
+   "currentBalance": 3156.83
+  },
+  {
+   "txnId": "SUNITA000138",
+   "valueDate": "2026-08-12",
+   "narration": "UPI/DR/864648171161/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 216.35,
+   "type": "DEBIT",
+   "currentBalance": 2940.48
+  },
+  {
+   "txnId": "SUNITA000139",
+   "valueDate": "2026-08-12",
+   "narration": "UPI/DR/316043773334/GANESH DAIRY/ganeshdair@okaxis/MILK",
+   "amount": 63.08,
+   "type": "DEBIT",
+   "currentBalance": 2877.4
+  },
+  {
+   "txnId": "SUNITA000140",
+   "valueDate": "2026-08-13",
+   "narration": "UPI/CR/054361550872/SARIKA PATOLE/sarika.p@okhdfc/VEG",
+   "amount": 24.0,
+   "type": "CREDIT",
+   "currentBalance": 2901.4
+  },
+  {
+   "txnId": "SUNITA000141",
+   "valueDate": "2026-08-13",
+   "narration": "UPI/CR/356951895328/ASHA SHELKE/8862358523@ybl/VEG",
+   "amount": 66.0,
+   "type": "CREDIT",
+   "currentBalance": 2967.4
+  },
+  {
+   "txnId": "SUNITA000142",
+   "valueDate": "2026-08-13",
+   "narration": "UPI/CR/745852398654/LATA KAMBLE/9906904273@okaxis/VEG",
+   "amount": 73.0,
+   "type": "CREDIT",
+   "currentBalance": 3040.4
+  },
+  {
+   "txnId": "SUNITA000143",
+   "valueDate": "2026-08-13",
+   "narration": "UPI/CR/860469905991/DEEPAK MANE/7218105484@oksbi/VEG",
+   "amount": 55.0,
+   "type": "CREDIT",
+   "currentBalance": 3095.4
+  },
+  {
+   "txnId": "SUNITA000144",
+   "valueDate": "2026-08-13",
+   "narration": "UPI/CR/904718553607/MAHESH CHAVAN/mahesh.c@okhdfc/VEG",
+   "amount": 60.0,
+   "type": "CREDIT",
+   "currentBalance": 3155.4
+  },
+  {
+   "txnId": "SUNITA000145",
+   "valueDate": "2026-08-13",
+   "narration": "UPI/CR/251155861900/SHOBHA JAGTAP/shobha.j@okhdfc/VEG",
+   "amount": 53.0,
+   "type": "CREDIT",
+   "currentBalance": 3208.4
+  },
+  {
+   "txnId": "SUNITA000146",
+   "valueDate": "2026-08-13",
+   "narration": "UPI/DR/247848466162/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 240.1,
+   "type": "DEBIT",
+   "currentBalance": 2968.3
+  },
+  {
+   "txnId": "SUNITA000147",
+   "valueDate": "2026-08-14",
+   "narration": "UPI/CR/794305824495/JYOTI GAVADE/jyoti.g@oksbi/VEG",
+   "amount": 77.0,
+   "type": "CREDIT",
+   "currentBalance": 3045.3
+  },
+  {
+   "txnId": "SUNITA000148",
+   "valueDate": "2026-08-14",
+   "narration": "UPI/CR/978477360968/LATA KAMBLE/9906904273@okaxis/VEG",
+   "amount": 32.0,
+   "type": "CREDIT",
+   "currentBalance": 3077.3
+  },
+  {
+   "txnId": "SUNITA000149",
+   "valueDate": "2026-08-14",
+   "narration": "UPI/CR/391061316473/SEEMA BORATE/seema.b@ybl/VEG",
+   "amount": 58.0,
+   "type": "CREDIT",
+   "currentBalance": 3135.3
+  },
+  {
+   "txnId": "SUNITA000150",
+   "valueDate": "2026-08-14",
+   "narration": "UPI/CR/709415433227/MAHESH CHAVAN/mahesh.c@okhdfc/VEG",
+   "amount": 43.0,
+   "type": "CREDIT",
+   "currentBalance": 3178.3
+  },
+  {
+   "txnId": "SUNITA000151",
+   "valueDate": "2026-08-14",
+   "narration": "UPI/CR/170526775474/LATA KAMBLE/9906904273@okaxis/VEG",
+   "amount": 53.0,
+   "type": "CREDIT",
+   "currentBalance": 3231.3
+  },
+  {
+   "txnId": "SUNITA000152",
+   "valueDate": "2026-08-14",
+   "narration": "UPI/CR/285892199930/SUREKHA DHUMAL/6683920139@okicici/VEG",
+   "amount": 65.0,
+   "type": "CREDIT",
+   "currentBalance": 3296.3
+  },
+  {
+   "txnId": "SUNITA000153",
+   "valueDate": "2026-08-14",
+   "narration": "UPI/CR/098096305182/SARIKA PATOLE/sarika.p@okhdfc/VEG",
+   "amount": 62.0,
+   "type": "CREDIT",
+   "currentBalance": 3358.3
+  },
+  {
+   "txnId": "SUNITA000154",
+   "valueDate": "2026-08-14",
+   "narration": "UPI/DR/425547307490/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 228.46,
+   "type": "DEBIT",
+   "currentBalance": 3129.84
+  },
+  {
+   "txnId": "SUNITA000155",
+   "valueDate": "2026-08-14",
+   "narration": "UPI/DR/342813805347/GANESH DAIRY/ganeshdair@okaxis/MILK",
+   "amount": 30.19,
+   "type": "DEBIT",
+   "currentBalance": 3099.65
+  },
+  {
+   "txnId": "SUNITA000156",
+   "valueDate": "2026-08-15",
+   "narration": "UPI/CR/624189990579/VANDANA NAIK/vandana.n@oksbi/VEG",
+   "amount": 33.0,
+   "type": "CREDIT",
+   "currentBalance": 3132.65
+  },
+  {
+   "txnId": "SUNITA000157",
+   "valueDate": "2026-08-15",
+   "narration": "UPI/CR/982172388036/JYOTI GAVADE/jyoti.g@oksbi/VEG",
+   "amount": 22.0,
+   "type": "CREDIT",
+   "currentBalance": 3154.65
+  },
+  {
+   "txnId": "SUNITA000158",
+   "valueDate": "2026-08-15",
+   "narration": "UPI/CR/212081688117/ANIL KHARAT/8772886042@okaxis/VEG",
+   "amount": 30.0,
+   "type": "CREDIT",
+   "currentBalance": 3184.65
+  },
+  {
+   "txnId": "SUNITA000159",
+   "valueDate": "2026-08-15",
+   "narration": "UPI/CR/023138037036/KAVITA SHIRKE/kavita.s@okaxis/VEG",
+   "amount": 33.0,
+   "type": "CREDIT",
+   "currentBalance": 3217.65
+  },
+  {
+   "txnId": "SUNITA000160",
+   "valueDate": "2026-08-15",
+   "narration": "UPI/CR/938274642953/SUNIL PAWAR/sunil.p@oksbi/VEG",
+   "amount": 36.0,
+   "type": "CREDIT",
+   "currentBalance": 3253.65
+  },
+  {
+   "txnId": "SUNITA000161",
+   "valueDate": "2026-08-15",
+   "narration": "UPI/CR/658367743118/GANESH LONDHE/6333393040@okhdfc/VEG",
+   "amount": 68.0,
+   "type": "CREDIT",
+   "currentBalance": 3321.65
+  },
+  {
+   "txnId": "SUNITA000162",
+   "valueDate": "2026-08-15",
+   "narration": "UPI/CR/654893783523/VANDANA NAIK/vandana.n@oksbi/VEG",
+   "amount": 40.0,
+   "type": "CREDIT",
+   "currentBalance": 3361.65
+  },
+  {
+   "txnId": "SUNITA000163",
+   "valueDate": "2026-08-15",
+   "narration": "RD INSTALMENT TO A/C 004512345678",
+   "amount": 150.0,
+   "type": "DEBIT",
+   "currentBalance": 3211.65
+  },
+  {
+   "txnId": "SUNITA000164",
+   "valueDate": "2026-08-15",
+   "narration": "UPI/DR/876609313634/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 203.95,
+   "type": "DEBIT",
+   "currentBalance": 3007.7
+  },
+  {
+   "txnId": "SUNITA000165",
+   "valueDate": "2026-08-16",
+   "narration": "UPI/DR/334107788917/GANESH DAIRY/ganeshdair@okaxis/MILK",
+   "amount": 58.92,
+   "type": "DEBIT",
+   "currentBalance": 2948.78
+  },
+  {
+   "txnId": "SUNITA000166",
+   "valueDate": "2026-08-17",
+   "narration": "UPI/CR/716512258615/VANDANA NAIK/vandana.n@oksbi/VEG",
+   "amount": 43.0,
+   "type": "CREDIT",
+   "currentBalance": 2991.78
+  },
+  {
+   "txnId": "SUNITA000167",
+   "valueDate": "2026-08-17",
+   "narration": "UPI/CR/263711258418/RUPALI DESAI/rupali.d@okaxis/VEG",
+   "amount": 80.0,
+   "type": "CREDIT",
+   "currentBalance": 3071.78
+  },
+  {
+   "txnId": "SUNITA000168",
+   "valueDate": "2026-08-17",
+   "narration": "UPI/CR/580548720275/VANDANA NAIK/vandana.n@oksbi/VEG",
+   "amount": 49.0,
+   "type": "CREDIT",
+   "currentBalance": 3120.78
+  },
+  {
+   "txnId": "SUNITA000169",
+   "valueDate": "2026-08-17",
+   "narration": "UPI/CR/976688657189/VINOD SHINDE/vinod.s@ybl/VEG",
+   "amount": 48.0,
+   "type": "CREDIT",
+   "currentBalance": 3168.78
+  },
+  {
+   "txnId": "SUNITA000170",
+   "valueDate": "2026-08-17",
+   "narration": "UPI/CR/480462729224/ANIL KHARAT/8772886042@okaxis/VEG",
+   "amount": 33.0,
+   "type": "CREDIT",
+   "currentBalance": 3201.78
+  },
+  {
+   "txnId": "SUNITA000171",
+   "valueDate": "2026-08-17",
+   "narration": "UPI/CR/617643567762/PRAKASH THORAT/prakash.t@paytm/VEG",
+   "amount": 57.0,
+   "type": "CREDIT",
+   "currentBalance": 3258.78
+  },
+  {
+   "txnId": "SUNITA000172",
+   "valueDate": "2026-08-17",
+   "narration": "UPI/CR/161763275442/SUNIL PAWAR/sunil.p@oksbi/VEG",
+   "amount": 28.0,
+   "type": "CREDIT",
+   "currentBalance": 3286.78
+  },
+  {
+   "txnId": "SUNITA000173",
+   "valueDate": "2026-08-17",
+   "narration": "UPI/CR/959831800145/SUNIL PAWAR/sunil.p@oksbi/VEG",
+   "amount": 50.0,
+   "type": "CREDIT",
+   "currentBalance": 3336.78
+  },
+  {
+   "txnId": "SUNITA000174",
+   "valueDate": "2026-08-17",
+   "narration": "CASH DEP MARKET YARD BRANCH",
+   "amount": 670.0,
+   "type": "CREDIT",
+   "currentBalance": 4006.78
+  },
+  {
+   "txnId": "SUNITA000175",
+   "valueDate": "2026-08-17",
+   "narration": "UPI/DR/517710416043/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 216.79,
+   "type": "DEBIT",
+   "currentBalance": 3789.99
+  },
+  {
+   "txnId": "SUNITA000176",
+   "valueDate": "2026-08-17",
+   "narration": "UPI/DR/868068030374/GANESH DAIRY/ganeshdair@okaxis/MILK",
+   "amount": 66.19,
+   "type": "DEBIT",
+   "currentBalance": 3723.8
+  },
+  {
+   "txnId": "SUNITA000177",
+   "valueDate": "2026-08-18",
+   "narration": "UPI/CR/694244827161/ROHINI SALVI/rohini.s@ybl/VEG",
+   "amount": 54.0,
+   "type": "CREDIT",
+   "currentBalance": 3777.8
+  },
+  {
+   "txnId": "SUNITA000178",
+   "valueDate": "2026-08-18",
+   "narration": "UPI/CR/030988852407/NEHA WAGH/neha.w@okhdfc/VEG",
+   "amount": 59.0,
+   "type": "CREDIT",
+   "currentBalance": 3836.8
+  },
+  {
+   "txnId": "SUNITA000179",
+   "valueDate": "2026-08-18",
+   "narration": "UPI/CR/364573372233/SHOBHA JAGTAP/shobha.j@okhdfc/VEG",
+   "amount": 61.0,
+   "type": "CREDIT",
+   "currentBalance": 3897.8
+  },
+  {
+   "txnId": "SUNITA000180",
+   "valueDate": "2026-08-18",
+   "narration": "UPI/CR/214559352429/LATA KAMBLE/9906904273@okaxis/VEG",
+   "amount": 41.0,
+   "type": "CREDIT",
+   "currentBalance": 3938.8
+  },
+  {
+   "txnId": "SUNITA000181",
+   "valueDate": "2026-08-18",
+   "narration": "UPI/CR/160154893899/KAVITA SHIRKE/kavita.s@okaxis/VEG",
+   "amount": 37.0,
+   "type": "CREDIT",
+   "currentBalance": 3975.8
+  },
+  {
+   "txnId": "SUNITA000182",
+   "valueDate": "2026-08-18",
+   "narration": "UPI/CR/331213040908/MAHESH CHAVAN/mahesh.c@okhdfc/VEG",
+   "amount": 20.0,
+   "type": "CREDIT",
+   "currentBalance": 3995.8
+  },
+  {
+   "txnId": "SUNITA000183",
+   "valueDate": "2026-08-18",
+   "narration": "UPI/CR/614723688872/UMESH JADHAV/9926153247@ybl/VEG",
+   "amount": 61.0,
+   "type": "CREDIT",
+   "currentBalance": 4056.8
+  },
+  {
+   "txnId": "SUNITA000184",
+   "valueDate": "2026-08-18",
+   "narration": "UPI/CR/541622221612/ANIL KHARAT/8772886042@okaxis/VEG",
+   "amount": 40.0,
+   "type": "CREDIT",
+   "currentBalance": 4096.8
+  },
+  {
+   "txnId": "SUNITA000185",
+   "valueDate": "2026-08-18",
+   "narration": "UPI/DR/068961565629/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 204.18,
+   "type": "DEBIT",
+   "currentBalance": 3892.62
+  },
+  {
+   "txnId": "SUNITA000186",
+   "valueDate": "2026-08-19",
+   "narration": "UPI/CR/012514497332/SUREKHA DHUMAL/6683920139@okicici/VEG",
+   "amount": 53.0,
+   "type": "CREDIT",
+   "currentBalance": 3945.62
+  },
+  {
+   "txnId": "SUNITA000187",
+   "valueDate": "2026-08-19",
+   "narration": "UPI/CR/563890576109/MEERA KADAM/7024591221@okicici/VEG",
+   "amount": 62.0,
+   "type": "CREDIT",
+   "currentBalance": 4007.62
+  },
+  {
+   "txnId": "SUNITA000188",
+   "valueDate": "2026-08-19",
+   "narration": "UPI/CR/515272150312/NEHA WAGH/neha.w@okhdfc/VEG",
+   "amount": 29.0,
+   "type": "CREDIT",
+   "currentBalance": 4036.62
+  },
+  {
+   "txnId": "SUNITA000189",
+   "valueDate": "2026-08-19",
+   "narration": "UPI/CR/911692378213/MANGESH GHULE/mangesh.g@paytm/VEG",
+   "amount": 22.0,
+   "type": "CREDIT",
+   "currentBalance": 4058.62
+  },
+  {
+   "txnId": "SUNITA000190",
+   "valueDate": "2026-08-19",
+   "narration": "UPI/CR/011266204044/JYOTI GAVADE/jyoti.g@oksbi/VEG",
+   "amount": 44.0,
+   "type": "CREDIT",
+   "currentBalance": 4102.62
+  },
+  {
+   "txnId": "SUNITA000191",
+   "valueDate": "2026-08-19",
+   "narration": "UPI/CR/447579075779/DEEPAK MANE/7218105484@oksbi/VEG",
+   "amount": 44.0,
+   "type": "CREDIT",
+   "currentBalance": 4146.62
+  },
+  {
+   "txnId": "SUNITA000192",
+   "valueDate": "2026-08-19",
+   "narration": "UPI/CR/488380592311/NEHA WAGH/neha.w@okhdfc/VEG",
+   "amount": 68.0,
+   "type": "CREDIT",
+   "currentBalance": 4214.62
+  },
+  {
+   "txnId": "SUNITA000193",
+   "valueDate": "2026-08-19",
+   "narration": "UPI/DR/641125527181/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 200.28,
+   "type": "DEBIT",
+   "currentBalance": 4014.34
+  },
+  {
+   "txnId": "SUNITA000194",
+   "valueDate": "2026-08-19",
+   "narration": "UPI/DR/119462033872/GANESH DAIRY/ganeshdair@okaxis/MILK",
+   "amount": 34.81,
+   "type": "DEBIT",
+   "currentBalance": 3979.53
+  },
+  {
+   "txnId": "SUNITA000195",
+   "valueDate": "2026-08-20",
+   "narration": "UPI/CR/449549864546/ASHA SHELKE/8862358523@ybl/VEG",
+   "amount": 49.0,
+   "type": "CREDIT",
+   "currentBalance": 4028.53
+  },
+  {
+   "txnId": "SUNITA000196",
+   "valueDate": "2026-08-20",
+   "narration": "UPI/CR/547029352314/SUNIL PAWAR/sunil.p@oksbi/VEG",
+   "amount": 60.0,
+   "type": "CREDIT",
+   "currentBalance": 4088.53
+  },
+  {
+   "txnId": "SUNITA000197",
+   "valueDate": "2026-08-20",
+   "narration": "UPI/CR/523118272167/NEHA WAGH/neha.w@okhdfc/VEG",
+   "amount": 70.0,
+   "type": "CREDIT",
+   "currentBalance": 4158.53
+  },
+  {
+   "txnId": "SUNITA000198",
+   "valueDate": "2026-08-20",
+   "narration": "UPI/CR/842701313482/ASHA SHELKE/8862358523@ybl/VEG",
+   "amount": 30.0,
+   "type": "CREDIT",
+   "currentBalance": 4188.53
+  },
+  {
+   "txnId": "SUNITA000199",
+   "valueDate": "2026-08-20",
+   "narration": "UPI/CR/955939640802/RAJESH KHOT/8842036887@okaxis/VEG",
+   "amount": 30.0,
+   "type": "CREDIT",
+   "currentBalance": 4218.53
+  },
+  {
+   "txnId": "SUNITA000200",
+   "valueDate": "2026-08-20",
+   "narration": "UPI/CR/228086612875/VANDANA NAIK/vandana.n@oksbi/VEG",
+   "amount": 47.0,
+   "type": "CREDIT",
+   "currentBalance": 4265.53
+  },
+  {
+   "txnId": "SUNITA000201",
+   "valueDate": "2026-08-20",
+   "narration": "UPI/CR/349196966442/SANTOSH KOLTE/santosh.k@okaxis/VEG",
+   "amount": 35.0,
+   "type": "CREDIT",
+   "currentBalance": 4300.53
+  },
+  {
+   "txnId": "SUNITA000202",
+   "valueDate": "2026-08-20",
+   "narration": "UPI/DR/236163718379/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 224.64,
+   "type": "DEBIT",
+   "currentBalance": 4075.89
+  },
+  {
+   "txnId": "SUNITA000203",
+   "valueDate": "2026-08-21",
+   "narration": "UPI/CR/489227744324/SUNIL PAWAR/sunil.p@oksbi/VEG",
+   "amount": 61.0,
+   "type": "CREDIT",
+   "currentBalance": 4136.89
+  },
+  {
+   "txnId": "SUNITA000204",
+   "valueDate": "2026-08-21",
+   "narration": "UPI/CR/381116030784/ASHA SHELKE/8862358523@ybl/VEG",
+   "amount": 51.0,
+   "type": "CREDIT",
+   "currentBalance": 4187.89
+  },
+  {
+   "txnId": "SUNITA000205",
+   "valueDate": "2026-08-21",
+   "narration": "UPI/CR/695893946525/JYOTI GAVADE/jyoti.g@oksbi/VEG",
+   "amount": 76.0,
+   "type": "CREDIT",
+   "currentBalance": 4263.89
+  },
+  {
+   "txnId": "SUNITA000206",
+   "valueDate": "2026-08-21",
+   "narration": "UPI/CR/682453964062/KAVITA SHIRKE/kavita.s@okaxis/VEG",
+   "amount": 72.0,
+   "type": "CREDIT",
+   "currentBalance": 4335.89
+  },
+  {
+   "txnId": "SUNITA000207",
+   "valueDate": "2026-08-21",
+   "narration": "UPI/CR/920500646912/TUSHAR GAWALI/7668088689@okaxis/VEG",
+   "amount": 31.0,
+   "type": "CREDIT",
+   "currentBalance": 4366.89
+  },
+  {
+   "txnId": "SUNITA000208",
+   "valueDate": "2026-08-21",
+   "narration": "UPI/CR/212041845652/VANDANA NAIK/vandana.n@oksbi/VEG",
+   "amount": 37.0,
+   "type": "CREDIT",
+   "currentBalance": 4403.89
+  },
+  {
+   "txnId": "SUNITA000209",
+   "valueDate": "2026-08-21",
+   "narration": "UPI/CR/924515077285/SEEMA BORATE/seema.b@ybl/VEG",
+   "amount": 29.0,
+   "type": "CREDIT",
+   "currentBalance": 4432.89
+  },
+  {
+   "txnId": "SUNITA000210",
+   "valueDate": "2026-08-21",
+   "narration": "UPI/CR/951291515448/JYOTI GAVADE/jyoti.g@oksbi/VEG",
+   "amount": 65.0,
+   "type": "CREDIT",
+   "currentBalance": 4497.89
+  },
+  {
+   "txnId": "SUNITA000211",
+   "valueDate": "2026-08-21",
+   "narration": "UPI/CR/672439560626/GANESH LONDHE/6333393040@okhdfc/VEG",
+   "amount": 61.0,
+   "type": "CREDIT",
+   "currentBalance": 4558.89
+  },
+  {
+   "txnId": "SUNITA000212",
+   "valueDate": "2026-08-21",
+   "narration": "UPI/DR/879803172470/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 221.83,
+   "type": "DEBIT",
+   "currentBalance": 4337.06
+  },
+  {
+   "txnId": "SUNITA000213",
+   "valueDate": "2026-08-21",
+   "narration": "UPI/DR/901857167235/GANESH DAIRY/ganeshdair@okaxis/MILK",
+   "amount": 65.03,
+   "type": "DEBIT",
+   "currentBalance": 4272.03
+  },
+  {
+   "txnId": "SUNITA000214",
+   "valueDate": "2026-08-22",
+   "narration": "UPI/CR/344767359350/KAVITA SHIRKE/kavita.s@okaxis/VEG",
+   "amount": 52.0,
+   "type": "CREDIT",
+   "currentBalance": 4324.03
+  },
+  {
+   "txnId": "SUNITA000215",
+   "valueDate": "2026-08-22",
+   "narration": "UPI/CR/651909631156/RUPALI DESAI/rupali.d@okaxis/VEG",
+   "amount": 36.0,
+   "type": "CREDIT",
+   "currentBalance": 4360.03
+  },
+  {
+   "txnId": "SUNITA000216",
+   "valueDate": "2026-08-22",
+   "narration": "UPI/CR/148485440957/RAJESH KHOT/8842036887@okaxis/VEG",
+   "amount": 57.0,
+   "type": "CREDIT",
+   "currentBalance": 4417.03
+  },
+  {
+   "txnId": "SUNITA000217",
+   "valueDate": "2026-08-22",
+   "narration": "UPI/CR/231774862641/SUNIL PAWAR/sunil.p@oksbi/VEG",
+   "amount": 60.0,
+   "type": "CREDIT",
+   "currentBalance": 4477.03
+  },
+  {
+   "txnId": "SUNITA000218",
+   "valueDate": "2026-08-22",
+   "narration": "UPI/CR/324668815987/ANIL KHARAT/8772886042@okaxis/VEG",
+   "amount": 78.0,
+   "type": "CREDIT",
+   "currentBalance": 4555.03
+  },
+  {
+   "txnId": "SUNITA000219",
+   "valueDate": "2026-08-22",
+   "narration": "UPI/CR/423502086729/MAHESH CHAVAN/mahesh.c@okhdfc/VEG",
+   "amount": 72.0,
+   "type": "CREDIT",
+   "currentBalance": 4627.03
+  },
+  {
+   "txnId": "SUNITA000220",
+   "valueDate": "2026-08-22",
+   "narration": "UPI/CR/696551729268/NEHA WAGH/neha.w@okhdfc/VEG",
+   "amount": 27.0,
+   "type": "CREDIT",
+   "currentBalance": 4654.03
+  },
+  {
+   "txnId": "SUNITA000221",
+   "valueDate": "2026-08-22",
+   "narration": "RD INSTALMENT TO A/C 004512345678",
+   "amount": 150.0,
+   "type": "DEBIT",
+   "currentBalance": 4504.03
+  },
+  {
+   "txnId": "SUNITA000222",
+   "valueDate": "2026-08-22",
+   "narration": "UPI/DR/073801712674/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 232.61,
+   "type": "DEBIT",
+   "currentBalance": 4271.42
+  },
+  {
+   "txnId": "SUNITA000223",
+   "valueDate": "2026-08-23",
+   "narration": "UPI/DR/929268548717/GANESH DAIRY/ganeshdair@okaxis/MILK",
+   "amount": 45.1,
+   "type": "DEBIT",
+   "currentBalance": 4226.32
+  },
+  {
+   "txnId": "SUNITA000224",
+   "valueDate": "2026-08-24",
+   "narration": "UPI/CR/275078096885/VANDANA NAIK/vandana.n@oksbi/VEG",
+   "amount": 30.0,
+   "type": "CREDIT",
+   "currentBalance": 4256.32
+  },
+  {
+   "txnId": "SUNITA000225",
+   "valueDate": "2026-08-24",
+   "narration": "UPI/CR/399903110913/VANDANA NAIK/vandana.n@oksbi/VEG",
+   "amount": 79.0,
+   "type": "CREDIT",
+   "currentBalance": 4335.32
+  },
+  {
+   "txnId": "SUNITA000226",
+   "valueDate": "2026-08-24",
+   "narration": "UPI/CR/056134049339/VANDANA NAIK/vandana.n@oksbi/VEG",
+   "amount": 28.0,
+   "type": "CREDIT",
+   "currentBalance": 4363.32
+  },
+  {
+   "txnId": "SUNITA000227",
+   "valueDate": "2026-08-24",
+   "narration": "UPI/CR/836727006759/VANDANA NAIK/vandana.n@oksbi/VEG",
+   "amount": 32.0,
+   "type": "CREDIT",
+   "currentBalance": 4395.32
+  },
+  {
+   "txnId": "SUNITA000228",
+   "valueDate": "2026-08-24",
+   "narration": "UPI/CR/225547518609/MANGESH GHULE/mangesh.g@paytm/VEG",
+   "amount": 39.0,
+   "type": "CREDIT",
+   "currentBalance": 4434.32
+  },
+  {
+   "txnId": "SUNITA000229",
+   "valueDate": "2026-08-24",
+   "narration": "UPI/CR/404090158611/SUNIL PAWAR/sunil.p@oksbi/VEG",
+   "amount": 27.0,
+   "type": "CREDIT",
+   "currentBalance": 4461.32
+  },
+  {
+   "txnId": "SUNITA000230",
+   "valueDate": "2026-08-24",
+   "narration": "UPI/CR/255575638748/TUSHAR GAWALI/7668088689@okaxis/VEG",
+   "amount": 31.0,
+   "type": "CREDIT",
+   "currentBalance": 4492.32
+  },
+  {
+   "txnId": "SUNITA000231",
+   "valueDate": "2026-08-24",
+   "narration": "UPI/CR/028469230316/ROHINI SALVI/rohini.s@ybl/VEG",
+   "amount": 50.0,
+   "type": "CREDIT",
+   "currentBalance": 4542.32
+  },
+  {
+   "txnId": "SUNITA000232",
+   "valueDate": "2026-08-24",
+   "narration": "CASH DEP MARKET YARD BRANCH",
+   "amount": 770.0,
+   "type": "CREDIT",
+   "currentBalance": 5312.32
+  },
+  {
+   "txnId": "SUNITA000233",
+   "valueDate": "2026-08-24",
+   "narration": "UPI/DR/636267347825/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 228.72,
+   "type": "DEBIT",
+   "currentBalance": 5083.6
+  },
+  {
+   "txnId": "SUNITA000234",
+   "valueDate": "2026-08-24",
+   "narration": "UPI/DR/942684809580/SAI KIRANA STORES/saikiranas@okaxis/MILK",
+   "amount": 46.63,
+   "type": "DEBIT",
+   "currentBalance": 5036.97
+  },
+  {
+   "txnId": "SUNITA000235",
+   "valueDate": "2026-08-25",
+   "narration": "UPI/CR/672070954527/ROHINI SALVI/rohini.s@ybl/VEG",
+   "amount": 52.0,
+   "type": "CREDIT",
+   "currentBalance": 5088.97
+  },
+  {
+   "txnId": "SUNITA000236",
+   "valueDate": "2026-08-25",
+   "narration": "UPI/CR/133412600913/SHOBHA JAGTAP/shobha.j@okhdfc/VEG",
+   "amount": 65.0,
+   "type": "CREDIT",
+   "currentBalance": 5153.97
+  },
+  {
+   "txnId": "SUNITA000237",
+   "valueDate": "2026-08-25",
+   "narration": "UPI/CR/135959557662/VANDANA NAIK/vandana.n@oksbi/VEG",
+   "amount": 40.0,
+   "type": "CREDIT",
+   "currentBalance": 5193.97
+  },
+  {
+   "txnId": "SUNITA000238",
+   "valueDate": "2026-08-25",
+   "narration": "UPI/CR/737197822157/DEEPAK MANE/7218105484@oksbi/VEG",
+   "amount": 50.0,
+   "type": "CREDIT",
+   "currentBalance": 5243.97
+  },
+  {
+   "txnId": "SUNITA000239",
+   "valueDate": "2026-08-25",
+   "narration": "UPI/CR/243293421962/SARIKA PATOLE/sarika.p@okhdfc/VEG",
+   "amount": 36.0,
+   "type": "CREDIT",
+   "currentBalance": 5279.97
+  },
+  {
+   "txnId": "SUNITA000240",
+   "valueDate": "2026-08-25",
+   "narration": "UPI/CR/133477331508/PRAKASH THORAT/prakash.t@paytm/VEG",
+   "amount": 63.0,
+   "type": "CREDIT",
+   "currentBalance": 5342.97
+  },
+  {
+   "txnId": "SUNITA000241",
+   "valueDate": "2026-08-25",
+   "narration": "UPI/CR/119548273263/SUNIL PAWAR/sunil.p@oksbi/VEG",
+   "amount": 46.0,
+   "type": "CREDIT",
+   "currentBalance": 5388.97
+  },
+  {
+   "txnId": "SUNITA000242",
+   "valueDate": "2026-08-25",
+   "narration": "UPI/DR/696472812388/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 244.16,
+   "type": "DEBIT",
+   "currentBalance": 5144.81
+  },
+  {
+   "txnId": "SUNITA000243",
+   "valueDate": "2026-08-26",
+   "narration": "UPI/CR/430130343844/RUPALI DESAI/rupali.d@okaxis/VEG",
+   "amount": 23.0,
+   "type": "CREDIT",
+   "currentBalance": 5167.81
+  },
+  {
+   "txnId": "SUNITA000244",
+   "valueDate": "2026-08-26",
+   "narration": "UPI/CR/501855147727/MEERA KADAM/7024591221@okicici/VEG",
+   "amount": 57.0,
+   "type": "CREDIT",
+   "currentBalance": 5224.81
+  },
+  {
+   "txnId": "SUNITA000245",
+   "valueDate": "2026-08-26",
+   "narration": "UPI/CR/066103477690/SARIKA PATOLE/sarika.p@okhdfc/VEG",
+   "amount": 53.0,
+   "type": "CREDIT",
+   "currentBalance": 5277.81
+  },
+  {
+   "txnId": "SUNITA000246",
+   "valueDate": "2026-08-26",
+   "narration": "UPI/CR/146001408751/PRAKASH THORAT/prakash.t@paytm/VEG",
+   "amount": 24.0,
+   "type": "CREDIT",
+   "currentBalance": 5301.81
+  },
+  {
+   "txnId": "SUNITA000247",
+   "valueDate": "2026-08-26",
+   "narration": "UPI/CR/590757497158/VANDANA NAIK/vandana.n@oksbi/VEG",
+   "amount": 40.0,
+   "type": "CREDIT",
+   "currentBalance": 5341.81
+  },
+  {
+   "txnId": "SUNITA000248",
+   "valueDate": "2026-08-26",
+   "narration": "UPI/CR/223348303252/TUSHAR GAWALI/7668088689@okaxis/VEG",
+   "amount": 34.0,
+   "type": "CREDIT",
+   "currentBalance": 5375.81
+  },
+  {
+   "txnId": "SUNITA000249",
+   "valueDate": "2026-08-26",
+   "narration": "UPI/CR/990808821605/TUSHAR GAWALI/7668088689@okaxis/VEG",
+   "amount": 74.0,
+   "type": "CREDIT",
+   "currentBalance": 5449.81
+  },
+  {
+   "txnId": "SUNITA000250",
+   "valueDate": "2026-08-26",
+   "narration": "UPI/CR/464949720193/RUPALI DESAI/rupali.d@okaxis/VEG",
+   "amount": 58.0,
+   "type": "CREDIT",
+   "currentBalance": 5507.81
+  },
+  {
+   "txnId": "SUNITA000251",
+   "valueDate": "2026-08-26",
+   "narration": "UPI/DR/374789842941/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 236.97,
+   "type": "DEBIT",
+   "currentBalance": 5270.84
+  },
+  {
+   "txnId": "SUNITA000252",
+   "valueDate": "2026-08-26",
+   "narration": "UPI/DR/910082718696/SAI KIRANA STORES/saikiranas@okaxis/MILK",
+   "amount": 43.74,
+   "type": "DEBIT",
+   "currentBalance": 5227.1
+  },
+  {
+   "txnId": "SUNITA000253",
+   "valueDate": "2026-08-27",
+   "narration": "UPI/CR/034045800997/SARIKA PATOLE/sarika.p@okhdfc/VEG",
+   "amount": 23.0,
+   "type": "CREDIT",
+   "currentBalance": 5250.1
+  },
+  {
+   "txnId": "SUNITA000254",
+   "valueDate": "2026-08-27",
+   "narration": "UPI/CR/474804428671/SEEMA BORATE/seema.b@ybl/VEG",
+   "amount": 50.0,
+   "type": "CREDIT",
+   "currentBalance": 5300.1
+  },
+  {
+   "txnId": "SUNITA000255",
+   "valueDate": "2026-08-27",
+   "narration": "UPI/CR/567723371005/TUSHAR GAWALI/7668088689@okaxis/VEG",
+   "amount": 39.0,
+   "type": "CREDIT",
+   "currentBalance": 5339.1
+  },
+  {
+   "txnId": "SUNITA000256",
+   "valueDate": "2026-08-27",
+   "narration": "UPI/CR/470294324822/RAJESH KHOT/8842036887@okaxis/VEG",
+   "amount": 47.0,
+   "type": "CREDIT",
+   "currentBalance": 5386.1
+  },
+  {
+   "txnId": "SUNITA000257",
+   "valueDate": "2026-08-27",
+   "narration": "UPI/CR/698268700598/LATA KAMBLE/9906904273@okaxis/VEG",
+   "amount": 61.0,
+   "type": "CREDIT",
+   "currentBalance": 5447.1
+  },
+  {
+   "txnId": "SUNITA000258",
+   "valueDate": "2026-08-27",
+   "narration": "UPI/CR/418619721176/NEHA WAGH/neha.w@okhdfc/VEG",
+   "amount": 55.0,
+   "type": "CREDIT",
+   "currentBalance": 5502.1
+  },
+  {
+   "txnId": "SUNITA000259",
+   "valueDate": "2026-08-27",
+   "narration": "UPI/CR/338749260245/JYOTI GAVADE/jyoti.g@oksbi/VEG",
+   "amount": 44.0,
+   "type": "CREDIT",
+   "currentBalance": 5546.1
+  },
+  {
+   "txnId": "SUNITA000260",
+   "valueDate": "2026-08-27",
+   "narration": "UPI/CR/719657477172/SUNIL PAWAR/sunil.p@oksbi/VEG",
+   "amount": 38.0,
+   "type": "CREDIT",
+   "currentBalance": 5584.1
+  },
+  {
+   "txnId": "SUNITA000261",
+   "valueDate": "2026-08-27",
+   "narration": "UPI/CR/443499077905/ASHA SHELKE/8862358523@ybl/VEG",
+   "amount": 22.0,
+   "type": "CREDIT",
+   "currentBalance": 5606.1
+  },
+  {
+   "txnId": "SUNITA000262",
+   "valueDate": "2026-08-27",
+   "narration": "UPI/DR/629696024537/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 245.49,
+   "type": "DEBIT",
+   "currentBalance": 5360.61
+  },
+  {
+   "txnId": "SUNITA000263",
+   "valueDate": "2026-08-28",
+   "narration": "UPI/CR/239392357024/RAJESH KHOT/8842036887@okaxis/VEG",
+   "amount": 60.0,
+   "type": "CREDIT",
+   "currentBalance": 5420.61
+  },
+  {
+   "txnId": "SUNITA000264",
+   "valueDate": "2026-08-28",
+   "narration": "UPI/CR/678717749327/GANESH LONDHE/6333393040@okhdfc/VEG",
+   "amount": 77.0,
+   "type": "CREDIT",
+   "currentBalance": 5497.61
+  },
+  {
+   "txnId": "SUNITA000265",
+   "valueDate": "2026-08-28",
+   "narration": "UPI/CR/243271124182/VANDANA NAIK/vandana.n@oksbi/VEG",
+   "amount": 63.0,
+   "type": "CREDIT",
+   "currentBalance": 5560.61
+  },
+  {
+   "txnId": "SUNITA000266",
+   "valueDate": "2026-08-28",
+   "narration": "UPI/CR/905156190167/SEEMA BORATE/seema.b@ybl/VEG",
+   "amount": 31.0,
+   "type": "CREDIT",
+   "currentBalance": 5591.61
+  },
+  {
+   "txnId": "SUNITA000267",
+   "valueDate": "2026-08-28",
+   "narration": "UPI/CR/420304899261/ASHA SHELKE/8862358523@ybl/VEG",
+   "amount": 24.0,
+   "type": "CREDIT",
+   "currentBalance": 5615.61
+  },
+  {
+   "txnId": "SUNITA000268",
+   "valueDate": "2026-08-28",
+   "narration": "UPI/CR/630968211517/SUNIL PAWAR/sunil.p@oksbi/VEG",
+   "amount": 46.0,
+   "type": "CREDIT",
+   "currentBalance": 5661.61
+  },
+  {
+   "txnId": "SUNITA000269",
+   "valueDate": "2026-08-28",
+   "narration": "UPI/CR/453632689753/SEEMA BORATE/seema.b@ybl/VEG",
+   "amount": 28.0,
+   "type": "CREDIT",
+   "currentBalance": 5689.61
+  },
+  {
+   "txnId": "SUNITA000270",
+   "valueDate": "2026-08-28",
+   "narration": "UPI/CR/196788559517/RAJESH KHOT/8842036887@okaxis/VEG",
+   "amount": 70.0,
+   "type": "CREDIT",
+   "currentBalance": 5759.61
+  },
+  {
+   "txnId": "SUNITA000271",
+   "valueDate": "2026-08-28",
+   "narration": "UPI/DR/425383841329/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 245.72,
+   "type": "DEBIT",
+   "currentBalance": 5513.89
+  },
+  {
+   "txnId": "SUNITA000272",
+   "valueDate": "2026-08-28",
+   "narration": "UPI/DR/010222433949/SAI KIRANA STORES/saikiranas@okaxis/MILK",
+   "amount": 40.61,
+   "type": "DEBIT",
+   "currentBalance": 5473.28
+  },
+  {
+   "txnId": "SUNITA000273",
+   "valueDate": "2026-08-29",
+   "narration": "UPI/CR/943157783110/SHOBHA JAGTAP/shobha.j@okhdfc/VEG",
+   "amount": 30.0,
+   "type": "CREDIT",
+   "currentBalance": 5503.28
+  },
+  {
+   "txnId": "SUNITA000274",
+   "valueDate": "2026-08-29",
+   "narration": "UPI/CR/452308197096/SEEMA BORATE/seema.b@ybl/VEG",
+   "amount": 62.0,
+   "type": "CREDIT",
+   "currentBalance": 5565.28
+  },
+  {
+   "txnId": "SUNITA000275",
+   "valueDate": "2026-08-29",
+   "narration": "UPI/CR/660213419573/SARIKA PATOLE/sarika.p@okhdfc/VEG",
+   "amount": 63.0,
+   "type": "CREDIT",
+   "currentBalance": 5628.28
+  },
+  {
+   "txnId": "SUNITA000276",
+   "valueDate": "2026-08-29",
+   "narration": "UPI/CR/724043693261/SARIKA PATOLE/sarika.p@okhdfc/VEG",
+   "amount": 60.0,
+   "type": "CREDIT",
+   "currentBalance": 5688.28
+  },
+  {
+   "txnId": "SUNITA000277",
+   "valueDate": "2026-08-29",
+   "narration": "UPI/CR/477762499957/MANGESH GHULE/mangesh.g@paytm/VEG",
+   "amount": 79.0,
+   "type": "CREDIT",
+   "currentBalance": 5767.28
+  },
+  {
+   "txnId": "SUNITA000278",
+   "valueDate": "2026-08-29",
+   "narration": "UPI/CR/478739773482/VINOD SHINDE/vinod.s@ybl/VEG",
+   "amount": 63.0,
+   "type": "CREDIT",
+   "currentBalance": 5830.28
+  },
+  {
+   "txnId": "SUNITA000279",
+   "valueDate": "2026-08-29",
+   "narration": "UPI/CR/472171583109/KAVITA SHIRKE/kavita.s@okaxis/VEG",
+   "amount": 28.0,
+   "type": "CREDIT",
+   "currentBalance": 5858.28
+  },
+  {
+   "txnId": "SUNITA000280",
+   "valueDate": "2026-08-29",
+   "narration": "UPI/CR/917877837396/ROHINI SALVI/rohini.s@ybl/VEG",
+   "amount": 51.0,
+   "type": "CREDIT",
+   "currentBalance": 5909.28
+  },
+  {
+   "txnId": "SUNITA000281",
+   "valueDate": "2026-08-29",
+   "narration": "RD INSTALMENT TO A/C 004512345678",
+   "amount": 150.0,
+   "type": "DEBIT",
+   "currentBalance": 5759.28
+  },
+  {
+   "txnId": "SUNITA000282",
+   "valueDate": "2026-08-29",
+   "narration": "UPI/DR/661535576460/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 211.35,
+   "type": "DEBIT",
+   "currentBalance": 5547.93
+  },
+  {
+   "txnId": "SUNITA000283",
+   "valueDate": "2026-08-30",
+   "narration": "UPI/DR/055496321552/QUICKTALK MOBILE RECHARGE/quicktalkm@okhdfc/PREPAID",
+   "amount": 199.0,
+   "type": "DEBIT",
+   "currentBalance": 5348.93
+  },
+  {
+   "txnId": "SUNITA000284",
+   "valueDate": "2026-08-30",
+   "narration": "UPI/DR/657283497670/SAI KIRANA STORES/saikiranas@okaxis/MILK",
+   "amount": 58.66,
+   "type": "DEBIT",
+   "currentBalance": 5290.27
+  },
+  {
+   "txnId": "SUNITA000285",
+   "valueDate": "2026-08-31",
+   "narration": "UPI/CR/860070367713/SANTOSH KOLTE/santosh.k@okaxis/VEG",
+   "amount": 21.0,
+   "type": "CREDIT",
+   "currentBalance": 5311.27
+  },
+  {
+   "txnId": "SUNITA000286",
+   "valueDate": "2026-08-31",
+   "narration": "UPI/CR/883935279061/TUSHAR GAWALI/7668088689@okaxis/VEG",
+   "amount": 65.0,
+   "type": "CREDIT",
+   "currentBalance": 5376.27
+  },
+  {
+   "txnId": "SUNITA000287",
+   "valueDate": "2026-08-31",
+   "narration": "UPI/CR/724572055870/SUREKHA DHUMAL/6683920139@okicici/VEG",
+   "amount": 68.0,
+   "type": "CREDIT",
+   "currentBalance": 5444.27
+  },
+  {
+   "txnId": "SUNITA000288",
+   "valueDate": "2026-08-31",
+   "narration": "UPI/CR/796132093392/PRAKASH THORAT/prakash.t@paytm/VEG",
+   "amount": 64.0,
+   "type": "CREDIT",
+   "currentBalance": 5508.27
+  },
+  {
+   "txnId": "SUNITA000289",
+   "valueDate": "2026-08-31",
+   "narration": "UPI/CR/334138587637/ANIL KHARAT/8772886042@okaxis/VEG",
+   "amount": 53.0,
+   "type": "CREDIT",
+   "currentBalance": 5561.27
+  },
+  {
+   "txnId": "SUNITA000290",
+   "valueDate": "2026-08-31",
+   "narration": "UPI/CR/967966765628/SANTOSH KOLTE/santosh.k@okaxis/VEG",
+   "amount": 43.0,
+   "type": "CREDIT",
+   "currentBalance": 5604.27
+  },
+  {
+   "txnId": "SUNITA000291",
+   "valueDate": "2026-08-31",
+   "narration": "UPI/CR/041835019114/MEERA KADAM/7024591221@okicici/VEG",
+   "amount": 65.0,
+   "type": "CREDIT",
+   "currentBalance": 5669.27
+  },
+  {
+   "txnId": "SUNITA000292",
+   "valueDate": "2026-08-31",
+   "narration": "UPI/CR/521031603447/RUPALI DESAI/rupali.d@okaxis/VEG",
+   "amount": 35.0,
+   "type": "CREDIT",
+   "currentBalance": 5704.27
+  },
+  {
+   "txnId": "SUNITA000293",
+   "valueDate": "2026-08-31",
+   "narration": "CASH DEP MARKET YARD BRANCH",
+   "amount": 520.0,
+   "type": "CREDIT",
+   "currentBalance": 6224.27
+  },
+  {
+   "txnId": "SUNITA000294",
+   "valueDate": "2026-08-31",
+   "narration": "UPI/DR/985621882962/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 232.04,
+   "type": "DEBIT",
+   "currentBalance": 5992.23
+  },
+  {
+   "txnId": "SUNITA000295",
+   "valueDate": "2026-08-31",
+   "narration": "UPI/DR/725346833208/SAI KIRANA STORES/saikiranas@okaxis/MILK",
+   "amount": 67.62,
+   "type": "DEBIT",
+   "currentBalance": 5924.61
+  },
+  {
+   "txnId": "SUNITA000296",
+   "valueDate": "2026-09-01",
+   "narration": "UPI/CR/918939858911/SANTOSH KOLTE/santosh.k@okaxis/VEG",
+   "amount": 59.0,
+   "type": "CREDIT",
+   "currentBalance": 5983.61
+  },
+  {
+   "txnId": "SUNITA000297",
+   "valueDate": "2026-09-01",
+   "narration": "UPI/CR/007900246519/TUSHAR GAWALI/7668088689@okaxis/VEG",
+   "amount": 78.0,
+   "type": "CREDIT",
+   "currentBalance": 6061.61
+  },
+  {
+   "txnId": "SUNITA000298",
+   "valueDate": "2026-09-01",
+   "narration": "UPI/CR/248649017500/SHOBHA JAGTAP/shobha.j@okhdfc/VEG",
+   "amount": 47.0,
+   "type": "CREDIT",
+   "currentBalance": 6108.61
+  },
+  {
+   "txnId": "SUNITA000299",
+   "valueDate": "2026-09-01",
+   "narration": "UPI/CR/104803949440/TUSHAR GAWALI/7668088689@okaxis/VEG",
+   "amount": 38.0,
+   "type": "CREDIT",
+   "currentBalance": 6146.61
+  },
+  {
+   "txnId": "SUNITA000300",
+   "valueDate": "2026-09-01",
+   "narration": "UPI/CR/189597912027/SUNIL PAWAR/sunil.p@oksbi/VEG",
+   "amount": 73.0,
+   "type": "CREDIT",
+   "currentBalance": 6219.61
+  },
+  {
+   "txnId": "SUNITA000301",
+   "valueDate": "2026-09-01",
+   "narration": "UPI/CR/185064153184/SHOBHA JAGTAP/shobha.j@okhdfc/VEG",
+   "amount": 64.0,
+   "type": "CREDIT",
+   "currentBalance": 6283.61
+  },
+  {
+   "txnId": "SUNITA000302",
+   "valueDate": "2026-09-01",
+   "narration": "UPI/CR/594220978250/VANDANA NAIK/vandana.n@oksbi/VEG",
+   "amount": 77.0,
+   "type": "CREDIT",
+   "currentBalance": 6360.61
+  },
+  {
+   "txnId": "SUNITA000303",
+   "valueDate": "2026-09-01",
+   "narration": "UPI/CR/918089397444/TUSHAR GAWALI/7668088689@okaxis/VEG",
+   "amount": 68.0,
+   "type": "CREDIT",
+   "currentBalance": 6428.61
+  },
+  {
+   "txnId": "SUNITA000304",
+   "valueDate": "2026-09-01",
+   "narration": "UPI/DR/099532906795/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 203.41,
+   "type": "DEBIT",
+   "currentBalance": 6225.2
+  },
+  {
+   "txnId": "SUNITA000305",
+   "valueDate": "2026-09-02",
+   "narration": "UPI/CR/665597729834/ROHINI SALVI/rohini.s@ybl/VEG",
+   "amount": 36.0,
+   "type": "CREDIT",
+   "currentBalance": 6261.2
+  },
+  {
+   "txnId": "SUNITA000306",
+   "valueDate": "2026-09-02",
+   "narration": "UPI/CR/094799783638/UMESH JADHAV/9926153247@ybl/VEG",
+   "amount": 33.0,
+   "type": "CREDIT",
+   "currentBalance": 6294.2
+  },
+  {
+   "txnId": "SUNITA000307",
+   "valueDate": "2026-09-02",
+   "narration": "UPI/CR/017866203521/DEEPAK MANE/7218105484@oksbi/VEG",
+   "amount": 26.0,
+   "type": "CREDIT",
+   "currentBalance": 6320.2
+  },
+  {
+   "txnId": "SUNITA000308",
+   "valueDate": "2026-09-02",
+   "narration": "UPI/CR/991817412018/LATA KAMBLE/9906904273@okaxis/VEG",
+   "amount": 31.0,
+   "type": "CREDIT",
+   "currentBalance": 6351.2
+  },
+  {
+   "txnId": "SUNITA000309",
+   "valueDate": "2026-09-02",
+   "narration": "UPI/CR/572396711009/SHOBHA JAGTAP/shobha.j@okhdfc/VEG",
+   "amount": 44.0,
+   "type": "CREDIT",
+   "currentBalance": 6395.2
+  },
+  {
+   "txnId": "SUNITA000310",
+   "valueDate": "2026-09-02",
+   "narration": "UPI/CR/733928769461/VANDANA NAIK/vandana.n@oksbi/VEG",
+   "amount": 37.0,
+   "type": "CREDIT",
+   "currentBalance": 6432.2
+  },
+  {
+   "txnId": "SUNITA000311",
+   "valueDate": "2026-09-02",
+   "narration": "UPI/DR/736175202877/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 209.25,
+   "type": "DEBIT",
+   "currentBalance": 6222.95
+  },
+  {
+   "txnId": "SUNITA000312",
+   "valueDate": "2026-09-02",
+   "narration": "UPI/DR/595536390655/SAI KIRANA STORES/saikiranas@okaxis/MILK",
+   "amount": 69.04,
+   "type": "DEBIT",
+   "currentBalance": 6153.91
+  },
+  {
+   "txnId": "SUNITA000313",
+   "valueDate": "2026-09-03",
+   "narration": "UPI/CR/726165577445/MEERA KADAM/7024591221@okicici/VEG",
+   "amount": 71.0,
+   "type": "CREDIT",
+   "currentBalance": 6224.91
+  },
+  {
+   "txnId": "SUNITA000314",
+   "valueDate": "2026-09-03",
+   "narration": "UPI/CR/155486199366/SANTOSH KOLTE/santosh.k@okaxis/VEG",
+   "amount": 36.0,
+   "type": "CREDIT",
+   "currentBalance": 6260.91
+  },
+  {
+   "txnId": "SUNITA000315",
+   "valueDate": "2026-09-03",
+   "narration": "UPI/CR/130175925779/PRAKASH THORAT/prakash.t@paytm/VEG",
+   "amount": 75.0,
+   "type": "CREDIT",
+   "currentBalance": 6335.91
+  },
+  {
+   "txnId": "SUNITA000316",
+   "valueDate": "2026-09-03",
+   "narration": "UPI/CR/750659809987/SUNIL PAWAR/sunil.p@oksbi/VEG",
+   "amount": 35.0,
+   "type": "CREDIT",
+   "currentBalance": 6370.91
+  },
+  {
+   "txnId": "SUNITA000317",
+   "valueDate": "2026-09-03",
+   "narration": "UPI/CR/861381968527/SEEMA BORATE/seema.b@ybl/VEG",
+   "amount": 25.0,
+   "type": "CREDIT",
+   "currentBalance": 6395.91
+  },
+  {
+   "txnId": "SUNITA000318",
+   "valueDate": "2026-09-03",
+   "narration": "UPI/CR/976754406121/UMESH JADHAV/9926153247@ybl/VEG",
+   "amount": 29.0,
+   "type": "CREDIT",
+   "currentBalance": 6424.91
+  },
+  {
+   "txnId": "SUNITA000319",
+   "valueDate": "2026-09-03",
+   "narration": "UPI/CR/750578343469/SUNIL PAWAR/sunil.p@oksbi/VEG",
+   "amount": 50.0,
+   "type": "CREDIT",
+   "currentBalance": 6474.91
+  },
+  {
+   "txnId": "SUNITA000320",
+   "valueDate": "2026-09-03",
+   "narration": "UPI/CR/187203616558/TUSHAR GAWALI/7668088689@okaxis/VEG",
+   "amount": 35.0,
+   "type": "CREDIT",
+   "currentBalance": 6509.91
+  },
+  {
+   "txnId": "SUNITA000321",
+   "valueDate": "2026-09-03",
+   "narration": "UPI/CR/663135100680/JYOTI GAVADE/jyoti.g@oksbi/VEG",
+   "amount": 23.0,
+   "type": "CREDIT",
+   "currentBalance": 6532.91
+  },
+  {
+   "txnId": "SUNITA000322",
+   "valueDate": "2026-09-03",
+   "narration": "UPI/DR/530818909641/KAMAL GAIKWAD/kamal.g@paytm/RENT",
+   "amount": 3000.0,
+   "type": "DEBIT",
+   "currentBalance": 3532.91
+  },
+  {
+   "txnId": "SUNITA000323",
+   "valueDate": "2026-09-03",
+   "narration": "UPI/DR/793351453060/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 224.05,
+   "type": "DEBIT",
+   "currentBalance": 3308.86
+  },
+  {
+   "txnId": "SUNITA000324",
+   "valueDate": "2026-09-04",
+   "narration": "UPI/CR/605073545610/SUREKHA DHUMAL/6683920139@okicici/VEG",
+   "amount": 53.0,
+   "type": "CREDIT",
+   "currentBalance": 3361.86
+  },
+  {
+   "txnId": "SUNITA000325",
+   "valueDate": "2026-09-04",
+   "narration": "UPI/CR/862765719284/VINOD SHINDE/vinod.s@ybl/VEG",
+   "amount": 39.0,
+   "type": "CREDIT",
+   "currentBalance": 3400.86
+  },
+  {
+   "txnId": "SUNITA000326",
+   "valueDate": "2026-09-04",
+   "narration": "UPI/CR/759423246755/MAHESH CHAVAN/mahesh.c@okhdfc/VEG",
+   "amount": 38.0,
+   "type": "CREDIT",
+   "currentBalance": 3438.86
+  },
+  {
+   "txnId": "SUNITA000327",
+   "valueDate": "2026-09-04",
+   "narration": "UPI/CR/496102633794/TUSHAR GAWALI/7668088689@okaxis/VEG",
+   "amount": 20.0,
+   "type": "CREDIT",
+   "currentBalance": 3458.86
+  },
+  {
+   "txnId": "SUNITA000328",
+   "valueDate": "2026-09-04",
+   "narration": "UPI/CR/431662040484/LATA KAMBLE/9906904273@okaxis/VEG",
+   "amount": 22.0,
+   "type": "CREDIT",
+   "currentBalance": 3480.86
+  },
+  {
+   "txnId": "SUNITA000329",
+   "valueDate": "2026-09-04",
+   "narration": "UPI/CR/052952689210/ASHA SHELKE/8862358523@ybl/VEG",
+   "amount": 24.0,
+   "type": "CREDIT",
+   "currentBalance": 3504.86
+  },
+  {
+   "txnId": "SUNITA000330",
+   "valueDate": "2026-09-04",
+   "narration": "UPI/DR/380634878741/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 211.16,
+   "type": "DEBIT",
+   "currentBalance": 3293.7
+  },
+  {
+   "txnId": "SUNITA000331",
+   "valueDate": "2026-09-04",
+   "narration": "UPI/DR/583203176823/GANESH DAIRY/ganeshdair@okaxis/MILK",
+   "amount": 45.48,
+   "type": "DEBIT",
+   "currentBalance": 3248.22
+  },
+  {
+   "txnId": "SUNITA000332",
+   "valueDate": "2026-09-05",
+   "narration": "UPI/CR/331757719997/UMESH JADHAV/9926153247@ybl/VEG",
+   "amount": 45.0,
+   "type": "CREDIT",
+   "currentBalance": 3293.22
+  },
+  {
+   "txnId": "SUNITA000333",
+   "valueDate": "2026-09-05",
+   "narration": "UPI/CR/907700496483/JYOTI GAVADE/jyoti.g@oksbi/VEG",
+   "amount": 29.0,
+   "type": "CREDIT",
+   "currentBalance": 3322.22
+  },
+  {
+   "txnId": "SUNITA000334",
+   "valueDate": "2026-09-05",
+   "narration": "UPI/CR/614364311305/JYOTI GAVADE/jyoti.g@oksbi/VEG",
+   "amount": 47.0,
+   "type": "CREDIT",
+   "currentBalance": 3369.22
+  },
+  {
+   "txnId": "SUNITA000335",
+   "valueDate": "2026-09-05",
+   "narration": "UPI/CR/056231574091/DEEPAK MANE/7218105484@oksbi/VEG",
+   "amount": 66.0,
+   "type": "CREDIT",
+   "currentBalance": 3435.22
+  },
+  {
+   "txnId": "SUNITA000336",
+   "valueDate": "2026-09-05",
+   "narration": "UPI/CR/188030370908/SARIKA PATOLE/sarika.p@okhdfc/VEG",
+   "amount": 28.0,
+   "type": "CREDIT",
+   "currentBalance": 3463.22
+  },
+  {
+   "txnId": "SUNITA000337",
+   "valueDate": "2026-09-05",
+   "narration": "UPI/CR/697120087383/ROHINI SALVI/rohini.s@ybl/VEG",
+   "amount": 26.0,
+   "type": "CREDIT",
+   "currentBalance": 3489.22
+  },
+  {
+   "txnId": "SUNITA000338",
+   "valueDate": "2026-09-05",
+   "narration": "UPI/CR/755778921121/SEEMA BORATE/seema.b@ybl/VEG",
+   "amount": 39.0,
+   "type": "CREDIT",
+   "currentBalance": 3528.22
+  },
+  {
+   "txnId": "SUNITA000339",
+   "valueDate": "2026-09-05",
+   "narration": "RD INSTALMENT TO A/C 004512345678",
+   "amount": 150.0,
+   "type": "DEBIT",
+   "currentBalance": 3378.22
+  },
+  {
+   "txnId": "SUNITA000340",
+   "valueDate": "2026-09-05",
+   "narration": "UPI/DR/852053530120/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 233.87,
+   "type": "DEBIT",
+   "currentBalance": 3144.35
+  },
+  {
+   "txnId": "SUNITA000341",
+   "valueDate": "2026-09-06",
+   "narration": "UPI/DR/270403404682/SAI KIRANA STORES/saikiranas@okaxis/MILK",
+   "amount": 39.83,
+   "type": "DEBIT",
+   "currentBalance": 3104.52
+  },
+  {
+   "txnId": "SUNITA000342",
+   "valueDate": "2026-09-07",
+   "narration": "UPI/CR/528609226981/SHOBHA JAGTAP/shobha.j@okhdfc/VEG",
+   "amount": 78.0,
+   "type": "CREDIT",
+   "currentBalance": 3182.52
+  },
+  {
+   "txnId": "SUNITA000343",
+   "valueDate": "2026-09-07",
+   "narration": "UPI/CR/045100504204/ROHINI SALVI/rohini.s@ybl/VEG",
+   "amount": 51.0,
+   "type": "CREDIT",
+   "currentBalance": 3233.52
+  },
+  {
+   "txnId": "SUNITA000344",
+   "valueDate": "2026-09-07",
+   "narration": "UPI/CR/778937711991/ANIL KHARAT/8772886042@okaxis/VEG",
+   "amount": 65.0,
+   "type": "CREDIT",
+   "currentBalance": 3298.52
+  },
+  {
+   "txnId": "SUNITA000345",
+   "valueDate": "2026-09-07",
+   "narration": "UPI/CR/658918013909/UMESH JADHAV/9926153247@ybl/VEG",
+   "amount": 45.0,
+   "type": "CREDIT",
+   "currentBalance": 3343.52
+  },
+  {
+   "txnId": "SUNITA000346",
+   "valueDate": "2026-09-07",
+   "narration": "UPI/CR/445634042080/RAJESH KHOT/8842036887@okaxis/VEG",
+   "amount": 53.0,
+   "type": "CREDIT",
+   "currentBalance": 3396.52
+  },
+  {
+   "txnId": "SUNITA000347",
+   "valueDate": "2026-09-07",
+   "narration": "UPI/CR/527295671136/LATA KAMBLE/9906904273@okaxis/VEG",
+   "amount": 35.0,
+   "type": "CREDIT",
+   "currentBalance": 3431.52
+  },
+  {
+   "txnId": "SUNITA000348",
+   "valueDate": "2026-09-07",
+   "narration": "UPI/CR/769549961229/SHOBHA JAGTAP/shobha.j@okhdfc/VEG",
+   "amount": 58.0,
+   "type": "CREDIT",
+   "currentBalance": 3489.52
+  },
+  {
+   "txnId": "SUNITA000349",
+   "valueDate": "2026-09-07",
+   "narration": "UPI/CR/173790143542/MEERA KADAM/7024591221@okicici/VEG",
+   "amount": 46.0,
+   "type": "CREDIT",
+   "currentBalance": 3535.52
+  },
+  {
+   "txnId": "SUNITA000350",
+   "valueDate": "2026-09-07",
+   "narration": "CASH DEP MARKET YARD BRANCH",
+   "amount": 510.0,
+   "type": "CREDIT",
+   "currentBalance": 4045.52
+  },
+  {
+   "txnId": "SUNITA000351",
+   "valueDate": "2026-09-07",
+   "narration": "UPI/DR/772885921885/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 248.34,
+   "type": "DEBIT",
+   "currentBalance": 3797.18
+  },
+  {
+   "txnId": "SUNITA000352",
+   "valueDate": "2026-09-07",
+   "narration": "UPI/DR/698225909091/GANESH DAIRY/ganeshdair@okaxis/MILK",
+   "amount": 48.89,
+   "type": "DEBIT",
+   "currentBalance": 3748.29
+  },
+  {
+   "txnId": "SUNITA000353",
+   "valueDate": "2026-09-08",
+   "narration": "UPI/CR/214992733698/MAHESH CHAVAN/mahesh.c@okhdfc/VEG",
+   "amount": 35.0,
+   "type": "CREDIT",
+   "currentBalance": 3783.29
+  },
+  {
+   "txnId": "SUNITA000354",
+   "valueDate": "2026-09-08",
+   "narration": "UPI/CR/547019291731/SUREKHA DHUMAL/6683920139@okicici/VEG",
+   "amount": 64.0,
+   "type": "CREDIT",
+   "currentBalance": 3847.29
+  },
+  {
+   "txnId": "SUNITA000355",
+   "valueDate": "2026-09-08",
+   "narration": "UPI/CR/824006686222/SEEMA BORATE/seema.b@ybl/VEG",
+   "amount": 50.0,
+   "type": "CREDIT",
+   "currentBalance": 3897.29
+  },
+  {
+   "txnId": "SUNITA000356",
+   "valueDate": "2026-09-08",
+   "narration": "UPI/CR/530692420443/SUREKHA DHUMAL/6683920139@okicici/VEG",
+   "amount": 62.0,
+   "type": "CREDIT",
+   "currentBalance": 3959.29
+  },
+  {
+   "txnId": "SUNITA000357",
+   "valueDate": "2026-09-08",
+   "narration": "UPI/CR/462116377368/RUPALI DESAI/rupali.d@okaxis/VEG",
+   "amount": 38.0,
+   "type": "CREDIT",
+   "currentBalance": 3997.29
+  },
+  {
+   "txnId": "SUNITA000358",
+   "valueDate": "2026-09-08",
+   "narration": "UPI/CR/954848796583/SHOBHA JAGTAP/shobha.j@okhdfc/VEG",
+   "amount": 44.0,
+   "type": "CREDIT",
+   "currentBalance": 4041.29
+  },
+  {
+   "txnId": "SUNITA000359",
+   "valueDate": "2026-09-08",
+   "narration": "UPI/CR/426036983189/LATA KAMBLE/9906904273@okaxis/VEG",
+   "amount": 53.0,
+   "type": "CREDIT",
+   "currentBalance": 4094.29
+  },
+  {
+   "txnId": "SUNITA000360",
+   "valueDate": "2026-09-08",
+   "narration": "UPI/CR/698387422791/SARIKA PATOLE/sarika.p@okhdfc/VEG",
+   "amount": 71.0,
+   "type": "CREDIT",
+   "currentBalance": 4165.29
+  },
+  {
+   "txnId": "SUNITA000361",
+   "valueDate": "2026-09-08",
+   "narration": "UPI/CR/743970211131/ROHINI SALVI/rohini.s@ybl/VEG",
+   "amount": 45.0,
+   "type": "CREDIT",
+   "currentBalance": 4210.29
+  },
+  {
+   "txnId": "SUNITA000362",
+   "valueDate": "2026-09-08",
+   "narration": "UPI/DR/369091504350/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 224.61,
+   "type": "DEBIT",
+   "currentBalance": 3985.68
+  },
+  {
+   "txnId": "SUNITA000363",
+   "valueDate": "2026-09-09",
+   "narration": "UPI/CR/673766001312/JYOTI GAVADE/jyoti.g@oksbi/VEG",
+   "amount": 58.0,
+   "type": "CREDIT",
+   "currentBalance": 4043.68
+  },
+  {
+   "txnId": "SUNITA000364",
+   "valueDate": "2026-09-09",
+   "narration": "UPI/CR/880376660995/VANDANA NAIK/vandana.n@oksbi/VEG",
+   "amount": 38.0,
+   "type": "CREDIT",
+   "currentBalance": 4081.68
+  },
+  {
+   "txnId": "SUNITA000365",
+   "valueDate": "2026-09-09",
+   "narration": "UPI/CR/889146079797/LATA KAMBLE/9906904273@okaxis/VEG",
+   "amount": 77.0,
+   "type": "CREDIT",
+   "currentBalance": 4158.68
+  },
+  {
+   "txnId": "SUNITA000366",
+   "valueDate": "2026-09-09",
+   "narration": "UPI/CR/337053611871/SARIKA PATOLE/sarika.p@okhdfc/VEG",
+   "amount": 61.0,
+   "type": "CREDIT",
+   "currentBalance": 4219.68
+  },
+  {
+   "txnId": "SUNITA000367",
+   "valueDate": "2026-09-09",
+   "narration": "UPI/CR/724851277307/VANDANA NAIK/vandana.n@oksbi/VEG",
+   "amount": 56.0,
+   "type": "CREDIT",
+   "currentBalance": 4275.68
+  },
+  {
+   "txnId": "SUNITA000368",
+   "valueDate": "2026-09-09",
+   "narration": "UPI/CR/794739588429/LATA KAMBLE/9906904273@okaxis/VEG",
+   "amount": 38.0,
+   "type": "CREDIT",
+   "currentBalance": 4313.68
+  },
+  {
+   "txnId": "SUNITA000369",
+   "valueDate": "2026-09-09",
+   "narration": "UPI/CR/151313484924/UMESH JADHAV/9926153247@ybl/VEG",
+   "amount": 66.0,
+   "type": "CREDIT",
+   "currentBalance": 4379.68
+  },
+  {
+   "txnId": "SUNITA000370",
+   "valueDate": "2026-09-09",
+   "narration": "UPI/CR/090540839348/SHOBHA JAGTAP/shobha.j@okhdfc/VEG",
+   "amount": 57.0,
+   "type": "CREDIT",
+   "currentBalance": 4436.68
+  },
+  {
+   "txnId": "SUNITA000371",
+   "valueDate": "2026-09-09",
+   "narration": "UPI/DR/856490265808/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 210.04,
+   "type": "DEBIT",
+   "currentBalance": 4226.64
+  },
+  {
+   "txnId": "SUNITA000372",
+   "valueDate": "2026-09-09",
+   "narration": "UPI/DR/590255203030/GANESH DAIRY/ganeshdair@okaxis/MILK",
+   "amount": 44.19,
+   "type": "DEBIT",
+   "currentBalance": 4182.45
+  },
+  {
+   "txnId": "SUNITA000373",
+   "valueDate": "2026-09-10",
+   "narration": "UPI/CR/532505371613/SANTOSH KOLTE/santosh.k@okaxis/VEG",
+   "amount": 22.0,
+   "type": "CREDIT",
+   "currentBalance": 4204.45
+  },
+  {
+   "txnId": "SUNITA000374",
+   "valueDate": "2026-09-10",
+   "narration": "UPI/CR/011222744235/LATA KAMBLE/9906904273@okaxis/VEG",
+   "amount": 24.0,
+   "type": "CREDIT",
+   "currentBalance": 4228.45
+  },
+  {
+   "txnId": "SUNITA000375",
+   "valueDate": "2026-09-10",
+   "narration": "UPI/CR/272421792004/RAJESH KHOT/8842036887@okaxis/VEG",
+   "amount": 57.0,
+   "type": "CREDIT",
+   "currentBalance": 4285.45
+  },
+  {
+   "txnId": "SUNITA000376",
+   "valueDate": "2026-09-10",
+   "narration": "UPI/CR/815043025421/UMESH JADHAV/9926153247@ybl/VEG",
+   "amount": 39.0,
+   "type": "CREDIT",
+   "currentBalance": 4324.45
+  },
+  {
+   "txnId": "SUNITA000377",
+   "valueDate": "2026-09-10",
+   "narration": "UPI/CR/674577238688/PRAKASH THORAT/prakash.t@paytm/VEG",
+   "amount": 69.0,
+   "type": "CREDIT",
+   "currentBalance": 4393.45
+  },
+  {
+   "txnId": "SUNITA000378",
+   "valueDate": "2026-09-10",
+   "narration": "UPI/CR/159979588118/VINOD SHINDE/vinod.s@ybl/VEG",
+   "amount": 39.0,
+   "type": "CREDIT",
+   "currentBalance": 4432.45
+  },
+  {
+   "txnId": "SUNITA000379",
+   "valueDate": "2026-09-10",
+   "narration": "UPI/CR/763201954118/UMESH JADHAV/9926153247@ybl/VEG",
+   "amount": 71.0,
+   "type": "CREDIT",
+   "currentBalance": 4503.45
+  },
+  {
+   "txnId": "SUNITA000380",
+   "valueDate": "2026-09-10",
+   "narration": "UPI/CR/629438244870/VINOD SHINDE/vinod.s@ybl/VEG",
+   "amount": 21.0,
+   "type": "CREDIT",
+   "currentBalance": 4524.45
+  },
+  {
+   "txnId": "SUNITA000381",
+   "valueDate": "2026-09-10",
+   "narration": "UPI/DR/485903022227/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 229.3,
+   "type": "DEBIT",
+   "currentBalance": 4295.15
+  },
+  {
+   "txnId": "SUNITA000382",
+   "valueDate": "2026-09-11",
+   "narration": "UPI/CR/098726581790/MAHESH CHAVAN/mahesh.c@okhdfc/VEG",
+   "amount": 21.0,
+   "type": "CREDIT",
+   "currentBalance": 4316.15
+  },
+  {
+   "txnId": "SUNITA000383",
+   "valueDate": "2026-09-11",
+   "narration": "UPI/CR/474187049325/PRAKASH THORAT/prakash.t@paytm/VEG",
+   "amount": 64.0,
+   "type": "CREDIT",
+   "currentBalance": 4380.15
+  },
+  {
+   "txnId": "SUNITA000384",
+   "valueDate": "2026-09-11",
+   "narration": "UPI/CR/169441821077/SARIKA PATOLE/sarika.p@okhdfc/VEG",
+   "amount": 79.0,
+   "type": "CREDIT",
+   "currentBalance": 4459.15
+  },
+  {
+   "txnId": "SUNITA000385",
+   "valueDate": "2026-09-11",
+   "narration": "UPI/CR/095261516083/VINOD SHINDE/vinod.s@ybl/VEG",
+   "amount": 40.0,
+   "type": "CREDIT",
+   "currentBalance": 4499.15
+  },
+  {
+   "txnId": "SUNITA000386",
+   "valueDate": "2026-09-11",
+   "narration": "UPI/CR/087958665271/KAVITA SHIRKE/kavita.s@okaxis/VEG",
+   "amount": 37.0,
+   "type": "CREDIT",
+   "currentBalance": 4536.15
+  },
+  {
+   "txnId": "SUNITA000387",
+   "valueDate": "2026-09-11",
+   "narration": "UPI/CR/944418168151/MANGESH GHULE/mangesh.g@paytm/VEG",
+   "amount": 75.0,
+   "type": "CREDIT",
+   "currentBalance": 4611.15
+  },
+  {
+   "txnId": "SUNITA000388",
+   "valueDate": "2026-09-11",
+   "narration": "UPI/DR/835250451358/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 216.19,
+   "type": "DEBIT",
+   "currentBalance": 4394.96
+  },
+  {
+   "txnId": "SUNITA000389",
+   "valueDate": "2026-09-11",
+   "narration": "UPI/DR/571569066899/GANESH DAIRY/ganeshdair@okaxis/MILK",
+   "amount": 68.02,
+   "type": "DEBIT",
+   "currentBalance": 4326.94
+  },
+  {
+   "txnId": "SUNITA000390",
+   "valueDate": "2026-09-12",
+   "narration": "UPI/CR/674758532056/MEERA KADAM/7024591221@okicici/VEG",
+   "amount": 64.0,
+   "type": "CREDIT",
+   "currentBalance": 4390.94
+  },
+  {
+   "txnId": "SUNITA000391",
+   "valueDate": "2026-09-12",
+   "narration": "UPI/CR/784897375324/SUREKHA DHUMAL/6683920139@okicici/VEG",
+   "amount": 23.0,
+   "type": "CREDIT",
+   "currentBalance": 4413.94
+  },
+  {
+   "txnId": "SUNITA000392",
+   "valueDate": "2026-09-12",
+   "narration": "UPI/CR/363875705767/TUSHAR GAWALI/7668088689@okaxis/VEG",
+   "amount": 44.0,
+   "type": "CREDIT",
+   "currentBalance": 4457.94
+  },
+  {
+   "txnId": "SUNITA000393",
+   "valueDate": "2026-09-12",
+   "narration": "UPI/CR/384194991138/ROHINI SALVI/rohini.s@ybl/VEG",
+   "amount": 78.0,
+   "type": "CREDIT",
+   "currentBalance": 4535.94
+  },
+  {
+   "txnId": "SUNITA000394",
+   "valueDate": "2026-09-12",
+   "narration": "UPI/CR/579168855384/GANESH LONDHE/6333393040@okhdfc/VEG",
+   "amount": 28.0,
+   "type": "CREDIT",
+   "currentBalance": 4563.94
+  },
+  {
+   "txnId": "SUNITA000395",
+   "valueDate": "2026-09-12",
+   "narration": "UPI/CR/125038503042/MANGESH GHULE/mangesh.g@paytm/VEG",
+   "amount": 28.0,
+   "type": "CREDIT",
+   "currentBalance": 4591.94
+  },
+  {
+   "txnId": "SUNITA000396",
+   "valueDate": "2026-09-12",
+   "narration": "UPI/CR/150428854501/SHOBHA JAGTAP/shobha.j@okhdfc/VEG",
+   "amount": 47.0,
+   "type": "CREDIT",
+   "currentBalance": 4638.94
+  },
+  {
+   "txnId": "SUNITA000397",
+   "valueDate": "2026-09-12",
+   "narration": "UPI/CR/970838741832/VINOD SHINDE/vinod.s@ybl/VEG",
+   "amount": 23.0,
+   "type": "CREDIT",
+   "currentBalance": 4661.94
+  },
+  {
+   "txnId": "SUNITA000398",
+   "valueDate": "2026-09-12",
+   "narration": "UPI/CR/150050527090/RUPALI DESAI/rupali.d@okaxis/VEG",
+   "amount": 77.0,
+   "type": "CREDIT",
+   "currentBalance": 4738.94
+  },
+  {
+   "txnId": "SUNITA000399",
+   "valueDate": "2026-09-12",
+   "narration": "UPI/DR/866252604154/CITY POWER BILL/citypowerb@paytm/ELECTRICITY",
+   "amount": 365.48,
+   "type": "DEBIT",
+   "currentBalance": 4373.46
+  },
+  {
+   "txnId": "SUNITA000400",
+   "valueDate": "2026-09-12",
+   "narration": "RD INSTALMENT TO A/C 004512345678",
+   "amount": 150.0,
+   "type": "DEBIT",
+   "currentBalance": 4223.46
+  },
+  {
+   "txnId": "SUNITA000401",
+   "valueDate": "2026-09-12",
+   "narration": "UPI/DR/184767628096/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 202.47,
+   "type": "DEBIT",
+   "currentBalance": 4020.99
+  },
+  {
+   "txnId": "SUNITA000402",
+   "valueDate": "2026-09-13",
+   "narration": "UPI/DR/568236261563/GANESH DAIRY/ganeshdair@okaxis/MILK",
+   "amount": 54.15,
+   "type": "DEBIT",
+   "currentBalance": 3966.84
+  },
+  {
+   "txnId": "SUNITA000403",
+   "valueDate": "2026-09-14",
+   "narration": "UPI/CR/934908113423/UMESH JADHAV/9926153247@ybl/VEG",
+   "amount": 76.0,
+   "type": "CREDIT",
+   "currentBalance": 4042.84
+  },
+  {
+   "txnId": "SUNITA000404",
+   "valueDate": "2026-09-14",
+   "narration": "UPI/CR/797207470887/VINOD SHINDE/vinod.s@ybl/VEG",
+   "amount": 34.0,
+   "type": "CREDIT",
+   "currentBalance": 4076.84
+  },
+  {
+   "txnId": "SUNITA000405",
+   "valueDate": "2026-09-14",
+   "narration": "UPI/CR/073622871204/MEERA KADAM/7024591221@okicici/VEG",
+   "amount": 38.0,
+   "type": "CREDIT",
+   "currentBalance": 4114.84
+  },
+  {
+   "txnId": "SUNITA000406",
+   "valueDate": "2026-09-14",
+   "narration": "UPI/CR/791427114363/VINOD SHINDE/vinod.s@ybl/VEG",
+   "amount": 76.0,
+   "type": "CREDIT",
+   "currentBalance": 4190.84
+  },
+  {
+   "txnId": "SUNITA000407",
+   "valueDate": "2026-09-14",
+   "narration": "UPI/CR/607354616674/ROHINI SALVI/rohini.s@ybl/VEG",
+   "amount": 65.0,
+   "type": "CREDIT",
+   "currentBalance": 4255.84
+  },
+  {
+   "txnId": "SUNITA000408",
+   "valueDate": "2026-09-14",
+   "narration": "UPI/CR/969597930457/MEERA KADAM/7024591221@okicici/VEG",
+   "amount": 75.0,
+   "type": "CREDIT",
+   "currentBalance": 4330.84
+  },
+  {
+   "txnId": "SUNITA000409",
+   "valueDate": "2026-09-14",
+   "narration": "CASH DEP MARKET YARD BRANCH",
+   "amount": 740.0,
+   "type": "CREDIT",
+   "currentBalance": 5070.84
+  },
+  {
+   "txnId": "SUNITA000410",
+   "valueDate": "2026-09-14",
+   "narration": "UPI/DR/791029983939/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 244.31,
+   "type": "DEBIT",
+   "currentBalance": 4826.53
+  },
+  {
+   "txnId": "SUNITA000411",
+   "valueDate": "2026-09-14",
+   "narration": "UPI/DR/875060179241/SAI KIRANA STORES/saikiranas@okaxis/MILK",
+   "amount": 63.35,
+   "type": "DEBIT",
+   "currentBalance": 4763.18
+  },
+  {
+   "txnId": "SUNITA000412",
+   "valueDate": "2026-09-15",
+   "narration": "UPI/CR/879186509732/GANESH LONDHE/6333393040@okhdfc/VEG",
+   "amount": 68.0,
+   "type": "CREDIT",
+   "currentBalance": 4831.18
+  },
+  {
+   "txnId": "SUNITA000413",
+   "valueDate": "2026-09-15",
+   "narration": "UPI/CR/204469106943/DEEPAK MANE/7218105484@oksbi/VEG",
+   "amount": 47.0,
+   "type": "CREDIT",
+   "currentBalance": 4878.18
+  },
+  {
+   "txnId": "SUNITA000414",
+   "valueDate": "2026-09-15",
+   "narration": "UPI/CR/947759257808/GANESH LONDHE/6333393040@okhdfc/VEG",
+   "amount": 46.0,
+   "type": "CREDIT",
+   "currentBalance": 4924.18
+  },
+  {
+   "txnId": "SUNITA000415",
+   "valueDate": "2026-09-15",
+   "narration": "UPI/CR/477011601682/GANESH LONDHE/6333393040@okhdfc/VEG",
+   "amount": 79.0,
+   "type": "CREDIT",
+   "currentBalance": 5003.18
+  },
+  {
+   "txnId": "SUNITA000416",
+   "valueDate": "2026-09-15",
+   "narration": "UPI/CR/859399329412/VINOD SHINDE/vinod.s@ybl/VEG",
+   "amount": 80.0,
+   "type": "CREDIT",
+   "currentBalance": 5083.18
+  },
+  {
+   "txnId": "SUNITA000417",
+   "valueDate": "2026-09-15",
+   "narration": "UPI/CR/454093984151/RUPALI DESAI/rupali.d@okaxis/VEG",
+   "amount": 31.0,
+   "type": "CREDIT",
+   "currentBalance": 5114.18
+  },
+  {
+   "txnId": "SUNITA000418",
+   "valueDate": "2026-09-15",
+   "narration": "UPI/CR/043372457200/KAVITA SHIRKE/kavita.s@okaxis/VEG",
+   "amount": 37.0,
+   "type": "CREDIT",
+   "currentBalance": 5151.18
+  },
+  {
+   "txnId": "SUNITA000419",
+   "valueDate": "2026-09-15",
+   "narration": "UPI/DR/294954049359/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 215.78,
+   "type": "DEBIT",
+   "currentBalance": 4935.4
+  },
+  {
+   "txnId": "SUNITA000420",
+   "valueDate": "2026-09-16",
+   "narration": "UPI/CR/650365112724/MEERA KADAM/7024591221@okicici/VEG",
+   "amount": 76.0,
+   "type": "CREDIT",
+   "currentBalance": 5011.4
+  },
+  {
+   "txnId": "SUNITA000421",
+   "valueDate": "2026-09-16",
+   "narration": "UPI/CR/272343707537/TUSHAR GAWALI/7668088689@okaxis/VEG",
+   "amount": 31.0,
+   "type": "CREDIT",
+   "currentBalance": 5042.4
+  },
+  {
+   "txnId": "SUNITA000422",
+   "valueDate": "2026-09-16",
+   "narration": "UPI/CR/099718633858/SHOBHA JAGTAP/shobha.j@okhdfc/VEG",
+   "amount": 47.0,
+   "type": "CREDIT",
+   "currentBalance": 5089.4
+  },
+  {
+   "txnId": "SUNITA000423",
+   "valueDate": "2026-09-16",
+   "narration": "UPI/CR/799728048094/RUPALI DESAI/rupali.d@okaxis/VEG",
+   "amount": 36.0,
+   "type": "CREDIT",
+   "currentBalance": 5125.4
+  },
+  {
+   "txnId": "SUNITA000424",
+   "valueDate": "2026-09-16",
+   "narration": "UPI/CR/606793453653/SUNIL PAWAR/sunil.p@oksbi/VEG",
+   "amount": 80.0,
+   "type": "CREDIT",
+   "currentBalance": 5205.4
+  },
+  {
+   "txnId": "SUNITA000425",
+   "valueDate": "2026-09-16",
+   "narration": "UPI/CR/333013918932/NEHA WAGH/neha.w@okhdfc/VEG",
+   "amount": 41.0,
+   "type": "CREDIT",
+   "currentBalance": 5246.4
+  },
+  {
+   "txnId": "SUNITA000426",
+   "valueDate": "2026-09-16",
+   "narration": "UPI/CR/689706568041/TUSHAR GAWALI/7668088689@okaxis/VEG",
+   "amount": 75.0,
+   "type": "CREDIT",
+   "currentBalance": 5321.4
+  },
+  {
+   "txnId": "SUNITA000427",
+   "valueDate": "2026-09-16",
+   "narration": "UPI/DR/388021191028/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 240.41,
+   "type": "DEBIT",
+   "currentBalance": 5080.99
+  },
+  {
+   "txnId": "SUNITA000428",
+   "valueDate": "2026-09-16",
+   "narration": "UPI/DR/467745962821/SAI KIRANA STORES/saikiranas@okaxis/MILK",
+   "amount": 76.18,
+   "type": "DEBIT",
+   "currentBalance": 5004.81
+  },
+  {
+   "txnId": "SUNITA000429",
+   "valueDate": "2026-09-17",
+   "narration": "UPI/CR/141322309872/DEEPAK MANE/7218105484@oksbi/VEG",
+   "amount": 28.0,
+   "type": "CREDIT",
+   "currentBalance": 5032.81
+  },
+  {
+   "txnId": "SUNITA000430",
+   "valueDate": "2026-09-17",
+   "narration": "UPI/CR/247322557295/MAHESH CHAVAN/mahesh.c@okhdfc/VEG",
+   "amount": 37.0,
+   "type": "CREDIT",
+   "currentBalance": 5069.81
+  },
+  {
+   "txnId": "SUNITA000431",
+   "valueDate": "2026-09-17",
+   "narration": "UPI/CR/669723305702/SEEMA BORATE/seema.b@ybl/VEG",
+   "amount": 76.0,
+   "type": "CREDIT",
+   "currentBalance": 5145.81
+  },
+  {
+   "txnId": "SUNITA000432",
+   "valueDate": "2026-09-17",
+   "narration": "UPI/CR/526037284544/ROHINI SALVI/rohini.s@ybl/VEG",
+   "amount": 26.0,
+   "type": "CREDIT",
+   "currentBalance": 5171.81
+  },
+  {
+   "txnId": "SUNITA000433",
+   "valueDate": "2026-09-17",
+   "narration": "UPI/CR/111448047817/MANGESH GHULE/mangesh.g@paytm/VEG",
+   "amount": 60.0,
+   "type": "CREDIT",
+   "currentBalance": 5231.81
+  },
+  {
+   "txnId": "SUNITA000434",
+   "valueDate": "2026-09-17",
+   "narration": "UPI/CR/364419017221/RAJESH KHOT/8842036887@okaxis/VEG",
+   "amount": 64.0,
+   "type": "CREDIT",
+   "currentBalance": 5295.81
+  },
+  {
+   "txnId": "SUNITA000435",
+   "valueDate": "2026-09-17",
+   "narration": "UPI/DR/607886601469/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 231.45,
+   "type": "DEBIT",
+   "currentBalance": 5064.36
+  },
+  {
+   "txnId": "SUNITA000436",
+   "valueDate": "2026-09-18",
+   "narration": "UPI/CR/157751151077/SARIKA PATOLE/sarika.p@okhdfc/VEG",
+   "amount": 61.0,
+   "type": "CREDIT",
+   "currentBalance": 5125.36
+  },
+  {
+   "txnId": "SUNITA000437",
+   "valueDate": "2026-09-18",
+   "narration": "UPI/CR/290700219907/KAVITA SHIRKE/kavita.s@okaxis/VEG",
+   "amount": 52.0,
+   "type": "CREDIT",
+   "currentBalance": 5177.36
+  },
+  {
+   "txnId": "SUNITA000438",
+   "valueDate": "2026-09-18",
+   "narration": "UPI/CR/618942927637/RUPALI DESAI/rupali.d@okaxis/VEG",
+   "amount": 79.0,
+   "type": "CREDIT",
+   "currentBalance": 5256.36
+  },
+  {
+   "txnId": "SUNITA000439",
+   "valueDate": "2026-09-18",
+   "narration": "UPI/CR/595448438504/VANDANA NAIK/vandana.n@oksbi/VEG",
+   "amount": 42.0,
+   "type": "CREDIT",
+   "currentBalance": 5298.36
+  },
+  {
+   "txnId": "SUNITA000440",
+   "valueDate": "2026-09-18",
+   "narration": "UPI/CR/955992899524/SUNIL PAWAR/sunil.p@oksbi/VEG",
+   "amount": 32.0,
+   "type": "CREDIT",
+   "currentBalance": 5330.36
+  },
+  {
+   "txnId": "SUNITA000441",
+   "valueDate": "2026-09-18",
+   "narration": "UPI/CR/994082370344/VINOD SHINDE/vinod.s@ybl/VEG",
+   "amount": 37.0,
+   "type": "CREDIT",
+   "currentBalance": 5367.36
+  },
+  {
+   "txnId": "SUNITA000442",
+   "valueDate": "2026-09-18",
+   "narration": "UPI/CR/953965892852/MAHESH CHAVAN/mahesh.c@okhdfc/VEG",
+   "amount": 63.0,
+   "type": "CREDIT",
+   "currentBalance": 5430.36
+  },
+  {
+   "txnId": "SUNITA000443",
+   "valueDate": "2026-09-18",
+   "narration": "UPI/CR/911805729003/SHOBHA JAGTAP/shobha.j@okhdfc/VEG",
+   "amount": 27.0,
+   "type": "CREDIT",
+   "currentBalance": 5457.36
+  },
+  {
+   "txnId": "SUNITA000444",
+   "valueDate": "2026-09-18",
+   "narration": "UPI/CR/279246650533/SARIKA PATOLE/sarika.p@okhdfc/VEG",
+   "amount": 56.0,
+   "type": "CREDIT",
+   "currentBalance": 5513.36
+  },
+  {
+   "txnId": "SUNITA000445",
+   "valueDate": "2026-09-18",
+   "narration": "UPI/DR/306911882788/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 205.76,
+   "type": "DEBIT",
+   "currentBalance": 5307.6
+  },
+  {
+   "txnId": "SUNITA000446",
+   "valueDate": "2026-09-18",
+   "narration": "UPI/DR/546699565401/GANESH DAIRY/ganeshdair@okaxis/MILK",
+   "amount": 66.02,
+   "type": "DEBIT",
+   "currentBalance": 5241.58
+  },
+  {
+   "txnId": "SUNITA000447",
+   "valueDate": "2026-09-19",
+   "narration": "UPI/CR/632222975494/SANTOSH KOLTE/santosh.k@okaxis/VEG",
+   "amount": 41.0,
+   "type": "CREDIT",
+   "currentBalance": 5282.58
+  },
+  {
+   "txnId": "SUNITA000448",
+   "valueDate": "2026-09-19",
+   "narration": "UPI/CR/557322289169/ROHINI SALVI/rohini.s@ybl/VEG",
+   "amount": 27.0,
+   "type": "CREDIT",
+   "currentBalance": 5309.58
+  },
+  {
+   "txnId": "SUNITA000449",
+   "valueDate": "2026-09-19",
+   "narration": "UPI/CR/559383825970/ANIL KHARAT/8772886042@okaxis/VEG",
+   "amount": 48.0,
+   "type": "CREDIT",
+   "currentBalance": 5357.58
+  },
+  {
+   "txnId": "SUNITA000450",
+   "valueDate": "2026-09-19",
+   "narration": "UPI/CR/638852949564/NEHA WAGH/neha.w@okhdfc/VEG",
+   "amount": 64.0,
+   "type": "CREDIT",
+   "currentBalance": 5421.58
+  },
+  {
+   "txnId": "SUNITA000451",
+   "valueDate": "2026-09-19",
+   "narration": "UPI/CR/599977664585/JYOTI GAVADE/jyoti.g@oksbi/VEG",
+   "amount": 59.0,
+   "type": "CREDIT",
+   "currentBalance": 5480.58
+  },
+  {
+   "txnId": "SUNITA000452",
+   "valueDate": "2026-09-19",
+   "narration": "UPI/CR/305018566550/MEERA KADAM/7024591221@okicici/VEG",
+   "amount": 30.0,
+   "type": "CREDIT",
+   "currentBalance": 5510.58
+  },
+  {
+   "txnId": "SUNITA000453",
+   "valueDate": "2026-09-19",
+   "narration": "UPI/CR/110561060144/MANGESH GHULE/mangesh.g@paytm/VEG",
+   "amount": 31.0,
+   "type": "CREDIT",
+   "currentBalance": 5541.58
+  },
+  {
+   "txnId": "SUNITA000454",
+   "valueDate": "2026-09-19",
+   "narration": "UPI/CR/959877613639/GANESH LONDHE/6333393040@okhdfc/VEG",
+   "amount": 69.0,
+   "type": "CREDIT",
+   "currentBalance": 5610.58
+  },
+  {
+   "txnId": "SUNITA000455",
+   "valueDate": "2026-09-19",
+   "narration": "UPI/CR/738207260674/UMESH JADHAV/9926153247@ybl/VEG",
+   "amount": 41.0,
+   "type": "CREDIT",
+   "currentBalance": 5651.58
+  },
+  {
+   "txnId": "SUNITA000456",
+   "valueDate": "2026-09-19",
+   "narration": "RD INSTALMENT TO A/C 004512345678",
+   "amount": 150.0,
+   "type": "DEBIT",
+   "currentBalance": 5501.58
+  },
+  {
+   "txnId": "SUNITA000457",
+   "valueDate": "2026-09-19",
+   "narration": "UPI/DR/360610594670/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 210.09,
+   "type": "DEBIT",
+   "currentBalance": 5291.49
+  },
+  {
+   "txnId": "SUNITA000458",
+   "valueDate": "2026-09-20",
+   "narration": "UPI/DR/696364492263/SAI KIRANA STORES/saikiranas@okaxis/MILK",
+   "amount": 80.89,
+   "type": "DEBIT",
+   "currentBalance": 5210.6
+  },
+  {
+   "txnId": "SUNITA000459",
+   "valueDate": "2026-09-21",
+   "narration": "UPI/CR/543074082396/VANDANA NAIK/vandana.n@oksbi/VEG",
+   "amount": 36.0,
+   "type": "CREDIT",
+   "currentBalance": 5246.6
+  },
+  {
+   "txnId": "SUNITA000460",
+   "valueDate": "2026-09-21",
+   "narration": "UPI/CR/817137474209/MAHESH CHAVAN/mahesh.c@okhdfc/VEG",
+   "amount": 36.0,
+   "type": "CREDIT",
+   "currentBalance": 5282.6
+  },
+  {
+   "txnId": "SUNITA000461",
+   "valueDate": "2026-09-21",
+   "narration": "UPI/CR/900874497350/NEHA WAGH/neha.w@okhdfc/VEG",
+   "amount": 43.0,
+   "type": "CREDIT",
+   "currentBalance": 5325.6
+  },
+  {
+   "txnId": "SUNITA000462",
+   "valueDate": "2026-09-21",
+   "narration": "UPI/CR/261775149017/DEEPAK MANE/7218105484@oksbi/VEG",
+   "amount": 57.0,
+   "type": "CREDIT",
+   "currentBalance": 5382.6
+  },
+  {
+   "txnId": "SUNITA000463",
+   "valueDate": "2026-09-21",
+   "narration": "UPI/CR/474141053571/GANESH LONDHE/6333393040@okhdfc/VEG",
+   "amount": 51.0,
+   "type": "CREDIT",
+   "currentBalance": 5433.6
+  },
+  {
+   "txnId": "SUNITA000464",
+   "valueDate": "2026-09-21",
+   "narration": "UPI/CR/706302073342/NEHA WAGH/neha.w@okhdfc/VEG",
+   "amount": 40.0,
+   "type": "CREDIT",
+   "currentBalance": 5473.6
+  },
+  {
+   "txnId": "SUNITA000465",
+   "valueDate": "2026-09-21",
+   "narration": "UPI/CR/459909304497/GANESH LONDHE/6333393040@okhdfc/VEG",
+   "amount": 61.0,
+   "type": "CREDIT",
+   "currentBalance": 5534.6
+  },
+  {
+   "txnId": "SUNITA000466",
+   "valueDate": "2026-09-21",
+   "narration": "UPI/CR/575419329300/VANDANA NAIK/vandana.n@oksbi/VEG",
+   "amount": 60.0,
+   "type": "CREDIT",
+   "currentBalance": 5594.6
+  },
+  {
+   "txnId": "SUNITA000467",
+   "valueDate": "2026-09-21",
+   "narration": "CASH DEP MARKET YARD BRANCH",
+   "amount": 580.0,
+   "type": "CREDIT",
+   "currentBalance": 6174.6
+  },
+  {
+   "txnId": "SUNITA000468",
+   "valueDate": "2026-09-21",
+   "narration": "UPI/DR/371251226483/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 225.5,
+   "type": "DEBIT",
+   "currentBalance": 5949.1
+  },
+  {
+   "txnId": "SUNITA000469",
+   "valueDate": "2026-09-21",
+   "narration": "UPI/DR/170348861344/SAI KIRANA STORES/saikiranas@okaxis/MILK",
+   "amount": 60.46,
+   "type": "DEBIT",
+   "currentBalance": 5888.64
+  },
+  {
+   "txnId": "SUNITA000470",
+   "valueDate": "2026-09-22",
+   "narration": "UPI/CR/833740299227/GANESH LONDHE/6333393040@okhdfc/VEG",
+   "amount": 66.0,
+   "type": "CREDIT",
+   "currentBalance": 5954.64
+  },
+  {
+   "txnId": "SUNITA000471",
+   "valueDate": "2026-09-22",
+   "narration": "UPI/CR/599684841985/MANGESH GHULE/mangesh.g@paytm/VEG",
+   "amount": 21.0,
+   "type": "CREDIT",
+   "currentBalance": 5975.64
+  },
+  {
+   "txnId": "SUNITA000472",
+   "valueDate": "2026-09-22",
+   "narration": "UPI/CR/709975277496/NEHA WAGH/neha.w@okhdfc/VEG",
+   "amount": 63.0,
+   "type": "CREDIT",
+   "currentBalance": 6038.64
+  },
+  {
+   "txnId": "SUNITA000473",
+   "valueDate": "2026-09-22",
+   "narration": "UPI/CR/861316477840/VANDANA NAIK/vandana.n@oksbi/VEG",
+   "amount": 59.0,
+   "type": "CREDIT",
+   "currentBalance": 6097.64
+  },
+  {
+   "txnId": "SUNITA000474",
+   "valueDate": "2026-09-22",
+   "narration": "UPI/CR/265702843210/MEERA KADAM/7024591221@okicici/VEG",
+   "amount": 48.0,
+   "type": "CREDIT",
+   "currentBalance": 6145.64
+  },
+  {
+   "txnId": "SUNITA000475",
+   "valueDate": "2026-09-22",
+   "narration": "UPI/CR/395339857748/RAJESH KHOT/8842036887@okaxis/VEG",
+   "amount": 68.0,
+   "type": "CREDIT",
+   "currentBalance": 6213.64
+  },
+  {
+   "txnId": "SUNITA000476",
+   "valueDate": "2026-09-22",
+   "narration": "UPI/DR/286736418663/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 232.4,
+   "type": "DEBIT",
+   "currentBalance": 5981.24
+  },
+  {
+   "txnId": "SUNITA000477",
+   "valueDate": "2026-09-23",
+   "narration": "UPI/CR/883516734938/ANIL KHARAT/8772886042@okaxis/VEG",
+   "amount": 39.0,
+   "type": "CREDIT",
+   "currentBalance": 6020.24
+  },
+  {
+   "txnId": "SUNITA000478",
+   "valueDate": "2026-09-23",
+   "narration": "UPI/CR/967303489185/ANIL KHARAT/8772886042@okaxis/VEG",
+   "amount": 60.0,
+   "type": "CREDIT",
+   "currentBalance": 6080.24
+  },
+  {
+   "txnId": "SUNITA000479",
+   "valueDate": "2026-09-23",
+   "narration": "UPI/CR/580423106003/SANTOSH KOLTE/santosh.k@okaxis/VEG",
+   "amount": 56.0,
+   "type": "CREDIT",
+   "currentBalance": 6136.24
+  },
+  {
+   "txnId": "SUNITA000480",
+   "valueDate": "2026-09-23",
+   "narration": "UPI/CR/081243200589/SARIKA PATOLE/sarika.p@okhdfc/VEG",
+   "amount": 43.0,
+   "type": "CREDIT",
+   "currentBalance": 6179.24
+  },
+  {
+   "txnId": "SUNITA000481",
+   "valueDate": "2026-09-23",
+   "narration": "UPI/CR/259454036238/TUSHAR GAWALI/7668088689@okaxis/VEG",
+   "amount": 41.0,
+   "type": "CREDIT",
+   "currentBalance": 6220.24
+  },
+  {
+   "txnId": "SUNITA000482",
+   "valueDate": "2026-09-23",
+   "narration": "UPI/CR/871450190377/SANTOSH KOLTE/santosh.k@okaxis/VEG",
+   "amount": 37.0,
+   "type": "CREDIT",
+   "currentBalance": 6257.24
+  },
+  {
+   "txnId": "SUNITA000483",
+   "valueDate": "2026-09-23",
+   "narration": "UPI/DR/962183196640/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 233.06,
+   "type": "DEBIT",
+   "currentBalance": 6024.18
+  },
+  {
+   "txnId": "SUNITA000484",
+   "valueDate": "2026-09-23",
+   "narration": "UPI/DR/361365167113/GANESH DAIRY/ganeshdair@okaxis/MILK",
+   "amount": 65.81,
+   "type": "DEBIT",
+   "currentBalance": 5958.37
+  },
+  {
+   "txnId": "SUNITA000485",
+   "valueDate": "2026-09-24",
+   "narration": "UPI/CR/617976172946/ASHA SHELKE/8862358523@ybl/VEG",
+   "amount": 78.0,
+   "type": "CREDIT",
+   "currentBalance": 6036.37
+  },
+  {
+   "txnId": "SUNITA000486",
+   "valueDate": "2026-09-24",
+   "narration": "UPI/CR/403916765526/GANESH LONDHE/6333393040@okhdfc/VEG",
+   "amount": 69.0,
+   "type": "CREDIT",
+   "currentBalance": 6105.37
+  },
+  {
+   "txnId": "SUNITA000487",
+   "valueDate": "2026-09-24",
+   "narration": "UPI/CR/654213117422/RAJESH KHOT/8842036887@okaxis/VEG",
+   "amount": 61.0,
+   "type": "CREDIT",
+   "currentBalance": 6166.37
+  },
+  {
+   "txnId": "SUNITA000488",
+   "valueDate": "2026-09-24",
+   "narration": "UPI/CR/153879703133/NEHA WAGH/neha.w@okhdfc/VEG",
+   "amount": 40.0,
+   "type": "CREDIT",
+   "currentBalance": 6206.37
+  },
+  {
+   "txnId": "SUNITA000489",
+   "valueDate": "2026-09-24",
+   "narration": "UPI/CR/295675917087/ROHINI SALVI/rohini.s@ybl/VEG",
+   "amount": 55.0,
+   "type": "CREDIT",
+   "currentBalance": 6261.37
+  },
+  {
+   "txnId": "SUNITA000490",
+   "valueDate": "2026-09-24",
+   "narration": "UPI/CR/839335602004/LATA KAMBLE/9906904273@okaxis/VEG",
+   "amount": 67.0,
+   "type": "CREDIT",
+   "currentBalance": 6328.37
+  },
+  {
+   "txnId": "SUNITA000491",
+   "valueDate": "2026-09-24",
+   "narration": "UPI/DR/826487365286/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 202.97,
+   "type": "DEBIT",
+   "currentBalance": 6125.4
+  },
+  {
+   "txnId": "SUNITA000492",
+   "valueDate": "2026-09-25",
+   "narration": "UPI/CR/674665571949/TUSHAR GAWALI/7668088689@okaxis/VEG",
+   "amount": 73.0,
+   "type": "CREDIT",
+   "currentBalance": 6198.4
+  },
+  {
+   "txnId": "SUNITA000493",
+   "valueDate": "2026-09-25",
+   "narration": "UPI/CR/230183768637/ROHINI SALVI/rohini.s@ybl/VEG",
+   "amount": 23.0,
+   "type": "CREDIT",
+   "currentBalance": 6221.4
+  },
+  {
+   "txnId": "SUNITA000494",
+   "valueDate": "2026-09-25",
+   "narration": "UPI/CR/964547906653/SEEMA BORATE/seema.b@ybl/VEG",
+   "amount": 59.0,
+   "type": "CREDIT",
+   "currentBalance": 6280.4
+  },
+  {
+   "txnId": "SUNITA000495",
+   "valueDate": "2026-09-25",
+   "narration": "UPI/CR/319928391646/JYOTI GAVADE/jyoti.g@oksbi/VEG",
+   "amount": 25.0,
+   "type": "CREDIT",
+   "currentBalance": 6305.4
+  },
+  {
+   "txnId": "SUNITA000496",
+   "valueDate": "2026-09-25",
+   "narration": "UPI/CR/277861863422/JYOTI GAVADE/jyoti.g@oksbi/VEG",
+   "amount": 22.0,
+   "type": "CREDIT",
+   "currentBalance": 6327.4
+  },
+  {
+   "txnId": "SUNITA000497",
+   "valueDate": "2026-09-25",
+   "narration": "UPI/CR/669967786521/LATA KAMBLE/9906904273@okaxis/VEG",
+   "amount": 26.0,
+   "type": "CREDIT",
+   "currentBalance": 6353.4
+  },
+  {
+   "txnId": "SUNITA000498",
+   "valueDate": "2026-09-25",
+   "narration": "UPI/CR/205032923767/PRAKASH THORAT/prakash.t@paytm/VEG",
+   "amount": 53.0,
+   "type": "CREDIT",
+   "currentBalance": 6406.4
+  },
+  {
+   "txnId": "SUNITA000499",
+   "valueDate": "2026-09-25",
+   "narration": "UPI/CR/460975039723/SUNIL PAWAR/sunil.p@oksbi/VEG",
+   "amount": 72.0,
+   "type": "CREDIT",
+   "currentBalance": 6478.4
+  },
+  {
+   "txnId": "SUNITA000500",
+   "valueDate": "2026-09-25",
+   "narration": "UPI/CR/161772451146/MANGESH GHULE/mangesh.g@paytm/VEG",
+   "amount": 74.0,
+   "type": "CREDIT",
+   "currentBalance": 6552.4
+  },
+  {
+   "txnId": "SUNITA000501",
+   "valueDate": "2026-09-25",
+   "narration": "UPI/DR/086511509010/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 235.07,
+   "type": "DEBIT",
+   "currentBalance": 6317.33
+  },
+  {
+   "txnId": "SUNITA000502",
+   "valueDate": "2026-09-25",
+   "narration": "UPI/DR/597345780577/GANESH DAIRY/ganeshdair@okaxis/MILK",
+   "amount": 48.67,
+   "type": "DEBIT",
+   "currentBalance": 6268.66
+  },
+  {
+   "txnId": "SUNITA000503",
+   "valueDate": "2026-09-26",
+   "narration": "UPI/CR/185031576908/SHOBHA JAGTAP/shobha.j@okhdfc/VEG",
+   "amount": 64.0,
+   "type": "CREDIT",
+   "currentBalance": 6332.66
+  },
+  {
+   "txnId": "SUNITA000504",
+   "valueDate": "2026-09-26",
+   "narration": "UPI/CR/251748522964/PRAKASH THORAT/prakash.t@paytm/VEG",
+   "amount": 68.0,
+   "type": "CREDIT",
+   "currentBalance": 6400.66
+  },
+  {
+   "txnId": "SUNITA000505",
+   "valueDate": "2026-09-26",
+   "narration": "UPI/CR/903799645186/SANTOSH KOLTE/santosh.k@okaxis/VEG",
+   "amount": 44.0,
+   "type": "CREDIT",
+   "currentBalance": 6444.66
+  },
+  {
+   "txnId": "SUNITA000506",
+   "valueDate": "2026-09-26",
+   "narration": "UPI/CR/479649109787/SHOBHA JAGTAP/shobha.j@okhdfc/VEG",
+   "amount": 74.0,
+   "type": "CREDIT",
+   "currentBalance": 6518.66
+  },
+  {
+   "txnId": "SUNITA000507",
+   "valueDate": "2026-09-26",
+   "narration": "UPI/CR/718885213384/JYOTI GAVADE/jyoti.g@oksbi/VEG",
+   "amount": 32.0,
+   "type": "CREDIT",
+   "currentBalance": 6550.66
+  },
+  {
+   "txnId": "SUNITA000508",
+   "valueDate": "2026-09-26",
+   "narration": "UPI/CR/956926778679/ROHINI SALVI/rohini.s@ybl/VEG",
+   "amount": 77.0,
+   "type": "CREDIT",
+   "currentBalance": 6627.66
+  },
+  {
+   "txnId": "SUNITA000509",
+   "valueDate": "2026-09-26",
+   "narration": "UPI/CR/170832134774/NEHA WAGH/neha.w@okhdfc/VEG",
+   "amount": 45.0,
+   "type": "CREDIT",
+   "currentBalance": 6672.66
+  },
+  {
+   "txnId": "SUNITA000510",
+   "valueDate": "2026-09-26",
+   "narration": "UPI/CR/896011333540/MANGESH GHULE/mangesh.g@paytm/VEG",
+   "amount": 49.0,
+   "type": "CREDIT",
+   "currentBalance": 6721.66
+  },
+  {
+   "txnId": "SUNITA000511",
+   "valueDate": "2026-09-26",
+   "narration": "UPI/CR/056020820893/RUPALI DESAI/rupali.d@okaxis/VEG",
+   "amount": 26.0,
+   "type": "CREDIT",
+   "currentBalance": 6747.66
+  },
+  {
+   "txnId": "SUNITA000512",
+   "valueDate": "2026-09-26",
+   "narration": "RD INSTALMENT TO A/C 004512345678",
+   "amount": 150.0,
+   "type": "DEBIT",
+   "currentBalance": 6597.66
+  },
+  {
+   "txnId": "SUNITA000513",
+   "valueDate": "2026-09-26",
+   "narration": "UPI/DR/330524261348/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 211.92,
+   "type": "DEBIT",
+   "currentBalance": 6385.74
+  },
+  {
+   "txnId": "SUNITA000514",
+   "valueDate": "2026-09-27",
+   "narration": "UPI/DR/046094026226/QUICKTALK MOBILE RECHARGE/quicktalkm@okhdfc/PREPAID",
+   "amount": 199.0,
+   "type": "DEBIT",
+   "currentBalance": 6186.74
+  },
+  {
+   "txnId": "SUNITA000515",
+   "valueDate": "2026-09-27",
+   "narration": "UPI/DR/034650260429/SAI KIRANA STORES/saikiranas@okaxis/MILK",
+   "amount": 40.26,
+   "type": "DEBIT",
+   "currentBalance": 6146.48
+  },
+  {
+   "txnId": "SUNITA000516",
+   "valueDate": "2026-09-28",
+   "narration": "UPI/CR/287601570874/JYOTI GAVADE/jyoti.g@oksbi/VEG",
+   "amount": 73.0,
+   "type": "CREDIT",
+   "currentBalance": 6219.48
+  },
+  {
+   "txnId": "SUNITA000517",
+   "valueDate": "2026-09-28",
+   "narration": "UPI/CR/403271723108/PRAKASH THORAT/prakash.t@paytm/VEG",
+   "amount": 71.0,
+   "type": "CREDIT",
+   "currentBalance": 6290.48
+  },
+  {
+   "txnId": "SUNITA000518",
+   "valueDate": "2026-09-28",
+   "narration": "UPI/CR/926742343303/KAVITA SHIRKE/kavita.s@okaxis/VEG",
+   "amount": 37.0,
+   "type": "CREDIT",
+   "currentBalance": 6327.48
+  },
+  {
+   "txnId": "SUNITA000519",
+   "valueDate": "2026-09-28",
+   "narration": "UPI/CR/815727996672/MEERA KADAM/7024591221@okicici/VEG",
+   "amount": 21.0,
+   "type": "CREDIT",
+   "currentBalance": 6348.48
+  },
+  {
+   "txnId": "SUNITA000520",
+   "valueDate": "2026-09-28",
+   "narration": "UPI/CR/243633178960/NEHA WAGH/neha.w@okhdfc/VEG",
+   "amount": 38.0,
+   "type": "CREDIT",
+   "currentBalance": 6386.48
+  },
+  {
+   "txnId": "SUNITA000521",
+   "valueDate": "2026-09-28",
+   "narration": "UPI/CR/677399153577/JYOTI GAVADE/jyoti.g@oksbi/VEG",
+   "amount": 54.0,
+   "type": "CREDIT",
+   "currentBalance": 6440.48
+  },
+  {
+   "txnId": "SUNITA000522",
+   "valueDate": "2026-09-28",
+   "narration": "UPI/CR/248752742922/RUPALI DESAI/rupali.d@okaxis/VEG",
+   "amount": 66.0,
+   "type": "CREDIT",
+   "currentBalance": 6506.48
+  },
+  {
+   "txnId": "SUNITA000523",
+   "valueDate": "2026-09-28",
+   "narration": "UPI/CR/154647993890/ANIL KHARAT/8772886042@okaxis/VEG",
+   "amount": 71.0,
+   "type": "CREDIT",
+   "currentBalance": 6577.48
+  },
+  {
+   "txnId": "SUNITA000524",
+   "valueDate": "2026-09-28",
+   "narration": "CASH DEP MARKET YARD BRANCH",
+   "amount": 760.0,
+   "type": "CREDIT",
+   "currentBalance": 7337.48
+  },
+  {
+   "txnId": "SUNITA000525",
+   "valueDate": "2026-09-28",
+   "narration": "UPI/DR/645562707251/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 216.65,
+   "type": "DEBIT",
+   "currentBalance": 7120.83
+  },
+  {
+   "txnId": "SUNITA000526",
+   "valueDate": "2026-09-28",
+   "narration": "UPI/DR/118031127891/GANESH DAIRY/ganeshdair@okaxis/MILK",
+   "amount": 50.81,
+   "type": "DEBIT",
+   "currentBalance": 7070.02
+  },
+  {
+   "txnId": "SUNITA000527",
+   "valueDate": "2026-09-29",
+   "narration": "UPI/CR/540454662458/ASHA SHELKE/8862358523@ybl/VEG",
+   "amount": 28.0,
+   "type": "CREDIT",
+   "currentBalance": 7098.02
+  },
+  {
+   "txnId": "SUNITA000528",
+   "valueDate": "2026-09-29",
+   "narration": "UPI/CR/708772355789/SHOBHA JAGTAP/shobha.j@okhdfc/VEG",
+   "amount": 28.0,
+   "type": "CREDIT",
+   "currentBalance": 7126.02
+  },
+  {
+   "txnId": "SUNITA000529",
+   "valueDate": "2026-09-29",
+   "narration": "UPI/CR/744788899787/LATA KAMBLE/9906904273@okaxis/VEG",
+   "amount": 52.0,
+   "type": "CREDIT",
+   "currentBalance": 7178.02
+  },
+  {
+   "txnId": "SUNITA000530",
+   "valueDate": "2026-09-29",
+   "narration": "UPI/CR/227652669256/NEHA WAGH/neha.w@okhdfc/VEG",
+   "amount": 47.0,
+   "type": "CREDIT",
+   "currentBalance": 7225.02
+  },
+  {
+   "txnId": "SUNITA000531",
+   "valueDate": "2026-09-29",
+   "narration": "UPI/CR/167275195554/SUREKHA DHUMAL/6683920139@okicici/VEG",
+   "amount": 67.0,
+   "type": "CREDIT",
+   "currentBalance": 7292.02
+  },
+  {
+   "txnId": "SUNITA000532",
+   "valueDate": "2026-09-29",
+   "narration": "UPI/CR/806589956536/ANIL KHARAT/8772886042@okaxis/VEG",
+   "amount": 38.0,
+   "type": "CREDIT",
+   "currentBalance": 7330.02
+  },
+  {
+   "txnId": "SUNITA000533",
+   "valueDate": "2026-09-29",
+   "narration": "UPI/CR/305468340096/MAHESH CHAVAN/mahesh.c@okhdfc/VEG",
+   "amount": 21.0,
+   "type": "CREDIT",
+   "currentBalance": 7351.02
+  },
+  {
+   "txnId": "SUNITA000534",
+   "valueDate": "2026-09-29",
+   "narration": "UPI/DR/555480990483/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 248.84,
+   "type": "DEBIT",
+   "currentBalance": 7102.18
+  },
+  {
+   "txnId": "SUNITA000535",
+   "valueDate": "2026-09-30",
+   "narration": "UPI/CR/104212915612/VINOD SHINDE/vinod.s@ybl/VEG",
+   "amount": 41.0,
+   "type": "CREDIT",
+   "currentBalance": 7143.18
+  },
+  {
+   "txnId": "SUNITA000536",
+   "valueDate": "2026-09-30",
+   "narration": "UPI/CR/195401252897/VANDANA NAIK/vandana.n@oksbi/VEG",
+   "amount": 77.0,
+   "type": "CREDIT",
+   "currentBalance": 7220.18
+  },
+  {
+   "txnId": "SUNITA000537",
+   "valueDate": "2026-09-30",
+   "narration": "UPI/CR/977116322826/SHOBHA JAGTAP/shobha.j@okhdfc/VEG",
+   "amount": 42.0,
+   "type": "CREDIT",
+   "currentBalance": 7262.18
+  },
+  {
+   "txnId": "SUNITA000538",
+   "valueDate": "2026-09-30",
+   "narration": "UPI/CR/317542399369/PRAKASH THORAT/prakash.t@paytm/VEG",
+   "amount": 37.0,
+   "type": "CREDIT",
+   "currentBalance": 7299.18
+  },
+  {
+   "txnId": "SUNITA000539",
+   "valueDate": "2026-09-30",
+   "narration": "UPI/CR/030953917021/JYOTI GAVADE/jyoti.g@oksbi/VEG",
+   "amount": 49.0,
+   "type": "CREDIT",
+   "currentBalance": 7348.18
+  },
+  {
+   "txnId": "SUNITA000540",
+   "valueDate": "2026-09-30",
+   "narration": "UPI/CR/525436543054/ASHA SHELKE/8862358523@ybl/VEG",
+   "amount": 79.0,
+   "type": "CREDIT",
+   "currentBalance": 7427.18
+  },
+  {
+   "txnId": "SUNITA000541",
+   "valueDate": "2026-09-30",
+   "narration": "UPI/CR/963491414356/MAHESH CHAVAN/mahesh.c@okhdfc/VEG",
+   "amount": 29.0,
+   "type": "CREDIT",
+   "currentBalance": 7456.18
+  },
+  {
+   "txnId": "SUNITA000542",
+   "valueDate": "2026-09-30",
+   "narration": "UPI/CR/066558970985/GANESH LONDHE/6333393040@okhdfc/VEG",
+   "amount": 80.0,
+   "type": "CREDIT",
+   "currentBalance": 7536.18
+  },
+  {
+   "txnId": "SUNITA000543",
+   "valueDate": "2026-09-30",
+   "narration": "UPI/CR/026703470347/MEERA KADAM/7024591221@okicici/VEG",
+   "amount": 58.0,
+   "type": "CREDIT",
+   "currentBalance": 7594.18
+  },
+  {
+   "txnId": "SUNITA000544",
+   "valueDate": "2026-09-30",
+   "narration": "UPI/DR/175485190213/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 217.5,
+   "type": "DEBIT",
+   "currentBalance": 7376.68
+  },
+  {
+   "txnId": "SUNITA000545",
+   "valueDate": "2026-09-30",
+   "narration": "UPI/DR/438635408499/GANESH DAIRY/ganeshdair@okaxis/MILK",
+   "amount": 66.0,
+   "type": "DEBIT",
+   "currentBalance": 7310.68
+  },
+  {
+   "txnId": "SUNITA000546",
+   "valueDate": "2026-10-01",
+   "narration": "UPI/CR/795067935416/GANESH LONDHE/6333393040@okhdfc/VEG",
+   "amount": 49.0,
+   "type": "CREDIT",
+   "currentBalance": 7359.68
+  },
+  {
+   "txnId": "SUNITA000547",
+   "valueDate": "2026-10-01",
+   "narration": "UPI/CR/235172484139/DEEPAK MANE/7218105484@oksbi/VEG",
+   "amount": 62.0,
+   "type": "CREDIT",
+   "currentBalance": 7421.68
+  },
+  {
+   "txnId": "SUNITA000548",
+   "valueDate": "2026-10-01",
+   "narration": "UPI/CR/556470788627/MANGESH GHULE/mangesh.g@paytm/VEG",
+   "amount": 35.0,
+   "type": "CREDIT",
+   "currentBalance": 7456.68
+  },
+  {
+   "txnId": "SUNITA000549",
+   "valueDate": "2026-10-01",
+   "narration": "UPI/CR/675340804571/MEERA KADAM/7024591221@okicici/VEG",
+   "amount": 68.0,
+   "type": "CREDIT",
+   "currentBalance": 7524.68
+  },
+  {
+   "txnId": "SUNITA000550",
+   "valueDate": "2026-10-01",
+   "narration": "UPI/CR/784165009219/MANGESH GHULE/mangesh.g@paytm/VEG",
+   "amount": 33.0,
+   "type": "CREDIT",
+   "currentBalance": 7557.68
+  },
+  {
+   "txnId": "SUNITA000551",
+   "valueDate": "2026-10-01",
+   "narration": "UPI/CR/132916023468/KAVITA SHIRKE/kavita.s@okaxis/VEG",
+   "amount": 41.0,
+   "type": "CREDIT",
+   "currentBalance": 7598.68
+  },
+  {
+   "txnId": "SUNITA000552",
+   "valueDate": "2026-10-01",
+   "narration": "UPI/DR/275977828400/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 221.85,
+   "type": "DEBIT",
+   "currentBalance": 7376.83
+  },
+  {
+   "txnId": "SUNITA000553",
+   "valueDate": "2026-10-02",
+   "narration": "UPI/CR/646016472310/RAJESH KHOT/8842036887@okaxis/VEG",
+   "amount": 79.0,
+   "type": "CREDIT",
+   "currentBalance": 7455.83
+  },
+  {
+   "txnId": "SUNITA000554",
+   "valueDate": "2026-10-02",
+   "narration": "UPI/CR/718078407423/MANGESH GHULE/mangesh.g@paytm/VEG",
+   "amount": 22.0,
+   "type": "CREDIT",
+   "currentBalance": 7477.83
+  },
+  {
+   "txnId": "SUNITA000555",
+   "valueDate": "2026-10-02",
+   "narration": "UPI/CR/387303107946/SUREKHA DHUMAL/6683920139@okicici/VEG",
+   "amount": 66.0,
+   "type": "CREDIT",
+   "currentBalance": 7543.83
+  },
+  {
+   "txnId": "SUNITA000556",
+   "valueDate": "2026-10-02",
+   "narration": "UPI/CR/632062578717/SARIKA PATOLE/sarika.p@okhdfc/VEG",
+   "amount": 73.0,
+   "type": "CREDIT",
+   "currentBalance": 7616.83
+  },
+  {
+   "txnId": "SUNITA000557",
+   "valueDate": "2026-10-02",
+   "narration": "UPI/CR/898210877749/NEHA WAGH/neha.w@okhdfc/VEG",
+   "amount": 40.0,
+   "type": "CREDIT",
+   "currentBalance": 7656.83
+  },
+  {
+   "txnId": "SUNITA000558",
+   "valueDate": "2026-10-02",
+   "narration": "UPI/CR/629483004898/DEEPAK MANE/7218105484@oksbi/VEG",
+   "amount": 65.0,
+   "type": "CREDIT",
+   "currentBalance": 7721.83
+  },
+  {
+   "txnId": "SUNITA000559",
+   "valueDate": "2026-10-02",
+   "narration": "UPI/DR/760056866266/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 210.51,
+   "type": "DEBIT",
+   "currentBalance": 7511.32
+  },
+  {
+   "txnId": "SUNITA000560",
+   "valueDate": "2026-10-02",
+   "narration": "UPI/DR/343880533573/GANESH DAIRY/ganeshdair@okaxis/MILK",
+   "amount": 79.36,
+   "type": "DEBIT",
+   "currentBalance": 7431.96
+  },
+  {
+   "txnId": "SUNITA000561",
+   "valueDate": "2026-10-03",
+   "narration": "UPI/CR/246508521100/SARIKA PATOLE/sarika.p@okhdfc/VEG",
+   "amount": 31.0,
+   "type": "CREDIT",
+   "currentBalance": 7462.96
+  },
+  {
+   "txnId": "SUNITA000562",
+   "valueDate": "2026-10-03",
+   "narration": "UPI/CR/997100383857/ANIL KHARAT/8772886042@okaxis/VEG",
+   "amount": 71.0,
+   "type": "CREDIT",
+   "currentBalance": 7533.96
+  },
+  {
+   "txnId": "SUNITA000563",
+   "valueDate": "2026-10-03",
+   "narration": "UPI/CR/782373635431/SUREKHA DHUMAL/6683920139@okicici/VEG",
+   "amount": 43.0,
+   "type": "CREDIT",
+   "currentBalance": 7576.96
+  },
+  {
+   "txnId": "SUNITA000564",
+   "valueDate": "2026-10-03",
+   "narration": "UPI/CR/799668635312/MANGESH GHULE/mangesh.g@paytm/VEG",
+   "amount": 57.0,
+   "type": "CREDIT",
+   "currentBalance": 7633.96
+  },
+  {
+   "txnId": "SUNITA000565",
+   "valueDate": "2026-10-03",
+   "narration": "UPI/CR/223616806050/VANDANA NAIK/vandana.n@oksbi/VEG",
+   "amount": 50.0,
+   "type": "CREDIT",
+   "currentBalance": 7683.96
+  },
+  {
+   "txnId": "SUNITA000566",
+   "valueDate": "2026-10-03",
+   "narration": "UPI/CR/821621665776/KAVITA SHIRKE/kavita.s@okaxis/VEG",
+   "amount": 80.0,
+   "type": "CREDIT",
+   "currentBalance": 7763.96
+  },
+  {
+   "txnId": "SUNITA000567",
+   "valueDate": "2026-10-03",
+   "narration": "UPI/CR/495261363095/ASHA SHELKE/8862358523@ybl/VEG",
+   "amount": 58.0,
+   "type": "CREDIT",
+   "currentBalance": 7821.96
+  },
+  {
+   "txnId": "SUNITA000568",
+   "valueDate": "2026-10-03",
+   "narration": "UPI/DR/115984611057/KAMAL GAIKWAD/kamal.g@paytm/RENT",
+   "amount": 3000.0,
+   "type": "DEBIT",
+   "currentBalance": 4821.96
+  },
+  {
+   "txnId": "SUNITA000569",
+   "valueDate": "2026-10-03",
+   "narration": "RD INSTALMENT TO A/C 004512345678",
+   "amount": 150.0,
+   "type": "DEBIT",
+   "currentBalance": 4671.96
+  },
+  {
+   "txnId": "SUNITA000570",
+   "valueDate": "2026-10-03",
+   "narration": "UPI/DR/822138190825/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 237.68,
+   "type": "DEBIT",
+   "currentBalance": 4434.28
+  },
+  {
+   "txnId": "SUNITA000571",
+   "valueDate": "2026-10-04",
+   "narration": "UPI/DR/878084100134/GANESH DAIRY/ganeshdair@okaxis/MILK",
+   "amount": 65.73,
+   "type": "DEBIT",
+   "currentBalance": 4368.55
+  },
+  {
+   "txnId": "SUNITA000572",
+   "valueDate": "2026-10-05",
+   "narration": "UPI/CR/448212428813/JYOTI GAVADE/jyoti.g@oksbi/VEG",
+   "amount": 26.0,
+   "type": "CREDIT",
+   "currentBalance": 4394.55
+  },
+  {
+   "txnId": "SUNITA000573",
+   "valueDate": "2026-10-05",
+   "narration": "UPI/CR/958721899921/LATA KAMBLE/9906904273@okaxis/VEG",
+   "amount": 26.0,
+   "type": "CREDIT",
+   "currentBalance": 4420.55
+  },
+  {
+   "txnId": "SUNITA000574",
+   "valueDate": "2026-10-05",
+   "narration": "UPI/CR/454962322780/MAHESH CHAVAN/mahesh.c@okhdfc/VEG",
+   "amount": 46.0,
+   "type": "CREDIT",
+   "currentBalance": 4466.55
+  },
+  {
+   "txnId": "SUNITA000575",
+   "valueDate": "2026-10-05",
+   "narration": "UPI/CR/613155746549/ROHINI SALVI/rohini.s@ybl/VEG",
+   "amount": 77.0,
+   "type": "CREDIT",
+   "currentBalance": 4543.55
+  },
+  {
+   "txnId": "SUNITA000576",
+   "valueDate": "2026-10-05",
+   "narration": "UPI/CR/238986949140/SUNIL PAWAR/sunil.p@oksbi/VEG",
+   "amount": 28.0,
+   "type": "CREDIT",
+   "currentBalance": 4571.55
+  },
+  {
+   "txnId": "SUNITA000577",
+   "valueDate": "2026-10-05",
+   "narration": "UPI/CR/416571970545/NEHA WAGH/neha.w@okhdfc/VEG",
+   "amount": 65.0,
+   "type": "CREDIT",
+   "currentBalance": 4636.55
+  },
+  {
+   "txnId": "SUNITA000578",
+   "valueDate": "2026-10-05",
+   "narration": "CASH DEP MARKET YARD BRANCH",
+   "amount": 660.0,
+   "type": "CREDIT",
+   "currentBalance": 5296.55
+  },
+  {
+   "txnId": "SUNITA000579",
+   "valueDate": "2026-10-05",
+   "narration": "UPI/DR/076939561535/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 216.27,
+   "type": "DEBIT",
+   "currentBalance": 5080.28
+  },
+  {
+   "txnId": "SUNITA000580",
+   "valueDate": "2026-10-05",
+   "narration": "UPI/DR/258805400893/SAI KIRANA STORES/saikiranas@okaxis/MILK",
+   "amount": 79.59,
+   "type": "DEBIT",
+   "currentBalance": 5000.69
+  },
+  {
+   "txnId": "SUNITA000581",
+   "valueDate": "2026-10-06",
+   "narration": "UPI/CR/992225770073/SUNIL PAWAR/sunil.p@oksbi/VEG",
+   "amount": 78.0,
+   "type": "CREDIT",
+   "currentBalance": 5078.69
+  },
+  {
+   "txnId": "SUNITA000582",
+   "valueDate": "2026-10-06",
+   "narration": "UPI/CR/814297103026/UMESH JADHAV/9926153247@ybl/VEG",
+   "amount": 46.0,
+   "type": "CREDIT",
+   "currentBalance": 5124.69
+  },
+  {
+   "txnId": "SUNITA000583",
+   "valueDate": "2026-10-06",
+   "narration": "UPI/CR/883886836715/SHOBHA JAGTAP/shobha.j@okhdfc/VEG",
+   "amount": 64.0,
+   "type": "CREDIT",
+   "currentBalance": 5188.69
+  },
+  {
+   "txnId": "SUNITA000584",
+   "valueDate": "2026-10-06",
+   "narration": "UPI/CR/529052237162/SANTOSH KOLTE/santosh.k@okaxis/VEG",
+   "amount": 73.0,
+   "type": "CREDIT",
+   "currentBalance": 5261.69
+  },
+  {
+   "txnId": "SUNITA000585",
+   "valueDate": "2026-10-06",
+   "narration": "UPI/CR/749071111873/TUSHAR GAWALI/7668088689@okaxis/VEG",
+   "amount": 22.0,
+   "type": "CREDIT",
+   "currentBalance": 5283.69
+  },
+  {
+   "txnId": "SUNITA000586",
+   "valueDate": "2026-10-06",
+   "narration": "UPI/CR/964308521527/SHOBHA JAGTAP/shobha.j@okhdfc/VEG",
+   "amount": 45.0,
+   "type": "CREDIT",
+   "currentBalance": 5328.69
+  },
+  {
+   "txnId": "SUNITA000587",
+   "valueDate": "2026-10-06",
+   "narration": "UPI/CR/428956196430/SEEMA BORATE/seema.b@ybl/VEG",
+   "amount": 55.0,
+   "type": "CREDIT",
+   "currentBalance": 5383.69
+  },
+  {
+   "txnId": "SUNITA000588",
+   "valueDate": "2026-10-06",
+   "narration": "UPI/CR/743382434018/MANGESH GHULE/mangesh.g@paytm/VEG",
+   "amount": 33.0,
+   "type": "CREDIT",
+   "currentBalance": 5416.69
+  },
+  {
+   "txnId": "SUNITA000589",
+   "valueDate": "2026-10-06",
+   "narration": "UPI/DR/216329851358/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 244.71,
+   "type": "DEBIT",
+   "currentBalance": 5171.98
+  },
+  {
+   "txnId": "SUNITA000590",
+   "valueDate": "2026-10-07",
+   "narration": "UPI/CR/003943096593/ANIL KHARAT/8772886042@okaxis/VEG",
+   "amount": 40.0,
+   "type": "CREDIT",
+   "currentBalance": 5211.98
+  },
+  {
+   "txnId": "SUNITA000591",
+   "valueDate": "2026-10-07",
+   "narration": "UPI/CR/382411150011/JYOTI GAVADE/jyoti.g@oksbi/VEG",
+   "amount": 41.0,
+   "type": "CREDIT",
+   "currentBalance": 5252.98
+  },
+  {
+   "txnId": "SUNITA000592",
+   "valueDate": "2026-10-07",
+   "narration": "UPI/CR/305639863252/ROHINI SALVI/rohini.s@ybl/VEG",
+   "amount": 26.0,
+   "type": "CREDIT",
+   "currentBalance": 5278.98
+  },
+  {
+   "txnId": "SUNITA000593",
+   "valueDate": "2026-10-07",
+   "narration": "UPI/CR/842157579774/VANDANA NAIK/vandana.n@oksbi/VEG",
+   "amount": 37.0,
+   "type": "CREDIT",
+   "currentBalance": 5315.98
+  },
+  {
+   "txnId": "SUNITA000594",
+   "valueDate": "2026-10-07",
+   "narration": "UPI/CR/534567803111/VANDANA NAIK/vandana.n@oksbi/VEG",
+   "amount": 47.0,
+   "type": "CREDIT",
+   "currentBalance": 5362.98
+  },
+  {
+   "txnId": "SUNITA000595",
+   "valueDate": "2026-10-07",
+   "narration": "UPI/CR/519516360956/SEEMA BORATE/seema.b@ybl/VEG",
+   "amount": 66.0,
+   "type": "CREDIT",
+   "currentBalance": 5428.98
+  },
+  {
+   "txnId": "SUNITA000596",
+   "valueDate": "2026-10-07",
+   "narration": "UPI/CR/669854157671/ROHINI SALVI/rohini.s@ybl/VEG",
+   "amount": 37.0,
+   "type": "CREDIT",
+   "currentBalance": 5465.98
+  },
+  {
+   "txnId": "SUNITA000597",
+   "valueDate": "2026-10-07",
+   "narration": "UPI/CR/607491078674/KAVITA SHIRKE/kavita.s@okaxis/VEG",
+   "amount": 23.0,
+   "type": "CREDIT",
+   "currentBalance": 5488.98
+  },
+  {
+   "txnId": "SUNITA000598",
+   "valueDate": "2026-10-07",
+   "narration": "UPI/DR/441527040439/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 210.54,
+   "type": "DEBIT",
+   "currentBalance": 5278.44
+  },
+  {
+   "txnId": "SUNITA000599",
+   "valueDate": "2026-10-07",
+   "narration": "UPI/DR/685921219821/SAI KIRANA STORES/saikiranas@okaxis/MILK",
+   "amount": 65.04,
+   "type": "DEBIT",
+   "currentBalance": 5213.4
+  },
+  {
+   "txnId": "SUNITA000600",
+   "valueDate": "2026-10-08",
+   "narration": "UPI/CR/853689154784/SEEMA BORATE/seema.b@ybl/VEG",
+   "amount": 38.0,
+   "type": "CREDIT",
+   "currentBalance": 5251.4
+  },
+  {
+   "txnId": "SUNITA000601",
+   "valueDate": "2026-10-08",
+   "narration": "UPI/CR/341410416011/MAHESH CHAVAN/mahesh.c@okhdfc/VEG",
+   "amount": 68.0,
+   "type": "CREDIT",
+   "currentBalance": 5319.4
+  },
+  {
+   "txnId": "SUNITA000602",
+   "valueDate": "2026-10-08",
+   "narration": "UPI/CR/976295763780/LATA KAMBLE/9906904273@okaxis/VEG",
+   "amount": 78.0,
+   "type": "CREDIT",
+   "currentBalance": 5397.4
+  },
+  {
+   "txnId": "SUNITA000603",
+   "valueDate": "2026-10-08",
+   "narration": "UPI/CR/495320842433/ANIL KHARAT/8772886042@okaxis/VEG",
+   "amount": 37.0,
+   "type": "CREDIT",
+   "currentBalance": 5434.4
+  },
+  {
+   "txnId": "SUNITA000604",
+   "valueDate": "2026-10-08",
+   "narration": "UPI/CR/132893897510/SUREKHA DHUMAL/6683920139@okicici/VEG",
+   "amount": 41.0,
+   "type": "CREDIT",
+   "currentBalance": 5475.4
+  },
+  {
+   "txnId": "SUNITA000605",
+   "valueDate": "2026-10-08",
+   "narration": "UPI/CR/551303552018/SUREKHA DHUMAL/6683920139@okicici/VEG",
+   "amount": 27.0,
+   "type": "CREDIT",
+   "currentBalance": 5502.4
+  },
+  {
+   "txnId": "SUNITA000606",
+   "valueDate": "2026-10-08",
+   "narration": "UPI/CR/329767277377/SARIKA PATOLE/sarika.p@okhdfc/VEG",
+   "amount": 50.0,
+   "type": "CREDIT",
+   "currentBalance": 5552.4
+  },
+  {
+   "txnId": "SUNITA000607",
+   "valueDate": "2026-10-08",
+   "narration": "UPI/CR/019379773056/RAJESH KHOT/8842036887@okaxis/VEG",
+   "amount": 44.0,
+   "type": "CREDIT",
+   "currentBalance": 5596.4
+  },
+  {
+   "txnId": "SUNITA000608",
+   "valueDate": "2026-10-08",
+   "narration": "UPI/DR/218891379693/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 238.46,
+   "type": "DEBIT",
+   "currentBalance": 5357.94
+  },
+  {
+   "txnId": "SUNITA000609",
+   "valueDate": "2026-10-09",
+   "narration": "UPI/CR/414443258965/NEHA WAGH/neha.w@okhdfc/VEG",
+   "amount": 52.0,
+   "type": "CREDIT",
+   "currentBalance": 5409.94
+  },
+  {
+   "txnId": "SUNITA000610",
+   "valueDate": "2026-10-09",
+   "narration": "UPI/CR/290119889810/MANGESH GHULE/mangesh.g@paytm/VEG",
+   "amount": 54.0,
+   "type": "CREDIT",
+   "currentBalance": 5463.94
+  },
+  {
+   "txnId": "SUNITA000611",
+   "valueDate": "2026-10-09",
+   "narration": "UPI/CR/144264171244/SHOBHA JAGTAP/shobha.j@okhdfc/VEG",
+   "amount": 76.0,
+   "type": "CREDIT",
+   "currentBalance": 5539.94
+  },
+  {
+   "txnId": "SUNITA000612",
+   "valueDate": "2026-10-09",
+   "narration": "UPI/CR/860119835746/ASHA SHELKE/8862358523@ybl/VEG",
+   "amount": 22.0,
+   "type": "CREDIT",
+   "currentBalance": 5561.94
+  },
+  {
+   "txnId": "SUNITA000613",
+   "valueDate": "2026-10-09",
+   "narration": "UPI/CR/134446797630/VINOD SHINDE/vinod.s@ybl/VEG",
+   "amount": 42.0,
+   "type": "CREDIT",
+   "currentBalance": 5603.94
+  },
+  {
+   "txnId": "SUNITA000614",
+   "valueDate": "2026-10-09",
+   "narration": "UPI/CR/292423828445/SUNIL PAWAR/sunil.p@oksbi/VEG",
+   "amount": 51.0,
+   "type": "CREDIT",
+   "currentBalance": 5654.94
+  },
+  {
+   "txnId": "SUNITA000615",
+   "valueDate": "2026-10-09",
+   "narration": "UPI/CR/569922732809/SUREKHA DHUMAL/6683920139@okicici/VEG",
+   "amount": 72.0,
+   "type": "CREDIT",
+   "currentBalance": 5726.94
+  },
+  {
+   "txnId": "SUNITA000616",
+   "valueDate": "2026-10-09",
+   "narration": "UPI/CR/434597559125/NEHA WAGH/neha.w@okhdfc/VEG",
+   "amount": 66.0,
+   "type": "CREDIT",
+   "currentBalance": 5792.94
+  },
+  {
+   "txnId": "SUNITA000617",
+   "valueDate": "2026-10-09",
+   "narration": "UPI/CR/578467209651/SANTOSH KOLTE/santosh.k@okaxis/VEG",
+   "amount": 64.0,
+   "type": "CREDIT",
+   "currentBalance": 5856.94
+  },
+  {
+   "txnId": "SUNITA000618",
+   "valueDate": "2026-10-09",
+   "narration": "UPI/DR/215758989793/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 209.47,
+   "type": "DEBIT",
+   "currentBalance": 5647.47
+  },
+  {
+   "txnId": "SUNITA000619",
+   "valueDate": "2026-10-09",
+   "narration": "UPI/DR/304456364992/GANESH DAIRY/ganeshdair@okaxis/MILK",
+   "amount": 70.5,
+   "type": "DEBIT",
+   "currentBalance": 5576.97
+  },
+  {
+   "txnId": "SUNITA000620",
+   "valueDate": "2026-10-10",
+   "narration": "UPI/CR/769242488884/ROHINI SALVI/rohini.s@ybl/VEG",
+   "amount": 57.0,
+   "type": "CREDIT",
+   "currentBalance": 5633.97
+  },
+  {
+   "txnId": "SUNITA000621",
+   "valueDate": "2026-10-10",
+   "narration": "UPI/CR/397533905215/MEERA KADAM/7024591221@okicici/VEG",
+   "amount": 60.0,
+   "type": "CREDIT",
+   "currentBalance": 5693.97
+  },
+  {
+   "txnId": "SUNITA000622",
+   "valueDate": "2026-10-10",
+   "narration": "UPI/CR/258585202781/GANESH LONDHE/6333393040@okhdfc/VEG",
+   "amount": 27.0,
+   "type": "CREDIT",
+   "currentBalance": 5720.97
+  },
+  {
+   "txnId": "SUNITA000623",
+   "valueDate": "2026-10-10",
+   "narration": "UPI/CR/671129355916/DEEPAK MANE/7218105484@oksbi/VEG",
+   "amount": 22.0,
+   "type": "CREDIT",
+   "currentBalance": 5742.97
+  },
+  {
+   "txnId": "SUNITA000624",
+   "valueDate": "2026-10-10",
+   "narration": "UPI/CR/960045768206/MAHESH CHAVAN/mahesh.c@okhdfc/VEG",
+   "amount": 57.0,
+   "type": "CREDIT",
+   "currentBalance": 5799.97
+  },
+  {
+   "txnId": "SUNITA000625",
+   "valueDate": "2026-10-10",
+   "narration": "UPI/CR/016893321111/ANIL KHARAT/8772886042@okaxis/VEG",
+   "amount": 28.0,
+   "type": "CREDIT",
+   "currentBalance": 5827.97
+  },
+  {
+   "txnId": "SUNITA000626",
+   "valueDate": "2026-10-10",
+   "narration": "UPI/CR/064442536395/JYOTI GAVADE/jyoti.g@oksbi/VEG",
+   "amount": 48.0,
+   "type": "CREDIT",
+   "currentBalance": 5875.97
+  },
+  {
+   "txnId": "SUNITA000627",
+   "valueDate": "2026-10-10",
+   "narration": "RD INSTALMENT TO A/C 004512345678",
+   "amount": 150.0,
+   "type": "DEBIT",
+   "currentBalance": 5725.97
+  },
+  {
+   "txnId": "SUNITA000628",
+   "valueDate": "2026-10-10",
+   "narration": "UPI/DR/303029676284/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 218.7,
+   "type": "DEBIT",
+   "currentBalance": 5507.27
+  },
+  {
+   "txnId": "SUNITA000629",
+   "valueDate": "2026-10-11",
+   "narration": "UPI/DR/047007938089/SAI KIRANA STORES/saikiranas@okaxis/MILK",
+   "amount": 40.52,
+   "type": "DEBIT",
+   "currentBalance": 5466.75
+  },
+  {
+   "txnId": "SUNITA000630",
+   "valueDate": "2026-10-12",
+   "narration": "UPI/CR/023657718101/SHOBHA JAGTAP/shobha.j@okhdfc/VEG",
+   "amount": 22.0,
+   "type": "CREDIT",
+   "currentBalance": 5488.75
+  },
+  {
+   "txnId": "SUNITA000631",
+   "valueDate": "2026-10-12",
+   "narration": "UPI/CR/694753822469/KAVITA SHIRKE/kavita.s@okaxis/VEG",
+   "amount": 79.0,
+   "type": "CREDIT",
+   "currentBalance": 5567.75
+  },
+  {
+   "txnId": "SUNITA000632",
+   "valueDate": "2026-10-12",
+   "narration": "UPI/CR/885796950180/RUPALI DESAI/rupali.d@okaxis/VEG",
+   "amount": 72.0,
+   "type": "CREDIT",
+   "currentBalance": 5639.75
+  },
+  {
+   "txnId": "SUNITA000633",
+   "valueDate": "2026-10-12",
+   "narration": "UPI/CR/285449848347/SEEMA BORATE/seema.b@ybl/VEG",
+   "amount": 38.0,
+   "type": "CREDIT",
+   "currentBalance": 5677.75
+  },
+  {
+   "txnId": "SUNITA000634",
+   "valueDate": "2026-10-12",
+   "narration": "UPI/CR/662002514138/SEEMA BORATE/seema.b@ybl/VEG",
+   "amount": 80.0,
+   "type": "CREDIT",
+   "currentBalance": 5757.75
+  },
+  {
+   "txnId": "SUNITA000635",
+   "valueDate": "2026-10-12",
+   "narration": "UPI/CR/071636208036/VANDANA NAIK/vandana.n@oksbi/VEG",
+   "amount": 20.0,
+   "type": "CREDIT",
+   "currentBalance": 5777.75
+  },
+  {
+   "txnId": "SUNITA000636",
+   "valueDate": "2026-10-12",
+   "narration": "UPI/CR/912407380019/TUSHAR GAWALI/7668088689@okaxis/VEG",
+   "amount": 53.0,
+   "type": "CREDIT",
+   "currentBalance": 5830.75
+  },
+  {
+   "txnId": "SUNITA000637",
+   "valueDate": "2026-10-12",
+   "narration": "UPI/CR/945584298572/NEHA WAGH/neha.w@okhdfc/VEG",
+   "amount": 38.0,
+   "type": "CREDIT",
+   "currentBalance": 5868.75
+  },
+  {
+   "txnId": "SUNITA000638",
+   "valueDate": "2026-10-12",
+   "narration": "UPI/CR/823399840562/RAJESH KHOT/8842036887@okaxis/VEG",
+   "amount": 74.0,
+   "type": "CREDIT",
+   "currentBalance": 5942.75
+  },
+  {
+   "txnId": "SUNITA000639",
+   "valueDate": "2026-10-12",
+   "narration": "CASH DEP MARKET YARD BRANCH",
+   "amount": 720.0,
+   "type": "CREDIT",
+   "currentBalance": 6662.75
+  },
+  {
+   "txnId": "SUNITA000640",
+   "valueDate": "2026-10-12",
+   "narration": "UPI/DR/548939875653/CITY POWER BILL/citypowerb@paytm/ELECTRICITY",
+   "amount": 352.0,
+   "type": "DEBIT",
+   "currentBalance": 6310.75
+  },
+  {
+   "txnId": "SUNITA000641",
+   "valueDate": "2026-10-12",
+   "narration": "UPI/DR/681885082783/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 229.25,
+   "type": "DEBIT",
+   "currentBalance": 6081.5
+  },
+  {
+   "txnId": "SUNITA000642",
+   "valueDate": "2026-10-12",
+   "narration": "UPI/DR/550664956357/SAI KIRANA STORES/saikiranas@okaxis/MILK",
+   "amount": 58.31,
+   "type": "DEBIT",
+   "currentBalance": 6023.19
+  },
+  {
+   "txnId": "SUNITA000643",
+   "valueDate": "2026-10-13",
+   "narration": "UPI/CR/811108277405/SEEMA BORATE/seema.b@ybl/VEG",
+   "amount": 55.0,
+   "type": "CREDIT",
+   "currentBalance": 6078.19
+  },
+  {
+   "txnId": "SUNITA000644",
+   "valueDate": "2026-10-13",
+   "narration": "UPI/CR/155593332173/JYOTI GAVADE/jyoti.g@oksbi/VEG",
+   "amount": 79.0,
+   "type": "CREDIT",
+   "currentBalance": 6157.19
+  },
+  {
+   "txnId": "SUNITA000645",
+   "valueDate": "2026-10-13",
+   "narration": "UPI/CR/780958339616/PRAKASH THORAT/prakash.t@paytm/VEG",
+   "amount": 49.0,
+   "type": "CREDIT",
+   "currentBalance": 6206.19
+  },
+  {
+   "txnId": "SUNITA000646",
+   "valueDate": "2026-10-13",
+   "narration": "UPI/CR/111810061305/SARIKA PATOLE/sarika.p@okhdfc/VEG",
+   "amount": 52.0,
+   "type": "CREDIT",
+   "currentBalance": 6258.19
+  },
+  {
+   "txnId": "SUNITA000647",
+   "valueDate": "2026-10-13",
+   "narration": "UPI/CR/272119908019/DEEPAK MANE/7218105484@oksbi/VEG",
+   "amount": 54.0,
+   "type": "CREDIT",
+   "currentBalance": 6312.19
+  },
+  {
+   "txnId": "SUNITA000648",
+   "valueDate": "2026-10-13",
+   "narration": "UPI/CR/122351462932/LATA KAMBLE/9906904273@okaxis/VEG",
+   "amount": 40.0,
+   "type": "CREDIT",
+   "currentBalance": 6352.19
+  },
+  {
+   "txnId": "SUNITA000649",
+   "valueDate": "2026-10-13",
+   "narration": "UPI/CR/231433996220/SUNIL PAWAR/sunil.p@oksbi/VEG",
+   "amount": 50.0,
+   "type": "CREDIT",
+   "currentBalance": 6402.19
+  },
+  {
+   "txnId": "SUNITA000650",
+   "valueDate": "2026-10-13",
+   "narration": "UPI/CR/831624751101/LATA KAMBLE/9906904273@okaxis/VEG",
+   "amount": 72.0,
+   "type": "CREDIT",
+   "currentBalance": 6474.19
+  },
+  {
+   "txnId": "SUNITA000651",
+   "valueDate": "2026-10-13",
+   "narration": "UPI/DR/308161330369/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 247.02,
+   "type": "DEBIT",
+   "currentBalance": 6227.17
+  },
+  {
+   "txnId": "SUNITA000652",
+   "valueDate": "2026-10-14",
+   "narration": "UPI/CR/469719880113/SARIKA PATOLE/sarika.p@okhdfc/VEG",
+   "amount": 55.0,
+   "type": "CREDIT",
+   "currentBalance": 6282.17
+  },
+  {
+   "txnId": "SUNITA000653",
+   "valueDate": "2026-10-14",
+   "narration": "UPI/CR/935568097114/RAJESH KHOT/8842036887@okaxis/VEG",
+   "amount": 30.0,
+   "type": "CREDIT",
+   "currentBalance": 6312.17
+  },
+  {
+   "txnId": "SUNITA000654",
+   "valueDate": "2026-10-14",
+   "narration": "UPI/CR/682569428853/ASHA SHELKE/8862358523@ybl/VEG",
+   "amount": 40.0,
+   "type": "CREDIT",
+   "currentBalance": 6352.17
+  },
+  {
+   "txnId": "SUNITA000655",
+   "valueDate": "2026-10-14",
+   "narration": "UPI/CR/569922156423/VINOD SHINDE/vinod.s@ybl/VEG",
+   "amount": 20.0,
+   "type": "CREDIT",
+   "currentBalance": 6372.17
+  },
+  {
+   "txnId": "SUNITA000656",
+   "valueDate": "2026-10-14",
+   "narration": "UPI/CR/942936505718/SUNIL PAWAR/sunil.p@oksbi/VEG",
+   "amount": 43.0,
+   "type": "CREDIT",
+   "currentBalance": 6415.17
+  },
+  {
+   "txnId": "SUNITA000657",
+   "valueDate": "2026-10-14",
+   "narration": "UPI/CR/743062666906/VANDANA NAIK/vandana.n@oksbi/VEG",
+   "amount": 61.0,
+   "type": "CREDIT",
+   "currentBalance": 6476.17
+  },
+  {
+   "txnId": "SUNITA000658",
+   "valueDate": "2026-10-14",
+   "narration": "UPI/CR/956619229605/RUPALI DESAI/rupali.d@okaxis/VEG",
+   "amount": 38.0,
+   "type": "CREDIT",
+   "currentBalance": 6514.17
+  },
+  {
+   "txnId": "SUNITA000659",
+   "valueDate": "2026-10-14",
+   "narration": "UPI/CR/063055279929/ROHINI SALVI/rohini.s@ybl/VEG",
+   "amount": 50.0,
+   "type": "CREDIT",
+   "currentBalance": 6564.17
+  },
+  {
+   "txnId": "SUNITA000660",
+   "valueDate": "2026-10-14",
+   "narration": "UPI/DR/275645634179/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 240.65,
+   "type": "DEBIT",
+   "currentBalance": 6323.52
+  },
+  {
+   "txnId": "SUNITA000661",
+   "valueDate": "2026-10-14",
+   "narration": "UPI/DR/394732403271/SAI KIRANA STORES/saikiranas@okaxis/MILK",
+   "amount": 41.21,
+   "type": "DEBIT",
+   "currentBalance": 6282.31
+  },
+  {
+   "txnId": "SUNITA000662",
+   "valueDate": "2026-10-15",
+   "narration": "UPI/CR/167867719381/SUREKHA DHUMAL/6683920139@okicici/VEG",
+   "amount": 43.0,
+   "type": "CREDIT",
+   "currentBalance": 6325.31
+  },
+  {
+   "txnId": "SUNITA000663",
+   "valueDate": "2026-10-15",
+   "narration": "UPI/CR/907479936590/TUSHAR GAWALI/7668088689@okaxis/VEG",
+   "amount": 47.0,
+   "type": "CREDIT",
+   "currentBalance": 6372.31
+  },
+  {
+   "txnId": "SUNITA000664",
+   "valueDate": "2026-10-15",
+   "narration": "UPI/CR/146114808317/SEEMA BORATE/seema.b@ybl/VEG",
+   "amount": 52.0,
+   "type": "CREDIT",
+   "currentBalance": 6424.31
+  },
+  {
+   "txnId": "SUNITA000665",
+   "valueDate": "2026-10-15",
+   "narration": "UPI/CR/916745819656/MAHESH CHAVAN/mahesh.c@okhdfc/VEG",
+   "amount": 44.0,
+   "type": "CREDIT",
+   "currentBalance": 6468.31
+  },
+  {
+   "txnId": "SUNITA000666",
+   "valueDate": "2026-10-15",
+   "narration": "UPI/CR/496084595316/NEHA WAGH/neha.w@okhdfc/VEG",
+   "amount": 63.0,
+   "type": "CREDIT",
+   "currentBalance": 6531.31
+  },
+  {
+   "txnId": "SUNITA000667",
+   "valueDate": "2026-10-15",
+   "narration": "UPI/CR/879011213709/TUSHAR GAWALI/7668088689@okaxis/VEG",
+   "amount": 35.0,
+   "type": "CREDIT",
+   "currentBalance": 6566.31
+  },
+  {
+   "txnId": "SUNITA000668",
+   "valueDate": "2026-10-15",
+   "narration": "UPI/CR/899286635715/GANESH LONDHE/6333393040@okhdfc/VEG",
+   "amount": 80.0,
+   "type": "CREDIT",
+   "currentBalance": 6646.31
+  },
+  {
+   "txnId": "SUNITA000669",
+   "valueDate": "2026-10-15",
+   "narration": "UPI/DR/522505031197/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 250.24,
+   "type": "DEBIT",
+   "currentBalance": 6396.07
+  },
+  {
+   "txnId": "SUNITA000670",
+   "valueDate": "2026-10-16",
+   "narration": "UPI/CR/841735220916/KAVITA SHIRKE/kavita.s@okaxis/VEG",
+   "amount": 46.0,
+   "type": "CREDIT",
+   "currentBalance": 6442.07
+  },
+  {
+   "txnId": "SUNITA000671",
+   "valueDate": "2026-10-16",
+   "narration": "UPI/CR/410803818755/RUPALI DESAI/rupali.d@okaxis/VEG",
+   "amount": 67.0,
+   "type": "CREDIT",
+   "currentBalance": 6509.07
+  },
+  {
+   "txnId": "SUNITA000672",
+   "valueDate": "2026-10-16",
+   "narration": "UPI/CR/416674574973/GANESH LONDHE/6333393040@okhdfc/VEG",
+   "amount": 46.0,
+   "type": "CREDIT",
+   "currentBalance": 6555.07
+  },
+  {
+   "txnId": "SUNITA000673",
+   "valueDate": "2026-10-16",
+   "narration": "UPI/CR/377063065823/SANTOSH KOLTE/santosh.k@okaxis/VEG",
+   "amount": 65.0,
+   "type": "CREDIT",
+   "currentBalance": 6620.07
+  },
+  {
+   "txnId": "SUNITA000674",
+   "valueDate": "2026-10-16",
+   "narration": "UPI/CR/024153099634/SEEMA BORATE/seema.b@ybl/VEG",
+   "amount": 62.0,
+   "type": "CREDIT",
+   "currentBalance": 6682.07
+  },
+  {
+   "txnId": "SUNITA000675",
+   "valueDate": "2026-10-16",
+   "narration": "UPI/CR/826096700920/SUNIL PAWAR/sunil.p@oksbi/VEG",
+   "amount": 59.0,
+   "type": "CREDIT",
+   "currentBalance": 6741.07
+  },
+  {
+   "txnId": "SUNITA000676",
+   "valueDate": "2026-10-16",
+   "narration": "UPI/CR/243820119079/SEEMA BORATE/seema.b@ybl/VEG",
+   "amount": 42.0,
+   "type": "CREDIT",
+   "currentBalance": 6783.07
+  },
+  {
+   "txnId": "SUNITA000677",
+   "valueDate": "2026-10-16",
+   "narration": "UPI/CR/356597889765/GANESH LONDHE/6333393040@okhdfc/VEG",
+   "amount": 24.0,
+   "type": "CREDIT",
+   "currentBalance": 6807.07
+  },
+  {
+   "txnId": "SUNITA000678",
+   "valueDate": "2026-10-16",
+   "narration": "UPI/DR/721943694433/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 208.87,
+   "type": "DEBIT",
+   "currentBalance": 6598.2
+  },
+  {
+   "txnId": "SUNITA000679",
+   "valueDate": "2026-10-16",
+   "narration": "UPI/DR/167506384912/SAI KIRANA STORES/saikiranas@okaxis/MILK",
+   "amount": 47.79,
+   "type": "DEBIT",
+   "currentBalance": 6550.41
+  },
+  {
+   "txnId": "SUNITA000680",
+   "valueDate": "2026-10-17",
+   "narration": "UPI/CR/996442574537/GANESH LONDHE/6333393040@okhdfc/VEG",
+   "amount": 45.0,
+   "type": "CREDIT",
+   "currentBalance": 6595.41
+  },
+  {
+   "txnId": "SUNITA000681",
+   "valueDate": "2026-10-17",
+   "narration": "UPI/CR/937096928308/MANGESH GHULE/mangesh.g@paytm/VEG",
+   "amount": 63.0,
+   "type": "CREDIT",
+   "currentBalance": 6658.41
+  },
+  {
+   "txnId": "SUNITA000682",
+   "valueDate": "2026-10-17",
+   "narration": "UPI/CR/312063525848/KAVITA SHIRKE/kavita.s@okaxis/VEG",
+   "amount": 42.0,
+   "type": "CREDIT",
+   "currentBalance": 6700.41
+  },
+  {
+   "txnId": "SUNITA000683",
+   "valueDate": "2026-10-17",
+   "narration": "UPI/CR/528686584362/SUNIL PAWAR/sunil.p@oksbi/VEG",
+   "amount": 23.0,
+   "type": "CREDIT",
+   "currentBalance": 6723.41
+  },
+  {
+   "txnId": "SUNITA000684",
+   "valueDate": "2026-10-17",
+   "narration": "UPI/CR/158293754055/MAHESH CHAVAN/mahesh.c@okhdfc/VEG",
+   "amount": 23.0,
+   "type": "CREDIT",
+   "currentBalance": 6746.41
+  },
+  {
+   "txnId": "SUNITA000685",
+   "valueDate": "2026-10-17",
+   "narration": "UPI/CR/347621885263/JYOTI GAVADE/jyoti.g@oksbi/VEG",
+   "amount": 76.0,
+   "type": "CREDIT",
+   "currentBalance": 6822.41
+  },
+  {
+   "txnId": "SUNITA000686",
+   "valueDate": "2026-10-17",
+   "narration": "UPI/CR/022162766000/UMESH JADHAV/9926153247@ybl/VEG",
+   "amount": 72.0,
+   "type": "CREDIT",
+   "currentBalance": 6894.41
+  },
+  {
+   "txnId": "SUNITA000687",
+   "valueDate": "2026-10-17",
+   "narration": "UPI/CR/707201064861/NEHA WAGH/neha.w@okhdfc/VEG",
+   "amount": 70.0,
+   "type": "CREDIT",
+   "currentBalance": 6964.41
+  },
+  {
+   "txnId": "SUNITA000688",
+   "valueDate": "2026-10-17",
+   "narration": "RD INSTALMENT TO A/C 004512345678",
+   "amount": 150.0,
+   "type": "DEBIT",
+   "currentBalance": 6814.41
+  },
+  {
+   "txnId": "SUNITA000689",
+   "valueDate": "2026-10-17",
+   "narration": "UPI/DR/582644060478/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 246.22,
+   "type": "DEBIT",
+   "currentBalance": 6568.19
+  },
+  {
+   "txnId": "SUNITA000690",
+   "valueDate": "2026-10-18",
+   "narration": "UPI/DR/080822342344/GANESH DAIRY/ganeshdair@okaxis/MILK",
+   "amount": 34.23,
+   "type": "DEBIT",
+   "currentBalance": 6533.96
+  },
+  {
+   "txnId": "SUNITA000691",
+   "valueDate": "2026-10-19",
+   "narration": "UPI/CR/549782770581/ASHA SHELKE/8862358523@ybl/VEG",
+   "amount": 55.0,
+   "type": "CREDIT",
+   "currentBalance": 6588.96
+  },
+  {
+   "txnId": "SUNITA000692",
+   "valueDate": "2026-10-19",
+   "narration": "UPI/CR/774146047144/SARIKA PATOLE/sarika.p@okhdfc/VEG",
+   "amount": 42.0,
+   "type": "CREDIT",
+   "currentBalance": 6630.96
+  },
+  {
+   "txnId": "SUNITA000693",
+   "valueDate": "2026-10-19",
+   "narration": "UPI/CR/295568724479/MEERA KADAM/7024591221@okicici/VEG",
+   "amount": 61.0,
+   "type": "CREDIT",
+   "currentBalance": 6691.96
+  },
+  {
+   "txnId": "SUNITA000694",
+   "valueDate": "2026-10-19",
+   "narration": "UPI/CR/385868949536/LATA KAMBLE/9906904273@okaxis/VEG",
+   "amount": 24.0,
+   "type": "CREDIT",
+   "currentBalance": 6715.96
+  },
+  {
+   "txnId": "SUNITA000695",
+   "valueDate": "2026-10-19",
+   "narration": "UPI/CR/444224886084/DEEPAK MANE/7218105484@oksbi/VEG",
+   "amount": 39.0,
+   "type": "CREDIT",
+   "currentBalance": 6754.96
+  },
+  {
+   "txnId": "SUNITA000696",
+   "valueDate": "2026-10-19",
+   "narration": "UPI/CR/932613465574/SANTOSH KOLTE/santosh.k@okaxis/VEG",
+   "amount": 74.0,
+   "type": "CREDIT",
+   "currentBalance": 6828.96
+  },
+  {
+   "txnId": "SUNITA000697",
+   "valueDate": "2026-10-19",
+   "narration": "UPI/CR/021931575490/NEHA WAGH/neha.w@okhdfc/VEG",
+   "amount": 36.0,
+   "type": "CREDIT",
+   "currentBalance": 6864.96
+  },
+  {
+   "txnId": "SUNITA000698",
+   "valueDate": "2026-10-19",
+   "narration": "UPI/CR/896659809551/RAJESH KHOT/8842036887@okaxis/VEG",
+   "amount": 64.0,
+   "type": "CREDIT",
+   "currentBalance": 6928.96
+  },
+  {
+   "txnId": "SUNITA000699",
+   "valueDate": "2026-10-19",
+   "narration": "CASH DEP MARKET YARD BRANCH",
+   "amount": 760.0,
+   "type": "CREDIT",
+   "currentBalance": 7688.96
+  },
+  {
+   "txnId": "SUNITA000700",
+   "valueDate": "2026-10-19",
+   "narration": "UPI/DR/194904172856/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 249.12,
+   "type": "DEBIT",
+   "currentBalance": 7439.84
+  },
+  {
+   "txnId": "SUNITA000701",
+   "valueDate": "2026-10-19",
+   "narration": "UPI/DR/300692157416/GANESH DAIRY/ganeshdair@okaxis/MILK",
+   "amount": 54.85,
+   "type": "DEBIT",
+   "currentBalance": 7384.99
+  },
+  {
+   "txnId": "SUNITA000702",
+   "valueDate": "2026-10-20",
+   "narration": "UPI/CR/256101037354/KAVITA SHIRKE/kavita.s@okaxis/VEG",
+   "amount": 59.0,
+   "type": "CREDIT",
+   "currentBalance": 7443.99
+  },
+  {
+   "txnId": "SUNITA000703",
+   "valueDate": "2026-10-20",
+   "narration": "UPI/CR/095400896436/SARIKA PATOLE/sarika.p@okhdfc/VEG",
+   "amount": 49.0,
+   "type": "CREDIT",
+   "currentBalance": 7492.99
+  },
+  {
+   "txnId": "SUNITA000704",
+   "valueDate": "2026-10-20",
+   "narration": "UPI/CR/053792421087/SUREKHA DHUMAL/6683920139@okicici/VEG",
+   "amount": 48.0,
+   "type": "CREDIT",
+   "currentBalance": 7540.99
+  },
+  {
+   "txnId": "SUNITA000705",
+   "valueDate": "2026-10-20",
+   "narration": "UPI/CR/863907999660/MANGESH GHULE/mangesh.g@paytm/VEG",
+   "amount": 80.0,
+   "type": "CREDIT",
+   "currentBalance": 7620.99
+  },
+  {
+   "txnId": "SUNITA000706",
+   "valueDate": "2026-10-20",
+   "narration": "UPI/CR/795625819592/GANESH LONDHE/6333393040@okhdfc/VEG",
+   "amount": 36.0,
+   "type": "CREDIT",
+   "currentBalance": 7656.99
+  },
+  {
+   "txnId": "SUNITA000707",
+   "valueDate": "2026-10-20",
+   "narration": "UPI/CR/018753485188/MAHESH CHAVAN/mahesh.c@okhdfc/VEG",
+   "amount": 71.0,
+   "type": "CREDIT",
+   "currentBalance": 7727.99
+  },
+  {
+   "txnId": "SUNITA000708",
+   "valueDate": "2026-10-20",
+   "narration": "UPI/CR/920368117642/VINOD SHINDE/vinod.s@ybl/VEG",
+   "amount": 46.0,
+   "type": "CREDIT",
+   "currentBalance": 7773.99
+  },
+  {
+   "txnId": "SUNITA000709",
+   "valueDate": "2026-10-20",
+   "narration": "UPI/CR/972342596801/KAVITA SHIRKE/kavita.s@okaxis/VEG",
+   "amount": 30.0,
+   "type": "CREDIT",
+   "currentBalance": 7803.99
+  },
+  {
+   "txnId": "SUNITA000710",
+   "valueDate": "2026-10-20",
+   "narration": "UPI/CR/211573164866/MAHESH CHAVAN/mahesh.c@okhdfc/VEG",
+   "amount": 21.0,
+   "type": "CREDIT",
+   "currentBalance": 7824.99
+  },
+  {
+   "txnId": "SUNITA000711",
+   "valueDate": "2026-10-20",
+   "narration": "UPI/DR/029170136473/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 219.59,
+   "type": "DEBIT",
+   "currentBalance": 7605.4
+  },
+  {
+   "txnId": "SUNITA000712",
+   "valueDate": "2026-10-21",
+   "narration": "UPI/CR/671273041987/VINOD SHINDE/vinod.s@ybl/VEG",
+   "amount": 63.0,
+   "type": "CREDIT",
+   "currentBalance": 7668.4
+  },
+  {
+   "txnId": "SUNITA000713",
+   "valueDate": "2026-10-21",
+   "narration": "UPI/CR/762573551448/SARIKA PATOLE/sarika.p@okhdfc/VEG",
+   "amount": 60.0,
+   "type": "CREDIT",
+   "currentBalance": 7728.4
+  },
+  {
+   "txnId": "SUNITA000714",
+   "valueDate": "2026-10-21",
+   "narration": "UPI/CR/936434673296/SARIKA PATOLE/sarika.p@okhdfc/VEG",
+   "amount": 21.0,
+   "type": "CREDIT",
+   "currentBalance": 7749.4
+  },
+  {
+   "txnId": "SUNITA000715",
+   "valueDate": "2026-10-21",
+   "narration": "UPI/CR/446345009674/GANESH LONDHE/6333393040@okhdfc/VEG",
+   "amount": 45.0,
+   "type": "CREDIT",
+   "currentBalance": 7794.4
+  },
+  {
+   "txnId": "SUNITA000716",
+   "valueDate": "2026-10-21",
+   "narration": "UPI/CR/156632624988/VINOD SHINDE/vinod.s@ybl/VEG",
+   "amount": 75.0,
+   "type": "CREDIT",
+   "currentBalance": 7869.4
+  },
+  {
+   "txnId": "SUNITA000717",
+   "valueDate": "2026-10-21",
+   "narration": "UPI/CR/844498727502/VANDANA NAIK/vandana.n@oksbi/VEG",
+   "amount": 24.0,
+   "type": "CREDIT",
+   "currentBalance": 7893.4
+  },
+  {
+   "txnId": "SUNITA000718",
+   "valueDate": "2026-10-21",
+   "narration": "UPI/CR/001972023988/SANTOSH KOLTE/santosh.k@okaxis/VEG",
+   "amount": 78.0,
+   "type": "CREDIT",
+   "currentBalance": 7971.4
+  },
+  {
+   "txnId": "SUNITA000719",
+   "valueDate": "2026-10-21",
+   "narration": "UPI/DR/828435660360/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 215.04,
+   "type": "DEBIT",
+   "currentBalance": 7756.36
+  },
+  {
+   "txnId": "SUNITA000720",
+   "valueDate": "2026-10-21",
+   "narration": "UPI/DR/630383189745/GANESH DAIRY/ganeshdair@okaxis/MILK",
+   "amount": 39.32,
+   "type": "DEBIT",
+   "currentBalance": 7717.04
+  },
+  {
+   "txnId": "SUNITA000721",
+   "valueDate": "2026-10-22",
+   "narration": "UPI/CR/214298540276/PRAKASH THORAT/prakash.t@paytm/VEG",
+   "amount": 46.0,
+   "type": "CREDIT",
+   "currentBalance": 7763.04
+  },
+  {
+   "txnId": "SUNITA000722",
+   "valueDate": "2026-10-22",
+   "narration": "UPI/CR/135746105777/KAVITA SHIRKE/kavita.s@okaxis/VEG",
+   "amount": 65.0,
+   "type": "CREDIT",
+   "currentBalance": 7828.04
+  },
+  {
+   "txnId": "SUNITA000723",
+   "valueDate": "2026-10-22",
+   "narration": "UPI/CR/231395294617/SARIKA PATOLE/sarika.p@okhdfc/VEG",
+   "amount": 42.0,
+   "type": "CREDIT",
+   "currentBalance": 7870.04
+  },
+  {
+   "txnId": "SUNITA000724",
+   "valueDate": "2026-10-22",
+   "narration": "UPI/CR/988112804007/SANTOSH KOLTE/santosh.k@okaxis/VEG",
+   "amount": 54.0,
+   "type": "CREDIT",
+   "currentBalance": 7924.04
+  },
+  {
+   "txnId": "SUNITA000725",
+   "valueDate": "2026-10-22",
+   "narration": "UPI/CR/880731835958/JYOTI GAVADE/jyoti.g@oksbi/VEG",
+   "amount": 30.0,
+   "type": "CREDIT",
+   "currentBalance": 7954.04
+  },
+  {
+   "txnId": "SUNITA000726",
+   "valueDate": "2026-10-22",
+   "narration": "UPI/CR/756784125200/SUNIL PAWAR/sunil.p@oksbi/VEG",
+   "amount": 45.0,
+   "type": "CREDIT",
+   "currentBalance": 7999.04
+  },
+  {
+   "txnId": "SUNITA000727",
+   "valueDate": "2026-10-22",
+   "narration": "UPI/CR/591044279967/KAVITA SHIRKE/kavita.s@okaxis/VEG",
+   "amount": 40.0,
+   "type": "CREDIT",
+   "currentBalance": 8039.04
+  },
+  {
+   "txnId": "SUNITA000728",
+   "valueDate": "2026-10-22",
+   "narration": "UPI/DR/664663254860/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 214.51,
+   "type": "DEBIT",
+   "currentBalance": 7824.53
+  },
+  {
+   "txnId": "SUNITA000729",
+   "valueDate": "2026-10-23",
+   "narration": "UPI/CR/733483973113/GANESH LONDHE/6333393040@okhdfc/VEG",
+   "amount": 69.0,
+   "type": "CREDIT",
+   "currentBalance": 7893.53
+  },
+  {
+   "txnId": "SUNITA000730",
+   "valueDate": "2026-10-23",
+   "narration": "UPI/CR/668282305333/VANDANA NAIK/vandana.n@oksbi/VEG",
+   "amount": 53.0,
+   "type": "CREDIT",
+   "currentBalance": 7946.53
+  },
+  {
+   "txnId": "SUNITA000731",
+   "valueDate": "2026-10-23",
+   "narration": "UPI/CR/415524677740/MANGESH GHULE/mangesh.g@paytm/VEG",
+   "amount": 46.0,
+   "type": "CREDIT",
+   "currentBalance": 7992.53
+  },
+  {
+   "txnId": "SUNITA000732",
+   "valueDate": "2026-10-23",
+   "narration": "UPI/CR/732454745644/ASHA SHELKE/8862358523@ybl/VEG",
+   "amount": 41.0,
+   "type": "CREDIT",
+   "currentBalance": 8033.53
+  },
+  {
+   "txnId": "SUNITA000733",
+   "valueDate": "2026-10-23",
+   "narration": "UPI/CR/589454072531/SHOBHA JAGTAP/shobha.j@okhdfc/VEG",
+   "amount": 38.0,
+   "type": "CREDIT",
+   "currentBalance": 8071.53
+  },
+  {
+   "txnId": "SUNITA000734",
+   "valueDate": "2026-10-23",
+   "narration": "UPI/CR/351566508473/KAVITA SHIRKE/kavita.s@okaxis/VEG",
+   "amount": 71.0,
+   "type": "CREDIT",
+   "currentBalance": 8142.53
+  },
+  {
+   "txnId": "SUNITA000735",
+   "valueDate": "2026-10-23",
+   "narration": "UPI/CR/905116144502/LATA KAMBLE/9906904273@okaxis/VEG",
+   "amount": 33.0,
+   "type": "CREDIT",
+   "currentBalance": 8175.53
+  },
+  {
+   "txnId": "SUNITA000736",
+   "valueDate": "2026-10-23",
+   "narration": "UPI/DR/919812464808/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 209.66,
+   "type": "DEBIT",
+   "currentBalance": 7965.87
+  },
+  {
+   "txnId": "SUNITA000737",
+   "valueDate": "2026-10-23",
+   "narration": "UPI/DR/964347305843/GANESH DAIRY/ganeshdair@okaxis/MILK",
+   "amount": 75.78,
+   "type": "DEBIT",
+   "currentBalance": 7890.09
+  },
+  {
+   "txnId": "SUNITA000738",
+   "valueDate": "2026-10-24",
+   "narration": "UPI/CR/320390824338/MAHESH CHAVAN/mahesh.c@okhdfc/VEG",
+   "amount": 22.0,
+   "type": "CREDIT",
+   "currentBalance": 7912.09
+  },
+  {
+   "txnId": "SUNITA000739",
+   "valueDate": "2026-10-24",
+   "narration": "UPI/CR/683159334114/MEERA KADAM/7024591221@okicici/VEG",
+   "amount": 60.0,
+   "type": "CREDIT",
+   "currentBalance": 7972.09
+  },
+  {
+   "txnId": "SUNITA000740",
+   "valueDate": "2026-10-24",
+   "narration": "UPI/CR/852452831571/SHOBHA JAGTAP/shobha.j@okhdfc/VEG",
+   "amount": 28.0,
+   "type": "CREDIT",
+   "currentBalance": 8000.09
+  },
+  {
+   "txnId": "SUNITA000741",
+   "valueDate": "2026-10-24",
+   "narration": "UPI/CR/029322850890/SEEMA BORATE/seema.b@ybl/VEG",
+   "amount": 23.0,
+   "type": "CREDIT",
+   "currentBalance": 8023.09
+  },
+  {
+   "txnId": "SUNITA000742",
+   "valueDate": "2026-10-24",
+   "narration": "UPI/CR/198061816721/GANESH LONDHE/6333393040@okhdfc/VEG",
+   "amount": 44.0,
+   "type": "CREDIT",
+   "currentBalance": 8067.09
+  },
+  {
+   "txnId": "SUNITA000743",
+   "valueDate": "2026-10-24",
+   "narration": "UPI/CR/698369346268/SUNIL PAWAR/sunil.p@oksbi/VEG",
+   "amount": 20.0,
+   "type": "CREDIT",
+   "currentBalance": 8087.09
+  },
+  {
+   "txnId": "SUNITA000744",
+   "valueDate": "2026-10-24",
+   "narration": "RD INSTALMENT TO A/C 004512345678",
+   "amount": 150.0,
+   "type": "DEBIT",
+   "currentBalance": 7937.09
+  },
+  {
+   "txnId": "SUNITA000745",
+   "valueDate": "2026-10-24",
+   "narration": "UPI/DR/119149365515/MANDI VEG WHOLESALE/mandivegwh@okhdfc/STOCK",
+   "amount": 225.73,
+   "type": "DEBIT",
+   "currentBalance": 7711.36
+  },
+  {
+   "txnId": "SUNITA000746",
+   "valueDate": "2026-10-25",
+   "narration": "UPI/DR/690826740212/QUICKTALK MOBILE RECHARGE/quicktalkm@okhdfc/PREPAID",
+   "amount": 199.0,
+   "type": "DEBIT",
+   "currentBalance": 7512.36
+  },
+  {
+   "txnId": "SUNITA000747",
+   "valueDate": "2026-10-25",
+   "narration": "UPI/DR/797089116319/SAI KIRANA STORES/saikiranas@okaxis/MILK",
+   "amount": 60.16,
+   "type": "DEBIT",
+   "currentBalance": 7452.2
+  }
+ ]
+}

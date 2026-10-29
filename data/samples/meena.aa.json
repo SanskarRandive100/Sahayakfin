@@ -1,0 +1,944 @@
+{
+ "account": {
+  "masked": "XXXX4521",
+  "type": "SAVINGS"
+ },
+ "transactions": [
+  {
+   "txnId": "MEENA000001",
+   "valueDate": "2026-09-21",
+   "narration": "UPI/CR/793961071948/ARCHANA RAUT/archana.r@paytm/STITCHING",
+   "amount": 347.0,
+   "type": "CREDIT",
+   "currentBalance": 3347.0
+  },
+  {
+   "txnId": "MEENA000002",
+   "valueDate": "2026-09-21",
+   "narration": "UPI/CR/352473731168/VAISHALI KHANDARE/vaishali.k@paytm/STITCHING",
+   "amount": 411.0,
+   "type": "CREDIT",
+   "currentBalance": 3758.0
+  },
+  {
+   "txnId": "MEENA000003",
+   "valueDate": "2026-09-21",
+   "narration": "UPI/DR/647505818117/GANESH DAIRY/ganeshdair@okaxis/GROCERY",
+   "amount": 109.8,
+   "type": "DEBIT",
+   "currentBalance": 3648.2
+  },
+  {
+   "txnId": "MEENA000004",
+   "valueDate": "2026-09-21",
+   "narration": "UPI/DR/328015796778/PMPML BUS/pmpmlbus@okhdfc/BUS",
+   "amount": 33.05,
+   "type": "DEBIT",
+   "currentBalance": 3615.15
+  },
+  {
+   "txnId": "MEENA000005",
+   "valueDate": "2026-09-22",
+   "narration": "UPI/CR/122053259911/SMITA GORE/7671023122@oksbi/STITCHING",
+   "amount": 237.0,
+   "type": "CREDIT",
+   "currentBalance": 3852.15
+  },
+  {
+   "txnId": "MEENA000006",
+   "valueDate": "2026-09-22",
+   "narration": "UPI/CR/206566350994/SUNANDA BHAGAT/sunanda.b@oksbi/STITCHING",
+   "amount": 275.0,
+   "type": "CREDIT",
+   "currentBalance": 4127.15
+  },
+  {
+   "txnId": "MEENA000007",
+   "valueDate": "2026-09-22",
+   "narration": "UPI/DR/774503273230/LAXMI KIRANA STORES/laxmikiran@ybl/GROCERY",
+   "amount": 71.41,
+   "type": "DEBIT",
+   "currentBalance": 4055.74
+  },
+  {
+   "txnId": "MEENA000008",
+   "valueDate": "2026-09-22",
+   "narration": "UPI/DR/400073485375/SHREE TAILORING SUPPLIES/shreetailo@okhdfc/THREAD",
+   "amount": 337.17,
+   "type": "DEBIT",
+   "currentBalance": 3718.57
+  },
+  {
+   "txnId": "MEENA000009",
+   "valueDate": "2026-09-23",
+   "narration": "UPI/CR/235223251299/RANJANA PATIL/6002718807@okicici/STITCHING",
+   "amount": 403.0,
+   "type": "CREDIT",
+   "currentBalance": 4121.57
+  },
+  {
+   "txnId": "MEENA000010",
+   "valueDate": "2026-09-23",
+   "narration": "UPI/DR/096636510613/QUICKTALK MOBILE RECHARGE/quicktalkm@oksbi/PREPAID",
+   "amount": 149.0,
+   "type": "DEBIT",
+   "currentBalance": 3972.57
+  },
+  {
+   "txnId": "MEENA000011",
+   "valueDate": "2026-09-23",
+   "narration": "UPI/DR/738500421808/LAXMI KIRANA STORES/laxmikiran@ybl/GROCERY",
+   "amount": 103.31,
+   "type": "DEBIT",
+   "currentBalance": 3869.26
+  },
+  {
+   "txnId": "MEENA000012",
+   "valueDate": "2026-09-24",
+   "narration": "UPI/CR/729101956546/VAISHALI KHANDARE/vaishali.k@paytm/STITCHING",
+   "amount": 282.0,
+   "type": "CREDIT",
+   "currentBalance": 4151.26
+  },
+  {
+   "txnId": "MEENA000013",
+   "valueDate": "2026-09-24",
+   "narration": "UPI/DR/487317318111/GANESH DAIRY/ganeshdair@okaxis/GROCERY",
+   "amount": 135.66,
+   "type": "DEBIT",
+   "currentBalance": 4015.6
+  },
+  {
+   "txnId": "MEENA000014",
+   "valueDate": "2026-09-24",
+   "narration": "UPI/DR/243259154711/PMPML BUS/pmpmlbus@okhdfc/BUS",
+   "amount": 25.94,
+   "type": "DEBIT",
+   "currentBalance": 3989.66
+  },
+  {
+   "txnId": "MEENA000015",
+   "valueDate": "2026-09-25",
+   "narration": "UPI/CR/079059989265/MADHURI GHOLAP/9916147298@okhdfc/STITCHING",
+   "amount": 360.0,
+   "type": "CREDIT",
+   "currentBalance": 4349.66
+  },
+  {
+   "txnId": "MEENA000016",
+   "valueDate": "2026-09-25",
+   "narration": "UPI/DR/885239674603/ANITA MORE/anita.m@okicici/RENT",
+   "amount": 2500.0,
+   "type": "DEBIT",
+   "currentBalance": 1849.66
+  },
+  {
+   "txnId": "MEENA000017",
+   "valueDate": "2026-09-25",
+   "narration": "UPI/DR/999064707949/GANESH DAIRY/ganeshdair@okaxis/GROCERY",
+   "amount": 92.61,
+   "type": "DEBIT",
+   "currentBalance": 1757.05
+  },
+  {
+   "txnId": "MEENA000018",
+   "valueDate": "2026-09-25",
+   "narration": "UPI/DR/378951047018/SHREE TAILORING SUPPLIES/shreetailo@okhdfc/THREAD",
+   "amount": 258.55,
+   "type": "DEBIT",
+   "currentBalance": 1498.5
+  },
+  {
+   "txnId": "MEENA000019",
+   "valueDate": "2026-09-26",
+   "narration": "UPI/CR/875708642392/SAVITA KULKARNI/savita.k@oksbi/STITCHING",
+   "amount": 411.0,
+   "type": "CREDIT",
+   "currentBalance": 1909.5
+  },
+  {
+   "txnId": "MEENA000020",
+   "valueDate": "2026-09-26",
+   "narration": "UPI/CR/024612592533/SAVITA KULKARNI/savita.k@oksbi/STITCHING",
+   "amount": 246.0,
+   "type": "CREDIT",
+   "currentBalance": 2155.5
+  },
+  {
+   "txnId": "MEENA000021",
+   "valueDate": "2026-09-26",
+   "narration": "UPI/CR/765274302379/SUNANDA BHAGAT/sunanda.b@oksbi/STITCHING",
+   "amount": 342.0,
+   "type": "CREDIT",
+   "currentBalance": 2497.5
+  },
+  {
+   "txnId": "MEENA000022",
+   "valueDate": "2026-09-26",
+   "narration": "RD INSTALMENT TO A/C 004512345678",
+   "amount": 100.0,
+   "type": "DEBIT",
+   "currentBalance": 2397.5
+  },
+  {
+   "txnId": "MEENA000023",
+   "valueDate": "2026-09-26",
+   "narration": "UPI/DR/454089408380/LAXMI KIRANA STORES/laxmikiran@ybl/GROCERY",
+   "amount": 144.75,
+   "type": "DEBIT",
+   "currentBalance": 2252.75
+  },
+  {
+   "txnId": "MEENA000024",
+   "valueDate": "2026-09-27",
+   "narration": "UPI/DR/061745475604/GANESH DAIRY/ganeshdair@okaxis/GROCERY",
+   "amount": 97.77,
+   "type": "DEBIT",
+   "currentBalance": 2154.98
+  },
+  {
+   "txnId": "MEENA000025",
+   "valueDate": "2026-09-28",
+   "narration": "UPI/CR/899191163531/SAVITA KULKARNI/savita.k@oksbi/STITCHING",
+   "amount": 204.0,
+   "type": "CREDIT",
+   "currentBalance": 2358.98
+  },
+  {
+   "txnId": "MEENA000026",
+   "valueDate": "2026-09-28",
+   "narration": "UPI/CR/525046331962/SHWETA INGLE/shweta.i@oksbi/STITCHING",
+   "amount": 375.0,
+   "type": "CREDIT",
+   "currentBalance": 2733.98
+  },
+  {
+   "txnId": "MEENA000027",
+   "valueDate": "2026-09-28",
+   "narration": "UPI/CR/976406235188/VAISHALI KHANDARE/vaishali.k@paytm/STITCHING",
+   "amount": 314.0,
+   "type": "CREDIT",
+   "currentBalance": 3047.98
+  },
+  {
+   "txnId": "MEENA000028",
+   "valueDate": "2026-09-28",
+   "narration": "UPI/DR/616008300947/LAXMI KIRANA STORES/laxmikiran@ybl/GROCERY",
+   "amount": 73.16,
+   "type": "DEBIT",
+   "currentBalance": 2974.82
+  },
+  {
+   "txnId": "MEENA000029",
+   "valueDate": "2026-09-28",
+   "narration": "UPI/DR/969619011671/PMPML BUS/pmpmlbus@okhdfc/BUS",
+   "amount": 29.49,
+   "type": "DEBIT",
+   "currentBalance": 2945.33
+  },
+  {
+   "txnId": "MEENA000030",
+   "valueDate": "2026-09-29",
+   "narration": "UPI/CR/009658306738/ALKA SONAWANE/alka.s@paytm/STITCHING",
+   "amount": 248.0,
+   "type": "CREDIT",
+   "currentBalance": 3193.33
+  },
+  {
+   "txnId": "MEENA000031",
+   "valueDate": "2026-09-29",
+   "narration": "UPI/CR/032290640622/ALKA SONAWANE/alka.s@paytm/STITCHING",
+   "amount": 398.0,
+   "type": "CREDIT",
+   "currentBalance": 3591.33
+  },
+  {
+   "txnId": "MEENA000032",
+   "valueDate": "2026-09-29",
+   "narration": "UPI/DR/158102134400/LAXMI KIRANA STORES/laxmikiran@ybl/GROCERY",
+   "amount": 65.29,
+   "type": "DEBIT",
+   "currentBalance": 3526.04
+  },
+  {
+   "txnId": "MEENA000033",
+   "valueDate": "2026-09-29",
+   "narration": "UPI/DR/858257305546/SHREE TAILORING SUPPLIES/shreetailo@okhdfc/THREAD",
+   "amount": 366.53,
+   "type": "DEBIT",
+   "currentBalance": 3159.51
+  },
+  {
+   "txnId": "MEENA000034",
+   "valueDate": "2026-09-30",
+   "narration": "UPI/CR/996958252439/SUNANDA BHAGAT/sunanda.b@oksbi/STITCHING",
+   "amount": 417.0,
+   "type": "CREDIT",
+   "currentBalance": 3576.51
+  },
+  {
+   "txnId": "MEENA000035",
+   "valueDate": "2026-09-30",
+   "narration": "UPI/DR/519331385248/GANESH DAIRY/ganeshdair@okaxis/GROCERY",
+   "amount": 116.33,
+   "type": "DEBIT",
+   "currentBalance": 3460.18
+  },
+  {
+   "txnId": "MEENA000036",
+   "valueDate": "2026-10-01",
+   "narration": "UPI/CR/717983561212/ALKA SONAWANE/alka.s@paytm/STITCHING",
+   "amount": 215.0,
+   "type": "CREDIT",
+   "currentBalance": 3675.18
+  },
+  {
+   "txnId": "MEENA000037",
+   "valueDate": "2026-10-01",
+   "narration": "UPI/CR/429963447774/ALKA SONAWANE/alka.s@paytm/STITCHING",
+   "amount": 385.0,
+   "type": "CREDIT",
+   "currentBalance": 4060.18
+  },
+  {
+   "txnId": "MEENA000038",
+   "valueDate": "2026-10-01",
+   "narration": "UPI/CR/407427210737/ALKA SONAWANE/alka.s@paytm/STITCHING",
+   "amount": 222.0,
+   "type": "CREDIT",
+   "currentBalance": 4282.18
+  },
+  {
+   "txnId": "MEENA000039",
+   "valueDate": "2026-10-01",
+   "narration": "UPI/DR/969842421836/GANESH DAIRY/ganeshdair@okaxis/GROCERY",
+   "amount": 82.39,
+   "type": "DEBIT",
+   "currentBalance": 4199.79
+  },
+  {
+   "txnId": "MEENA000040",
+   "valueDate": "2026-10-01",
+   "narration": "UPI/DR/991199442826/PMPML BUS/pmpmlbus@okhdfc/BUS",
+   "amount": 26.59,
+   "type": "DEBIT",
+   "currentBalance": 4173.2
+  },
+  {
+   "txnId": "MEENA000041",
+   "valueDate": "2026-10-02",
+   "narration": "UPI/CR/693122854218/ARCHANA RAUT/archana.r@paytm/STITCHING",
+   "amount": 205.0,
+   "type": "CREDIT",
+   "currentBalance": 4378.2
+  },
+  {
+   "txnId": "MEENA000042",
+   "valueDate": "2026-10-02",
+   "narration": "UPI/CR/031530047648/ARCHANA RAUT/archana.r@paytm/STITCHING",
+   "amount": 379.0,
+   "type": "CREDIT",
+   "currentBalance": 4757.2
+  },
+  {
+   "txnId": "MEENA000043",
+   "valueDate": "2026-10-02",
+   "narration": "UPI/DR/464141775725/GANESH DAIRY/ganeshdair@okaxis/GROCERY",
+   "amount": 96.93,
+   "type": "DEBIT",
+   "currentBalance": 4660.27
+  },
+  {
+   "txnId": "MEENA000044",
+   "valueDate": "2026-10-02",
+   "narration": "UPI/DR/581530166934/SHREE TAILORING SUPPLIES/shreetailo@okhdfc/THREAD",
+   "amount": 218.26,
+   "type": "DEBIT",
+   "currentBalance": 4442.01
+  },
+  {
+   "txnId": "MEENA000045",
+   "valueDate": "2026-10-03",
+   "narration": "UPI/CR/333458251178/SMITA GORE/7671023122@oksbi/STITCHING",
+   "amount": 266.0,
+   "type": "CREDIT",
+   "currentBalance": 4708.01
+  },
+  {
+   "txnId": "MEENA000046",
+   "valueDate": "2026-10-03",
+   "narration": "UPI/DR/632872886381/LAXMI KIRANA STORES/laxmikiran@ybl/GROCERY",
+   "amount": 93.92,
+   "type": "DEBIT",
+   "currentBalance": 4614.09
+  },
+  {
+   "txnId": "MEENA000047",
+   "valueDate": "2026-10-04",
+   "narration": "UPI/DR/472610021404/GANESH DAIRY/ganeshdair@okaxis/GROCERY",
+   "amount": 150.89,
+   "type": "DEBIT",
+   "currentBalance": 4463.2
+  },
+  {
+   "txnId": "MEENA000048",
+   "valueDate": "2026-10-05",
+   "narration": "UPI/CR/790109504831/PALLAVI DHAMALE/pallavi.d@oksbi/STITCHING",
+   "amount": 388.0,
+   "type": "CREDIT",
+   "currentBalance": 4851.2
+  },
+  {
+   "txnId": "MEENA000049",
+   "valueDate": "2026-10-05",
+   "narration": "UPI/DR/233533348552/LAXMI KIRANA STORES/laxmikiran@ybl/GROCERY",
+   "amount": 110.78,
+   "type": "DEBIT",
+   "currentBalance": 4740.42
+  },
+  {
+   "txnId": "MEENA000050",
+   "valueDate": "2026-10-05",
+   "narration": "UPI/DR/590913507710/PMPML BUS/pmpmlbus@okhdfc/BUS",
+   "amount": 26.72,
+   "type": "DEBIT",
+   "currentBalance": 4713.7
+  },
+  {
+   "txnId": "MEENA000051",
+   "valueDate": "2026-10-06",
+   "narration": "UPI/CR/420475096689/ARCHANA RAUT/archana.r@paytm/STITCHING",
+   "amount": 310.0,
+   "type": "CREDIT",
+   "currentBalance": 5023.7
+  },
+  {
+   "txnId": "MEENA000052",
+   "valueDate": "2026-10-06",
+   "narration": "UPI/CR/525460395553/MADHURI GHOLAP/9916147298@okhdfc/STITCHING",
+   "amount": 228.0,
+   "type": "CREDIT",
+   "currentBalance": 5251.7
+  },
+  {
+   "txnId": "MEENA000053",
+   "valueDate": "2026-10-06",
+   "narration": "UPI/DR/912973610697/GANESH DAIRY/ganeshdair@okaxis/GROCERY",
+   "amount": 63.11,
+   "type": "DEBIT",
+   "currentBalance": 5188.59
+  },
+  {
+   "txnId": "MEENA000054",
+   "valueDate": "2026-10-06",
+   "narration": "UPI/DR/424205689837/SHREE TAILORING SUPPLIES/shreetailo@okhdfc/THREAD",
+   "amount": 264.75,
+   "type": "DEBIT",
+   "currentBalance": 4923.84
+  },
+  {
+   "txnId": "MEENA000055",
+   "valueDate": "2026-10-07",
+   "narration": "UPI/CR/563783935031/VAISHALI KHANDARE/vaishali.k@paytm/STITCHING",
+   "amount": 397.0,
+   "type": "CREDIT",
+   "currentBalance": 5320.84
+  },
+  {
+   "txnId": "MEENA000056",
+   "valueDate": "2026-10-07",
+   "narration": "UPI/CR/706345871274/SAVITA KULKARNI/savita.k@oksbi/STITCHING",
+   "amount": 298.0,
+   "type": "CREDIT",
+   "currentBalance": 5618.84
+  },
+  {
+   "txnId": "MEENA000057",
+   "valueDate": "2026-10-07",
+   "narration": "UPI/CR/418371001245/PALLAVI DHAMALE/pallavi.d@oksbi/STITCHING",
+   "amount": 300.0,
+   "type": "CREDIT",
+   "currentBalance": 5918.84
+  },
+  {
+   "txnId": "MEENA000058",
+   "valueDate": "2026-10-07",
+   "narration": "UPI/DR/553758940661/GANESH DAIRY/ganeshdair@okaxis/GROCERY",
+   "amount": 99.63,
+   "type": "DEBIT",
+   "currentBalance": 5819.21
+  },
+  {
+   "txnId": "MEENA000059",
+   "valueDate": "2026-10-08",
+   "narration": "UPI/CR/567085475306/ALKA SONAWANE/alka.s@paytm/STITCHING",
+   "amount": 299.0,
+   "type": "CREDIT",
+   "currentBalance": 6118.21
+  },
+  {
+   "txnId": "MEENA000060",
+   "valueDate": "2026-10-08",
+   "narration": "UPI/DR/919910255757/GANESH DAIRY/ganeshdair@okaxis/GROCERY",
+   "amount": 116.73,
+   "type": "DEBIT",
+   "currentBalance": 6001.48
+  },
+  {
+   "txnId": "MEENA000061",
+   "valueDate": "2026-10-08",
+   "narration": "UPI/DR/464684642525/PMPML BUS/pmpmlbus@okhdfc/BUS",
+   "amount": 33.35,
+   "type": "DEBIT",
+   "currentBalance": 5968.13
+  },
+  {
+   "txnId": "MEENA000062",
+   "valueDate": "2026-10-09",
+   "narration": "UPI/CR/285000697771/SAVITA KULKARNI/savita.k@oksbi/STITCHING",
+   "amount": 302.0,
+   "type": "CREDIT",
+   "currentBalance": 6270.13
+  },
+  {
+   "txnId": "MEENA000063",
+   "valueDate": "2026-10-09",
+   "narration": "UPI/CR/288376293586/ARCHANA RAUT/archana.r@paytm/STITCHING",
+   "amount": 415.0,
+   "type": "CREDIT",
+   "currentBalance": 6685.13
+  },
+  {
+   "txnId": "MEENA000064",
+   "valueDate": "2026-10-09",
+   "narration": "UPI/CR/655588377798/MADHURI GHOLAP/9916147298@okhdfc/STITCHING",
+   "amount": 203.0,
+   "type": "CREDIT",
+   "currentBalance": 6888.13
+  },
+  {
+   "txnId": "MEENA000065",
+   "valueDate": "2026-10-09",
+   "narration": "UPI/DR/160955761642/GANESH DAIRY/ganeshdair@okaxis/GROCERY",
+   "amount": 147.41,
+   "type": "DEBIT",
+   "currentBalance": 6740.72
+  },
+  {
+   "txnId": "MEENA000066",
+   "valueDate": "2026-10-09",
+   "narration": "UPI/DR/060846966040/SHREE TAILORING SUPPLIES/shreetailo@okhdfc/THREAD",
+   "amount": 257.92,
+   "type": "DEBIT",
+   "currentBalance": 6482.8
+  },
+  {
+   "txnId": "MEENA000067",
+   "valueDate": "2026-10-10",
+   "narration": "UPI/CR/927434767167/RANJANA PATIL/6002718807@okicici/STITCHING",
+   "amount": 309.0,
+   "type": "CREDIT",
+   "currentBalance": 6791.8
+  },
+  {
+   "txnId": "MEENA000068",
+   "valueDate": "2026-10-10",
+   "narration": "RD INSTALMENT TO A/C 004512345678",
+   "amount": 100.0,
+   "type": "DEBIT",
+   "currentBalance": 6691.8
+  },
+  {
+   "txnId": "MEENA000069",
+   "valueDate": "2026-10-10",
+   "narration": "UPI/DR/943337281922/GANESH DAIRY/ganeshdair@okaxis/GROCERY",
+   "amount": 71.86,
+   "type": "DEBIT",
+   "currentBalance": 6619.94
+  },
+  {
+   "txnId": "MEENA000070",
+   "valueDate": "2026-10-11",
+   "narration": "UPI/DR/387265971231/GANESH DAIRY/ganeshdair@okaxis/GROCERY",
+   "amount": 98.64,
+   "type": "DEBIT",
+   "currentBalance": 6521.3
+  },
+  {
+   "txnId": "MEENA000071",
+   "valueDate": "2026-10-12",
+   "narration": "UPI/CR/112514484411/SMITA GORE/7671023122@oksbi/STITCHING",
+   "amount": 364.0,
+   "type": "CREDIT",
+   "currentBalance": 6885.3
+  },
+  {
+   "txnId": "MEENA000072",
+   "valueDate": "2026-10-12",
+   "narration": "UPI/DR/351576291967/LAXMI KIRANA STORES/laxmikiran@ybl/GROCERY",
+   "amount": 145.32,
+   "type": "DEBIT",
+   "currentBalance": 6739.98
+  },
+  {
+   "txnId": "MEENA000073",
+   "valueDate": "2026-10-12",
+   "narration": "UPI/DR/850437927468/PMPML BUS/pmpmlbus@okhdfc/BUS",
+   "amount": 39.63,
+   "type": "DEBIT",
+   "currentBalance": 6700.35
+  },
+  {
+   "txnId": "MEENA000074",
+   "valueDate": "2026-10-13",
+   "narration": "UPI/CR/337115764497/SUNANDA BHAGAT/sunanda.b@oksbi/STITCHING",
+   "amount": 384.0,
+   "type": "CREDIT",
+   "currentBalance": 7084.35
+  },
+  {
+   "txnId": "MEENA000075",
+   "valueDate": "2026-10-13",
+   "narration": "UPI/CR/709464682193/SAVITA KULKARNI/savita.k@oksbi/STITCHING",
+   "amount": 268.0,
+   "type": "CREDIT",
+   "currentBalance": 7352.35
+  },
+  {
+   "txnId": "MEENA000076",
+   "valueDate": "2026-10-13",
+   "narration": "UPI/CR/304698881107/PALLAVI DHAMALE/pallavi.d@oksbi/STITCHING",
+   "amount": 283.0,
+   "type": "CREDIT",
+   "currentBalance": 7635.35
+  },
+  {
+   "txnId": "MEENA000077",
+   "valueDate": "2026-10-13",
+   "narration": "UPI/DR/249473138429/LAXMI KIRANA STORES/laxmikiran@ybl/GROCERY",
+   "amount": 141.81,
+   "type": "DEBIT",
+   "currentBalance": 7493.54
+  },
+  {
+   "txnId": "MEENA000078",
+   "valueDate": "2026-10-13",
+   "narration": "UPI/DR/160150783114/SHREE TAILORING SUPPLIES/shreetailo@okhdfc/THREAD",
+   "amount": 244.37,
+   "type": "DEBIT",
+   "currentBalance": 7249.17
+  },
+  {
+   "txnId": "MEENA000079",
+   "valueDate": "2026-10-14",
+   "narration": "UPI/CR/117623623727/VAISHALI KHANDARE/vaishali.k@paytm/STITCHING",
+   "amount": 321.0,
+   "type": "CREDIT",
+   "currentBalance": 7570.17
+  },
+  {
+   "txnId": "MEENA000080",
+   "valueDate": "2026-10-14",
+   "narration": "UPI/DR/821138684737/GANESH DAIRY/ganeshdair@okaxis/GROCERY",
+   "amount": 104.85,
+   "type": "DEBIT",
+   "currentBalance": 7465.32
+  },
+  {
+   "txnId": "MEENA000081",
+   "valueDate": "2026-10-15",
+   "narration": "UPI/CR/963778332647/SAVITA KULKARNI/savita.k@oksbi/STITCHING",
+   "amount": 311.0,
+   "type": "CREDIT",
+   "currentBalance": 7776.32
+  },
+  {
+   "txnId": "MEENA000082",
+   "valueDate": "2026-10-15",
+   "narration": "UPI/CR/290861523911/SHWETA INGLE/shweta.i@oksbi/STITCHING",
+   "amount": 374.0,
+   "type": "CREDIT",
+   "currentBalance": 8150.32
+  },
+  {
+   "txnId": "MEENA000083",
+   "valueDate": "2026-10-15",
+   "narration": "UPI/DR/513499458038/GANESH DAIRY/ganeshdair@okaxis/GROCERY",
+   "amount": 132.16,
+   "type": "DEBIT",
+   "currentBalance": 8018.16
+  },
+  {
+   "txnId": "MEENA000084",
+   "valueDate": "2026-10-15",
+   "narration": "UPI/DR/848004290798/PMPML BUS/pmpmlbus@okhdfc/BUS",
+   "amount": 38.84,
+   "type": "DEBIT",
+   "currentBalance": 7979.32
+  },
+  {
+   "txnId": "MEENA000085",
+   "valueDate": "2026-10-16",
+   "narration": "UPI/CR/975635705262/PALLAVI DHAMALE/pallavi.d@oksbi/STITCHING",
+   "amount": 220.0,
+   "type": "CREDIT",
+   "currentBalance": 8199.32
+  },
+  {
+   "txnId": "MEENA000086",
+   "valueDate": "2026-10-16",
+   "narration": "UPI/DR/230903472685/LAXMI KIRANA STORES/laxmikiran@ybl/GROCERY",
+   "amount": 80.18,
+   "type": "DEBIT",
+   "currentBalance": 8119.14
+  },
+  {
+   "txnId": "MEENA000087",
+   "valueDate": "2026-10-16",
+   "narration": "UPI/DR/616714906838/SHREE TAILORING SUPPLIES/shreetailo@okhdfc/THREAD",
+   "amount": 353.98,
+   "type": "DEBIT",
+   "currentBalance": 7765.16
+  },
+  {
+   "txnId": "MEENA000088",
+   "valueDate": "2026-10-17",
+   "narration": "UPI/CR/403698397180/ALKA SONAWANE/alka.s@paytm/STITCHING",
+   "amount": 226.0,
+   "type": "CREDIT",
+   "currentBalance": 7991.16
+  },
+  {
+   "txnId": "MEENA000089",
+   "valueDate": "2026-10-17",
+   "narration": "UPI/CR/436222771401/ALKA SONAWANE/alka.s@paytm/STITCHING",
+   "amount": 318.0,
+   "type": "CREDIT",
+   "currentBalance": 8309.16
+  },
+  {
+   "txnId": "MEENA000090",
+   "valueDate": "2026-10-17",
+   "narration": "UPI/CR/349149705618/ARCHANA RAUT/archana.r@paytm/STITCHING",
+   "amount": 258.0,
+   "type": "CREDIT",
+   "currentBalance": 8567.16
+  },
+  {
+   "txnId": "MEENA000091",
+   "valueDate": "2026-10-17",
+   "narration": "RD INSTALMENT TO A/C 004512345678",
+   "amount": 100.0,
+   "type": "DEBIT",
+   "currentBalance": 8467.16
+  },
+  {
+   "txnId": "MEENA000092",
+   "valueDate": "2026-10-17",
+   "narration": "UPI/DR/683449729802/LAXMI KIRANA STORES/laxmikiran@ybl/GROCERY",
+   "amount": 116.55,
+   "type": "DEBIT",
+   "currentBalance": 8350.61
+  },
+  {
+   "txnId": "MEENA000093",
+   "valueDate": "2026-10-18",
+   "narration": "UPI/DR/172255221469/LAXMI KIRANA STORES/laxmikiran@ybl/GROCERY",
+   "amount": 126.17,
+   "type": "DEBIT",
+   "currentBalance": 8224.44
+  },
+  {
+   "txnId": "MEENA000094",
+   "valueDate": "2026-10-19",
+   "narration": "UPI/CR/229077983043/VAISHALI KHANDARE/vaishali.k@paytm/STITCHING",
+   "amount": 300.0,
+   "type": "CREDIT",
+   "currentBalance": 8524.44
+  },
+  {
+   "txnId": "MEENA000095",
+   "valueDate": "2026-10-19",
+   "narration": "UPI/DR/587114583950/LAXMI KIRANA STORES/laxmikiran@ybl/GROCERY",
+   "amount": 88.63,
+   "type": "DEBIT",
+   "currentBalance": 8435.81
+  },
+  {
+   "txnId": "MEENA000096",
+   "valueDate": "2026-10-19",
+   "narration": "UPI/DR/468822712340/PMPML BUS/pmpmlbus@okhdfc/BUS",
+   "amount": 37.22,
+   "type": "DEBIT",
+   "currentBalance": 8398.59
+  },
+  {
+   "txnId": "MEENA000097",
+   "valueDate": "2026-10-20",
+   "narration": "UPI/CR/741859586610/RANJANA PATIL/6002718807@okicici/STITCHING",
+   "amount": 313.0,
+   "type": "CREDIT",
+   "currentBalance": 8711.59
+  },
+  {
+   "txnId": "MEENA000098",
+   "valueDate": "2026-10-20",
+   "narration": "UPI/CR/071458363487/SHWETA INGLE/shweta.i@oksbi/STITCHING",
+   "amount": 322.0,
+   "type": "CREDIT",
+   "currentBalance": 9033.59
+  },
+  {
+   "txnId": "MEENA000099",
+   "valueDate": "2026-10-20",
+   "narration": "UPI/DR/058519804364/LAXMI KIRANA STORES/laxmikiran@ybl/GROCERY",
+   "amount": 67.29,
+   "type": "DEBIT",
+   "currentBalance": 8966.3
+  },
+  {
+   "txnId": "MEENA000100",
+   "valueDate": "2026-10-20",
+   "narration": "UPI/DR/430457990583/SHREE TAILORING SUPPLIES/shreetailo@okhdfc/THREAD",
+   "amount": 235.74,
+   "type": "DEBIT",
+   "currentBalance": 8730.56
+  },
+  {
+   "txnId": "MEENA000101",
+   "valueDate": "2026-10-21",
+   "narration": "UPI/CR/356238456379/ALKA SONAWANE/alka.s@paytm/STITCHING",
+   "amount": 397.0,
+   "type": "CREDIT",
+   "currentBalance": 9127.56
+  },
+  {
+   "txnId": "MEENA000102",
+   "valueDate": "2026-10-21",
+   "narration": "UPI/DR/166536893694/QUICKTALK MOBILE RECHARGE/quicktalkm@oksbi/PREPAID",
+   "amount": 149.0,
+   "type": "DEBIT",
+   "currentBalance": 8978.56
+  },
+  {
+   "txnId": "MEENA000103",
+   "valueDate": "2026-10-21",
+   "narration": "UPI/DR/584429134321/LAXMI KIRANA STORES/laxmikiran@ybl/GROCERY",
+   "amount": 129.91,
+   "type": "DEBIT",
+   "currentBalance": 8848.65
+  },
+  {
+   "txnId": "MEENA000104",
+   "valueDate": "2026-10-22",
+   "narration": "UPI/CR/303625041733/MADHURI GHOLAP/9916147298@okhdfc/STITCHING",
+   "amount": 376.0,
+   "type": "CREDIT",
+   "currentBalance": 9224.65
+  },
+  {
+   "txnId": "MEENA000105",
+   "valueDate": "2026-10-22",
+   "narration": "UPI/CR/747901364165/SHWETA INGLE/shweta.i@oksbi/STITCHING",
+   "amount": 245.0,
+   "type": "CREDIT",
+   "currentBalance": 9469.65
+  },
+  {
+   "txnId": "MEENA000106",
+   "valueDate": "2026-10-22",
+   "narration": "UPI/DR/804611242438/GANESH DAIRY/ganeshdair@okaxis/GROCERY",
+   "amount": 69.43,
+   "type": "DEBIT",
+   "currentBalance": 9400.22
+  },
+  {
+   "txnId": "MEENA000107",
+   "valueDate": "2026-10-22",
+   "narration": "UPI/DR/862057371269/PMPML BUS/pmpmlbus@okhdfc/BUS",
+   "amount": 33.15,
+   "type": "DEBIT",
+   "currentBalance": 9367.07
+  },
+  {
+   "txnId": "MEENA000108",
+   "valueDate": "2026-10-23",
+   "narration": "UPI/CR/972657539427/VAISHALI KHANDARE/vaishali.k@paytm/STITCHING",
+   "amount": 337.0,
+   "type": "CREDIT",
+   "currentBalance": 9704.07
+  },
+  {
+   "txnId": "MEENA000109",
+   "valueDate": "2026-10-23",
+   "narration": "UPI/CR/222809459229/VAISHALI KHANDARE/vaishali.k@paytm/STITCHING",
+   "amount": 326.0,
+   "type": "CREDIT",
+   "currentBalance": 10030.07
+  },
+  {
+   "txnId": "MEENA000110",
+   "valueDate": "2026-10-23",
+   "narration": "UPI/DR/855827468335/LAXMI KIRANA STORES/laxmikiran@ybl/GROCERY",
+   "amount": 150.48,
+   "type": "DEBIT",
+   "currentBalance": 9879.59
+  },
+  {
+   "txnId": "MEENA000111",
+   "valueDate": "2026-10-23",
+   "narration": "UPI/DR/512893060181/SHREE TAILORING SUPPLIES/shreetailo@okhdfc/THREAD",
+   "amount": 356.46,
+   "type": "DEBIT",
+   "currentBalance": 9523.13
+  },
+  {
+   "txnId": "MEENA000112",
+   "valueDate": "2026-10-24",
+   "narration": "UPI/CR/009760809238/MADHURI GHOLAP/9916147298@okhdfc/STITCHING",
+   "amount": 208.0,
+   "type": "CREDIT",
+   "currentBalance": 9731.13
+  },
+  {
+   "txnId": "MEENA000113",
+   "valueDate": "2026-10-24",
+   "narration": "UPI/CR/452204599775/VAISHALI KHANDARE/vaishali.k@paytm/STITCHING",
+   "amount": 418.0,
+   "type": "CREDIT",
+   "currentBalance": 10149.13
+  },
+  {
+   "txnId": "MEENA000114",
+   "valueDate": "2026-10-24",
+   "narration": "UPI/CR/922783729777/SHWETA INGLE/shweta.i@oksbi/STITCHING",
+   "amount": 376.0,
+   "type": "CREDIT",
+   "currentBalance": 10525.13
+  },
+  {
+   "txnId": "MEENA000115",
+   "valueDate": "2026-10-24",
+   "narration": "UPI/DR/814283895140/LAXMI KIRANA STORES/laxmikiran@ybl/GROCERY",
+   "amount": 139.07,
+   "type": "DEBIT",
+   "currentBalance": 10386.06
+  },
+  {
+   "txnId": "MEENA000116",
+   "valueDate": "2026-10-25",
+   "narration": "UPI/DR/345478597980/ANITA MORE/anita.m@okicici/RENT",
+   "amount": 2500.0,
+   "type": "DEBIT",
+   "currentBalance": 7886.06
+  },
+  {
+   "txnId": "MEENA000117",
+   "valueDate": "2026-10-25",
+   "narration": "UPI/DR/499269004608/GANESH DAIRY/ganeshdair@okaxis/GROCERY",
+   "amount": 106.35,
+   "type": "DEBIT",
+   "currentBalance": 7779.71
+  }
+ ]
+}

@@ -1,0 +1,2280 @@
+{
+ "account": {
+  "masked": "XXXX4521",
+  "type": "SAVINGS"
+ },
+ "transactions": [
+  {
+   "txnId": "RAVI000001",
+   "valueDate": "2026-07-28",
+   "narration": "UPI/DR/661951365046/BHARAT PETROL POINT/bharatpetr@ybl/FUEL",
+   "amount": 133.65,
+   "type": "DEBIT",
+   "currentBalance": 5066.35
+  },
+  {
+   "txnId": "RAVI000002",
+   "valueDate": "2026-07-28",
+   "narration": "UPI/DR/258657918392/AMRUTTULYA TEA/amruttulya@okhdfc/FOOD",
+   "amount": 124.01,
+   "type": "DEBIT",
+   "currentBalance": 4942.34
+  },
+  {
+   "txnId": "RAVI000003",
+   "valueDate": "2026-07-29",
+   "narration": "UPI/DR/974323276642/IOCL FUEL STATION/ioclfuelst@oksbi/FUEL",
+   "amount": 125.2,
+   "type": "DEBIT",
+   "currentBalance": 4817.14
+  },
+  {
+   "txnId": "RAVI000004",
+   "valueDate": "2026-07-29",
+   "narration": "UPI/DR/286685566965/SHREE KIRANA STORES/shreekiran@oksbi/FOOD",
+   "amount": 130.81,
+   "type": "DEBIT",
+   "currentBalance": 4686.33
+  },
+  {
+   "txnId": "RAVI000005",
+   "valueDate": "2026-07-30",
+   "narration": "UPI/DR/042344596771/QUICKTALK MOBILE RECHARGE/quicktalkm@okaxis/PREPAID",
+   "amount": 299.0,
+   "type": "DEBIT",
+   "currentBalance": 4387.33
+  },
+  {
+   "txnId": "RAVI000006",
+   "valueDate": "2026-07-30",
+   "narration": "UPI/DR/401434049203/IOCL FUEL STATION/ioclfuelst@oksbi/FUEL",
+   "amount": 120.09,
+   "type": "DEBIT",
+   "currentBalance": 4267.24
+  },
+  {
+   "txnId": "RAVI000007",
+   "valueDate": "2026-07-30",
+   "narration": "UPI/DR/610690834174/JAI MALHAR DHABA/jaimalhard@okicici/FOOD",
+   "amount": 92.57,
+   "type": "DEBIT",
+   "currentBalance": 4174.67
+  },
+  {
+   "txnId": "RAVI000008",
+   "valueDate": "2026-07-31",
+   "narration": "NEFT CR-QUICKBITE TECHNOLOGIES PVT LTD-WEEKLY PAYOUT W31",
+   "amount": 5500.0,
+   "type": "CREDIT",
+   "currentBalance": 9674.67
+  },
+  {
+   "txnId": "RAVI000009",
+   "valueDate": "2026-07-31",
+   "narration": "UPI/CR/936746402281/NIKHIL GOKHALE/nikhil.g@okhdfc/TIP",
+   "amount": 32.0,
+   "type": "CREDIT",
+   "currentBalance": 9706.67
+  },
+  {
+   "txnId": "RAVI000010",
+   "valueDate": "2026-07-31",
+   "narration": "UPI/DR/517053679892/BHARAT PETROL POINT/bharatpetr@ybl/FUEL",
+   "amount": 114.42,
+   "type": "DEBIT",
+   "currentBalance": 9592.25
+  },
+  {
+   "txnId": "RAVI000011",
+   "valueDate": "2026-07-31",
+   "narration": "UPI/DR/019824348206/SHREE KIRANA STORES/shreekiran@oksbi/FOOD",
+   "amount": 92.98,
+   "type": "DEBIT",
+   "currentBalance": 9499.27
+  },
+  {
+   "txnId": "RAVI000012",
+   "valueDate": "2026-08-01",
+   "narration": "UPI/CR/178577694942/ROHAN JOSHI/7136237438@okhdfc/TIP",
+   "amount": 67.0,
+   "type": "CREDIT",
+   "currentBalance": 9566.27
+  },
+  {
+   "txnId": "RAVI000013",
+   "valueDate": "2026-08-01",
+   "narration": "RD INSTALMENT TO A/C 004512345678",
+   "amount": 200.0,
+   "type": "DEBIT",
+   "currentBalance": 9366.27
+  },
+  {
+   "txnId": "RAVI000014",
+   "valueDate": "2026-08-01",
+   "narration": "UPI/DR/686908680667/IOCL FUEL STATION/ioclfuelst@oksbi/FUEL",
+   "amount": 174.66,
+   "type": "DEBIT",
+   "currentBalance": 9191.61
+  },
+  {
+   "txnId": "RAVI000015",
+   "valueDate": "2026-08-01",
+   "narration": "UPI/DR/145226330259/ANNAPURNA MESS/annapurnam@paytm/FOOD",
+   "amount": 93.63,
+   "type": "DEBIT",
+   "currentBalance": 9097.98
+  },
+  {
+   "txnId": "RAVI000016",
+   "valueDate": "2026-08-02",
+   "narration": "UPI/DR/911095925395/AMRUTTULYA TEA/amruttulya@okhdfc/FOOD",
+   "amount": 81.79,
+   "type": "DEBIT",
+   "currentBalance": 9016.19
+  },
+  {
+   "txnId": "RAVI000017",
+   "valueDate": "2026-08-02",
+   "narration": "UPI/DR/806272087699/LAXMI SHINDE/laxmi.s@oksbi/HOME",
+   "amount": 800.0,
+   "type": "DEBIT",
+   "currentBalance": 8216.19
+  },
+  {
+   "txnId": "RAVI000018",
+   "valueDate": "2026-08-03",
+   "narration": "UPI/CR/948315667715/PRIYA DESHPANDE/priya.d@okicici/TIP",
+   "amount": 76.0,
+   "type": "CREDIT",
+   "currentBalance": 8292.19
+  },
+  {
+   "txnId": "RAVI000019",
+   "valueDate": "2026-08-03",
+   "narration": "UPI/DR/116843072727/IOCL FUEL STATION/ioclfuelst@oksbi/FUEL",
+   "amount": 176.36,
+   "type": "DEBIT",
+   "currentBalance": 8115.83
+  },
+  {
+   "txnId": "RAVI000020",
+   "valueDate": "2026-08-03",
+   "narration": "UPI/DR/045226751042/JAI MALHAR DHABA/jaimalhard@okicici/FOOD",
+   "amount": 115.17,
+   "type": "DEBIT",
+   "currentBalance": 8000.66
+  },
+  {
+   "txnId": "RAVI000021",
+   "valueDate": "2026-08-04",
+   "narration": "UPI/CR/602261665771/AMIT KULKARNI/amit.k@okicici/TIP",
+   "amount": 52.0,
+   "type": "CREDIT",
+   "currentBalance": 8052.66
+  },
+  {
+   "txnId": "RAVI000022",
+   "valueDate": "2026-08-04",
+   "narration": "UPI/DR/212833535866/SURESH PATIL/suresh.p@ybl/RENT",
+   "amount": 6000.0,
+   "type": "DEBIT",
+   "currentBalance": 2052.66
+  },
+  {
+   "txnId": "RAVI000023",
+   "valueDate": "2026-08-04",
+   "narration": "UPI/DR/975445192738/BHARAT PETROL POINT/bharatpetr@ybl/FUEL",
+   "amount": 174.88,
+   "type": "DEBIT",
+   "currentBalance": 1877.78
+  },
+  {
+   "txnId": "RAVI000024",
+   "valueDate": "2026-08-04",
+   "narration": "UPI/DR/138780954485/AMRUTTULYA TEA/amruttulya@okhdfc/FOOD",
+   "amount": 116.78,
+   "type": "DEBIT",
+   "currentBalance": 1761.0
+  },
+  {
+   "txnId": "RAVI000025",
+   "valueDate": "2026-08-05",
+   "narration": "UPI/CR/643377215823/POOJA KALE/8347272726@oksbi/TIP",
+   "amount": 50.0,
+   "type": "CREDIT",
+   "currentBalance": 1811.0
+  },
+  {
+   "txnId": "RAVI000026",
+   "valueDate": "2026-08-05",
+   "narration": "UPI/DR/731726790006/HP PETROL PUMP KOTHRUD/hppetrolpu@oksbi/FUEL",
+   "amount": 158.89,
+   "type": "DEBIT",
+   "currentBalance": 1652.11
+  },
+  {
+   "txnId": "RAVI000027",
+   "valueDate": "2026-08-05",
+   "narration": "UPI/DR/211884770682/AMRUTTULYA TEA/amruttulya@okhdfc/FOOD",
+   "amount": 114.62,
+   "type": "DEBIT",
+   "currentBalance": 1537.49
+  },
+  {
+   "txnId": "RAVI000028",
+   "valueDate": "2026-08-05",
+   "narration": "ATM CASH WDL KOTHRUD PUNE",
+   "amount": 1000.0,
+   "type": "DEBIT",
+   "currentBalance": 537.49
+  },
+  {
+   "txnId": "RAVI000029",
+   "valueDate": "2026-08-06",
+   "narration": "UPI/DR/766867622743/IOCL FUEL STATION/ioclfuelst@oksbi/FUEL",
+   "amount": 160.29,
+   "type": "DEBIT",
+   "currentBalance": 377.2
+  },
+  {
+   "txnId": "RAVI000030",
+   "valueDate": "2026-08-06",
+   "narration": "UPI/DR/406752233083/ANNAPURNA MESS/annapurnam@paytm/FOOD",
+   "amount": 106.61,
+   "type": "DEBIT",
+   "currentBalance": 270.59
+  },
+  {
+   "txnId": "RAVI000031",
+   "valueDate": "2026-08-07",
+   "narration": "NEFT CR-QUICKBITE TECHNOLOGIES PVT LTD-WEEKLY PAYOUT W32",
+   "amount": 4809.63,
+   "type": "CREDIT",
+   "currentBalance": 5080.22
+  },
+  {
+   "txnId": "RAVI000032",
+   "valueDate": "2026-08-07",
+   "narration": "UPI/CR/117762032655/POOJA KALE/8347272726@oksbi/TIP",
+   "amount": 23.0,
+   "type": "CREDIT",
+   "currentBalance": 5103.22
+  },
+  {
+   "txnId": "RAVI000033",
+   "valueDate": "2026-08-07",
+   "narration": "UPI/DR/635651480838/HP PETROL PUMP KOTHRUD/hppetrolpu@oksbi/FUEL",
+   "amount": 166.48,
+   "type": "DEBIT",
+   "currentBalance": 4936.74
+  },
+  {
+   "txnId": "RAVI000034",
+   "valueDate": "2026-08-07",
+   "narration": "UPI/DR/876402645429/SHREE KIRANA STORES/shreekiran@oksbi/FOOD",
+   "amount": 123.6,
+   "type": "DEBIT",
+   "currentBalance": 4813.14
+  },
+  {
+   "txnId": "RAVI000035",
+   "valueDate": "2026-08-08",
+   "narration": "UPI/DR/163165781749/BHARAT PETROL POINT/bharatpetr@ybl/FUEL",
+   "amount": 146.67,
+   "type": "DEBIT",
+   "currentBalance": 4666.47
+  },
+  {
+   "txnId": "RAVI000036",
+   "valueDate": "2026-08-08",
+   "narration": "UPI/DR/889745345221/JAI MALHAR DHABA/jaimalhard@okicici/FOOD",
+   "amount": 83.35,
+   "type": "DEBIT",
+   "currentBalance": 4583.12
+  },
+  {
+   "txnId": "RAVI000037",
+   "valueDate": "2026-08-09",
+   "narration": "UPI/CR/147415425076/SNEHA PATWARDHAN/sneha.p@okhdfc/TIP",
+   "amount": 78.0,
+   "type": "CREDIT",
+   "currentBalance": 4661.12
+  },
+  {
+   "txnId": "RAVI000038",
+   "valueDate": "2026-08-09",
+   "narration": "UPI/DR/921433011567/SHREE KIRANA STORES/shreekiran@oksbi/FOOD",
+   "amount": 77.88,
+   "type": "DEBIT",
+   "currentBalance": 4583.24
+  },
+  {
+   "txnId": "RAVI000039",
+   "valueDate": "2026-08-10",
+   "narration": "UPI/CR/933590298027/VISHAL MORE/vishal.m@ybl/TIP",
+   "amount": 30.0,
+   "type": "CREDIT",
+   "currentBalance": 4613.24
+  },
+  {
+   "txnId": "RAVI000040",
+   "valueDate": "2026-08-10",
+   "narration": "UPI/CR/059636894419/POOJA KALE/8347272726@oksbi/TIP",
+   "amount": 78.0,
+   "type": "CREDIT",
+   "currentBalance": 4691.24
+  },
+  {
+   "txnId": "RAVI000041",
+   "valueDate": "2026-08-10",
+   "narration": "UPI/DR/302005996592/CITY POWER BILL/citypowerb@okaxis/ELECTRICITY",
+   "amount": 603.52,
+   "type": "DEBIT",
+   "currentBalance": 4087.72
+  },
+  {
+   "txnId": "RAVI000042",
+   "valueDate": "2026-08-10",
+   "narration": "UPI/DR/710996227385/HP PETROL PUMP KOTHRUD/hppetrolpu@oksbi/FUEL",
+   "amount": 133.73,
+   "type": "DEBIT",
+   "currentBalance": 3953.99
+  },
+  {
+   "txnId": "RAVI000043",
+   "valueDate": "2026-08-10",
+   "narration": "UPI/DR/099045254891/SHREE KIRANA STORES/shreekiran@oksbi/FOOD",
+   "amount": 89.83,
+   "type": "DEBIT",
+   "currentBalance": 3864.16
+  },
+  {
+   "txnId": "RAVI000044",
+   "valueDate": "2026-08-11",
+   "narration": "UPI/CR/906131123204/POOJA KALE/8347272726@oksbi/TIP",
+   "amount": 33.0,
+   "type": "CREDIT",
+   "currentBalance": 3897.16
+  },
+  {
+   "txnId": "RAVI000045",
+   "valueDate": "2026-08-11",
+   "narration": "UPI/DR/946492540632/BHARAT PETROL POINT/bharatpetr@ybl/FUEL",
+   "amount": 148.98,
+   "type": "DEBIT",
+   "currentBalance": 3748.18
+  },
+  {
+   "txnId": "RAVI000046",
+   "valueDate": "2026-08-11",
+   "narration": "UPI/DR/010674091201/AMRUTTULYA TEA/amruttulya@okhdfc/FOOD",
+   "amount": 127.82,
+   "type": "DEBIT",
+   "currentBalance": 3620.36
+  },
+  {
+   "txnId": "RAVI000047",
+   "valueDate": "2026-08-12",
+   "narration": "UPI/CR/409958800062/NIKHIL GOKHALE/nikhil.g@okhdfc/TIP",
+   "amount": 70.0,
+   "type": "CREDIT",
+   "currentBalance": 3690.36
+  },
+  {
+   "txnId": "RAVI000048",
+   "valueDate": "2026-08-12",
+   "narration": "UPI/DR/081170968144/IOCL FUEL STATION/ioclfuelst@oksbi/FUEL",
+   "amount": 117.02,
+   "type": "DEBIT",
+   "currentBalance": 3573.34
+  },
+  {
+   "txnId": "RAVI000049",
+   "valueDate": "2026-08-12",
+   "narration": "UPI/DR/211135741832/ANNAPURNA MESS/annapurnam@paytm/FOOD",
+   "amount": 71.53,
+   "type": "DEBIT",
+   "currentBalance": 3501.81
+  },
+  {
+   "txnId": "RAVI000050",
+   "valueDate": "2026-08-13",
+   "narration": "UPI/CR/581287856334/ANJALI SATHE/anjali.s@okaxis/TIP",
+   "amount": 57.0,
+   "type": "CREDIT",
+   "currentBalance": 3558.81
+  },
+  {
+   "txnId": "RAVI000051",
+   "valueDate": "2026-08-13",
+   "narration": "UPI/CR/121716468719/ROHAN JOSHI/7136237438@okhdfc/TIP",
+   "amount": 43.0,
+   "type": "CREDIT",
+   "currentBalance": 3601.81
+  },
+  {
+   "txnId": "RAVI000052",
+   "valueDate": "2026-08-13",
+   "narration": "UPI/DR/503410115335/BHARAT PETROL POINT/bharatpetr@ybl/FUEL",
+   "amount": 190.85,
+   "type": "DEBIT",
+   "currentBalance": 3410.96
+  },
+  {
+   "txnId": "RAVI000053",
+   "valueDate": "2026-08-13",
+   "narration": "UPI/DR/171477955393/JAI MALHAR DHABA/jaimalhard@okicici/FOOD",
+   "amount": 129.02,
+   "type": "DEBIT",
+   "currentBalance": 3281.94
+  },
+  {
+   "txnId": "RAVI000054",
+   "valueDate": "2026-08-14",
+   "narration": "NEFT CR-QUICKBITE TECHNOLOGIES PVT LTD-WEEKLY PAYOUT W33",
+   "amount": 5314.06,
+   "type": "CREDIT",
+   "currentBalance": 8596.0
+  },
+  {
+   "txnId": "RAVI000055",
+   "valueDate": "2026-08-14",
+   "narration": "UPI/CR/536589531343/SAGAR NIKAM/7309872103@okicici/TIP",
+   "amount": 26.0,
+   "type": "CREDIT",
+   "currentBalance": 8622.0
+  },
+  {
+   "txnId": "RAVI000056",
+   "valueDate": "2026-08-14",
+   "narration": "UPI/DR/519877312999/HP PETROL PUMP KOTHRUD/hppetrolpu@oksbi/FUEL",
+   "amount": 144.61,
+   "type": "DEBIT",
+   "currentBalance": 8477.39
+  },
+  {
+   "txnId": "RAVI000057",
+   "valueDate": "2026-08-14",
+   "narration": "UPI/DR/536033555907/AMRUTTULYA TEA/amruttulya@okhdfc/FOOD",
+   "amount": 140.27,
+   "type": "DEBIT",
+   "currentBalance": 8337.12
+  },
+  {
+   "txnId": "RAVI000058",
+   "valueDate": "2026-08-15",
+   "narration": "RD INSTALMENT TO A/C 004512345678",
+   "amount": 200.0,
+   "type": "DEBIT",
+   "currentBalance": 8137.12
+  },
+  {
+   "txnId": "RAVI000059",
+   "valueDate": "2026-08-15",
+   "narration": "UPI/DR/716249565046/HP PETROL PUMP KOTHRUD/hppetrolpu@oksbi/FUEL",
+   "amount": 149.76,
+   "type": "DEBIT",
+   "currentBalance": 7987.36
+  },
+  {
+   "txnId": "RAVI000060",
+   "valueDate": "2026-08-15",
+   "narration": "UPI/DR/951605754212/JAI MALHAR DHABA/jaimalhard@okicici/FOOD",
+   "amount": 81.12,
+   "type": "DEBIT",
+   "currentBalance": 7906.24
+  },
+  {
+   "txnId": "RAVI000061",
+   "valueDate": "2026-08-16",
+   "narration": "UPI/CR/217098574515/VISHAL MORE/vishal.m@ybl/TIP",
+   "amount": 68.0,
+   "type": "CREDIT",
+   "currentBalance": 7974.24
+  },
+  {
+   "txnId": "RAVI000062",
+   "valueDate": "2026-08-16",
+   "narration": "UPI/DR/192777001091/ANNAPURNA MESS/annapurnam@paytm/FOOD",
+   "amount": 126.4,
+   "type": "DEBIT",
+   "currentBalance": 7847.84
+  },
+  {
+   "txnId": "RAVI000063",
+   "valueDate": "2026-08-16",
+   "narration": "UPI/DR/535310597862/LAXMI SHINDE/laxmi.s@oksbi/HOME",
+   "amount": 800.0,
+   "type": "DEBIT",
+   "currentBalance": 7047.84
+  },
+  {
+   "txnId": "RAVI000064",
+   "valueDate": "2026-08-17",
+   "narration": "UPI/CR/373687416364/ROHAN JOSHI/7136237438@okhdfc/TIP",
+   "amount": 67.0,
+   "type": "CREDIT",
+   "currentBalance": 7114.84
+  },
+  {
+   "txnId": "RAVI000065",
+   "valueDate": "2026-08-17",
+   "narration": "UPI/CR/896103893061/SAGAR NIKAM/7309872103@okicici/TIP",
+   "amount": 21.0,
+   "type": "CREDIT",
+   "currentBalance": 7135.84
+  },
+  {
+   "txnId": "RAVI000066",
+   "valueDate": "2026-08-17",
+   "narration": "UPI/DR/896667471631/IOCL FUEL STATION/ioclfuelst@oksbi/FUEL",
+   "amount": 152.19,
+   "type": "DEBIT",
+   "currentBalance": 6983.65
+  },
+  {
+   "txnId": "RAVI000067",
+   "valueDate": "2026-08-17",
+   "narration": "UPI/DR/379308887724/SHREE KIRANA STORES/shreekiran@oksbi/FOOD",
+   "amount": 77.74,
+   "type": "DEBIT",
+   "currentBalance": 6905.91
+  },
+  {
+   "txnId": "RAVI000068",
+   "valueDate": "2026-08-18",
+   "narration": "UPI/CR/548603263722/VISHAL MORE/vishal.m@ybl/TIP",
+   "amount": 51.0,
+   "type": "CREDIT",
+   "currentBalance": 6956.91
+  },
+  {
+   "txnId": "RAVI000069",
+   "valueDate": "2026-08-18",
+   "narration": "UPI/DR/663445491111/HP PETROL PUMP KOTHRUD/hppetrolpu@oksbi/FUEL",
+   "amount": 187.4,
+   "type": "DEBIT",
+   "currentBalance": 6769.51
+  },
+  {
+   "txnId": "RAVI000070",
+   "valueDate": "2026-08-18",
+   "narration": "UPI/DR/785831973973/AMRUTTULYA TEA/amruttulya@okhdfc/FOOD",
+   "amount": 86.68,
+   "type": "DEBIT",
+   "currentBalance": 6682.83
+  },
+  {
+   "txnId": "RAVI000071",
+   "valueDate": "2026-08-19",
+   "narration": "UPI/DR/441417377762/HP PETROL PUMP KOTHRUD/hppetrolpu@oksbi/FUEL",
+   "amount": 135.21,
+   "type": "DEBIT",
+   "currentBalance": 6547.62
+  },
+  {
+   "txnId": "RAVI000072",
+   "valueDate": "2026-08-19",
+   "narration": "UPI/DR/925779877065/SHREE KIRANA STORES/shreekiran@oksbi/FOOD",
+   "amount": 133.36,
+   "type": "DEBIT",
+   "currentBalance": 6414.26
+  },
+  {
+   "txnId": "RAVI000073",
+   "valueDate": "2026-08-19",
+   "narration": "ATM CASH WDL KOTHRUD PUNE",
+   "amount": 1000.0,
+   "type": "DEBIT",
+   "currentBalance": 5414.26
+  },
+  {
+   "txnId": "RAVI000074",
+   "valueDate": "2026-08-20",
+   "narration": "UPI/DR/495460959997/BHARAT PETROL POINT/bharatpetr@ybl/FUEL",
+   "amount": 178.47,
+   "type": "DEBIT",
+   "currentBalance": 5235.79
+  },
+  {
+   "txnId": "RAVI000075",
+   "valueDate": "2026-08-20",
+   "narration": "UPI/DR/686295933791/JAI MALHAR DHABA/jaimalhard@okicici/FOOD",
+   "amount": 92.7,
+   "type": "DEBIT",
+   "currentBalance": 5143.09
+  },
+  {
+   "txnId": "RAVI000076",
+   "valueDate": "2026-08-21",
+   "narration": "NEFT CR-QUICKBITE TECHNOLOGIES PVT LTD-WEEKLY PAYOUT W34",
+   "amount": 4637.4,
+   "type": "CREDIT",
+   "currentBalance": 9780.49
+  },
+  {
+   "txnId": "RAVI000077",
+   "valueDate": "2026-08-21",
+   "narration": "UPI/DR/693676908945/BHARAT PETROL POINT/bharatpetr@ybl/FUEL",
+   "amount": 174.15,
+   "type": "DEBIT",
+   "currentBalance": 9606.34
+  },
+  {
+   "txnId": "RAVI000078",
+   "valueDate": "2026-08-21",
+   "narration": "UPI/DR/564347522824/ANNAPURNA MESS/annapurnam@paytm/FOOD",
+   "amount": 127.27,
+   "type": "DEBIT",
+   "currentBalance": 9479.07
+  },
+  {
+   "txnId": "RAVI000079",
+   "valueDate": "2026-08-22",
+   "narration": "UPI/CR/214405158450/NIKHIL GOKHALE/nikhil.g@okhdfc/TIP",
+   "amount": 22.0,
+   "type": "CREDIT",
+   "currentBalance": 9501.07
+  },
+  {
+   "txnId": "RAVI000080",
+   "valueDate": "2026-08-22",
+   "narration": "UPI/CR/976957338891/PRIYA DESHPANDE/priya.d@okicici/TIP",
+   "amount": 55.0,
+   "type": "CREDIT",
+   "currentBalance": 9556.07
+  },
+  {
+   "txnId": "RAVI000081",
+   "valueDate": "2026-08-22",
+   "narration": "UPI/DR/409705635891/HP PETROL PUMP KOTHRUD/hppetrolpu@oksbi/FUEL",
+   "amount": 149.14,
+   "type": "DEBIT",
+   "currentBalance": 9406.93
+  },
+  {
+   "txnId": "RAVI000082",
+   "valueDate": "2026-08-22",
+   "narration": "UPI/DR/709995231232/JAI MALHAR DHABA/jaimalhard@okicici/FOOD",
+   "amount": 138.56,
+   "type": "DEBIT",
+   "currentBalance": 9268.37
+  },
+  {
+   "txnId": "RAVI000083",
+   "valueDate": "2026-08-23",
+   "narration": "UPI/CR/426438384085/SNEHA PATWARDHAN/sneha.p@okhdfc/TIP",
+   "amount": 71.0,
+   "type": "CREDIT",
+   "currentBalance": 9339.37
+  },
+  {
+   "txnId": "RAVI000084",
+   "valueDate": "2026-08-23",
+   "narration": "UPI/DR/950365396633/AMRUTTULYA TEA/amruttulya@okhdfc/FOOD",
+   "amount": 94.6,
+   "type": "DEBIT",
+   "currentBalance": 9244.77
+  },
+  {
+   "txnId": "RAVI000085",
+   "valueDate": "2026-08-24",
+   "narration": "UPI/DR/230894338821/HP PETROL PUMP KOTHRUD/hppetrolpu@oksbi/FUEL",
+   "amount": 153.59,
+   "type": "DEBIT",
+   "currentBalance": 9091.18
+  },
+  {
+   "txnId": "RAVI000086",
+   "valueDate": "2026-08-24",
+   "narration": "UPI/DR/483186963397/AMRUTTULYA TEA/amruttulya@okhdfc/FOOD",
+   "amount": 99.55,
+   "type": "DEBIT",
+   "currentBalance": 8991.63
+  },
+  {
+   "txnId": "RAVI000087",
+   "valueDate": "2026-08-25",
+   "narration": "UPI/DR/092212222222/HP PETROL PUMP KOTHRUD/hppetrolpu@oksbi/FUEL",
+   "amount": 124.7,
+   "type": "DEBIT",
+   "currentBalance": 8866.93
+  },
+  {
+   "txnId": "RAVI000088",
+   "valueDate": "2026-08-25",
+   "narration": "UPI/DR/661079296206/JAI MALHAR DHABA/jaimalhard@okicici/FOOD",
+   "amount": 128.64,
+   "type": "DEBIT",
+   "currentBalance": 8738.29
+  },
+  {
+   "txnId": "RAVI000089",
+   "valueDate": "2026-08-26",
+   "narration": "UPI/CR/667469380740/SNEHA PATWARDHAN/sneha.p@okhdfc/TIP",
+   "amount": 35.0,
+   "type": "CREDIT",
+   "currentBalance": 8773.29
+  },
+  {
+   "txnId": "RAVI000090",
+   "valueDate": "2026-08-26",
+   "narration": "UPI/DR/912912324635/IOCL FUEL STATION/ioclfuelst@oksbi/FUEL",
+   "amount": 156.75,
+   "type": "DEBIT",
+   "currentBalance": 8616.54
+  },
+  {
+   "txnId": "RAVI000091",
+   "valueDate": "2026-08-26",
+   "narration": "UPI/DR/378283744916/AMRUTTULYA TEA/amruttulya@okhdfc/FOOD",
+   "amount": 123.0,
+   "type": "DEBIT",
+   "currentBalance": 8493.54
+  },
+  {
+   "txnId": "RAVI000092",
+   "valueDate": "2026-08-27",
+   "narration": "UPI/CR/835507443464/ROHAN JOSHI/7136237438@okhdfc/TIP",
+   "amount": 21.0,
+   "type": "CREDIT",
+   "currentBalance": 8514.54
+  },
+  {
+   "txnId": "RAVI000093",
+   "valueDate": "2026-08-27",
+   "narration": "UPI/CR/220476023878/NIKHIL GOKHALE/nikhil.g@okhdfc/TIP",
+   "amount": 37.0,
+   "type": "CREDIT",
+   "currentBalance": 8551.54
+  },
+  {
+   "txnId": "RAVI000094",
+   "valueDate": "2026-08-27",
+   "narration": "UPI/DR/540228110341/QUICKTALK MOBILE RECHARGE/quicktalkm@okaxis/PREPAID",
+   "amount": 299.0,
+   "type": "DEBIT",
+   "currentBalance": 8252.54
+  },
+  {
+   "txnId": "RAVI000095",
+   "valueDate": "2026-08-27",
+   "narration": "UPI/DR/072611502703/BHARAT PETROL POINT/bharatpetr@ybl/FUEL",
+   "amount": 145.8,
+   "type": "DEBIT",
+   "currentBalance": 8106.74
+  },
+  {
+   "txnId": "RAVI000096",
+   "valueDate": "2026-08-27",
+   "narration": "UPI/DR/003810791297/ANNAPURNA MESS/annapurnam@paytm/FOOD",
+   "amount": 135.65,
+   "type": "DEBIT",
+   "currentBalance": 7971.09
+  },
+  {
+   "txnId": "RAVI000097",
+   "valueDate": "2026-08-28",
+   "narration": "NEFT CR-QUICKBITE TECHNOLOGIES PVT LTD-WEEKLY PAYOUT W35",
+   "amount": 5067.43,
+   "type": "CREDIT",
+   "currentBalance": 13038.52
+  },
+  {
+   "txnId": "RAVI000098",
+   "valueDate": "2026-08-28",
+   "narration": "UPI/DR/784033319960/IOCL FUEL STATION/ioclfuelst@oksbi/FUEL",
+   "amount": 163.33,
+   "type": "DEBIT",
+   "currentBalance": 12875.19
+  },
+  {
+   "txnId": "RAVI000099",
+   "valueDate": "2026-08-28",
+   "narration": "UPI/DR/173178283045/SHREE KIRANA STORES/shreekiran@oksbi/FOOD",
+   "amount": 75.73,
+   "type": "DEBIT",
+   "currentBalance": 12799.46
+  },
+  {
+   "txnId": "RAVI000100",
+   "valueDate": "2026-08-29",
+   "narration": "RD INSTALMENT TO A/C 004512345678",
+   "amount": 200.0,
+   "type": "DEBIT",
+   "currentBalance": 12599.46
+  },
+  {
+   "txnId": "RAVI000101",
+   "valueDate": "2026-08-29",
+   "narration": "UPI/DR/645068450619/BHARAT PETROL POINT/bharatpetr@ybl/FUEL",
+   "amount": 122.9,
+   "type": "DEBIT",
+   "currentBalance": 12476.56
+  },
+  {
+   "txnId": "RAVI000102",
+   "valueDate": "2026-08-29",
+   "narration": "UPI/DR/094937880531/JAI MALHAR DHABA/jaimalhard@okicici/FOOD",
+   "amount": 87.44,
+   "type": "DEBIT",
+   "currentBalance": 12389.12
+  },
+  {
+   "txnId": "RAVI000103",
+   "valueDate": "2026-08-30",
+   "narration": "UPI/DR/229672102419/JAI MALHAR DHABA/jaimalhard@okicici/FOOD",
+   "amount": 131.7,
+   "type": "DEBIT",
+   "currentBalance": 12257.42
+  },
+  {
+   "txnId": "RAVI000104",
+   "valueDate": "2026-08-30",
+   "narration": "UPI/DR/769613890200/LAXMI SHINDE/laxmi.s@oksbi/HOME",
+   "amount": 800.0,
+   "type": "DEBIT",
+   "currentBalance": 11457.42
+  },
+  {
+   "txnId": "RAVI000105",
+   "valueDate": "2026-08-31",
+   "narration": "UPI/CR/826091868801/ROHAN JOSHI/7136237438@okhdfc/TIP",
+   "amount": 61.0,
+   "type": "CREDIT",
+   "currentBalance": 11518.42
+  },
+  {
+   "txnId": "RAVI000106",
+   "valueDate": "2026-08-31",
+   "narration": "UPI/CR/177208643089/VISHAL MORE/vishal.m@ybl/TIP",
+   "amount": 40.0,
+   "type": "CREDIT",
+   "currentBalance": 11558.42
+  },
+  {
+   "txnId": "RAVI000107",
+   "valueDate": "2026-08-31",
+   "narration": "UPI/DR/303559059973/HP PETROL PUMP KOTHRUD/hppetrolpu@oksbi/FUEL",
+   "amount": 167.11,
+   "type": "DEBIT",
+   "currentBalance": 11391.31
+  },
+  {
+   "txnId": "RAVI000108",
+   "valueDate": "2026-08-31",
+   "narration": "UPI/DR/210918845526/JAI MALHAR DHABA/jaimalhard@okicici/FOOD",
+   "amount": 99.55,
+   "type": "DEBIT",
+   "currentBalance": 11291.76
+  },
+  {
+   "txnId": "RAVI000109",
+   "valueDate": "2026-09-01",
+   "narration": "UPI/CR/245939958698/KIRAN BHOSALE/kiran.b@paytm/TIP",
+   "amount": 42.0,
+   "type": "CREDIT",
+   "currentBalance": 11333.76
+  },
+  {
+   "txnId": "RAVI000110",
+   "valueDate": "2026-09-01",
+   "narration": "UPI/DR/716625862332/IOCL FUEL STATION/ioclfuelst@oksbi/FUEL",
+   "amount": 140.25,
+   "type": "DEBIT",
+   "currentBalance": 11193.51
+  },
+  {
+   "txnId": "RAVI000111",
+   "valueDate": "2026-09-01",
+   "narration": "UPI/DR/903117282361/ANNAPURNA MESS/annapurnam@paytm/FOOD",
+   "amount": 96.65,
+   "type": "DEBIT",
+   "currentBalance": 11096.86
+  },
+  {
+   "txnId": "RAVI000112",
+   "valueDate": "2026-09-02",
+   "narration": "UPI/DR/522814547000/HP PETROL PUMP KOTHRUD/hppetrolpu@oksbi/FUEL",
+   "amount": 154.24,
+   "type": "DEBIT",
+   "currentBalance": 10942.62
+  },
+  {
+   "txnId": "RAVI000113",
+   "valueDate": "2026-09-02",
+   "narration": "UPI/DR/429583048777/JAI MALHAR DHABA/jaimalhard@okicici/FOOD",
+   "amount": 75.63,
+   "type": "DEBIT",
+   "currentBalance": 10866.99
+  },
+  {
+   "txnId": "RAVI000114",
+   "valueDate": "2026-09-02",
+   "narration": "ATM CASH WDL KOTHRUD PUNE",
+   "amount": 1000.0,
+   "type": "DEBIT",
+   "currentBalance": 9866.99
+  },
+  {
+   "txnId": "RAVI000115",
+   "valueDate": "2026-09-03",
+   "narration": "UPI/DR/441130941940/BHARAT PETROL POINT/bharatpetr@ybl/FUEL",
+   "amount": 158.04,
+   "type": "DEBIT",
+   "currentBalance": 9708.95
+  },
+  {
+   "txnId": "RAVI000116",
+   "valueDate": "2026-09-03",
+   "narration": "UPI/DR/490417736667/SHREE KIRANA STORES/shreekiran@oksbi/FOOD",
+   "amount": 74.19,
+   "type": "DEBIT",
+   "currentBalance": 9634.76
+  },
+  {
+   "txnId": "RAVI000117",
+   "valueDate": "2026-09-04",
+   "narration": "NEFT CR-QUICKBITE TECHNOLOGIES PVT LTD-WEEKLY PAYOUT W36",
+   "amount": 5458.08,
+   "type": "CREDIT",
+   "currentBalance": 15092.84
+  },
+  {
+   "txnId": "RAVI000118",
+   "valueDate": "2026-09-04",
+   "narration": "UPI/CR/236089788049/SAGAR NIKAM/7309872103@okicici/TIP",
+   "amount": 80.0,
+   "type": "CREDIT",
+   "currentBalance": 15172.84
+  },
+  {
+   "txnId": "RAVI000119",
+   "valueDate": "2026-09-04",
+   "narration": "UPI/CR/608258612128/KIRAN BHOSALE/kiran.b@paytm/TIP",
+   "amount": 78.0,
+   "type": "CREDIT",
+   "currentBalance": 15250.84
+  },
+  {
+   "txnId": "RAVI000120",
+   "valueDate": "2026-09-04",
+   "narration": "UPI/DR/337708734932/BHARAT PETROL POINT/bharatpetr@ybl/FUEL",
+   "amount": 148.44,
+   "type": "DEBIT",
+   "currentBalance": 15102.4
+  },
+  {
+   "txnId": "RAVI000121",
+   "valueDate": "2026-09-04",
+   "narration": "UPI/DR/005582180047/JAI MALHAR DHABA/jaimalhard@okicici/FOOD",
+   "amount": 74.82,
+   "type": "DEBIT",
+   "currentBalance": 15027.58
+  },
+  {
+   "txnId": "RAVI000122",
+   "valueDate": "2026-09-05",
+   "narration": "UPI/DR/335478611967/SURESH PATIL/suresh.p@ybl/RENT",
+   "amount": 6000.0,
+   "type": "DEBIT",
+   "currentBalance": 9027.58
+  },
+  {
+   "txnId": "RAVI000123",
+   "valueDate": "2026-09-05",
+   "narration": "UPI/DR/151443240989/IOCL FUEL STATION/ioclfuelst@oksbi/FUEL",
+   "amount": 117.11,
+   "type": "DEBIT",
+   "currentBalance": 8910.47
+  },
+  {
+   "txnId": "RAVI000124",
+   "valueDate": "2026-09-05",
+   "narration": "UPI/DR/336838793887/SHREE KIRANA STORES/shreekiran@oksbi/FOOD",
+   "amount": 107.96,
+   "type": "DEBIT",
+   "currentBalance": 8802.51
+  },
+  {
+   "txnId": "RAVI000125",
+   "valueDate": "2026-09-06",
+   "narration": "UPI/CR/455065472915/ANJALI SATHE/anjali.s@okaxis/TIP",
+   "amount": 74.0,
+   "type": "CREDIT",
+   "currentBalance": 8876.51
+  },
+  {
+   "txnId": "RAVI000126",
+   "valueDate": "2026-09-06",
+   "narration": "UPI/CR/574922165648/PRIYA DESHPANDE/priya.d@okicici/TIP",
+   "amount": 65.0,
+   "type": "CREDIT",
+   "currentBalance": 8941.51
+  },
+  {
+   "txnId": "RAVI000127",
+   "valueDate": "2026-09-06",
+   "narration": "UPI/DR/708029941610/JAI MALHAR DHABA/jaimalhard@okicici/FOOD",
+   "amount": 105.49,
+   "type": "DEBIT",
+   "currentBalance": 8836.02
+  },
+  {
+   "txnId": "RAVI000128",
+   "valueDate": "2026-09-07",
+   "narration": "UPI/CR/733269365019/ROHAN JOSHI/7136237438@okhdfc/TIP",
+   "amount": 61.0,
+   "type": "CREDIT",
+   "currentBalance": 8897.02
+  },
+  {
+   "txnId": "RAVI000129",
+   "valueDate": "2026-09-07",
+   "narration": "UPI/DR/107612416926/IOCL FUEL STATION/ioclfuelst@oksbi/FUEL",
+   "amount": 119.87,
+   "type": "DEBIT",
+   "currentBalance": 8777.15
+  },
+  {
+   "txnId": "RAVI000130",
+   "valueDate": "2026-09-07",
+   "narration": "UPI/DR/094223321464/SHREE KIRANA STORES/shreekiran@oksbi/FOOD",
+   "amount": 101.14,
+   "type": "DEBIT",
+   "currentBalance": 8676.01
+  },
+  {
+   "txnId": "RAVI000131",
+   "valueDate": "2026-09-08",
+   "narration": "UPI/CR/712766693646/ROHAN JOSHI/7136237438@okhdfc/TIP",
+   "amount": 28.0,
+   "type": "CREDIT",
+   "currentBalance": 8704.01
+  },
+  {
+   "txnId": "RAVI000132",
+   "valueDate": "2026-09-08",
+   "narration": "UPI/DR/605617913365/IOCL FUEL STATION/ioclfuelst@oksbi/FUEL",
+   "amount": 169.53,
+   "type": "DEBIT",
+   "currentBalance": 8534.48
+  },
+  {
+   "txnId": "RAVI000133",
+   "valueDate": "2026-09-08",
+   "narration": "UPI/DR/606506287155/ANNAPURNA MESS/annapurnam@paytm/FOOD",
+   "amount": 125.31,
+   "type": "DEBIT",
+   "currentBalance": 8409.17
+  },
+  {
+   "txnId": "RAVI000134",
+   "valueDate": "2026-09-09",
+   "narration": "UPI/DR/102808161739/SAI MOTORS GARAGE/saimotorsg@okaxis/BIKE REPAIR",
+   "amount": 1800.0,
+   "type": "DEBIT",
+   "currentBalance": 6609.17
+  },
+  {
+   "txnId": "RAVI000135",
+   "valueDate": "2026-09-09",
+   "narration": "UPI/DR/021145575010/BHARAT PETROL POINT/bharatpetr@ybl/FUEL",
+   "amount": 155.99,
+   "type": "DEBIT",
+   "currentBalance": 6453.18
+  },
+  {
+   "txnId": "RAVI000136",
+   "valueDate": "2026-09-09",
+   "narration": "UPI/DR/921569843907/SHREE KIRANA STORES/shreekiran@oksbi/FOOD",
+   "amount": 87.51,
+   "type": "DEBIT",
+   "currentBalance": 6365.67
+  },
+  {
+   "txnId": "RAVI000137",
+   "valueDate": "2026-09-10",
+   "narration": "UPI/CR/108456304200/KIRAN BHOSALE/kiran.b@paytm/TIP",
+   "amount": 34.0,
+   "type": "CREDIT",
+   "currentBalance": 6399.67
+  },
+  {
+   "txnId": "RAVI000138",
+   "valueDate": "2026-09-10",
+   "narration": "UPI/DR/221617669402/HP PETROL PUMP KOTHRUD/hppetrolpu@oksbi/FUEL",
+   "amount": 118.07,
+   "type": "DEBIT",
+   "currentBalance": 6281.6
+  },
+  {
+   "txnId": "RAVI000139",
+   "valueDate": "2026-09-10",
+   "narration": "UPI/DR/368230987824/ANNAPURNA MESS/annapurnam@paytm/FOOD",
+   "amount": 105.72,
+   "type": "DEBIT",
+   "currentBalance": 6175.88
+  },
+  {
+   "txnId": "RAVI000140",
+   "valueDate": "2026-09-11",
+   "narration": "NEFT CR-QUICKBITE TECHNOLOGIES PVT LTD-WEEKLY PAYOUT W37",
+   "amount": 4632.2,
+   "type": "CREDIT",
+   "currentBalance": 10808.08
+  },
+  {
+   "txnId": "RAVI000141",
+   "valueDate": "2026-09-11",
+   "narration": "UPI/CR/888651612234/ROHAN JOSHI/7136237438@okhdfc/TIP",
+   "amount": 75.0,
+   "type": "CREDIT",
+   "currentBalance": 10883.08
+  },
+  {
+   "txnId": "RAVI000142",
+   "valueDate": "2026-09-11",
+   "narration": "UPI/DR/535774490502/BHARAT PETROL POINT/bharatpetr@ybl/FUEL",
+   "amount": 166.01,
+   "type": "DEBIT",
+   "currentBalance": 10717.07
+  },
+  {
+   "txnId": "RAVI000143",
+   "valueDate": "2026-09-11",
+   "narration": "UPI/DR/434087532383/AMRUTTULYA TEA/amruttulya@okhdfc/FOOD",
+   "amount": 121.77,
+   "type": "DEBIT",
+   "currentBalance": 10595.3
+  },
+  {
+   "txnId": "RAVI000144",
+   "valueDate": "2026-09-12",
+   "narration": "RD INSTALMENT TO A/C 004512345678",
+   "amount": 200.0,
+   "type": "DEBIT",
+   "currentBalance": 10395.3
+  },
+  {
+   "txnId": "RAVI000145",
+   "valueDate": "2026-09-12",
+   "narration": "UPI/DR/475654285912/IOCL FUEL STATION/ioclfuelst@oksbi/FUEL",
+   "amount": 151.05,
+   "type": "DEBIT",
+   "currentBalance": 10244.25
+  },
+  {
+   "txnId": "RAVI000146",
+   "valueDate": "2026-09-12",
+   "narration": "UPI/DR/368415480050/AMRUTTULYA TEA/amruttulya@okhdfc/FOOD",
+   "amount": 77.7,
+   "type": "DEBIT",
+   "currentBalance": 10166.55
+  },
+  {
+   "txnId": "RAVI000147",
+   "valueDate": "2026-09-13",
+   "narration": "UPI/CR/461886543663/NIKHIL GOKHALE/nikhil.g@okhdfc/TIP",
+   "amount": 79.0,
+   "type": "CREDIT",
+   "currentBalance": 10245.55
+  },
+  {
+   "txnId": "RAVI000148",
+   "valueDate": "2026-09-13",
+   "narration": "UPI/DR/131954135985/AMRUTTULYA TEA/amruttulya@okhdfc/FOOD",
+   "amount": 122.95,
+   "type": "DEBIT",
+   "currentBalance": 10122.6
+  },
+  {
+   "txnId": "RAVI000149",
+   "valueDate": "2026-09-13",
+   "narration": "UPI/DR/880296970984/LAXMI SHINDE/laxmi.s@oksbi/HOME",
+   "amount": 800.0,
+   "type": "DEBIT",
+   "currentBalance": 9322.6
+  },
+  {
+   "txnId": "RAVI000150",
+   "valueDate": "2026-09-14",
+   "narration": "UPI/DR/115548796895/IOCL FUEL STATION/ioclfuelst@oksbi/FUEL",
+   "amount": 148.31,
+   "type": "DEBIT",
+   "currentBalance": 9174.29
+  },
+  {
+   "txnId": "RAVI000151",
+   "valueDate": "2026-09-14",
+   "narration": "UPI/DR/084388098706/JAI MALHAR DHABA/jaimalhard@okicici/FOOD",
+   "amount": 114.54,
+   "type": "DEBIT",
+   "currentBalance": 9059.75
+  },
+  {
+   "txnId": "RAVI000152",
+   "valueDate": "2026-09-15",
+   "narration": "UPI/DR/567685601280/HP PETROL PUMP KOTHRUD/hppetrolpu@oksbi/FUEL",
+   "amount": 123.06,
+   "type": "DEBIT",
+   "currentBalance": 8936.69
+  },
+  {
+   "txnId": "RAVI000153",
+   "valueDate": "2026-09-15",
+   "narration": "UPI/DR/023592425455/AMRUTTULYA TEA/amruttulya@okhdfc/FOOD",
+   "amount": 71.96,
+   "type": "DEBIT",
+   "currentBalance": 8864.73
+  },
+  {
+   "txnId": "RAVI000154",
+   "valueDate": "2026-09-16",
+   "narration": "UPI/CR/540439534799/ANJALI SATHE/anjali.s@okaxis/TIP",
+   "amount": 22.0,
+   "type": "CREDIT",
+   "currentBalance": 8886.73
+  },
+  {
+   "txnId": "RAVI000155",
+   "valueDate": "2026-09-16",
+   "narration": "UPI/CR/782346362046/ANJALI SATHE/anjali.s@okaxis/TIP",
+   "amount": 48.0,
+   "type": "CREDIT",
+   "currentBalance": 8934.73
+  },
+  {
+   "txnId": "RAVI000156",
+   "valueDate": "2026-09-16",
+   "narration": "UPI/DR/475406478847/IOCL FUEL STATION/ioclfuelst@oksbi/FUEL",
+   "amount": 168.46,
+   "type": "DEBIT",
+   "currentBalance": 8766.27
+  },
+  {
+   "txnId": "RAVI000157",
+   "valueDate": "2026-09-16",
+   "narration": "UPI/DR/608557889387/JAI MALHAR DHABA/jaimalhard@okicici/FOOD",
+   "amount": 81.71,
+   "type": "DEBIT",
+   "currentBalance": 8684.56
+  },
+  {
+   "txnId": "RAVI000158",
+   "valueDate": "2026-09-16",
+   "narration": "ATM CASH WDL KOTHRUD PUNE",
+   "amount": 1000.0,
+   "type": "DEBIT",
+   "currentBalance": 7684.56
+  },
+  {
+   "txnId": "RAVI000159",
+   "valueDate": "2026-09-17",
+   "narration": "UPI/CR/691318781367/POOJA KALE/8347272726@oksbi/TIP",
+   "amount": 32.0,
+   "type": "CREDIT",
+   "currentBalance": 7716.56
+  },
+  {
+   "txnId": "RAVI000160",
+   "valueDate": "2026-09-17",
+   "narration": "UPI/CR/083998282949/SNEHA PATWARDHAN/sneha.p@okhdfc/TIP",
+   "amount": 54.0,
+   "type": "CREDIT",
+   "currentBalance": 7770.56
+  },
+  {
+   "txnId": "RAVI000161",
+   "valueDate": "2026-09-17",
+   "narration": "UPI/DR/276958724436/BHARAT PETROL POINT/bharatpetr@ybl/FUEL",
+   "amount": 126.64,
+   "type": "DEBIT",
+   "currentBalance": 7643.92
+  },
+  {
+   "txnId": "RAVI000162",
+   "valueDate": "2026-09-17",
+   "narration": "UPI/DR/118434459999/JAI MALHAR DHABA/jaimalhard@okicici/FOOD",
+   "amount": 81.0,
+   "type": "DEBIT",
+   "currentBalance": 7562.92
+  },
+  {
+   "txnId": "RAVI000163",
+   "valueDate": "2026-09-18",
+   "narration": "NEFT CR-QUICKBITE TECHNOLOGIES PVT LTD-WEEKLY PAYOUT W38",
+   "amount": 5409.98,
+   "type": "CREDIT",
+   "currentBalance": 12972.9
+  },
+  {
+   "txnId": "RAVI000164",
+   "valueDate": "2026-09-18",
+   "narration": "UPI/DR/343851135138/CITY POWER BILL/citypowerb@okaxis/ELECTRICITY",
+   "amount": 697.75,
+   "type": "DEBIT",
+   "currentBalance": 12275.15
+  },
+  {
+   "txnId": "RAVI000165",
+   "valueDate": "2026-09-18",
+   "narration": "UPI/DR/016555087188/HP PETROL PUMP KOTHRUD/hppetrolpu@oksbi/FUEL",
+   "amount": 136.77,
+   "type": "DEBIT",
+   "currentBalance": 12138.38
+  },
+  {
+   "txnId": "RAVI000166",
+   "valueDate": "2026-09-18",
+   "narration": "UPI/DR/238468296397/JAI MALHAR DHABA/jaimalhard@okicici/FOOD",
+   "amount": 75.94,
+   "type": "DEBIT",
+   "currentBalance": 12062.44
+  },
+  {
+   "txnId": "RAVI000167",
+   "valueDate": "2026-09-19",
+   "narration": "UPI/CR/676040988090/ROHAN JOSHI/7136237438@okhdfc/TIP",
+   "amount": 42.0,
+   "type": "CREDIT",
+   "currentBalance": 12104.44
+  },
+  {
+   "txnId": "RAVI000168",
+   "valueDate": "2026-09-19",
+   "narration": "UPI/DR/894119888192/BHARAT PETROL POINT/bharatpetr@ybl/FUEL",
+   "amount": 141.61,
+   "type": "DEBIT",
+   "currentBalance": 11962.83
+  },
+  {
+   "txnId": "RAVI000169",
+   "valueDate": "2026-09-19",
+   "narration": "UPI/DR/289849145357/ANNAPURNA MESS/annapurnam@paytm/FOOD",
+   "amount": 129.59,
+   "type": "DEBIT",
+   "currentBalance": 11833.24
+  },
+  {
+   "txnId": "RAVI000170",
+   "valueDate": "2026-09-20",
+   "narration": "UPI/DR/075063561069/ANNAPURNA MESS/annapurnam@paytm/FOOD",
+   "amount": 128.52,
+   "type": "DEBIT",
+   "currentBalance": 11704.72
+  },
+  {
+   "txnId": "RAVI000171",
+   "valueDate": "2026-09-21",
+   "narration": "UPI/CR/337433324234/POOJA KALE/8347272726@oksbi/TIP",
+   "amount": 28.0,
+   "type": "CREDIT",
+   "currentBalance": 11732.72
+  },
+  {
+   "txnId": "RAVI000172",
+   "valueDate": "2026-09-21",
+   "narration": "UPI/DR/048353061185/BHARAT PETROL POINT/bharatpetr@ybl/FUEL",
+   "amount": 166.98,
+   "type": "DEBIT",
+   "currentBalance": 11565.74
+  },
+  {
+   "txnId": "RAVI000173",
+   "valueDate": "2026-09-21",
+   "narration": "UPI/DR/135129372364/JAI MALHAR DHABA/jaimalhard@okicici/FOOD",
+   "amount": 104.5,
+   "type": "DEBIT",
+   "currentBalance": 11461.24
+  },
+  {
+   "txnId": "RAVI000174",
+   "valueDate": "2026-09-22",
+   "narration": "UPI/DR/089566316121/HP PETROL PUMP KOTHRUD/hppetrolpu@oksbi/FUEL",
+   "amount": 125.06,
+   "type": "DEBIT",
+   "currentBalance": 11336.18
+  },
+  {
+   "txnId": "RAVI000175",
+   "valueDate": "2026-09-22",
+   "narration": "UPI/DR/808513269835/JAI MALHAR DHABA/jaimalhard@okicici/FOOD",
+   "amount": 113.98,
+   "type": "DEBIT",
+   "currentBalance": 11222.2
+  },
+  {
+   "txnId": "RAVI000176",
+   "valueDate": "2026-09-23",
+   "narration": "UPI/CR/377199844129/AMIT KULKARNI/amit.k@okicici/TIP",
+   "amount": 66.0,
+   "type": "CREDIT",
+   "currentBalance": 11288.2
+  },
+  {
+   "txnId": "RAVI000177",
+   "valueDate": "2026-09-23",
+   "narration": "UPI/DR/495841164764/IOCL FUEL STATION/ioclfuelst@oksbi/FUEL",
+   "amount": 122.02,
+   "type": "DEBIT",
+   "currentBalance": 11166.18
+  },
+  {
+   "txnId": "RAVI000178",
+   "valueDate": "2026-09-23",
+   "narration": "UPI/DR/557308884304/AMRUTTULYA TEA/amruttulya@okhdfc/FOOD",
+   "amount": 133.83,
+   "type": "DEBIT",
+   "currentBalance": 11032.35
+  },
+  {
+   "txnId": "RAVI000179",
+   "valueDate": "2026-09-24",
+   "narration": "UPI/DR/615676583999/QUICKTALK MOBILE RECHARGE/quicktalkm@okaxis/PREPAID",
+   "amount": 299.0,
+   "type": "DEBIT",
+   "currentBalance": 10733.35
+  },
+  {
+   "txnId": "RAVI000180",
+   "valueDate": "2026-09-24",
+   "narration": "UPI/DR/466568762758/IOCL FUEL STATION/ioclfuelst@oksbi/FUEL",
+   "amount": 128.22,
+   "type": "DEBIT",
+   "currentBalance": 10605.13
+  },
+  {
+   "txnId": "RAVI000181",
+   "valueDate": "2026-09-24",
+   "narration": "UPI/DR/397579404778/AMRUTTULYA TEA/amruttulya@okhdfc/FOOD",
+   "amount": 106.42,
+   "type": "DEBIT",
+   "currentBalance": 10498.71
+  },
+  {
+   "txnId": "RAVI000182",
+   "valueDate": "2026-09-25",
+   "narration": "NEFT CR-QUICKBITE TECHNOLOGIES PVT LTD-WEEKLY PAYOUT W39",
+   "amount": 4845.42,
+   "type": "CREDIT",
+   "currentBalance": 15344.13
+  },
+  {
+   "txnId": "RAVI000183",
+   "valueDate": "2026-09-25",
+   "narration": "UPI/CR/051969899458/SAGAR NIKAM/7309872103@okicici/TIP",
+   "amount": 70.0,
+   "type": "CREDIT",
+   "currentBalance": 15414.13
+  },
+  {
+   "txnId": "RAVI000184",
+   "valueDate": "2026-09-25",
+   "narration": "UPI/DR/398801793343/BHARAT PETROL POINT/bharatpetr@ybl/FUEL",
+   "amount": 144.22,
+   "type": "DEBIT",
+   "currentBalance": 15269.91
+  },
+  {
+   "txnId": "RAVI000185",
+   "valueDate": "2026-09-25",
+   "narration": "UPI/DR/522183192956/JAI MALHAR DHABA/jaimalhard@okicici/FOOD",
+   "amount": 128.5,
+   "type": "DEBIT",
+   "currentBalance": 15141.41
+  },
+  {
+   "txnId": "RAVI000186",
+   "valueDate": "2026-09-26",
+   "narration": "RD INSTALMENT TO A/C 004512345678",
+   "amount": 200.0,
+   "type": "DEBIT",
+   "currentBalance": 14941.41
+  },
+  {
+   "txnId": "RAVI000187",
+   "valueDate": "2026-09-26",
+   "narration": "UPI/DR/671153381730/BHARAT PETROL POINT/bharatpetr@ybl/FUEL",
+   "amount": 190.78,
+   "type": "DEBIT",
+   "currentBalance": 14750.63
+  },
+  {
+   "txnId": "RAVI000188",
+   "valueDate": "2026-09-26",
+   "narration": "UPI/DR/597744003125/AMRUTTULYA TEA/amruttulya@okhdfc/FOOD",
+   "amount": 133.79,
+   "type": "DEBIT",
+   "currentBalance": 14616.84
+  },
+  {
+   "txnId": "RAVI000189",
+   "valueDate": "2026-09-27",
+   "narration": "UPI/CR/176866835078/SAGAR NIKAM/7309872103@okicici/TIP",
+   "amount": 60.0,
+   "type": "CREDIT",
+   "currentBalance": 14676.84
+  },
+  {
+   "txnId": "RAVI000190",
+   "valueDate": "2026-09-27",
+   "narration": "UPI/CR/048405595098/PRIYA DESHPANDE/priya.d@okicici/TIP",
+   "amount": 68.0,
+   "type": "CREDIT",
+   "currentBalance": 14744.84
+  },
+  {
+   "txnId": "RAVI000191",
+   "valueDate": "2026-09-27",
+   "narration": "UPI/DR/955753575317/SHREE KIRANA STORES/shreekiran@oksbi/FOOD",
+   "amount": 91.42,
+   "type": "DEBIT",
+   "currentBalance": 14653.42
+  },
+  {
+   "txnId": "RAVI000192",
+   "valueDate": "2026-09-27",
+   "narration": "UPI/DR/011676440523/LAXMI SHINDE/laxmi.s@oksbi/HOME",
+   "amount": 800.0,
+   "type": "DEBIT",
+   "currentBalance": 13853.42
+  },
+  {
+   "txnId": "RAVI000193",
+   "valueDate": "2026-09-28",
+   "narration": "UPI/DR/446086666154/BHARAT PETROL POINT/bharatpetr@ybl/FUEL",
+   "amount": 150.57,
+   "type": "DEBIT",
+   "currentBalance": 13702.85
+  },
+  {
+   "txnId": "RAVI000194",
+   "valueDate": "2026-09-28",
+   "narration": "UPI/DR/927584952542/AMRUTTULYA TEA/amruttulya@okhdfc/FOOD",
+   "amount": 106.18,
+   "type": "DEBIT",
+   "currentBalance": 13596.67
+  },
+  {
+   "txnId": "RAVI000195",
+   "valueDate": "2026-09-29",
+   "narration": "UPI/CR/298516503312/AMIT KULKARNI/amit.k@okicici/TIP",
+   "amount": 76.0,
+   "type": "CREDIT",
+   "currentBalance": 13672.67
+  },
+  {
+   "txnId": "RAVI000196",
+   "valueDate": "2026-09-29",
+   "narration": "UPI/DR/991952800064/HP PETROL PUMP KOTHRUD/hppetrolpu@oksbi/FUEL",
+   "amount": 132.46,
+   "type": "DEBIT",
+   "currentBalance": 13540.21
+  },
+  {
+   "txnId": "RAVI000197",
+   "valueDate": "2026-09-29",
+   "narration": "UPI/DR/071155149909/JAI MALHAR DHABA/jaimalhard@okicici/FOOD",
+   "amount": 137.84,
+   "type": "DEBIT",
+   "currentBalance": 13402.37
+  },
+  {
+   "txnId": "RAVI000198",
+   "valueDate": "2026-09-30",
+   "narration": "UPI/CR/959407725483/VISHAL MORE/vishal.m@ybl/TIP",
+   "amount": 78.0,
+   "type": "CREDIT",
+   "currentBalance": 13480.37
+  },
+  {
+   "txnId": "RAVI000199",
+   "valueDate": "2026-09-30",
+   "narration": "UPI/CR/014652417453/NIKHIL GOKHALE/nikhil.g@okhdfc/TIP",
+   "amount": 23.0,
+   "type": "CREDIT",
+   "currentBalance": 13503.37
+  },
+  {
+   "txnId": "RAVI000200",
+   "valueDate": "2026-09-30",
+   "narration": "UPI/DR/520978808095/BHARAT PETROL POINT/bharatpetr@ybl/FUEL",
+   "amount": 168.45,
+   "type": "DEBIT",
+   "currentBalance": 13334.92
+  },
+  {
+   "txnId": "RAVI000201",
+   "valueDate": "2026-09-30",
+   "narration": "UPI/DR/248461233912/ANNAPURNA MESS/annapurnam@paytm/FOOD",
+   "amount": 125.39,
+   "type": "DEBIT",
+   "currentBalance": 13209.53
+  },
+  {
+   "txnId": "RAVI000202",
+   "valueDate": "2026-09-30",
+   "narration": "ATM CASH WDL KOTHRUD PUNE",
+   "amount": 1000.0,
+   "type": "DEBIT",
+   "currentBalance": 12209.53
+  },
+  {
+   "txnId": "RAVI000203",
+   "valueDate": "2026-10-01",
+   "narration": "UPI/DR/239513699086/BHARAT PETROL POINT/bharatpetr@ybl/FUEL",
+   "amount": 184.08,
+   "type": "DEBIT",
+   "currentBalance": 12025.45
+  },
+  {
+   "txnId": "RAVI000204",
+   "valueDate": "2026-10-01",
+   "narration": "UPI/DR/144508836399/SHREE KIRANA STORES/shreekiran@oksbi/FOOD",
+   "amount": 138.31,
+   "type": "DEBIT",
+   "currentBalance": 11887.14
+  },
+  {
+   "txnId": "RAVI000205",
+   "valueDate": "2026-10-02",
+   "narration": "NEFT CR-QUICKBITE TECHNOLOGIES PVT LTD-WEEKLY PAYOUT W40",
+   "amount": 5129.74,
+   "type": "CREDIT",
+   "currentBalance": 17016.88
+  },
+  {
+   "txnId": "RAVI000206",
+   "valueDate": "2026-10-02",
+   "narration": "UPI/CR/452586337142/VISHAL MORE/vishal.m@ybl/TIP",
+   "amount": 40.0,
+   "type": "CREDIT",
+   "currentBalance": 17056.88
+  },
+  {
+   "txnId": "RAVI000207",
+   "valueDate": "2026-10-02",
+   "narration": "UPI/DR/430211380403/IOCL FUEL STATION/ioclfuelst@oksbi/FUEL",
+   "amount": 187.36,
+   "type": "DEBIT",
+   "currentBalance": 16869.52
+  },
+  {
+   "txnId": "RAVI000208",
+   "valueDate": "2026-10-02",
+   "narration": "UPI/DR/577198024682/JAI MALHAR DHABA/jaimalhard@okicici/FOOD",
+   "amount": 70.0,
+   "type": "DEBIT",
+   "currentBalance": 16799.52
+  },
+  {
+   "txnId": "RAVI000209",
+   "valueDate": "2026-10-03",
+   "narration": "UPI/CR/305035475111/AMIT KULKARNI/amit.k@okicici/TIP",
+   "amount": 76.0,
+   "type": "CREDIT",
+   "currentBalance": 16875.52
+  },
+  {
+   "txnId": "RAVI000210",
+   "valueDate": "2026-10-03",
+   "narration": "UPI/CR/013974437747/KIRAN BHOSALE/kiran.b@paytm/TIP",
+   "amount": 31.0,
+   "type": "CREDIT",
+   "currentBalance": 16906.52
+  },
+  {
+   "txnId": "RAVI000211",
+   "valueDate": "2026-10-03",
+   "narration": "UPI/DR/753974172854/HP PETROL PUMP KOTHRUD/hppetrolpu@oksbi/FUEL",
+   "amount": 173.37,
+   "type": "DEBIT",
+   "currentBalance": 16733.15
+  },
+  {
+   "txnId": "RAVI000212",
+   "valueDate": "2026-10-03",
+   "narration": "UPI/DR/412527779422/ANNAPURNA MESS/annapurnam@paytm/FOOD",
+   "amount": 100.6,
+   "type": "DEBIT",
+   "currentBalance": 16632.55
+  },
+  {
+   "txnId": "RAVI000213",
+   "valueDate": "2026-10-04",
+   "narration": "UPI/CR/685013118938/ROHAN JOSHI/7136237438@okhdfc/TIP",
+   "amount": 72.0,
+   "type": "CREDIT",
+   "currentBalance": 16704.55
+  },
+  {
+   "txnId": "RAVI000214",
+   "valueDate": "2026-10-04",
+   "narration": "UPI/CR/835928843317/ANJALI SATHE/anjali.s@okaxis/TIP",
+   "amount": 38.0,
+   "type": "CREDIT",
+   "currentBalance": 16742.55
+  },
+  {
+   "txnId": "RAVI000215",
+   "valueDate": "2026-10-04",
+   "narration": "UPI/DR/369927058003/ANNAPURNA MESS/annapurnam@paytm/FOOD",
+   "amount": 95.11,
+   "type": "DEBIT",
+   "currentBalance": 16647.44
+  },
+  {
+   "txnId": "RAVI000216",
+   "valueDate": "2026-10-05",
+   "narration": "UPI/CR/977880761834/VISHAL MORE/vishal.m@ybl/TIP",
+   "amount": 74.0,
+   "type": "CREDIT",
+   "currentBalance": 16721.44
+  },
+  {
+   "txnId": "RAVI000217",
+   "valueDate": "2026-10-05",
+   "narration": "UPI/DR/649335528098/IOCL FUEL STATION/ioclfuelst@oksbi/FUEL",
+   "amount": 175.35,
+   "type": "DEBIT",
+   "currentBalance": 16546.09
+  },
+  {
+   "txnId": "RAVI000218",
+   "valueDate": "2026-10-05",
+   "narration": "UPI/DR/472796772769/AMRUTTULYA TEA/amruttulya@okhdfc/FOOD",
+   "amount": 95.95,
+   "type": "DEBIT",
+   "currentBalance": 16450.14
+  },
+  {
+   "txnId": "RAVI000219",
+   "valueDate": "2026-10-06",
+   "narration": "UPI/DR/835412523432/IOCL FUEL STATION/ioclfuelst@oksbi/FUEL",
+   "amount": 182.78,
+   "type": "DEBIT",
+   "currentBalance": 16267.36
+  },
+  {
+   "txnId": "RAVI000220",
+   "valueDate": "2026-10-06",
+   "narration": "UPI/DR/152944025802/ANNAPURNA MESS/annapurnam@paytm/FOOD",
+   "amount": 85.51,
+   "type": "DEBIT",
+   "currentBalance": 16181.85
+  },
+  {
+   "txnId": "RAVI000221",
+   "valueDate": "2026-10-07",
+   "narration": "UPI/CR/823804593683/PRIYA DESHPANDE/priya.d@okicici/TIP",
+   "amount": 71.0,
+   "type": "CREDIT",
+   "currentBalance": 16252.85
+  },
+  {
+   "txnId": "RAVI000222",
+   "valueDate": "2026-10-07",
+   "narration": "UPI/DR/638153063133/IOCL FUEL STATION/ioclfuelst@oksbi/FUEL",
+   "amount": 185.84,
+   "type": "DEBIT",
+   "currentBalance": 16067.01
+  },
+  {
+   "txnId": "RAVI000223",
+   "valueDate": "2026-10-07",
+   "narration": "UPI/DR/444429366999/ANNAPURNA MESS/annapurnam@paytm/FOOD",
+   "amount": 136.21,
+   "type": "DEBIT",
+   "currentBalance": 15930.8
+  },
+  {
+   "txnId": "RAVI000224",
+   "valueDate": "2026-10-08",
+   "narration": "UPI/CR/175957293996/PRIYA DESHPANDE/priya.d@okicici/TIP",
+   "amount": 75.0,
+   "type": "CREDIT",
+   "currentBalance": 16005.8
+  },
+  {
+   "txnId": "RAVI000225",
+   "valueDate": "2026-10-08",
+   "narration": "UPI/DR/294119109042/HP PETROL PUMP KOTHRUD/hppetrolpu@oksbi/FUEL",
+   "amount": 124.53,
+   "type": "DEBIT",
+   "currentBalance": 15881.27
+  },
+  {
+   "txnId": "RAVI000226",
+   "valueDate": "2026-10-08",
+   "narration": "UPI/DR/110026396326/ANNAPURNA MESS/annapurnam@paytm/FOOD",
+   "amount": 87.39,
+   "type": "DEBIT",
+   "currentBalance": 15793.88
+  },
+  {
+   "txnId": "RAVI000227",
+   "valueDate": "2026-10-09",
+   "narration": "NEFT CR-QUICKBITE TECHNOLOGIES PVT LTD-WEEKLY PAYOUT W41",
+   "amount": 4941.94,
+   "type": "CREDIT",
+   "currentBalance": 20735.82
+  },
+  {
+   "txnId": "RAVI000228",
+   "valueDate": "2026-10-09",
+   "narration": "UPI/CR/168453862584/POOJA KALE/8347272726@oksbi/TIP",
+   "amount": 57.0,
+   "type": "CREDIT",
+   "currentBalance": 20792.82
+  },
+  {
+   "txnId": "RAVI000229",
+   "valueDate": "2026-10-09",
+   "narration": "UPI/CR/235793189052/NIKHIL GOKHALE/nikhil.g@okhdfc/TIP",
+   "amount": 23.0,
+   "type": "CREDIT",
+   "currentBalance": 20815.82
+  },
+  {
+   "txnId": "RAVI000230",
+   "valueDate": "2026-10-09",
+   "narration": "UPI/DR/893242972648/HP PETROL PUMP KOTHRUD/hppetrolpu@oksbi/FUEL",
+   "amount": 172.88,
+   "type": "DEBIT",
+   "currentBalance": 20642.94
+  },
+  {
+   "txnId": "RAVI000231",
+   "valueDate": "2026-10-09",
+   "narration": "UPI/DR/762318072850/ANNAPURNA MESS/annapurnam@paytm/FOOD",
+   "amount": 99.3,
+   "type": "DEBIT",
+   "currentBalance": 20543.64
+  },
+  {
+   "txnId": "RAVI000232",
+   "valueDate": "2026-10-10",
+   "narration": "UPI/CR/432843844453/VISHAL MORE/vishal.m@ybl/TIP",
+   "amount": 38.0,
+   "type": "CREDIT",
+   "currentBalance": 20581.64
+  },
+  {
+   "txnId": "RAVI000233",
+   "valueDate": "2026-10-10",
+   "narration": "UPI/CR/360975688992/SNEHA PATWARDHAN/sneha.p@okhdfc/TIP",
+   "amount": 21.0,
+   "type": "CREDIT",
+   "currentBalance": 20602.64
+  },
+  {
+   "txnId": "RAVI000234",
+   "valueDate": "2026-10-10",
+   "narration": "UPI/DR/871676650176/CITY POWER BILL/citypowerb@okaxis/ELECTRICITY",
+   "amount": 608.94,
+   "type": "DEBIT",
+   "currentBalance": 19993.7
+  },
+  {
+   "txnId": "RAVI000235",
+   "valueDate": "2026-10-10",
+   "narration": "RD INSTALMENT TO A/C 004512345678",
+   "amount": 200.0,
+   "type": "DEBIT",
+   "currentBalance": 19793.7
+  },
+  {
+   "txnId": "RAVI000236",
+   "valueDate": "2026-10-10",
+   "narration": "UPI/DR/800422952554/HP PETROL PUMP KOTHRUD/hppetrolpu@oksbi/FUEL",
+   "amount": 114.68,
+   "type": "DEBIT",
+   "currentBalance": 19679.02
+  },
+  {
+   "txnId": "RAVI000237",
+   "valueDate": "2026-10-10",
+   "narration": "UPI/DR/042802514026/ANNAPURNA MESS/annapurnam@paytm/FOOD",
+   "amount": 76.78,
+   "type": "DEBIT",
+   "currentBalance": 19602.24
+  },
+  {
+   "txnId": "RAVI000238",
+   "valueDate": "2026-10-11",
+   "narration": "UPI/DR/641979539254/ANNAPURNA MESS/annapurnam@paytm/FOOD",
+   "amount": 121.58,
+   "type": "DEBIT",
+   "currentBalance": 19480.66
+  },
+  {
+   "txnId": "RAVI000239",
+   "valueDate": "2026-10-11",
+   "narration": "UPI/DR/364127837104/LAXMI SHINDE/laxmi.s@oksbi/HOME",
+   "amount": 800.0,
+   "type": "DEBIT",
+   "currentBalance": 18680.66
+  },
+  {
+   "txnId": "RAVI000240",
+   "valueDate": "2026-10-12",
+   "narration": "UPI/CR/884035989355/SNEHA PATWARDHAN/sneha.p@okhdfc/TIP",
+   "amount": 21.0,
+   "type": "CREDIT",
+   "currentBalance": 18701.66
+  },
+  {
+   "txnId": "RAVI000241",
+   "valueDate": "2026-10-12",
+   "narration": "UPI/DR/342657789838/SURESH PATIL/suresh.p@ybl/RENT",
+   "amount": 6000.0,
+   "type": "DEBIT",
+   "currentBalance": 12701.66
+  },
+  {
+   "txnId": "RAVI000242",
+   "valueDate": "2026-10-12",
+   "narration": "UPI/DR/795562746084/HP PETROL PUMP KOTHRUD/hppetrolpu@oksbi/FUEL",
+   "amount": 176.62,
+   "type": "DEBIT",
+   "currentBalance": 12525.04
+  },
+  {
+   "txnId": "RAVI000243",
+   "valueDate": "2026-10-12",
+   "narration": "UPI/DR/488363444195/AMRUTTULYA TEA/amruttulya@okhdfc/FOOD",
+   "amount": 140.63,
+   "type": "DEBIT",
+   "currentBalance": 12384.41
+  },
+  {
+   "txnId": "RAVI000244",
+   "valueDate": "2026-10-13",
+   "narration": "UPI/DR/186314166713/LIFELINE CLINIC/lifelinecl@okaxis/FEVER",
+   "amount": 600.0,
+   "type": "DEBIT",
+   "currentBalance": 11784.41
+  },
+  {
+   "txnId": "RAVI000245",
+   "valueDate": "2026-10-13",
+   "narration": "UPI/DR/791592150429/SHREE MEDICAL STORES/shreemedic@paytm/MEDICINE",
+   "amount": 850.0,
+   "type": "DEBIT",
+   "currentBalance": 10934.41
+  },
+  {
+   "txnId": "RAVI000246",
+   "valueDate": "2026-10-13",
+   "narration": "UPI/DR/780931248486/IOCL FUEL STATION/ioclfuelst@oksbi/FUEL",
+   "amount": 158.87,
+   "type": "DEBIT",
+   "currentBalance": 10775.54
+  },
+  {
+   "txnId": "RAVI000247",
+   "valueDate": "2026-10-13",
+   "narration": "UPI/DR/663359486372/SHREE KIRANA STORES/shreekiran@oksbi/FOOD",
+   "amount": 102.93,
+   "type": "DEBIT",
+   "currentBalance": 10672.61
+  },
+  {
+   "txnId": "RAVI000248",
+   "valueDate": "2026-10-14",
+   "narration": "UPI/DR/073191480784/BHARAT PETROL POINT/bharatpetr@ybl/FUEL",
+   "amount": 154.45,
+   "type": "DEBIT",
+   "currentBalance": 10518.16
+  },
+  {
+   "txnId": "RAVI000249",
+   "valueDate": "2026-10-14",
+   "narration": "UPI/DR/508409254380/ANNAPURNA MESS/annapurnam@paytm/FOOD",
+   "amount": 91.58,
+   "type": "DEBIT",
+   "currentBalance": 10426.58
+  },
+  {
+   "txnId": "RAVI000250",
+   "valueDate": "2026-10-14",
+   "narration": "ATM CASH WDL KOTHRUD PUNE",
+   "amount": 1000.0,
+   "type": "DEBIT",
+   "currentBalance": 9426.58
+  },
+  {
+   "txnId": "RAVI000251",
+   "valueDate": "2026-10-15",
+   "narration": "UPI/DR/818789972830/IOCL FUEL STATION/ioclfuelst@oksbi/FUEL",
+   "amount": 158.08,
+   "type": "DEBIT",
+   "currentBalance": 9268.5
+  },
+  {
+   "txnId": "RAVI000252",
+   "valueDate": "2026-10-15",
+   "narration": "UPI/DR/345191842669/ANNAPURNA MESS/annapurnam@paytm/FOOD",
+   "amount": 108.91,
+   "type": "DEBIT",
+   "currentBalance": 9159.59
+  },
+  {
+   "txnId": "RAVI000253",
+   "valueDate": "2026-10-16",
+   "narration": "NEFT CR-QUICKBITE TECHNOLOGIES PVT LTD-WEEKLY PAYOUT W42",
+   "amount": 5419.86,
+   "type": "CREDIT",
+   "currentBalance": 14579.45
+  },
+  {
+   "txnId": "RAVI000254",
+   "valueDate": "2026-10-16",
+   "narration": "UPI/CR/662011827772/POOJA KALE/8347272726@oksbi/TIP",
+   "amount": 68.0,
+   "type": "CREDIT",
+   "currentBalance": 14647.45
+  },
+  {
+   "txnId": "RAVI000255",
+   "valueDate": "2026-10-16",
+   "narration": "UPI/CR/717108946719/ANJALI SATHE/anjali.s@okaxis/TIP",
+   "amount": 72.0,
+   "type": "CREDIT",
+   "currentBalance": 14719.45
+  },
+  {
+   "txnId": "RAVI000256",
+   "valueDate": "2026-10-16",
+   "narration": "UPI/DR/016025901227/BHARAT PETROL POINT/bharatpetr@ybl/FUEL",
+   "amount": 188.37,
+   "type": "DEBIT",
+   "currentBalance": 14531.08
+  },
+  {
+   "txnId": "RAVI000257",
+   "valueDate": "2026-10-16",
+   "narration": "UPI/DR/956681589312/JAI MALHAR DHABA/jaimalhard@okicici/FOOD",
+   "amount": 93.85,
+   "type": "DEBIT",
+   "currentBalance": 14437.23
+  },
+  {
+   "txnId": "RAVI000258",
+   "valueDate": "2026-10-17",
+   "narration": "UPI/CR/121816027997/SNEHA PATWARDHAN/sneha.p@okhdfc/TIP",
+   "amount": 57.0,
+   "type": "CREDIT",
+   "currentBalance": 14494.23
+  },
+  {
+   "txnId": "RAVI000259",
+   "valueDate": "2026-10-17",
+   "narration": "UPI/DR/547858048818/HP PETROL PUMP KOTHRUD/hppetrolpu@oksbi/FUEL",
+   "amount": 157.34,
+   "type": "DEBIT",
+   "currentBalance": 14336.89
+  },
+  {
+   "txnId": "RAVI000260",
+   "valueDate": "2026-10-17",
+   "narration": "UPI/DR/214690542875/AMRUTTULYA TEA/amruttulya@okhdfc/FOOD",
+   "amount": 76.72,
+   "type": "DEBIT",
+   "currentBalance": 14260.17
+  },
+  {
+   "txnId": "RAVI000261",
+   "valueDate": "2026-10-18",
+   "narration": "UPI/DR/194651217738/SHREE KIRANA STORES/shreekiran@oksbi/FOOD",
+   "amount": 75.18,
+   "type": "DEBIT",
+   "currentBalance": 14184.99
+  },
+  {
+   "txnId": "RAVI000262",
+   "valueDate": "2026-10-19",
+   "narration": "UPI/DR/390757092657/BHARAT PETROL POINT/bharatpetr@ybl/FUEL",
+   "amount": 174.55,
+   "type": "DEBIT",
+   "currentBalance": 14010.44
+  },
+  {
+   "txnId": "RAVI000263",
+   "valueDate": "2026-10-19",
+   "narration": "UPI/DR/244269870676/AMRUTTULYA TEA/amruttulya@okhdfc/FOOD",
+   "amount": 134.94,
+   "type": "DEBIT",
+   "currentBalance": 13875.5
+  },
+  {
+   "txnId": "RAVI000264",
+   "valueDate": "2026-10-20",
+   "narration": "UPI/DR/925641285970/IOCL FUEL STATION/ioclfuelst@oksbi/FUEL",
+   "amount": 179.82,
+   "type": "DEBIT",
+   "currentBalance": 13695.68
+  },
+  {
+   "txnId": "RAVI000265",
+   "valueDate": "2026-10-20",
+   "narration": "UPI/DR/512629449808/JAI MALHAR DHABA/jaimalhard@okicici/FOOD",
+   "amount": 127.44,
+   "type": "DEBIT",
+   "currentBalance": 13568.24
+  },
+  {
+   "txnId": "RAVI000266",
+   "valueDate": "2026-10-21",
+   "narration": "UPI/CR/621079054619/SAGAR NIKAM/7309872103@okicici/TIP",
+   "amount": 47.0,
+   "type": "CREDIT",
+   "currentBalance": 13615.24
+  },
+  {
+   "txnId": "RAVI000267",
+   "valueDate": "2026-10-21",
+   "narration": "UPI/DR/767000208837/BHARAT PETROL POINT/bharatpetr@ybl/FUEL",
+   "amount": 139.1,
+   "type": "DEBIT",
+   "currentBalance": 13476.14
+  },
+  {
+   "txnId": "RAVI000268",
+   "valueDate": "2026-10-21",
+   "narration": "UPI/DR/614096788992/JAI MALHAR DHABA/jaimalhard@okicici/FOOD",
+   "amount": 116.87,
+   "type": "DEBIT",
+   "currentBalance": 13359.27
+  },
+  {
+   "txnId": "RAVI000269",
+   "valueDate": "2026-10-22",
+   "narration": "UPI/CR/727504601447/ROHAN JOSHI/7136237438@okhdfc/TIP",
+   "amount": 33.0,
+   "type": "CREDIT",
+   "currentBalance": 13392.27
+  },
+  {
+   "txnId": "RAVI000270",
+   "valueDate": "2026-10-22",
+   "narration": "UPI/CR/342151620580/SNEHA PATWARDHAN/sneha.p@okhdfc/TIP",
+   "amount": 69.0,
+   "type": "CREDIT",
+   "currentBalance": 13461.27
+  },
+  {
+   "txnId": "RAVI000271",
+   "valueDate": "2026-10-22",
+   "narration": "UPI/DR/729699280906/QUICKTALK MOBILE RECHARGE/quicktalkm@okaxis/PREPAID",
+   "amount": 299.0,
+   "type": "DEBIT",
+   "currentBalance": 13162.27
+  },
+  {
+   "txnId": "RAVI000272",
+   "valueDate": "2026-10-22",
+   "narration": "UPI/DR/013704267746/HP PETROL PUMP KOTHRUD/hppetrolpu@oksbi/FUEL",
+   "amount": 177.65,
+   "type": "DEBIT",
+   "currentBalance": 12984.62
+  },
+  {
+   "txnId": "RAVI000273",
+   "valueDate": "2026-10-22",
+   "narration": "UPI/DR/992383668831/ANNAPURNA MESS/annapurnam@paytm/FOOD",
+   "amount": 128.81,
+   "type": "DEBIT",
+   "currentBalance": 12855.81
+  },
+  {
+   "txnId": "RAVI000274",
+   "valueDate": "2026-10-23",
+   "narration": "NEFT CR-QUICKBITE TECHNOLOGIES PVT LTD-WEEKLY PAYOUT W43",
+   "amount": 5078.75,
+   "type": "CREDIT",
+   "currentBalance": 17934.56
+  },
+  {
+   "txnId": "RAVI000275",
+   "valueDate": "2026-10-23",
+   "narration": "UPI/CR/418590696517/POOJA KALE/8347272726@oksbi/TIP",
+   "amount": 33.0,
+   "type": "CREDIT",
+   "currentBalance": 17967.56
+  },
+  {
+   "txnId": "RAVI000276",
+   "valueDate": "2026-10-23",
+   "narration": "UPI/DR/250849818567/HP PETROL PUMP KOTHRUD/hppetrolpu@oksbi/FUEL",
+   "amount": 125.59,
+   "type": "DEBIT",
+   "currentBalance": 17841.97
+  },
+  {
+   "txnId": "RAVI000277",
+   "valueDate": "2026-10-23",
+   "narration": "UPI/DR/861039100861/ANNAPURNA MESS/annapurnam@paytm/FOOD",
+   "amount": 96.39,
+   "type": "DEBIT",
+   "currentBalance": 17745.58
+  },
+  {
+   "txnId": "RAVI000278",
+   "valueDate": "2026-10-24",
+   "narration": "UPI/CR/229170163353/ROHAN JOSHI/7136237438@okhdfc/TIP",
+   "amount": 77.0,
+   "type": "CREDIT",
+   "currentBalance": 17822.58
+  },
+  {
+   "txnId": "RAVI000279",
+   "valueDate": "2026-10-24",
+   "narration": "UPI/CR/419347461681/AMIT KULKARNI/amit.k@okicici/TIP",
+   "amount": 56.0,
+   "type": "CREDIT",
+   "currentBalance": 17878.58
+  },
+  {
+   "txnId": "RAVI000280",
+   "valueDate": "2026-10-24",
+   "narration": "RD INSTALMENT TO A/C 004512345678",
+   "amount": 200.0,
+   "type": "DEBIT",
+   "currentBalance": 17678.58
+  },
+  {
+   "txnId": "RAVI000281",
+   "valueDate": "2026-10-24",
+   "narration": "UPI/DR/673142094283/HP PETROL PUMP KOTHRUD/hppetrolpu@oksbi/FUEL",
+   "amount": 187.46,
+   "type": "DEBIT",
+   "currentBalance": 17491.12
+  },
+  {
+   "txnId": "RAVI000282",
+   "valueDate": "2026-10-24",
+   "narration": "UPI/DR/464793649295/AMRUTTULYA TEA/amruttulya@okhdfc/FOOD",
+   "amount": 78.88,
+   "type": "DEBIT",
+   "currentBalance": 17412.24
+  },
+  {
+   "txnId": "RAVI000283",
+   "valueDate": "2026-10-25",
+   "narration": "UPI/DR/292135837416/SHREE KIRANA STORES/shreekiran@oksbi/FOOD",
+   "amount": 119.21,
+   "type": "DEBIT",
+   "currentBalance": 17293.03
+  },
+  {
+   "txnId": "RAVI000284",
+   "valueDate": "2026-10-25",
+   "narration": "UPI/DR/362066187890/LAXMI SHINDE/laxmi.s@oksbi/HOME",
+   "amount": 800.0,
+   "type": "DEBIT",
+   "currentBalance": 16493.03
+  }
+ ]
+}
