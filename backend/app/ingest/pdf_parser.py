@@ -103,8 +103,8 @@ def parse_pdf(data: bytes, password: Optional[str] = None) -> tuple[list[RawTxn]
                         if narration and last is not None and not cell("debit") and not cell("credit"):
                             last.narration = f"{last.narration} {narration}"  # wrapped narration line
                         continue
-                    debit = parse_amount(cell("debit")) or 0.0
-                    credit = parse_amount(cell("credit")) or 0.0
+                    debit = abs(parse_amount(cell("debit")) or 0.0)
+                    credit = abs(parse_amount(cell("credit")) or 0.0)
                     balance = parse_amount(cell("balance"))
                     ref = cell("ref") or None
                     if debit > 0:
