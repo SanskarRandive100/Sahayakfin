@@ -21,6 +21,12 @@ from app.services import clock  # noqa: E402
 
 SAMPLES = Path(__file__).resolve().parents[2] / "data" / "samples"
 
+from app.ingest import sniff as _sniff  # noqa: E402
+
+# Until Rajat's real parser lands, parse_statement returns 3 fake weeks: no score band, so no loan offers.
+needs_real_ingest = pytest.mark.skipif("STUB" in (_sniff.__doc__ or ""),
+                                       reason="app.ingest is still a stub (no real statement parsing yet)")
+
 
 @pytest.fixture(scope="session")
 def client():

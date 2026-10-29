@@ -51,7 +51,7 @@ class Settings:
             raise RuntimeError("DATA_KEY must decode to exactly 32 bytes (AES-256)")
         return cls(
             database_url=os.getenv("DATABASE_URL", "sqlite:///./sahayakfin.db"),
-            jwt_secret=os.getenv("JWT_SECRET", "demo-change-me-8a2ab50e94b16653"),
+            jwt_secret=os.getenv("JWT_SECRET", "demo-change-me-8a2ab50e94b16653-sahayakfin"),
             data_key=data_key,
             payee_hmac_key=os.getenv("PAYEE_HMAC_KEY", "demo-payee-hmac-key").encode(),
             demo_mode=_bool(os.getenv("DEMO_MODE"), True),

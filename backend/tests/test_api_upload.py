@@ -45,7 +45,7 @@ def test_fake_pdf_extension_rejected(client):
 def test_too_large(client):
     h = login(client)
     cid = give_consent(client, h)
-    r = upload(client, h, cid, data=b"a,b\n" * (1024 * 1024 + 10), filename="big.csv")
+    r = upload(client, h, cid, data=b"a,b\n" * 1_400_000, filename="big.csv")
     assert r.status_code == 413 and r.json()["error"]["code"] == "FILE_TOO_LARGE"
 
 
