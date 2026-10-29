@@ -1,7 +1,7 @@
 """End-to-end flows through the real API (CONTRACTS §5)."""
 import pytest
 
-from tests.conftest import SAMPLES, give_consent, login, upload
+from tests.conftest import SAMPLES, give_consent, login, needs_real_ingest, upload
 
 API = "/api/v1"
 RAVI = "9000000001"
@@ -34,6 +34,7 @@ def _check_schedule(client, h, loan):
         assert WEEKDAYS[date.fromisoformat(row["due_date"]).weekday()] == loan["payout_weekday"]
 
 
+@needs_real_ingest
 def test_flow_csv(client):
     h = _fresh_ravi(client)
     cid = give_consent(client, h)
@@ -58,6 +59,7 @@ def test_flow_locked_pdf(client):
     _check_schedule(client, h, _accept_first(client, h))
 
 
+@needs_real_ingest
 def test_full_flow(client):
     h = _fresh_ravi(client)
     cid = give_consent(client, h)

@@ -5,7 +5,7 @@ from datetime import date, timedelta
 
 from sqlalchemy.orm import Session
 
-from app.models import Consent, DataSource, Transaction
+from app.models import Consent, DataSource, Transaction, aware
 from app.scoring.types import Txn
 from app.security.crypto import decrypt, encrypt
 
@@ -61,7 +61,7 @@ def dedupe_rows(rows: list[Transaction]) -> list[Transaction]:
     by_source: dict[str, list[Transaction]] = {}
     for row in rows:
         by_source.setdefault(row.source_id, []).append(row)
-    newest_first = sorted(by_source.values(), key=lambda rs: rs[0].source.created_at, reverse=True)
+    newest_first = sorted(by_source.values(), key=lambda rs: aware(rs[0].source.created_at), reverse=True)
     taken: Counter = Counter()
     out: list[Transaction] = []
     for source_rows in newest_first:

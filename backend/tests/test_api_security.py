@@ -8,7 +8,7 @@ from app.config import settings
 from app.db import SessionLocal
 from app.models import Consent
 from app.services import clock
-from tests.conftest import give_consent, login, onboard, upload
+from tests.conftest import give_consent, login, needs_real_ingest, onboard, upload
 
 API = "/api/v1"
 FORBIDDEN_LENDER_KEYS = {"narration", "narration_masked", "phone", "phone_masked", "payee_token", "balance",
@@ -52,6 +52,7 @@ def test_revoke_returns_counts_and_audits(client):
     assert {"CONSENT_CREATED", "STATEMENT_UPLOADED", "CONSENT_REVOKED"} <= set(actions)
 
 
+@needs_real_ingest
 def test_idor_returns_404(client):
     a, a_cid = onboard(client)
     b = login(client)
