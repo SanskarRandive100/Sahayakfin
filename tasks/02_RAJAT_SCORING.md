@@ -73,14 +73,14 @@ backend/tests/
 
 ## Phase 0: Setup (22:50 → 23:05)
 
-- [ ] Clone the repo, set `git config user.name/email`, run `bash scripts/setup-dev.sh`.
-- [ ] Set up Python:
+- [x] Clone the repo, set `git config user.name/email`, run `bash scripts/setup-dev.sh`.
+- [x] Set up Python:
   ```bash
   cd backend && python -m venv .venv
   source .venv/bin/activate          # Windows: .venv\Scripts\activate
   pip install -r requirements.txt
   ```
-- [ ] Start `claude` at the repo root.
+- [x] Start `claude` at the repo root.
 
 ---
 
@@ -96,7 +96,7 @@ After 1.1, 1.4 and 1.5 run `bash scripts/sync.sh scoring "<message>"` immediatel
 Rules: numpy.percentile default interpolation; paise ints at function boundaries; round-half-up = floor(x+0.5); never edit outside my paths; if something in the contract is impossible, stop and tell me instead of improvising.
 ```
 
-### 1.1 Interface stubs: push by 23:20
+### 1.1 Interface stubs: push by 23:20 ✅
 
 Sanskar can't import anything until these exist.
 
@@ -117,7 +117,7 @@ Sanskar can't import anything until these exist.
   ```
 - **Sync and post in chat:** "stubs on main".
 
-### 1.2 Scoring engine + golden tests (23:20 → 23:45)
+### 1.2 Scoring engine + golden tests (23:20 → 23:45) ✅
 
 `scoring/weekly.py`:
 
@@ -159,7 +159,7 @@ Sanskar can't import anything until these exist.
 
 **Acceptance:** `python -m pytest -q tests/test_scoring_golden.py` all green.
 
-### 1.3 Finance (23:45 → 00:00)
+### 1.3 Finance (23:45 → 00:00) ✅
 
 `finance/kfs.py`:
 - `weekly_emi(P, rate_pct, n)`: `r = rate_pct/100/52`; if r == 0, return P/n.
@@ -189,7 +189,7 @@ Sanskar can't import anything until these exist.
 
 **Sync.**
 
-### 1.4 Synthetic data (00:00 → 00:10)
+### 1.4 Synthetic data (00:00 → 00:10) ✅
 
 Start this earlier if you can, for example by asking Claude to write it right after 1.1.
 
@@ -218,7 +218,7 @@ Start this earlier if you can, for example by asking Claude to write it right af
 
 **Sync and post in chat:** "samples on main".
 
-### 1.5 Parsing v1 (00:10 → 00:25)
+### 1.5 Parsing v1 (00:10 → 00:25) ✅
 
 - `sniff.py`:
   - Starts with `%PDF-` → PDF.
@@ -246,7 +246,7 @@ Start this earlier if you can, for example by asking Claude to write it right af
 
 **Sync. Post:** "real parsing + engine on main".
 
-### 1.6 Persona sanity (00:25 → 00:30)
+### 1.6 Persona sanity (00:25 → 00:30) ✅
 
 Run `--check` on the PDFs too. Write the four personas' current numbers into `HANDOFF.md` under Mihir and Sanskar ("Phase 1 numbers").
 
@@ -278,7 +278,7 @@ I am Rajat. Phase 1 is on main (check git log). Re-read CLAUDE.md, docs/CONTRACT
 Do the Review 1 fixes first, then items 2.1 → 2.7 in order. For each: implement per spec, add the listed tests, run the whole backend test suite, tick the box, commit only my paths. Sync with scripts/sync.sh after 2.2, 2.4 and 2.7.
 ```
 
-### 2.1 Full masking and payee tokens
+### 2.1 Full masking and payee tokens ✅
 
 - **Order inside normalize:** extract payee name → categorise (needs the raw text) → mask → token.
 - **Payee extraction:**
@@ -295,7 +295,7 @@ Do the Review 1 fixes first, then items 2.1 → 2.7 in order. For each: implemen
   - **Keep platform and biller names** (QUICKBITE, CITY POWER BILL). They are businesses, not people, and they help the user recognise rows. A simple allowlist of business keywords decides this.
 - Tests: across all personas, no `narration_masked` matches `\d{9,}`, `@[a-z]+` with more than 2 visible leading chars, or any person name from `data/personas.py` (customer names, landlord, friend).
 
-### 2.2 Gaming and special rules
+### 2.2 Gaming and special rules ✅
 
 - **Self transfer:** owner_name tokens (first + last name) or `SELF` / `OWN A/C` in the narration → SELF_TRANSFER → IGNORED.
 - **Refund / reversal** (`REV`, `REFUND`, `REVERSAL`) and loan disbursal (`LOAN DISB`) → IGNORED.
@@ -311,7 +311,7 @@ Do the Review 1 fixes first, then items 2.1 → 2.7 in order. For each: implemen
   - Recategorising an OTHER debit to SAVINGS raises savings_habit when it lands in a week without savings.
   - Parsing the AA JSON gives the same score as the CSV for each persona.
 
-### 2.3 Affordability and stress (CONTRACTS §4)
+### 2.3 Affordability and stress (CONTRACTS §4) ✅
 
 - Use **smoothed** weekly features.
 - `affordability(txns, existing_weekly_debt_paise=None)` returns:
@@ -325,7 +325,7 @@ Do the Review 1 fixes first, then items 2.1 → 2.7 in order. For each: implemen
   - shock 0 with instalment 0 gives weeks_covered = W_obs.
   - Arjun → advice is not OK.
 
-### 2.4 Wellness: weekly breakdown and nudges
+### 2.4 Wellness: weekly breakdown and nudges ✅
 
 - `weekly_breakdown(txns, weeks=4)`:
   - The last `weeks` complete weeks: `{week_start, income_paise, expense_paise, by_category{CAT: paise}}`. Expense categories only; no SAVINGS, IGNORED or DEBT.
@@ -340,7 +340,7 @@ Do the Review 1 fixes first, then items 2.1 → 2.7 in order. For each: implemen
 
 **Sync.**
 
-### 2.5 What-if and the fairness report
+### 2.5 What-if and the fairness report ✅
 
 - `what_if(txns, tip_code)`:
   - Compute the weekly features once, apply the tip's change (CONTRACTS §3 tips table), and re-score.
@@ -363,13 +363,13 @@ Do the Review 1 fixes first, then items 2.1 → 2.7 in order. For each: implemen
 - `tests/test_fairness.py`: every test passes on the 4 personas.
 
 
-### 2.6 Persona tuning and deterministic output
+### 2.6 Persona tuning and deterministic output ✅
 
 - Make sure the §7 ranges hold on the PDFs and the AA JSON.
 - `tests/test_scoring_personas.py` asserts the ranges and the ranking Sunita > Ravi > Arjun.
 - Write the final numbers into `HANDOFF.md`: score, band, confidence, safe_weekly, loan_max at 26 weeks, and the KFS for Alpha at the ₹10,000 ask.
 
-### 2.7 Edge-case tests
+### 2.7 Edge-case tests ✅
 
 - An empty CSV (header only) → NO_TRANSACTIONS.
 - Duplicate rows (same date, narration, amount) → kept: banks do repeat legitimate rows, so we don't dedupe.
@@ -391,11 +391,11 @@ Do the Review 1 fixes first, then items 2.1 → 2.7 in order. For each: implemen
 I am Rajat. Re-read tasks/02_RAJAT_SCORING.md Phase 3. Do 3.1 then 3.2, commit only my paths, sync.
 ```
 
-- [ ] **3.1 ALT BANK layout (P1).**
+- [x] **3.1 ALT BANK layout (P1).**
   - Parser support for `Txn Date | Value Date | Description | Withdrawal | Deposit | Balance` with DD/MM/YY dates. Detect it from the header row.
   - Generator flag `--layout alt` writes `ravi.alt.pdf`.
   - Test: same score as `ravi.pdf`.
-- [ ] **3.2 `docs/ALGORITHM.md` first draft.** Each component in plain words + formula + golden vector A worked example + fairness rules + gaming defences. (The night shift finishes it.)
+- [x] **3.2 `docs/ALGORITHM.md` first draft.** Each component in plain words + formula + golden vector A worked example + fairness rules + gaming defences. (The night shift finishes it.)
 - [ ] **3.3 Demo 2 at 02:45.** Watch it; write anything broken in your area as item 1 of your night prompt.
 - [ ] **3.4 At 02:55:** sync, then start the night prompt.
 
