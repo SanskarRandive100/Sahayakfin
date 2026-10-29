@@ -33,6 +33,14 @@ You build the server that everything runs through: login, consent, upload, stora
 | 4 | 03:00–07:00 | Night shift (Claude alone) |
 | 5 | 07:00–08:00 | Merge, demo DB reset, pitch numbers |
 
+## Status (branch `sanskar/backend`)
+
+- [x] Phase 1: 1.1 skeleton · 1.2 security + auth + seed · 1.3 consent + upload + scores · 1.4 offers/accept/loans · 1.5 flow test (CSV + locked PDF)
+- [ ] 1.6 demo laptop (manual: run backend + frontend with `VITE_USE_MOCKS=false`)
+- [x] Phase 2: 2.1 consent lifecycle + audit · 2.2 AA fetch + recategorise · 2.3 upload hardening + IDOR · 2.4 stress + offers polish · 2.5 clock/repayments/reminders · 2.6 wellness + goals · 2.7 shares + fairness + seed with data · 2.8 full flow test
+- [x] Phase 3: 3.1–3.4 (3.5 Demo 2 is manual)
+- [x] Phase 4: security suite, error-shape test, missing SAMPLES_DIR log, timing log, docs/ARCHITECTURE.md, docs/PITCH.md, NIGHT_LOG_SANSKAR.md
+
 ## Target folder layout (create exactly this)
 
 ```
@@ -70,8 +78,8 @@ backend/tests/
 
 ## Phase 0: Setup (22:50 → 23:05). Skip whatever you already did.
 
-- [ ] The repo is on GitHub, private, with Mihir and Rajat as collaborators (see the older instructions: `git init -b main`, set identity, `bash scripts/setup-dev.sh`, first commit "chore: project kit", push).
-- [ ] Set up Python:
+- [x] The repo is on GitHub, private, with Mihir and Rajat as collaborators (see the older instructions: `git init -b main`, set identity, `bash scripts/setup-dev.sh`, first commit "chore: project kit", push).
+- [x] Set up Python:
   ```bash
   cd backend && python -m venv .venv
   source .venv/bin/activate          # Windows: .venv\Scripts\activate
@@ -79,7 +87,7 @@ backend/tests/
   cp ../.env.example ../.env
   ```
   `config.py` loads `../.env` relative to `backend/`, or from the repo root; support both.
-- [ ] Start `claude` at the repo root.
+- [x] Start `claude` at the repo root.
 
 ---
 
@@ -166,7 +174,7 @@ Errors are always {"error":{"code","message"}}. Money in paise. Never write uplo
   2. Lenders and products from the DB as dicts.
   3. `finance.match_offers(...)`.
   4. Persist each loan offer (status OFFERED) with an id.
-  5. Return `{requested_paise, safe_amount_paise: loan_max_paise["26"], loans, insurance}`.
+  5. Return `{requested_paise, safe_amount_paise: loan_max_paise["26"], rbi_cap_amount_paise: finance.loan_max(rbi_cap_weekly_paise, 24, 26), loans, insurance}`. `rbi_cap_amount_paise` feeds the website's safe-zone meter.
   - `requested_paise` defaults to 1,000,000. Insurance products are returned to everyone with `demo: true` (PMSBY: `is_govt_scheme: true`).
 - `POST /offers/{id}/accept` `{amount_paise, weeks}`:
   - The offer must be the user's, OFFERED, and ELIGIBLE or NEEDS_REVIEW; else 400 `OFFER_NOT_ACCEPTABLE`.
@@ -250,7 +258,7 @@ Do the Review 1 fixes first, then 2.1 → 2.8 in order, with tests for each, tic
 
 ### 2.4 Affordability stress + offers polish
 
-- `POST /affordability/stress` → `scoring.stress_test`; `shock` ∈ {0.1, 0.2, 0.3}, else `VALIDATION_ERROR`.
+- `POST /affordability/stress` → `scoring.stress_test`; `shock` ∈ {0, 0.1, 0.2, 0.3}, else `VALIDATION_ERROR`. Pass Rajat's `series` through untouched (the website risk graph needs it).
 - `/offers`: include `fits_safe_instalment` and the `reason` from match_offers. Requested amount must be > 0 and ≤ ₹1,00,000.
 - **Demo-proof:** if the user has no score yet, `/offers` → 400 `NO_SCORE`. The frontend shows "Upload a statement first".
 
@@ -304,7 +312,7 @@ Do the Review 1 fixes first, then 2.1 → 2.8 in order, with tests for each, tic
 I am Sanskar. Re-read Phase 3 of tasks/03_SANSKAR_BACKEND.md and CONTRACTS §5 lender rows. Do 3.1 → 3.4, tests for each, commit only my paths, sync.
 ```
 
-- [ ] **3.1 Lender API.**
+- [x] **3.1 Lender API.**
   - `GET /lender/applicants` (role LENDER): users with an active share to this lender.
   - Per applicant:
     - `applicant_ref = "APP-" + sha256(user_id + lender_id)[:4].upper()`
@@ -313,13 +321,16 @@ I am Sanskar. Re-read Phase 3 of tasks/03_SANSKAR_BACKEND.md and CONTRACTS §5 l
     - `eligible` computed with that lender's current rules.
   - **One audit row per applicant viewed** (`VIEW_SCORE_SUMMARY`, actor = the lender name, subject = the user).
   - Remove the `xfail` from the key-check test.
-- [ ] **3.2** `PUT /lender/rules` `{min_band, max_amount_paise, min_weeks}`: store the rules on the lender, then return `{rules, eligible_before, eligible_after}` (eligibility counted over its applicants before and after).
-- [ ] **3.3** Postgres run: `docker compose up -d db`, then
+- [x] **3.2** `PUT /lender/rules` `{min_band, max_amount_paise, min_weeks}`: store the rules on the lender, then return `{rules, eligible_before, eligible_after}` (eligibility counted over its applicants before and after).
+- [x] **3.3** Postgres run: `docker compose up -d db`, then
   ```bash
   DATABASE_URL=postgresql+psycopg://sahayak:sahayak@localhost:5432/sahayakfin python -m pytest -q tests/test_api_flow.py
   ```
   Fix type issues. If Docker isn't available, note that and move on.
-- [ ] **3.4** `python -m app.seed --reset` (drop all + create + seed with data) and the README run steps (both DBs, demo logins, passwords, the demo script link). **Sync.**
+  > Done: all API tests pass on PostgreSQL 16, no type fixes needed. On this laptop a local Windows PostgreSQL
+  > already listens on 5432/5433, so run the container on another port, e.g. `docker run -d --rm -p 127.0.0.1:55432:5432
+  > -e POSTGRES_USER=sahayak -e POSTGRES_PASSWORD=sahayak -e POSTGRES_DB=sahayakfin postgres:16`.
+- [x] **3.4** `python -m app.seed --reset` (drop all + create + seed with data) and the README run steps (both DBs, demo logins, passwords, the demo script link). **Sync.**
 - [ ] **3.5 Demo 2 at 02:45** on your laptop. Anything broken goes into item 0 of your night prompt.
 
 ---
