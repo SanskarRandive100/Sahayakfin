@@ -8,6 +8,7 @@ import ConfirmSheet from '../components/ConfirmSheet'
 import ErrorBanner from '../components/ErrorBanner'
 import OfferCard from '../components/OfferCard'
 import InsuranceCard from '../components/InsuranceCard'
+import SafeZoneMeter from '../charts/SafeZoneMeter'
 import Skeleton from '../components/Skeleton'
 import TopBar from '../components/TopBar'
 import { api } from '../api/endpoints'
@@ -44,7 +45,7 @@ export default function Loans() {
   }
 
   return (
-    <div className="flex flex-col min-h-[844px]">
+    <div className="flex flex-col min-h-screen pb-16 md:pb-0">
       <TopBar title={t('screen.loans.title')} />
       <div className="p-4 space-y-4 flex-1">
         <Card>
@@ -80,13 +81,18 @@ export default function Loans() {
                   : t('screen.loans.safeNote')}
               </div>
             </div>
+            <Card>
+              <SafeZoneMeter safePaise={data.safe_amount_paise} capPaise={data.rbi_cap_amount_paise ?? data.safe_amount_paise} requestedPaise={data.requested_paise} />
+            </Card>
+            <div className="grid gap-4 lg:grid-cols-2">
             {data.loans.map((o) => (
               <OfferCard key={o.id} offer={o} weekday={weekday} onChoose={() => setPick(o)} />
             ))}
+            </div>
             {data.insurance.length > 0 && (
               <section className="space-y-2">
                 <h2 className="text-lg font-semibold">{t('insurance.title')}</h2>
-                {data.insurance.map((i) => <InsuranceCard key={i.id} item={i} />)}
+                <div className="grid gap-3 md:grid-cols-3">{data.insurance.map((i) => <InsuranceCard key={i.id} item={i} />)}</div>
               </section>
             )}
           </>

@@ -4,7 +4,8 @@ import Button from './Button'
 import Card from './Card'
 import Chip from './Chip'
 import KfsCard from './KfsCard'
-import StressSlider from './StressSlider'
+import BadWeekTest from './BadWeekTest'
+import KfsCostBar from '../charts/KfsCostBar'
 
 export default function OfferCard({
   offer, weekday, onChoose,
@@ -20,7 +21,8 @@ export default function OfferCard({
         {outside && <Chip variant="grey">{t('screen.loans.notAvailable')}</Chip>}
       </div>
       {!outside && <KfsCard offer={offer} weekday={weekday} />}
-      {!outside && <StressSlider instalmentPaise={offer.kfs.instalment_paise} />}
+      {!outside && <KfsCostBar kfs={offer.kfs} />}
+      {!outside && <BadWeekTest instalmentPaise={offer.kfs.instalment_paise} />}
       <div className="mt-3">
         <Button onClick={onChoose} disabled={outside}>{t('screen.loans.choose')}</Button>
       </div>

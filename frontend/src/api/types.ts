@@ -66,6 +66,14 @@ export interface Stage {
   ms: number
 }
 
+export interface WeeklyPoint {
+  week_start: string | null
+  income_paise: number
+  expense_paise: number
+  surplus_paise: number
+  saved: boolean
+}
+
 export interface ScoreComponent {
   value: number
   weight: number
@@ -107,6 +115,7 @@ export interface ScoreResult {
     bounces: number
     savings_weeks: number
     categorised_share: number
+    weekly?: WeeklyPoint[]
   }
   reasons: Reason[]
   tips: Tip[]
@@ -167,6 +176,7 @@ export interface Insurance {
 export interface OffersResponse {
   requested_paise: number
   safe_amount_paise: number
+  rbi_cap_amount_paise?: number
   loans: Offer[]
   insurance: Insurance[]
 }
@@ -209,6 +219,7 @@ export interface StressResult {
   buffer_covers: boolean
   shortfall_paise: number
   advice: string
+  series?: { week_start: string | null; surplus_paise: number; stressed_surplus_paise: number }[]
 }
 
 export interface ApiError {

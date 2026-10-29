@@ -1,10 +1,10 @@
 import type { Band } from '../api/types'
 
 export const bandColor: Record<Band, string> = {
-  STRONG: '#1a7f37',
-  GOOD: '#2da44e',
-  FAIR: '#bf8700',
-  BUILDING: '#6e7781',
+  STRONG: '#1A7F37',
+  GOOD: '#2DA44E',
+  FAIR: '#BF8700',
+  BUILDING: '#6E7781',
 }
 
 export const bandKey: Record<Band, string> = {

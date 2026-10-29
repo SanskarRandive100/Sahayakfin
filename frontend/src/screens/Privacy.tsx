@@ -85,7 +85,7 @@ export default function Privacy() {
   }
 
   return (
-    <div className="flex flex-col min-h-[844px]">
+    <div className="flex flex-col min-h-screen pb-16 md:pb-0">
       <TopBar title={t('screen.privacy.title')} />
       <div className="p-4 space-y-4 flex-1">
         {error && <ErrorBanner onRetry={load}>{error}</ErrorBanner>}

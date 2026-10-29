@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Bar, BarChart, ResponsiveContainer, XAxis } from 'recharts'
+import CashFlowChart from '../charts/CashFlowChart'
 import BottomNav from '../components/BottomNav'
 import Button from '../components/Button'
 import Card from '../components/Card'
@@ -14,7 +14,7 @@ import { categoryStyle } from '../lib/categories'
 import { errText } from '../lib/errors'
 import { formatDate, formatINR } from '../lib/format'
 
-const MAX_CATS = 5
+const MAX_CATS = 6
 
 export default function Money() {
   const { t, i18n } = useTranslation()
@@ -22,28 +22,21 @@ export default function Money() {
   const [data, setData] = useState<Wellness | null>(null)
   const [goal, setGoal] = useState<Goal | null | undefined>(undefined)
   const [error, setError] = useState<string | null>(null)
+  const [range, setRange] = useState(4)
   const [name, setName] = useState('')
   const [target, setTarget] = useState('')
 
   function load() {
     setError(null)
-    api.getWellness(4).then(setData).catch((e) => setError(errText(t, e)))
+    api.getWellness(range).then(setData).catch((e) => setError(errText(t, e)))
     api.getGoals().then((g) => setGoal(g[0] ?? null)).catch(() => setGoal(null))
   }
-  useEffect(load, []) // eslint-disable-line react-hooks/exhaustive-deps
+  useEffect(load, [range]) // eslint-disable-line react-hooks/exhaustive-deps
 
   const weeks = data?.weeks ?? []
   const totals: Record<string, number> = {}
   weeks.forEach((w) => Object.entries(w.by_category).forEach(([c, v]) => { totals[c] = (totals[c] ?? 0) + v }))
   const top = Object.keys(totals).sort((a, b) => totals[b] - totals[a]).slice(0, MAX_CATS)
-  const chart = weeks.map((w) => {
-    const row: Record<string, number | string> = { week: formatDate(w.week_start, i18n.language), OTHER_GROUP: 0 }
-    Object.entries(w.by_category).forEach(([c, v]) => {
-      if (top.includes(c)) row[c] = v / 100
-      else row.OTHER_GROUP = (row.OTHER_GROUP as number) + v / 100
-    })
-    return row
-  })
   const last = weeks[weeks.length - 1]
   const compare = last
     ? top.map((c) => {
@@ -62,7 +55,7 @@ export default function Money() {
   }
 
   return (
-    <div className="flex flex-col min-h-[844px]">
+    <div className="flex flex-col min-h-screen pb-16 md:pb-0">
       <TopBar title={t('screen.money.title')} />
       <div className="p-4 space-y-4 flex-1">
         {error && <ErrorBanner onRetry={load}>{error}</ErrorBanner>}
@@ -71,29 +64,17 @@ export default function Money() {
         {data && weeks.length > 0 && (
           <>
             <Card>
-              <div className="text-sm font-medium mb-2">{t('screen.money.spending')}</div>
-              <div style={{ height: 180 }}>
-                <ResponsiveContainer width="100%" height="100%">
-                  <BarChart data={chart}>
-                    <XAxis dataKey="week" tick={{ fontSize: 11 }} axisLine={false} tickLine={false} />
-                    {top.map((c) => <Bar key={c} dataKey={c} stackId="a" fill={categoryStyle[c as Category]?.color ?? '#6b7280'} />)}
-                    <Bar dataKey="OTHER_GROUP" stackId="a" fill="#9ca3af" />
-                  </BarChart>
-                </ResponsiveContainer>
+              <div className="flex items-center justify-between mb-2">
+                <div className="text-sm font-medium">{t("screen.money.spending")}</div>
+                <div className="inline-flex rounded-lg border border-line p-0.5" role="group">
+                  {[4, 12].map((n) => (
+                    <button key={n} onClick={() => setRange(n)} aria-pressed={range === n}
+                      className={`h-9 px-3 rounded-md text-sm font-semibold ${range === n ? "bg-brand text-white" : "text-ink-2"}`}>{n} {t("screen.money.weeksShort")}</button>
+                  ))}
+                </div>
               </div>
-              <div className="flex flex-wrap gap-x-3 gap-y-1 mt-2">
-                {top.map((c) => {
-                  const s = categoryStyle[c as Category] ?? categoryStyle.OTHER
-                  const Icon = s.icon
-                  return (
-                    <span key={c} className="flex items-center gap-1 text-xs" style={{ color: s.color }}>
-                      <Icon className="w-3.5 h-3.5" /> {t(s.key)}
-                    </span>
-                  )
-                })}
-              </div>
+              <CashFlowChart weeks={weeks} />
             </Card>
-
             <Card>
               <div className="text-sm font-medium mb-1">{t('screen.money.vsUsual')}</div>
               <div className="divide-y divide-line">

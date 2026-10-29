@@ -9,6 +9,7 @@ import TopBar from '../components/TopBar'
 import { api } from '../api/endpoints'
 import type { Loan, Reminder, Repayment } from '../api/types'
 import ReminderChat from '../components/ReminderChat'
+import RepaymentTimeline from '../charts/RepaymentTimeline'
 import { useToast } from '../components/Toast'
 import { errText } from '../lib/errors'
 import { formatDate, formatINR } from '../lib/format'
@@ -42,7 +43,7 @@ export default function MyLoan() {
   const next = loan?.schedule.find((r) => r.status !== 'PAID')
 
   return (
-    <div className="flex flex-col min-h-[844px]">
+    <div className="flex flex-col min-h-screen pb-16 md:pb-0">
       <TopBar title={t('screen.myLoan.title')} />
       <div className="p-4 space-y-4 flex-1">
         {error && <ErrorBanner onRetry={load}>{error}</ErrorBanner>}
@@ -66,6 +67,7 @@ export default function MyLoan() {
                 )}
               </div>
             </Card>
+            <Card><RepaymentTimeline rows={loan.schedule} /></Card>
             <ReminderChat items={reminders} />
             <button onClick={nextDay} className="w-full h-11 rounded-xl border border-line bg-white text-sm font-medium">
               ⏩ {t('screen.myLoan.nextDay')}

@@ -11,7 +11,8 @@
     "home": "Home",
     "money": "Money",
     "loans": "Loans",
-    "privacy": "Privacy"
+    "privacy": "Privacy",
+    "transactions": "Transactions"
   },
   "band": {
     "STRONG": "Strong",
@@ -141,7 +142,8 @@
       "goalSaved": "Goal created",
       "goalLine": "Save {{amount}} every week · {{weeks}} weeks left",
       "moveToGoal": "Move {{amount}} to my goal (demo)",
-      "moved": "Moved (demo)"
+      "moved": "Moved (demo)",
+      "weeksShort": "wk"
     },
     "privacy": {
       "title": "Privacy",
@@ -193,6 +195,16 @@
         "MEDIUM": "Medium",
         "LOW": "Low",
         "NONE": "None"
+      },
+      "portal": "Lender portal",
+      "applicantsNav": "Applicants",
+      "logout": "Log out",
+      "rules": "Lending rules",
+      "kpi": {
+        "applicants": "Applicants",
+        "eligible": "Eligible",
+        "avgScore": "Average score",
+        "avgSafe": "Average safe weekly"
       }
     }
   },
@@ -345,5 +357,152 @@
     "MONOTONIC_BILLS": "Paying bills on time never lowers the score",
     "MISSING_IS_NOT_BAD": "Missing bills aren't treated as bad",
     "NO_PROTECTED_INPUTS": "No protected attributes used"
+  },
+  "wizard": {
+    "step0": "Language",
+    "step1": "Log in",
+    "step2": "Consent",
+    "step3": "Statement",
+    "step4": "Score"
+  },
+  "dashboard": {
+    "risk": "Bad-week test",
+    "riskEmpty": "Check loans to see your bad-week test.",
+    "nextPayment": "Next payment",
+    "viewLoan": "View my loan",
+    "ready": "Ready for a loan?",
+    "readyNote": "See loans that are safe for you, sized to your low weeks."
+  },
+  "chart": {
+    "empty": "Not enough data yet.",
+    "contribution": {
+      "aria": "Score built from four parts, total {{score}}",
+      "remaining": "Points you can still earn",
+      "notCounted": "Not counted",
+      "caption": "Your score is built from four habits. You can still earn {{points}} more points."
+    },
+    "steady": {
+      "title": "Income steadiness",
+      "normal": "Normal week {{amount}}",
+      "bad": "Bad week {{amount}}",
+      "caption": "Your bad weeks are {{pct}}% of a normal week, so steadiness is {{pct}}."
+    },
+    "streak": {
+      "title": "Saving streak",
+      "caption": "Saved in {{saved}} of {{total}} weeks"
+    },
+    "risk": {
+      "shock": "If income drops by",
+      "yourPayment": "Your payment {{amount}}",
+      "caption": "Red bars are weeks when money left would not cover this payment."
+    },
+    "safe": {
+      "safe": "Safe for you",
+      "stretch": "Stretch",
+      "risky": "Too risky",
+      "caption": "Up to {{amount}} is safe to borrow without stress."
+    },
+    "kfs": {
+      "receive": "You receive {{amount}}",
+      "fee": "Fee {{amount}}",
+      "interest": "Interest {{amount}}",
+      "apr": "Shown {{shown}}% → true yearly cost {{apr}}%",
+      "aria": "Total you pay back {{total}}"
+    },
+    "cash": {
+      "income": "Money in",
+      "caption": "Bars show where your money went each week; the line shows what came in."
+    },
+    "timeline": {
+      "caption": "{{paid}} of {{total}} paid · {{left}} left"
+    },
+    "scatter": {
+      "title": "Income vs score",
+      "x": "Monthly income",
+      "y": "Score",
+      "caption": "More income does not mean a higher score: habits matter, not size."
+    },
+    "bands": {
+      "title": "Applicants by band",
+      "caption": "How your applicant pool is spread across score bands."
+    }
+  },
+  "site": {
+    "nav": {
+      "how": "How it works",
+      "fairness": "Fairness",
+      "privacy": "Privacy",
+      "lenders": "For lenders",
+      "lenderLogin": "Lender login",
+      "cta": "Check my score"
+    },
+    "hero": {
+      "h1a": "Your UPI history is your",
+      "h1b": "credit history.",
+      "sub": "No salary slip? No CIBIL score? SahayakFin reads your bank statement fairly, explains every point, and shows only loans you can repay in a bad week.",
+      "cta1": "Check my score (demo)",
+      "cta2": "See how it's fair",
+      "card": "Sample score · built only from your own transactions"
+    },
+    "problem": {
+      "gig": "gig workers in 2020–21 → by 2029–30",
+      "source": "Source: NITI Aayog, 2022",
+      "most": "Most",
+      "nohistory": "have no formal credit history."
+    },
+    "how": {
+      "title": "How it works",
+      "one": {
+        "t": "Share with consent",
+        "d": "Upload a statement or connect a bank. You can stop any time."
+      },
+      "two": {
+        "t": "We read habits, not wealth",
+        "d": "Steady income, saving, bills and spending: nothing else."
+      },
+      "three": {
+        "t": "Get loans you can repay",
+        "d": "Lenders see a summary only, never your transactions."
+      }
+    },
+    "pillars": {
+      "title": "The four things we look at",
+      "steady": {
+        "t": "Steady income",
+        "d": "How close your low weeks are to your normal weeks."
+      },
+      "saving": {
+        "t": "Saving habit",
+        "d": "Weeks you saved anything, even ₹20."
+      },
+      "bills": {
+        "t": "Bills on time",
+        "d": "Rent, electricity, recharge and EMIs paid on time."
+      },
+      "living": {
+        "t": "Living within income",
+        "d": "Weeks you spent less than you earned."
+      }
+    },
+    "fair": {
+      "title": "Lower income, higher score",
+      "line": "Doubling every rupee doesn't change a score. Neither does a name.",
+      "cta": "Open the Fairness Lab"
+    },
+    "privacy": {
+      "title": "Our privacy promise",
+      "a": "We never ask for passwords, PINs or OTPs",
+      "b": "Account numbers are masked",
+      "c": "Lenders see a summary only",
+      "d": "One tap deletes your data"
+    },
+    "lenders": {
+      "title": "For lenders",
+      "sub": "Pre-screened, explainable applicants. Weekly repayments sized to bad weeks."
+    },
+    "footer": {
+      "proto": "Prototype with synthetic data · Not a CIBIL score · Built for the Fintech & Financial Inclusion track",
+      "team": "Team: Mihir · Rajat · Sanskar"
+    }
   }
 }

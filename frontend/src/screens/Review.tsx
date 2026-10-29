@@ -42,7 +42,7 @@ export default function Review() {
   useEffect(load, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
-    <div className="flex flex-col min-h-[844px]">
+    <div className="flex flex-col min-h-screen pb-16 md:pb-0">
       <TopBar title={t('screen.review.title')} />
       <div className="p-4 space-y-3 flex-1">
         <p className="text-sm text-muted">{t('screen.review.subtitle')}</p>

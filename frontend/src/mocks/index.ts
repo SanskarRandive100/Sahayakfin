@@ -30,6 +30,11 @@ const score: ScoreResult = {
   ],
   engine_version: 'fts-2.0',
 }
+score.metrics.weekly = [4.8, 5.1, 4.9, 5.0, 4.7, 5.05, 4.98, 5.12, 4.95, 5.0, 4.88, 5.12].map((w, i) => ({
+  week_start: new Date(Date.UTC(2026, 7, 3) + i * 7 * 86400000).toISOString().slice(0, 10),
+  income_paise: Math.round(w * 100000), expense_paise: Math.round(w * 84000),
+  surplus_paise: Math.round(w * 16000), saved: i % 2 === 0,
+}))
 
 const statement: StatementResult = {
   source_id: 's1', kind: 'CSV', period: { from: '2026-07-28', to: '2026-10-25' },
@@ -79,6 +84,7 @@ function offers(requested: number): OffersResponse {
   return {
     requested_paise: requested,
     safe_amount_paise: 760000,
+    rbi_cap_amount_paise: 1200000,
     loans: [
       { id: 'o1', lender: { id: 'l1', name: 'MFI Alpha' }, product_id: 'p1', amount_paise: 750000, weeks: 26, frequency: 'WEEKLY', rate_pct: 24, fee_pct: 2, kfs, fits_safe_instalment: true, eligible: 'ELIGIBLE', reason: null },
       { id: 'o2', lender: { id: 'l2', name: 'MFI Beta' }, product_id: 'p2', amount_paise: 750000, weeks: 26, frequency: 'WEEKLY', rate_pct: 21, fee_pct: 1, kfs: { ...kfs, advertised_rate_pct: 21, apr_pct: 24.2, instalment_paise: 29800, fee_paise: 7500, net_disbursed_paise: 742500, total_repayable_paise: 774800, total_cost_paise: 32300 }, fits_safe_instalment: true, eligible: 'NEEDS_REVIEW', reason: null },
@@ -180,6 +186,10 @@ export function mocks(method: string, path: string, body?: unknown): unknown {
       weeks_covered: light === 'GREEN' ? 12 : light === 'AMBER' ? 10 : 8, weeks_total: 12, light,
       buffer_covers: light !== 'RED', shortfall_paise: light === 'RED' ? 4000 : 0,
       advice: light === 'GREEN' ? 'OK' : 'CONSIDER_LONGER_TENURE',
+      series: (score.metrics.weekly ?? []).map((w, i) => ({
+        week_start: w.week_start, surplus_paise: w.surplus_paise + 12000,
+        stressed_surplus_paise: Math.round((w.surplus_paise + 12000) - w.income_paise * s * 0.6 * (i % 3 === 0 ? 1.3 : 0.7)),
+      })),
     }
   }
   if (method === 'GET' && p === '/reminders') {
