@@ -3,6 +3,7 @@
 Alternative credit scoring and financial wellness for gig workers (hackathon prototype). All data is synthetic.
 
 - Product: `docs/PRODUCT.md` · Contracts: `docs/CONTRACTS.md` · Team plan: `docs/TEAM_PLAN.md`
+- Architecture, API and DPDP mapping: `docs/ARCHITECTURE.md` · Pitch + 5-minute demo script: `docs/PITCH.md`
 
 ## Run the backend
 
@@ -26,6 +27,7 @@ Ravi stays empty for the live demo.
   docker compose up -d db
   DATABASE_URL=postgresql+psycopg://sahayak:sahayak@localhost:5432/sahayakfin uvicorn app.main:app --port 8000
   ```
+  If a local PostgreSQL already uses port 5432, map the container to another port (e.g. `55432:5432`) and change the URL.
 
 ## Demo logins (OTP is always `123456`)
 

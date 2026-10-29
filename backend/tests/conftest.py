@@ -7,7 +7,9 @@ from datetime import date, timedelta
 from pathlib import Path
 
 _TMP = tempfile.mkdtemp(prefix="sahayak-test-")
-os.environ["DATABASE_URL"] = f"sqlite:///{Path(_TMP, 'test.db').as_posix()}"
+# A temp SQLite DB, unless a PostgreSQL URL is given (Phase 3.3: DATABASE_URL=postgresql+psycopg://... pytest).
+if not os.environ.get("DATABASE_URL", "").startswith("postgresql"):
+    os.environ["DATABASE_URL"] = f"sqlite:///{Path(_TMP, 'test.db').as_posix()}"
 os.environ["SEED_DEMO_DATA"] = "false"
 os.environ.setdefault("DEMO_MODE", "true")
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
@@ -20,12 +22,6 @@ from app.security.ratelimit import otp_limiter  # noqa: E402
 from app.services import clock  # noqa: E402
 
 SAMPLES = Path(__file__).resolve().parents[2] / "data" / "samples"
-
-from app.ingest import sniff as _sniff  # noqa: E402
-
-# Until Rajat's real parser lands, parse_statement returns 3 fake weeks: no score band, so no loan offers.
-needs_real_ingest = pytest.mark.skipif("STUB" in (_sniff.__doc__ or ""),
-                                       reason="app.ingest is still a stub (no real statement parsing yet)")
 
 
 @pytest.fixture(scope="session")

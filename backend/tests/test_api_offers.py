@@ -1,4 +1,4 @@
-from tests.conftest import login, needs_real_ingest, onboard
+from tests.conftest import login, onboard
 
 API = "/api/v1"
 
@@ -24,7 +24,6 @@ def test_offer_amount_validation(client):
     assert client.get(f"{API}/offers?requested_paise=20000000", headers=h).status_code == 422
 
 
-@needs_real_ingest
 def test_accept_creates_schedule(client):
     h, _ = onboard(client)
     offers = client.get(f"{API}/offers", headers=h).json()
@@ -51,7 +50,6 @@ def test_outside_offer_not_acceptable(client):
         assert r.json()["error"]["code"] == "OFFER_NOT_ACCEPTABLE"
 
 
-@needs_real_ingest
 def test_exceeds_safe_instalment(client):
     h, _ = onboard(client)
     afford = client.get(f"{API}/affordability", headers=h).json()
@@ -65,7 +63,6 @@ def test_exceeds_safe_instalment(client):
     assert afford["safe_weekly_paise"] >= 0
 
 
-@needs_real_ingest
 def test_other_users_offer_is_404(client):
     h1, _ = onboard(client)
     h2 = login(client)
