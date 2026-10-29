@@ -1,7 +1,12 @@
-import { NavLink, Outlet, useLocation } from 'react-router-dom'
+import { NavLink, Outlet, useLocation, useNavigate } from 'react-router-dom'
 import { motion, useReducedMotion } from 'motion/react'
-import { Home, Landmark, ListChecks, ShieldCheck, Wallet } from 'lucide-react'
+import { Home, Landmark, ListChecks, LogOut, ShieldCheck, Wallet } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
+import { useSession } from '../state/session'
+
+export function initials(name: string | undefined): string {
+  return (name ?? '').split(/\s+/).filter(Boolean).slice(0, 2).map((w) => w[0]!.toUpperCase()).join('') || '•'
+}
 
 export const NAV = [
   { to: '/app/dashboard', icon: Home, key: 'nav.home' },
@@ -14,6 +19,8 @@ export const NAV = [
 export default function AppShell() {
   const { t } = useTranslation()
   const location = useLocation()
+  const navigate = useNavigate()
+  const { user, logout } = useSession()
   const reduce = useReducedMotion()
   return (
     <div className="min-h-screen bg-bg md:flex">
@@ -32,7 +39,25 @@ export default function AppShell() {
             </NavLink>
           ))}
         </nav>
-        <div className="hidden lg:block p-4 text-xs text-white/60">{t('site.footer.proto')}</div>
+        <div className="border-t border-white/10 p-3 space-y-2">
+          {user && (
+            <div className="hidden lg:flex items-center gap-3 px-2">
+              <span className="w-9 h-9 rounded-full bg-white/15 flex items-center justify-center text-sm font-semibold" aria-hidden>
+                {initials(user.display_name)}
+              </span>
+              <div className="min-w-0">
+                <div className="text-[11px] text-white/60">{t('account.signedInAs')}</div>
+                <div className="text-sm font-semibold truncate">{user.display_name}</div>
+              </div>
+            </div>
+          )}
+          <button onClick={() => { logout(); navigate('/', { replace: true }) }} title={t('account.logout')}
+            className="w-full flex items-center gap-3 h-11 px-3 rounded-xl text-sm font-medium text-white/80 hover:bg-white/10">
+            <LogOut className="w-5 h-5 flex-shrink-0" strokeWidth={1.75} />
+            <span className="hidden lg:inline">{t('account.logout')}</span>
+          </button>
+          <div className="hidden lg:block px-2 text-[11px] leading-4 text-white/50">{t('site.footer.proto')}</div>
+        </div>
       </aside>
       <main className="flex-1 min-w-0">
         <motion.div key={location.pathname} initial={reduce ? false : { opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}

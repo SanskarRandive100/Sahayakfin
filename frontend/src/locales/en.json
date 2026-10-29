@@ -246,10 +246,10 @@
     "THIN_FILE": "We have only a few weeks of data so far"
   },
   "tip": {
-    "SAVE_EVERY_WEEK": "Save ₹20 or more every week → about +{{points}} points",
-    "PAY_BILLS_ON_TIME": "Pay bills near the same date each month → about +{{points}} points",
-    "KEEP_SURPLUS_WEEKS": "Spend less than you earn each week → about +{{points}} points",
-    "STEADY_INCOME": "Keep your weekly income steady → about +{{points}} points",
+    "SAVE_EVERY_WEEK": "Save ₹20 or more every week → +{{points}} to your score",
+    "PAY_BILLS_ON_TIME": "Pay bills near the same date each month → +{{points}} to your score",
+    "KEEP_SURPLUS_WEEKS": "Spend less than you earn each week → +{{points}} to your score",
+    "STEADY_INCOME": "Keep your weekly income steady → +{{points}} to your score",
     "ADD_MORE_HISTORY": "Add {{weeks_needed}} more weeks of history"
   },
   "category": {
@@ -504,5 +504,28 @@
       "proto": "Prototype with synthetic data · Not a CIBIL score · Built for the Fintech & Financial Inclusion track",
       "team": "Team: Mihir · Rajat · Sanskar"
     }
+  },
+  "account": {
+    "signedInAs": "Signed in as",
+    "logout": "Log out",
+    "login": "Log in",
+    "openApp": "Open my dashboard",
+    "openAppFor": "Open {{name}}'s dashboard"
+  },
+  "reasonShort": {
+    "INCOME_UNEVEN": "Uneven income",
+    "NO_SAVINGS_SEEN": "No savings seen",
+    "FEW_SAVINGS_WEEKS": "Saves in few weeks",
+    "BILL_BOUNCE": "Bill bounced",
+    "BILLS_LATE": "Some bills late",
+    "SPENDING_ABOVE_INCOME": "Spends near income",
+    "FEW_SURPLUS_WEEKS": "Few surplus weeks",
+    "THIN_FILE": "Short history"
+  },
+  "offerReason": {
+    "BELOW_MIN_AMOUNT": "Your safe amount is below this lender's smallest loan.",
+    "BAND_BELOW_MIN": "This lender needs a higher score band.",
+    "TOO_FEW_WEEKS": "This lender needs more weeks of bank history.",
+    "OTHER": "This lender can't offer you a loan right now."
   }
 }

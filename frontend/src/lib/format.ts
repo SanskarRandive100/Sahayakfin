@@ -20,6 +20,21 @@ export function formatDate(iso: string, lang = 'en'): string {
   }
 }
 
+const WEEKDAYS: Record<string, string> = {
+  MON: 'MONDAY', TUE: 'TUESDAY', WED: 'WEDNESDAY', THU: 'THURSDAY', FRI: 'FRIDAY', SAT: 'SATURDAY', SUN: 'SUNDAY',
+}
+
+/** The API sends payout days as MON..SUN (CONTRACTS §4); locale keys are full names. */
+export function weekdayKey(day: string | null | undefined): string {
+  const d = (day ?? '').toUpperCase()
+  return WEEKDAYS[d.slice(0, 3)] ?? d
+}
+
+/** Lender name of a loan, whichever shape the API used. */
+export function loanLender(loan: { lender?: { name: string }; lender_name?: string }): string {
+  return loan.lender?.name ?? loan.lender_name ?? ''
+}
+
 export function weekLabel(weekStart: string, lang = 'en'): string {
   return formatDate(weekStart, lang)
 }

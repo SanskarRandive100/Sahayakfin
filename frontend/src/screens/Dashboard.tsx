@@ -20,7 +20,7 @@ import BadWeekTest from '../components/BadWeekTest'
 import { api } from '../api/endpoints'
 import type { Loan, Offer, ScoreResult } from '../api/types'
 import { errText } from '../lib/errors'
-import { formatDate, formatINR } from '../lib/format'
+import { formatDate, formatINR, loanLender } from '../lib/format'
 import { useSession } from '../state/session'
 
 export default function Dashboard() {
@@ -114,7 +114,7 @@ export default function Dashboard() {
                   <div>
                     <h2 className="text-lg font-semibold">{t('dashboard.nextPayment')}</h2>
                     <div className="text-3xl font-bold mt-2">{formatINR(next.amount_paise)}</div>
-                    <div className="text-sm text-muted">{formatDate(next.due_date, i18n.language)} · {loan?.lender_name}</div>
+                    <div className="text-sm text-muted">{[formatDate(next.due_date, i18n.language), loan && loanLender(loan)].filter(Boolean).join(' · ')}</div>
                     <Link to="/app/loan" className="text-brand text-sm font-semibold underline mt-2 inline-block">{t('dashboard.viewLoan')}</Link>
                   </div>
                 ) : (

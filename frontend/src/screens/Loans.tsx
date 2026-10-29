@@ -14,7 +14,7 @@ import TopBar from '../components/TopBar'
 import { api } from '../api/endpoints'
 import type { Offer, OffersResponse } from '../api/types'
 import { errText } from '../lib/errors'
-import { formatINR } from '../lib/format'
+import { formatINR, weekdayKey } from '../lib/format'
 
 const quick = [500000, 1000000, 1500000]
 
@@ -107,7 +107,7 @@ export default function Loans() {
         title={t('screen.loans.confirmTitle')}
         body={pick ? t('screen.loans.confirmBody', {
           weekly: formatINR(pick.kfs.instalment_paise),
-          day: t(`weekday.${weekday}`),
+          day: t(`weekday.${weekdayKey(weekday)}`),
           weeks: pick.weeks,
           total: formatINR(pick.kfs.total_repayable_paise),
         }) : ''}

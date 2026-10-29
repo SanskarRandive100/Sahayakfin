@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { CheckCircle2, Eye, FileUp, ShieldCheck, ShieldOff, Share2, Landmark, Wallet, Tags } from 'lucide-react'
+import { CheckCircle2, Eye, FileUp, LogOut, ShieldCheck, ShieldOff, Share2, Landmark, Wallet, Tags } from 'lucide-react'
 import BottomNav from '../components/BottomNav'
 import Button from '../components/Button'
 import Card from '../components/Card'
@@ -27,7 +27,7 @@ export default function Privacy() {
   const { t, i18n } = useTranslation()
   const navigate = useNavigate()
   const toast = useToast()
-  const { logout, latestScore, setLatestScore } = useSession()
+  const { logout, latestScore, setLatestScore, user } = useSession()
   const [consent, setConsent] = useState<Consent | null | undefined>(undefined)
   const [lenders, setLenders] = useState<LenderInfo[]>([])
   const [shares, setShares] = useState<Record<string, string>>({})
@@ -142,6 +142,20 @@ export default function Privacy() {
                 </div>
               )
             })}
+          </div>
+        </Card>
+
+        <Card>
+          <div className="flex items-center justify-between gap-3">
+            <div className="min-w-0">
+              <div className="text-xs text-muted">{t('account.signedInAs')}</div>
+              <div className="font-semibold truncate">{user?.display_name}</div>
+              {user?.phone_masked && <div className="text-xs text-muted">{user.phone_masked}</div>}
+            </div>
+            <button onClick={() => { logout(); navigate('/', { replace: true }) }}
+              className="inline-flex items-center gap-2 h-10 px-4 rounded-xl border border-line text-sm font-semibold hover:bg-slate-50">
+              <LogOut className="w-4 h-4" />{t('account.logout')}
+            </button>
           </div>
         </Card>
 

@@ -12,7 +12,7 @@ import ReminderChat from '../components/ReminderChat'
 import RepaymentTimeline from '../charts/RepaymentTimeline'
 import { useToast } from '../components/Toast'
 import { errText } from '../lib/errors'
-import { formatDate, formatINR } from '../lib/format'
+import { formatDate, formatINR, loanLender } from '../lib/format'
 
 export default function MyLoan() {
   const { t, i18n } = useTranslation()
@@ -52,7 +52,7 @@ export default function MyLoan() {
         {loan && (
           <>
             <Card>
-              <div className="text-sm text-muted">{loan.lender_name}</div>
+              <div className="text-sm text-muted">{loanLender(loan)}</div>
               <div className="text-3xl font-bold mt-1">{formatINR(loan.principal_paise)}</div>
               <div className="flex justify-between mt-3 text-sm">
                 <div>

@@ -48,13 +48,14 @@ export default function LenderDashboard() {
 
   if (!token) return <Navigate to="/lender/login" replace />
 
+  const isEligible = (e: Applicant['eligible']) => e === true || e === 'ELIGIBLE'
   const chip = (e: Applicant['eligible']) =>
-    e === 'ELIGIBLE' ? <Chip variant="green">{t('screen.loans.preApproved')}</Chip>
+    isEligible(e) ? <Chip variant="green">{t('screen.loans.preApproved')}</Chip>
       : e === 'NEEDS_REVIEW' ? <Chip variant="amber">{t('screen.loans.needsReview')}</Chip>
       : <Chip variant="grey">{t('screen.loans.notAvailable')}</Chip>
 
   const n = rows?.length ?? 0
-  const eligible = rows?.filter((r) => r.eligible === 'ELIGIBLE').length ?? 0
+  const eligible = rows?.filter((r) => isEligible(r.eligible)).length ?? 0
   const avgScore = n ? rows!.reduce((s, r) => s + r.score, 0) / n : 0
   const avgSafe = n ? rows!.reduce((s, r) => s + r.safe_weekly_paise, 0) / n / 100 : 0
 
@@ -131,7 +132,7 @@ export default function LenderDashboard() {
                     <td className="p-3 font-mono">{r.applicant_ref}</td>
                     <td className="p-3 whitespace-nowrap"><span className="font-bold mr-2" style={{ color: bandColor[r.band] }}>{r.score}</span><span style={{ color: bandColor[r.band] }}>{t(`band.${r.band}`)}</span></td>
                     <td className="p-3">{t(`screen.lender.conf.${r.confidence}`)}</td>
-                    <td className="p-3 text-xs min-w-[200px]">{r.reasons.map((c) => t(`reason.${c}`, { weeks: '–', of: '–', late: '–' })).join(' · ')}</td>
+                    <td className="p-3 text-xs min-w-[200px]">{r.reasons.map((c) => t(`reasonShort.${c}`, { defaultValue: c })).join(' · ')}</td>
                     <td className="p-3">{formatINR(r.safe_weekly_paise)}</td>
                     <td className="p-3">{formatINR(r.requested_paise)}</td>
                     <td className="p-3">{chip(r.eligible)}</td>

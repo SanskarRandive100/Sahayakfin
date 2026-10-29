@@ -1,7 +1,7 @@
 import { Check, Info, X } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import type { Offer } from '../api/types'
-import { formatINR } from '../lib/format'
+import { formatINR, weekdayKey } from '../lib/format'
 
 function Row({ label, children }: { label: React.ReactNode; children: React.ReactNode }) {
   return (
@@ -15,7 +15,7 @@ function Row({ label, children }: { label: React.ReactNode; children: React.Reac
 export default function KfsCard({ offer, weekday }: { offer: Offer; weekday: string }) {
   const { t } = useTranslation()
   const k = offer.kfs
-  const day = t(`weekday.${weekday}`)
+  const day = t(`weekday.${weekdayKey(weekday)}`)
   return (
     <div className="divide-y divide-line">
       <Row label={t('screen.kfs.receive')}><b>{formatINR(k.net_disbursed_paise)}</b></Row>

@@ -23,9 +23,15 @@ export default function OfferCard({
       {!outside && <KfsCard offer={offer} weekday={weekday} />}
       {!outside && <KfsCostBar kfs={offer.kfs} />}
       {!outside && <BadWeekTest instalmentPaise={offer.kfs.instalment_paise} />}
-      <div className="mt-3">
-        <Button onClick={onChoose} disabled={outside}>{t('screen.loans.choose')}</Button>
-      </div>
+      {outside ? (
+        <p className="text-sm text-ink-2 mt-1">
+          {t(`offerReason.${offer.reason ?? 'OTHER'}`, { defaultValue: t('offerReason.OTHER') })}
+        </p>
+      ) : (
+        <div className="mt-3">
+          <Button onClick={onChoose}>{t('screen.loans.choose')}</Button>
+        </div>
+      )}
     </Card>
   )
 }

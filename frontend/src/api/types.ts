@@ -192,7 +192,9 @@ export interface Repayment {
 
 export interface Loan {
   id: string
-  lender_name: string
+  /** The API sends `lender: {id, name}`; older mocks used `lender_name`. Read it with `loanLender()`. */
+  lender?: { id: string; name: string }
+  lender_name?: string
   principal_paise: number
   instalment_paise: number
   weeks: number
@@ -277,7 +279,8 @@ export interface Applicant {
   reasons: string[]
   safe_weekly_paise: number
   requested_paise: number
-  eligible: Eligible
+  /** The API sends a boolean (the lender's own rules); mocks use the offer enum. */
+  eligible: Eligible | boolean
 }
 
 export interface LenderRules { min_band: Band; max_amount_paise: number; min_weeks: number }

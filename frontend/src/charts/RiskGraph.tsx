@@ -44,15 +44,19 @@ export default function RiskGraph({
             <ResponsiveContainer width="100%" height="100%">
               <BarChart data={data} margin={{ top: 16, right: 8, left: 0, bottom: 0 }}>
                 <XAxis dataKey="label" tick={{ fontSize: 12, fill: '#64748B' }} axisLine={false} tickLine={false} interval="preserveStartEnd" />
-                <YAxis tick={{ fontSize: 12, fill: '#64748B' }} axisLine={false} tickLine={false} width={44} tickFormatter={(v) => `₹${v}`} />
+                <YAxis tick={{ fontSize: 12, fill: '#64748B' }} axisLine={false} tickLine={false} width={56}
+                  tickFormatter={(v: number) => (v < 0 ? `−₹${Math.abs(v)}` : `₹${v}`)} />
                 <Tooltip formatter={(v: number) => formatINR(v * 100)} />
-                <ReferenceLine y={instalmentPaise / 100} stroke="#0F172A" strokeDasharray="4 4"
-                  label={{ value: t('chart.risk.yourPayment', { amount: formatINR(instalmentPaise) }), fontSize: 12, fill: '#0F172A', position: 'insideTopRight' }} />
+                <ReferenceLine y={instalmentPaise / 100} stroke="#0F172A" strokeDasharray="4 4" />
                 <Bar dataKey="v" radius={[4, 4, 0, 0]} animationDuration={400}>
                   {data.map((d, i) => <Cell key={i} fill={d.short ? '#CF222E' : '#1A7F37'} />)}
                 </Bar>
               </BarChart>
             </ResponsiveContainer>
+          </div>
+          <div className="flex items-center gap-2 text-xs text-ink-2 mt-1">
+            <span className="inline-block w-5 border-t-2 border-dashed border-ink" aria-hidden />
+            {t('chart.risk.yourPayment', { amount: formatINR(instalmentPaise) })}
           </div>
           <div className="text-sm mt-1">{t(`advice.${result.advice}`, { defaultValue: '' })}</div>
         </>

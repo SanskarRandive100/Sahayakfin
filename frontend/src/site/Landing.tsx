@@ -1,5 +1,5 @@
 import { Fragment, useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import {
   ArrowRight, Banknote, Building2, Eye, EyeOff, KeyRound, Landmark, PiggyBank, Receipt, ShieldCheck, Trash2, TrendingUp, Wallet,
 } from 'lucide-react'
@@ -9,27 +9,34 @@ import type { FairnessReport } from '../api/types'
 import LanguageSwitch from '../components/LanguageSwitch'
 import ScoreGauge from '../components/ScoreGauge'
 import { bandColor } from '../lib/band'
+import { useSession } from '../state/session'
 import { Beam, BorderBeam, Marquee, NumberTicker, Reveal } from './ui'
 
 const PILLARS = [
-  { k: 'steady', icon: TrendingUp, span: 'lg:col-span-2' },
+  { k: 'steady', icon: TrendingUp, span: '' },
   { k: 'saving', icon: PiggyBank, span: '' },
   { k: 'bills', icon: Receipt, span: '' },
-  { k: 'living', icon: Wallet, span: 'lg:col-span-2' },
+  { k: 'living', icon: Wallet, span: '' },
 ] as const
 
+// Shown until /fairness/report answers (real numbers from data/samples, docs/ALGORITHM.md §8.3).
 const FALLBACK: FairnessReport['personas'] = [
-  { name: 'Sunita', monthly_income_paise: 1200000, score: 78, band: 'GOOD', confidence: 'HIGH' },
-  { name: 'Arjun', monthly_income_paise: 4000000, score: 52, band: 'FAIR', confidence: 'MEDIUM' },
+  { name: 'Sunita', monthly_income_paise: 1250200, score: 99, band: 'STRONG', confidence: 'HIGH' },
+  { name: 'Arjun', monthly_income_paise: 4007900, score: 43, band: 'FAIR', confidence: 'HIGH' },
 ]
+
+const firstName = (n: string) => n.split(' ')[0]
 
 export default function Landing() {
   const { t } = useTranslation()
+  const navigate = useNavigate()
+  const { token, user, logout } = useSession()
   const [personas, setPersonas] = useState(FALLBACK)
   useEffect(() => {
     api.getFairness().then((r) => {
-      const two = r.personas.filter((p) => p.name === 'Sunita' || p.name === 'Arjun')
-      if (two.length === 2) setPersonas(two)
+      // The API returns full names ("Sunita Jadhav"); show first names like the fallback.
+      const two = ['Sunita', 'Arjun'].map((f) => r.personas.find((p) => firstName(p.name) === f))
+      if (two[0] && two[1]) setPersonas(two.map((p) => ({ ...p!, name: firstName(p!.name) })))
     }).catch(() => undefined)
   }, [])
 
@@ -46,8 +53,23 @@ export default function Landing() {
           </nav>
           <div className="ml-auto flex items-center gap-3">
             <LanguageSwitch />
-            <Link to="/lender/login" className="hidden sm:inline-flex h-10 items-center px-3 rounded-xl text-sm font-semibold text-white/90 hover:bg-white/10">{t('site.nav.lenderLogin')}</Link>
-            <Link to="/language" className="inline-flex h-10 items-center px-4 rounded-xl bg-brand text-white text-sm font-semibold hover:bg-brand-800">{t('site.nav.cta')}</Link>
+            <Link to="/lender/login" className="hidden lg:inline-flex h-10 items-center px-3 rounded-xl text-sm font-semibold text-white/90 hover:bg-white/10">{t('site.nav.lenderLogin')}</Link>
+            {token ? (
+              <>
+                <button onClick={() => { logout(); navigate('/', { replace: true }) }}
+                  className="hidden sm:inline-flex h-10 items-center px-3 rounded-xl text-sm font-semibold text-white/90 hover:bg-white/10">
+                  {t('account.logout')}
+                </button>
+                <Link to="/app/dashboard" className="inline-flex h-10 items-center px-4 rounded-xl bg-brand text-white text-sm font-semibold hover:bg-brand-800">
+                  {user ? t('account.openAppFor', { name: firstName(user.display_name) }) : t('account.openApp')}
+                </Link>
+              </>
+            ) : (
+              <>
+                <Link to="/login" className="inline-flex h-10 items-center px-3 rounded-xl text-sm font-semibold text-white/90 hover:bg-white/10">{t('account.login')}</Link>
+                <Link to="/language" className="hidden sm:inline-flex h-10 items-center px-4 rounded-xl bg-brand text-white text-sm font-semibold hover:bg-brand-800">{t('site.nav.cta')}</Link>
+              </>
+            )}
           </div>
         </div>
       </header>
@@ -115,7 +137,7 @@ export default function Landing() {
       <section className="bg-bg py-16 md:py-24">
         <div className="max-w-[1200px] mx-auto px-4">
           <Reveal><h2 className="text-2xl md:text-[32px] font-bold text-center mb-12">{t('site.pillars.title')}</h2></Reveal>
-          <div className="grid gap-4 lg:grid-cols-4">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {PILLARS.map((p, i) => (
               <Reveal key={p.k} delay={i * 0.06} className={`bg-white border border-line rounded-card shadow-card p-6 ${p.span}`}>
                 <p.icon className="w-6 h-6 text-brand" />
