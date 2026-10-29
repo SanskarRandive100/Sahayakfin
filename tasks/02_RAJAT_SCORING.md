@@ -1,5 +1,26 @@
 # Rajat: Scoring engine, statement parsing, loan maths and demo data
 
+## Active verification handoff (30 October 2026)
+
+The dated handoff `RAJAT_REMAINING_WORK.md` supersedes the historical build/night
+workflow below. Use `work/rajat-scoring-verify` from immutable integration baseline
+`bba49759f4adaa2a8e3b11d078de6b99977d1ba4`; push only this feature and open a PR into
+`integration/full-demo`. Never run `scripts/sync.sh`, rebase from main or merge it
+from this session. Detailed results and owner requests are in `RAJAT_VERIFICATION_REPORT.md`.
+
+- [x] Isolated worktree and verified human Git identity/hooks.
+- [x] Sample generator check: 17 formats equivalent; exit 0.
+- [x] Ingest/privacy/correction regressions and targeted fixes in owned paths.
+- [x] Golden vectors, finance, stress, persona determinism and fairness-fixture tests.
+- [x] Pure suite: 250 passed; full SQLite backend suite: 299 passed; zero skips/failures.
+- [x] Reproducible JSON evidence, sample documentation and written owner handoff.
+- [ ] Resolve ignored-credit savings and fixed-floor scale-invariance contract decisions.
+- [ ] Agree KFS prose versus golden-vector rounding policy.
+- [ ] Sanskar acknowledges before integration merge; team performs merged/browser/PostgreSQL checks.
+
+The build/night timeline that follows is historical, not the active Git workflow.
+
+
 ## Your role in one paragraph
 
 You build the brain of SahayakFin: the code that reads a bank statement, cleans and masks it, computes the Financial Trust Score, works out a safe loan, and proves the score is fair. This is **"Algorithm Fairness & Logic", 30% of the marks.** Your code is **pure Python**: no FastAPI, no database. Sanskar's API imports your functions (CONTRACTS §4.1). Mihir never calls you directly.

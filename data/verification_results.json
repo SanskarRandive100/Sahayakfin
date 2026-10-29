@@ -1,0 +1,2214 @@
+{
+  "engine_version": "fts-2.0",
+  "statement_as_of": "2026-10-25",
+  "synthetic_only": true,
+  "all_formats_match": true,
+  "personas": {
+    "ravi": {
+      "score_result": {
+        "score": 85,
+        "band": "STRONG",
+        "confidence": "HIGH",
+        "provisional": false,
+        "weeks_observed": 12,
+        "as_of": "2026-10-25",
+        "components": {
+          "income_stability": {
+            "value": 95.85,
+            "weight": 0.3,
+            "available": true
+          },
+          "savings_habit": {
+            "value": 75.0,
+            "weight": 0.25,
+            "available": true
+          },
+          "bill_discipline": {
+            "value": 77.78,
+            "weight": 0.25,
+            "available": true
+          },
+          "expense_health": {
+            "value": 91.67,
+            "weight": 0.2,
+            "available": true
+          }
+        },
+        "metrics": {
+          "median_weekly_income_paise": 534734,
+          "p25_weekly_income_paise": 512522,
+          "expense_ratio": 0.8527,
+          "weeks_in_surplus": 10,
+          "bills_on_time": 7,
+          "bills_total": 9,
+          "bounces": 0,
+          "savings_weeks": 9,
+          "categorised_share": 1.0,
+          "weekly": [
+            {
+              "week_start": "2026-08-03",
+              "income_paise": 508863,
+              "expense_paise": 872158,
+              "surplus_paise": 63312,
+              "saved": false
+            },
+            {
+              "week_start": "2026-08-10",
+              "income_paise": 571906,
+              "expense_paise": 305446,
+              "surplus_paise": 153419,
+              "saved": true
+            },
+            {
+              "week_start": "2026-08-17",
+              "income_paise": 492440,
+              "expense_paise": 272747,
+              "surplus_paise": 46300,
+              "saved": true
+            },
+            {
+              "week_start": "2026-08-24",
+              "income_paise": 516043,
+              "expense_paise": 274778,
+              "surplus_paise": 97772,
+              "saved": true
+            },
+            {
+              "week_start": "2026-08-31",
+              "income_paise": 589808,
+              "expense_paise": 851948,
+              "surplus_paise": 164467,
+              "saved": false
+            },
+            {
+              "week_start": "2026-09-07",
+              "income_paise": 490920,
+              "expense_paise": 422262,
+              "surplus_paise": -104735,
+              "saved": true
+            },
+            {
+              "week_start": "2026-09-14",
+              "income_paise": 560798,
+              "expense_paise": 322586,
+              "surplus_paise": 134594,
+              "saved": true
+            },
+            {
+              "week_start": "2026-09-21",
+              "income_paise": 513742,
+              "expense_paise": 278872,
+              "surplus_paise": 91377,
+              "saved": true
+            },
+            {
+              "week_start": "2026-09-28",
+              "income_paise": 556374,
+              "expense_paise": 276972,
+              "surplus_paise": 106009,
+              "saved": true
+            },
+            {
+              "week_start": "2026-10-05",
+              "income_paise": 530094,
+              "expense_paise": 306772,
+              "surplus_paise": 110823,
+              "saved": true
+            },
+            {
+              "week_start": "2026-10-12",
+              "income_paise": 563786,
+              "expense_paise": 1013353,
+              "surplus_paise": -22960,
+              "saved": false
+            },
+            {
+              "week_start": "2026-10-19",
+              "income_paise": 539375,
+              "expense_paise": 288571,
+              "surplus_paise": 107311,
+              "saved": true
+            }
+          ]
+        },
+        "reasons": [
+          {
+            "code": "FEW_SAVINGS_WEEKS",
+            "component": "savings_habit",
+            "params": {
+              "weeks": 9,
+              "of": 12
+            }
+          },
+          {
+            "code": "BILLS_LATE",
+            "component": "bill_discipline",
+            "params": {
+              "late": 2,
+              "of": 9
+            }
+          }
+        ],
+        "tips": [
+          {
+            "code": "SAVE_EVERY_WEEK",
+            "points": 6,
+            "params": {
+              "min_amount_paise": 2000
+            }
+          },
+          {
+            "code": "PAY_BILLS_ON_TIME",
+            "points": 6,
+            "params": {}
+          }
+        ],
+        "engine_version": "fts-2.0"
+      },
+      "affordability": {
+        "safe_weekly_paise": 29529,
+        "p25_weekly_surplus_paise": 59059,
+        "median_weekly_surplus_paise": 101890,
+        "median_weekly_income_paise": 534734,
+        "existing_weekly_debt_paise": 0,
+        "rbi_cap_weekly_paise": 267367,
+        "payout_weekday": "FRI",
+        "loan_max_paise": {
+          "13": 370000,
+          "26": 720000,
+          "52": 1360000
+        }
+      },
+      "offers_requested_1000000_paise": [
+        {
+          "lender": {
+            "id": "beta",
+            "name": "MFI Beta"
+          },
+          "product_id": "beta-flexi",
+          "amount_paise": 720000,
+          "weeks": 26,
+          "frequency": "WEEKLY",
+          "rate_pct": 21,
+          "fee_pct": 1,
+          "kfs": {
+            "instalment_paise": 29227,
+            "fee_paise": 7200,
+            "net_disbursed_paise": 712800,
+            "total_repayable_paise": 759913,
+            "total_cost_paise": 47113,
+            "apr_pct": 25.0,
+            "advertised_rate_pct": 21,
+            "n_instalments": 26,
+            "late_fee_paise": 5000,
+            "cooling_off_days": 3
+          },
+          "fits_safe_instalment": true,
+          "eligible": "ELIGIBLE",
+          "reason": null
+        },
+        {
+          "lender": {
+            "id": "alpha",
+            "name": "MFI Alpha"
+          },
+          "product_id": "alpha-weekly",
+          "amount_paise": 720000,
+          "weeks": 26,
+          "frequency": "WEEKLY",
+          "rate_pct": 24,
+          "fee_pct": 2,
+          "kfs": {
+            "instalment_paise": 29451,
+            "fee_paise": 14400,
+            "net_disbursed_paise": 705600,
+            "total_repayable_paise": 765722,
+            "total_cost_paise": 60122,
+            "apr_pct": 32.0,
+            "advertised_rate_pct": 24,
+            "n_instalments": 26,
+            "late_fee_paise": 5000,
+            "cooling_off_days": 3
+          },
+          "fits_safe_instalment": true,
+          "eligible": "ELIGIBLE",
+          "reason": null
+        },
+        {
+          "lender": {
+            "id": "gamma",
+            "name": "MFI Gamma"
+          },
+          "product_id": "gamma-growth",
+          "amount_paise": 730000,
+          "weeks": 26,
+          "frequency": "WEEKLY",
+          "rate_pct": 18,
+          "fee_pct": 1.5,
+          "kfs": {
+            "instalment_paise": 29408,
+            "fee_paise": 10950,
+            "net_disbursed_paise": 719050,
+            "total_repayable_paise": 764605,
+            "total_cost_paise": 45555,
+            "apr_pct": 23.9,
+            "advertised_rate_pct": 18,
+            "n_instalments": 26,
+            "late_fee_paise": 5000,
+            "cooling_off_days": 3
+          },
+          "fits_safe_instalment": true,
+          "eligible": "OUTSIDE",
+          "reason": "BELOW_MIN_AMOUNT"
+        }
+      ],
+      "what_if": {
+        "SAVE_EVERY_WEEK": {
+          "score_before": 85,
+          "score_after": 92,
+          "points": 6
+        },
+        "PAY_BILLS_ON_TIME": {
+          "score_before": 85,
+          "score_after": 91,
+          "points": 6
+        }
+      },
+      "stress": {
+        "0": {
+          "weeks_covered": 10,
+          "weeks_total": 12,
+          "light": "GREEN",
+          "buffer_covers": true,
+          "shortfall_paise": 186598,
+          "advice": "OK",
+          "series": [
+            {
+              "week_start": "2026-08-03",
+              "surplus_paise": 63312,
+              "stressed_surplus_paise": 63312
+            },
+            {
+              "week_start": "2026-08-10",
+              "surplus_paise": 153419,
+              "stressed_surplus_paise": 153419
+            },
+            {
+              "week_start": "2026-08-17",
+              "surplus_paise": 46300,
+              "stressed_surplus_paise": 46300
+            },
+            {
+              "week_start": "2026-08-24",
+              "surplus_paise": 97772,
+              "stressed_surplus_paise": 97772
+            },
+            {
+              "week_start": "2026-08-31",
+              "surplus_paise": 164467,
+              "stressed_surplus_paise": 164467
+            },
+            {
+              "week_start": "2026-09-07",
+              "surplus_paise": -104735,
+              "stressed_surplus_paise": -104735
+            },
+            {
+              "week_start": "2026-09-14",
+              "surplus_paise": 134594,
+              "stressed_surplus_paise": 134594
+            },
+            {
+              "week_start": "2026-09-21",
+              "surplus_paise": 91377,
+              "stressed_surplus_paise": 91377
+            },
+            {
+              "week_start": "2026-09-28",
+              "surplus_paise": 106009,
+              "stressed_surplus_paise": 106009
+            },
+            {
+              "week_start": "2026-10-05",
+              "surplus_paise": 110823,
+              "stressed_surplus_paise": 110823
+            },
+            {
+              "week_start": "2026-10-12",
+              "surplus_paise": -22960,
+              "stressed_surplus_paise": -22960
+            },
+            {
+              "week_start": "2026-10-19",
+              "surplus_paise": 107311,
+              "stressed_surplus_paise": 107311
+            }
+          ]
+        },
+        "0.1": {
+          "weeks_covered": 9,
+          "weeks_total": 12,
+          "light": "GREEN",
+          "buffer_covers": true,
+          "shortfall_paise": 236128,
+          "advice": "OK",
+          "series": [
+            {
+              "week_start": "2026-08-03",
+              "surplus_paise": 63312,
+              "stressed_surplus_paise": 39641
+            },
+            {
+              "week_start": "2026-08-10",
+              "surplus_paise": 153419,
+              "stressed_surplus_paise": 112737
+            },
+            {
+              "week_start": "2026-08-17",
+              "surplus_paise": 46300,
+              "stressed_surplus_paise": 24330
+            },
+            {
+              "week_start": "2026-08-24",
+              "surplus_paise": 97772,
+              "stressed_surplus_paise": 62655
+            },
+            {
+              "week_start": "2026-08-31",
+              "surplus_paise": 164467,
+              "stressed_surplus_paise": 130681
+            },
+            {
+              "week_start": "2026-09-07",
+              "surplus_paise": -104735,
+              "stressed_surplus_paise": -119601
+            },
+            {
+              "week_start": "2026-09-14",
+              "surplus_paise": 134594,
+              "stressed_surplus_paise": 103795
+            },
+            {
+              "week_start": "2026-09-21",
+              "surplus_paise": 91377,
+              "stressed_surplus_paise": 56900
+            },
+            {
+              "week_start": "2026-09-28",
+              "surplus_paise": 106009,
+              "stressed_surplus_paise": 78068
+            },
+            {
+              "week_start": "2026-10-05",
+              "surplus_paise": 110823,
+              "stressed_surplus_paise": 74401
+            },
+            {
+              "week_start": "2026-10-12",
+              "surplus_paise": -22960,
+              "stressed_surplus_paise": -52504
+            },
+            {
+              "week_start": "2026-10-19",
+              "surplus_paise": 107311,
+              "stressed_surplus_paise": 71240
+            }
+          ]
+        },
+        "0.2": {
+          "weeks_covered": 6,
+          "weeks_total": 12,
+          "light": "GREEN",
+          "buffer_covers": true,
+          "shortfall_paise": 324927,
+          "advice": "OK",
+          "series": [
+            {
+              "week_start": "2026-08-03",
+              "surplus_paise": 63312,
+              "stressed_surplus_paise": 15971
+            },
+            {
+              "week_start": "2026-08-10",
+              "surplus_paise": 153419,
+              "stressed_surplus_paise": 72056
+            },
+            {
+              "week_start": "2026-08-17",
+              "surplus_paise": 46300,
+              "stressed_surplus_paise": 2361
+            },
+            {
+              "week_start": "2026-08-24",
+              "surplus_paise": 97772,
+              "stressed_surplus_paise": 27539
+            },
+            {
+              "week_start": "2026-08-31",
+              "surplus_paise": 164467,
+              "stressed_surplus_paise": 96895
+            },
+            {
+              "week_start": "2026-09-07",
+              "surplus_paise": -104735,
+              "stressed_surplus_paise": -134467
+            },
+            {
+              "week_start": "2026-09-14",
+              "surplus_paise": 134594,
+              "stressed_surplus_paise": 72996
+            },
+            {
+              "week_start": "2026-09-21",
+              "surplus_paise": 91377,
+              "stressed_surplus_paise": 22423
+            },
+            {
+              "week_start": "2026-09-28",
+              "surplus_paise": 106009,
+              "stressed_surplus_paise": 50128
+            },
+            {
+              "week_start": "2026-10-05",
+              "surplus_paise": 110823,
+              "stressed_surplus_paise": 37979
+            },
+            {
+              "week_start": "2026-10-12",
+              "surplus_paise": -22960,
+              "stressed_surplus_paise": -82047
+            },
+            {
+              "week_start": "2026-10-19",
+              "surplus_paise": 107311,
+              "stressed_surplus_paise": 35170
+            }
+          ]
+        },
+        "0.3": {
+          "weeks_covered": 3,
+          "weeks_total": 12,
+          "light": "GREEN",
+          "buffer_covers": true,
+          "shortfall_paise": 550078,
+          "advice": "OK",
+          "series": [
+            {
+              "week_start": "2026-08-03",
+              "surplus_paise": 63312,
+              "stressed_surplus_paise": -7700
+            },
+            {
+              "week_start": "2026-08-10",
+              "surplus_paise": 153419,
+              "stressed_surplus_paise": 31375
+            },
+            {
+              "week_start": "2026-08-17",
+              "surplus_paise": 46300,
+              "stressed_surplus_paise": -19608
+            },
+            {
+              "week_start": "2026-08-24",
+              "surplus_paise": 97772,
+              "stressed_surplus_paise": -7578
+            },
+            {
+              "week_start": "2026-08-31",
+              "surplus_paise": 164467,
+              "stressed_surplus_paise": 63109
+            },
+            {
+              "week_start": "2026-09-07",
+              "surplus_paise": -104735,
+              "stressed_surplus_paise": -149333
+            },
+            {
+              "week_start": "2026-09-14",
+              "surplus_paise": 134594,
+              "stressed_surplus_paise": 42197
+            },
+            {
+              "week_start": "2026-09-21",
+              "surplus_paise": 91377,
+              "stressed_surplus_paise": -12054
+            },
+            {
+              "week_start": "2026-09-28",
+              "surplus_paise": 106009,
+              "stressed_surplus_paise": 22188
+            },
+            {
+              "week_start": "2026-10-05",
+              "surplus_paise": 110823,
+              "stressed_surplus_paise": 1558
+            },
+            {
+              "week_start": "2026-10-12",
+              "surplus_paise": -22960,
+              "stressed_surplus_paise": -111590
+            },
+            {
+              "week_start": "2026-10-19",
+              "surplus_paise": 107311,
+              "stressed_surplus_paise": -901
+            }
+          ]
+        }
+      },
+      "formats": {
+        "csv": {
+          "rows": 284,
+          "score": 85,
+          "band": "STRONG",
+          "confidence": "HIGH",
+          "matches_csv": true,
+          "sha256": "d72d827af909e2e3c1d9d959ac93195454b49ae307950352d9b7782441ad7a25",
+          "warnings": []
+        },
+        "pdf": {
+          "rows": 284,
+          "score": 85,
+          "band": "STRONG",
+          "confidence": "HIGH",
+          "matches_csv": true,
+          "sha256": "0f3d66daffda18ea99f4c31ab37fb6527e44378385c464520e0e6d3c5886b6d7",
+          "warnings": []
+        },
+        "locked.pdf": {
+          "rows": 284,
+          "score": 85,
+          "band": "STRONG",
+          "confidence": "HIGH",
+          "matches_csv": true,
+          "sha256": "6ef87f1928339ae94a91f9962fc83c3cc8d7d980a9ccabc99f2beb933a43b919",
+          "warnings": []
+        },
+        "aa.json": {
+          "rows": 284,
+          "score": 85,
+          "band": "STRONG",
+          "confidence": "HIGH",
+          "matches_csv": true,
+          "sha256": "d283795d53b1cd3a3d517ff0c886459f85aef9dd942e4b10c8dc6f6adabda65b",
+          "warnings": []
+        },
+        "alt.pdf": {
+          "rows": 284,
+          "score": 85,
+          "band": "STRONG",
+          "confidence": "HIGH",
+          "matches_csv": true,
+          "sha256": "2684f1456320d3ce49c3bfe744f048b333d9e423b217b2ab99d61111ed39c383",
+          "warnings": []
+        }
+      }
+    },
+    "sunita": {
+      "score_result": {
+        "score": 99,
+        "band": "STRONG",
+        "confidence": "HIGH",
+        "provisional": false,
+        "weeks_observed": 12,
+        "as_of": "2026-10-25",
+        "components": {
+          "income_stability": {
+            "value": 98.14,
+            "weight": 0.3,
+            "available": true
+          },
+          "savings_habit": {
+            "value": 100.0,
+            "weight": 0.25,
+            "available": true
+          },
+          "bill_discipline": {
+            "value": 100.0,
+            "weight": 0.25,
+            "available": true
+          },
+          "expense_health": {
+            "value": 100.0,
+            "weight": 0.2,
+            "available": true
+          }
+        },
+        "metrics": {
+          "median_weekly_income_paise": 288300,
+          "p25_weekly_income_paise": 282950,
+          "expense_ratio": 0.8546,
+          "weeks_in_surplus": 12,
+          "bills_on_time": 9,
+          "bills_total": 9,
+          "bounces": 0,
+          "savings_weeks": 12,
+          "categorised_share": 1.0,
+          "weekly": [
+            {
+              "week_start": "2026-08-03",
+              "income_paise": 271800,
+              "expense_paise": 462018,
+              "surplus_paise": 21017,
+              "saved": true
+            },
+            {
+              "week_start": "2026-08-10",
+              "income_paise": 282500,
+              "expense_paise": 189336,
+              "surplus_paise": 38130,
+              "saved": true
+            },
+            {
+              "week_start": "2026-08-17",
+              "income_paise": 293900,
+              "expense_paise": 151146,
+              "surplus_paise": 53989,
+              "saved": true
+            },
+            {
+              "week_start": "2026-08-24",
+              "income_paise": 301500,
+              "expense_paise": 180105,
+              "surplus_paise": 52530,
+              "saved": true
+            },
+            {
+              "week_start": "2026-08-31",
+              "income_paise": 250000,
+              "expense_paise": 453575,
+              "surplus_paise": 7660,
+              "saved": true
+            },
+            {
+              "week_start": "2026-09-07",
+              "income_paise": 292400,
+              "expense_paise": 191168,
+              "surplus_paise": 49015,
+              "saved": true
+            },
+            {
+              "week_start": "2026-09-14",
+              "income_paise": 302800,
+              "expense_paise": 163424,
+              "surplus_paise": 50611,
+              "saved": true
+            },
+            {
+              "week_start": "2026-09-21",
+              "income_paise": 284100,
+              "expense_paise": 175512,
+              "surplus_paise": 39723,
+              "saved": true
+            },
+            {
+              "week_start": "2026-09-28",
+              "income_paise": 298700,
+              "expense_paise": 461493,
+              "surplus_paise": 48442,
+              "saved": true
+            },
+            {
+              "week_start": "2026-10-05",
+              "income_paise": 284200,
+              "expense_paise": 159380,
+              "surplus_paise": 36055,
+              "saved": true
+            },
+            {
+              "week_start": "2026-10-12",
+              "income_paise": 317300,
+              "expense_paise": 195579,
+              "surplus_paise": 68156,
+              "saved": true
+            },
+            {
+              "week_start": "2026-10-19",
+              "income_paise": 283100,
+              "expense_paise": 176276,
+              "surplus_paise": 37959,
+              "saved": true
+            }
+          ]
+        },
+        "reasons": [
+          {
+            "code": "INCOME_UNEVEN",
+            "component": "income_stability",
+            "params": {
+              "p25_paise": 282950,
+              "median_paise": 288300
+            }
+          }
+        ],
+        "tips": [
+          {
+            "code": "STEADY_INCOME",
+            "points": 1,
+            "params": {
+              "median_paise": 288300
+            }
+          }
+        ],
+        "engine_version": "fts-2.0"
+      },
+      "affordability": {
+        "safe_weekly_paise": 18742,
+        "p25_weekly_surplus_paise": 37483,
+        "median_weekly_surplus_paise": 44083,
+        "median_weekly_income_paise": 288300,
+        "existing_weekly_debt_paise": 0,
+        "rbi_cap_weekly_paise": 144150,
+        "payout_weekday": "MON",
+        "loan_max_paise": {
+          "13": 230000,
+          "26": 450000,
+          "52": 860000
+        }
+      },
+      "offers_requested_1000000_paise": [
+        {
+          "lender": {
+            "id": "alpha",
+            "name": "MFI Alpha"
+          },
+          "product_id": "alpha-weekly",
+          "amount_paise": 450000,
+          "weeks": 26,
+          "frequency": "WEEKLY",
+          "rate_pct": 24,
+          "fee_pct": 2,
+          "kfs": {
+            "instalment_paise": 18407,
+            "fee_paise": 9000,
+            "net_disbursed_paise": 441000,
+            "total_repayable_paise": 478576,
+            "total_cost_paise": 37576,
+            "apr_pct": 32.0,
+            "advertised_rate_pct": 24,
+            "n_instalments": 26,
+            "late_fee_paise": 5000,
+            "cooling_off_days": 3
+          },
+          "fits_safe_instalment": true,
+          "eligible": "ELIGIBLE",
+          "reason": null
+        },
+        {
+          "lender": {
+            "id": "gamma",
+            "name": "MFI Gamma"
+          },
+          "product_id": "gamma-growth",
+          "amount_paise": 460000,
+          "weeks": 26,
+          "frequency": "WEEKLY",
+          "rate_pct": 18,
+          "fee_pct": 1.5,
+          "kfs": {
+            "instalment_paise": 18531,
+            "fee_paise": 6900,
+            "net_disbursed_paise": 453100,
+            "total_repayable_paise": 481806,
+            "total_cost_paise": 28706,
+            "apr_pct": 23.9,
+            "advertised_rate_pct": 18,
+            "n_instalments": 26,
+            "late_fee_paise": 5000,
+            "cooling_off_days": 3
+          },
+          "fits_safe_instalment": true,
+          "eligible": "OUTSIDE",
+          "reason": "BELOW_MIN_AMOUNT"
+        },
+        {
+          "lender": {
+            "id": "beta",
+            "name": "MFI Beta"
+          },
+          "product_id": "beta-flexi",
+          "amount_paise": 460000,
+          "weeks": 26,
+          "frequency": "WEEKLY",
+          "rate_pct": 21,
+          "fee_pct": 1,
+          "kfs": {
+            "instalment_paise": 18673,
+            "fee_paise": 4600,
+            "net_disbursed_paise": 455400,
+            "total_repayable_paise": 485500,
+            "total_cost_paise": 30100,
+            "apr_pct": 25.0,
+            "advertised_rate_pct": 21,
+            "n_instalments": 26,
+            "late_fee_paise": 5000,
+            "cooling_off_days": 3
+          },
+          "fits_safe_instalment": true,
+          "eligible": "OUTSIDE",
+          "reason": "BELOW_MIN_AMOUNT"
+        }
+      ],
+      "what_if": {
+        "STEADY_INCOME": {
+          "score_before": 99,
+          "score_after": 100,
+          "points": 1
+        }
+      },
+      "stress": {
+        "0": {
+          "weeks_covered": 10,
+          "weeks_total": 12,
+          "light": "GREEN",
+          "buffer_covers": true,
+          "shortfall_paise": 30225,
+          "advice": "OK",
+          "series": [
+            {
+              "week_start": "2026-08-03",
+              "surplus_paise": 21017,
+              "stressed_surplus_paise": 21017
+            },
+            {
+              "week_start": "2026-08-10",
+              "surplus_paise": 38130,
+              "stressed_surplus_paise": 38130
+            },
+            {
+              "week_start": "2026-08-17",
+              "surplus_paise": 53989,
+              "stressed_surplus_paise": 53989
+            },
+            {
+              "week_start": "2026-08-24",
+              "surplus_paise": 52530,
+              "stressed_surplus_paise": 52530
+            },
+            {
+              "week_start": "2026-08-31",
+              "surplus_paise": 7660,
+              "stressed_surplus_paise": 7660
+            },
+            {
+              "week_start": "2026-09-07",
+              "surplus_paise": 49015,
+              "stressed_surplus_paise": 49015
+            },
+            {
+              "week_start": "2026-09-14",
+              "surplus_paise": 50611,
+              "stressed_surplus_paise": 50611
+            },
+            {
+              "week_start": "2026-09-21",
+              "surplus_paise": 39723,
+              "stressed_surplus_paise": 39723
+            },
+            {
+              "week_start": "2026-09-28",
+              "surplus_paise": 48442,
+              "stressed_surplus_paise": 48442
+            },
+            {
+              "week_start": "2026-10-05",
+              "surplus_paise": 36055,
+              "stressed_surplus_paise": 36055
+            },
+            {
+              "week_start": "2026-10-12",
+              "surplus_paise": 68156,
+              "stressed_surplus_paise": 68156
+            },
+            {
+              "week_start": "2026-10-19",
+              "surplus_paise": 37959,
+              "stressed_surplus_paise": 37959
+            }
+          ]
+        },
+        "0.1": {
+          "weeks_covered": 6,
+          "weeks_total": 12,
+          "light": "GREEN",
+          "buffer_covers": true,
+          "shortfall_paise": 67475,
+          "advice": "OK",
+          "series": [
+            {
+              "week_start": "2026-08-03",
+              "surplus_paise": 21017,
+              "stressed_surplus_paise": 10039
+            },
+            {
+              "week_start": "2026-08-10",
+              "surplus_paise": 38130,
+              "stressed_surplus_paise": 25441
+            },
+            {
+              "week_start": "2026-08-17",
+              "surplus_paise": 53989,
+              "stressed_surplus_paise": 39714
+            },
+            {
+              "week_start": "2026-08-24",
+              "surplus_paise": 52530,
+              "stressed_surplus_paise": 38401
+            },
+            {
+              "week_start": "2026-08-31",
+              "surplus_paise": 7660,
+              "stressed_surplus_paise": -1982
+            },
+            {
+              "week_start": "2026-09-07",
+              "surplus_paise": 49015,
+              "stressed_surplus_paise": 35237
+            },
+            {
+              "week_start": "2026-09-14",
+              "surplus_paise": 50611,
+              "stressed_surplus_paise": 36673
+            },
+            {
+              "week_start": "2026-09-21",
+              "surplus_paise": 39723,
+              "stressed_surplus_paise": 26874
+            },
+            {
+              "week_start": "2026-09-28",
+              "surplus_paise": 48442,
+              "stressed_surplus_paise": 34721
+            },
+            {
+              "week_start": "2026-10-05",
+              "surplus_paise": 36055,
+              "stressed_surplus_paise": 23573
+            },
+            {
+              "week_start": "2026-10-12",
+              "surplus_paise": 68156,
+              "stressed_surplus_paise": 52464
+            },
+            {
+              "week_start": "2026-10-19",
+              "surplus_paise": 37959,
+              "stressed_surplus_paise": 25287
+            }
+          ]
+        },
+        "0.2": {
+          "weeks_covered": 1,
+          "weeks_total": 12,
+          "light": "GREEN",
+          "buffer_covers": true,
+          "shortfall_paise": 171138,
+          "advice": "OK",
+          "series": [
+            {
+              "week_start": "2026-08-03",
+              "surplus_paise": 21017,
+              "stressed_surplus_paise": -939
+            },
+            {
+              "week_start": "2026-08-10",
+              "surplus_paise": 38130,
+              "stressed_surplus_paise": 12751
+            },
+            {
+              "week_start": "2026-08-17",
+              "surplus_paise": 53989,
+              "stressed_surplus_paise": 25438
+            },
+            {
+              "week_start": "2026-08-24",
+              "surplus_paise": 52530,
+              "stressed_surplus_paise": 24271
+            },
+            {
+              "week_start": "2026-08-31",
+              "surplus_paise": 7660,
+              "stressed_surplus_paise": -11625
+            },
+            {
+              "week_start": "2026-09-07",
+              "surplus_paise": 49015,
+              "stressed_surplus_paise": 21459
+            },
+            {
+              "week_start": "2026-09-14",
+              "surplus_paise": 50611,
+              "stressed_surplus_paise": 22736
+            },
+            {
+              "week_start": "2026-09-21",
+              "surplus_paise": 39723,
+              "stressed_surplus_paise": 14025
+            },
+            {
+              "week_start": "2026-09-28",
+              "surplus_paise": 48442,
+              "stressed_surplus_paise": 21001
+            },
+            {
+              "week_start": "2026-10-05",
+              "surplus_paise": 36055,
+              "stressed_surplus_paise": 11091
+            },
+            {
+              "week_start": "2026-10-12",
+              "surplus_paise": 68156,
+              "stressed_surplus_paise": 36772
+            },
+            {
+              "week_start": "2026-10-19",
+              "surplus_paise": 37959,
+              "stressed_surplus_paise": 12614
+            }
+          ]
+        },
+        "0.3": {
+          "weeks_covered": 0,
+          "weeks_total": 12,
+          "light": "GREEN",
+          "buffer_covers": true,
+          "shortfall_paise": 320664,
+          "advice": "OK",
+          "series": [
+            {
+              "week_start": "2026-08-03",
+              "surplus_paise": 21017,
+              "stressed_surplus_paise": -11918
+            },
+            {
+              "week_start": "2026-08-10",
+              "surplus_paise": 38130,
+              "stressed_surplus_paise": 62
+            },
+            {
+              "week_start": "2026-08-17",
+              "surplus_paise": 53989,
+              "stressed_surplus_paise": 11163
+            },
+            {
+              "week_start": "2026-08-24",
+              "surplus_paise": 52530,
+              "stressed_surplus_paise": 10142
+            },
+            {
+              "week_start": "2026-08-31",
+              "surplus_paise": 7660,
+              "stressed_surplus_paise": -21267
+            },
+            {
+              "week_start": "2026-09-07",
+              "surplus_paise": 49015,
+              "stressed_surplus_paise": 7681
+            },
+            {
+              "week_start": "2026-09-14",
+              "surplus_paise": 50611,
+              "stressed_surplus_paise": 8798
+            },
+            {
+              "week_start": "2026-09-21",
+              "surplus_paise": 39723,
+              "stressed_surplus_paise": 1177
+            },
+            {
+              "week_start": "2026-09-28",
+              "surplus_paise": 48442,
+              "stressed_surplus_paise": 7280
+            },
+            {
+              "week_start": "2026-10-05",
+              "surplus_paise": 36055,
+              "stressed_surplus_paise": -1391
+            },
+            {
+              "week_start": "2026-10-12",
+              "surplus_paise": 68156,
+              "stressed_surplus_paise": 21080
+            },
+            {
+              "week_start": "2026-10-19",
+              "surplus_paise": 37959,
+              "stressed_surplus_paise": -58
+            }
+          ]
+        }
+      },
+      "formats": {
+        "csv": {
+          "rows": 747,
+          "score": 99,
+          "band": "STRONG",
+          "confidence": "HIGH",
+          "matches_csv": true,
+          "sha256": "692c9e6faef83b652ad039783cb0989ad088f6c7fd3b77051ae8654d8e8644f3",
+          "warnings": []
+        },
+        "pdf": {
+          "rows": 747,
+          "score": 99,
+          "band": "STRONG",
+          "confidence": "HIGH",
+          "matches_csv": true,
+          "sha256": "da4419933882d965892c7a292f9bc55f1d475663046bbc7a4566cd78437b2fe4",
+          "warnings": []
+        },
+        "locked.pdf": {
+          "rows": 747,
+          "score": 99,
+          "band": "STRONG",
+          "confidence": "HIGH",
+          "matches_csv": true,
+          "sha256": "2e8ad0c166f7efdb13e5b22959108d9bccf9742cdf73d6afda6d6a3ae74acfcb",
+          "warnings": []
+        },
+        "aa.json": {
+          "rows": 747,
+          "score": 99,
+          "band": "STRONG",
+          "confidence": "HIGH",
+          "matches_csv": true,
+          "sha256": "e7523bc7a5c0c37b0f91085f1c9a5fe4cd337976ba9fb8aaa7f9dc65005aac23",
+          "warnings": []
+        }
+      }
+    },
+    "arjun": {
+      "score_result": {
+        "score": 43,
+        "band": "FAIR",
+        "confidence": "HIGH",
+        "provisional": false,
+        "weeks_observed": 12,
+        "as_of": "2026-10-25",
+        "components": {
+          "income_stability": {
+            "value": 63.65,
+            "weight": 0.3,
+            "available": true
+          },
+          "savings_habit": {
+            "value": 0.0,
+            "weight": 0.25,
+            "available": true
+          },
+          "bill_discipline": {
+            "value": 52.78,
+            "weight": 0.25,
+            "available": true
+          },
+          "expense_health": {
+            "value": 53.54,
+            "weight": 0.2,
+            "available": true
+          }
+        },
+        "metrics": {
+          "median_weekly_income_paise": 880823,
+          "p25_weekly_income_paise": 560661,
+          "expense_ratio": 1.0038,
+          "weeks_in_surplus": 5,
+          "bills_on_time": 7,
+          "bills_total": 9,
+          "bounces": 1,
+          "savings_weeks": 0,
+          "categorised_share": 1.0,
+          "weekly": [
+            {
+              "week_start": "2026-08-03",
+              "income_paise": 1582575,
+              "expense_paise": 1327820,
+              "surplus_paise": -42720,
+              "saved": false
+            },
+            {
+              "week_start": "2026-08-10",
+              "income_paise": 330295,
+              "expense_paise": 456229,
+              "surplus_paise": -423409,
+              "saved": false
+            },
+            {
+              "week_start": "2026-08-17",
+              "income_paise": 609967,
+              "expense_paise": 1282340,
+              "surplus_paise": -69848,
+              "saved": false
+            },
+            {
+              "week_start": "2026-08-24",
+              "income_paise": 1188080,
+              "expense_paise": 1179158,
+              "surplus_paise": -248653,
+              "saved": false
+            },
+            {
+              "week_start": "2026-08-31",
+              "income_paise": 412744,
+              "expense_paise": 420277,
+              "surplus_paise": -305008,
+              "saved": false
+            },
+            {
+              "week_start": "2026-09-07",
+              "income_paise": 1590203,
+              "expense_paise": 1588792,
+              "surplus_paise": 603936,
+              "saved": false
+            },
+            {
+              "week_start": "2026-09-14",
+              "income_paise": 818202,
+              "expense_paise": 561340,
+              "surplus_paise": -40613,
+              "saved": false
+            },
+            {
+              "week_start": "2026-09-21",
+              "income_paise": 361181,
+              "expense_paise": 382714,
+              "surplus_paise": -279108,
+              "saved": false
+            },
+            {
+              "week_start": "2026-09-28",
+              "income_paise": 1111725,
+              "expense_paise": 1107831,
+              "surplus_paise": -293581,
+              "saved": false
+            },
+            {
+              "week_start": "2026-10-05",
+              "income_paise": 943443,
+              "expense_paise": 945361,
+              "surplus_paise": 600607,
+              "saved": false
+            },
+            {
+              "week_start": "2026-10-12",
+              "income_paise": 700823,
+              "expense_paise": 444614,
+              "surplus_paise": -41266,
+              "saved": false
+            },
+            {
+              "week_start": "2026-10-19",
+              "income_paise": 1449622,
+              "expense_paise": 1444145,
+              "surplus_paise": -252098,
+              "saved": false
+            }
+          ]
+        },
+        "reasons": [
+          {
+            "code": "NO_SAVINGS_SEEN",
+            "component": "savings_habit",
+            "params": {
+              "weeks": 0,
+              "of": 12
+            }
+          },
+          {
+            "code": "BILL_BOUNCE",
+            "component": "bill_discipline",
+            "params": {
+              "bounces": 1,
+              "late": 2,
+              "of": 9
+            }
+          }
+        ],
+        "tips": [
+          {
+            "code": "SAVE_EVERY_WEEK",
+            "points": 25,
+            "params": {
+              "min_amount_paise": 2000
+            }
+          },
+          {
+            "code": "PAY_BILLS_ON_TIME",
+            "points": 12,
+            "params": {}
+          }
+        ],
+        "engine_version": "fts-2.0"
+      },
+      "affordability": {
+        "safe_weekly_paise": 0,
+        "p25_weekly_surplus_paise": -282726,
+        "median_weekly_surplus_paise": -159250,
+        "median_weekly_income_paise": 880823,
+        "existing_weekly_debt_paise": 62500,
+        "rbi_cap_weekly_paise": 377911,
+        "payout_weekday": "TUE",
+        "loan_max_paise": {
+          "13": 0,
+          "26": 0,
+          "52": 0
+        }
+      },
+      "offers_requested_1000000_paise": [],
+      "what_if": {
+        "SAVE_EVERY_WEEK": {
+          "score_before": 43,
+          "score_after": 68,
+          "points": 25
+        },
+        "PAY_BILLS_ON_TIME": {
+          "score_before": 43,
+          "score_after": 55,
+          "points": 12
+        }
+      },
+      "stress": {
+        "0": {
+          "weeks_covered": 2,
+          "weeks_total": 12,
+          "light": "RED",
+          "buffer_covers": false,
+          "shortfall_paise": 2290814,
+          "advice": "BUILD_BUFFER_FIRST",
+          "series": [
+            {
+              "week_start": "2026-08-03",
+              "surplus_paise": -42720,
+              "stressed_surplus_paise": -42720
+            },
+            {
+              "week_start": "2026-08-10",
+              "surplus_paise": -423409,
+              "stressed_surplus_paise": -423409
+            },
+            {
+              "week_start": "2026-08-17",
+              "surplus_paise": -69848,
+              "stressed_surplus_paise": -69848
+            },
+            {
+              "week_start": "2026-08-24",
+              "surplus_paise": -248653,
+              "stressed_surplus_paise": -248653
+            },
+            {
+              "week_start": "2026-08-31",
+              "surplus_paise": -305008,
+              "stressed_surplus_paise": -305008
+            },
+            {
+              "week_start": "2026-09-07",
+              "surplus_paise": 603936,
+              "stressed_surplus_paise": 603936
+            },
+            {
+              "week_start": "2026-09-14",
+              "surplus_paise": -40613,
+              "stressed_surplus_paise": -40613
+            },
+            {
+              "week_start": "2026-09-21",
+              "surplus_paise": -279108,
+              "stressed_surplus_paise": -279108
+            },
+            {
+              "week_start": "2026-09-28",
+              "surplus_paise": -293581,
+              "stressed_surplus_paise": -293581
+            },
+            {
+              "week_start": "2026-10-05",
+              "surplus_paise": 600607,
+              "stressed_surplus_paise": 600607
+            },
+            {
+              "week_start": "2026-10-12",
+              "surplus_paise": -41266,
+              "stressed_surplus_paise": -41266
+            },
+            {
+              "week_start": "2026-10-19",
+              "surplus_paise": -252098,
+              "stressed_surplus_paise": -252098
+            }
+          ]
+        },
+        "0.1": {
+          "weeks_covered": 2,
+          "weeks_total": 12,
+          "light": "RED",
+          "buffer_covers": false,
+          "shortfall_paise": 2402005,
+          "advice": "BUILD_BUFFER_FIRST",
+          "series": [
+            {
+              "week_start": "2026-08-03",
+              "surplus_paise": -42720,
+              "stressed_surplus_paise": -68195
+            },
+            {
+              "week_start": "2026-08-10",
+              "surplus_paise": -423409,
+              "stressed_surplus_paise": -423409
+            },
+            {
+              "week_start": "2026-08-17",
+              "surplus_paise": -69848,
+              "stressed_surplus_paise": -92611
+            },
+            {
+              "week_start": "2026-08-24",
+              "surplus_paise": -248653,
+              "stressed_surplus_paise": -253535
+            },
+            {
+              "week_start": "2026-08-31",
+              "surplus_paise": -305008,
+              "stressed_surplus_paise": -305008
+            },
+            {
+              "week_start": "2026-09-07",
+              "surplus_paise": 603936,
+              "stressed_surplus_paise": 507895
+            },
+            {
+              "week_start": "2026-09-14",
+              "surplus_paise": -40613,
+              "stressed_surplus_paise": -66299
+            },
+            {
+              "week_start": "2026-09-21",
+              "surplus_paise": -279108,
+              "stressed_surplus_paise": -280945
+            },
+            {
+              "week_start": "2026-09-28",
+              "surplus_paise": -293581,
+              "stressed_surplus_paise": -293970
+            },
+            {
+              "week_start": "2026-10-05",
+              "surplus_paise": 600607,
+              "stressed_surplus_paise": 510799
+            },
+            {
+              "week_start": "2026-10-12",
+              "surplus_paise": -41266,
+              "stressed_surplus_paise": -66887
+            },
+            {
+              "week_start": "2026-10-19",
+              "surplus_paise": -252098,
+              "stressed_surplus_paise": -256636
+            }
+          ]
+        },
+        "0.2": {
+          "weeks_covered": 2,
+          "weeks_total": 12,
+          "light": "RED",
+          "buffer_covers": false,
+          "shortfall_paise": 2513197,
+          "advice": "BUILD_BUFFER_FIRST",
+          "series": [
+            {
+              "week_start": "2026-08-03",
+              "surplus_paise": -42720,
+              "stressed_surplus_paise": -93671
+            },
+            {
+              "week_start": "2026-08-10",
+              "surplus_paise": -423409,
+              "stressed_surplus_paise": -423409
+            },
+            {
+              "week_start": "2026-08-17",
+              "surplus_paise": -69848,
+              "stressed_surplus_paise": -115373
+            },
+            {
+              "week_start": "2026-08-24",
+              "surplus_paise": -248653,
+              "stressed_surplus_paise": -258417
+            },
+            {
+              "week_start": "2026-08-31",
+              "surplus_paise": -305008,
+              "stressed_surplus_paise": -305008
+            },
+            {
+              "week_start": "2026-09-07",
+              "surplus_paise": 603936,
+              "stressed_surplus_paise": 411854
+            },
+            {
+              "week_start": "2026-09-14",
+              "surplus_paise": -40613,
+              "stressed_surplus_paise": -91985
+            },
+            {
+              "week_start": "2026-09-21",
+              "surplus_paise": -279108,
+              "stressed_surplus_paise": -282781
+            },
+            {
+              "week_start": "2026-09-28",
+              "surplus_paise": -293581,
+              "stressed_surplus_paise": -294360
+            },
+            {
+              "week_start": "2026-10-05",
+              "surplus_paise": 600607,
+              "stressed_surplus_paise": 420991
+            },
+            {
+              "week_start": "2026-10-12",
+              "surplus_paise": -41266,
+              "stressed_surplus_paise": -92508
+            },
+            {
+              "week_start": "2026-10-19",
+              "surplus_paise": -252098,
+              "stressed_surplus_paise": -261173
+            }
+          ]
+        },
+        "0.3": {
+          "weeks_covered": 2,
+          "weeks_total": 12,
+          "light": "RED",
+          "buffer_covers": false,
+          "shortfall_paise": 2624388,
+          "advice": "BUILD_BUFFER_FIRST",
+          "series": [
+            {
+              "week_start": "2026-08-03",
+              "surplus_paise": -42720,
+              "stressed_surplus_paise": -119147
+            },
+            {
+              "week_start": "2026-08-10",
+              "surplus_paise": -423409,
+              "stressed_surplus_paise": -423409
+            },
+            {
+              "week_start": "2026-08-17",
+              "surplus_paise": -69848,
+              "stressed_surplus_paise": -138136
+            },
+            {
+              "week_start": "2026-08-24",
+              "surplus_paise": -248653,
+              "stressed_surplus_paise": -263300
+            },
+            {
+              "week_start": "2026-08-31",
+              "surplus_paise": -305008,
+              "stressed_surplus_paise": -305008
+            },
+            {
+              "week_start": "2026-09-07",
+              "surplus_paise": 603936,
+              "stressed_surplus_paise": 315813
+            },
+            {
+              "week_start": "2026-09-14",
+              "surplus_paise": -40613,
+              "stressed_surplus_paise": -117672
+            },
+            {
+              "week_start": "2026-09-21",
+              "surplus_paise": -279108,
+              "stressed_surplus_paise": -284618
+            },
+            {
+              "week_start": "2026-09-28",
+              "surplus_paise": -293581,
+              "stressed_surplus_paise": -294749
+            },
+            {
+              "week_start": "2026-10-05",
+              "surplus_paise": 600607,
+              "stressed_surplus_paise": 331182
+            },
+            {
+              "week_start": "2026-10-12",
+              "surplus_paise": -41266,
+              "stressed_surplus_paise": -118129
+            },
+            {
+              "week_start": "2026-10-19",
+              "surplus_paise": -252098,
+              "stressed_surplus_paise": -265711
+            }
+          ]
+        }
+      },
+      "formats": {
+        "csv": {
+          "rows": 185,
+          "score": 43,
+          "band": "FAIR",
+          "confidence": "HIGH",
+          "matches_csv": true,
+          "sha256": "d5b38718156b67d1db6f7b6f11d53d8ef9c3ed523cfb28fc436acddbdb54f72b",
+          "warnings": []
+        },
+        "pdf": {
+          "rows": 185,
+          "score": 43,
+          "band": "FAIR",
+          "confidence": "HIGH",
+          "matches_csv": true,
+          "sha256": "f9b1a2bac440397049a3fbbc0379f05d8a1b5b3b580f30f7d01b71d37c4568e5",
+          "warnings": []
+        },
+        "locked.pdf": {
+          "rows": 185,
+          "score": 43,
+          "band": "FAIR",
+          "confidence": "HIGH",
+          "matches_csv": true,
+          "sha256": "f9197ad0d63d980dfa6ae7a44d6e53fb79ba4ee299295664afe48d6ccab0485a",
+          "warnings": []
+        },
+        "aa.json": {
+          "rows": 185,
+          "score": 43,
+          "band": "FAIR",
+          "confidence": "HIGH",
+          "matches_csv": true,
+          "sha256": "77920a2f7985ea7ae981476457c03bb6457135b64c1a18283eaf033aeeb01437",
+          "warnings": []
+        }
+      }
+    },
+    "meena": {
+      "score_result": {
+        "score": 94,
+        "band": "STRONG",
+        "confidence": "LOW",
+        "provisional": true,
+        "weeks_observed": 5,
+        "as_of": "2026-10-25",
+        "components": {
+          "income_stability": {
+            "value": 96.46,
+            "weight": 0.3,
+            "available": true
+          },
+          "savings_habit": {
+            "value": 80.0,
+            "weight": 0.25,
+            "available": true
+          },
+          "bill_discipline": {
+            "value": 100.0,
+            "weight": 0.25,
+            "available": true
+          },
+          "expense_health": {
+            "value": 100.0,
+            "weight": 0.2,
+            "available": true
+          }
+        },
+        "metrics": {
+          "median_weekly_income_paise": 344900,
+          "p25_weekly_income_paise": 332700,
+          "expense_ratio": 0.707,
+          "weeks_in_surplus": 5,
+          "bills_on_time": 4,
+          "bills_total": 4,
+          "bounces": 0,
+          "savings_weeks": 4,
+          "categorised_share": 1.0,
+          "weekly": [
+            {
+              "week_start": "2026-09-21",
+              "income_paise": 331400,
+              "expense_paise": 405902,
+              "surplus_paise": 84438,
+              "saved": true
+            },
+            {
+              "week_start": "2026-09-28",
+              "income_paise": 362800,
+              "expense_paise": 131978,
+              "surplus_paise": 124862,
+              "saved": true
+            },
+            {
+              "week_start": "2026-10-05",
+              "income_paise": 344900,
+              "expense_paise": 129090,
+              "surplus_paise": 109850,
+              "saved": true
+            },
+            {
+              "week_start": "2026-10-12",
+              "income_paise": 332700,
+              "expense_paise": 152386,
+              "surplus_paise": 74354,
+              "saved": true
+            },
+            {
+              "week_start": "2026-10-19",
+              "income_paise": 361800,
+              "expense_paise": 406273,
+              "surplus_paise": 114467,
+              "saved": false
+            }
+          ]
+        },
+        "reasons": [
+          {
+            "code": "FEW_SAVINGS_WEEKS",
+            "component": "savings_habit",
+            "params": {
+              "weeks": 4,
+              "of": 5
+            }
+          },
+          {
+            "code": "INCOME_UNEVEN",
+            "component": "income_stability",
+            "params": {
+              "p25_paise": 332700,
+              "median_paise": 344900
+            }
+          },
+          {
+            "code": "THIN_FILE",
+            "component": null,
+            "params": {
+              "weeks": 5
+            }
+          }
+        ],
+        "tips": [
+          {
+            "code": "SAVE_EVERY_WEEK",
+            "points": 5,
+            "params": {
+              "min_amount_paise": 2000
+            }
+          },
+          {
+            "code": "STEADY_INCOME",
+            "points": 1,
+            "params": {
+              "median_paise": 344900
+            }
+          },
+          {
+            "code": "ADD_MORE_HISTORY",
+            "points": 0,
+            "params": {
+              "weeks_needed": 7
+            }
+          }
+        ],
+        "engine_version": "fts-2.0"
+      },
+      "affordability": {
+        "safe_weekly_paise": 42219,
+        "p25_weekly_surplus_paise": 84438,
+        "median_weekly_surplus_paise": 109850,
+        "median_weekly_income_paise": 344900,
+        "existing_weekly_debt_paise": 0,
+        "rbi_cap_weekly_paise": 172450,
+        "payout_weekday": "TUE",
+        "loan_max_paise": {
+          "13": 530000,
+          "26": 1030000,
+          "52": 1940000
+        }
+      },
+      "offers_requested_1000000_paise": [
+        {
+          "lender": {
+            "id": "gamma",
+            "name": "MFI Gamma"
+          },
+          "product_id": "gamma-growth",
+          "amount_paise": 300000,
+          "weeks": 26,
+          "frequency": "WEEKLY",
+          "rate_pct": 18,
+          "fee_pct": 1.5,
+          "kfs": {
+            "instalment_paise": 12085,
+            "fee_paise": 4500,
+            "net_disbursed_paise": 295500,
+            "total_repayable_paise": 314221,
+            "total_cost_paise": 18721,
+            "apr_pct": 23.9,
+            "advertised_rate_pct": 18,
+            "n_instalments": 26,
+            "late_fee_paise": 5000,
+            "cooling_off_days": 3
+          },
+          "fits_safe_instalment": true,
+          "eligible": "OUTSIDE",
+          "reason": "TOO_FEW_WEEKS"
+        },
+        {
+          "lender": {
+            "id": "beta",
+            "name": "MFI Beta"
+          },
+          "product_id": "beta-flexi",
+          "amount_paise": 300000,
+          "weeks": 26,
+          "frequency": "WEEKLY",
+          "rate_pct": 21,
+          "fee_pct": 1,
+          "kfs": {
+            "instalment_paise": 12178,
+            "fee_paise": 3000,
+            "net_disbursed_paise": 297000,
+            "total_repayable_paise": 316630,
+            "total_cost_paise": 19630,
+            "apr_pct": 25.0,
+            "advertised_rate_pct": 21,
+            "n_instalments": 26,
+            "late_fee_paise": 5000,
+            "cooling_off_days": 3
+          },
+          "fits_safe_instalment": true,
+          "eligible": "OUTSIDE",
+          "reason": "TOO_FEW_WEEKS"
+        },
+        {
+          "lender": {
+            "id": "alpha",
+            "name": "MFI Alpha"
+          },
+          "product_id": "alpha-weekly",
+          "amount_paise": 300000,
+          "weeks": 26,
+          "frequency": "WEEKLY",
+          "rate_pct": 24,
+          "fee_pct": 2,
+          "kfs": {
+            "instalment_paise": 12271,
+            "fee_paise": 6000,
+            "net_disbursed_paise": 294000,
+            "total_repayable_paise": 319051,
+            "total_cost_paise": 25051,
+            "apr_pct": 32.0,
+            "advertised_rate_pct": 24,
+            "n_instalments": 26,
+            "late_fee_paise": 5000,
+            "cooling_off_days": 3
+          },
+          "fits_safe_instalment": true,
+          "eligible": "OUTSIDE",
+          "reason": "TOO_FEW_WEEKS"
+        }
+      ],
+      "what_if": {
+        "SAVE_EVERY_WEEK": {
+          "score_before": 94,
+          "score_after": 99,
+          "points": 5
+        },
+        "STEADY_INCOME": {
+          "score_before": 94,
+          "score_after": 95,
+          "points": 1
+        },
+        "ADD_MORE_HISTORY": {
+          "score_before": 94,
+          "score_after": 94,
+          "points": 0
+        }
+      },
+      "stress": {
+        "0": {
+          "weeks_covered": 5,
+          "weeks_total": 5,
+          "light": "GREEN",
+          "buffer_covers": true,
+          "shortfall_paise": 0,
+          "advice": "OK",
+          "series": [
+            {
+              "week_start": "2026-09-21",
+              "surplus_paise": 84438,
+              "stressed_surplus_paise": 84438
+            },
+            {
+              "week_start": "2026-09-28",
+              "surplus_paise": 124862,
+              "stressed_surplus_paise": 124862
+            },
+            {
+              "week_start": "2026-10-05",
+              "surplus_paise": 109850,
+              "stressed_surplus_paise": 109850
+            },
+            {
+              "week_start": "2026-10-12",
+              "surplus_paise": 74354,
+              "stressed_surplus_paise": 74354
+            },
+            {
+              "week_start": "2026-10-19",
+              "surplus_paise": 114467,
+              "stressed_surplus_paise": 114467
+            }
+          ]
+        },
+        "0.1": {
+          "weeks_covered": 5,
+          "weeks_total": 5,
+          "light": "GREEN",
+          "buffer_covers": true,
+          "shortfall_paise": 0,
+          "advice": "OK",
+          "series": [
+            {
+              "week_start": "2026-09-21",
+              "surplus_paise": 84438,
+              "stressed_surplus_paise": 65398
+            },
+            {
+              "week_start": "2026-09-28",
+              "surplus_paise": 124862,
+              "stressed_surplus_paise": 101780
+            },
+            {
+              "week_start": "2026-10-05",
+              "surplus_paise": 109850,
+              "stressed_surplus_paise": 88269
+            },
+            {
+              "week_start": "2026-10-12",
+              "surplus_paise": 74354,
+              "stressed_surplus_paise": 56323
+            },
+            {
+              "week_start": "2026-10-19",
+              "surplus_paise": 114467,
+              "stressed_surplus_paise": 92424
+            }
+          ]
+        },
+        "0.2": {
+          "weeks_covered": 5,
+          "weeks_total": 5,
+          "light": "GREEN",
+          "buffer_covers": true,
+          "shortfall_paise": 0,
+          "advice": "OK",
+          "series": [
+            {
+              "week_start": "2026-09-21",
+              "surplus_paise": 84438,
+              "stressed_surplus_paise": 46358
+            },
+            {
+              "week_start": "2026-09-28",
+              "surplus_paise": 124862,
+              "stressed_surplus_paise": 78698
+            },
+            {
+              "week_start": "2026-10-05",
+              "surplus_paise": 109850,
+              "stressed_surplus_paise": 66688
+            },
+            {
+              "week_start": "2026-10-12",
+              "surplus_paise": 74354,
+              "stressed_surplus_paise": 38291
+            },
+            {
+              "week_start": "2026-10-19",
+              "surplus_paise": 114467,
+              "stressed_surplus_paise": 70382
+            }
+          ]
+        },
+        "0.3": {
+          "weeks_covered": 3,
+          "weeks_total": 5,
+          "light": "GREEN",
+          "buffer_covers": true,
+          "shortfall_paise": 11324,
+          "advice": "OK",
+          "series": [
+            {
+              "week_start": "2026-09-21",
+              "surplus_paise": 84438,
+              "stressed_surplus_paise": 27319
+            },
+            {
+              "week_start": "2026-09-28",
+              "surplus_paise": 124862,
+              "stressed_surplus_paise": 55615
+            },
+            {
+              "week_start": "2026-10-05",
+              "surplus_paise": 109850,
+              "stressed_surplus_paise": 45107
+            },
+            {
+              "week_start": "2026-10-12",
+              "surplus_paise": 74354,
+              "stressed_surplus_paise": 20260
+            },
+            {
+              "week_start": "2026-10-19",
+              "surplus_paise": 114467,
+              "stressed_surplus_paise": 48339
+            }
+          ]
+        }
+      },
+      "formats": {
+        "csv": {
+          "rows": 117,
+          "score": 94,
+          "band": "STRONG",
+          "confidence": "LOW",
+          "matches_csv": true,
+          "sha256": "c734f2ff60e67cba0230a3f15036a755ad6614c27f7320da9c3f3aee91fff019",
+          "warnings": []
+        },
+        "pdf": {
+          "rows": 117,
+          "score": 94,
+          "band": "STRONG",
+          "confidence": "LOW",
+          "matches_csv": true,
+          "sha256": "7a263012b53e754386ec67ee6c447f4e14971cec7e16a7052e33e85345adcf49",
+          "warnings": []
+        },
+        "locked.pdf": {
+          "rows": 117,
+          "score": 94,
+          "band": "STRONG",
+          "confidence": "LOW",
+          "matches_csv": true,
+          "sha256": "d8d62465616c769ed9abbf5ec7f2fcc3599aec1766e50eebfb6ee98ef6a62107",
+          "warnings": []
+        },
+        "aa.json": {
+          "rows": 117,
+          "score": 94,
+          "band": "STRONG",
+          "confidence": "LOW",
+          "matches_csv": true,
+          "sha256": "df499aee10b3ff5b858e4e1f0fc9ceb276683622611cdbe2051829c5d5d92db7",
+          "warnings": []
+        }
+      }
+    }
+  },
+  "fairness": {
+    "tests": [
+      {
+        "code": "SCALE_HALF",
+        "passed": true,
+        "detail": "Halving every rupee for all 4 people kept every score the same (Ravi stayed at 85)."
+      },
+      {
+        "code": "SCALE_DOUBLE",
+        "passed": true,
+        "detail": "Doubling every rupee for all 4 people kept every score the same (Ravi stayed at 85)."
+      },
+      {
+        "code": "NAME_SWAP",
+        "passed": true,
+        "detail": "Changing every name (and the owner's gender) in all 4 statements kept every score the same (Ravi stayed at 85)."
+      },
+      {
+        "code": "STEADY_BEATS_RICH",
+        "passed": true,
+        "detail": "Sunita earns about \u20b912,502 a month and scores 99; Arjun earns about \u20b940,079 a month and scores 43."
+      },
+      {
+        "code": "MONOTONIC_SAVINGS",
+        "passed": true,
+        "detail": "Adding a savings week never lowered a score (16 weeks checked across 4 people; each added up to 5.0 points)."
+      },
+      {
+        "code": "MONOTONIC_BILLS",
+        "passed": true,
+        "detail": "Paying late bills on time never lowered a score (4 cases checked; up to 5.6 points gained)."
+      },
+      {
+        "code": "MISSING_IS_NOT_BAD",
+        "passed": true,
+        "detail": "Removing all of Sunita's bills marked bill payments as 'not available' (not zero) and moved the score from 99 to 99."
+      },
+      {
+        "code": "NO_PROTECTED_INPUTS",
+        "passed": true,
+        "detail": "The score reads only these transaction fields: amount_paise, balance_paise, category, date, direction, flags, id, kind, payee_token. No name, gender, age, religion, caste, language or location is ever an input."
+      }
+    ],
+    "personas": [
+      {
+        "name": "Ravi Shinde",
+        "monthly_income_paise": 2323443,
+        "score": 85,
+        "band": "STRONG",
+        "confidence": "HIGH"
+      },
+      {
+        "name": "Sunita Jadhav",
+        "monthly_income_paise": 1250275,
+        "score": 99,
+        "band": "STRONG",
+        "confidence": "HIGH"
+      },
+      {
+        "name": "Arjun Mehta",
+        "monthly_income_paise": 4007922,
+        "score": 43,
+        "band": "FAIR",
+        "confidence": "HIGH"
+      },
+      {
+        "name": "Meena Pawar",
+        "monthly_income_paise": 1502453,
+        "score": 94,
+        "band": "STRONG",
+        "confidence": "LOW"
+      }
+    ]
+  },
+  "ravi_alpha_schedule": {
+    "rows": 26,
+    "first_due": "2026-11-06",
+    "all_fridays": true,
+    "total_paise": 765722,
+    "kfs_total_paise": 765722
+  },
+  "unresolved_contract_observations": {
+    "ignored_credit_balance_growth": {
+      "score_before": 62,
+      "score_after": 65,
+      "saved_weeks_before": 0,
+      "saved_weeks_after": 1,
+      "income_unchanged": true
+    },
+    "fixed_savings_floor_scale_counterexample": {
+      "score_before": 64,
+      "score_after_doubling": 97,
+      "saved_weeks_before": 0,
+      "saved_weeks_after_doubling": 12
+    },
+    "kfs_text_vs_golden_vector": {
+      "exact_emi_total_paise": 797627,
+      "rounded_instalment_times_weeks_paise": 797628
+    }
+  }
+}

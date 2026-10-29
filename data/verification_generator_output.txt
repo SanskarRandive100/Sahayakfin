@@ -1,0 +1,24 @@
+wrote 13 files to C:\Users\Rajat R\OneDrive\Desktop\SahaykFin\rajat_work\sahayakfin-scoring-verify\data\samples
+persona  file                rows monthly Rs score band     conf   weeks safe/wk Rs loan26 Rs
+ravi     ravi.csv             284     23,172    85 STRONG   HIGH      12    295.29     7,200
+ravi     ravi.pdf             284     23,172    85 STRONG   HIGH      12    295.29     7,200
+ravi     ravi.locked.pdf      284     23,172    85 STRONG   HIGH      12    295.29     7,200
+ravi     ravi.aa.json         284     23,172    85 STRONG   HIGH      12    295.29     7,200
+ravi     ravi.alt.pdf         284     23,172    85 STRONG   HIGH      12    295.29     7,200
+         components {'income_stability': 95.85, 'savings_habit': 75.0, 'bill_discipline': 77.78, 'expense_health': 91.67}  reasons ['FEW_SAVINGS_WEEKS', 'BILLS_LATE']
+sunita   sunita.csv           747     12,493    99 STRONG   HIGH      12    187.42     4,500
+sunita   sunita.pdf           747     12,493    99 STRONG   HIGH      12    187.42     4,500
+sunita   sunita.locked.pdf    747     12,493    99 STRONG   HIGH      12    187.42     4,500
+sunita   sunita.aa.json       747     12,493    99 STRONG   HIGH      12    187.42     4,500
+         components {'income_stability': 98.14, 'savings_habit': 100.0, 'bill_discipline': 100.0, 'expense_health': 100.0}  reasons ['INCOME_UNEVEN']
+arjun    arjun.csv            185     38,169    43 FAIR     HIGH      12      0.00         0
+arjun    arjun.pdf            185     38,169    43 FAIR     HIGH      12      0.00         0
+arjun    arjun.locked.pdf     185     38,169    43 FAIR     HIGH      12      0.00         0
+arjun    arjun.aa.json        185     38,169    43 FAIR     HIGH      12      0.00         0
+         components {'income_stability': 63.65, 'savings_habit': 0.0, 'bill_discipline': 52.78, 'expense_health': 53.54}  reasons ['NO_SAVINGS_SEEN', 'BILL_BOUNCE']
+meena    meena.csv            117     14,946    94 STRONG   LOW        5    422.19    10,300
+meena    meena.pdf            117     14,946    94 STRONG   LOW        5    422.19    10,300
+meena    meena.locked.pdf     117     14,946    94 STRONG   LOW        5    422.19    10,300
+meena    meena.aa.json        117     14,946    94 STRONG   LOW        5    422.19    10,300
+         components {'income_stability': 96.46, 'savings_habit': 80.0, 'bill_discipline': 100.0, 'expense_health': 100.0}  reasons ['FEW_SAVINGS_WEEKS', 'INCOME_UNEVEN', 'THIN_FILE']
+Format equivalence: PASS (0 mismatches)
