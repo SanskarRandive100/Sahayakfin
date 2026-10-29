@@ -1,13 +1,13 @@
 """Normalisation: categories, masking, payee tokens and gaming rules (tasks/02 §2.1, §2.2)."""
-import functools
 import importlib.util
 import re
 from datetime import date, timedelta
 from pathlib import Path
 
 import pytest
+from test_ingest_parse import parsed
 
-from app.ingest import IngestError, normalize, parse_statement, recategorize
+from app.ingest import IngestError, normalize, recategorize
 from app.scoring import compute_score
 from app.scoring.types import RawTxn
 
@@ -27,13 +27,8 @@ def load_personas_module():
     return mod
 
 
-@functools.lru_cache(maxsize=None)
-def raw_of(slug: str, ext: str):
-    return tuple(parse_statement((SAMPLES / f"{slug}.{ext}").read_bytes(), f"{slug}.{ext}", None).raw)
-
-
 def txns_of(slug: str, ext: str = "csv"):
-    return normalize(list(raw_of(slug, ext)), OWNERS[slug], KEY)
+    return normalize(list(parsed(f"{slug}.{ext}").raw), OWNERS[slug], KEY)
 
 
 def one(narration, direction="DR", amount=100.0, owner=None, d=date(2026, 10, 1)):

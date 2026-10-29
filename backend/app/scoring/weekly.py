@@ -93,13 +93,18 @@ def weekly_features(txns: list[Txn], as_of: Optional[date] = None, smooth: bool 
                 else:
                     spread_expense += p.amount_paise
 
+    seen_balance = False
     for t in sorted(txns, key=lambda t: t.date):  # stable: keeps statement order within a day
         i = idx.get(monday(t.date))
         if i is None:
             if t.date < window[0] and t.balance_paise is not None:
-                prior_balance = t.balance_paise
+                prior_balance, seen_balance = t.balance_paise, True
             continue
         if t.balance_paise is not None:
+            if not seen_balance:  # statement starts inside the window: opening = balance before this row
+                signed = t.amount_paise if t.direction == "CR" else -t.amount_paise
+                prior_balance = t.balance_paise - signed
+                seen_balance = True
             closing[i] = t.balance_paise
         if t.id in smoothed_ids:
             continue

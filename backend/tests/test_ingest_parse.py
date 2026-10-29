@@ -23,8 +23,9 @@ def read(name: str) -> bytes:
 
 
 @functools.lru_cache(maxsize=None)
-def parsed(name: str):
-    return parse_statement(read(name), name, None)
+def parsed(name: str, password: str | None = None):
+    """Parse a sample once per test session (other test modules import this cache)."""
+    return parse_statement(read(name), name, password)
 
 
 @pytest.mark.parametrize("slug", list(OWNERS))
@@ -59,7 +60,7 @@ def test_locked_pdf_wrong_password():
 
 @pytest.mark.parametrize("slug", list(OWNERS))
 def test_locked_pdf_with_password(slug):
-    locked = parse_statement(read(f"{slug}.locked.pdf"), "x.pdf", PASSWORDS[slug]).raw
+    locked = parsed(f"{slug}.locked.pdf", PASSWORDS[slug]).raw
     plain = parsed(f"{slug}.pdf").raw
     assert locked == plain
 
