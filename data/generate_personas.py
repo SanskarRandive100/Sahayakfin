@@ -331,9 +331,11 @@ def write_all(only_alt: bool = False) -> list[Path]:
         files = {}
         if not only_alt:
             pdf = pdf_bytes(rows, persona)
-            files = {f"{slug}.csv": csv_bytes(rows), f"{slug}.pdf": pdf,
-                     f"{slug}.locked.pdf": lock_pdf(pdf, password_for(persona)),
-                     f"{slug}.aa.json": aa_bytes(rows, slug)}
+            files = {f"{slug}.csv": csv_bytes(rows), f"{slug}.pdf": pdf, f"{slug}.aa.json": aa_bytes(rows, slug)}
+            # Encryption salts are random: keep the old locked file when the plain PDF has not changed.
+            plain, locked = SAMPLES / f"{slug}.pdf", SAMPLES / f"{slug}.locked.pdf"
+            if not (locked.exists() and plain.exists() and plain.read_bytes() == pdf):
+                files[locked.name] = lock_pdf(pdf, password_for(persona))
         if slug == "ravi":
             files[f"{slug}.alt.pdf"] = pdf_bytes(rows, persona, layout="alt")
         for name, content in files.items():
