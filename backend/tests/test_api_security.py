@@ -150,3 +150,72 @@ def test_unknown_persona(client):
 def test_demo_samples_reject_traversal(client):
     assert client.get(f"{API}/demo/samples/..%2F..%2F.env").status_code == 404
     assert client.get(f"{API}/demo/samples/mallory.csv").status_code == 404
+
+
+
+def test_demo_routes_disabled_outside_demo(client, monkeypatch):
+    from app.api import demo
+    from dataclasses import replace
+    h = login(client)
+    monkeypatch.setattr(demo, "settings", replace(settings, demo_mode=False))
+    responses = [
+        client.get(f"{API}/demo/samples/ravi.csv"),
+        client.post(f"{API}/demo/reset", headers=h),
+        client.post(f"{API}/demo/advance-clock", headers=h, json={"days": 1}),
+    ]
+    for response in responses:
+        assert response.status_code == 404
+        assert response.json()["error"]["code"] == "NOT_FOUND"
+
+
+def test_demo_sample_available_in_demo(client):
+    response = client.get(f"{API}/demo/samples/ravi.csv")
+    assert response.status_code == 200
+    assert response.content.startswith(b"date,narration,")
+
+
+def test_expired_jwt_rejected(client):
+    h = login(client)
+    claims = pyjwt.decode(h["Authorization"].split()[1], options={"verify_signature": False})
+    claims["exp"] = 1
+    expired = pyjwt.encode(claims, settings.jwt_secret, algorithm="HS256")
+    assert client.get(f"{API}/me", headers={"Authorization": f"Bearer {expired}"}).status_code == 401
+
+
+def test_encrypted_narrations_and_key_validation(client, monkeypatch):
+    import base64
+    import pytest
+    from app.config import Settings
+    from app.models import Transaction
+    from app.security.crypto import encrypt, decrypt
+    h, _ = onboard(client)
+    claims = pyjwt.decode(h["Authorization"].split()[1], options={"verify_signature": False})
+    with SessionLocal() as db:
+        row = db.query(Transaction).filter(Transaction.user_id == claims["sub"]).first()
+        assert row is not None
+        masked = decrypt(row.narration_enc)
+        assert masked and masked != row.narration_enc
+    value = "masked synthetic narration"
+    assert decrypt(encrypt(value)) == value
+    assert encrypt(value) != encrypt(value)
+    for key in ("not base64", base64.b64encode(b"too short").decode()):
+        monkeypatch.setenv("DATA_KEY", key)
+        with pytest.raises(RuntimeError, match="DATA_KEY"):
+            Settings.from_env()
+
+
+def test_lender_share_removed_on_expiry(client):
+    from app.api.lender import applicant_ref
+    h, cid = onboard(client)
+    lender = next(l for l in client.get(f"{API}/lenders", headers=h).json() if l["name"] == "MFI Alpha")
+    assert client.post(f"{API}/shares", headers=h, json={"lender_id": lender["id"]}).status_code == 200
+    with SessionLocal() as db:
+        consent = db.get(Consent, cid)
+        ref = applicant_ref(consent.user_id, lender["id"])
+    lh = login(client, "9999999991")
+    assert ref in {a["applicant_ref"] for a in client.get(f"{API}/lender/applicants", headers=lh).json()}
+    with SessionLocal() as db:
+        db.get(Consent, cid).expires_at = clock.now() - timedelta(minutes=1)
+        db.commit()
+    assert ref not in {a["applicant_ref"] for a in client.get(f"{API}/lender/applicants", headers=lh).json()}
+    assert client.get(f"{API}/shares", headers=h).json() == []

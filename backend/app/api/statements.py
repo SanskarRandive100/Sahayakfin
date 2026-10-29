@@ -25,7 +25,7 @@ async def upload_statement(file: UploadFile = File(...), consent_id: str = Form(
                            password: str | None = Form(None),
                            user: User = Depends(current_user), db: Session = Depends(get_db)):
     consent = user_consent(db, user, consent_id)
-    # Read at most MAX_BYTES + 1 into memory; the file is never written to disk.
+    # Bound the route read; framework multipart parsing may already have spooled to a temporary file.
     data = await file.read(MAX_BYTES + 1)
     filename = re.sub(r"[^\w.\-]", "_", file.filename or "upload")[-80:]
     await file.close()

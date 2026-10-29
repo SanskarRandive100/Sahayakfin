@@ -20,6 +20,7 @@ log = logging.getLogger("sahayakfin")
 
 @asynccontextmanager
 async def lifespan(_: FastAPI):
+    log.info("Database dialect: %s", engine.dialect.name)
     Base.metadata.create_all(engine)
     if not settings.samples_dir.is_dir():
         log.warning("SAMPLES_DIR %s not found: AA fetch, demo samples and Fairness Lab need "

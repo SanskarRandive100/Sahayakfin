@@ -66,11 +66,20 @@ def get_offers(requested_paise: int = Query(1_000_000), user: User = Depends(cur
 
     loans = []
     for o in matched:
-        row = Offer(user_id=user.id, product_id=o["product_id"], score_run_id=run.id,
-                    amount_paise=int(o["amount_paise"]), requested_paise=requested_paise, weeks=int(o["weeks"]),
-                    kfs=_jsonable(o["kfs"]), eligible=o["eligible"], status="OFFERED")
-        db.add(row)
-        db.flush()
+        # Reuse an unchanged unaccepted quote so refreshes preserve IDs and do not grow the table.
+        candidates = db.query(Offer).filter(
+            Offer.user_id == user.id, Offer.product_id == o["product_id"], Offer.score_run_id == run.id,
+            Offer.requested_paise == requested_paise, Offer.status == "OFFERED",
+            Offer.amount_paise == int(o["amount_paise"]), Offer.weeks == int(o["weeks"]),
+            Offer.eligible == o["eligible"]).order_by(Offer.created_at.desc()).all()
+        quote = _jsonable(o["kfs"])
+        row = next((candidate for candidate in candidates if candidate.kfs == quote), None)
+        if row is None:
+            row = Offer(user_id=user.id, product_id=o["product_id"], score_run_id=run.id,
+                        amount_paise=int(o["amount_paise"]), requested_paise=requested_paise, weeks=int(o["weeks"]),
+                        kfs=quote, eligible=o["eligible"], status="OFFERED")
+            db.add(row)
+            db.flush()
         loans.append(_jsonable({"id": row.id, **o}))
     db.commit()
 
@@ -94,6 +103,8 @@ def accept_offer(offer_id: str, body: AcceptIn, user: User = Depends(current_use
         raise AppError("OFFER_NOT_ACCEPTABLE")
     product = db.get(Product, offer.product_id)
     lender = db.get(Lender, product.lender_id) if product and product.lender_id else None
+    if product is None or lender is None:
+        raise AppError("OFFER_NOT_ACCEPTABLE")
     pd = product_dict(product, lender)
     if pd["tenures"] and body.weeks not in pd["tenures"]:
         raise AppError("VALIDATION_ERROR", 422, f"weeks must be one of {pd['tenures']}")
@@ -104,6 +115,14 @@ def accept_offer(offer_id: str, body: AcceptIn, user: User = Depends(current_use
     if not txns:
         raise AppError("NO_SCORE")
     afford = scoring.affordability(txns)
+    # Re-evaluate the current score and lender rules, rather than trusting an old quote.
+    # Compute from the live consent-backed rows: a retained score may predate erasure.
+    score = _jsonable(scoring.compute_score(txns))
+    rank = {"BUILDING": 0, "FAIR": 1, "GOOD": 2, "STRONG": 3}
+    if (score.get("score") is None or score.get("confidence") == "NONE"
+            or rank.get(score.get("band"), -1) < rank.get(lender.min_band, 0)
+            or int(score.get("weeks_observed") or 0) < lender.min_weeks):
+        raise AppError("OFFER_NOT_ACCEPTABLE")
     kfs = _jsonable(finance.kfs(body.amount_paise, pd["rate_pct"], pd["fee_pct"], body.weeks))
     if kfs["instalment_paise"] > int(afford.get("safe_weekly_paise", 0)):
         raise AppError("EXCEEDS_SAFE_INSTALMENT")

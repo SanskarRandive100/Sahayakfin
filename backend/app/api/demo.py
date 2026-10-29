@@ -50,6 +50,7 @@ def reset(user: User = Depends(current_user), db: Session = Depends(get_db)):
 
 @router.get("/samples/{name}")
 def sample(name: str):
+    _demo_only()
     persona, _, ext = name.partition(".")
     if persona not in PERSONAS or ext not in ("pdf", "csv", "locked.pdf"):
         raise AppError("UNKNOWN_PERSONA", 404)
