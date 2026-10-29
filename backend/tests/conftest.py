@@ -3,15 +3,25 @@ import os
 import random
 import sys
 import tempfile
+from uuid import uuid4
 from datetime import date, timedelta
 from pathlib import Path
 
-_TMP = tempfile.mkdtemp(prefix="sahayak-test-")
-# A temp SQLite DB, unless a PostgreSQL URL is given (Phase 3.3: DATABASE_URL=postgresql+psycopg://... pytest).
-if not os.environ.get("DATABASE_URL", "").startswith("postgresql"):
-    os.environ["DATABASE_URL"] = f"sqlite:///{Path(_TMP, 'test.db').as_posix()}"
+# Never inherit the application's DATABASE_URL: tests can delete/reset data.
+_TEST_URL = os.environ.get("TEST_DATABASE_URL")
+if _TEST_URL:
+    from sqlalchemy.engine import make_url
+    url = make_url(_TEST_URL)
+    name = url.database or ""
+    if (url.get_backend_name() != "postgresql"
+            or not (name.startswith(("test_", "sahayakfin_test_")) or name.endswith("_test"))):
+        raise RuntimeError("TEST_DATABASE_URL must name an explicitly disposable PostgreSQL test database")
+    os.environ["DATABASE_URL"] = _TEST_URL
+else:
+    _TMP = tempfile.TemporaryDirectory(prefix="sahayak-test-")
+    os.environ["DATABASE_URL"] = f"sqlite:///{Path(_TMP.name, 'test.db').as_posix()}"
 os.environ["SEED_DEMO_DATA"] = "false"
-os.environ.setdefault("DEMO_MODE", "true")
+os.environ["DEMO_MODE"] = "true"
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 import pytest  # noqa: E402
@@ -25,7 +35,28 @@ SAMPLES = Path(__file__).resolve().parents[2] / "data" / "samples"
 
 
 @pytest.fixture(scope="session")
-def client():
+def _database_schema():
+    from sqlalchemy import text
+    from app.db import engine
+    schema = "test_" + uuid4().hex
+    if _TEST_URL:
+        with engine.begin() as connection:
+            connection.execute(text(f'CREATE SCHEMA "{schema}"'))
+        engine.update_execution_options(schema_translate_map={None: schema})
+    try:
+        yield
+    finally:
+        if _TEST_URL:
+            engine.update_execution_options(schema_translate_map=None)
+            with engine.begin() as connection:
+                connection.execute(text(f'DROP SCHEMA "{schema}" CASCADE'))
+        engine.dispose()
+        if not _TEST_URL:
+            _TMP.cleanup()
+
+
+@pytest.fixture(scope="session")
+def client(_database_schema):
     with TestClient(app) as c:
         yield c
 
@@ -58,7 +89,7 @@ def give_consent(client, headers, **kw) -> str:
 
 
 def inline_csv(weeks: int = 13, end: date = date(2026, 10, 25)) -> bytes:
-    """A small, valid CONTRACTS §2.5 CSV: weekly Friday payout, daily fuel/food, monthly rent and phone."""
+    """A small, valid CONTRACTS Â§2.5 CSV: weekly Friday payout, daily fuel/food, monthly rent and phone."""
     start = end - timedelta(weeks=weeks) + timedelta(days=1)
     bal, lines = 5000.0, ["date,narration,debit,credit,balance"]
     d = start

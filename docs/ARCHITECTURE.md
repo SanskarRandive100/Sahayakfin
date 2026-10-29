@@ -2,7 +2,7 @@
 
 A React phone-frame app and a desktop lender/fairness view talk to one FastAPI service (`/api/v1`). The service owns
 auth, consent, storage, security and audit, and calls a **pure, unit-tested** Python package for parsing, scoring and
-loan maths. Nothing in the API computes a score itself. Data lives in PostgreSQL (SQLite for development).
+loan maths. Nothing in the API computes a score itself. The template defaults to SQLite. PostgreSQL is selected explicitly through DATABASE_URL; startup logs only the effective dialect.
 
 ## 1. Components
 
@@ -184,10 +184,11 @@ sequenceDiagram
   W->>API: GET /offers?requested_paise=1000000
   API->>S: affordability(txns) gives safe_weekly and payout_weekday
   API->>F: match_offers(score, afford, lenders, products)
-  API->>DB: offers (status OFFERED)
+  API->>DB: reuse unchanged OFFERED quotes or insert new quotes
   API-->>W: loans with KFS + insurance
 
   W->>API: POST /offers/{id}/accept {amount, weeks}
+  API->>S: recompute current score and lender eligibility from live consent-backed rows
   API->>F: kfs(amount, rate, fee, weeks): instalment ≤ safe_weekly?
   API->>F: schedule(start = today, payout_weekday)
   API->>DB: loans + repayments, offer ACCEPTED, audit LOAN_ACCEPTED
@@ -232,19 +233,19 @@ except where marked "public".
 | GET | `/fairness/report` | public | Fairness tests on synthetic personas (cached 10 min) |
 | POST | `/demo/advance-clock` | user, DEMO_MODE | Move the simulated clock 1–30 days |
 | POST | `/demo/reset` | user, DEMO_MODE | Delete the caller's data, reset the clock |
-| GET | `/demo/samples/{persona}.{csv,pdf,locked.pdf}` | public | Synthetic sample files |
+| GET | `/demo/samples/{persona}.{csv,pdf,locked.pdf}` | public, DEMO_MODE | Synthetic sample files; 404 outside demo mode |
 
 Interactive docs: `http://localhost:8000/docs`.
 
 ## 5. Security controls mapped to DPDP Act 2023 principles
 
-We claim alignment with the principles, not certification.
+This is an engineering control mapping. Legal compliance has not been assessed; the prototype is not a production banking integration.
 
 | DPDP principle | Control in SahayakFin | Where | Tested by |
 | --- | --- | --- | --- |
 | Notice and consent | Consent object with purpose, date range, data life and fetch type, shown in plain language (en/hi/mr) before any data is read. No upload or AA fetch without an ACTIVE consent owned by the user. | `api/consents.py`, `services/pipeline.py` | `test_no_consent`, `test_revoked_consent_blocks_upload`, `test_revoked_consent_blocks_aa_fetch` |
 | Purpose limitation | The only purpose is `LOAN_ASSESSMENT`. Lenders see a score summary only, and only after a per-lender share. | `schemas.ConsentIn`, `api/lender.py` | `test_consent_validation`, `test_lender_sees_only_summary_keys` |
-| Data minimisation | The raw file is never stored, only its SHA-256. Account numbers, phones and UPI handles are masked. Names become HMAC payee tokens. Phones are stored as a salted hash + last 4. `TxnOut` never returns the payee token or balance. | `ingest.normalize`, `services/txn_store.py`, `security/hashing.py` | `test_transactions_grouped_and_masked` |
+| Data minimisation | Application code retains only the file hash, not the uploaded file. Multipart UploadFile handling may spool large inputs to an OS temporary file before the route reads them; strict end-to-end memory-only ingress is not established. Account numbers, phones and UPI handles are masked. Names become HMAC payee tokens. Phones are stored as a salted hash + last 4. `TxnOut` never returns the payee token or balance. | `ingest.normalize`, `services/txn_store.py`, `security/hashing.py` | `test_transactions_grouped_and_masked` |
 | Storage limitation | Data life of 1–90 days. Consents past `expires_at` become EXPIRED on the next request and their data is deleted. | `services/consent_sweep.py` | `test_expired_consent_deletes_data`, `test_advance_clock_past_data_life_expires` |
 | Right to erasure | Revoke deletes data sources and transactions (DB cascade), ends lender shares, and returns the deleted counts. | `api/consents.py` | `test_revoke_returns_counts_and_audits`, `test_full_flow` |
 | Security safeguards | AES-256-GCM narrations; JWT HS256 with role checked against the DB; role guards; 404 (not 403) on other users' ids; OTP rate limit; upload size, signature, script and page checks; PDF password used once and never logged; logs contain no bodies or personal data; CORS limited to the frontend. | `security/*`, `main.py` | `test_api_security.py`, `test_api_upload.py` |
@@ -254,16 +255,33 @@ We claim alignment with the principles, not certification.
 
 | Stage | What happens | Where the data is |
 | --- | --- | --- |
-| Collect | The user gives consent, then uploads a statement or triggers the mock AA fetch | Request memory |
+| Collect | Consent precedes upload or mock AA fetch. Multipart parsing can spool uploads before route validation | Request memory or framework temporary storage |
 | Validate | Size ≤ 5 MB, `%PDF-` or UTF-8 CSV signature, extension matches, no `/JavaScript` `/JS` `/Launch` `/EmbeddedFile`, ≤ 20 pages | Request memory |
 | Parse in memory | `parse_statement` decrypts a locked PDF in memory with the one-time password | Request memory; the password is dropped after |
 | Mask | Account numbers, phones and UPI handles are masked; names become `P-XXXXXXXX` HMAC tokens; categorised before masking | Request memory |
 | Encrypt + store | Narration encrypted with AES-256-GCM; only the file's SHA-256 is kept | `data_sources`, `transactions` |
 | Score | Pure engine over stored, masked transactions | `score_runs` (kept as a lending record) |
 | Share summary | Per-lender share; the lender sees band, score, confidence, reason codes and safe weekly amount, under an `APP-XXXX` reference | `lender_shares`; each view goes to `audit_log` |
-| Delete | Revoke or expiry deletes sources → transactions and ends shares; `/demo/reset` clears everything for the user | Gone. The audit row records it. |
+| Delete | Revoke/expiry deletes sources and transactions and ends lender shares. Historical scores, offers, loans, goals and audit remain owner-scoped | Derived lending records retained; no production retention schedule |
 
 ## 7. Running
 
 See `README.md`. Short version: `cd backend && uvicorn app.main:app --reload --port 8000`, and
-`python -m app.seed --reset` before a demo.
+`python -m app.seed --reset` only after verifying the target is an expendable local demo database.
+
+
+## 8. Integration verification and limits
+
+See `SANSKAR_INTEGRATION_REPORT.md` for measured results and unresolved owner tasks.
+PostgreSQL tests use TEST_DATABASE_URL with an explicitly disposable database name and a unique per-run schema;
+the application DATABASE_URL is ignored by tests. SQLite tests use an automatically cleaned temporary database.
+Compose binds PostgreSQL to loopback and supplies a readiness health check; POSTGRES_PORT can override 5432.
+
+AA, fixed OTP and payments are synthetic simulations. Demo sample downloads, reset and clock helpers are blocked
+when DEMO_MODE is false. Turning that flag off does not make the service production-ready: authentication,
+secret management, upload ingress, retention policy and migrations still need production design.
+
+APP references retain the contracted four hexadecimal characters. Collisions remain possible; a longer opaque
+per-lender identifier needs a coordinated API/frontend change. Offer refresh reuse handles sequential unchanged
+requests; concurrent requests are not protected by a database uniqueness constraint. Concurrent offer acceptance
+also needs a transaction/uniqueness design before production lending. No shared contract was changed here.

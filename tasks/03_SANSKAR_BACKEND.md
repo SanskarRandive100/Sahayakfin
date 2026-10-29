@@ -370,3 +370,18 @@ If the team wants a slide deck, paste `docs/PITCH.md` into the planning chat and
 | `ModuleNotFoundError: app` in tests | Run `python -m pytest` from `backend/` (adds cwd to the path), or add `pythonpath = .` in `backend/pytest.ini` |
 | Multipart upload 422 | `python-multipart` installed; endpoint uses `file: UploadFile = File(...)`, `consent_id: str = Form(...)`, `password: str \| None = Form(None)` |
 | JSON column error on Postgres | Use `sqlalchemy.JSON` (generic), not `sqlite.JSON` |
+
+
+## 30 October 2026 integration verification
+
+- [x] Isolated branch from integration/full-demo, baseline bba49759f4adaa2a8e3b11d078de6b99977d1ba4.
+- [x] 243 SQLite tests passed; 243 isolated PostgreSQL tests passed, no skips/failures.
+- [x] Live PostgreSQL locked PDF, auth, consent, AA, scores, offers, schedule, payment, goals, shares and revoke verified.
+- [x] Backend restart persistence and idempotent seeds measured.
+- [x] Demo downloads restricted outside DEMO_MODE; quote refresh reuse and current eligibility checks covered.
+- [x] Windows setup, secrets and isolated TEST_DATABASE_URL documented.
+- [ ] Mihir browser run with mocks disabled, frontend build and i18n verification.
+- [ ] Integrator shared sync script repair and coordinated merge after Rajat.
+
+Exact evidence, measured persona values, remaining limitations and owner requests are in SANSKAR_INTEGRATION_REPORT.md.
+Earlier historical checkmarks above are not substituted for this session's evidence.
