@@ -11,6 +11,11 @@ import Score from './screens/Score'
 import Loans from './screens/Loans'
 import MyLoan from './screens/MyLoan'
 import NotFound from './screens/NotFound'
+import Money from './screens/Money'
+import Privacy from './screens/Privacy'
+import Fairness from './screens/Fairness'
+import LenderLogin from './screens/LenderLogin'
+import LenderDashboard from './screens/LenderDashboard'
 
 function RequireAuth({ children }: { children: JSX.Element }) {
   const { token } = useSession()
@@ -40,7 +45,12 @@ export default function App() {
         <Route path="/score" element={<RequireAuth><Score /></RequireAuth>} />
         <Route path="/loans" element={<RequireAuth><Loans /></RequireAuth>} />
         <Route path="/loan" element={<RequireAuth><MyLoan /></RequireAuth>} />
+        <Route path="/money" element={<RequireAuth><Money /></RequireAuth>} />
+        <Route path="/privacy" element={<RequireAuth><Privacy /></RequireAuth>} />
       </Route>
+      <Route path="/fairness" element={<Fairness />} />
+      <Route path="/lender/login" element={<LenderLogin />} />
+      <Route path="/lender" element={<LenderDashboard />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   )

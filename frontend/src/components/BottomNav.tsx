@@ -4,9 +4,9 @@ import { useTranslation } from 'react-i18next'
 
 const items = [
   { to: '/score', icon: Home, key: 'nav.home' },
-  { to: '/review', icon: Wallet, key: 'nav.money' },
+  { to: '/money', icon: Wallet, key: 'nav.money' },
   { to: '/loans', icon: Landmark, key: 'nav.loans' },
-  { to: '/loan', icon: ShieldCheck, key: 'nav.privacy' },
+  { to: '/privacy', icon: ShieldCheck, key: 'nav.privacy' },
 ]
 
 export default function BottomNav() {

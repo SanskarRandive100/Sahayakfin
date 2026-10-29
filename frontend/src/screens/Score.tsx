@@ -10,6 +10,7 @@ import ReasonCard from '../components/ReasonCard'
 import ScoreGauge from '../components/ScoreGauge'
 import Skeleton from '../components/Skeleton'
 import TipCard from '../components/TipCard'
+import ReadAloudButton from '../components/ReadAloudButton'
 import TopBar from '../components/TopBar'
 import { useToast } from '../components/Toast'
 import { api } from '../api/endpoints'
@@ -53,6 +54,13 @@ export default function Score() {
         {score && score.score !== null && (
           <>
             <ScoreGauge score={score.score} band={score.band} />
+            <div className="flex justify-center">
+              <ReadAloudButton text={t('screen.score.speak', {
+                score: score.score, band: t(`band.${score.band}`),
+                reason: score.reasons[0] ? t(`reason.${score.reasons[0].code}`, score.reasons[0].params) : '',
+                tip: score.tips[0] ? t(`tip.${score.tips[0].code}`, { points: score.tips[0].points, ...(score.tips[0].params ?? {}) }) : '',
+              })} />
+            </div>
             <div className="flex flex-wrap justify-center gap-2">
               <Chip variant="brand">{conf}</Chip>
               {score.provisional && <Chip variant="amber">{t('confidence.provisional')}</Chip>}

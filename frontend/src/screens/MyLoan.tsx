@@ -7,7 +7,9 @@ import ScheduleList from '../components/ScheduleList'
 import Skeleton from '../components/Skeleton'
 import TopBar from '../components/TopBar'
 import { api } from '../api/endpoints'
-import type { Loan } from '../api/types'
+import type { Loan, Reminder, Repayment } from '../api/types'
+import ReminderChat from '../components/ReminderChat'
+import { useToast } from '../components/Toast'
 import { errText } from '../lib/errors'
 import { formatDate, formatINR } from '../lib/format'
 
@@ -15,10 +17,24 @@ export default function MyLoan() {
   const { t, i18n } = useTranslation()
   const [loans, setLoans] = useState<Loan[] | null>(null)
   const [error, setError] = useState<string | null>(null)
+  const [reminders, setReminders] = useState<Reminder[]>([])
+  const [payingId, setPayingId] = useState<string | null>(null)
+  const toast = useToast()
 
   function load() {
     setError(null)
     api.getLoans().then(setLoans).catch((e) => setError(errText(t, e)))
+    api.getReminders().then(setReminders).catch(() => undefined)
+  }
+
+  async function pay(r: Repayment) {
+    setPayingId(r.id)
+    try { await api.payRepayment(r.id); toast.show(t('screen.myLoan.paidToast'), 'success'); load() }
+    catch (e) { toast.show(errText(t, e), 'error') } finally { setPayingId(null) }
+  }
+
+  async function nextDay() {
+    try { await api.advanceClock(1); load() } catch (e) { toast.show(errText(t, e), 'error') }
   }
   useEffect(load, []) // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -50,7 +66,11 @@ export default function MyLoan() {
                 )}
               </div>
             </Card>
-            <ScheduleList rows={loan.schedule} />
+            <ReminderChat items={reminders} />
+            <button onClick={nextDay} className="w-full h-11 rounded-xl border border-line bg-white text-sm font-medium">
+              ⏩ {t('screen.myLoan.nextDay')}
+            </button>
+            <ScheduleList rows={loan.schedule} onPay={pay} payingId={payingId} />
           </>
         )}
       </div>

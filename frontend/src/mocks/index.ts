@@ -1,5 +1,5 @@
 import type {
-  Loan, Me, OffersResponse, ScoreResult, StatementResult, User, WeekGroup, Repayment,
+  Goal, Loan, Me, OffersResponse, Reminder, ScoreResult, StatementResult, User, WeekGroup, Repayment,
 } from '../api/types'
 
 const user: User = {
@@ -84,7 +84,11 @@ function offers(requested: number): OffersResponse {
       { id: 'o2', lender: { id: 'l2', name: 'MFI Beta' }, product_id: 'p2', amount_paise: 750000, weeks: 26, frequency: 'WEEKLY', rate_pct: 21, fee_pct: 1, kfs: { ...kfs, advertised_rate_pct: 21, apr_pct: 24.2, instalment_paise: 29800, fee_paise: 7500, net_disbursed_paise: 742500, total_repayable_paise: 774800, total_cost_paise: 32300 }, fits_safe_instalment: true, eligible: 'NEEDS_REVIEW', reason: null },
       { id: 'o3', lender: { id: 'l3', name: 'MFI Gamma' }, product_id: 'p3', amount_paise: 0, weeks: 26, frequency: 'WEEKLY', rate_pct: 18, fee_pct: 1.5, kfs: { ...kfs, advertised_rate_pct: 18, apr_pct: 21, instalment_paise: 0, fee_paise: 0, net_disbursed_paise: 0, total_repayable_paise: 0, total_cost_paise: 0 }, fits_safe_instalment: false, eligible: 'OUTSIDE', reason: 'BAND_TOO_LOW' },
     ],
-    insurance: [],
+    insurance: [
+      { id: 'i1', name: 'PM Suraksha Bima Yojana', provider: 'Govt of India', premium_paise: 2000, premium_period: 'YEAR', cover_paise: 200000000, is_govt_scheme: true, demo: false },
+      { id: 'i2', name: 'Hospital Cash Cover', provider: 'Demo Insurer', premium_paise: 1000, premium_period: 'WEEK', cover_paise: 50000, is_govt_scheme: false, demo: true },
+      { id: 'i3', name: 'Loan Life Cover', provider: 'Demo Insurer', premium_paise: 500, premium_period: 'WEEK', cover_paise: 750000, is_govt_scheme: false, demo: true },
+    ],
   }
 }
 
@@ -99,6 +103,8 @@ function buildSchedule(): Repayment[] {
 }
 
 let loan: Loan | null = null
+let goal: Goal | null = null
+let revoked = false
 
 function fail(code: string, message: string): Error {
   const e = new Error(message) as Error & { code: string }
@@ -113,7 +119,8 @@ export function mocks(method: string, path: string, body?: unknown): unknown {
   if (method === 'POST' && p === '/auth/otp/request') return { request_id: 'req1', demo_otp: '123456' }
   if (method === 'POST' && p === '/auth/otp/verify') {
     if (b.otp !== '123456') return fail('OTP_INVALID', 'Invalid code')
-    return { access_token: 'mock-token', user }
+    const lender = String(b.phone ?? '').startsWith('999999999')
+    return { access_token: 'mock-token', user: lender ? { ...user, display_name: 'MFI Alpha', role: 'LENDER' as const } : user }
   }
   if (method === 'GET' && p === '/me') {
     const me: Me = { user, has_active_consent: false, has_score: false, has_loan: !!loan }
@@ -153,5 +160,102 @@ export function mocks(method: string, path: string, body?: unknown): unknown {
     if (r) { r.status = 'PAID'; r.paid_at = new Date().toISOString() }
     return r
   }
+  if (method === 'PATCH' && p.startsWith('/transactions/')) {
+    const id = p.split('/')[2]
+    for (const w of weeks) for (const x of w.txns) if (x.id === id) { x.category = b.category; x.user_corrected = true }
+    const tx = weeks.flatMap((w) => w.txns).find((x) => x.id === id)
+    return { txn: tx, score: { ...score, score: 83 } }
+  }
+  if (method === 'GET' && p === '/affordability') {
+    return {
+      safe_weekly_paise: 31000, p25_weekly_surplus_paise: 62000, median_weekly_surplus_paise: 80000,
+      median_weekly_income_paise: 500000, existing_weekly_debt_paise: 0, rbi_cap_weekly_paise: 250000,
+      payout_weekday: 'FRIDAY', loan_max_paise: { '13': 380000, '26': 760000, '52': 1200000 },
+    }
+  }
+  if (method === 'POST' && p === '/affordability/stress') {
+    const s = Number(b.shock)
+    const light = s <= 0.1 ? 'GREEN' : s <= 0.2 ? 'AMBER' : 'RED'
+    return {
+      weeks_covered: light === 'GREEN' ? 12 : light === 'AMBER' ? 10 : 8, weeks_total: 12, light,
+      buffer_covers: light !== 'RED', shortfall_paise: light === 'RED' ? 4000 : 0,
+      advice: light === 'GREEN' ? 'OK' : 'CONSIDER_LONGER_TENURE',
+    }
+  }
+  if (method === 'GET' && p === '/reminders') {
+    const r = (id: string, code: string, at: string): Reminder => ({
+      id, repayment_id: 'r1', send_at: at, code, sent: true,
+      params: { amount_paise: 30678, due_date: '2026-11-06', lender: 'MFI Alpha' },
+    })
+    return loan ? [r('m1', 'REMINDER_T_MINUS_2', '2026-11-04T10:00:00+05:30'), r('m2', 'REMINDER_DUE_TODAY', '2026-11-06T09:30:00+05:30')] : []
+  }
+  if (method === 'POST' && p === '/demo/advance-clock') return { now: '2026-11-05T10:00:00+05:30' }
+  if (method === 'POST' && p === '/demo/reset') { loan = null; goal = null; revoked = false; return { ok: true } }
+  if (method === 'GET' && p === '/wellness/weekly') {
+    return {
+      weeks: [
+        { week_start: '2026-09-28', income_paise: 480000, expense_paise: 400000, by_category: { FUEL: 55000, FOOD: 90000, RENT: 120000, BILLS: 30000, PHONE: 25000, OTHER: 80000 } },
+        { week_start: '2026-10-05', income_paise: 505000, expense_paise: 398000, by_category: { FUEL: 58000, FOOD: 85000, RENT: 120000, BILLS: 28000, PHONE: 25000, OTHER: 82000 } },
+        { week_start: '2026-10-12', income_paise: 498000, expense_paise: 410000, by_category: { FUEL: 60000, FOOD: 92000, RENT: 120000, BILLS: 30000, PHONE: 25000, OTHER: 83000 } },
+        { week_start: '2026-10-19', income_paise: 512000, expense_paise: 426000, by_category: { FUEL: 78000, FOOD: 95000, RENT: 120000, BILLS: 30000, PHONE: 25000, OTHER: 78000 } },
+      ],
+      avg4_by_category: { FUEL: 62750, FOOD: 90500, RENT: 120000, BILLS: 29500, PHONE: 25000, OTHER: 80750 },
+      nudges: [
+        { code: 'PAYDAY_SAVE', params: { amount_paise: 512000, suggest_paise: 10000 } },
+        { code: 'CATEGORY_SPIKE', params: { category: 'FUEL', pct: 24 } },
+        { code: 'BILL_SOON', params: { category: 'BILLS', day: 5 } },
+      ],
+    }
+  }
+  if (method === 'GET' && p === '/goals') return goal ? [goal] : []
+  if (method === 'POST' && p === '/goals') {
+    goal = { id: 'g1', name: b.name, target_paise: b.target_paise, weekly_target_paise: 6000, saved_paise: 12000, weeks_left: Math.ceil(b.target_paise / 6000) }
+    return goal
+  }
+  if (method === 'GET' && p === '/audit') {
+    return [
+      { ts: '2026-10-29T01:12:00+05:30', actor_role: 'LENDER', actor_name: 'MFI Alpha', action: 'VIEW_SCORE_SUMMARY', purpose: 'LOAN_ASSESSMENT' },
+      { ts: '2026-10-29T00:40:00+05:30', actor_role: 'USER', actor_name: 'Ravi Shinde', action: 'SHARED_WITH_LENDER', purpose: 'LOAN_ASSESSMENT' },
+      { ts: '2026-10-29T00:20:00+05:30', actor_role: 'USER', actor_name: 'Ravi Shinde', action: 'STATEMENT_UPLOADED', purpose: 'LOAN_ASSESSMENT' },
+      { ts: '2026-10-29T00:18:00+05:30', actor_role: 'USER', actor_name: 'Ravi Shinde', action: 'CONSENT_CREATED', purpose: 'LOAN_ASSESSMENT' },
+    ]
+  }
+  if (method === 'GET' && p === '/consents') {
+    return [{
+      id: 'c1', purpose: 'LOAN_ASSESSMENT', fi_types: ['DEPOSIT'], range_from: '2026-07-28', range_to: '2026-10-25',
+      data_life_days: 30, fetch_type: 'ONETIME', status: revoked ? 'REVOKED' : 'ACTIVE',
+      created_at: '2026-10-29T00:00:00+05:30', expires_at: '2026-11-28T00:00:00+05:30',
+    }]
+  }
+  if (method === 'POST' && p.startsWith('/consents/') && p.endsWith('/revoke')) {
+    revoked = true
+    return { consent: { id: 'c1', status: 'REVOKED' }, deleted: { transactions: 214, sources: 1 } }
+  }
+  if (method === 'GET' && p === '/lenders') {
+    return [{ id: 'l1', name: 'MFI Alpha', min_band: 'FAIR' }, { id: 'l2', name: 'MFI Beta', min_band: 'GOOD' }, { id: 'l3', name: 'MFI Gamma', min_band: 'STRONG' }]
+  }
+  if (method === 'POST' && p === '/shares') return { id: `sh-${b.lender_id}`, lender_id: b.lender_id, created_at: '2026-10-29T00:00:00+05:30' }
+  if (method === 'DELETE' && p.startsWith('/shares/')) return { ok: true }
+  if (method === 'GET' && p === '/fairness/report') {
+    const codes = ['SCALE_HALF', 'SCALE_DOUBLE', 'NAME_SWAP', 'STEADY_BEATS_RICH', 'MONOTONIC_SAVINGS', 'MONOTONIC_BILLS', 'MISSING_IS_NOT_BAD', 'NO_PROTECTED_INPUTS']
+    return {
+      tests: codes.map((c) => ({ code: c, passed: true, detail: 'Checked on all demo personas: score unchanged.' })),
+      personas: [
+        { name: 'Ravi', monthly_income_paise: 2200000, score: 81, band: 'STRONG', confidence: 'HIGH' },
+        { name: 'Sunita', monthly_income_paise: 1200000, score: 78, band: 'GOOD', confidence: 'HIGH' },
+        { name: 'Arjun', monthly_income_paise: 4000000, score: 52, band: 'FAIR', confidence: 'MEDIUM' },
+        { name: 'Meena', monthly_income_paise: 900000, score: 34, band: 'BUILDING', confidence: 'LOW' },
+      ],
+    }
+  }
+  if (method === 'GET' && p === '/lender/applicants') {
+    return [
+      { applicant_ref: 'APP-7F3A', score: 81, band: 'STRONG', confidence: 'HIGH', reasons: ['FEW_SAVINGS_WEEKS', 'BILLS_LATE'], safe_weekly_paise: 31000, requested_paise: 1000000, eligible: 'ELIGIBLE' },
+      { applicant_ref: 'APP-2C91', score: 78, band: 'GOOD', confidence: 'HIGH', reasons: ['FEW_SURPLUS_WEEKS'], safe_weekly_paise: 18000, requested_paise: 800000, eligible: 'ELIGIBLE' },
+      { applicant_ref: 'APP-90B4', score: 52, band: 'FAIR', confidence: 'MEDIUM', reasons: ['INCOME_UNEVEN', 'NO_SAVINGS_SEEN'], safe_weekly_paise: 9000, requested_paise: 1000000, eligible: 'NEEDS_REVIEW' },
+      { applicant_ref: 'APP-11DE', score: 34, band: 'BUILDING', confidence: 'LOW', reasons: ['THIN_FILE'], safe_weekly_paise: 4000, requested_paise: 500000, eligible: 'OUTSIDE' },
+    ]
+  }
+  if (method === 'PUT' && p === '/lender/rules') return { rules: b, eligible_before: 2, eligible_after: b.min_band === 'BUILDING' ? 4 : b.min_band === 'FAIR' ? 3 : 2 }
   return fail('NOT_FOUND', `No mock for ${method} ${path}`)
 }

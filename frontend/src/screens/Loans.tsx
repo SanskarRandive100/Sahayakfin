@@ -7,6 +7,7 @@ import Chip from '../components/Chip'
 import ConfirmSheet from '../components/ConfirmSheet'
 import ErrorBanner from '../components/ErrorBanner'
 import OfferCard from '../components/OfferCard'
+import InsuranceCard from '../components/InsuranceCard'
 import Skeleton from '../components/Skeleton'
 import TopBar from '../components/TopBar'
 import { api } from '../api/endpoints'
@@ -82,6 +83,12 @@ export default function Loans() {
             {data.loans.map((o) => (
               <OfferCard key={o.id} offer={o} weekday={weekday} onChoose={() => setPick(o)} />
             ))}
+            {data.insurance.length > 0 && (
+              <section className="space-y-2">
+                <h2 className="text-lg font-semibold">{t('insurance.title')}</h2>
+                {data.insurance.map((i) => <InsuranceCard key={i.id} item={i} />)}
+              </section>
+            )}
           </>
         )}
       </div>

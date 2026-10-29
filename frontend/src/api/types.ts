@@ -214,3 +214,59 @@ export interface StressResult {
 export interface ApiError {
   error: { code: string; message: string }
 }
+
+export interface Reminder {
+  id: string
+  repayment_id: string
+  send_at: string
+  code: string
+  params: { amount_paise: number; due_date: string; lender: string }
+  sent: boolean
+}
+
+export interface Nudge { code: string; params: Record<string, number | string> }
+
+export interface Wellness {
+  weeks: { week_start: string; income_paise: number; expense_paise: number; by_category: Record<string, number> }[]
+  avg4_by_category: Record<string, number>
+  nudges: Nudge[]
+}
+
+export interface Goal {
+  id: string
+  name: string
+  target_paise: number
+  weekly_target_paise: number
+  saved_paise: number
+  weeks_left: number
+}
+
+export interface AuditRow {
+  ts: string
+  actor_role: string
+  actor_name: string
+  action: string
+  purpose: string
+}
+
+export interface LenderInfo { id: string; name: string; min_band: Band }
+
+export interface Share { id: string; lender_id: string; created_at: string }
+
+export interface FairnessReport {
+  tests: { code: string; passed: boolean; detail: string }[]
+  personas: { name: string; monthly_income_paise: number; score: number; band: Band; confidence: Confidence }[]
+}
+
+export interface Applicant {
+  applicant_ref: string
+  score: number
+  band: Band
+  confidence: Confidence
+  reasons: string[]
+  safe_weekly_paise: number
+  requested_paise: number
+  eligible: Eligible
+}
+
+export interface LenderRules { min_band: Band; max_amount_paise: number; min_weeks: number }

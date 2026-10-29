@@ -1,7 +1,8 @@
 import { request } from './client'
 import type {
-  Affordability, Consent, Lang, Loan, Me, OffersResponse,
-  Repayment, ScoreResult, StatementResult, StressResult, User, WeekGroup,
+  Affordability, Applicant, AuditRow, Category, Consent, FairnessReport, Goal, Lang, LenderInfo,
+  LenderRules, Loan, Me, OffersResponse, Reminder, Repayment, ScoreResult, Share, StatementResult,
+  StressResult, TxnOut, User, WeekGroup, Wellness,
 } from './types'
 
 type OtpRequest = { request_id: string; demo_otp: string }
@@ -64,4 +65,28 @@ export const api = {
   getLoans: () => request<Loan[]>('GET', '/loans'),
 
   payRepayment: (id: string) => request<Repayment>('POST', `/repayments/${id}/pay`, {}),
+
+  patchTxn: (id: string, category: Category) =>
+    request<{ txn: TxnOut; score: ScoreResult }>('PATCH', `/transactions/${id}`, { category }),
+
+  getReminders: () => request<Reminder[]>('GET', '/reminders'),
+  advanceClock: (days: number) => request<{ now: string }>('POST', '/demo/advance-clock', { days }),
+  demoReset: () => request<{ ok: boolean }>('POST', '/demo/reset', {}),
+
+  getWellness: (weeks = 4) => request<Wellness>('GET', `/wellness/weekly?weeks=${weeks}`),
+  getGoals: () => request<Goal[]>('GET', '/goals'),
+  createGoal: (name: string, target_paise: number) => request<Goal>('POST', '/goals', { name, target_paise }),
+
+  getAudit: () => request<AuditRow[]>('GET', '/audit'),
+  getConsents: () => request<Consent[]>('GET', '/consents'),
+  revokeConsent: (id: string) =>
+    request<{ consent: Consent; deleted: { transactions: number; sources: number } }>('POST', `/consents/${id}/revoke`, {}),
+  getLenders: () => request<LenderInfo[]>('GET', '/lenders'),
+  share: (lender_id: string) => request<Share>('POST', '/shares', { lender_id }),
+  unshare: (id: string) => request<unknown>('DELETE', `/shares/${id}`),
+
+  getFairness: () => request<FairnessReport>('GET', '/fairness/report'),
+  getApplicants: () => request<Applicant[]>('GET', '/lender/applicants'),
+  putRules: (rules: LenderRules) =>
+    request<{ rules: LenderRules; eligible_before: number; eligible_after: number }>('PUT', '/lender/rules', rules),
 }
