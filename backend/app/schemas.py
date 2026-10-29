@@ -54,8 +54,8 @@ class StressIn(BaseModel):
     @field_validator("shock")
     @classmethod
     def _shock(cls, v: float) -> float:
-        if round(v, 2) not in (0.1, 0.2, 0.3):
-            raise ValueError("shock must be 0.1, 0.2 or 0.3")
+        if round(v, 2) not in (0.0, 0.1, 0.2, 0.3):  # 0 = "no income drop", the risk graph's baseline
+            raise ValueError("shock must be 0, 0.1, 0.2 or 0.3")
         return round(v, 2)
 
 

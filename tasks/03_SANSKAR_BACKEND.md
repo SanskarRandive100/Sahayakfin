@@ -174,7 +174,7 @@ Errors are always {"error":{"code","message"}}. Money in paise. Never write uplo
   2. Lenders and products from the DB as dicts.
   3. `finance.match_offers(...)`.
   4. Persist each loan offer (status OFFERED) with an id.
-  5. Return `{requested_paise, safe_amount_paise: loan_max_paise["26"], loans, insurance}`.
+  5. Return `{requested_paise, safe_amount_paise: loan_max_paise["26"], rbi_cap_amount_paise: finance.loan_max(rbi_cap_weekly_paise, 24, 26), loans, insurance}`. `rbi_cap_amount_paise` feeds the website's safe-zone meter.
   - `requested_paise` defaults to 1,000,000. Insurance products are returned to everyone with `demo: true` (PMSBY: `is_govt_scheme: true`).
 - `POST /offers/{id}/accept` `{amount_paise, weeks}`:
   - The offer must be the user's, OFFERED, and ELIGIBLE or NEEDS_REVIEW; else 400 `OFFER_NOT_ACCEPTABLE`.
@@ -258,7 +258,7 @@ Do the Review 1 fixes first, then 2.1 → 2.8 in order, with tests for each, tic
 
 ### 2.4 Affordability stress + offers polish
 
-- `POST /affordability/stress` → `scoring.stress_test`; `shock` ∈ {0.1, 0.2, 0.3}, else `VALIDATION_ERROR`.
+- `POST /affordability/stress` → `scoring.stress_test`; `shock` ∈ {0, 0.1, 0.2, 0.3}, else `VALIDATION_ERROR`. Pass Rajat's `series` through untouched (the website risk graph needs it).
 - `/offers`: include `fits_safe_instalment` and the `reason` from match_offers. Requested amount must be > 0 and ≤ ₹1,00,000.
 - **Demo-proof:** if the user has no score yet, `/offers` → 400 `NO_SCORE`. The frontend shows "Upload a statement first".
 

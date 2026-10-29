@@ -215,8 +215,8 @@ except where marked "public".
 | GET | `/scores/latest` | user | Latest score (`consent_revoked: true` after revoke) |
 | POST | `/scores/what-if` | user | Effect of one tip |
 | GET | `/affordability` | user | Safe weekly instalment, loan max per tenure |
-| POST | `/affordability/stress` | user | Income-drop test (10/20/30%) |
-| GET | `/offers` | user | Matched loan offers with KFS + sachet insurance |
+| POST | `/affordability/stress` | user | Income-drop test (0/10/20/30%, 0 = baseline of the risk graph) |
+| GET | `/offers` | user | Matched loan offers with KFS + sachet insurance + RBI-cap amount for the safe-zone meter |
 | POST | `/offers/{id}/accept` | user | Accept → loan + weekly schedule |
 | GET | `/loans` | user | Loans with live repayment status |
 | POST | `/repayments/{id}/pay` | user | Pay one instalment |

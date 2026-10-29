@@ -77,8 +77,11 @@ def get_offers(requested_paise: int = Query(1_000_000), user: User = Depends(cur
     insurance = [insurance_out(p) for p in db.query(Product).filter(Product.kind == "INSURANCE")
                  .order_by(Product.is_govt_scheme.desc(), Product.name)]
     loan_max = afford.get("loan_max_paise") or {}
+    # RBI's microfinance cap as a 26-week loan amount at 24%: the upper edge of the website's safe-zone meter.
+    rbi_cap_amount = finance.loan_max(max(0, int(afford.get("rbi_cap_weekly_paise", 0))), 24, 26)
     return {"requested_paise": requested_paise,
             "safe_amount_paise": loan_max.get("26", loan_max.get(26, 0)),
+            "rbi_cap_amount_paise": int(rbi_cap_amount),
             "loans": loans, "insurance": insurance}
 
 

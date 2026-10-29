@@ -341,8 +341,8 @@ All routes need a JWT except `/auth/*`, `/health` and `/demo/samples/*`. Roles a
 | GET `/scores/latest` | | ScoreResult + `{"id","created_at"}` |
 | POST `/scores/what-if` | `{"tip_code"}` | `{"score_before","score_after","points"}` |
 | GET `/affordability` | | `{"safe_weekly_paise","p25_weekly_surplus_paise","median_weekly_surplus_paise","median_weekly_income_paise","existing_weekly_debt_paise","rbi_cap_weekly_paise","payout_weekday","loan_max_paise":{"13":..,"26":..,"52":..}}` (at 24%) |
-| POST `/affordability/stress` | `{"shock":0.1\|0.2\|0.3,"weekly_instalment_paise"}` | `{"weeks_covered","weeks_total","light","buffer_covers","shortfall_paise","advice"}` |
-| GET `/offers` | `?requested_paise=1000000` | `{"requested_paise","safe_amount_paise","loans":[Offer],"insurance":[Insurance]}` |
+| POST `/affordability/stress` | `{"shock":0\|0.1\|0.2\|0.3,"weekly_instalment_paise"}` | `{"weeks_covered","weeks_total","light","buffer_covers","shortfall_paise","advice"}` + any extra fields from `scoring.stress_test` (e.g. `series`) passed through |
+| GET `/offers` | `?requested_paise=1000000` | `{"requested_paise","safe_amount_paise","rbi_cap_amount_paise","loans":[Offer],"insurance":[Insurance]}` (`rbi_cap_amount_paise` = `finance.loan_max(rbi_cap_weekly_paise, 24, 26)`, for the safe-zone meter) |
 | POST `/offers/{id}/accept` | `{"amount_paise","weeks"}` | Loan with `schedule` |
 | GET `/loans` | | `[Loan]` |
 | POST `/repayments/{id}/pay` | | Repayment |

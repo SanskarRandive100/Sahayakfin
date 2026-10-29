@@ -13,6 +13,8 @@ def test_offers_shape(client):
     assert r.status_code == 200, r.text
     body = r.json()
     assert body["requested_paise"] == 1000000 and "safe_amount_paise" in body
+    # Safe-zone meter: our safe amount never exceeds RBI's 50%-of-income cap.
+    assert body["rbi_cap_amount_paise"] >= body["safe_amount_paise"]
     assert all("id" in o and "kfs" in o for o in body["loans"])
     assert len(body["insurance"]) == 3 and all(i["demo"] for i in body["insurance"])
     assert any(i["is_govt_scheme"] for i in body["insurance"])

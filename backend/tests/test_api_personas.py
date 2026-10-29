@@ -35,6 +35,22 @@ def test_ravi_demo_numbers(client):
 
     offers = client.get(f"{API}/offers?requested_paise=1000000", headers=h).json()
     assert offers["safe_amount_paise"] == 720_000
+    from app import finance
+    assert offers["rbi_cap_amount_paise"] == finance.loan_max(afford["rbi_cap_weekly_paise"], 24, 26)
+    assert offers["rbi_cap_amount_paise"] > offers["safe_amount_paise"]
+
+    # Stress: shock 0 is the baseline of the risk graph; whatever Rajat returns (e.g. `series`) passes through.
+    base = client.post(f"{API}/affordability/stress", headers=h, json={"shock": 0, "weekly_instalment_paise": 29451})
+    assert base.status_code == 200, base.text
+    from app import scoring
+    from app.services.txn_store import load_txns
+    with SessionLocal() as db:
+        user = db.query(User).filter(User.phone_hash == phone_hash(RAVI)).one()
+        expected = scoring.stress_test(load_txns(db, user.id), 0.0, 29451)
+    assert set(base.json()) == set(expected)
+    assert base.json()["weeks_covered"] >= client.post(
+        f"{API}/affordability/stress", headers=h, json={"shock": 0.3, "weekly_instalment_paise": 29451}
+    ).json()["weeks_covered"]
     by_name = {o["lender"]["name"]: o for o in offers["loans"]}
     assert by_name["MFI Beta"]["eligible"] == "ELIGIBLE" and by_name["MFI Alpha"]["eligible"] == "ELIGIBLE"
     assert by_name["MFI Gamma"]["eligible"] == "OUTSIDE" and by_name["MFI Gamma"]["reason"] == "BELOW_MIN_AMOUNT"
