@@ -1,0 +1,10 @@
+#!/bin/sh
+# Block secrets and junk from being committed.
+BAD=$(git diff --cached --name-only | grep -E '(^|/)\.env$|(^|/)node_modules/|\.db$|(^|/)\.venv/')
+if [ -n "$BAD" ]; then
+  echo "pre-commit: refusing to commit these files:"
+  echo "$BAD"
+  echo "Unstage them with: git restore --staged <file>"
+  exit 1
+fi
+exit 0

@@ -1,0 +1,21 @@
+# secrets
+.env
+.env.*
+!.env.example
+# python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.db
+# node
+node_modules/
+frontend/dist/
+# editors / os
+.DS_Store
+.vscode/
+.idea/
+*.log
+# claude code personal settings
+.claude/settings.local.json
+!frontend/.env.development

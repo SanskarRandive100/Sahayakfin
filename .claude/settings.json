@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
+  "includeCoAuthoredBy": false,
+  "permissions": {
+    "defaultMode": "acceptEdits",
+    "allow": [
+      "Bash(npm install*)",
+      "Bash(npm run *)",
+      "Bash(npm test*)",
+      "Bash(npx tsc*)",
+      "Bash(npx vite*)",
+      "Bash(npx tailwindcss*)",
+      "Bash(python -m pytest*)",
+      "Bash(python3 -m pytest*)",
+      "Bash(pytest*)",
+      "Bash(python -m venv*)",
+      "Bash(python3 -m venv*)",
+      "Bash(pip install*)",
+      "Bash(python -m pip install*)",
+      "Bash(python data/*)",
+      "Bash(python3 data/*)",
+      "Bash(uvicorn *)",
+      "Bash(curl -s http://localhost*)",
+      "Bash(curl http://localhost*)",
+      "Bash(git status*)",
+      "Bash(git diff*)",
+      "Bash(git log*)",
+      "Bash(git show*)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git fetch*)",
+      "Bash(git pull --rebase*)",
+      "Bash(git switch *)",
+      "Bash(git checkout -b night/*)",
+      "Bash(git push -u origin night/*)",
+      "Bash(git push origin night/*)",
+      "Bash(git config user.name*)",
+      "Bash(git config user.email*)",
+      "Bash(git config core.hooksPath*)",
+      "Bash(bash scripts/sync.sh*)",
+      "Bash(docker compose *)",
+      "Bash(ls*)",
+      "Bash(cat *)",
+      "Bash(mkdir *)"
+    ],
+    "deny": [
+      "Bash(git push --force*)",
+      "Bash(git push -f*)",
+      "Bash(git push origin --force*)",
+      "Bash(git reset --hard*)",
+      "Bash(git clean -fd*)",
+      "Bash(git config --global*)"
+    ]
+  }
+}
