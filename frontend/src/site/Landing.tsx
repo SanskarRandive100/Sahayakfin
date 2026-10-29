@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import {
   ArrowRight, Banknote, Building2, Eye, EyeOff, KeyRound, Landmark, PiggyBank, Receipt, ShieldCheck, Trash2, TrendingUp, Wallet,
@@ -99,14 +99,14 @@ export default function Landing() {
             {[
               { icon: Landmark, k: 'one' }, { icon: ShieldCheck, k: 'two' }, { icon: Building2, k: 'three' },
             ].map((s, i) => (
-              <>
-                <Reveal key={s.k} delay={i * 0.06} className="bg-white border border-line rounded-card shadow-card p-6 text-center h-full">
+              <Fragment key={s.k}>
+                <Reveal delay={i * 0.06} className="bg-white border border-line rounded-card shadow-card p-6 text-center h-full">
                   <div className="w-12 h-12 mx-auto rounded-full bg-brand-100 text-brand flex items-center justify-center"><s.icon className="w-6 h-6" /></div>
                   <h3 className="text-lg font-semibold mt-4">{t(`site.how.${s.k}.t`)}</h3>
                   <p className="text-sm text-ink-2 mt-1">{t(`site.how.${s.k}.d`)}</p>
                 </Reveal>
-                {i < 2 && <div key={`b${i}`} className="w-full md:w-16"><div className="hidden md:block"><Beam /></div><div className="md:hidden"><Beam vertical /></div></div>}
-              </>
+                {i < 2 && <div className="w-full md:w-16"><div className="hidden md:block"><Beam /></div><div className="md:hidden"><Beam vertical /></div></div>}
+              </Fragment>
             ))}
           </div>
         </div>
