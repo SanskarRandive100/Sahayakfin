@@ -123,14 +123,18 @@ def stretch_options(score: dict, afford: dict, txns, lenders: list[dict], produc
         for weeks in [w for w in (26, 52) if w in tenures] or [default_tenure(tenures)]:
             card = finance.kfs(requested_paise, p["rate_pct"], p["fee_pct"], weeks)
             inst = int(card["instalment_paise"])
+            if inst <= safe:
+                continue  # fits the safe weekly payment at this tenure: not a stretch
             st = scoring.stress_test(txns, 0, inst)
+            # above the safe weekly payment is never "safe", even if income covers most weeks
+            light = "AMBER" if st["light"] == "GREEN" else st["light"]
             out.append({"lender": {"id": lender["id"], "name": lender["name"]}, "product_id": p["id"],
                         "amount_paise": requested_paise, "weeks": weeks, "frequency": "WEEKLY",
                         "rate_pct": p["rate_pct"], "fee_pct": p["fee_pct"], "kfs": card,
                         "eligible": "NEEDS_APPROVAL",
                         "risk": {"weekly_over_safe_paise": max(0, inst - safe),
                                  "weeks_covered": st["weeks_covered"], "weeks_total": st["weeks_total"],
-                                 "light": st["light"]}})
+                                 "light": light}})
     out.sort(key=lambda o: (o["weeks"], o["kfs"]["instalment_paise"]))
     return out
 
