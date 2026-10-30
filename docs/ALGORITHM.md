@@ -284,3 +284,30 @@ credits can increase balance-growth savings, and the fixed savings floor can
 change scores when all money is scaled. KFS prose also conflicts with its golden
 vector by one paisa; the current schedule exactly matches the golden-vector total.
 See `RAJAT_VERIFICATION_REPORT.md` and `data/verification_results.json`.
+
+
+## Known limitations and next fixes (v2.1)
+
+1. **Ignored credits can count as savings through balance growth.** The synthetic
+   `balance_rows(5000, 5000)` ledger scores 62. Adding one INR 1000 ignored loan
+   disbursal raises it to 65 while counted income stays unchanged. The next agreed
+   fix is to measure savings balance growth net of signed ignored movements.
+2. **The fixed INR 20 savings floor breaks scale invariance for very small incomes.**
+   A synthetic INR 500/week ledger scores 64; doubling every amount and balance
+   produces 97. The proposed fix is a scale-neutral balance-growth threshold,
+   keeping INR 20 only as tip copy. This requires an agreed contract/version update.
+3. **KFS prose and the exact total differ by one paisa.** In the INR 7500 golden
+   example, rounded instalment times tenure is 797628 paise, while the exact-EMI
+   total is 797627. The current schedule policy is that the last instalment absorbs
+   rounding so schedule rows equal the disclosed total exactly.
+
+### Judge Q&A: Did you find weaknesses?
+
+We stress-tested our own fairness claims and found two edge cases: ignored credits
+can affect balance-based savings, and the fixed savings floor can break scaling for
+small amounts. We documented reproducible inputs and the proposed fixes in
+`RAJAT_VERIFICATION_REPORT.md`; the current four personas and all eight supplied
+fairness checks pass. These are synthetic checks, not proof of real-world fairness.
+
+This section documents the next fixes only; no engine code, fixtures, weights or
+published scores were changed for final-demo stabilization.
