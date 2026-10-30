@@ -2,6 +2,6 @@
 # Strip AI attribution from every commit message so commits show only the human author.
 MSG_FILE="$1"
 TMP_FILE="$MSG_FILE.sahayak.tmp"
-grep -v -i -E '^[[:space:]]*Co-Authored-By:.*(claude|anthropic)|Generated with \[?Claude Code|^[[:space:]]*Claude-Session:|🤖' "$MSG_FILE" > "$TMP_FILE"
+grep -v -i -E '^[[:space:]]*Co-Authored-By:.*(claude|anthropic|copilot)|Generated with \[?Claude Code|^[[:space:]]*Claude-Session:|🤖' "$MSG_FILE" > "$TMP_FILE"
 mv "$TMP_FILE" "$MSG_FILE"
 exit 0
