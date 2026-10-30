@@ -20,7 +20,7 @@ Startup creates the tables and seeds lenders, products, insurance and the demo u
 Sunita, Arjun and Meena are also loaded through the AA pipeline and shared with all 3 lenders (`SEED_DEMO_DATA=true`).
 Ravi stays empty for the live demo.
 
-- Reset the demo database: `python -m app.seed --reset` (drop all, recreate, seed with persona data).
+- Destructive reset: `python -m app.seed --reset` drops every table. Use only on a confirmed expendable local demo database; never shared/staging/production.
 - Tests: `python -m pytest -q`
 - PostgreSQL instead of SQLite:
   ```bash
@@ -46,3 +46,90 @@ Locked PDF passwords: first 4 letters of the name in capitals + `0101`, e.g. `RA
 ## Sample data
 
 `python data/generate_personas.py` writes CSV, PDF, locked PDF and AA JSON files to `data/samples/`.
+
+
+## Windows PowerShell: PostgreSQL live demo
+
+The template defaults to **SQLite**. Starting Docker alone does not select PostgreSQL.
+Use Docker Desktop with Linux containers. From the repository root:
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r backend/requirements.txt
+if (-not (Test-Path .env)) { Copy-Item .env.example .env }
+docker compose up -d db
+docker compose ps
+```
+
+In root `.env`, replace the SQLite URL with:
+
+```env
+DATABASE_URL=postgresql+psycopg://sahayak:sahayak@localhost:5432/sahayakfin
+DEMO_MODE=true
+SEED_DEMO_DATA=true
+FRONTEND_ORIGIN=http://localhost:5173
+SAMPLES_DIR=../data/samples
+```
+
+For a new empty database, generate local secrets and put the results in `.env`:
+
+```powershell
+.\.venv\Scripts\python.exe -c "import base64,secrets; print('DATA_KEY='+base64.b64encode(secrets.token_bytes(32)).decode()); print('JWT_SECRET='+secrets.token_urlsafe(48)); print('PAYEE_HMAC_KEY='+secrets.token_urlsafe(48))"
+```
+
+Keep `.env` uncommitted. Existing encrypted data requires its original DATA_KEY; changing it makes those rows unreadable.
+Compose credentials and template secrets are for synthetic local demos only. On Windows, use `127.0.0.1` instead of `localhost` if IPv6 resolution delays connections. A deployed system needs managed secrets,
+strong database credentials, TLS, migrations, and a real authentication service. Demo OTP, AA fetch and payments are simulations.
+
+Samples are already tracked. Do not regenerate customized fixtures; inspect `data/generate_personas.py` before running it.
+Start the backend and confirm the effective dialect without printing its connection URL:
+
+```powershell
+Set-Location backend
+..\.venv\Scripts\python.exe -c "from app.db import engine; print(engine.dialect.name)"
+..\.venv\Scripts\python.exe -m uvicorn app.main:app --port 8000
+# In another terminal:
+Invoke-RestMethod http://localhost:8000/api/v1/health
+```
+
+The dialect must print `postgresql`; health must return `ok: true`. Interactive docs: http://localhost:8000/docs.
+Startup creates tables and seeds the other three personas; Ravi stays empty. A missing samples directory logs a warning.
+The Docker volume retains rows across backend restarts.
+
+Mihir owns frontend configuration. For the live demo he must create the gitignored
+`frontend/.env.development.local` containing `VITE_USE_MOCKS=false`, restart Vite, then run `npm ci`,
+`npm run build`, `npm run check-i18n`, and `npm run dev`. Verify browser network requests use `/api/v1`
+and return backend JSON. The checked-in frontend development setting enables mocks.
+
+Demo sequence: Ravi login / OTP 123456 ? consent ? locked PDF / RAVI0101 ? score ? stress ? offers ?
+accept ? 26 repayments ? advance clock / simulated payment ? share with Alpha ? lender view ? revoke.
+Revoke deletes sources and transactions and ends lender shares. The user's historical scores and loans remain
+as lending records; this prototype does not implement a production retention schedule.
+
+### Isolated database tests
+
+Tests ignore the application DATABASE_URL and default to temporary SQLite. To test PostgreSQL, explicitly provide
+TEST_DATABASE_URL naming a disposable database ending in `_test` or starting with `test_` / `sahayakfin_test_`.
+The test harness creates a unique schema, removes it afterward and never uses public demo tables.
+For a local Compose database, first create a separate test database:
+
+```powershell
+docker compose exec db createdb -U sahayak sahayakfin_test_sanskar
+Set-Location backend
+..\.venv\Scripts\python.exe -m pytest -q
+$env:TEST_DATABASE_URL = 'postgresql+psycopg://sahayak:sahayak@localhost:5432/sahayakfin_test_sanskar'
+..\.venv\Scripts\python.exe -m pytest -q
+Remove-Item Env:TEST_DATABASE_URL
+```
+
+If that test database already exists, reuse it; each test session has its own schema. Do not supply a shared or
+production database, even with a test-like name.
+
+### Troubleshooting and integration
+
+- Port 5432 occupied: set `POSTGRES_PORT=55432` in root `.env`, update DATABASE_URL to port 55432 and restart Compose.
+- Port 8000 occupied: stop the old backend; Vite's existing proxy expects 8000.
+- Port 5173 occupied: stop the old frontend or agree a new origin and update FRONTEND_ORIGIN.
+- `NO_SCORE`: give consent and upload or fetch a statement first. Mocks do not populate backend state.
+- Never run `scripts/sync.sh`: it pushes to main. The integrator must fix that shared script separately.
+- Work branches target `integration/full-demo`; do not push directly to main or the integration branch.

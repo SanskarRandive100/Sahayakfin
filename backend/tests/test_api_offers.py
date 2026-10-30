@@ -71,3 +71,62 @@ def test_other_users_offer_is_404(client):
     o = client.get(f"{API}/offers", headers=h1).json()["loans"][0]
     r = client.post(f"{API}/offers/{o['id']}/accept", headers=h2, json={"amount_paise": 500000, "weeks": 26})
     assert r.status_code == 404
+
+
+
+def test_refresh_reuses_unchanged_offers(client):
+    from app.db import SessionLocal
+    from app.models import Offer
+    h, _ = onboard(client)
+    first = client.get(f"{API}/offers", headers=h).json()["loans"]
+    second = client.get(f"{API}/offers", headers=h).json()["loans"]
+    assert [o["id"] for o in first] == [o["id"] for o in second]
+    with SessionLocal() as db:
+        owner = db.get(Offer, first[0]["id"]).user_id
+        assert db.query(Offer).filter(Offer.user_id == owner).count() == len(first)
+
+
+def test_accept_rechecks_current_lender_rules(client):
+    from app.db import SessionLocal
+    from app.models import Lender, Offer, Product
+    h, _ = onboard(client)
+    o = acceptable(client.get(f"{API}/offers", headers=h).json())[0]
+    with SessionLocal() as db:
+        lender = db.get(Lender, db.get(Product, db.get(Offer, o["id"]).product_id).lender_id)
+        original_weeks = lender.min_weeks
+        lender.min_weeks = 100
+        db.commit()
+        lender_id = lender.id
+    try:
+        response = client.post(f"{API}/offers/{o['id']}/accept", headers=h,
+                               json={"amount_paise": o["amount_paise"], "weeks": o["weeks"]})
+        assert response.status_code == 400
+        assert response.json()["error"]["code"] == "OFFER_NOT_ACCEPTABLE"
+        assert client.get(f"{API}/loans", headers=h).json() == []
+    finally:
+        with SessionLocal() as db:
+            db.get(Lender, lender_id).min_weeks = original_weeks
+            db.commit()
+
+
+
+def test_accept_smaller_amount_within_current_limits(client):
+    h, _ = onboard(client)
+    o = acceptable(client.get(f"{API}/offers", headers=h).json())[0]
+    amount = o["amount_paise"] - 10000
+    response = client.post(f"{API}/offers/{o['id']}/accept", headers=h,
+                           json={"amount_paise": amount, "weeks": o["weeks"]})
+    assert response.status_code == 200, response.text
+    assert response.json()["principal_paise"] == amount
+    assert len(response.json()["schedule"]) == o["weeks"]
+
+
+def test_revoked_consent_blocks_old_offer_acceptance(client):
+    h, cid = onboard(client)
+    o = acceptable(client.get(f"{API}/offers", headers=h).json())[0]
+    client.post(f"{API}/consents/{cid}/revoke", headers=h)
+    response = client.post(f"{API}/offers/{o['id']}/accept", headers=h,
+                           json={"amount_paise": o["amount_paise"], "weeks": o["weeks"]})
+    assert response.status_code == 400
+    assert response.json()["error"]["code"] == "NO_SCORE"
+    assert client.get(f"{API}/loans", headers=h).json() == []

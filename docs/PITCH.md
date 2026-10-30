@@ -1,8 +1,7 @@
 # SahayakFin pitch (8 slides + 5-minute demo)
 
 Numbers come from the real engine on `data/samples` (Rajat's table in `HANDOFF.md`). Re-check them after any
-change to the generator or engine: `python data/generate_personas.py --check`. Anything still in `{{braces}}` must
-be checked against its source before it goes on a slide.
+change to the generator or engine. The 30 October 2026 verification is recorded in `SANSKAR_INTEGRATION_REPORT.md`; browser verification remains pending.
 
 **One line:** "Your CIBIL score is blank, but your UPI history isn't. SahayakFin reads it fairly, explains every
 point, and only lends you what you can repay in a bad week."
@@ -11,10 +10,8 @@ point, and only lends you what you can repay in a bad week."
 
 ## Slide 1: The problem
 
-- India had about **7.7 million gig workers in 2020–21, projected to reach 23.5 million by 2029–30**
-  (NITI Aayog, *India's Booming Gig and Platform Economy*, 2022). {{verify figures against the report before the slide}}
 - They are paid digitally every week, but have no salary slip, no ITR and often no credit history.
-- When the bike breaks down they turn to informal lenders at {{informal rate, cite a source}}.
+- This synthetic demonstration explores access to small loans when income is irregular; no market-size or informal-rate statistic has been verified for these slides.
 
 **Speaker notes:** "Banks lend on documents gig workers don't have. But every rupee they earn already leaves a
 digital trail. The data exists; nobody reads it fairly."
@@ -30,7 +27,7 @@ digital trail. The data exists; nobody reads it fairly."
 ## Slide 3: The solution in one flow
 
 Consent → upload statement (or Account Aggregator) → **Read → Mask → Categorise → Score** in about 3 seconds →
-explainable score → safe loan amount → weekly instalments on payday → reminders → revoke deletes everything.
+explainable score, safe loan amount, weekly instalments, simulated reminders. Revocation deletes source transactions and ends sharing; lending records remain.
 
 **Speaker notes:** "One decision per screen, in Hindi, Marathi or English, with rupees instead of percentages."
 
@@ -63,12 +60,11 @@ earning three times more, and we test that automatically."
 
 - AA-style consent: purpose, date range and data life on one screen. **Revoke deletes the data on screen**
   (Ravi: **284 transactions deleted**).
-- The raw file is never stored (only its SHA-256). The PDF password is used once and never logged.
+- Application code retains the file hash rather than the statement file. Framework multipart handling may use temporary disk storage; strict memory-only ingress is not yet verified. The PDF password is not logged.
 - Narrations encrypted with AES-256-GCM; account numbers, phones and UPI ids masked; names become HMAC tokens.
 - Lenders see a score summary under an `APP-XXXX` reference: no transactions, names or phones. Every lender view
   appears in the user's "Who saw my data" list.
-- Aligned with DPDP Act 2023 principles: notice, purpose limitation, minimisation, storage limitation, erasure,
-  security safeguards (mapping in `docs/ARCHITECTURE.md` §5).
+- Engineering privacy controls are mapped in the architecture document. Legal compliance has not been assessed.
 
 **Speaker notes:** Show the audit entry "MFI Alpha viewed your score summary" live.
 
@@ -77,7 +73,7 @@ earning three times more, and we test that automatically."
 - React + Vite (phone frame, en/hi/mr) → FastAPI `/api/v1` → pure, unit-tested `ingest` / `scoring` / `finance`
   package → PostgreSQL. Mock AA with FIU / AA / FIP roles.
 - 30+ REST endpoints, 14 tables, JWT + roles, insert-only audit log.
-- **220 automated tests** green on SQLite and PostgreSQL: golden vectors, API flow, security (IDOR, JWT
+- **243 automated tests** green on SQLite and PostgreSQL: golden vectors, API flow, security (IDOR, JWT
   tampering, malicious PDFs, consent expiry). Re-run `cd backend && python -m pytest -q` before the pitch and update the count.
 - Diagram: the component chart from `docs/ARCHITECTURE.md` §1.
 
@@ -99,7 +95,7 @@ earning three times more, and we test that automatically."
 
 ## 5-minute demo script (exact clicks)
 
-**Before:** `cd backend && python -m app.seed --reset`, start the backend and the frontend, log out of everything,
+**Before:** confirm the configured database is an expendable local demo database before any `python -m app.seed --reset`. Start backend and frontend with mocks disabled, log out of everything,
 and keep `data/samples/ravi.locked.pdf` on the desktop. Second browser window: `/fairness`, then `/lender/login`.
 
 | Time | Click | Say / point at |
