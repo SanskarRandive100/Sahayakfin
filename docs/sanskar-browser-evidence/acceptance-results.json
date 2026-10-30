@@ -1,0 +1,7605 @@
+{
+  "baseline": "8ace13ea634e46d778fd788ca593645721a931cd",
+  "checks": [
+    {
+      "name": "rehearsal_1_share_reload",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "goal_saved",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "money_12_weeks_requested",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "lender_rule_update",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "fairness_annotation_visible",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "fairness_provisional",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "landing_uses_85",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "landing_anchor_#how",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "landing_anchor_#privacy",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "landing_anchor_#lenders",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "landing_fairness_cta",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "revoke_284",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "share_disabled_after_revoke",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "dashboard_data_deleted",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "loans_no_score_after_revoke",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "lender_access_removed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "rehearsal_2_share_reload",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "kill_test_banner",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "global_health_banner",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "kill_test_no_fallback_scores",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "backend_restarted",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "matrix": [
+    {
+      "route": "/",
+      "viewport": "1440x1000",
+      "lang": "en",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/fairness/report",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/fairness/report",
+          "status": 200
+        }
+      ],
+      "width": 1440,
+      "scrollWidth": 1440,
+      "small": [],
+      "screenshot": "final-1440-en-landing.png"
+    },
+    {
+      "route": "/app/dashboard",
+      "viewport": "1440x1000",
+      "lang": "en",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/scores/latest",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/loans",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/scores/latest",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/offers?requested_paise=1000000",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/loans",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/offers?requested_paise=1000000",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/affordability/stress",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/affordability/stress",
+          "status": 200
+        }
+      ],
+      "width": 1440,
+      "scrollWidth": 1440,
+      "small": [
+        {
+          "text": "Read aloud",
+          "width": 123,
+          "height": 40
+        },
+        {
+          "text": "0%",
+          "width": 56,
+          "height": 40
+        },
+        {
+          "text": "−10%",
+          "width": 63,
+          "height": 40
+        },
+        {
+          "text": "−20%",
+          "width": 66,
+          "height": 40
+        },
+        {
+          "text": "−30%",
+          "width": 66,
+          "height": 40
+        },
+        {
+          "text": "View my loan",
+          "width": 88,
+          "height": 20
+        }
+      ],
+      "screenshot": "final-1440-en-app-dashboard.png"
+    },
+    {
+      "route": "/app/transactions",
+      "viewport": "1440x1000",
+      "lang": "en",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/transactions?weeks=12",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/transactions?weeks=12",
+          "status": 200
+        }
+      ],
+      "width": 1440,
+      "scrollWidth": 1440,
+      "small": [],
+      "screenshot": "final-1440-en-app-transactions.png"
+    },
+    {
+      "route": "/app/loans",
+      "viewport": "1440x1000",
+      "lang": "en",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/affordability",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/offers?requested_paise=1000000",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/affordability",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/offers?requested_paise=1000000",
+          "status": 200
+        }
+      ],
+      "width": 1440,
+      "scrollWidth": 1440,
+      "small": [
+        {
+          "text": "₹5,000",
+          "width": 69,
+          "height": 32
+        },
+        {
+          "text": "₹10,000",
+          "width": 75,
+          "height": 32
+        },
+        {
+          "text": "₹15,000",
+          "width": 74,
+          "height": 32
+        }
+      ],
+      "screenshot": "final-1440-en-app-loans.png"
+    },
+    {
+      "route": "/app/loan",
+      "viewport": "1440x1000",
+      "lang": "en",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/loans",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/loans",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/reminders",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/reminders",
+          "status": 200
+        }
+      ],
+      "width": 1440,
+      "scrollWidth": 1440,
+      "small": [],
+      "screenshot": "final-1440-en-app-loan.png"
+    },
+    {
+      "route": "/app/money",
+      "viewport": "1440x1000",
+      "lang": "en",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/goals",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/wellness/weekly?weeks=4",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/goals",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/wellness/weekly?weeks=4",
+          "status": 200
+        }
+      ],
+      "width": 1440,
+      "scrollWidth": 1440,
+      "small": [],
+      "screenshot": "final-1440-en-app-money.png"
+    },
+    {
+      "route": "/app/privacy",
+      "viewport": "1440x1000",
+      "lang": "en",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/consents",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/lenders",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/audit",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/consents",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/lenders",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/audit",
+          "status": 200
+        }
+      ],
+      "width": 1440,
+      "scrollWidth": 1440,
+      "small": [],
+      "screenshot": "final-1440-en-app-privacy.png"
+    },
+    {
+      "route": "/fairness",
+      "viewport": "1440x1000",
+      "lang": "en",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/fairness/report",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/fairness/report",
+          "status": 200
+        }
+      ],
+      "width": 1440,
+      "scrollWidth": 1440,
+      "small": [],
+      "screenshot": "final-1440-en-fairness.png"
+    },
+    {
+      "route": "/lender",
+      "viewport": "1440x1000",
+      "lang": "en",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/lender/applicants",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/lender/applicants",
+          "status": 200
+        }
+      ],
+      "width": 1440,
+      "scrollWidth": 1440,
+      "screenshot": "final-1440-en-lender.png"
+    },
+    {
+      "route": "/",
+      "viewport": "1440x1000",
+      "lang": "hi",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/fairness/report",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/fairness/report",
+          "status": 200
+        }
+      ],
+      "width": 1440,
+      "scrollWidth": 1440,
+      "small": [
+        {
+          "text": "प्राइवेसी",
+          "width": 39,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "route": "/app/dashboard",
+      "viewport": "1440x1000",
+      "lang": "hi",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/scores/latest",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/loans",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/scores/latest",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/loans",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/offers?requested_paise=1000000",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/offers?requested_paise=1000000",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/affordability/stress",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/affordability/stress",
+          "status": 200
+        }
+      ],
+      "width": 1440,
+      "scrollWidth": 1440,
+      "small": [
+        {
+          "text": "सुनें",
+          "width": 65,
+          "height": 40
+        },
+        {
+          "text": "0%",
+          "width": 56,
+          "height": 40
+        },
+        {
+          "text": "−10%",
+          "width": 63,
+          "height": 40
+        },
+        {
+          "text": "−20%",
+          "width": 66,
+          "height": 40
+        },
+        {
+          "text": "−30%",
+          "width": 66,
+          "height": 40
+        },
+        {
+          "text": "मेरा लोन देखें",
+          "width": 66,
+          "height": 20
+        }
+      ]
+    },
+    {
+      "route": "/app/transactions",
+      "viewport": "1440x1000",
+      "lang": "hi",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/transactions?weeks=12",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/transactions?weeks=12",
+          "status": 200
+        }
+      ],
+      "width": 1440,
+      "scrollWidth": 1440,
+      "small": []
+    },
+    {
+      "route": "/app/loans",
+      "viewport": "1440x1000",
+      "lang": "hi",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/affordability",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/offers?requested_paise=1000000",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/affordability",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/offers?requested_paise=1000000",
+          "status": 200
+        }
+      ],
+      "width": 1440,
+      "scrollWidth": 1440,
+      "small": [
+        {
+          "text": "₹5,000",
+          "width": 69,
+          "height": 32
+        },
+        {
+          "text": "₹10,000",
+          "width": 75,
+          "height": 32
+        },
+        {
+          "text": "₹15,000",
+          "width": 74,
+          "height": 32
+        }
+      ]
+    },
+    {
+      "route": "/app/loan",
+      "viewport": "1440x1000",
+      "lang": "hi",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/loans",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/loans",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/reminders",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/reminders",
+          "status": 200
+        }
+      ],
+      "width": 1440,
+      "scrollWidth": 1440,
+      "small": []
+    },
+    {
+      "route": "/app/money",
+      "viewport": "1440x1000",
+      "lang": "hi",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/goals",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/wellness/weekly?weeks=4",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/goals",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/wellness/weekly?weeks=4",
+          "status": 200
+        }
+      ],
+      "width": 1440,
+      "scrollWidth": 1440,
+      "small": []
+    },
+    {
+      "route": "/app/privacy",
+      "viewport": "1440x1000",
+      "lang": "hi",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/consents",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/lenders",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/audit",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/consents",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/lenders",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/audit",
+          "status": 200
+        }
+      ],
+      "width": 1440,
+      "scrollWidth": 1440,
+      "small": []
+    },
+    {
+      "route": "/fairness",
+      "viewport": "1440x1000",
+      "lang": "hi",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/fairness/report",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/fairness/report",
+          "status": 200
+        }
+      ],
+      "width": 1440,
+      "scrollWidth": 1440,
+      "small": []
+    },
+    {
+      "route": "/lender",
+      "viewport": "1440x1000",
+      "lang": "hi",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/lender/applicants",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/lender/applicants",
+          "status": 200
+        }
+      ],
+      "width": 1440,
+      "scrollWidth": 1440,
+      "screenshot": "final-1440-hi-lender.png"
+    },
+    {
+      "route": "/",
+      "viewport": "1440x1000",
+      "lang": "mr",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/fairness/report",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/fairness/report",
+          "status": 200
+        }
+      ],
+      "width": 1440,
+      "scrollWidth": 1440,
+      "small": []
+    },
+    {
+      "route": "/app/dashboard",
+      "viewport": "1440x1000",
+      "lang": "mr",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/scores/latest",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/loans",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/scores/latest",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/offers?requested_paise=1000000",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/loans",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/offers?requested_paise=1000000",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/affordability/stress",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/affordability/stress",
+          "status": 200
+        }
+      ],
+      "width": 1440,
+      "scrollWidth": 1440,
+      "small": [
+        {
+          "text": "ऐका",
+          "width": 70,
+          "height": 40
+        },
+        {
+          "text": "0%",
+          "width": 56,
+          "height": 40
+        },
+        {
+          "text": "−10%",
+          "width": 63,
+          "height": 40
+        },
+        {
+          "text": "−20%",
+          "width": 66,
+          "height": 40
+        },
+        {
+          "text": "−30%",
+          "width": 66,
+          "height": 40
+        },
+        {
+          "text": "माझे कर्ज पहा",
+          "width": 71,
+          "height": 20
+        }
+      ]
+    },
+    {
+      "route": "/app/transactions",
+      "viewport": "1440x1000",
+      "lang": "mr",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/transactions?weeks=12",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/transactions?weeks=12",
+          "status": 200
+        }
+      ],
+      "width": 1440,
+      "scrollWidth": 1440,
+      "small": []
+    },
+    {
+      "route": "/app/loans",
+      "viewport": "1440x1000",
+      "lang": "mr",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/affordability",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/offers?requested_paise=1000000",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/affordability",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/offers?requested_paise=1000000",
+          "status": 200
+        }
+      ],
+      "width": 1440,
+      "scrollWidth": 1440,
+      "small": [
+        {
+          "text": "₹5,000",
+          "width": 69,
+          "height": 32
+        },
+        {
+          "text": "₹10,000",
+          "width": 75,
+          "height": 32
+        },
+        {
+          "text": "₹15,000",
+          "width": 74,
+          "height": 32
+        }
+      ]
+    },
+    {
+      "route": "/app/loan",
+      "viewport": "1440x1000",
+      "lang": "mr",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/loans",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/loans",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/reminders",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/reminders",
+          "status": 200
+        }
+      ],
+      "width": 1440,
+      "scrollWidth": 1440,
+      "small": []
+    },
+    {
+      "route": "/app/money",
+      "viewport": "1440x1000",
+      "lang": "mr",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/goals",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/wellness/weekly?weeks=4",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/goals",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/wellness/weekly?weeks=4",
+          "status": 200
+        }
+      ],
+      "width": 1440,
+      "scrollWidth": 1440,
+      "small": []
+    },
+    {
+      "route": "/app/privacy",
+      "viewport": "1440x1000",
+      "lang": "mr",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/consents",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/lenders",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/audit",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/consents",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/lenders",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/audit",
+          "status": 200
+        }
+      ],
+      "width": 1440,
+      "scrollWidth": 1440,
+      "small": []
+    },
+    {
+      "route": "/fairness",
+      "viewport": "1440x1000",
+      "lang": "mr",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/fairness/report",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/fairness/report",
+          "status": 200
+        }
+      ],
+      "width": 1440,
+      "scrollWidth": 1440,
+      "small": []
+    },
+    {
+      "route": "/lender",
+      "viewport": "1440x1000",
+      "lang": "mr",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/lender/applicants",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/lender/applicants",
+          "status": 200
+        }
+      ],
+      "width": 1440,
+      "scrollWidth": 1440,
+      "screenshot": "final-1440-mr-lender.png"
+    },
+    {
+      "route": "/",
+      "viewport": "390x844",
+      "lang": "en",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/fairness/report",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/fairness/report",
+          "status": 200
+        }
+      ],
+      "width": 390,
+      "scrollWidth": 390,
+      "small": [],
+      "screenshot": "final-390-en-landing.png"
+    },
+    {
+      "route": "/app/dashboard",
+      "viewport": "390x844",
+      "lang": "en",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/scores/latest",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/loans",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/scores/latest",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/loans",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/offers?requested_paise=1000000",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/offers?requested_paise=1000000",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/affordability/stress",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/affordability/stress",
+          "status": 200
+        }
+      ],
+      "width": 390,
+      "scrollWidth": 390,
+      "small": [
+        {
+          "text": "Read aloud",
+          "width": 123,
+          "height": 40
+        },
+        {
+          "text": "0%",
+          "width": 56,
+          "height": 40
+        },
+        {
+          "text": "−10%",
+          "width": 63,
+          "height": 40
+        },
+        {
+          "text": "−20%",
+          "width": 66,
+          "height": 40
+        },
+        {
+          "text": "−30%",
+          "width": 66,
+          "height": 40
+        },
+        {
+          "text": "View my loan",
+          "width": 88,
+          "height": 20
+        }
+      ],
+      "screenshot": "final-390-en-app-dashboard.png"
+    },
+    {
+      "route": "/app/transactions",
+      "viewport": "390x844",
+      "lang": "en",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/transactions?weeks=12",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/transactions?weeks=12",
+          "status": 200
+        }
+      ],
+      "width": 390,
+      "scrollWidth": 390,
+      "small": [],
+      "screenshot": "final-390-en-app-transactions.png"
+    },
+    {
+      "route": "/app/loans",
+      "viewport": "390x844",
+      "lang": "en",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/affordability",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/offers?requested_paise=1000000",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/affordability",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/offers?requested_paise=1000000",
+          "status": 200
+        }
+      ],
+      "width": 390,
+      "scrollWidth": 390,
+      "small": [
+        {
+          "text": "₹5,000",
+          "width": 69,
+          "height": 32
+        },
+        {
+          "text": "₹10,000",
+          "width": 75,
+          "height": 32
+        },
+        {
+          "text": "₹15,000",
+          "width": 74,
+          "height": 32
+        }
+      ],
+      "screenshot": "final-390-en-app-loans.png"
+    },
+    {
+      "route": "/app/loan",
+      "viewport": "390x844",
+      "lang": "en",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/loans",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/loans",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/reminders",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/reminders",
+          "status": 200
+        }
+      ],
+      "width": 390,
+      "scrollWidth": 390,
+      "small": [],
+      "screenshot": "final-390-en-app-loan.png"
+    },
+    {
+      "route": "/app/money",
+      "viewport": "390x844",
+      "lang": "en",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/goals",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/wellness/weekly?weeks=4",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/goals",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/wellness/weekly?weeks=4",
+          "status": 200
+        }
+      ],
+      "width": 390,
+      "scrollWidth": 390,
+      "small": [],
+      "screenshot": "final-390-en-app-money.png"
+    },
+    {
+      "route": "/app/privacy",
+      "viewport": "390x844",
+      "lang": "en",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/consents",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/lenders",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/audit",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/consents",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/lenders",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/audit",
+          "status": 200
+        }
+      ],
+      "width": 390,
+      "scrollWidth": 390,
+      "small": [],
+      "screenshot": "final-390-en-app-privacy.png"
+    },
+    {
+      "route": "/fairness",
+      "viewport": "390x844",
+      "lang": "en",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/fairness/report",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/fairness/report",
+          "status": 200
+        }
+      ],
+      "width": 390,
+      "scrollWidth": 390,
+      "small": [],
+      "screenshot": "final-390-en-fairness.png"
+    },
+    {
+      "route": "/lender",
+      "viewport": "390x844",
+      "lang": "en",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/lender/applicants",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/lender/applicants",
+          "status": 200
+        }
+      ],
+      "width": 390,
+      "scrollWidth": 390,
+      "screenshot": "final-390-en-lender.png"
+    },
+    {
+      "route": "/",
+      "viewport": "390x844",
+      "lang": "hi",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/fairness/report",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/fairness/report",
+          "status": 200
+        }
+      ],
+      "width": 390,
+      "scrollWidth": 390,
+      "small": []
+    },
+    {
+      "route": "/app/dashboard",
+      "viewport": "390x844",
+      "lang": "hi",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/scores/latest",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/loans",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/scores/latest",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/loans",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/offers?requested_paise=1000000",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/offers?requested_paise=1000000",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/affordability/stress",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/affordability/stress",
+          "status": 200
+        }
+      ],
+      "width": 390,
+      "scrollWidth": 390,
+      "small": [
+        {
+          "text": "सुनें",
+          "width": 65,
+          "height": 40
+        },
+        {
+          "text": "0%",
+          "width": 56,
+          "height": 40
+        },
+        {
+          "text": "−10%",
+          "width": 63,
+          "height": 40
+        },
+        {
+          "text": "−20%",
+          "width": 66,
+          "height": 40
+        },
+        {
+          "text": "−30%",
+          "width": 66,
+          "height": 40
+        },
+        {
+          "text": "मेरा लोन देखें",
+          "width": 66,
+          "height": 20
+        }
+      ]
+    },
+    {
+      "route": "/app/transactions",
+      "viewport": "390x844",
+      "lang": "hi",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/transactions?weeks=12",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/transactions?weeks=12",
+          "status": 200
+        }
+      ],
+      "width": 390,
+      "scrollWidth": 390,
+      "small": []
+    },
+    {
+      "route": "/app/loans",
+      "viewport": "390x844",
+      "lang": "hi",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/affordability",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/offers?requested_paise=1000000",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/affordability",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/offers?requested_paise=1000000",
+          "status": 200
+        }
+      ],
+      "width": 390,
+      "scrollWidth": 390,
+      "small": [
+        {
+          "text": "₹5,000",
+          "width": 69,
+          "height": 32
+        },
+        {
+          "text": "₹10,000",
+          "width": 75,
+          "height": 32
+        },
+        {
+          "text": "₹15,000",
+          "width": 74,
+          "height": 32
+        }
+      ]
+    },
+    {
+      "route": "/app/loan",
+      "viewport": "390x844",
+      "lang": "hi",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/loans",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/loans",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/reminders",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/reminders",
+          "status": 200
+        }
+      ],
+      "width": 390,
+      "scrollWidth": 390,
+      "small": []
+    },
+    {
+      "route": "/app/money",
+      "viewport": "390x844",
+      "lang": "hi",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/goals",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/wellness/weekly?weeks=4",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/goals",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/wellness/weekly?weeks=4",
+          "status": 200
+        }
+      ],
+      "width": 390,
+      "scrollWidth": 390,
+      "small": [],
+      "screenshot": "final-390-hi-app-money.png"
+    },
+    {
+      "route": "/app/privacy",
+      "viewport": "390x844",
+      "lang": "hi",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/consents",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/lenders",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/audit",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/consents",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/lenders",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/audit",
+          "status": 200
+        }
+      ],
+      "width": 390,
+      "scrollWidth": 390,
+      "small": [],
+      "screenshot": "final-390-hi-app-privacy.png"
+    },
+    {
+      "route": "/fairness",
+      "viewport": "390x844",
+      "lang": "hi",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/fairness/report",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/fairness/report",
+          "status": 200
+        }
+      ],
+      "width": 390,
+      "scrollWidth": 390,
+      "small": [],
+      "screenshot": "final-390-hi-fairness.png"
+    },
+    {
+      "route": "/lender",
+      "viewport": "390x844",
+      "lang": "hi",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/lender/applicants",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/lender/applicants",
+          "status": 200
+        }
+      ],
+      "width": 390,
+      "scrollWidth": 390,
+      "screenshot": "final-390-hi-lender.png"
+    },
+    {
+      "route": "/",
+      "viewport": "390x844",
+      "lang": "mr",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/fairness/report",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/fairness/report",
+          "status": 200
+        }
+      ],
+      "width": 390,
+      "scrollWidth": 390,
+      "small": []
+    },
+    {
+      "route": "/app/dashboard",
+      "viewport": "390x844",
+      "lang": "mr",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/scores/latest",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/loans",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/scores/latest",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/loans",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/offers?requested_paise=1000000",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/offers?requested_paise=1000000",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/affordability/stress",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/affordability/stress",
+          "status": 200
+        }
+      ],
+      "width": 390,
+      "scrollWidth": 390,
+      "small": [
+        {
+          "text": "ऐका",
+          "width": 70,
+          "height": 40
+        },
+        {
+          "text": "0%",
+          "width": 56,
+          "height": 40
+        },
+        {
+          "text": "−10%",
+          "width": 63,
+          "height": 40
+        },
+        {
+          "text": "−20%",
+          "width": 66,
+          "height": 40
+        },
+        {
+          "text": "−30%",
+          "width": 66,
+          "height": 40
+        },
+        {
+          "text": "माझे कर्ज पहा",
+          "width": 71,
+          "height": 20
+        }
+      ]
+    },
+    {
+      "route": "/app/transactions",
+      "viewport": "390x844",
+      "lang": "mr",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/transactions?weeks=12",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/transactions?weeks=12",
+          "status": 200
+        }
+      ],
+      "width": 390,
+      "scrollWidth": 390,
+      "small": []
+    },
+    {
+      "route": "/app/loans",
+      "viewport": "390x844",
+      "lang": "mr",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/affordability",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/offers?requested_paise=1000000",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/affordability",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/offers?requested_paise=1000000",
+          "status": 200
+        }
+      ],
+      "width": 390,
+      "scrollWidth": 390,
+      "small": [
+        {
+          "text": "₹5,000",
+          "width": 69,
+          "height": 32
+        },
+        {
+          "text": "₹10,000",
+          "width": 75,
+          "height": 32
+        },
+        {
+          "text": "₹15,000",
+          "width": 74,
+          "height": 32
+        }
+      ]
+    },
+    {
+      "route": "/app/loan",
+      "viewport": "390x844",
+      "lang": "mr",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/loans",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/loans",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/reminders",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/reminders",
+          "status": 200
+        }
+      ],
+      "width": 390,
+      "scrollWidth": 390,
+      "small": []
+    },
+    {
+      "route": "/app/money",
+      "viewport": "390x844",
+      "lang": "mr",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/goals",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/wellness/weekly?weeks=4",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/goals",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/wellness/weekly?weeks=4",
+          "status": 200
+        }
+      ],
+      "width": 390,
+      "scrollWidth": 390,
+      "small": [],
+      "screenshot": "final-390-mr-app-money.png"
+    },
+    {
+      "route": "/app/privacy",
+      "viewport": "390x844",
+      "lang": "mr",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/consents",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/lenders",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/audit",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/consents",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/lenders",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/audit",
+          "status": 200
+        }
+      ],
+      "width": 390,
+      "scrollWidth": 390,
+      "small": [],
+      "screenshot": "final-390-mr-app-privacy.png"
+    },
+    {
+      "route": "/fairness",
+      "viewport": "390x844",
+      "lang": "mr",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/fairness/report",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/fairness/report",
+          "status": 200
+        }
+      ],
+      "width": 390,
+      "scrollWidth": 390,
+      "small": [],
+      "screenshot": "final-390-mr-fairness.png"
+    },
+    {
+      "route": "/lender",
+      "viewport": "390x844",
+      "lang": "mr",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/lender/applicants",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/lender/applicants",
+          "status": 200
+        }
+      ],
+      "width": 390,
+      "scrollWidth": 390,
+      "screenshot": "final-390-mr-lender.png"
+    },
+    {
+      "route": "/",
+      "viewport": "768x1024",
+      "lang": "en",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/fairness/report",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/fairness/report",
+          "status": 200
+        }
+      ],
+      "width": 768,
+      "scrollWidth": 768,
+      "small": [],
+      "screenshot": "final-768-en-landing.png"
+    },
+    {
+      "route": "/app/dashboard",
+      "viewport": "768x1024",
+      "lang": "en",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/scores/latest",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/loans",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/scores/latest",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/offers?requested_paise=1000000",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/loans",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/offers?requested_paise=1000000",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/affordability/stress",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/affordability/stress",
+          "status": 200
+        }
+      ],
+      "width": 768,
+      "scrollWidth": 768,
+      "small": [
+        {
+          "text": "Read aloud",
+          "width": 123,
+          "height": 40
+        },
+        {
+          "text": "0%",
+          "width": 56,
+          "height": 40
+        },
+        {
+          "text": "−10%",
+          "width": 63,
+          "height": 40
+        },
+        {
+          "text": "−20%",
+          "width": 66,
+          "height": 40
+        },
+        {
+          "text": "−30%",
+          "width": 66,
+          "height": 40
+        },
+        {
+          "text": "View my loan",
+          "width": 88,
+          "height": 20
+        }
+      ],
+      "screenshot": "final-768-en-app-dashboard.png"
+    },
+    {
+      "route": "/app/transactions",
+      "viewport": "768x1024",
+      "lang": "en",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/transactions?weeks=12",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/transactions?weeks=12",
+          "status": 200
+        }
+      ],
+      "width": 768,
+      "scrollWidth": 768,
+      "small": [],
+      "screenshot": "final-768-en-app-transactions.png"
+    },
+    {
+      "route": "/app/loans",
+      "viewport": "768x1024",
+      "lang": "en",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/affordability",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/offers?requested_paise=1000000",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/affordability",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/offers?requested_paise=1000000",
+          "status": 200
+        }
+      ],
+      "width": 768,
+      "scrollWidth": 768,
+      "small": [
+        {
+          "text": "₹5,000",
+          "width": 69,
+          "height": 32
+        },
+        {
+          "text": "₹10,000",
+          "width": 75,
+          "height": 32
+        },
+        {
+          "text": "₹15,000",
+          "width": 74,
+          "height": 32
+        }
+      ],
+      "screenshot": "final-768-en-app-loans.png"
+    },
+    {
+      "route": "/app/loan",
+      "viewport": "768x1024",
+      "lang": "en",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/loans",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/loans",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/reminders",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/reminders",
+          "status": 200
+        }
+      ],
+      "width": 768,
+      "scrollWidth": 768,
+      "small": [],
+      "screenshot": "final-768-en-app-loan.png"
+    },
+    {
+      "route": "/app/money",
+      "viewport": "768x1024",
+      "lang": "en",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/goals",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/wellness/weekly?weeks=4",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/goals",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/wellness/weekly?weeks=4",
+          "status": 200
+        }
+      ],
+      "width": 768,
+      "scrollWidth": 768,
+      "small": [],
+      "screenshot": "final-768-en-app-money.png"
+    },
+    {
+      "route": "/app/privacy",
+      "viewport": "768x1024",
+      "lang": "en",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/consents",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/lenders",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/audit",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/consents",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/lenders",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/audit",
+          "status": 200
+        }
+      ],
+      "width": 768,
+      "scrollWidth": 768,
+      "small": [],
+      "screenshot": "final-768-en-app-privacy.png"
+    },
+    {
+      "route": "/fairness",
+      "viewport": "768x1024",
+      "lang": "en",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/fairness/report",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/fairness/report",
+          "status": 200
+        }
+      ],
+      "width": 768,
+      "scrollWidth": 768,
+      "small": [],
+      "screenshot": "final-768-en-fairness.png"
+    },
+    {
+      "route": "/lender",
+      "viewport": "768x1024",
+      "lang": "en",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/lender/applicants",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/lender/applicants",
+          "status": 200
+        }
+      ],
+      "width": 768,
+      "scrollWidth": 768,
+      "screenshot": "final-768-en-lender.png"
+    },
+    {
+      "route": "/",
+      "viewport": "768x1024",
+      "lang": "hi",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/fairness/report",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/fairness/report",
+          "status": 200
+        }
+      ],
+      "width": 768,
+      "scrollWidth": 768,
+      "small": []
+    },
+    {
+      "route": "/app/dashboard",
+      "viewport": "768x1024",
+      "lang": "hi",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/scores/latest",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/loans",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/scores/latest",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/loans",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/offers?requested_paise=1000000",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/offers?requested_paise=1000000",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/affordability/stress",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/affordability/stress",
+          "status": 200
+        }
+      ],
+      "width": 768,
+      "scrollWidth": 768,
+      "small": [
+        {
+          "text": "सुनें",
+          "width": 65,
+          "height": 40
+        },
+        {
+          "text": "0%",
+          "width": 56,
+          "height": 40
+        },
+        {
+          "text": "−10%",
+          "width": 63,
+          "height": 40
+        },
+        {
+          "text": "−20%",
+          "width": 66,
+          "height": 40
+        },
+        {
+          "text": "−30%",
+          "width": 66,
+          "height": 40
+        },
+        {
+          "text": "मेरा लोन देखें",
+          "width": 66,
+          "height": 20
+        }
+      ]
+    },
+    {
+      "route": "/app/transactions",
+      "viewport": "768x1024",
+      "lang": "hi",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/transactions?weeks=12",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/transactions?weeks=12",
+          "status": 200
+        }
+      ],
+      "width": 768,
+      "scrollWidth": 768,
+      "small": []
+    },
+    {
+      "route": "/app/loans",
+      "viewport": "768x1024",
+      "lang": "hi",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/affordability",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/offers?requested_paise=1000000",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/affordability",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/offers?requested_paise=1000000",
+          "status": 200
+        }
+      ],
+      "width": 768,
+      "scrollWidth": 768,
+      "small": [
+        {
+          "text": "₹5,000",
+          "width": 69,
+          "height": 32
+        },
+        {
+          "text": "₹10,000",
+          "width": 75,
+          "height": 32
+        },
+        {
+          "text": "₹15,000",
+          "width": 74,
+          "height": 32
+        }
+      ]
+    },
+    {
+      "route": "/app/loan",
+      "viewport": "768x1024",
+      "lang": "hi",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/loans",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/loans",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/reminders",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/reminders",
+          "status": 200
+        }
+      ],
+      "width": 768,
+      "scrollWidth": 768,
+      "small": []
+    },
+    {
+      "route": "/app/money",
+      "viewport": "768x1024",
+      "lang": "hi",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/goals",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/wellness/weekly?weeks=4",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/goals",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/wellness/weekly?weeks=4",
+          "status": 200
+        }
+      ],
+      "width": 768,
+      "scrollWidth": 768,
+      "small": []
+    },
+    {
+      "route": "/app/privacy",
+      "viewport": "768x1024",
+      "lang": "hi",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/consents",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/lenders",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/audit",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/consents",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/lenders",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/audit",
+          "status": 200
+        }
+      ],
+      "width": 768,
+      "scrollWidth": 768,
+      "small": []
+    },
+    {
+      "route": "/fairness",
+      "viewport": "768x1024",
+      "lang": "hi",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/fairness/report",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/fairness/report",
+          "status": 200
+        }
+      ],
+      "width": 768,
+      "scrollWidth": 768,
+      "small": []
+    },
+    {
+      "route": "/lender",
+      "viewport": "768x1024",
+      "lang": "hi",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/lender/applicants",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/lender/applicants",
+          "status": 200
+        }
+      ],
+      "width": 768,
+      "scrollWidth": 768,
+      "screenshot": "final-768-hi-lender.png"
+    },
+    {
+      "route": "/",
+      "viewport": "768x1024",
+      "lang": "mr",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/fairness/report",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/fairness/report",
+          "status": 200
+        }
+      ],
+      "width": 768,
+      "scrollWidth": 768,
+      "small": []
+    },
+    {
+      "route": "/app/dashboard",
+      "viewport": "768x1024",
+      "lang": "mr",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/scores/latest",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/loans",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/scores/latest",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/loans",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/offers?requested_paise=1000000",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/offers?requested_paise=1000000",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/affordability/stress",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/affordability/stress",
+          "status": 200
+        }
+      ],
+      "width": 768,
+      "scrollWidth": 768,
+      "small": [
+        {
+          "text": "ऐका",
+          "width": 70,
+          "height": 40
+        },
+        {
+          "text": "0%",
+          "width": 56,
+          "height": 40
+        },
+        {
+          "text": "−10%",
+          "width": 63,
+          "height": 40
+        },
+        {
+          "text": "−20%",
+          "width": 66,
+          "height": 40
+        },
+        {
+          "text": "−30%",
+          "width": 66,
+          "height": 40
+        },
+        {
+          "text": "माझे कर्ज पहा",
+          "width": 71,
+          "height": 20
+        }
+      ]
+    },
+    {
+      "route": "/app/transactions",
+      "viewport": "768x1024",
+      "lang": "mr",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/transactions?weeks=12",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/transactions?weeks=12",
+          "status": 200
+        }
+      ],
+      "width": 768,
+      "scrollWidth": 768,
+      "small": []
+    },
+    {
+      "route": "/app/loans",
+      "viewport": "768x1024",
+      "lang": "mr",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/affordability",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/offers?requested_paise=1000000",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/affordability",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/offers?requested_paise=1000000",
+          "status": 200
+        }
+      ],
+      "width": 768,
+      "scrollWidth": 768,
+      "small": [
+        {
+          "text": "₹5,000",
+          "width": 69,
+          "height": 32
+        },
+        {
+          "text": "₹10,000",
+          "width": 75,
+          "height": 32
+        },
+        {
+          "text": "₹15,000",
+          "width": 74,
+          "height": 32
+        }
+      ]
+    },
+    {
+      "route": "/app/loan",
+      "viewport": "768x1024",
+      "lang": "mr",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/loans",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/loans",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/reminders",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/reminders",
+          "status": 200
+        }
+      ],
+      "width": 768,
+      "scrollWidth": 768,
+      "small": []
+    },
+    {
+      "route": "/app/money",
+      "viewport": "768x1024",
+      "lang": "mr",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/goals",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/wellness/weekly?weeks=4",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/goals",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/wellness/weekly?weeks=4",
+          "status": 200
+        }
+      ],
+      "width": 768,
+      "scrollWidth": 768,
+      "small": []
+    },
+    {
+      "route": "/app/privacy",
+      "viewport": "768x1024",
+      "lang": "mr",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/consents",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/lenders",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/audit",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/lenders",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/consents",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/audit",
+          "status": 200
+        }
+      ],
+      "width": 768,
+      "scrollWidth": 768,
+      "small": []
+    },
+    {
+      "route": "/fairness",
+      "viewport": "768x1024",
+      "lang": "mr",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/fairness/report",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/fairness/report",
+          "status": 200
+        }
+      ],
+      "width": 768,
+      "scrollWidth": 768,
+      "small": []
+    },
+    {
+      "route": "/lender",
+      "viewport": "768x1024",
+      "lang": "mr",
+      "raw_keys": [],
+      "responses": [
+        {
+          "phase": "normal",
+          "path": "/health",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/lender/applicants",
+          "status": 200
+        },
+        {
+          "phase": "normal",
+          "path": "/lender/applicants",
+          "status": 200
+        }
+      ],
+      "width": 768,
+      "scrollWidth": 768,
+      "screenshot": "final-768-mr-lender.png"
+    }
+  ],
+  "touch_target_retest": {
+    "matrix": [
+      {
+        "route": "/app/dashboard",
+        "viewport": "390x844",
+        "lang": "en",
+        "raw_keys": [],
+        "width": 390,
+        "scrollWidth": 390,
+        "small": [],
+        "mockBadge": false
+      },
+      {
+        "route": "/app/transactions",
+        "viewport": "390x844",
+        "lang": "en",
+        "raw_keys": [],
+        "width": 390,
+        "scrollWidth": 390,
+        "small": [],
+        "mockBadge": false
+      },
+      {
+        "route": "/app/loans",
+        "viewport": "390x844",
+        "lang": "en",
+        "raw_keys": [],
+        "width": 390,
+        "scrollWidth": 390,
+        "small": [],
+        "mockBadge": false
+      },
+      {
+        "route": "/app/loan",
+        "viewport": "390x844",
+        "lang": "en",
+        "raw_keys": [],
+        "width": 390,
+        "scrollWidth": 390,
+        "small": [],
+        "mockBadge": false
+      },
+      {
+        "route": "/app/money",
+        "viewport": "390x844",
+        "lang": "en",
+        "raw_keys": [],
+        "width": 390,
+        "scrollWidth": 390,
+        "small": [],
+        "mockBadge": false
+      },
+      {
+        "route": "/app/privacy",
+        "viewport": "390x844",
+        "lang": "en",
+        "raw_keys": [],
+        "width": 390,
+        "scrollWidth": 390,
+        "small": [],
+        "mockBadge": false
+      },
+      {
+        "route": "/app/dashboard",
+        "viewport": "390x844",
+        "lang": "hi",
+        "raw_keys": [],
+        "width": 390,
+        "scrollWidth": 390,
+        "small": [],
+        "mockBadge": false
+      },
+      {
+        "route": "/app/transactions",
+        "viewport": "390x844",
+        "lang": "hi",
+        "raw_keys": [],
+        "width": 390,
+        "scrollWidth": 390,
+        "small": [],
+        "mockBadge": false
+      },
+      {
+        "route": "/app/loans",
+        "viewport": "390x844",
+        "lang": "hi",
+        "raw_keys": [],
+        "width": 390,
+        "scrollWidth": 390,
+        "small": [],
+        "mockBadge": false
+      },
+      {
+        "route": "/app/loan",
+        "viewport": "390x844",
+        "lang": "hi",
+        "raw_keys": [],
+        "width": 390,
+        "scrollWidth": 390,
+        "small": [],
+        "mockBadge": false
+      },
+      {
+        "route": "/app/money",
+        "viewport": "390x844",
+        "lang": "hi",
+        "raw_keys": [],
+        "width": 390,
+        "scrollWidth": 390,
+        "small": [],
+        "mockBadge": false
+      },
+      {
+        "route": "/app/privacy",
+        "viewport": "390x844",
+        "lang": "hi",
+        "raw_keys": [],
+        "width": 390,
+        "scrollWidth": 390,
+        "small": [],
+        "mockBadge": false
+      },
+      {
+        "route": "/app/dashboard",
+        "viewport": "390x844",
+        "lang": "mr",
+        "raw_keys": [],
+        "width": 390,
+        "scrollWidth": 390,
+        "small": [],
+        "mockBadge": false
+      },
+      {
+        "route": "/app/transactions",
+        "viewport": "390x844",
+        "lang": "mr",
+        "raw_keys": [],
+        "width": 390,
+        "scrollWidth": 390,
+        "small": [],
+        "mockBadge": false
+      },
+      {
+        "route": "/app/loans",
+        "viewport": "390x844",
+        "lang": "mr",
+        "raw_keys": [],
+        "width": 390,
+        "scrollWidth": 390,
+        "small": [],
+        "mockBadge": false
+      },
+      {
+        "route": "/app/loan",
+        "viewport": "390x844",
+        "lang": "mr",
+        "raw_keys": [],
+        "width": 390,
+        "scrollWidth": 390,
+        "small": [],
+        "mockBadge": false
+      },
+      {
+        "route": "/app/money",
+        "viewport": "390x844",
+        "lang": "mr",
+        "raw_keys": [],
+        "width": 390,
+        "scrollWidth": 390,
+        "small": [],
+        "mockBadge": false
+      },
+      {
+        "route": "/app/privacy",
+        "viewport": "390x844",
+        "lang": "mr",
+        "raw_keys": [],
+        "width": 390,
+        "scrollWidth": 390,
+        "small": [],
+        "mockBadge": false
+      },
+      {
+        "route": "/app/dashboard",
+        "viewport": "768x1024",
+        "lang": "en",
+        "raw_keys": [],
+        "width": 768,
+        "scrollWidth": 768,
+        "small": [],
+        "mockBadge": false
+      },
+      {
+        "route": "/app/transactions",
+        "viewport": "768x1024",
+        "lang": "en",
+        "raw_keys": [],
+        "width": 768,
+        "scrollWidth": 768,
+        "small": [],
+        "mockBadge": false
+      },
+      {
+        "route": "/app/loans",
+        "viewport": "768x1024",
+        "lang": "en",
+        "raw_keys": [],
+        "width": 768,
+        "scrollWidth": 768,
+        "small": [],
+        "mockBadge": false
+      },
+      {
+        "route": "/app/loan",
+        "viewport": "768x1024",
+        "lang": "en",
+        "raw_keys": [],
+        "width": 768,
+        "scrollWidth": 768,
+        "small": [],
+        "mockBadge": false
+      },
+      {
+        "route": "/app/money",
+        "viewport": "768x1024",
+        "lang": "en",
+        "raw_keys": [],
+        "width": 768,
+        "scrollWidth": 768,
+        "small": [],
+        "mockBadge": false
+      },
+      {
+        "route": "/app/privacy",
+        "viewport": "768x1024",
+        "lang": "en",
+        "raw_keys": [],
+        "width": 768,
+        "scrollWidth": 768,
+        "small": [],
+        "mockBadge": false
+      },
+      {
+        "route": "/app/dashboard",
+        "viewport": "768x1024",
+        "lang": "hi",
+        "raw_keys": [],
+        "width": 768,
+        "scrollWidth": 768,
+        "small": [],
+        "mockBadge": false
+      },
+      {
+        "route": "/app/transactions",
+        "viewport": "768x1024",
+        "lang": "hi",
+        "raw_keys": [],
+        "width": 768,
+        "scrollWidth": 768,
+        "small": [],
+        "mockBadge": false
+      },
+      {
+        "route": "/app/loans",
+        "viewport": "768x1024",
+        "lang": "hi",
+        "raw_keys": [],
+        "width": 768,
+        "scrollWidth": 768,
+        "small": [],
+        "mockBadge": false
+      },
+      {
+        "route": "/app/loan",
+        "viewport": "768x1024",
+        "lang": "hi",
+        "raw_keys": [],
+        "width": 768,
+        "scrollWidth": 768,
+        "small": [],
+        "mockBadge": false
+      },
+      {
+        "route": "/app/money",
+        "viewport": "768x1024",
+        "lang": "hi",
+        "raw_keys": [],
+        "width": 768,
+        "scrollWidth": 768,
+        "small": [],
+        "mockBadge": false
+      },
+      {
+        "route": "/app/privacy",
+        "viewport": "768x1024",
+        "lang": "hi",
+        "raw_keys": [],
+        "width": 768,
+        "scrollWidth": 768,
+        "small": [],
+        "mockBadge": false
+      },
+      {
+        "route": "/app/dashboard",
+        "viewport": "768x1024",
+        "lang": "mr",
+        "raw_keys": [],
+        "width": 768,
+        "scrollWidth": 768,
+        "small": [],
+        "mockBadge": false
+      },
+      {
+        "route": "/app/transactions",
+        "viewport": "768x1024",
+        "lang": "mr",
+        "raw_keys": [],
+        "width": 768,
+        "scrollWidth": 768,
+        "small": [],
+        "mockBadge": false
+      },
+      {
+        "route": "/app/loans",
+        "viewport": "768x1024",
+        "lang": "mr",
+        "raw_keys": [],
+        "width": 768,
+        "scrollWidth": 768,
+        "small": [],
+        "mockBadge": false
+      },
+      {
+        "route": "/app/loan",
+        "viewport": "768x1024",
+        "lang": "mr",
+        "raw_keys": [],
+        "width": 768,
+        "scrollWidth": 768,
+        "small": [],
+        "mockBadge": false
+      },
+      {
+        "route": "/app/money",
+        "viewport": "768x1024",
+        "lang": "mr",
+        "raw_keys": [],
+        "width": 768,
+        "scrollWidth": 768,
+        "small": [],
+        "mockBadge": false
+      },
+      {
+        "route": "/app/privacy",
+        "viewport": "768x1024",
+        "lang": "mr",
+        "raw_keys": [],
+        "width": 768,
+        "scrollWidth": 768,
+        "small": [],
+        "mockBadge": false
+      }
+    ],
+    "actions": [
+      "share and unshare persist across reload",
+      "goal validation and real creation",
+      "demo reset completes and clears login",
+      "worker rejected from lender login in en/hi/mr",
+      "lender logout in en/hi/mr"
+    ],
+    "page_errors": [],
+    "passed": true,
+    "resolved_failure": "Added missing FORBIDDEN translation in all three languages; the failed step now passes."
+  },
+  "hindi_rehearsal": {
+    "language": "hi",
+    "steps": [
+      "login",
+      "consent",
+      "password-challenge",
+      "transactions",
+      "score85",
+      "loans-alpha-kfs",
+      "friday-schedule",
+      "reminder",
+      "money-goal",
+      "fairness",
+      "share",
+      "lender-summary",
+      "audit",
+      "revoke284",
+      "data-deleted",
+      "no-score-after-revoke"
+    ],
+    "errors": [],
+    "audio": false,
+    "loan": {
+      "count": 26,
+      "instalment_paise": 29451,
+      "weekday": "FRI"
+    },
+    "reminder_count": 1,
+    "lender_removed": true,
+    "passed": true
+  },
+  "page_errors": [],
+  "request_failures": [
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "expected_revoked_consent",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "expected_revoked_consent",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "expected_revoked_consent",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "normal",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "intentional_backend_offline",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "intentional_backend_offline",
+      "url": "http://127.0.0.1:5173/api/v1/health",
+      "error": "net::ERR_ABORTED"
+    }
+  ],
+  "responses": [
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/fairness/report",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/fairness/report",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/auth/otp/request",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/auth/otp/verify",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/me",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/me",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/consents",
+      "status": 200
+    },
+    {
+      "phase": "expected_password_challenge",
+      "path": "/statements",
+      "status": 400
+    },
+    {
+      "phase": "normal",
+      "path": "/statements",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/scores/latest",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/loans",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/scores/latest",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/loans",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/offers?requested_paise=1000000",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/offers?requested_paise=1000000",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/affordability/stress",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/affordability/stress",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/affordability",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/offers?requested_paise=1000000",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/affordability",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/offers?requested_paise=1000000",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/offers/5c927ab9adc649cf8494d6693016606f/accept",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/loans",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/loans",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/reminders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/consents",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lenders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/consents",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lenders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/shares",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/auth/otp/verify",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lender/applicants",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lender/applicants",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/consents",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lenders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/consents",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lenders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/goals",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/wellness/weekly?weeks=4",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/goals",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/wellness/weekly?weeks=4",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/goals",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/goals",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/wellness/weekly?weeks=12",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lender/rules",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lender/applicants",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lender/rules",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/fairness/report",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/fairness/report",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lender/applicants",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/fairness/report",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/fairness/report",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lenders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/consents",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lenders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/consents",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lender/applicants",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lender/applicants",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/fairness/report",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/fairness/report",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/scores/latest",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/loans",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/scores/latest",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/offers?requested_paise=1000000",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/loans",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/offers?requested_paise=1000000",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/affordability/stress",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/affordability/stress",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/transactions?weeks=12",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/transactions?weeks=12",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/affordability",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/offers?requested_paise=1000000",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/affordability",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/offers?requested_paise=1000000",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/loans",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/loans",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/reminders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/reminders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/goals",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/wellness/weekly?weeks=4",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/goals",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/wellness/weekly?weeks=4",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/consents",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lenders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/consents",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lenders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/fairness/report",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/fairness/report",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lender/applicants",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lender/applicants",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/consents",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lenders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/consents",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lenders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lender/applicants",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lender/applicants",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/fairness/report",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/fairness/report",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/scores/latest",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/loans",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/scores/latest",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/loans",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/offers?requested_paise=1000000",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/offers?requested_paise=1000000",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/affordability/stress",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/affordability/stress",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/transactions?weeks=12",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/transactions?weeks=12",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/affordability",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/offers?requested_paise=1000000",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/affordability",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/offers?requested_paise=1000000",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/loans",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/loans",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/reminders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/reminders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/goals",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/wellness/weekly?weeks=4",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/goals",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/wellness/weekly?weeks=4",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/consents",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lenders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/consents",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lenders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/fairness/report",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/fairness/report",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lender/applicants",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lender/applicants",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/consents",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lenders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lenders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/consents",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lender/applicants",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lender/applicants",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/fairness/report",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/fairness/report",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/scores/latest",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/loans",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/scores/latest",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/offers?requested_paise=1000000",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/loans",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/offers?requested_paise=1000000",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/affordability/stress",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/affordability/stress",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/transactions?weeks=12",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/transactions?weeks=12",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/affordability",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/offers?requested_paise=1000000",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/affordability",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/offers?requested_paise=1000000",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/loans",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/loans",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/reminders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/reminders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/goals",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/wellness/weekly?weeks=4",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/goals",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/wellness/weekly?weeks=4",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/consents",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lenders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/consents",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lenders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/fairness/report",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/fairness/report",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lender/applicants",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lender/applicants",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/consents",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lenders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/consents",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lenders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lender/applicants",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lender/applicants",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/fairness/report",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/fairness/report",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/scores/latest",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/loans",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/scores/latest",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/loans",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/offers?requested_paise=1000000",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/offers?requested_paise=1000000",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/affordability/stress",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/affordability/stress",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/transactions?weeks=12",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/transactions?weeks=12",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/affordability",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/offers?requested_paise=1000000",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/affordability",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/offers?requested_paise=1000000",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/loans",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/loans",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/reminders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/reminders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/goals",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/wellness/weekly?weeks=4",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/goals",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/wellness/weekly?weeks=4",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/consents",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lenders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/consents",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lenders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/fairness/report",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/fairness/report",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lender/applicants",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lender/applicants",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lenders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/consents",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lenders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/consents",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lender/applicants",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lender/applicants",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/fairness/report",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/fairness/report",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/scores/latest",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/loans",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/scores/latest",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/loans",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/offers?requested_paise=1000000",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/offers?requested_paise=1000000",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/affordability/stress",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/affordability/stress",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/transactions?weeks=12",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/transactions?weeks=12",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/affordability",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/offers?requested_paise=1000000",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/affordability",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/offers?requested_paise=1000000",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/loans",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/loans",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/reminders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/reminders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/goals",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/wellness/weekly?weeks=4",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/goals",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/wellness/weekly?weeks=4",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/consents",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lenders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/consents",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lenders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/fairness/report",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/fairness/report",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lender/applicants",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lender/applicants",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/consents",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lenders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/consents",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lenders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lender/applicants",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lender/applicants",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/fairness/report",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/fairness/report",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/scores/latest",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/loans",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/scores/latest",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/loans",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/offers?requested_paise=1000000",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/offers?requested_paise=1000000",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/affordability/stress",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/affordability/stress",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/transactions?weeks=12",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/transactions?weeks=12",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/affordability",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/offers?requested_paise=1000000",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/affordability",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/offers?requested_paise=1000000",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/loans",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/loans",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/reminders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/reminders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/goals",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/wellness/weekly?weeks=4",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/goals",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/wellness/weekly?weeks=4",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/consents",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lenders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/consents",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lenders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/fairness/report",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/fairness/report",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lender/applicants",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lender/applicants",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/consents",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lenders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/consents",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lenders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lender/applicants",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lender/applicants",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/fairness/report",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/fairness/report",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/scores/latest",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/loans",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/scores/latest",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/offers?requested_paise=1000000",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/loans",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/offers?requested_paise=1000000",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/affordability/stress",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/affordability/stress",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/transactions?weeks=12",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/transactions?weeks=12",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/affordability",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/offers?requested_paise=1000000",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/affordability",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/offers?requested_paise=1000000",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/loans",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/loans",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/reminders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/reminders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/goals",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/wellness/weekly?weeks=4",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/goals",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/wellness/weekly?weeks=4",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/consents",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lenders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/consents",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lenders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/fairness/report",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/fairness/report",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lender/applicants",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lender/applicants",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/consents",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lenders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/consents",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lenders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lender/applicants",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lender/applicants",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/fairness/report",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/fairness/report",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/scores/latest",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/loans",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/scores/latest",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/loans",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/offers?requested_paise=1000000",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/offers?requested_paise=1000000",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/affordability/stress",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/affordability/stress",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/transactions?weeks=12",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/transactions?weeks=12",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/affordability",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/offers?requested_paise=1000000",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/affordability",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/offers?requested_paise=1000000",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/loans",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/loans",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/reminders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/reminders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/goals",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/wellness/weekly?weeks=4",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/goals",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/wellness/weekly?weeks=4",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/consents",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lenders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/consents",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lenders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/fairness/report",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/fairness/report",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lender/applicants",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lender/applicants",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/consents",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lenders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/consents",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lenders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lender/applicants",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lender/applicants",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/fairness/report",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/fairness/report",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/scores/latest",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/loans",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/scores/latest",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/loans",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/offers?requested_paise=1000000",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/offers?requested_paise=1000000",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/affordability/stress",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/affordability/stress",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/transactions?weeks=12",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/transactions?weeks=12",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/affordability",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/offers?requested_paise=1000000",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/affordability",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/offers?requested_paise=1000000",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/loans",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/loans",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/reminders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/reminders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/goals",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/wellness/weekly?weeks=4",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/goals",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/wellness/weekly?weeks=4",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/consents",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lenders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lenders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/consents",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/fairness/report",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/fairness/report",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lender/applicants",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lender/applicants",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/consents",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lenders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/consents",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lenders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/consents/d803261338604b74bfcd079f43b1f619/revoke",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "phase": "expected_revoked_consent",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "expected_revoked_consent",
+      "path": "/scores/latest",
+      "status": 200
+    },
+    {
+      "phase": "expected_revoked_consent",
+      "path": "/offers?requested_paise=1000000",
+      "status": 400
+    },
+    {
+      "phase": "expected_revoked_consent",
+      "path": "/loans",
+      "status": 200
+    },
+    {
+      "phase": "expected_revoked_consent",
+      "path": "/scores/latest",
+      "status": 200
+    },
+    {
+      "phase": "expected_revoked_consent",
+      "path": "/offers?requested_paise=1000000",
+      "status": 400
+    },
+    {
+      "phase": "expected_revoked_consent",
+      "path": "/loans",
+      "status": 200
+    },
+    {
+      "phase": "expected_revoked_consent",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "expected_revoked_consent",
+      "path": "/affordability",
+      "status": 400
+    },
+    {
+      "phase": "expected_revoked_consent",
+      "path": "/offers?requested_paise=1000000",
+      "status": 400
+    },
+    {
+      "phase": "expected_revoked_consent",
+      "path": "/affordability",
+      "status": 400
+    },
+    {
+      "phase": "expected_revoked_consent",
+      "path": "/offers?requested_paise=1000000",
+      "status": 400
+    },
+    {
+      "phase": "expected_revoked_consent",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "expected_revoked_consent",
+      "path": "/lender/applicants",
+      "status": 200
+    },
+    {
+      "phase": "expected_revoked_consent",
+      "path": "/lender/applicants",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/fairness/report",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/fairness/report",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/auth/otp/request",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/auth/otp/verify",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/me",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/me",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/consents",
+      "status": 200
+    },
+    {
+      "phase": "expected_password_challenge",
+      "path": "/statements",
+      "status": 400
+    },
+    {
+      "phase": "normal",
+      "path": "/statements",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/loans",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/scores/latest",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/loans",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/scores/latest",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/offers?requested_paise=1000000",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/offers?requested_paise=1000000",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/affordability/stress",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/affordability/stress",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/affordability",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/offers?requested_paise=1000000",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/affordability",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/offers?requested_paise=1000000",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/offers/cd35c7c4084043a584325590bb8a0eee/accept",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/loans",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/loans",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/reminders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/reminders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/consents",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lenders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/consents",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lenders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/shares",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/auth/otp/verify",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lender/applicants",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lender/applicants",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/consents",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lenders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/consents",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lenders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/fairness/report",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/fairness/report",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/consents",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lenders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/consents",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/lenders",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/consents/833afcf5e8c642f89f9a226780fc03e2/revoke",
+      "status": 200
+    },
+    {
+      "phase": "normal",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "phase": "intentional_backend_offline",
+      "path": "/health",
+      "status": 500
+    },
+    {
+      "phase": "intentional_backend_offline",
+      "path": "/fairness/report",
+      "status": 500
+    },
+    {
+      "phase": "intentional_backend_offline",
+      "path": "/fairness/report",
+      "status": 500
+    }
+  ],
+  "matrix_baseline": "a930bece2cd977608ca5485ff7970abb5b8775a7",
+  "implementation_commit": "c7da9ae40ac65f15d6d2507c1a92ea8ff948acde",
+  "hindi_rehearsal_baseline": "8ace13ea634e46d778fd788ca593645721a931cd",
+  "stage_ready": {
+    "health": {
+      "ok": true
+    },
+    "database": "stage-demo.db",
+    "ravi": {
+      "has_score": false,
+      "has_active_consent": false
+    },
+    "sunita": {
+      "has_score": true,
+      "has_active_consent": true,
+      "score": 99
+    },
+    "arjun": {
+      "has_score": true,
+      "has_active_consent": true,
+      "score": 43
+    },
+    "meena": {
+      "has_score": true,
+      "has_active_consent": true,
+      "score": 94
+    }
+  }
+}
