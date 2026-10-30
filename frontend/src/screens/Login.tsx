@@ -40,7 +40,11 @@ export default function Login() {
       } catch { /* ignore */ }
       if (language) { try { await api.patchMe({ language }) } catch { /* non-fatal */ } }
       const me = await api.getMe()
-      if (!me.has_active_consent) navigate('/consent', { replace: true })
+      setUser(me.user)
+      const consents = me.has_active_consent ? await api.getConsents() : []
+      const active = consents.find((consent) => consent.status === 'ACTIVE')
+      setConsentId(active?.id ?? null)
+      if (!active) navigate('/consent', { replace: true })
       else if (!me.has_score) navigate('/connect', { replace: true })
       else navigate('/score', { replace: true })
     } catch (e) { setError(errText(t, e)) } finally { setLoading(false) }

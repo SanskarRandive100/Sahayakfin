@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Navigate, useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { Landmark, Upload } from 'lucide-react'
 import Button from '../components/Button'
@@ -45,6 +45,8 @@ export default function Connect() {
     } catch (e) { setError(errText(t, e)) } finally { setLoading(false) }
   }
 
+  if (!consentId) return <Navigate to="/consent" replace />
+
   return (
     <div>
       <TopBar title={t('screen.connect.title')} />
@@ -56,7 +58,7 @@ export default function Connect() {
           </div>
           <input
             ref={fileRef} type="file" accept=".pdf,.csv" className="hidden"
-            onChange={(e) => { setFile(e.target.files?.[0] ?? null); setNeedPassword(false); setError(null) }}
+            onChange={(e) => { setFile(e.target.files?.[0] ?? null); setNeedPassword(false); setPassword(''); setError(null) }}
           />
           <button
             onClick={() => fileRef.current?.click()}

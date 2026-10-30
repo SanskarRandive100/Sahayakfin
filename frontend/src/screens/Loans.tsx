@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import BottomNav from '../components/BottomNav'
@@ -27,12 +27,32 @@ export default function Loans() {
   const [error, setError] = useState<string | null>(null)
   const [pick, setPick] = useState<Offer | null>(null)
   const [accepting, setAccepting] = useState(false)
+  const requestVersion = useRef(0)
 
-  function load() {
+  const load = useCallback(() => {
+    const version = ++requestVersion.current
     setError(null); setData(null)
-    api.getOffers(requested).then(setData).catch((e) => setError(errText(t, e)))
-  }
-  useEffect(load, [requested]) // eslint-disable-line react-hooks/exhaustive-deps
+    setPick(null)
+    if (requested <= 0 || requested > 10000000) {
+      setError(t('error.VALIDATION_ERROR'))
+      return
+    }
+    api.getOffers(requested).then((result) => {
+      if (version === requestVersion.current) setData(result)
+    }).catch((e) => {
+      if (version === requestVersion.current) setError(errText(t, e))
+    })
+  }, [requested, t])
+  useEffect(() => {
+    ++requestVersion.current
+    setData(null); setError(null); setPick(null)
+    if (requested <= 0 || requested > 10000000) {
+      setError(t('error.VALIDATION_ERROR'))
+      return
+    }
+    const timer = window.setTimeout(load, 250)
+    return () => { window.clearTimeout(timer); ++requestVersion.current }
+  }, [load, requested])
   useEffect(() => { api.getAffordability().then((a) => setWeekday(a.payout_weekday)).catch(() => undefined) }, [])
 
   async function accept() {

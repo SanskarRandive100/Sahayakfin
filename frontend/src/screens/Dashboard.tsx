@@ -10,7 +10,7 @@ import ReadAloudButton from '../components/ReadAloudButton'
 import ReasonCard from '../components/ReasonCard'
 import ScoreGauge from '../components/ScoreGauge'
 import Skeleton from '../components/Skeleton'
-import TipCard from '../components/TipCard'
+import TipCard, { approximateTipText } from '../components/TipCard'
 import TopBar from '../components/TopBar'
 import { useToast } from '../components/Toast'
 import ContributionBar from '../charts/ContributionBar'
@@ -27,7 +27,7 @@ export default function Dashboard() {
   const { t, i18n } = useTranslation()
   const navigate = useNavigate()
   const toast = useToast()
-  const { latestScore, setLatestScore } = useSession()
+  const { latestScore, setLatestScore, logout } = useSession()
   const [score, setScore] = useState<ScoreResult | null>(latestScore)
   const [error, setError] = useState<string | null>(null)
   const [loan, setLoan] = useState<Loan | null>(null)
@@ -53,7 +53,7 @@ export default function Dashboard() {
     ? t('screen.score.speak', {
         score: score.score, band: t(`band.${score.band}`),
         reason: score.reasons[0] ? t(`reason.${score.reasons[0].code}`, score.reasons[0].params) : '',
-        tip: score.tips[0] ? t(`tip.${score.tips[0].code}`, { points: score.tips[0].points, ...(score.tips[0].params ?? {}) }) : '',
+        tip: score.tips[0] ? approximateTipText(t(`tip.${score.tips[0].code}`, { points: score.tips[0].points, ...(score.tips[0].params ?? {}) })) : '',
       })
     : ''
   const next = loan?.schedule.find((r) => r.status !== 'PAID')
@@ -124,6 +124,13 @@ export default function Dashboard() {
                   </div>
                 )}
                 <Button onClick={() => navigate('/app/loans')}>{t('screen.score.seeLoans')}</Button>
+                <Link to="/app/transactions" className="text-center text-sm font-semibold text-brand underline">
+                  {t('nav.transactions')}
+                </Link>
+                <button type="button" className="text-center text-sm text-muted underline"
+                  onClick={() => { logout(); navigate('/login', { replace: true }) }}>
+                  {t('account.logout')}
+                </button>
               </Card>
             </div>
             <p className="text-xs text-muted">{t('screen.score.footer')}</p>

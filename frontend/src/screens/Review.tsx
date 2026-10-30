@@ -37,7 +37,7 @@ export default function Review() {
 
   function load() {
     setError(null)
-    api.getTransactions(12).then((r) => setWeeks(r.weeks)).catch((e) => setError(errText(t, e)))
+    api.getTransactions(52).then((r) => setWeeks(r.weeks)).catch((e) => setError(errText(t, e)))
   }
   useEffect(load, []) // eslint-disable-line react-hooks/exhaustive-deps
 
