@@ -35,7 +35,6 @@ export default function LenderLogin() {
           className="w-full h-12 rounded-xl border border-line px-3" />
         <input value={otp} onChange={(e) => setOtp(e.target.value.replace(/\D/g, '').slice(0, 6))} inputMode="numeric" aria-label={t('screen.login.otp')}
           className="w-full h-12 rounded-xl border border-line px-3" />
-        <div className="text-xs text-muted">{t('screen.login.demoOtp')}</div>
         {error && <ErrorBanner>{error}</ErrorBanner>}
         <Button onClick={go} loading={busy} disabled={phone.length !== 10 || otp.length !== 6}>{t('screen.login.verify')}</Button>
       </div>

@@ -89,7 +89,6 @@ export default function Login() {
             <Button onClick={verify} loading={loading} disabled={digits.some((x) => !x)}>{t('screen.login.verify')}</Button>
           </>
         )}
-        <p className="text-xs text-muted text-center">{t('screen.login.demoOtp')}</p>
       </div>
     </div>
   )

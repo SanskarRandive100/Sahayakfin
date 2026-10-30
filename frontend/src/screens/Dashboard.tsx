@@ -10,7 +10,7 @@ import ReadAloudButton from '../components/ReadAloudButton'
 import ReasonCard from '../components/ReasonCard'
 import ScoreGauge from '../components/ScoreGauge'
 import Skeleton from '../components/Skeleton'
-import TipCard, { approximateTipText } from '../components/TipCard'
+import TipCard, { tipText } from '../components/TipCard'
 import TopBar from '../components/TopBar'
 import { useToast } from '../components/Toast'
 import ContributionBar from '../charts/ContributionBar'
@@ -18,7 +18,7 @@ import SavingsStreak from '../charts/SavingsStreak'
 import SteadinessChart from '../charts/SteadinessChart'
 import BadWeekTest from '../components/BadWeekTest'
 import { api } from '../api/endpoints'
-import type { Loan, Offer, ScoreResult } from '../api/types'
+import type { Affordability, Loan, Offer, ScoreResult } from '../api/types'
 import { errText } from '../lib/errors'
 import { formatDate, formatINR, loanLender } from '../lib/format'
 import { useSession } from '../state/session'
@@ -27,16 +27,18 @@ export default function Dashboard() {
   const { t, i18n } = useTranslation()
   const navigate = useNavigate()
   const toast = useToast()
-  const { latestScore, setLatestScore, logout } = useSession()
+  const { latestScore, setLatestScore } = useSession()
   const [score, setScore] = useState<ScoreResult | null>(latestScore)
   const [error, setError] = useState<string | null>(null)
   const [loan, setLoan] = useState<Loan | null>(null)
   const [offer, setOffer] = useState<Offer | null>(null)
+  const [afford, setAfford] = useState<Affordability | null>(null)
 
   function load() {
     setError(null)
     api.getLatestScore().then((s) => { setScore(s); setLatestScore(s) }).catch((e) => setError(errText(t, e)))
     api.getLoans().then((l) => setLoan(l[0] ?? null)).catch(() => undefined)
+    api.getAffordability().then(setAfford).catch(() => setAfford(null))
     api.getOffers(1000000).then((o) => setOffer(o.loans.find((x) => x.eligible !== 'OUTSIDE') ?? null)).catch(() => undefined)
   }
   useEffect(load, []) // eslint-disable-line react-hooks/exhaustive-deps
@@ -53,7 +55,7 @@ export default function Dashboard() {
     ? t('screen.score.speak', {
         score: score.score, band: t(`band.${score.band}`),
         reason: score.reasons[0] ? t(`reason.${score.reasons[0].code}`, score.reasons[0].params) : '',
-        tip: score.tips[0] ? approximateTipText(t(`tip.${score.tips[0].code}`, { points: score.tips[0].points, ...(score.tips[0].params ?? {}) })) : '',
+        tip: score.tips[0] ? tipText(t, score.tips[0]) : '',
       })
     : ''
   const next = loan?.schedule.find((r) => r.status !== 'PAID')
@@ -109,7 +111,7 @@ export default function Dashboard() {
                   <p className="text-sm text-muted mt-2">{t('dashboard.riskEmpty')}</p>
                 )}
               </Card>
-              <Card className="lg:col-span-6 p-6 flex flex-col justify-between gap-4">
+              <Card className="lg:col-span-6 p-6 flex flex-col gap-4 self-start">
                 {next ? (
                   <div>
                     <h2 className="text-lg font-semibold">{t('dashboard.nextPayment')}</h2>
@@ -120,17 +122,15 @@ export default function Dashboard() {
                 ) : (
                   <div>
                     <h2 className="text-lg font-semibold">{t('dashboard.ready')}</h2>
+                    {afford && afford.safe_weekly_paise > 0 && (afford.loan_max_paise['26'] ?? 0) > 0 && (
+                      <p className="text-base font-semibold text-brand mt-2">
+                        {t('dashboard.safeLine', { amount: formatINR(afford.loan_max_paise['26']), weekly: formatINR(afford.safe_weekly_paise) })}
+                      </p>
+                    )}
                     <p className="text-sm text-muted mt-1">{t('dashboard.readyNote')}</p>
                   </div>
                 )}
                 <Button onClick={() => navigate('/app/loans')}>{t('screen.score.seeLoans')}</Button>
-                <Link to="/app/transactions" className="text-center text-sm font-semibold text-brand underline">
-                  {t('nav.transactions')}
-                </Link>
-                <button type="button" className="text-center text-sm text-muted underline"
-                  onClick={() => { logout(); navigate('/login', { replace: true }) }}>
-                  {t('account.logout')}
-                </button>
               </Card>
             </div>
             <p className="text-xs text-muted">{t('screen.score.footer')}</p>

@@ -28,9 +28,9 @@ LENDERS = [  # name, min_band, min_weeks, lender phone, product (CONTRACTS §4.2
 INSURANCE = [
     dict(name="Accident cover (PMSBY)", provider="Govt scheme · info only", premium_paise=2_000,
          premium_period="YEAR", cover_paise=20_000_000, is_govt_scheme=True),
-    dict(name="Suraksha Mini", provider="Hospital cash (demo)", premium_paise=1_000,
+    dict(name="Suraksha Mini", provider="Hospital cash", premium_paise=1_000,
          premium_period="WEEK", cover_paise=500_000, is_govt_scheme=False),
-    dict(name="Pahiya Protect", provider="Bike breakdown income cover (demo)", premium_paise=1_500,
+    dict(name="Pahiya Protect", provider="Bike breakdown income cover", premium_paise=1_500,
          premium_period="WEEK", cover_paise=150_000, is_govt_scheme=False),
 ]
 DATA_PERSONAS = ("sunita", "arjun", "meena")  # Ravi stays empty for the live demo
