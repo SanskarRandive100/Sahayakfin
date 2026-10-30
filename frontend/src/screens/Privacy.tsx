@@ -31,6 +31,7 @@ export default function Privacy() {
   const [consent, setConsent] = useState<Consent | null | undefined>(undefined)
   const [lenders, setLenders] = useState<LenderInfo[]>([])
   const [shares, setShares] = useState<Record<string, string>>({})
+  const [sharing, setSharing] = useState<string | null>(null)
   const [audit, setAudit] = useState<AuditRow[] | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [confirm, setConfirm] = useState(false)
@@ -39,9 +40,13 @@ export default function Privacy() {
 
   function load() {
     setError(null)
-    api.getConsents().then((c) => setConsent(c[0] ?? null)).catch((e) => setError(errText(t, e)))
-    api.getLenders().then(setLenders).catch(() => undefined)
-    api.getAudit().then(setAudit).catch(() => setAudit([]))
+    Promise.all([api.getConsents(), api.getLenders(), api.getAudit()]).then(([consents, rows, events]) => {
+      setConsent(consents.find((c) => c.status === 'ACTIVE') ?? consents[0] ?? null)
+      setLenders(rows)
+      const active = rows as (LenderInfo & { share_id?: string | null })[]
+      setShares(Object.fromEntries(active.filter((l) => l.share_id).map((l) => [l.id, l.share_id!])))
+      setAudit(events)
+    }).catch((e) => setError(errText(t, e)))
   }
   useEffect(load, []) // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -51,7 +56,8 @@ export default function Privacy() {
     try {
       const r = await api.revokeConsent(consent.id)
       setDeleted(r.deleted.transactions)
-      setConsent({ ...consent, status: 'REVOKED' })
+      setConsent(r.consent)
+      setShares({})
       if (latestScore) setLatestScore({ ...latestScore, consent_revoked: true })
       setConfirm(false)
       api.getAudit().then(setAudit).catch(() => undefined)
@@ -59,6 +65,8 @@ export default function Privacy() {
   }
 
   async function toggle(l: LenderInfo) {
+    if (sharing || consent?.status !== 'ACTIVE') return
+    setSharing(l.id)
     try {
       if (shares[l.id]) {
         await api.unshare(shares[l.id])
@@ -68,12 +76,12 @@ export default function Privacy() {
         setShares((s) => ({ ...s, [l.id]: r.id }))
       }
       api.getAudit().then(setAudit).catch(() => undefined)
-    } catch (e) { toast.show(errText(t, e), 'error') }
+    } catch (e) { toast.show(errText(t, e), 'error') } finally { setSharing(null) }
   }
 
   async function reset() {
-    try { await api.demoReset() } catch { /* ignore */ }
-    logout(); navigate('/language')
+    try { await api.demoReset(); logout(); navigate('/language') }
+    catch (e) { toast.show(errText(t, e), 'error') }
   }
 
   const stamp = (iso: string) => {
@@ -121,8 +129,8 @@ export default function Privacy() {
           {lenders.map((l) => (
             <label key={l.id} className="flex items-center justify-between py-2 min-h-[48px]">
               <span className="text-sm">{l.name}</span>
-              <input type="checkbox" role="switch" checked={!!shares[l.id]} onChange={() => toggle(l)}
-                className="w-6 h-6 accent-teal-700" aria-label={l.name} />
+              <input type="checkbox" role="switch" checked={!!shares[l.id]} disabled={!!sharing || consent?.status !== 'ACTIVE'} onChange={() => toggle(l)}
+                className="w-11 h-11 accent-teal-700 disabled:opacity-50" aria-label={l.name} />
             </label>
           ))}
         </Card>
@@ -135,10 +143,10 @@ export default function Privacy() {
             {audit?.map((a, i) => {
               const Icon = AUDIT_ICON[a.action] ?? Eye
               return (
-                <div key={i} className="flex items-center gap-3 py-2">
+                <div key={i} className="flex flex-wrap sm:flex-nowrap items-center gap-3 py-2">
                   <Icon className="w-4 h-4 text-brand flex-shrink-0" />
-                  <div className="flex-1 text-sm">{t(`audit.${a.action}`, { name: a.actor_name, defaultValue: a.action })}</div>
-                  <div className="text-xs text-muted whitespace-nowrap">{stamp(a.ts)}</div>
+                  <div className="flex-1 min-w-0 text-sm">{t(`audit.${a.action}`, { name: a.actor_name, defaultValue: a.action })}</div>
+                  <div className="text-xs text-muted w-full sm:w-auto sm:whitespace-nowrap pl-7 sm:pl-0">{stamp(a.ts)}</div>
                 </div>
               )
             })}
@@ -153,13 +161,13 @@ export default function Privacy() {
               {user?.phone_masked && <div className="text-xs text-muted">{user.phone_masked}</div>}
             </div>
             <button onClick={() => { logout(); navigate('/', { replace: true }) }}
-              className="inline-flex items-center gap-2 h-10 px-4 rounded-xl border border-line text-sm font-semibold hover:bg-slate-50">
+              className="inline-flex items-center gap-2 min-h-11 px-4 rounded-xl border border-line text-sm font-semibold hover:bg-slate-50">
               <LogOut className="w-4 h-4" />{t('account.logout')}
             </button>
           </div>
         </Card>
 
-        <button onClick={reset} className="block mx-auto text-xs text-muted underline py-3">{t('screen.privacy.reset')}</button>
+        <button onClick={reset} className="block mx-auto min-h-11 px-4 text-xs text-muted underline py-3">{t('screen.privacy.reset')}</button>
       </div>
       <BottomNav />
       <ConfirmSheet open={confirm} onClose={() => setConfirm(false)} onConfirm={revoke} loading={busy} danger

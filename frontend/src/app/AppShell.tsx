@@ -23,13 +23,13 @@ export default function AppShell() {
   const { user, logout } = useSession()
   const reduce = useReducedMotion()
   return (
-    <div className="min-h-screen bg-bg md:flex">
+    <div className="min-h-screen bg-bg md:flex [&_button]:min-h-11 [&_a]:min-h-11">
       <aside className="hidden md:flex md:w-[72px] lg:w-[240px] flex-shrink-0 flex-col bg-brand-900 text-white sticky top-0 h-screen">
         <NavLink to="/" className="h-16 flex items-center px-5 text-lg font-bold tracking-tight">
           <span className="lg:hidden">S</span>
           <span className="hidden lg:inline">Sahayak<span className="text-brand-100">Fin</span></span>
         </NavLink>
-        <nav className="flex-1 px-3 space-y-1" aria-label="Main">
+        <nav className="flex-1 px-3 space-y-1" aria-label={t('nav.main')}>
           {NAV.map(({ to, icon: Icon, key }) => (
             <NavLink key={to} to={to} title={t(key)}
               className={({ isActive }) =>

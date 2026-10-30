@@ -14,7 +14,7 @@ import { formatINR } from '../lib/format'
 import { Reveal } from './ui'
 
 export default function FairnessLab() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const [data, setData] = useState<FairnessReport | null>(null)
   const [error, setError] = useState<string | null>(null)
 
@@ -24,14 +24,14 @@ export default function FairnessLab() {
   }
   useEffect(load, []) // eslint-disable-line react-hooks/exhaustive-deps
 
-  const sunita = data?.personas.find((p) => p.name === 'Sunita')
-  const arjun = data?.personas.find((p) => p.name === 'Arjun')
+  const sunita = data?.personas.find((p) => p.name.split(' ')[0] === 'Sunita')
+  const arjun = data?.personas.find((p) => p.name.split(' ')[0] === 'Arjun')
 
   return (
     <div className="min-h-screen bg-bg">
       <header className="bg-brand-900 text-white">
         <div className="max-w-[1200px] mx-auto h-16 px-4 flex items-center justify-between">
-          <Link to="/" className="text-xl font-bold">Sahayak<span className="text-brand-100">Fin</span></Link>
+          <Link to="/" className="text-xl font-bold min-h-11 inline-flex items-center">Sahayak<span className="text-brand-100">Fin</span></Link>
           <LanguageSwitch />
         </div>
       </header>
@@ -48,7 +48,7 @@ export default function FairnessLab() {
                   <div className="text-xs text-muted">{t('screen.fairness.income', { amount: formatINR(p.monthly_income_paise) })}</div>
                   <div className="text-5xl font-bold mt-3" style={{ color: bandColor[p.band] }}>{p.score}</div>
                   <div className="text-sm font-semibold" style={{ color: bandColor[p.band] }}>{t(`band.${p.band}`)}</div>
-                  <div className="text-xs text-muted mt-1">{t(`confidence.${p.confidence.toLowerCase()}`, { weeks: 12 })}</div>
+                  <div className="text-xs text-muted mt-1">{t(`screen.lender.conf.${p.confidence}`)}{p.confidence === 'LOW' && <> · {t('confidence.provisional')}</>}</div>
                 </Reveal>
               ))}
             </div>
@@ -81,7 +81,7 @@ export default function FairnessLab() {
                   </span>
                   <div>
                     <div className="font-medium">{t(`fairness.${x.code}`, { defaultValue: x.code })}</div>
-                    <div className="text-sm text-muted">{x.detail}</div>
+                    <div className="text-sm text-muted">{i18n.language === 'en' ? x.detail : t(`fairnessDetail.${x.code}`, { defaultValue: x.detail })}</div>
                   </div>
                 </div>
               ))}

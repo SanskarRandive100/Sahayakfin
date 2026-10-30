@@ -12,12 +12,12 @@ import { api } from '../api/endpoints'
 import type { Category, Goal, Wellness } from '../api/types'
 import { categoryStyle } from '../lib/categories'
 import { errText } from '../lib/errors'
-import { formatDate, formatINR } from '../lib/format'
+import { formatINR } from '../lib/format'
 
 const MAX_CATS = 6
 
 export default function Money() {
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
   const toast = useToast()
   const [data, setData] = useState<Wellness | null>(null)
   const [goal, setGoal] = useState<Goal | null | undefined>(undefined)
@@ -25,6 +25,7 @@ export default function Money() {
   const [range, setRange] = useState(4)
   const [name, setName] = useState('')
   const [target, setTarget] = useState('')
+  const [saving, setSaving] = useState(false)
 
   function load() {
     setError(null)
@@ -49,9 +50,11 @@ export default function Money() {
 
   async function createGoal() {
     const paise = Number(target.replace(/\D/g, '')) * 100
-    if (!name.trim() || paise <= 0) return
+    if (!name.trim() || paise < 500 || paise > 10000000 || saving) return
+    setSaving(true)
     try { setGoal(await api.createGoal(name.trim(), paise)); toast.show(t('screen.money.goalSaved'), 'success') }
     catch (e) { toast.show(errText(t, e), 'error') }
+    finally { setSaving(false) }
   }
 
   return (
@@ -69,7 +72,7 @@ export default function Money() {
                 <div className="inline-flex rounded-lg border border-line p-0.5" role="group">
                   {[4, 12].map((n) => (
                     <button key={n} onClick={() => setRange(n)} aria-pressed={range === n}
-                      className={`h-9 px-3 rounded-md text-sm font-semibold ${range === n ? "bg-brand text-white" : "text-ink-2"}`}>{n} {t("screen.money.weeksShort")}</button>
+                      className={`h-11 px-3 rounded-md text-sm font-semibold ${range === n ? "bg-brand text-white" : "text-ink-2"}`}>{n} {t("screen.money.weeksShort")}</button>
                   ))}
                 </div>
               </div>
@@ -108,7 +111,7 @@ export default function Money() {
                     className="w-full h-12 rounded-xl border border-line px-3" aria-label={t('screen.money.goalName')} />
                   <input value={target} inputMode="numeric" onChange={(e) => setTarget(e.target.value)} placeholder={t('screen.money.goalAmount')}
                     className="w-full h-12 rounded-xl border border-line px-3" aria-label={t('screen.money.goalAmount')} />
-                  <Button onClick={createGoal}>{t('screen.money.createGoal')}</Button>
+                  <Button onClick={createGoal} loading={saving} disabled={!name.trim() || Number(target) < 5 || Number(target) > 100000}>{t('screen.money.createGoal')}</Button>
                 </div>
               )}
             </Card>
@@ -124,12 +127,7 @@ export default function Money() {
                     done: n.params.done_weeks, total: n.params.total_weeks,
                   })}
                 </div>
-                {n.code === 'PAYDAY_SAVE' && (
-                  <button onClick={() => toast.show(t('screen.money.moved'), 'success')}
-                    className="mt-2 h-10 px-3 rounded-lg bg-brand text-white text-sm font-semibold">
-                    {t('screen.money.moveToGoal', { amount: formatINR(Number(n.params.suggest_paise ?? 0)) })}
-                  </button>
-                )}
+
               </Card>
             ))}
           </>
