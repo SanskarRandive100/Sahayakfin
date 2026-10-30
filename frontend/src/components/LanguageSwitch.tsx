@@ -13,8 +13,10 @@ export default function LanguageSwitch() {
           key={l}
           onClick={() => setLanguage(l)}
           aria-pressed={current === l}
+          aria-label={{ en: 'English', hi: 'हिन्दी', mr: 'मराठी' }[l]}
+          lang={l}
           className={[
-            'px-2 h-8 min-w-[36px]',
+            'px-2 h-11 min-w-[44px]',
             current === l ? 'bg-brand text-white' : 'text-ink hover:bg-gray-50',
           ].join(' ')}
         >

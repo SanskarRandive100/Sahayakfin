@@ -8,6 +8,8 @@ import { api } from '../api/endpoints'
 import type { FairnessReport } from '../api/types'
 import LanguageSwitch from '../components/LanguageSwitch'
 import ScoreGauge from '../components/ScoreGauge'
+import ErrorBanner from '../components/ErrorBanner'
+import Skeleton from '../components/Skeleton'
 import { bandColor } from '../lib/band'
 import { useSession } from '../state/session'
 import { Beam, BorderBeam, Marquee, NumberTicker, Reveal } from './ui'
@@ -19,61 +21,57 @@ const PILLARS = [
   { k: 'living', icon: Wallet, span: '' },
 ] as const
 
-// Shown until /fairness/report answers (real numbers from data/samples, docs/ALGORITHM.md §8.3).
-const FALLBACK: FairnessReport['personas'] = [
-  { name: 'Sunita', monthly_income_paise: 1250200, score: 99, band: 'STRONG', confidence: 'HIGH' },
-  { name: 'Arjun', monthly_income_paise: 4007900, score: 43, band: 'FAIR', confidence: 'HIGH' },
-]
-
 const firstName = (n: string) => n.split(' ')[0]
 
 export default function Landing() {
   const { t } = useTranslation()
   const navigate = useNavigate()
   const { token, user, logout } = useSession()
-  const [personas, setPersonas] = useState(FALLBACK)
-  useEffect(() => {
-    api.getFairness().then((r) => {
-      // The API returns full names ("Sunita Jadhav"); show first names like the fallback.
-      const two = ['Sunita', 'Arjun'].map((f) => r.personas.find((p) => firstName(p.name) === f))
-      if (two[0] && two[1]) setPersonas(two.map((p) => ({ ...p!, name: firstName(p!.name) })))
-    }).catch(() => undefined)
-  }, [])
+  const [report, setReport] = useState<FairnessReport | null>(null)
+  const [error, setError] = useState(false)
+  function load() {
+    setError(false)
+    api.getFairness().then(setReport).catch(() => { setReport(null); setError(true) })
+  }
+  useEffect(load, [])
+  const personas = (report?.personas ?? []).filter((p) => ['Sunita', 'Arjun'].includes(firstName(p.name)))
+  const ravi = report?.personas.find((p) => firstName(p.name) === 'Ravi')
 
   return (
     <div className="bg-white text-ink">
       <header className="sticky top-0 z-30 bg-brand-900/95 backdrop-blur text-white">
-        <div className="max-w-[1200px] mx-auto h-16 px-4 flex items-center gap-6">
-          <Link to="/" className="text-xl font-bold">Sahayak<span className="text-brand-100">Fin</span></Link>
-          <nav className="hidden md:flex gap-6 text-sm text-white/80" aria-label="Sections">
-            <a href="#how" className="hover:text-white">{t('site.nav.how')}</a>
-            <Link to="/fairness" className="hover:text-white">{t('site.nav.fairness')}</Link>
-            <a href="#privacy" className="hover:text-white">{t('site.nav.privacy')}</a>
-            <a href="#lenders" className="hover:text-white">{t('site.nav.lenders')}</a>
+        <div className="max-w-[1200px] mx-auto min-h-16 py-2 px-4 flex flex-wrap items-center gap-3 lg:gap-6">
+          <Link to="/" className="text-xl font-bold min-h-11 inline-flex items-center shrink-0">Sahayak<span className="text-brand-100">Fin</span></Link>
+          <nav className="hidden lg:flex gap-6 text-sm text-white/80" aria-label="Sections">
+            <a href="#how" className="inline-flex min-h-11 items-center hover:text-white">{t('site.nav.how')}</a>
+            <Link to="/fairness" className="inline-flex min-h-11 items-center hover:text-white">{t('site.nav.fairness')}</Link>
+            <a href="#privacy" className="inline-flex min-h-11 items-center hover:text-white">{t('site.nav.privacy')}</a>
+            <a href="#lenders" className="inline-flex min-h-11 items-center hover:text-white">{t('site.nav.lenders')}</a>
           </nav>
           <div className="ml-auto flex items-center gap-3">
             <LanguageSwitch />
-            <Link to="/lender/login" className="hidden lg:inline-flex h-10 items-center px-3 rounded-xl text-sm font-semibold text-white/90 hover:bg-white/10">{t('site.nav.lenderLogin')}</Link>
+            <Link to="/lender/login" className="hidden lg:inline-flex min-h-11 items-center px-3 rounded-xl text-sm font-semibold text-white/90 hover:bg-white/10">{t('site.nav.lenderLogin')}</Link>
             {token ? (
               <>
                 <button onClick={() => { logout(); navigate('/', { replace: true }) }}
-                  className="hidden sm:inline-flex h-10 items-center px-3 rounded-xl text-sm font-semibold text-white/90 hover:bg-white/10">
+                  className="hidden sm:inline-flex min-h-11 items-center px-3 rounded-xl text-sm font-semibold text-white/90 hover:bg-white/10">
                   {t('account.logout')}
                 </button>
-                <Link to="/app/dashboard" className="inline-flex h-10 items-center px-4 rounded-xl bg-brand text-white text-sm font-semibold hover:bg-brand-800">
+                <Link to="/app/dashboard" className="inline-flex min-h-11 items-center px-4 rounded-xl bg-brand text-white text-sm font-semibold hover:bg-brand-800">
                   {user ? t('account.openAppFor', { name: firstName(user.display_name) }) : t('account.openApp')}
                 </Link>
               </>
             ) : (
               <>
-                <Link to="/login" className="inline-flex h-10 items-center px-3 rounded-xl text-sm font-semibold text-white/90 hover:bg-white/10">{t('account.login')}</Link>
-                <Link to="/language" className="hidden sm:inline-flex h-10 items-center px-4 rounded-xl bg-brand text-white text-sm font-semibold hover:bg-brand-800">{t('site.nav.cta')}</Link>
+                <Link to="/login" className="inline-flex min-h-11 items-center px-3 rounded-xl text-sm font-semibold text-white/90 hover:bg-white/10">{t('account.login')}</Link>
+                <Link to="/language" className="hidden sm:inline-flex min-h-11 items-center px-4 rounded-xl bg-brand text-white text-sm font-semibold hover:bg-brand-800">{t('site.nav.cta')}</Link>
               </>
             )}
           </div>
         </div>
       </header>
 
+      {error && <div className="max-w-[1200px] mx-auto p-4" role="status"><ErrorBanner onRetry={load}>{t('backend.unreachable')}</ErrorBanner></div>}
       <section className="bg-brand-900 text-white">
         <div className="max-w-[1200px] mx-auto px-4 py-16 md:py-24 grid lg:grid-cols-2 gap-12 items-center">
           <Reveal>
@@ -91,7 +89,7 @@ export default function Landing() {
           <Reveal delay={0.1} className="max-w-sm w-full mx-auto">
             <BorderBeam>
               <div className="p-6 flex flex-col items-center text-ink">
-                <ScoreGauge score={81} band="STRONG" />
+                {ravi ? <ScoreGauge score={ravi.score} band={ravi.band} /> : <Skeleton className="h-48 w-48 rounded-full" />}
                 <div className="mt-4 text-sm text-ink-2 text-center">{t('site.hero.card')}</div>
               </div>
             </BorderBeam>
@@ -152,10 +150,11 @@ export default function Landing() {
       <section className="py-16 md:py-24">
         <div className="max-w-[1000px] mx-auto px-4 text-center">
           <Reveal><h2 className="text-2xl md:text-[32px] font-bold">{t('site.fair.title')}</h2></Reveal>
+          {!report && !error && <Skeleton className="h-40 w-full mt-10" />}
           <div className="grid grid-cols-2 gap-4 mt-10">
             {personas.map((p) => (
               <Reveal key={p.name} className="bg-white border border-line rounded-card shadow-card p-6">
-                <div className="text-sm text-muted">{p.name} · ₹{Math.round(p.monthly_income_paise / 100000)}k</div>
+                <div className="text-sm text-muted">{firstName(p.name)} · ₹{Math.round(p.monthly_income_paise / 100000)}k</div>
                 <div className="text-6xl font-bold mt-2" style={{ color: bandColor[p.band] }}>{p.score}</div>
                 <div className="text-sm font-semibold" style={{ color: bandColor[p.band] }}>{t(`band.${p.band}`)}</div>
               </Reveal>

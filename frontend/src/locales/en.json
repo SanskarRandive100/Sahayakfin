@@ -12,7 +12,8 @@
     "money": "Money",
     "loans": "Loans",
     "privacy": "Privacy",
-    "transactions": "Transactions"
+    "transactions": "Transactions",
+    "main": "Main navigation"
   },
   "band": {
     "STRONG": "Strong",
@@ -159,7 +160,7 @@
       "revoke": "Stop sharing and delete my data",
       "revokeConfirm": "Delete my data",
       "confirmTitle": "Delete your data?",
-      "confirmBody": "This deletes all your transactions from SahayakFin. Your past score stays only as a loan record.",
+      "confirmBody": "Revoke access and delete my transactions. Historical scores, loans and audit records remain.",
       "deleted": "{{count}} transactions deleted",
       "lenders": "Lenders who can see your score summary",
       "lendersNote": "They see only your score, band and reasons, never your transactions.",
@@ -294,7 +295,10 @@
     "EXCEEDS_SAFE_INSTALMENT": "That weekly payment is more than is safe for you.",
     "UNKNOWN_PERSONA": "We don't know that demo profile.",
     "INTERNAL_ERROR": "Something went wrong on our side. Please try again.",
-    "generic": "Something went wrong. Please try again."
+    "generic": "Something went wrong. Please try again.",
+    "FORBIDDEN": "You do not have permission to do that.",
+    "BAD_CATEGORY": "Choose a valid transaction category.",
+    "BAD_TIP": "Choose one of the suggested tips."
   },
   "readAloud": "Read aloud",
   "stress": {
@@ -494,7 +498,7 @@
       "a": "We never ask for passwords, PINs or OTPs",
       "b": "Account numbers are masked",
       "c": "Lenders see a summary only",
-      "d": "One tap deletes your data"
+      "d": "Source transactions are deleted; historical lending records remain."
     },
     "lenders": {
       "title": "For lenders",
@@ -527,5 +531,22 @@
     "BAND_BELOW_MIN": "This lender needs a higher score band.",
     "TOO_FEW_WEEKS": "This lender needs more weeks of bank history.",
     "OTHER": "This lender can't offer you a loan right now."
+  },
+  "backend": {
+    "unreachable": "Backend not reachable. Start the backend and try again."
+  },
+  "fairnessDetail": {
+    "SCALE_HALF": "Compare scores after halving every amount.",
+    "SCALE_DOUBLE": "Compare scores after doubling every amount.",
+    "NAME_SWAP": "Compare scores after changing names.",
+    "STEADY_BEATS_RICH": "Compare steady income with higher volatile income.",
+    "MONOTONIC_SAVINGS": "Adding a saving week should not lower the score.",
+    "MONOTONIC_BILLS": "Paying bills on time should not lower the score.",
+    "MISSING_IS_NOT_BAD": "Missing bills are unavailable rather than scored as zero.",
+    "NO_PROTECTED_INPUTS": "Protected personal characteristics are not scoring inputs."
+  },
+  "runtime": {
+    "backendUnavailable": "Backend not reachable on :8000 — start the backend.",
+    "mockMode": "DEMO DATA (mocks)"
   }
 }
