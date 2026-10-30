@@ -1,5 +1,8 @@
 # Rajat final integration and worker acceptance
 
+> Historical pre-Sanskar-final snapshot. The final owner fixes and release checks
+> supersede its pending items; see `RELEASE_VERIFICATION.md`.
+
 30 October 2026, Asia/Kolkata. Active branch: `integration/final`.
 Application revision verified in Chromium: `8ace13ea634e46d778fd788ca593645721a931cd`.
 No PR created. Main and release tags have not been changed by this pass.

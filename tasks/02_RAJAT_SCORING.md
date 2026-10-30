@@ -1,5 +1,13 @@
 # Rajat: Scoring engine, statement parsing, loan maths and demo data
 
+## Release continuation (30 October 2026)
+
+Rajat delegated the Hindi laptop walkthrough to his friend and instructed release
+work to continue. Sanskar final browser fixes are merged; 311 backend tests, i18n,
+production build and all nine combined mobile worker steps pass. Follow
+RELEASE_VERIFICATION.md for the main/v1.0 release; older pending-status sections
+below describe earlier snapshots, not a new requirement to wait on that walkthrough.
+
 ## Current final integration (30 October 2026)
 
 `RAJAT_REMAINING.md` is the active handoff and supersedes the older branch/ownership

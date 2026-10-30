@@ -43,9 +43,10 @@ async function journey(viewport) {
     await page.goto(report.base,{waitUntil:'networkidle'});
     assert.equal(await page.getByTestId('mock-mode-badge').count(),0);
     assert.equal(await page.getByTestId('backend-health-banner').count(),0);
+    await page.getByRole('img',{name:'85 / 100',exact:true}).waitFor();
     await page.getByRole('link',{name:'Check my score (demo)',exact:true}).click();
     await page.waitForURL('**/language');
-    return {real_health:true,landing_sample_score:81};
+    return {real_health:true,landing_score:85};
   });
   await step(2,'login-consent',async()=>{
     await page.getByRole('button',{name:({en:'English',hi:'हिंदी',mr:'मराठी'})[language],exact:true}).click();
@@ -170,7 +171,7 @@ async function journey(viewport) {
   });
   await step(9,'navigation-locales-logout',async()=>{
     for(const [button,lang]of [['हिं','hi'],['मरा','mr'],['EN','en']]){
-      const options=page.getByRole('button',{name:button,exact:true});
+      const options=page.locator(`button[lang="${lang}"]`);
       await options.first().click();
       await page.waitForTimeout(200);
       assert.equal(await options.first().getAttribute('aria-pressed'),'true');
