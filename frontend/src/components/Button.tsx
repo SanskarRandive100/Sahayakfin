@@ -9,10 +9,10 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const classes = {
-  primary: 'bg-brand text-white hover:bg-teal-700 active:bg-teal-800 disabled:bg-teal-800/50',
-  secondary: 'bg-white text-ink border border-line hover:bg-gray-50 active:bg-gray-100 disabled:text-muted',
-  ghost: 'bg-transparent text-brand hover:bg-teal-50 active:bg-teal-100',
-  danger: 'bg-white text-red-700 border border-red-300 hover:bg-red-50 active:bg-red-100',
+  primary: 'bg-brand text-white shadow-btn hover:bg-brand-800 active:bg-brand-800 disabled:bg-brand/50 disabled:shadow-none',
+  secondary: 'bg-white/70 text-ink border border-line hover:bg-white active:bg-white disabled:text-muted',
+  ghost: 'bg-transparent text-brand hover:underline',
+  danger: 'bg-white/70 text-risk border border-risk/40 hover:bg-risk/[.06] active:bg-risk/10',
 }
 
 export default function Button({
@@ -29,8 +29,8 @@ export default function Button({
       {...rest}
       disabled={disabled || loading}
       className={[
-        'inline-flex items-center justify-center gap-2 font-medium rounded-xl transition-colors',
-        'h-[52px] px-4 text-base',
+        'inline-flex items-center justify-center gap-2 font-medium rounded-btn transition-colors duration-150',
+        'h-12 px-5 text-base',
         full ? 'w-full' : '',
         classes[variant],
         'disabled:cursor-not-allowed',

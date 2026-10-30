@@ -119,55 +119,55 @@ export default function LenderDashboard() {
   ]
 
   return (
-    <div className="min-h-screen bg-bg md:flex">
-      <aside className="md:w-[240px] flex-shrink-0 bg-brand-900 text-white md:min-h-screen p-4 flex md:flex-col items-center md:items-stretch gap-4">
-        <div className="text-lg font-bold px-2">Sahayak<span className="text-brand-100">Fin</span> <span className="text-xs font-normal text-white/60">{t('screen.lender.portal')}</span></div>
-        <div className="flex items-center gap-2 h-11 px-3 rounded-xl bg-brand text-sm font-medium"><LayoutDashboard className="w-5 h-5" />{t('screen.lender.applicantsNav')}</div>
+    <div className="min-h-screen bg-transparent md:flex">
+      <aside className="md:w-[240px] flex-shrink-0 glass-bar border-b md:border-b-0 md:border-r border-white/70 text-ink md:min-h-screen md:sticky md:top-0 md:h-screen p-4 flex md:flex-col items-center md:items-stretch gap-4">
+        <div className="text-lg font-semibold px-2 inline-flex items-center gap-2 flex-wrap"><span className="w-2.5 h-2.5 rounded-sm bg-mark" aria-hidden />Sahayak<span className="text-brand">Fin</span> <span className="text-xs font-normal text-muted">{t('screen.lender.portal')}</span></div>
+        <div className="relative flex items-center gap-2 h-11 px-3 rounded-full bg-brand/10 text-brand-800 text-sm font-medium before:absolute before:-left-4 before:top-2 before:bottom-2 before:w-[3px] before:rounded-r before:bg-brand"><LayoutDashboard className="w-5 h-5" strokeWidth={1.75} />{t('screen.lender.applicantsNav')}</div>
         <button onClick={() => { logout(); navigate('/') }} aria-label={t('screen.lender.logout')}
-          className="ml-auto md:ml-0 md:mt-auto flex items-center gap-2 h-11 px-3 rounded-xl text-sm text-white/80 hover:bg-white/10">
+          className="ml-auto md:ml-0 md:mt-auto flex items-center gap-2 h-11 px-3 rounded-btn text-sm text-ink-2 hover:bg-tint hover:text-ink">
           <LogOut className="w-5 h-5" /><span className="hidden md:inline">{t('screen.lender.logout')}</span>
         </button>
       </aside>
-      <main className="flex-1 min-w-0 p-4 md:p-8 space-y-6 max-w-[1200px]">
+      <main className="flex-1 min-w-0 p-4 md:p-8 space-y-6 max-w-[1160px]">
         <div className="flex flex-wrap items-center justify-between gap-3">
-          <h1 className="text-[26px] md:text-[32px] font-bold">{user?.display_name ?? 'MFI Alpha'} · {t('screen.lender.title')}</h1>
+          <h1 className="font-display text-[28px] md:text-[36px]">{user?.display_name ?? 'MFI Alpha'} · {t('screen.lender.title')}</h1>
           <div className="flex items-center gap-2">
             <LanguageSwitch />
             <button onClick={() => { logout(); navigate('/') }}
-              className="flex items-center gap-1.5 h-10 px-3 rounded-lg border border-line bg-white text-sm hover:bg-gray-50">
+              className="flex items-center gap-1.5 h-10 px-3 rounded-btn border border-line bg-white/70 text-sm hover:bg-white">
               <LogOut className="w-4 h-4" />{t('screen.lender.logout')}
             </button>
           </div>
         </div>
-        <div className="rounded-xl bg-brand-50 border border-brand-100 text-brand-900 text-sm px-4 py-3">{t('screen.lender.banner')}</div>
+        <div className="rounded-card bg-brand/10 border border-brand/20 text-brand-800 text-sm px-4 py-3">{t('screen.lender.banner')}</div>
         {error && <ErrorBanner onRetry={load}>{error}</ErrorBanner>}
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
           {kpis.map((k) => (
-            <div key={k.k} className="bg-white rounded-card border border-line shadow-card p-4">
-              <div className="text-sm text-muted">{t(`screen.lender.kpi.${k.k}`)}</div>
-              <div className="text-3xl font-bold mt-1">{k.pre}<NumberTicker key={k.v} value={k.v} decimals={k.d} /></div>
+            <div key={k.k} className="glass rounded-card p-5">
+              <div className="text-sm text-ink-2">{t(`screen.lender.kpi.${k.k}`)}</div>
+              <div className="font-display text-4xl mt-2">{k.pre}<NumberTicker key={k.v} value={k.v} decimals={k.d} /></div>
             </div>
           ))}
         </div>
 
         <div className="grid lg:grid-cols-5 gap-6">
-          <div className="lg:col-span-3 bg-white rounded-card border border-line shadow-card p-5">
+          <div className="lg:col-span-3 glass rounded-card p-5">
             <h2 className="text-lg font-semibold mb-2">{t('chart.bands.title')}</h2>
             {rows ? <BandDistribution rows={rows} /> : <Skeleton className="h-44 w-full" />}
           </div>
-          <div className="lg:col-span-2 bg-white rounded-card border border-line shadow-card p-5 space-y-3">
+          <div className="lg:col-span-2 glass rounded-card p-5 space-y-3">
             <h2 className="text-lg font-semibold">{t('screen.lender.rules')}</h2>
             <label className="text-sm block">{t('screen.lender.minBand')}
-              <select value={minBand} onChange={(e) => apply({ band: e.target.value as Band })} className="mt-1 w-full h-11 rounded-lg border border-line px-2 bg-white">
+              <select value={minBand} onChange={(e) => apply({ band: e.target.value as Band })} className="mt-1 w-full h-12 rounded-btn border border-line px-3 bg-white/70">
                 {BANDS.map((b) => <option key={b} value={b}>{t(`band.${b}`)}</option>)}
               </select>
             </label>
             <label className="text-sm block">{t('screen.lender.maxAmount')}
-              <input type="number" value={maxAmount / 100} onChange={(e) => apply({ amount: Number(e.target.value) * 100 })} className="mt-1 w-full h-11 rounded-lg border border-line px-2" />
+              <input type="number" value={maxAmount / 100} onChange={(e) => apply({ amount: Number(e.target.value) * 100 })} className="mt-1 w-full h-12 rounded-btn border border-line px-3 bg-white/70" />
             </label>
             <label className="text-sm block">{t('screen.lender.minWeeks')}
-              <input type="number" value={minWeeks} onChange={(e) => apply({ weeks: Number(e.target.value) })} className="mt-1 w-full h-11 rounded-lg border border-line px-2" />
+              <input type="number" value={minWeeks} onChange={(e) => apply({ weeks: Number(e.target.value) })} className="mt-1 w-full h-12 rounded-btn border border-line px-3 bg-white/70" />
             </label>
             {delta && (
               <div key={`${delta.before}-${delta.after}`} className="text-lg font-semibold text-brand fade-in">
@@ -186,7 +186,7 @@ export default function LenderDashboard() {
           </div>
         )}
 
-        <div className="bg-white rounded-card border border-line shadow-card">
+        <div className="solid rounded-card shadow-card">
           {rows && n > 0 && (
             <div className="flex flex-wrap items-center gap-3 p-4 border-b border-line">
               <label className="relative">
@@ -198,13 +198,13 @@ export default function LenderDashboard() {
               <div className="flex flex-wrap gap-1.5" role="group">
                 {filters.map((f) => (
                   <button key={f.k} onClick={() => setFilter(f.k)} aria-pressed={filter === f.k}
-                    className={`h-9 px-3 rounded-full text-sm border ${filter === f.k ? 'bg-brand text-white border-brand' : 'bg-white border-line hover:bg-gray-50'}`}>
+                    className={`h-9 px-3 rounded-full text-sm border ${filter === f.k ? 'bg-brand text-white border-brand' : 'bg-white/70 border-line hover:bg-white'}`}>
                     {t(`lenderV12.${f.label}`)}
                   </button>
                 ))}
               </div>
               <label className="text-sm flex items-center gap-2 ml-auto">{t('lenderV12.sortBy')}
-                <select value={sort} onChange={(e) => setSort(e.target.value as 'score' | 'safe')} className="h-10 rounded-lg border border-line px-2 bg-white">
+                <select value={sort} onChange={(e) => setSort(e.target.value as 'score' | 'safe')} className="h-12 rounded-btn border border-line px-3 bg-white/70">
                   <option value="score">{t('lenderV12.sortScore')}</option>
                   <option value="safe">{t('lenderV12.sortSafe')}</option>
                 </select>
@@ -217,7 +217,7 @@ export default function LenderDashboard() {
             {rows && n > 0 && shown.length === 0 && <div className="p-8 text-center text-muted">{t('lenderV12.noMatch')}</div>}
             {shown.length > 0 && (
               <table className="w-full text-sm">
-                <thead className="text-left text-muted border-b border-line">
+                <thead className="text-left text-ink-2 bg-tint border-b border-line">
                   <tr>
                     {['ref', 'score', 'confidence', 'reasons', 'safe', 'requested', 'status'].map((k) => <th key={k} className="p-3 font-medium whitespace-nowrap">{t(`screen.lender.col.${k}`)}</th>)}
                     <th className="p-3 font-medium whitespace-nowrap">{t('lenderV12.decision')}</th>
@@ -230,9 +230,9 @@ export default function LenderDashboard() {
                       <tr key={r.applicant_ref} onClick={() => setOpen(r)} tabIndex={0}
                         onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setOpen(r) } }}
                         aria-label={`${t('lenderV12.open')} ${r.applicant_ref}`}
-                        className="cursor-pointer hover:bg-brand-50/50 focus:outline-none focus:bg-brand-50">
+                        className="cursor-pointer even:bg-zebra hover:bg-brand-50 focus:outline-none focus:bg-brand-50">
                         <td className="p-3 font-mono">{r.applicant_ref}</td>
-                        <td className="p-3 whitespace-nowrap"><span className="font-bold mr-2" style={{ color: bandColor[r.band] }}>{r.score}</span><span style={{ color: bandColor[r.band] }}>{t(`band.${r.band}`)}</span></td>
+                        <td className="p-3 whitespace-nowrap"><span className="font-semibold mr-2" style={{ color: bandColor[r.band] }}>{r.score}</span><span style={{ color: bandColor[r.band] }}>{t(`band.${r.band}`)}</span></td>
                         <td className="p-3">{t(`screen.lender.conf.${r.confidence}`)}</td>
                         <td className="p-3 text-xs min-w-[200px]">{r.reasons.map((c) => t(`reasonShort.${c}`, { defaultValue: c })).join(' · ')}</td>
                         <td className="p-3">{formatINR(r.safe_weekly_paise)}</td>
@@ -252,13 +252,13 @@ export default function LenderDashboard() {
       {open && (
         <div className="fixed inset-0 z-40 flex justify-end" role="dialog" aria-modal="true" aria-labelledby="applicant-title">
           <div className="absolute inset-0 bg-black/40 fade-in" onClick={() => setOpen(null)} />
-          <div className="relative w-full max-w-[420px] h-full bg-white shadow-xl p-5 overflow-y-auto fade-in space-y-4">
+          <div className="relative w-full max-w-[420px] h-full glass rounded-none border-y-0 border-r-0 shadow-pop p-6 overflow-y-auto rise-in space-y-4">
             <div className="flex items-center justify-between">
               <h2 id="applicant-title" className="text-lg font-semibold">{t('lenderV12.drawerTitle', { ref: open.applicant_ref })}</h2>
-              <button onClick={() => setOpen(null)} aria-label={t('lenderV12.close')} className="w-9 h-9 grid place-items-center rounded-lg hover:bg-gray-100"><X className="w-5 h-5" /></button>
+              <button onClick={() => setOpen(null)} aria-label={t('lenderV12.close')} className="w-9 h-9 grid place-items-center rounded-lg hover:bg-tint"><X className="w-5 h-5" /></button>
             </div>
             <div className="flex items-end gap-3">
-              <div className="text-5xl font-bold" style={{ color: bandColor[open.band] }}>{open.score}</div>
+              <div className="text-5xl font-semibold" style={{ color: bandColor[open.band] }}>{open.score}</div>
               <div className="pb-1">
                 <div className="font-semibold" style={{ color: bandColor[open.band] }}>{t(`band.${open.band}`)}</div>
                 <div className="text-sm text-muted">{t('lenderV12.confidence')}: {t(`screen.lender.conf.${open.confidence}`)}</div>
@@ -272,17 +272,17 @@ export default function LenderDashboard() {
               </ul>
             </div>
             <dl className="grid grid-cols-2 gap-3 text-sm">
-              <div className="rounded-lg bg-bg p-3"><dt className="text-muted">{t('lenderV12.safeWeekly')}</dt><dd className="font-semibold text-base">{formatINR(open.safe_weekly_paise)}</dd></div>
-              <div className="rounded-lg bg-bg p-3"><dt className="text-muted">{t('lenderV12.requested')}</dt><dd className="font-semibold text-base">{formatINR(open.requested_paise)}</dd></div>
-              <div className="rounded-lg bg-bg p-3 col-span-2"><dt className="text-muted">{t('lenderV12.maxSafe')}</dt><dd className="font-semibold text-base">≈ {formatINR(open.safe_weekly_paise * 26)} <span className="text-xs font-normal text-muted">({t('lenderV12.approx')})</span></dd></div>
+              <div className="rounded-lg bg-transparent p-3"><dt className="text-muted">{t('lenderV12.safeWeekly')}</dt><dd className="font-semibold text-base">{formatINR(open.safe_weekly_paise)}</dd></div>
+              <div className="rounded-lg bg-transparent p-3"><dt className="text-muted">{t('lenderV12.requested')}</dt><dd className="font-semibold text-base">{formatINR(open.requested_paise)}</dd></div>
+              <div className="rounded-lg bg-transparent p-3 col-span-2"><dt className="text-muted">{t('lenderV12.maxSafe')}</dt><dd className="font-semibold text-base">≈ {formatINR(open.safe_weekly_paise * 26)} <span className="text-xs font-normal text-muted">({t('lenderV12.approx')})</span></dd></div>
             </dl>
-            <div className="flex items-start gap-2 rounded-lg bg-brand-50 border border-brand-100 text-brand-900 text-sm p-3">
+            <div className="flex items-start gap-2 rounded-btn bg-brand-50 border border-brand-100 text-brand text-sm p-3">
               <ShieldCheck className="w-4 h-4 mt-0.5 flex-shrink-0" />{t('lenderV12.privacy')}
             </div>
             <div className="grid gap-2">
-              <button onClick={() => decide(open.applicant_ref, 'APPROVED')} className="h-11 rounded-xl bg-brand text-white font-medium hover:opacity-90">{t('lenderV12.approve')}</button>
-              <button onClick={() => decide(open.applicant_ref, 'INFO')} className="h-11 rounded-xl border border-amber-400 text-amber-800 bg-amber-50 font-medium hover:bg-amber-100">{t('lenderV12.askInfo')}</button>
-              <button onClick={() => decide(open.applicant_ref, 'DECLINED')} className="h-11 rounded-xl border border-line text-gray-700 font-medium hover:bg-gray-50">{t('lenderV12.decline')}</button>
+              <button onClick={() => decide(open.applicant_ref, 'APPROVED')} className="h-11 rounded-btn bg-brand text-white font-medium transition-colors duration-150 hover:bg-brand-800">{t('lenderV12.approve')}</button>
+              <button onClick={() => decide(open.applicant_ref, 'INFO')} className="h-11 rounded-btn border border-amber-400 text-amber-800 bg-amber-50 font-medium hover:bg-amber-100">{t('lenderV12.askInfo')}</button>
+              <button onClick={() => decide(open.applicant_ref, 'DECLINED')} className="h-11 rounded-btn border border-line text-ink font-medium hover:bg-tint">{t('lenderV12.decline')}</button>
             </div>
           </div>
         </div>

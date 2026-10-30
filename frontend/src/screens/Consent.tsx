@@ -42,7 +42,7 @@ export default function Consent() {
         {error && <ErrorBanner>{error}</ErrorBanner>}
         {rows.map(({ icon: Icon, text, detail }, i) => (
           <div key={i} className="flex items-start gap-3 bg-white border border-line rounded-card p-4">
-            <div className="w-9 h-9 rounded-full bg-teal-50 text-brand flex items-center justify-center flex-shrink-0">
+            <div className="w-9 h-9 rounded-full bg-brand-50 text-brand flex items-center justify-center flex-shrink-0">
               <Icon className="w-5 h-5" />
             </div>
             <div className="text-sm pt-1.5 min-w-0 flex-1">

@@ -21,7 +21,7 @@ export default function BadWeekTest({ instalmentPaise, defaultOpen = false }: { 
   }, [open, shock, instalmentPaise])
 
   return (
-    <div className="mt-3 rounded-xl border border-line">
+    <div className="mt-3 rounded-btn border border-line">
       <button onClick={() => setOpen(!open)} aria-expanded={open}
         className="w-full flex items-center justify-between px-3 h-12 text-sm font-semibold text-brand">
         {t('stress.title')}

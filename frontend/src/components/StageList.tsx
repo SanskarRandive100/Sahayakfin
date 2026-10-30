@@ -18,8 +18,8 @@ export default function StageList({
         const done = i < doneCount
         const active = i === doneCount
         return (
-          <li key={code} className="flex items-center gap-3 bg-white rounded-xl border border-line p-3">
-            <div className={`w-9 h-9 rounded-full flex items-center justify-center ${done ? 'bg-green-100 text-green-700' : 'bg-gray-100 text-muted'}`}>
+          <li key={code} className="flex items-center gap-3 bg-white rounded-btn border border-line p-3">
+            <div className={`w-9 h-9 rounded-full flex items-center justify-center ${done ? 'bg-green-100 text-green-700' : 'bg-tint text-muted'}`}>
               {done ? <Check className="w-5 h-5" /> : active ? <Loader2 className="w-5 h-5 animate-spin" /> : <Icon className="w-5 h-5" />}
             </div>
             <div className="flex-1 text-base">{t(`screen.processing.${code}`)}</div>

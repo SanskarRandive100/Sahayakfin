@@ -1,7 +1,8 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, type ReactNode } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import BottomNav from '../components/BottomNav'
+import BandChip from '../components/BandChip'
 import Button from '../components/Button'
 import Card from '../components/Card'
 import Chip from '../components/Chip'
@@ -16,12 +17,23 @@ import { useToast } from '../components/Toast'
 import ContributionBar from '../charts/ContributionBar'
 import SavingsStreak from '../charts/SavingsStreak'
 import SteadinessChart from '../charts/SteadinessChart'
+import Sparkline from '../charts/Sparkline'
+import { NumberTicker } from '../site/ui'
 import BadWeekTest from '../components/BadWeekTest'
 import { api } from '../api/endpoints'
 import type { Affordability, Loan, Offer, ScoreResult } from '../api/types'
 import { errText } from '../lib/errors'
 import { formatDate, formatINR, loanLender } from '../lib/format'
 import { useSession } from '../state/session'
+
+function Kpi({ label, children }: { label: string; children: ReactNode }) {
+  return (
+    <div className="glass rounded-card p-4 md:p-5 min-w-0">
+      <div className="text-sm text-ink-2">{label}</div>
+      <div className="mt-2">{children}</div>
+    </div>
+  )
+}
 
 export default function Dashboard() {
   const { t, i18n } = useTranslation()
@@ -31,13 +43,14 @@ export default function Dashboard() {
   const [score, setScore] = useState<ScoreResult | null>(latestScore)
   const [error, setError] = useState<string | null>(null)
   const [loan, setLoan] = useState<Loan | null>(null)
+  const [loansLoaded, setLoansLoaded] = useState(false)
   const [offer, setOffer] = useState<Offer | null>(null)
   const [afford, setAfford] = useState<Affordability | null>(null)
 
   function load() {
     setError(null)
     api.getLatestScore().then((s) => { setScore(s); setLatestScore(s) }).catch((e) => setError(errText(t, e)))
-    api.getLoans().then((l) => setLoan(l[0] ?? null)).catch(() => undefined)
+    api.getLoans().then((l) => setLoan(l[0] ?? null)).catch(() => undefined).finally(() => setLoansLoaded(true))
     api.getAffordability().then(setAfford).catch(() => setAfford(null))
     api.getOffers(1000000).then((o) => setOffer(o.loans.find((x) => x.eligible !== 'OUTSIDE') ?? null)).catch(() => undefined)
   }
@@ -68,6 +81,30 @@ export default function Dashboard() {
         {!score && !error && <Skeleton className="h-64 w-full" />}
         {score && score.score !== null && (
           <>
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
+              <Kpi label={t('dashboard.kpi.score')}>
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className="font-display text-3xl leading-none"><NumberTicker value={score.score} /></span>
+                  <BandChip band={score.band} />
+                </div>
+              </Kpi>
+              <Kpi label={t('dashboard.kpi.safeWeekly')}>
+                <span className="font-display text-2xl md:text-3xl leading-none">
+                  {afford ? <NumberTicker value={afford.safe_weekly_paise} format={formatINR} /> : '—'}
+                </span>
+              </Kpi>
+              <Kpi label={t('dashboard.kpi.weeksSaved')}>
+                <span className="font-display text-2xl md:text-3xl leading-none">{score.metrics.savings_weeks}/{score.weeks_observed}</span>
+              </Kpi>
+              <Kpi label={t('dashboard.nextPayment')}>
+                {!loansLoaded ? <Skeleton className="h-7 w-24" /> : next ? (
+                  <>
+                    <div className="font-display text-2xl md:text-3xl leading-none"><NumberTicker value={next.amount_paise} format={formatINR} /></div>
+                    <div className="text-xs text-ink-2 mt-1">{formatDate(next.due_date, i18n.language)}</div>
+                  </>
+                ) : <span className="text-base font-semibold text-ink-2">{t('dashboard.kpi.noLoan')}</span>}
+              </Kpi>
+            </div>
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
               <Card className="lg:col-span-5 flex flex-col items-center p-6">
                 <ScoreGauge score={score.score} band={score.band} />
@@ -87,7 +124,10 @@ export default function Dashboard() {
                 )}
               </Card>
               <Card className="lg:col-span-8 p-6">
-                <h2 className="text-lg font-semibold mb-2">{t('chart.steady.title')}</h2>
+                <div className="flex items-center justify-between gap-3 mb-2">
+                  <h2 className="text-lg font-semibold">{t('chart.steady.title')}</h2>
+                  {score.metrics.weekly && score.metrics.weekly.length > 1 && <Sparkline weekly={score.metrics.weekly} />}
+                </div>
                 <SteadinessChart weekly={score.metrics.weekly} medianPaise={score.metrics.median_weekly_income_paise}
                   p25Paise={score.metrics.p25_weekly_income_paise} />
               </Card>
@@ -115,7 +155,7 @@ export default function Dashboard() {
                 {next ? (
                   <div>
                     <h2 className="text-lg font-semibold">{t('dashboard.nextPayment')}</h2>
-                    <div className="text-3xl font-bold mt-2">{formatINR(next.amount_paise)}</div>
+                    <div className="font-display text-3xl mt-2">{formatINR(next.amount_paise)}</div>
                     <div className="text-sm text-muted">{[formatDate(next.due_date, i18n.language), loan && loanLender(loan)].filter(Boolean).join(' · ')}</div>
                     <Link to="/app/loan" className="text-brand text-sm font-semibold underline mt-2 inline-block">{t('dashboard.viewLoan')}</Link>
                   </div>

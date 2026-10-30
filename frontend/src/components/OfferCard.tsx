@@ -14,11 +14,13 @@ export default function OfferCard({
   const outside = offer.eligible === 'OUTSIDE'
   return (
     <Card>
-      <div className="flex items-center justify-between mb-2">
-        <div className="text-base font-semibold">{offer.lender.name}</div>
-        {offer.eligible === 'ELIGIBLE' && <Chip variant="green">{t('screen.loans.preApproved')}</Chip>}
-        {offer.eligible === 'NEEDS_REVIEW' && <Chip variant="amber">{t('screen.loans.needsReview')}</Chip>}
-        {outside && <Chip variant="grey">{t('screen.loans.notAvailable')}</Chip>}
+      <div className="mb-3 space-y-2">
+        <div>
+          {offer.eligible === 'ELIGIBLE' && <Chip variant="green">{t('screen.loans.preApproved')}</Chip>}
+          {offer.eligible === 'NEEDS_REVIEW' && <Chip variant="amber">{t('screen.loans.needsReview')}</Chip>}
+          {outside && <Chip variant="grey">{t('screen.loans.notAvailable')}</Chip>}
+        </div>
+        <div className="text-lg font-semibold">{offer.lender.name}</div>
       </div>
       {!outside && <KfsCard offer={offer} weekday={weekday} />}
       {!outside && <KfsCostBar kfs={offer.kfs} />}

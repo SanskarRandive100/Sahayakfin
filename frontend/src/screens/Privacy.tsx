@@ -109,7 +109,13 @@ export default function Privacy() {
 
         {consent && (
           <Card>
-            <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="w-11 h-11 rounded-full bg-brand/[.12] text-brand flex items-center justify-center flex-shrink-0">
+                <ShieldCheck className="w-6 h-6" strokeWidth={1.75} aria-hidden />
+              </span>
+              <h2 className="text-lg font-semibold">{t('screen.privacy.control')}</h2>
+            </div>
+            <div className="flex items-center justify-between gap-2">
               <div className="font-semibold">{t('screen.privacy.purpose')}</div>
               <Chip variant={consent.status === 'ACTIVE' ? 'green' : 'grey'}>{t(`screen.privacy.status.${consent.status}`)}</Chip>
             </div>
@@ -130,7 +136,7 @@ export default function Privacy() {
             <label key={l.id} className="flex items-center justify-between py-2 min-h-[48px]">
               <span className="text-sm">{l.name}</span>
               <input type="checkbox" role="switch" checked={!!shares[l.id]} disabled={!!sharing || consent?.status !== 'ACTIVE'} onChange={() => toggle(l)}
-                className="w-11 h-11 accent-teal-700 disabled:opacity-50" aria-label={l.name} />
+                className="w-11 h-11 accent-brand disabled:opacity-50" aria-label={l.name} />
             </label>
           ))}
         </Card>
@@ -161,7 +167,7 @@ export default function Privacy() {
               {user?.phone_masked && <div className="text-xs text-muted">{user.phone_masked}</div>}
             </div>
             <button onClick={() => { logout(); navigate('/', { replace: true }) }}
-              className="inline-flex items-center gap-2 min-h-11 px-4 rounded-xl border border-line text-sm font-semibold hover:bg-slate-50">
+              className="inline-flex items-center gap-2 min-h-11 px-4 rounded-btn border border-line text-sm font-semibold hover:bg-slate-50">
               <LogOut className="w-4 h-4" />{t('account.logout')}
             </button>
           </div>

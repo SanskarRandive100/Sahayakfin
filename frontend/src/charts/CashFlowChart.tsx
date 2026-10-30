@@ -6,10 +6,10 @@ import { formatDate, formatINR } from '../lib/format'
 import Caption, { Empty } from './Caption'
 
 const PALETTE: Record<string, string> = {
-  FUEL: '#E76F51', FOOD: '#F4A261', RENT: '#2A9D8F', BILLS: '#264653', PHONE: '#8AB17D', TRANSPORT: '#E9C46A',
-  FAMILY: '#9C6ADE', HEALTH: '#EF476F', EDUCATION: '#118AB2', CASH_WITHDRAWAL: '#6C757D', FEES_CHARGES: '#B5838D',
+  FUEL: '#0E7C70', FOOD: '#4A6A8F', RENT: '#8FA6C2', BILLS: '#5B7C6B', PHONE: '#A3B8A8', TRANSPORT: '#B08D57',
+  FAMILY: '#7A6F9B', HEALTH: '#A86B5E', EDUCATION: '#3E7C8C', CASH_WITHDRAWAL: '#7D828B', FEES_CHARGES: '#C2B49A',
 }
-const OTHER = '#94A3B8'
+const OTHER = '#D5DAE3'
 const MAX = 6
 
 export default function CashFlowChart({ weeks }: { weeks: Wellness['weeks'] }) {
@@ -31,9 +31,9 @@ export default function CashFlowChart({ weeks }: { weeks: Wellness['weeks'] }) {
       <div style={{ height: 240 }}>
         <ResponsiveContainer width="100%" height="100%">
           <ComposedChart data={data} margin={{ top: 8, right: 8, left: 0, bottom: 0 }}>
-            <CartesianGrid stroke="#E2E8F0" vertical={false} />
-            <XAxis dataKey="label" tick={{ fontSize: 12, fill: '#64748B' }} axisLine={false} tickLine={false} />
-            <YAxis tick={{ fontSize: 12, fill: '#64748B' }} axisLine={false} tickLine={false} width={44}
+            <CartesianGrid stroke="#E3E8EE" vertical={false} />
+            <XAxis dataKey="label" tick={{ fontSize: 12, fill: '#4B5B6B' }} axisLine={false} tickLine={false} />
+            <YAxis tick={{ fontSize: 12, fill: '#4B5B6B' }} axisLine={false} tickLine={false} width={44}
               tickFormatter={(v) => `₹${Math.round(v / 1000)}k`} />
             <Tooltip formatter={(v: number) => formatINR(v * 100)} />
             {top.map((c) => (
@@ -41,7 +41,7 @@ export default function CashFlowChart({ weeks }: { weeks: Wellness['weeks'] }) {
                 name={t(categoryStyle[c as Category]?.key ?? 'category.OTHER')} />
             ))}
             <Bar dataKey="other" stackId="a" fill={OTHER} name={t('category.OTHER')} />
-            <Line dataKey="income" stroke="#0F172A" strokeWidth={2} dot={{ r: 3 }} name={t('chart.cash.income')} />
+            <Line dataKey="income" stroke="#2F5BD3" strokeWidth={2} dot={{ r: 3 }} name={t('chart.cash.income')} />
           </ComposedChart>
         </ResponsiveContainer>
       </div>

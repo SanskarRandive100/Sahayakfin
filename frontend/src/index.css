@@ -4,24 +4,24 @@
 
 @layer base {
   :root {
-    --background: 210 40% 98%;
-    --foreground: 222 47% 11%;
+    --background: 210 33% 96%;
+    --foreground: 210 51% 12%;
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card-foreground: 210 51% 12%;
     --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
-    --primary: 175 77% 26%;
+    --popover-foreground: 210 51% 12%;
+    --primary: 173 80% 27%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 166 76% 97%;
-    --secondary-foreground: 175 77% 26%;
-    --accent: 166 76% 97%;
-    --accent-foreground: 175 77% 26%;
-    --destructive: 355 70% 47%;
+    --secondary: 210 29% 95%;
+    --secondary-foreground: 210 51% 12%;
+    --accent: 172 30% 93%;
+    --accent-foreground: 173 80% 27%;
+    --destructive: 357 72% 47%;
     --destructive-foreground: 0 0% 100%;
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 175 77% 26%;
-    --radius: 0.75rem;
+    --border: 213 24% 91%;
+    --input: 213 24% 91%;
+    --ring: 173 80% 27%;
+    --radius: 0.875rem;
   }
 }
 
@@ -31,7 +31,7 @@
 
 :root {
   color-scheme: light;
-  font-family: 'Plus Jakarta Sans', 'Noto Sans Devanagari', system-ui, -apple-system, sans-serif;
+  font-family: 'Inter', 'Noto Sans Devanagari', system-ui, -apple-system, sans-serif;
 }
 
 html, body, #root {
@@ -39,10 +39,43 @@ html, body, #root {
 }
 
 body {
-  background-color: #F8FAFC;
-  color: #0F172A; font-variant-numeric: tabular-nums;
+  background-color: #F3F6F9;
+  color: #0F1E2E;
+  font-size: 16px;
+  line-height: 1.55;
+  font-variant-numeric: tabular-nums;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Two soft colour blobs fixed behind the content. */
+body::before, body::after {
+  content: '';
+  position: fixed;
+  z-index: 0;
+  width: 70vmax;
+  height: 70vmax;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.22;
+}
+body::before {
+  top: -30vmax;
+  left: -25vmax;
+  background: radial-gradient(circle, #2BB3A3 0%, rgba(43,179,163,0) 65%);
+}
+body::after {
+  bottom: -35vmax;
+  right: -25vmax;
+  background: radial-gradient(circle, #5B8DEF 0%, rgba(91,141,239,0) 65%);
+}
+@media (max-width: 767px) {
+  body::after { display: none; }
+}
+
+#root {
+  position: relative;
+  z-index: 1;
 }
 
 * {
@@ -50,13 +83,43 @@ body {
 }
 
 button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
-  outline: 2px solid #0f766e;
+  outline: 2px solid #0E7C70;
   outline-offset: 2px;
-  border-radius: 8px;
+  border-radius: 14px;
+}
+
+@layer components {
+  /* Frosted surface for containers: cards, panels, modals. */
+  .glass {
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), 0 8px 30px rgba(15, 35, 60, 0.08);
+  }
+  /* Frosted bar: top bar, sidebar, bottom nav. Borders are set per use. */
+  .glass-bar {
+    background: rgba(255, 255, 255, 0.92);
+  }
+  @supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+    .glass, .glass-bar {
+      background: rgba(255, 255, 255, 0.7);
+      -webkit-backdrop-filter: blur(18px) saturate(140%);
+      backdrop-filter: blur(18px) saturate(140%);
+    }
+  }
+  /* Solid surface for dense content: tables, transaction lists, KFS rows. */
+  .solid {
+    background: #FFFFFF;
+    border: 1px solid #E3E8EE;
+  }
 }
 
 @keyframes fadein {
-  from { opacity: 0; transform: translateY(4px); }
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(6px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
@@ -64,7 +127,18 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   animation: fadein 180ms ease-out both;
 }
 
+.rise-in {
+  animation: rise 200ms ease-out both;
+}
+
 /* Hide number input spinners */
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
 input[type=number] { -moz-appearance: textfield; }
+
+.font-display { font-family: 'Manrope', 'Noto Sans Devanagari', system-ui, sans-serif; font-weight: 800; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+
+input:not([type=checkbox]):not([type=radio]):not([type=range]):focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px #0E7C70;
+}

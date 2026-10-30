@@ -19,7 +19,7 @@ export default function ScheduleList({ rows, onPay, payingId }: { rows: Repaymen
         </div>
           {onPay && r.id === nextId && (
             <button onClick={() => onPay(r)} disabled={payingId === r.id}
-              className="mt-2 w-full h-11 rounded-xl bg-brand text-white font-semibold disabled:opacity-60">
+              className="mt-2 w-full h-11 rounded-btn bg-brand text-white font-semibold disabled:opacity-60">
               {t('screen.myLoan.payNow', { amount: formatINR(r.amount_paise) })}
             </button>
           )}

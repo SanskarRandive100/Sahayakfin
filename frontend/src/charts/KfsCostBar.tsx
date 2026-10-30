@@ -7,9 +7,9 @@ export default function KfsCostBar({ kfs }: { kfs: KFS }) {
   const total = kfs.total_repayable_paise || 1
   const interest = Math.max(0, kfs.total_cost_paise - kfs.fee_paise)
   const seg = [
-    { k: 'receive', v: kfs.net_disbursed_paise, c: '#0F766E' },
+    { k: 'receive', v: kfs.net_disbursed_paise, c: '#0E7C70' },
     { k: 'fee', v: kfs.fee_paise, c: '#BF8700' },
-    { k: 'interest', v: interest, c: '#64748B' },
+    { k: 'interest', v: interest, c: '#4B5B6B' },
   ]
   return (
     <div className="mt-3">

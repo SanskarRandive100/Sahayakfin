@@ -12,10 +12,10 @@ const items = [
 export default function BottomNav() {
   const { t } = useTranslation()
   return (
-    <nav className="md:hidden fixed bottom-0 inset-x-0 z-20 bg-white border-t border-line grid grid-cols-4" aria-label={t('nav.main')}>
+    <nav className="md:hidden fixed bottom-0 inset-x-0 z-20 glass-bar border-t border-white/70 shadow-[0_-1px_0_rgba(15,35,60,0.06)] grid grid-cols-4" aria-label={t('nav.main')}>
       {items.map(({ to, icon: Icon, key }) => (
         <NavLink key={to} to={to}
-          className={({ isActive }) => `flex flex-col items-center justify-center gap-0.5 h-16 text-xs ${isActive ? 'text-brand font-semibold' : 'text-muted'}`}>
+          className={({ isActive }) => `flex flex-col items-center justify-center gap-0.5 h-16 text-xs ${isActive ? 'text-brand font-semibold' : 'text-ink-2'}`}>
           <Icon className="w-6 h-6" strokeWidth={1.75} />
           {t(key)}
         </NavLink>

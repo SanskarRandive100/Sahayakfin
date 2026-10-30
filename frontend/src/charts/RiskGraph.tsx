@@ -37,7 +37,7 @@ export default function RiskGraph({
   const variant = result?.light === 'GREEN' ? 'green' : result?.light === 'AMBER' ? 'amber' : 'red'
   return (
     <div>
-      <div className="inline-flex rounded-xl border border-line bg-white p-1 gap-1" role="group" aria-label={t('chart.risk.shock')}>
+      <div className="inline-flex rounded-btn border border-line bg-white p-1 gap-1" role="group" aria-label={t('chart.risk.shock')}>
         {SHOCKS.map((s) => (
           <button key={s} onClick={() => onShockChange(s)} aria-pressed={shock === s}
             className={`h-10 min-w-[56px] px-3 rounded-lg text-sm font-semibold ${shock === s ? 'bg-brand text-white' : 'text-ink-2 hover:bg-slate-50'}`}>
@@ -63,8 +63,8 @@ export default function RiskGraph({
           <div style={{ height: 190 }} className="mt-2">
             <ResponsiveContainer width="100%" height="100%">
               <BarChart data={data} margin={{ top: 16, right: 8, left: 0, bottom: 0 }}>
-                <XAxis dataKey="label" tick={{ fontSize: 12, fill: '#64748B' }} axisLine={false} tickLine={false} interval="preserveStartEnd" />
-                <YAxis tick={{ fontSize: 12, fill: '#64748B' }} axisLine={false} tickLine={false} width={56}
+                <XAxis dataKey="label" tick={{ fontSize: 12, fill: '#4B5B6B' }} axisLine={false} tickLine={false} interval="preserveStartEnd" />
+                <YAxis tick={{ fontSize: 12, fill: '#4B5B6B' }} axisLine={false} tickLine={false} width={56}
                   tickFormatter={(v: number) => (v < 0 ? `−₹${Math.abs(v)}` : `₹${v}`)} />
                 <Tooltip cursor={{ fill: 'rgba(15,23,42,0.06)' }} content={({ active, payload }) => {
                   const d = active && payload?.[0]?.payload as (typeof data)[number] | undefined
@@ -76,7 +76,7 @@ export default function RiskGraph({
                     </div>
                   )
                 }} />
-                <ReferenceLine y={instalmentPaise / 100} stroke="#0F172A" strokeDasharray="4 4" />
+                <ReferenceLine y={instalmentPaise / 100} stroke="#0F1E2E" strokeDasharray="4 4" />
                 <Bar dataKey="bar" radius={[4, 4, 0, 0]} animationDuration={400}>
                   {data.map((d, i) => <Cell key={i} fill={d.short ? '#CF222E' : '#1A7F37'} />)}
                 </Bar>

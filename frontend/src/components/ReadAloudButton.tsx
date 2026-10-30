@@ -9,7 +9,7 @@ export default function ReadAloudButton({ text }: { text: string }) {
     <button
       onClick={() => speak(text, i18n.language)}
       aria-label={t('readAloud')}
-      className="inline-flex items-center gap-1.5 h-10 px-3 rounded-full border border-line bg-white text-sm text-brand"
+      className="inline-flex items-center gap-1.5 h-10 px-3 rounded-full border border-line bg-white/70 text-sm text-brand"
     >
       <Volume2 className="w-4 h-4" /> {t('readAloud')}
     </button>

@@ -14,8 +14,8 @@ export default function BandDistribution({ rows }: { rows: Applicant[] }) {
       <div style={{ height: 180 }}>
         <ResponsiveContainer width="100%" height="100%">
           <BarChart data={data} margin={{ top: 8, right: 8, left: 0, bottom: 0 }}>
-            <XAxis dataKey="label" tick={{ fontSize: 12, fill: '#64748B' }} axisLine={false} tickLine={false} />
-            <YAxis allowDecimals={false} tick={{ fontSize: 12, fill: '#64748B' }} axisLine={false} tickLine={false} width={28} />
+            <XAxis dataKey="label" tick={{ fontSize: 12, fill: '#4B5B6B' }} axisLine={false} tickLine={false} />
+            <YAxis allowDecimals={false} tick={{ fontSize: 12, fill: '#4B5B6B' }} axisLine={false} tickLine={false} width={28} />
             <Tooltip />
             <Bar dataKey="n" radius={[4, 4, 0, 0]}>{data.map((d) => <Cell key={d.band} fill={bandColor[d.band]} />)}</Bar>
           </BarChart>

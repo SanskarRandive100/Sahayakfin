@@ -68,7 +68,7 @@ export default function Login() {
               inputMode="numeric" maxLength={10} value={phone}
               onChange={(e) => setPhone(e.target.value.replace(/\D/g, ''))}
               placeholder="9000000001"
-              className="w-full h-[52px] rounded-xl border border-line bg-white px-4 text-lg tracking-wider"
+              className="w-full h-12 rounded-btn border border-line bg-white/70 px-4 text-lg tracking-wider"
             />
             <Button onClick={sendOtp} loading={loading} disabled={phone.length !== 10}>{t('screen.login.sendOtp')}</Button>
           </>
@@ -82,7 +82,7 @@ export default function Login() {
                   inputMode="numeric" value={d} aria-label={`${i + 1}`}
                   onChange={(e) => onDigit(i, e.target.value)}
                   onKeyDown={(e) => { if (e.key === 'Backspace' && !d && i > 0) refs.current[i - 1]?.focus() }}
-                  className="w-12 h-14 rounded-xl border border-line bg-white text-center text-xl font-semibold"
+                  className="w-12 h-14 rounded-btn border border-line bg-white/70 text-center text-xl font-semibold"
                 />
               ))}
             </div>

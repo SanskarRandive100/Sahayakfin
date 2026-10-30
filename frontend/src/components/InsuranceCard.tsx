@@ -24,7 +24,7 @@ export default function InsuranceCard({ item }: { item: Insurance }) {
         </div>
         <button
           onClick={() => toast.show(t('insurance.added'), 'success')}
-          className="h-11 px-4 rounded-xl border border-brand text-brand font-semibold text-sm"
+          className="h-11 px-4 rounded-btn border border-brand text-brand font-semibold text-sm"
         >
           {t('insurance.add')}
         </button>

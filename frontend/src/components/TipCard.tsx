@@ -61,7 +61,7 @@ export default function TipCard({ tip, onTap }: { tip: Tip; onTap: () => void })
   return (
     <button
       onClick={onTap}
-      className="w-full text-left bg-teal-50 border border-teal-100 rounded-card p-4 flex items-start gap-3 active:bg-teal-100"
+      className="w-full text-left bg-brand-50 border border-brand rounded-card p-4 flex items-start gap-3 active:bg-brand-100"
     >
       <Lightbulb className="w-5 h-5 text-brand flex-shrink-0 mt-0.5" />
       <div className="text-sm">{tipText(t, tip)}</div>

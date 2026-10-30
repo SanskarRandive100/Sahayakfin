@@ -7,7 +7,7 @@ export default function LanguageSwitch() {
   const { language, setLanguage } = useSession()
   const current = language ?? 'en'
   return (
-    <div className="inline-flex rounded-full bg-white border border-line text-xs font-medium overflow-hidden">
+    <div className="inline-flex rounded-full bg-white/70 border border-line text-xs font-medium overflow-hidden">
       {(['en', 'hi', 'mr'] as Lang[]).map((l) => (
         <button
           key={l}
@@ -17,7 +17,7 @@ export default function LanguageSwitch() {
           lang={l}
           className={[
             'px-2 h-11 min-w-[44px]',
-            current === l ? 'bg-brand text-white' : 'text-ink hover:bg-gray-50',
+            current === l ? 'bg-brand text-white' : 'text-ink hover:bg-tint',
           ].join(' ')}
         >
           {labels[l]}

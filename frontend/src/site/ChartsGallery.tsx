@@ -15,7 +15,7 @@ import ScoreGauge from '../components/ScoreGauge'
 
 function Box({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <section className="bg-white rounded-card border border-line shadow-card p-5">
+    <section className="glass rounded-card p-5">
       <h2 className="font-semibold mb-3">{title}</h2>
       {children}
     </section>
@@ -44,8 +44,8 @@ export default function ChartsGallery() {
   useEffect(() => { api.stress(shock, 30678).then(setStress).catch(() => undefined) }, [shock])
 
   return (
-    <div className="min-h-screen bg-bg p-4 md:p-8">
-      <h1 className="text-2xl font-bold mb-6">Charts gallery</h1>
+    <div className="min-h-screen bg-transparent p-4 md:p-8">
+      <h1 className="text-2xl font-semibold mb-6">Charts gallery</h1>
       <div className="grid gap-6 lg:grid-cols-2 max-w-[1200px] mx-auto">
         {score && score.score !== null && <Box title="C1 Score gauge"><ScoreGauge score={score.score} band={score.band} /></Box>}
         {score && <Box title="C2 Contribution bar"><ContributionBar components={score.components} /></Box>}

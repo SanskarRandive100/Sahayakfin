@@ -20,7 +20,7 @@ function arc(from: number, to: number) {
   return `M ${a.x} ${a.y} A ${R} ${R} 0 0 1 ${b.x} ${b.y}`
 }
 
-export default function ScoreGauge({ score, band }: { score: number; band: Band }) {
+export default function ScoreGauge({ score, band, showBand = true }: { score: number; band: Band; showBand?: boolean }) {
   const { t } = useTranslation()
   const [shown, setShown] = useState(0)
 
@@ -40,15 +40,12 @@ export default function ScoreGauge({ score, band }: { score: number; band: Band 
   return (
     <div className="flex flex-col items-center">
       <svg viewBox={`0 0 ${W} ${H}`} width={W} height={H} role="img" aria-label={`${score} / 100`}>
-        <path d={arc(0, 39)} stroke="#d1d5db" strokeWidth="14" fill="none" opacity="0.5" />
-        <path d={arc(40, 59)} stroke="#fcd34d" strokeWidth="14" fill="none" opacity="0.5" />
-        <path d={arc(60, 79)} stroke="#86efac" strokeWidth="14" fill="none" opacity="0.5" />
-        <path d={arc(80, 100)} stroke="#4ade80" strokeWidth="14" fill="none" opacity="0.5" />
-        {shown > 0 && <path d={arc(0, Math.min(shown, 99.9))} stroke={color} strokeWidth="14" fill="none" strokeLinecap="round" />}
+        <path d={arc(0, 100)} stroke="#E3E8EE" strokeWidth="18" fill="none" strokeLinecap="round" />
+        {shown > 0 && <path d={arc(0, Math.min(shown, 99.9))} stroke={color} strokeWidth="18" fill="none" strokeLinecap="round" />}
       </svg>
       <div className="-mt-16 text-center">
-        <div className="text-[56px] leading-none font-bold" style={{ color }}>{shown}</div>
-        <div className="text-base font-semibold mt-1" style={{ color }}>{t(`band.${band}`)}</div>
+        <div className="font-display text-[60px] leading-none text-ink">{shown}</div>
+        {showBand && <div className="text-base font-semibold mt-1" style={{ color }}>{t(`band.${band}`)}</div>}
       </div>
     </div>
   )

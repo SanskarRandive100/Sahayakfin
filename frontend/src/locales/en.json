@@ -167,6 +167,7 @@
       "weeksShort": "wk"
     },
     "privacy": {
+      "control": "Your data, your control",
       "title": "Privacy",
       "noConsent": "You have not shared any data yet.",
       "purpose": "Loan assessment",
@@ -406,6 +407,12 @@
     "step4": "Score"
   },
   "dashboard": {
+    "kpi": {
+      "score": "Trust Score",
+      "safeWeekly": "Safe weekly payment",
+      "weeksSaved": "Weeks saved",
+      "noLoan": "No loan yet"
+    },
     "risk": "Bad-week test",
     "riskEmpty": "Check loans to see your bad-week test.",
     "nextPayment": "Next payment",
@@ -478,6 +485,11 @@
       "cta": "Check my score"
     },
     "hero": {
+      "trust": {
+        "kfs": "RBI-style Key Fact Statement",
+        "consent": "Consent you can revoke",
+        "cibil": "No CIBIL needed"
+      },
       "h1a": "Your UPI history is your",
       "h1b": "credit history.",
       "sub": "No salary slip? No CIBIL score? SahayakFin reads your bank statement fairly, explains every point, and shows only loans you can repay in a bad week.",

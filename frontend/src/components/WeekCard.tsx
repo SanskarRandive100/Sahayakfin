@@ -3,14 +3,13 @@ import { ChevronDown } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import type { TxnOut, WeekGroup } from '../api/types'
 import { formatDate, formatINR } from '../lib/format'
-import Card from './Card'
 import TxnRow from './TxnRow'
 
 export default function WeekCard({ week, defaultOpen = false, onTap }: { week: WeekGroup; defaultOpen?: boolean; onTap?: (t: TxnOut) => void }) {
   const { t, i18n } = useTranslation()
   const [open, setOpen] = useState(defaultOpen)
   return (
-    <Card className="p-0 overflow-hidden">
+    <div className="solid rounded-card overflow-hidden">
       <button
         onClick={() => setOpen(!open)}
         aria-expanded={open}
@@ -31,6 +30,6 @@ export default function WeekCard({ week, defaultOpen = false, onTap }: { week: W
           {week.txns.map((tx) => <TxnRow key={tx.id} txn={tx} onTap={onTap} />)}
         </div>
       )}
-    </Card>
+    </div>
   )
 }

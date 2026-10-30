@@ -16,14 +16,14 @@ export default function SteadinessChart({
       <div style={{ height: 200 }}>
         <ResponsiveContainer width="100%" height="100%">
           <BarChart data={data} margin={{ top: 16, right: 8, left: 0, bottom: 0 }}>
-            <CartesianGrid stroke="#E2E8F0" vertical={false} />
-            <XAxis dataKey="label" tick={{ fontSize: 12, fill: '#64748B' }} axisLine={false} tickLine={false} interval="preserveStartEnd" />
-            <YAxis tick={{ fontSize: 12, fill: '#64748B' }} axisLine={false} tickLine={false} width={44}
+            <CartesianGrid stroke="#E3E8EE" vertical={false} />
+            <XAxis dataKey="label" tick={{ fontSize: 12, fill: '#4B5B6B' }} axisLine={false} tickLine={false} interval="preserveStartEnd" />
+            <YAxis tick={{ fontSize: 12, fill: '#4B5B6B' }} axisLine={false} tickLine={false} width={44}
               tickFormatter={(v) => `₹${Math.round(v / 1000)}k`} />
             <Tooltip formatter={(v: number) => formatINR(v * 100)} />
-            <ReferenceLine y={medianPaise / 100} stroke="#334155" strokeDasharray="4 4" />
+            <ReferenceLine y={medianPaise / 100} stroke="#4B5B6B" strokeDasharray="4 4" />
             <ReferenceLine y={p25Paise / 100} stroke="#BF8700" strokeDasharray="4 4" />
-            <Bar dataKey="v" fill="#0F766E" fillOpacity={0.7} radius={[4, 4, 0, 0]} />
+            <Bar dataKey="v" fill="#0E7C70" fillOpacity={0.7} radius={[4, 4, 0, 0]} />
           </BarChart>
         </ResponsiveContainer>
       </div>
