@@ -12,6 +12,12 @@ export class ApiFailure extends Error {
 
 const USE_MOCKS = (import.meta.env.VITE_USE_MOCKS as string | undefined) === 'true'
 
+if (USE_MOCKS) console.warn('[SahayakFin] MOCK MODE')
+
+export function isMockMode(): boolean {
+  return USE_MOCKS
+}
+
 function readToken(): string | null {
   try {
     const raw = localStorage.getItem('sahayakfin.session')
