@@ -7,6 +7,8 @@ Alternative credit scoring and financial wellness for gig workers (hackathon pro
 
 ## Run the backend
 
+**SQLite is the default** in `.env.example` and needs no Docker. PostgreSQL is optional; follow the Windows section below when selecting it. All OTP, AA fetch and payment flows are synthetic demos.
+
 ```bash
 cp .env.example .env                       # demo-only values; never commit .env
 cd backend
@@ -34,14 +36,16 @@ Ravi stays empty for the live demo.
 | Phone | Who |
 | --- | --- |
 | 9000000001 | Ravi Shinde (empty, for the live demo) |
-| 9000000002 / 3 / 4 | Sunita / Arjun / Meena (pre-loaded when samples exist) |
-| 9999999991 / 2 / 3 | MFI Alpha / Beta / Gamma (lender dashboard) |
+| 9000000002 / 9000000003 / 9000000004 | Sunita / Arjun / Meena (pre-loaded when samples exist) |
+| 9999999991 / 9999999992 / 9999999993 | MFI Alpha / Beta / Gamma (lender dashboard) |
 
 Locked PDF passwords: first 4 letters of the name in capitals + `0101`, e.g. `RAVI0101`.
 
 ## Run the frontend
 
-`cd frontend && npm install && npm run dev` (port 5173; Vite proxies `/api` to port 8000).
+Use Node 20+ and run `npm ci`, then `npm run dev` from `frontend/` (port 5173; Vite proxies `/api` to port 8000).
+
+For the real backend, set `VITE_USE_MOCKS=false` in the gitignored `frontend/.env.development.local` and restart Vite. Check browser network requests use `/api/v1` and return backend JSON. The checked-in development default enables mocks. Run `npm run build` and `npm run check-i18n` before the demo; starting the site alone is not proof those checks passed.
 
 ## Sample data
 
@@ -96,13 +100,13 @@ The dialect must print `postgresql`; health must return `ok: true`. Interactive 
 Startup creates tables and seeds the other three personas; Ravi stays empty. A missing samples directory logs a warning.
 The Docker volume retains rows across backend restarts.
 
-Mihir owns frontend configuration. For the live demo he must create the gitignored
+For the live demo, create the gitignored
 `frontend/.env.development.local` containing `VITE_USE_MOCKS=false`, restart Vite, then run `npm ci`,
 `npm run build`, `npm run check-i18n`, and `npm run dev`. Verify browser network requests use `/api/v1`
 and return backend JSON. The checked-in frontend development setting enables mocks.
 
-Demo sequence: Ravi login / OTP 123456 ? consent ? locked PDF / RAVI0101 ? score ? stress ? offers ?
-accept ? 26 repayments ? advance clock / simulated payment ? share with Alpha ? lender view ? revoke.
+Demo sequence: Ravi login / OTP 123456 -> consent -> locked PDF / RAVI0101 -> score -> stress -> offers ->
+accept -> 26 repayments -> advance clock / simulated payment -> share with Alpha -> lender view -> revoke.
 Revoke deletes sources and transactions and ends lender shares. The user's historical scores and loans remain
 as lending records; this prototype does not implement a production retention schedule.
 
@@ -133,3 +137,20 @@ production database, even with a test-like name.
 - `NO_SCORE`: give consent and upload or fetch a statement first. Mocks do not populate backend state.
 - Never run `scripts/sync.sh`: it pushes to main. The integrator must fix that shared script separately.
 - Work branches target `integration/full-demo`; do not push directly to main or the integration branch.
+
+
+## Verified demo numbers (30 October 2026)
+
+Evidence: `SANSKAR_INTEGRATION_REPORT.md` and Rajat's `RAJAT_VERIFICATION_REPORT.md` on `work/rajat-scoring-verify`. These reports cover separate revisions, not a future merged release.
+
+| Item | Verified synthetic result |
+| --- | --- |
+| Ravi | 284 transactions; 85 STRONG; HIGH confidence; ₹295.29 safe weekly; ₹7,200 safe loan |
+| MFI Alpha | ₹7,056 received; ₹294.51/week (about ₹295); total ₹7,657.22; cost ₹601.22; advertised 24%, calculated APR 32% |
+| MFI Beta / Gamma | Beta APR 25%; Gamma unavailable because matched amount is below minimum |
+| Alpha schedule | 26 Fridays, starting 6 November 2026 when the demo clock is 30 October 2026; final repayment reconciles rounding |
+| Stress at 0/10/20/30% income drop | 10/9/6/3 of 12 weeks covered; GREEN with buffer coverage |
+| Sunita / Arjun / Meena | 99 / 43 (₹0 safe weekly, no loan) / 94 (provisional, LOW confidence) |
+| Privacy / fairness | Revoke deletes 284 transactions and ends sharing; 8/8 supplied-persona fairness tests pass |
+
+Reclassifying transactions or advancing the clock can change the live result or schedule. Retained scores and lending records are not deleted by consent revocation. See the pitch for the rehearsal script; browser tests, recording and submission need their own evidence.

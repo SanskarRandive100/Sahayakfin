@@ -105,17 +105,21 @@ All names, platforms, banks and lenders are fictional.
 - OTP request rate limit: 5 per minute per phone (in-memory is fine).
 - **DPDP Act 2023 principles:** notice in plain language and the user's language, purpose limitation, minimisation, erasure on withdrawal. We claim alignment, not certification.
 
-## 6. Demo script (5 minutes; pitch numbers come from the real generated data, so update after generation)
+## 6. Demo script (5 minutes; verified synthetic data)
+
+Numbers below are supported by `SANSKAR_INTEGRATION_REPORT.md` and Rajat's `RAJAT_VERIFICATION_REPORT.md` on `work/rajat-scoring-verify`. Their test counts cover separate feature revisions; rerun the merged release. This is a rehearsal script, not evidence that a browser rehearsal or recording has happened.
+
+Before each run, confirm a disposable local demo database before any destructive reset; keep `DEMO_MODE=true`. Set `VITE_USE_MOCKS=false` in the gitignored `frontend/.env.development.local`, restart Vite and confirm real `/api/v1` requests. Keep `ravi.locked.pdf` ready; password `RAVI0101`.
 
 1. **Hook:** "Ravi needs ₹10,000 to fix his bike. No salary slip, no CIBIL. Banks say no."
-2. Hindi → login → consent screen (purpose, 90 days, kept 30 days) → Allow.
-3. Upload Ravi's locked PDF → password → stages tick (Read, Mask, Categorise, Score) → masked rows.
-4. Fix one wrong category → "Score updated".
-5. Score screen: band, confidence, reasons, tip with +points; tap read-aloud.
-6. Loans: ask ₹10,000 → "Safe for you: ₹7,600" → KFS card "advertised 24%, true yearly cost 32%, you receive ₹7,350" → slider −20% → amber.
-7. Accept → weekly schedule on Fridays → advance clock → Hindi reminder in chat.
-8. Desktop Fairness Lab: Sunita vs Arjun; scale test; name swap; all tests pass.
-9. Lender view: summary only → Ravi's Privacy tab shows "MFI Alpha viewed your score summary".
-10. Revoke → "214 transactions deleted" → close: "Your UPI history is your credit history. We just read it fairly."
+2. Hindi -> `9000000001` / demo OTP `123456` -> consent (loan assessment, 90 days of statements, kept 30 days) -> Allow.
+3. Upload Ravi's locked PDF -> `RAVI0101` -> Read, Mask, Categorise, Score -> **284 masked transactions**.
+4. Review a category and save a correction -> "Score updated". Reclassification can change the measured score; use the unchanged sample for the reference numbers below.
+5. Score screen: **85, STRONG, HIGH confidence**, reasons and tips; tap read-aloud. The SAVE_EVERY_WEEK tip is **about +6 points**; its recomputed score is 92, so do not promise an exact displayed-score increase of six.
+6. Loans: request **₹10,000** -> "Safe for you: **₹7,200**". Alpha: advertised **24%**, calculated true APR **32%**; receive **₹7,056**, pay **₹294.51/week** (about ₹295), total **₹7,657.22**, cost **₹601.22**. The final repayment reconciles rounding. Beta APR is **25%**; Gamma is unavailable because its matched amount is below its minimum.
+7. Risk graph: shocks **0/10/20/30%** cover **10/9/6/3 of 12 weeks**. At -20%, say "6 of 12 weeks covered"; Ravi stays GREEN because his buffer covers the shortfall. Accept Alpha -> **26 Friday instalments**, first **6 November 2026** when the demo clock is **30 October 2026**. A later/advanced clock changes the dates. Advance the demo clock to an unpaid reminder's send time -> Hindi reminder; payments are simulated.
+8. Fairness Lab: **Sunita 99** versus **Arjun 43**; Arjun has **₹0 safe weekly** and no loan offer. **Meena 94** is **provisional, LOW confidence**, with five complete weeks. All **8 supplied-persona tests pass**; these do not prove universal fairness for arbitrary inputs (see Rajat's unresolved policy observations).
+9. Ravi Privacy -> share with MFI Alpha -> a separate browser context logs in as `9999999991` / `123456` -> summary only, no names/phones/transactions -> Ravi's audit shows "MFI Alpha viewed your score summary".
+10. Revoke -> **284 transactions and one source deleted**, lender sharing ends. Historical scores/lending records remain owner-scoped. Close: "Your UPI history is your credit history. We just read it fairly."
 
-**Backup:** recorded video of the full run, plus the pre-seeded personas.
+**Backup to prepare:** record the second timed rehearsal with narration, save it locally and check playback before uploading. A video, phone test and submission are not verified by these numbers alone.
