@@ -1,5 +1,6 @@
 """Pydantic request models. Responses are plain dicts matching CONTRACTS §5."""
-from typing import Literal
+from datetime import date
+from typing import Literal, Optional
 
 from pydantic import BaseModel, Field, field_validator
 
@@ -71,6 +72,12 @@ class AdvanceClockIn(BaseModel):
 class GoalIn(BaseModel):
     name: str = Field(min_length=1, max_length=40)
     target_paise: int = Field(ge=500, le=10_000_000)
+    target_date: Optional[date] = None
+    saved_paise: int = Field(0, ge=0, le=10_000_000)
+
+
+class ContributeIn(BaseModel):
+    amount_paise: int = Field(gt=0, le=10_000_000)
 
 
 class ShareIn(BaseModel):

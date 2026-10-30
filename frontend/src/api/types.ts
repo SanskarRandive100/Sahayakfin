@@ -89,7 +89,7 @@ export interface Reason {
 export interface Tip {
   code: string
   points: number
-  params?: Record<string, number | string>
+  params?: Record<string, unknown>
 }
 
 export interface ScoreResult {
@@ -177,8 +177,24 @@ export interface OffersResponse {
   requested_paise: number
   safe_amount_paise: number
   rbi_cap_amount_paise?: number
+  safe_amount_52_paise?: number
+  safe_weekly_paise?: number
   loans: Offer[]
+  stretch?: StretchOffer[]
   insurance: Insurance[]
+}
+
+export interface StretchOffer {
+  lender: { id: string; name: string }
+  product_id: string
+  amount_paise: number
+  weeks: number
+  frequency: 'WEEKLY'
+  rate_pct: number
+  fee_pct: number
+  kfs: KFS
+  eligible: 'NEEDS_APPROVAL'
+  risk: { weekly_over_safe_paise: number; weeks_covered: number; weeks_total: number; light: 'GREEN' | 'AMBER' | 'RED' }
 }
 
 export interface Repayment {
@@ -220,6 +236,8 @@ export interface StressResult {
   light: Light
   buffer_covers: boolean
   shortfall_paise: number
+  shortfall_weeks?: number
+  current_balance_paise?: number | null
   advice: string
   series?: { week_start: string | null; surplus_paise: number; stressed_surplus_paise: number }[]
 }
@@ -252,6 +270,21 @@ export interface Goal {
   weekly_target_paise: number
   saved_paise: number
   weeks_left: number
+  target_date?: string | null
+  required_weekly_paise?: number | null
+  status?: 'ON_TRACK' | 'STRETCH' | 'NOT_FEASIBLE' | null
+  suggested_date?: string | null
+  suggested_amount_paise?: number | null
+  median_weekly_surplus_paise?: number | null
+  suggestions?: SavingSuggestion[]
+}
+
+export interface SavingSuggestion {
+  category: string
+  avg_weekly_paise: number
+  saves_paise: number
+  this_week_paise: number
+  spiked: boolean
 }
 
 export interface AuditRow {

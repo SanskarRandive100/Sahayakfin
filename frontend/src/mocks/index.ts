@@ -25,8 +25,8 @@ const score: ScoreResult = {
     { code: 'BILLS_LATE', component: 'bill_discipline', params: { late: 1, of: 6 } },
   ],
   tips: [
-    { code: 'SAVE_EVERY_WEEK', points: 13, params: { min_amount_paise: 2000 } },
-    { code: 'PAY_BILLS_ON_TIME', points: 4, params: {} },
+    { code: 'SAVE_EVERY_WEEK', points: 13, params: { min_amount_paise: 2000, suggest_paise: 6000, saved_weeks: 6, of: 12 } },
+    { code: 'PAY_BILLS_ON_TIME', points: 4, params: { late: [{ category: 'RENT', times_late: 1 }], bounces: 0 } },
   ],
   engine_version: 'fts-2.0',
 }
@@ -85,6 +85,13 @@ function offers(requested: number): OffersResponse {
     requested_paise: requested,
     safe_amount_paise: 760000,
     rbi_cap_amount_paise: 1200000,
+    safe_amount_52_paise: 1360000,
+    safe_weekly_paise: 29500,
+    stretch: requested > 760000 && requested <= 1200000 ? [
+      { lender: { id: 'l1', name: 'MFI Alpha' }, product_id: 'p1', amount_paise: requested, weeks: 26, frequency: 'WEEKLY', rate_pct: 24, fee_pct: 2,
+        kfs: { ...kfs, instalment_paise: Math.round(requested * 0.0409), net_disbursed_paise: requested * 0.98, total_repayable_paise: Math.round(requested * 1.063), total_cost_paise: Math.round(requested * 0.083) },
+        eligible: 'NEEDS_APPROVAL', risk: { weekly_over_safe_paise: Math.max(0, Math.round(requested * 0.0409) - 29500), weeks_covered: 6, weeks_total: 12, light: 'AMBER' } },
+    ] : [],
     loans: [
       { id: 'o1', lender: { id: 'l1', name: 'MFI Alpha' }, product_id: 'p1', amount_paise: 750000, weeks: 26, frequency: 'WEEKLY', rate_pct: 24, fee_pct: 2, kfs, fits_safe_instalment: true, eligible: 'ELIGIBLE', reason: null },
       { id: 'o2', lender: { id: 'l2', name: 'MFI Beta' }, product_id: 'p2', amount_paise: 750000, weeks: 26, frequency: 'WEEKLY', rate_pct: 21, fee_pct: 1, kfs: { ...kfs, advertised_rate_pct: 21, apr_pct: 24.2, instalment_paise: 29800, fee_paise: 7500, net_disbursed_paise: 742500, total_repayable_paise: 774800, total_cost_paise: 32300 }, fits_safe_instalment: true, eligible: 'NEEDS_REVIEW', reason: null },
@@ -92,8 +99,8 @@ function offers(requested: number): OffersResponse {
     ],
     insurance: [
       { id: 'i1', name: 'PM Suraksha Bima Yojana', provider: 'Govt of India', premium_paise: 2000, premium_period: 'YEAR', cover_paise: 200000000, is_govt_scheme: true, demo: false },
-      { id: 'i2', name: 'Hospital Cash Cover', provider: 'Demo Insurer', premium_paise: 1000, premium_period: 'WEEK', cover_paise: 50000, is_govt_scheme: false, demo: true },
-      { id: 'i3', name: 'Loan Life Cover', provider: 'Demo Insurer', premium_paise: 500, premium_period: 'WEEK', cover_paise: 750000, is_govt_scheme: false, demo: true },
+      { id: 'i2', name: 'Hospital Cash Cover', provider: 'Partner Insurer', premium_paise: 1000, premium_period: 'WEEK', cover_paise: 50000, is_govt_scheme: false, demo: true },
+      { id: 'i3', name: 'Loan Life Cover', provider: 'Partner Insurer', premium_paise: 500, premium_period: 'WEEK', cover_paise: 750000, is_govt_scheme: false, demo: true },
     ],
   }
 }
@@ -182,10 +189,12 @@ export function mocks(method: string, path: string, body?: unknown): unknown {
   if (method === 'POST' && p === '/affordability/stress') {
     const s = Number(b.shock)
     const light = s <= 0.1 ? 'GREEN' : s <= 0.2 ? 'AMBER' : 'RED'
+    const covered = light === 'GREEN' ? 12 : light === 'AMBER' ? 8 : 5
     return {
-      weeks_covered: light === 'GREEN' ? 12 : light === 'AMBER' ? 10 : 8, weeks_total: 12, light,
-      buffer_covers: light !== 'RED', shortfall_paise: light === 'RED' ? 4000 : 0,
-      advice: light === 'GREEN' ? 'OK' : 'CONSIDER_LONGER_TENURE',
+      weeks_covered: covered, weeks_total: 12, light, shortfall_weeks: 12 - covered,
+      buffer_covers: light !== 'RED', shortfall_paise: light === 'GREEN' ? 0 : light === 'AMBER' ? 120000 : 400000,
+      current_balance_paise: 300000,
+      advice: light === 'GREEN' ? 'OK' : light === 'AMBER' ? 'RELIES_ON_SAVINGS' : 'TAKE_SMALLER_AMOUNT',
       series: (score.metrics.weekly ?? []).map((w, i) => ({
         week_start: w.week_start, surplus_paise: w.surplus_paise + 12000,
         stressed_surplus_paise: Math.round((w.surplus_paise + 12000) - w.income_paise * s * 0.6 * (i % 3 === 0 ? 1.3 : 0.7)),
@@ -219,7 +228,19 @@ export function mocks(method: string, path: string, body?: unknown): unknown {
   }
   if (method === 'GET' && p === '/goals') return goal ? [goal] : []
   if (method === 'POST' && p === '/goals') {
-    goal = { id: 'g1', name: b.name, target_paise: b.target_paise, weekly_target_paise: 6000, saved_paise: 12000, weeks_left: Math.ceil(b.target_paise / 6000) }
+    const saved = b.saved_paise ?? 0
+    const weeksLeft = b.target_date ? Math.max(1, Math.ceil((new Date(b.target_date).getTime() - Date.now()) / 604800000)) : Math.ceil(b.target_paise / 6000)
+    const required = b.target_date ? Math.ceil((b.target_paise - saved) / weeksLeft / 1000) * 1000 : 6000
+    goal = { id: 'g1', name: b.name, target_paise: b.target_paise, weekly_target_paise: required, saved_paise: saved, weeks_left: weeksLeft,
+      target_date: b.target_date ?? null, required_weekly_paise: b.target_date ? required : null,
+      status: !b.target_date ? null : required <= 120000 ? 'ON_TRACK' : required <= 240000 ? 'STRETCH' : 'NOT_FEASIBLE',
+      suggested_date: null, suggested_amount_paise: null, median_weekly_surplus_paise: 240000,
+      suggestions: [{ category: 'FUEL', avg_weekly_paise: 110000, saves_paise: 11000, this_week_paise: 90000, spiked: false },
+        { category: 'FOOD', avg_weekly_paise: 60000, saves_paise: 6000, this_week_paise: 95000, spiked: true }] }
+    return goal
+  }
+  if (method === 'POST' && p.startsWith('/goals/') && p.endsWith('/contribute') && goal) {
+    goal = { ...goal, saved_paise: goal.saved_paise + b.amount_paise }
     return goal
   }
   if (method === 'GET' && p === '/audit') {

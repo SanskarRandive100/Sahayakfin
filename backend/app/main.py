@@ -18,10 +18,20 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name
 log = logging.getLogger("sahayakfin")
 
 
+def _add_missing_columns():
+    """create_all never alters an existing table: add v1.1 columns to an older database."""
+    from sqlalchemy import inspect, text
+    cols = {c["name"] for c in inspect(engine).get_columns("goals")}
+    if "target_date" not in cols:
+        with engine.begin() as conn:
+            conn.execute(text("ALTER TABLE goals ADD COLUMN target_date DATE"))
+
+
 @asynccontextmanager
 async def lifespan(_: FastAPI):
     log.info("Database dialect: %s", engine.dialect.name)
     Base.metadata.create_all(engine)
+    _add_missing_columns()
     if not settings.samples_dir.is_dir():
         log.warning("SAMPLES_DIR %s not found: AA fetch, demo samples and Fairness Lab need "
                     "`python data/generate_personas.py`", settings.samples_dir)

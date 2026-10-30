@@ -5,6 +5,7 @@ from sqlalchemy.orm import Session
 
 from app import finance, scoring
 from app.db import get_db
+from app.finance.offers import default_tenure
 from app.errors import AppError
 from app.models import Lender, Loan, Offer, Product, Repayment, User
 from app.schemas import AcceptIn
@@ -90,8 +91,48 @@ def get_offers(requested_paise: int = Query(1_000_000), user: User = Depends(cur
     rbi_cap_amount = finance.loan_max(max(0, int(afford.get("rbi_cap_weekly_paise", 0))), 24, 26)
     return {"requested_paise": requested_paise,
             "safe_amount_paise": loan_max.get("26", loan_max.get(26, 0)),
+            "safe_amount_52_paise": int(loan_max.get("52", 0) or 0),
+            "safe_weekly_paise": int(afford.get("safe_weekly_paise") or 0),
             "rbi_cap_amount_paise": int(rbi_cap_amount),
-            "loans": loans, "insurance": insurance}
+            "loans": loans,
+            "stretch": _jsonable(stretch_options(run.result, afford, txns, lenders, products, requested_paise,
+                                                 int(rbi_cap_amount))),
+            "insurance": insurance}
+
+
+def stretch_options(score: dict, afford: dict, txns, lenders: list[dict], products: list[dict],
+                    requested_paise: int, rbi_cap_amount_paise: int) -> list[dict]:
+    """Quotes at the full requested amount for lenders whose band/history rules pass. Not pre-approved:
+    the instalment is above the safe weekly payment, so each card carries its risks."""
+    rank = {"BUILDING": 0, "FAIR": 1, "GOOD": 2, "STRONG": 3}
+    safe = int(afford.get("safe_weekly_paise") or 0)
+    band, weeks_obs = score.get("band"), int(score.get("weeks_observed") or 0)
+    if score.get("score") is None or band is None or requested_paise > rbi_cap_amount_paise:
+        return []
+    if requested_paise <= int((afford.get("loan_max_paise") or {}).get("26", 0) or 0):
+        return []  # the request is already safe: nothing to stretch to
+    by_id = {l["id"]: l for l in lenders}
+    out = []
+    for p in products:
+        lender = by_id.get(p["lender_id"])
+        if (lender is None or rank.get(band, -1) < rank.get(lender["min_band"], 0)
+                or weeks_obs < lender["min_weeks"] or p["max_paise"] < requested_paise
+                or requested_paise < (p["min_paise"] or 0)):
+            continue
+        tenures = list(p["tenures"] or [26])
+        for weeks in [w for w in (26, 52) if w in tenures] or [default_tenure(tenures)]:
+            card = finance.kfs(requested_paise, p["rate_pct"], p["fee_pct"], weeks)
+            inst = int(card["instalment_paise"])
+            st = scoring.stress_test(txns, 0, inst)
+            out.append({"lender": {"id": lender["id"], "name": lender["name"]}, "product_id": p["id"],
+                        "amount_paise": requested_paise, "weeks": weeks, "frequency": "WEEKLY",
+                        "rate_pct": p["rate_pct"], "fee_pct": p["fee_pct"], "kfs": card,
+                        "eligible": "NEEDS_APPROVAL",
+                        "risk": {"weekly_over_safe_paise": max(0, inst - safe),
+                                 "weeks_covered": st["weeks_covered"], "weeks_total": st["weeks_total"],
+                                 "light": st["light"]}})
+    out.sort(key=lambda o: (o["weeks"], o["kfs"]["instalment_paise"]))
+    return out
 
 
 @router.post("/offers/{offer_id}/accept")

@@ -200,6 +200,7 @@ class Goal(Base):
     target_paise: Mapped[int] = mapped_column(BigInteger)
     weekly_target_paise: Mapped[int] = mapped_column(BigInteger)
     saved_paise: Mapped[int] = mapped_column(BigInteger, default=0)
+    target_date: Mapped[Optional[date]] = mapped_column(Date, nullable=True)
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
 
 

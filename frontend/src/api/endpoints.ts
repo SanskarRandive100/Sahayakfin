@@ -75,7 +75,9 @@ export const api = {
 
   getWellness: (weeks = 4) => request<Wellness>('GET', `/wellness/weekly?weeks=${weeks}`),
   getGoals: () => request<Goal[]>('GET', '/goals'),
-  createGoal: (name: string, target_paise: number) => request<Goal>('POST', '/goals', { name, target_paise }),
+  createGoal: (name: string, target_paise: number, target_date?: string, saved_paise = 0) =>
+    request<Goal>('POST', '/goals', target_date ? { name, target_paise, target_date, saved_paise } : { name, target_paise }),
+  contributeGoal: (id: string, amount_paise: number) => request<Goal>('POST', `/goals/${id}/contribute`, { amount_paise }),
 
   getAudit: () => request<AuditRow[]>('GET', '/audit'),
   getConsents: () => request<Consent[]>('GET', '/consents'),

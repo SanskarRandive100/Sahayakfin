@@ -39,7 +39,7 @@
       "sendOtp": "Send OTP",
       "otp": "Enter the 6-digit code",
       "verify": "Verify",
-      "demoOtp": "Demo OTP: 123456"
+      "demoOtp": "Enter the code sent to your phone"
     },
     "consent": {
       "title": "Before we look at your bank data",
@@ -49,17 +49,35 @@
       "stop": "You can stop anytime: one tap in Privacy deletes it",
       "never": "We never ask for your bank password, UPI PIN or OTP.",
       "allow": "Allow",
-      "notNow": "Not now"
+      "notNow": "Not now",
+      "readDetail": "Only bank transactions (date, description, amount, balance) from the last 90 days. We do not read contacts, SMS, photos or location.",
+      "whyDetail": "To calculate your Financial Trust Score and show only loans whose weekly payment fits your low-earning weeks. We never sell or share your data for marketing.",
+      "keepDetail": "Raw statement files are not kept. Transactions are deleted automatically after 30 days, or immediately when you withdraw consent.",
+      "stopDetail": "Withdraw anytime from Privacy with one tap. Lenders see only your score summary, and only if you choose to share.",
+      "more": "More",
+      "less": "Less",
+      "agree": "I have read and understood the above, and I consent to SahayakFin processing my bank transactions for this purpose, as per the Digital Personal Data Protection Act, 2023.",
+      "noticeTitle": "View full privacy notice",
+      "noticePurpose": "Purpose: credit assessment and showing loans you can afford. Nothing else.",
+      "noticeData": "Data: bank transactions from the last 90 days. Account numbers and names are masked before storage.",
+      "noticeRetention": "Retention: transactions are deleted after 30 days or when you withdraw consent. Score and loan records are kept as required by law.",
+      "noticeRights": "Your rights: access, correction, erasure and grievance redressal. You can see who viewed your data in Privacy.",
+      "noticeContact": "Grievance officer: privacy@sahayakfin.example"
     },
     "connect": {
       "title": "Share your statement",
       "upload": "Upload bank statement (PDF or CSV)",
       "uploadHint": "Tap to choose a file",
       "password": "Statement password",
-      "passwordHint": "Usually your name + date of birth. Demo: RAVI0101",
-      "aa": "Connect bank (Account Aggregator demo)",
-      "sample": "Download a sample statement",
-      "submit": "Upload"
+      "passwordHint": "Usually your name in capitals + day and month of birth, e.g. RAVI0101",
+      "aa": "Connect via Account Aggregator",
+      "submit": "Upload",
+      "dropHint": "Drag & drop your statement here, or click to choose",
+      "dropTypes": "PDF or CSV · up to 5 MB",
+      "badType": "Please choose a PDF or CSV file.",
+      "tooBig": "This file is bigger than 5 MB. Please choose a smaller statement.",
+      "remove": "Remove file",
+      "chooseAccount": "Choose bank account"
     },
     "processing": {
       "READ": "Reading your statement",
@@ -128,7 +146,7 @@
       "none": "You have no active loan yet.",
       "payNow": "Pay {{amount}} now",
       "paidToast": "Payment received. Thank you!",
-      "nextDay": "Next day (demo)"
+      "nextDay": "Simulate next day"
     },
     "money": {
       "title": "Your money this week",
@@ -142,8 +160,8 @@
       "createGoal": "Start saving",
       "goalSaved": "Goal created",
       "goalLine": "Save {{amount}} every week · {{weeks}} weeks left",
-      "moveToGoal": "Move {{amount}} to my goal (demo)",
-      "moved": "Moved (demo)",
+      "moveToGoal": "Move {{amount}} to my goal",
+      "moved": "Moved",
       "weeksShort": "wk"
     },
     "privacy": {
@@ -166,12 +184,12 @@
       "lendersNote": "They see only your score, band and reasons, never your transactions.",
       "audit": "Who saw my data",
       "auditEmpty": "Nobody has seen your data.",
-      "reset": "Reset demo"
+      "reset": "Reset data"
     },
     "fairness": {
       "title": "Fairness Lab: the score measures habits, not wealth",
       "income": "Monthly income {{amount}}",
-      "highlight": "Lower income, higher score: because steadiness and habits count, not size of income.",
+      "highlight": "Consistent income, higher score: steadiness and habits count, not the size of income.",
       "neverUsed": "Never used: name, gender, age, religion, caste, address/pincode, contacts, device, what you spend on."
     },
     "lender": {
@@ -247,10 +265,17 @@
     "THIN_FILE": "We have only a few weeks of data so far"
   },
   "tip": {
-    "SAVE_EVERY_WEEK": "Save ₹20 or more every week → +{{points}} to your score",
-    "PAY_BILLS_ON_TIME": "Pay bills near the same date each month → +{{points}} to your score",
-    "KEEP_SURPLUS_WEEKS": "Spend less than you earn each week → +{{points}} to your score",
-    "STEADY_INCOME": "Keep your weekly income steady → +{{points}} to your score",
+    "SAVE_EVERY_WEEK": "Save {{amount}} or more every week",
+    "SAVE_EVERY_WEEK_DETAIL": "Save {{amount}} every week — you saved in {{saved}} of {{of}} weeks",
+    "SAVE_KEEP_GOING": "Keep saving every week, and add {{amount}} more in your low weeks",
+    "PAY_BILLS_ON_TIME": "Pay bills near the same date each month",
+    "PAY_BILLS_LATE": "{{what}} was paid late {{times}} time(s) — pay near the same date each month",
+    "PAY_BILLS_BOUNCE": "{{bounces}} payment(s) bounced — keep enough money in the account before bill dates",
+    "KEEP_SURPLUS_WEEKS": "Spend less than you earn each week",
+    "KEEP_SURPLUS_CUT": "Spend {{amount}} less on {{category}} each week — you spent more than you earned in {{weeks}} weeks",
+    "STEADY_INCOME": "Keep your weekly income steady",
+    "STEADY_INCOME_DETAIL": "{{low}} weeks earned below your usual — about {{gap}} more in those weeks would steady your income",
+    "points": "(about +{{points}} points)",
     "ADD_MORE_HISTORY": "Add {{weeks_needed}} more weeks of history"
   },
   "category": {
@@ -276,7 +301,7 @@
     "OTHER": "Other"
   },
   "error": {
-    "OTP_INVALID": "That code is not right. Try 123456 in the demo.",
+    "OTP_INVALID": "That code is not right. Please try again.",
     "UNSUPPORTED_FILE": "Please upload a PDF or CSV file.",
     "FILE_TOO_LARGE": "That file is too large (max 5 MB).",
     "TOO_MANY_PAGES": "That PDF has too many pages (max 20).",
@@ -293,7 +318,7 @@
     "NO_SCORE": "Upload a statement to see your score.",
     "OFFER_NOT_ACCEPTABLE": "This loan can't be taken right now.",
     "EXCEEDS_SAFE_INSTALMENT": "That weekly payment is more than is safe for you.",
-    "UNKNOWN_PERSONA": "We don't know that demo profile.",
+    "UNKNOWN_PERSONA": "We could not find that bank account.",
     "INTERNAL_ERROR": "Something went wrong on our side. Please try again.",
     "generic": "Something went wrong. Please try again.",
     "FORBIDDEN": "You do not have permission to do that.",
@@ -303,7 +328,15 @@
   "readAloud": "Read aloud",
   "stress": {
     "title": "What if your income drops?",
-    "covered": "You could still pay in {{done}} of {{total}} weeks"
+    "covered": "From income alone you could pay in {{done}} of {{total}} weeks",
+    "verdictGREEN": "This payment looks comfortable.",
+    "verdictAMBER": "Tight: in {{n}} weeks your income alone would not cover it — you would need your savings.",
+    "verdictRED": "Risky: you could miss payments in {{n}} of {{total}} weeks. Choose a smaller amount or a longer tenure.",
+    "detailBuffer": "In the other {{n}} weeks you would be short by {{shortfall}} in total — your current savings of {{balance}} would cover it.",
+    "detailNoBuffer": "In the other {{n}} weeks you would be short by {{shortfall}} in total — your current savings would not cover it.",
+    "summary": "Short weeks: {{n}} · Total shortfall: {{amount}}",
+    "tipLeft": "Week of {{week}}: {{left}} left",
+    "tipShort": "short by {{amount}}"
   },
   "light": {
     "GREEN": "Safe",
@@ -312,6 +345,7 @@
   },
   "advice": {
     "OK": "This payment looks comfortable.",
+    "RELIES_ON_SAVINGS": "You would need your savings in some weeks. A smaller amount or a longer tenure is safer.",
     "CONSIDER_LONGER_TENURE": "Choose a longer tenure to lower the weekly amount",
     "BUILD_BUFFER_FIRST": "Build a small savings buffer first",
     "TAKE_SMALLER_AMOUNT": "Take a smaller amount"
@@ -319,12 +353,12 @@
   "insurance": {
     "title": "Protect your income",
     "govt": "Govt scheme",
-    "demo": "Demo product",
+    "demo": "Partner product",
     "YEAR": "year",
     "WEEK": "week",
     "cover": "Cover {{amount}}",
     "add": "Add",
-    "added": "Added (demo)"
+    "added": "Added"
   },
   "reminder": {
     "header": "SahayakFin · Payment reminders",
@@ -375,7 +409,8 @@
     "nextPayment": "Next payment",
     "viewLoan": "View my loan",
     "ready": "Ready for a loan?",
-    "readyNote": "See loans that are safe for you, sized to your low weeks."
+    "readyNote": "See loans that are safe for you, sized to your low weeks.",
+    "safeLine": "Safe up to {{amount}} · about {{weekly}} a week"
   },
   "chart": {
     "empty": "Not enough data yet.",
@@ -444,7 +479,7 @@
       "h1a": "Your UPI history is your",
       "h1b": "credit history.",
       "sub": "No salary slip? No CIBIL score? SahayakFin reads your bank statement fairly, explains every point, and shows only loans you can repay in a bad week.",
-      "cta1": "Check my score (demo)",
+      "cta1": "Check my score",
       "cta2": "See how it's fair",
       "card": "Sample score · built only from your own transactions"
     },
@@ -489,7 +524,7 @@
       }
     },
     "fair": {
-      "title": "Lower income, higher score",
+      "title": "Consistent income, higher score",
       "line": "Doubling every rupee doesn't change a score. Neither does a name.",
       "cta": "Open the Fairness Lab"
     },
@@ -505,7 +540,7 @@
       "sub": "Pre-screened, explainable applicants. Weekly repayments sized to bad weeks."
     },
     "footer": {
-      "proto": "Prototype with synthetic data · Not a CIBIL score · Built for the Fintech & Financial Inclusion track",
+      "proto": "Prototype · synthetic data · not a CIBIL score",
       "team": "Team: Mihir · Rajat · Sanskar"
     }
   },
@@ -514,7 +549,8 @@
     "logout": "Log out",
     "login": "Log in",
     "openApp": "Open my dashboard",
-    "openAppFor": "Open {{name}}'s dashboard"
+    "openAppFor": "Open {{name}}'s dashboard",
+    "menu": "Account menu"
   },
   "reasonShort": {
     "INCOME_UNEVEN": "Uneven income",
@@ -547,6 +583,49 @@
   },
   "runtime": {
     "backendUnavailable": "Backend not reachable on :8000 — start the backend.",
-    "mockMode": "DEMO DATA (mocks)"
+    "mockMode": "OFFLINE MODE"
+  },
+  "loansV11": {
+    "safeMark": "{{amount}} safe",
+    "stretchMark": "{{amount}} stretch limit",
+    "meterStretch": "Up to {{safe}} is safe. {{asked}} is a stretch — it needs lender approval (see below).",
+    "whyNot": "Why not {{amount}}?",
+    "whyWeekly": "A {{amount}} loan over 26 weeks needs about {{weekly}} per week; your safe weekly payment is {{safe}} (half of what you have left in a typical low week).",
+    "howTitle": "How to get there",
+    "howLonger": "Choose a longer tenure: over 52 weeks, up to {{amount}} is safe.",
+    "howSave": "Save {{weekly}} a week for {{weeks}} weeks to cover the {{gap}} gap yourself.",
+    "preApprovedTitle": "Pre-approved for you",
+    "stretchTitle": "Need the full amount? (needs lender approval)",
+    "needsApproval": "Needs approval",
+    "risksTitle": "Risks if approved",
+    "riskOver": "Weekly payment is {{amount}} more than your safe amount",
+    "riskWeeks": "From income alone you could pay in {{n}} of {{of}} weeks",
+    "riskLate": "Late fee {{fee}} per missed week and more stress in low weeks",
+    "requestApproval": "Request approval",
+    "requestSent": "Request sent to {{lender}}. Pre-approved offers above are safer."
+  },
+  "goalV11": {
+    "planTitle": "Plan a savings goal",
+    "byDate": "Target date",
+    "already": "Already saved in ₹ (optional)",
+    "dateTooSoon": "Choose a date at least 2 weeks from today.",
+    "by": "by {{date}}",
+    "status": {
+      "ON_TRACK": "On track",
+      "STRETCH": "Stretch",
+      "NOT_FEASIBLE": "Not feasible"
+    },
+    "suggestDate": "At a comfortable pace you can reach it by {{date}}.",
+    "suggestAmount": "Or aim for {{amount}} by your chosen date.",
+    "stretchNote": "Possible, but it uses most of what you usually have left each week.",
+    "whereTitle": "Where can I save?",
+    "cut": "Cut {{category}} by 10% → saves {{amount}}/week",
+    "spiked": "(this week was high: {{amount}})",
+    "cutTotal": "Together these save {{total}} a week; you need {{need}} a week.",
+    "amountPh": "Amount in ₹",
+    "iSaved": "I saved money",
+    "recorded": "Saving recorded",
+    "howAdd": "Move money to your savings account or RD — we detect those transfers in your next statement. You can also record a saving here.",
+    "newGoal": "Start a new goal"
   }
 }
