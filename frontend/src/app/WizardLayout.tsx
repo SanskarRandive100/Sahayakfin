@@ -1,4 +1,5 @@
-import { Outlet, useLocation } from 'react-router-dom'
+import { Link, Outlet, useLocation } from 'react-router-dom'
+import { useSession } from '../state/session'
 import { Check } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 
@@ -8,9 +9,17 @@ export default function WizardLayout() {
   const { t } = useTranslation()
   const { pathname } = useLocation()
   const current = Math.max(0, STEPS.indexOf(pathname))
+  const { token, user } = useSession()
+  const dashboard = user?.role === 'LENDER' ? '/lender' : '/app/dashboard'
   return (
     <div className="min-h-screen bg-gradient-to-b from-brand-50 to-bg flex flex-col items-center px-4 py-8">
-      <a href="/" className="text-xl font-bold text-brand mb-6">Sahayak<span className="text-ink">Fin</span></a>
+      <div className="w-full max-w-[560px] flex items-center justify-between gap-3 mb-6">
+        <Link to="/" className="inline-flex min-h-11 items-center text-sm font-semibold text-brand hover:underline">{t('nav12.home')}</Link>
+        <Link to="/" className="text-xl font-bold text-brand">Sahayak<span className="text-ink">Fin</span></Link>
+        {token ? (
+          <Link to={dashboard} className="inline-flex min-h-11 items-center px-3 rounded-xl bg-brand text-white text-sm font-semibold hover:bg-brand-800">{t('nav12.goDashboard')}</Link>
+        ) : <span className="w-16" aria-hidden="true" />}
+      </div>
       <ol className="flex items-center gap-2 mb-6 w-full max-w-[560px]" aria-label="Steps">
         {STEPS.map((s, i) => (
           <li key={s} className="flex-1 flex flex-col items-center gap-1" aria-current={i === current ? 'step' : undefined}>

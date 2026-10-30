@@ -1,4 +1,6 @@
 {
+  "lenderV12": {"search": "Search by ref", "filterAll": "All", "filterEligible": "Eligible", "filterReview": "Needs review", "filterNot": "Not eligible", "sortBy": "Sort by", "sortScore": "Score", "sortSafe": "Safe weekly", "drawerTitle": "Applicant {{ref}}", "score": "Score", "confidence": "Confidence", "reasons": "Why this score", "safeWeekly": "Safe weekly payment", "requested": "Requested", "maxSafe": "Max safe loan (26 weeks)", "approx": "approx.", "privacy": "Summary only — no transactions, names or phone numbers.", "approve": "Approve", "askInfo": "Ask for more info", "decline": "Decline", "approved": "{{ref}} approved", "infoRequested": "More info requested from {{ref}}", "declined": "{{ref}} declined", "decision": "Decision", "decApproved": "Approved", "decInfo": "Info requested", "decDeclined": "Declined", "decisions": "Decisions", "empty": "No applicants have shared their score with you yet.", "close": "Close", "noMatch": "No applicants match this filter.", "open": "Open"},
+  "nav12": {"home": "← Home", "myDashboard": "My dashboard", "lenderDashboard": "Lender dashboard", "goDashboard": "Go to dashboard"},
   "common": {
     "confirm": "Confirm",
     "cancel": "Cancel",

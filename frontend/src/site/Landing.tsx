@@ -57,8 +57,8 @@ export default function Landing() {
                   className="hidden sm:inline-flex min-h-11 items-center px-3 rounded-xl text-sm font-semibold text-white/90 hover:bg-white/10">
                   {t('account.logout')}
                 </button>
-                <Link to="/app/dashboard" className="inline-flex min-h-11 items-center px-4 rounded-xl bg-brand text-white text-sm font-semibold hover:bg-brand-800">
-                  {user ? t('account.openAppFor', { name: firstName(user.display_name) }) : t('account.openApp')}
+                <Link to={user?.role === 'LENDER' ? '/lender' : '/app/dashboard'} className="inline-flex min-h-11 items-center px-4 rounded-xl bg-brand text-white text-sm font-semibold hover:bg-brand-800">
+                  {user?.role === 'LENDER' ? t('nav12.lenderDashboard') : t('nav12.myDashboard')}
                 </Link>
               </>
             ) : (

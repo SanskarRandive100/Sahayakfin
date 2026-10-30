@@ -1,4 +1,6 @@
 {
+  "lenderV12": {"search": "रेफ़ से खोजें", "filterAll": "सभी", "filterEligible": "योग्य", "filterReview": "जाँच ज़रूरी", "filterNot": "योग्य नहीं", "sortBy": "क्रम", "sortScore": "स्कोर", "sortSafe": "सुरक्षित साप्ताहिक", "drawerTitle": "आवेदक {{ref}}", "score": "स्कोर", "confidence": "भरोसा", "reasons": "यह स्कोर क्यों", "safeWeekly": "सुरक्षित साप्ताहिक किस्त", "requested": "माँगी गई राशि", "maxSafe": "अधिकतम सुरक्षित लोन (26 हफ़्ते)", "approx": "लगभग", "privacy": "सिर्फ़ सारांश — कोई लेन-देन, नाम या फ़ोन नंबर नहीं।", "approve": "मंज़ूर करें", "askInfo": "और जानकारी माँगें", "decline": "अस्वीकार करें", "approved": "{{ref}} मंज़ूर", "infoRequested": "{{ref}} से और जानकारी माँगी गई", "declined": "{{ref}} अस्वीकार", "decision": "फ़ैसला", "decApproved": "मंज़ूर", "decInfo": "जानकारी माँगी", "decDeclined": "अस्वीकार", "decisions": "फ़ैसले", "empty": "अभी तक किसी आवेदक ने अपना स्कोर आपसे साझा नहीं किया है।", "close": "बंद करें", "noMatch": "इस फ़िल्टर में कोई आवेदक नहीं।", "open": "खोलें"},
+  "nav12": {"home": "← होम", "myDashboard": "मेरा डैशबोर्ड", "lenderDashboard": "लेंडर डैशबोर्ड", "goDashboard": "डैशबोर्ड पर जाएँ"},
   "common": {
     "confirm": "पक्का करें",
     "cancel": "रद्द करें",

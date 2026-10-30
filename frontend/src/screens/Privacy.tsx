@@ -80,7 +80,7 @@ export default function Privacy() {
   }
 
   async function reset() {
-    try { await api.demoReset(); logout(); navigate('/language') }
+    try { await api.demoReset(); logout(); navigate('/', { replace: true }) }
     catch (e) { toast.show(errText(t, e), 'error') }
   }
 

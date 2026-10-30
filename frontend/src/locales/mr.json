@@ -1,4 +1,6 @@
 {
+  "lenderV12": {"search": "रेफने शोधा", "filterAll": "सर्व", "filterEligible": "पात्र", "filterReview": "तपासणी हवी", "filterNot": "पात्र नाही", "sortBy": "क्रम", "sortScore": "स्कोअर", "sortSafe": "सुरक्षित साप्ताहिक", "drawerTitle": "अर्जदार {{ref}}", "score": "स्कोअर", "confidence": "विश्वास", "reasons": "हा स्कोअर का", "safeWeekly": "सुरक्षित साप्ताहिक हप्ता", "requested": "मागितलेली रक्कम", "maxSafe": "कमाल सुरक्षित कर्ज (26 आठवडे)", "approx": "अंदाजे", "privacy": "फक्त सारांश — व्यवहार, नावे किंवा फोन नंबर नाहीत.", "approve": "मंजूर करा", "askInfo": "अधिक माहिती मागा", "decline": "नाकारा", "approved": "{{ref}} मंजूर", "infoRequested": "{{ref}} कडून अधिक माहिती मागितली", "declined": "{{ref}} नाकारले", "decision": "निर्णय", "decApproved": "मंजूर", "decInfo": "माहिती मागितली", "decDeclined": "नाकारले", "decisions": "निर्णय", "empty": "अजून कोणत्याही अर्जदाराने आपला स्कोअर तुमच्याशी शेअर केलेला नाही.", "close": "बंद करा", "noMatch": "या फिल्टरमध्ये कोणीही अर्जदार नाही.", "open": "उघडा"},
+  "nav12": {"home": "← होम", "myDashboard": "माझा डॅशबोर्ड", "lenderDashboard": "कर्जदाता डॅशबोर्ड", "goDashboard": "डॅशबोर्डवर जा"},
   "common": {
     "confirm": "नक्की करा",
     "cancel": "रद्द करा",
