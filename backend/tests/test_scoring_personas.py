@@ -147,7 +147,7 @@ def test_arjun_stress_is_not_ok():
 def test_stress_shape():
     r = stress_test(txns("ravi"), 0.2, 30678)
     assert set(r) == {"weeks_covered", "weeks_total", "light", "buffer_covers", "shortfall_paise", "advice",
-                      "series"}
+                      "series", "shortfall_weeks", "current_balance_paise"}
     assert r["light"] in ("GREEN", "AMBER", "RED")
 
 

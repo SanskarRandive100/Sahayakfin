@@ -148,14 +148,36 @@ def _reason(component: str, inp: WeeklyInputs, s: dict, comp_value: float) -> di
     return {"code": "FEW_SURPLUS_WEEKS", "component": component, "params": {"weeks": s["w_surplus"], "of": W}}
 
 
+def round_to_10_rupees(p: float) -> int:
+    """Paise rounded to the nearest ₹10."""
+    return round_half_up(p / 1000) * 1000
+
+
+def suggest_saving_paise(inp: WeeklyInputs) -> int:
+    """10% of the median weekly surplus (smoothed bills), nearest ₹10, never below ₹20."""
+    D = inp.D_smooth if inp.D_smooth is not None else inp.D
+    F = [i - e - d for i, e, d in zip(inp.I, inp.E_smooth, D)]
+    median_f = float(np.median(F)) if F else 0.0
+    return max(SAVE_MIN_PAISE, round_to_10_rupees(paise(0.1 * max(0.0, median_f))))
+
+
 def _tip(code: str, inp: WeeklyInputs, s: dict) -> dict:
     params: dict = {}
     if code == "SAVE_EVERY_WEEK":
-        params = {"min_amount_paise": SAVE_MIN_PAISE}
+        params = {"min_amount_paise": SAVE_MIN_PAISE, "suggest_paise": suggest_saving_paise(inp),
+                  "saved_weeks": sum(1 for x in inp.saved if x), "of": s["W"]}
+    elif code == "PAY_BILLS_ON_TIME":
+        params = {"late": list(inp.late_by_category or []), "bounces": inp.bounces}
     elif code == "KEEP_SURPLUS_WEEKS":
         params = {"deficit_weeks": s["W"] - s["w_surplus"]}
+        flex = inp.flex_weekly_by_category or {}
+        if flex:
+            top = max(sorted(flex), key=lambda c: flex[c])
+            params["top_flex_category"] = top
+            params["cut_paise"] = max(1000, round_to_10_rupees(paise(0.1 * flex[top])))
     elif code == "STEADY_INCOME":
-        params = {"median_paise": paise(s["p50"])}
+        params = {"median_paise": paise(s["p50"]), "low_weeks": sum(1 for i in inp.I if i < s["p25"]),
+                  "gap_paise": paise(s["p50"] - s["p25"])}
     elif code == "ADD_MORE_HISTORY":
         return {"code": code, "points": 0, "params": {"weeks_needed": max(0, MAX_WEEKS - s["W"])}}
     return {"code": code, "points": tip_points(inp, code), "params": params}

@@ -160,6 +160,30 @@ class WeeklyInputs:
     as_of: Optional[date]
     week_starts: Optional[list[date]] = None   # None for score_from_weekly
     D_smooth: Optional[list[float]] = None
+    late_by_category: Optional[list[dict]] = None        # [{category, times_late}] for recurring bill payees
+    flex_weekly_by_category: Optional[dict[str, float]] = None  # flexible category -> average weekly spend (rupees)
+
+
+def late_by_category(recurring: dict[str, list[Txn]]) -> list[dict]:
+    """Late payments (same rule as bill_stats) grouped by bill category, most late first."""
+    late: dict[str, int] = defaultdict(int)
+    for payments in recurring.values():
+        usual = float(np.median([p.date.day for p in payments]))
+        n = sum(1 for p in payments if circular_day_diff(p.date.day, usual) > ON_TIME_DAYS)
+        if n:
+            late[payments[0].category] += n
+    return [{"category": c, "times_late": n} for c, n in sorted(late.items(), key=lambda kv: (-kv[1], kv[0]))]
+
+
+def flex_weekly_by_category(txns: list[Txn], window: list[date]) -> dict[str, float]:
+    """Average weekly spend (rupees) per flexible expense category over the window."""
+    if not window:
+        return {}
+    totals: dict[str, int] = defaultdict(int)
+    for t in in_window(txns, window):
+        if t.kind == "EXPENSE" and t.category not in FIXED_CATEGORIES:
+            totals[t.category] += t.amount_paise
+    return {c: v / 100 / len(window) for c, v in totals.items()}
 
 
 def weekly_inputs(txns: list[Txn], as_of: Optional[date] = None) -> WeeklyInputs:
@@ -167,7 +191,8 @@ def weekly_inputs(txns: list[Txn], as_of: Optional[date] = None) -> WeeklyInputs
     window = select_window(txns, as_of)
     raw = weekly_features(txns, as_of, smooth=False)
     smooth = weekly_features(txns, as_of, smooth=True)
-    on_time, total, bounces = bill_stats(detect_recurring_bills(txns, window), txns, window)
+    recurring = detect_recurring_bills(txns, window)
+    on_time, total, bounces = bill_stats(recurring, txns, window)
 
     scope = [t for t in in_window(txns, window) if t.kind != "IGNORED"]
     value = sum(t.amount_paise for t in scope)
@@ -181,4 +206,6 @@ def weekly_inputs(txns: list[Txn], as_of: Optional[date] = None) -> WeeklyInputs
                         categorised_share=categorised / value if value else 0.0,
                         cash_share=cash / income_total if income_total else 0.0,
                         as_of=as_of, week_starts=[w.week_start for w in raw],
-                        D_smooth=[w.debt for w in smooth])
+                        D_smooth=[w.debt for w in smooth],
+                        late_by_category=late_by_category(recurring),
+                        flex_weekly_by_category=flex_weekly_by_category(txns, window))

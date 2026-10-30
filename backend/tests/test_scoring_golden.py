@@ -99,7 +99,9 @@ def test_reasons_a():
     assert r["reasons"][0]["params"] == {"weeks": 6, "of": 12}
     assert r["reasons"][1]["params"] == {"late": 1, "of": 6}
     assert [(t["code"], t["points"]) for t in r["tips"]] == [("SAVE_EVERY_WEEK", 13), ("PAY_BILLS_ON_TIME", 4)]
-    assert r["tips"][0]["params"] == {"min_amount_paise": 2000}
+    assert r["tips"][0]["params"]["min_amount_paise"] == 2000
+    assert r["tips"][0]["params"]["saved_weeks"] == 6 and r["tips"][0]["params"]["of"] == 12
+    assert r["tips"][0]["params"]["suggest_paise"] >= 2000 and r["tips"][0]["params"]["suggest_paise"] % 1000 == 0
 
 
 def test_reasons_b():

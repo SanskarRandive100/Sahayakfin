@@ -100,9 +100,10 @@ def stress_test(txns: list[Txn], shock: float, weekly_instalment_paise: int) -> 
     last_balance = current_balance_paise(txns)
     buffer_covers = last_balance is not None and last_balance >= shortfall_paise
 
-    if W and (covered * 12 >= 10 * W or buffer_covers):
+    # GREEN needs income alone to cover 10 of 12 weeks; a savings buffer can lift a result only to AMBER.
+    if W and covered * 12 >= 10 * W:
         light = "GREEN"
-    elif W and covered * 12 >= 7 * W:
+    elif W and (covered * 12 >= 7 * W or buffer_covers):
         light = "AMBER"
     else:
         light = "RED"
@@ -110,10 +111,11 @@ def stress_test(txns: list[Txn], shock: float, weekly_instalment_paise: int) -> 
     if light == "GREEN":
         advice = "OK"
     elif light == "AMBER":
-        advice = "CONSIDER_LONGER_TENURE"
+        advice = "RELIES_ON_SAVINGS" if buffer_covers else "CONSIDER_LONGER_TENURE"
     else:
         safe = paise(safe_weekly_from_weekly(I, E, D)["safe_weekly"])
         advice = "BUILD_BUFFER_FIRST" if safe < SMALL_SAFE_WEEKLY_PAISE else "TAKE_SMALLER_AMOUNT"
 
     return {"weeks_covered": covered, "weeks_total": W, "light": light, "buffer_covers": buffer_covers,
-            "shortfall_paise": shortfall_paise, "advice": advice, "series": series}
+            "shortfall_paise": shortfall_paise, "shortfall_weeks": W - covered, "advice": advice,
+            "current_balance_paise": last_balance, "series": series}
