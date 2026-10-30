@@ -354,7 +354,9 @@ def check() -> int:
     key = os.environ.get("PAYEE_HMAC_KEY", "demo-payee-hmac-key").encode()
     print(f"{'persona':8} {'file':18} {'rows':>5} {'monthly Rs':>10} {'score':>5} {'band':8} {'conf':6} "
           f"{'weeks':>5} {'safe/wk Rs':>9} {'loan26 Rs':>9}")
+    failures = []
     for slug, persona in PERSONAS.items():
+        baseline = None
         names = [f"{slug}.csv", f"{slug}.pdf", f"{slug}.locked.pdf", f"{slug}.aa.json"]
         if (SAMPLES / f"{slug}.alt.pdf").exists():
             names.append(f"{slug}.alt.pdf")
@@ -365,13 +367,23 @@ def check() -> int:
             txns = normalize(parsed.raw, persona["display_name"], key)
             s = compute_score(txns)
             a = affordability(txns)
+            # Compare the actual parsed rows and outputs, not only a printed score table.
+            rows = [(r.date, r.narration, r.amount, r.direction, r.balance) for r in parsed.raw]
+            current = (rows, s, a)
+            if baseline is None:
+                baseline = current
+            elif current != baseline:
+                failures.append(f"{name}: transactions, score or affordability differ from {slug}.csv")
             monthly = s["metrics"]["median_weekly_income_paise"] * 52 / 12 / 100
             print(f"{slug:8} {name:18} {len(parsed.raw):5d} {monthly:10,.0f} {str(s['score']):>5} "
                   f"{str(s['band']):8} {s['confidence']:6} {s['weeks_observed']:5d} "
                   f"{a['safe_weekly_paise'] / 100:9,.2f} {a['loan_max_paise']['26'] / 100:9,.0f}")
         comps = {k: v["value"] for k, v in s["components"].items()}
         print(f"         components {comps}  reasons {[r['code'] for r in s['reasons']]}")
-    return 0
+    for failure in failures:
+        print(f"MISMATCH: {failure}")
+    print(f"Format equivalence: {'FAIL' if failures else 'PASS'} ({len(failures)} mismatches)")
+    return 1 if failures else 0
 
 
 def main() -> int:

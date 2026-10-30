@@ -1,4 +1,6 @@
 """Detect the statement type from its bytes and dispatch to the right parser."""
+import csv
+import io
 import json
 from typing import Optional
 
@@ -25,8 +27,11 @@ def sniff(data: bytes, filename: str = "") -> str:
     text = decode_text(data)
     if text is None or "\x00" in text:
         raise IngestError("UNSUPPORTED_FILE")
-    first = text.lstrip().split("\n", 1)[0].lower().replace(" ", "")
-    if "date,narration" in first:
+    try:
+        header = next(csv.reader(io.StringIO(text), strict=True), [])
+    except csv.Error:
+        header = []
+    if {"date", "narration"} <= {field.strip().lower() for field in header}:
         return "CSV"
     try:
         doc = json.loads(text)

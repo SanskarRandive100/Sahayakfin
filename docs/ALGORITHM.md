@@ -2,7 +2,7 @@
 
 **In one line:** we read 12 weeks of a gig worker's bank statement and score *habits* (steady income, saving, paying bills on time, living within means), never wealth or identity. Every point is explained, and the loan size comes from the worker's own bad weeks.
 
-Engine version `fts-2.0`. Code: `backend/app/scoring/` (score), `backend/app/ingest/` (reading statements), `backend/app/finance/` (loan maths). All of it is pure Python with no database or network access, and 171 unit tests cover it (`cd backend && python -m pytest -q`).
+Engine version `fts-2.0`. Code: `backend/app/scoring/` (score), `backend/app/ingest/` (reading statements), `backend/app/finance/` (loan maths). All of it is pure Python with no database or network access, with regression coverage in `backend/tests/`. Run `cd backend` then `python -m pytest -q`; see `RAJAT_VERIFICATION_REPORT.md` for executed counts and limits.
 
 ---
 
@@ -129,7 +129,7 @@ If cash deposits are more than half of income, confidence drops one level (but n
 ## 6. Reasons and tips: why not higher, and how to improve
 
 - **Reasons:** every component loses `weight × (100 − value)` points. The two biggest losses (if > 0) become the reasons, e.g. `FEW_SAVINGS_WEEKS` "You saved in 6 of 12 weeks" and `BILLS_LATE` "1 of 6 bills was late".
-- **Tips:** for each reason we re-run the engine with one habit changed, and show the real point gain:
+- **Tips:** for each reason we re-run the engine with one habit changed, and show the approximate point gain (the change between rounded displayed scores can differ by 1):
 
 | Tip | What we simulate | Vector A gain |
 | --- | --- | --- |
@@ -139,18 +139,18 @@ If cash deposits are more than half of income, confidence drops one level (but n
 | STEADY_INCOME | low weeks raised to the middle week | |
 | ADD_MORE_HISTORY | (thin file) come back with more weeks | |
 
-The "What if?" button runs exactly this simulation on the user's own data.
+The "What if?" button runs exactly this simulation on the user's own data. For Ravi, saving every week reports about +6 points while the displayed score moves from 85 to 92.
 
 ## 7. How much can they safely borrow?
 
 ```
 F_w           = I_w − E_w − D_w           (spread bills; savings transfers are not subtracted)
 safe_weekly   = max(0, min( 0.5 × P25(F_w),  0.5 × P50(I_w) − mean(D_w) ))
-rbi_cap       = 0.5 × P50(I_w) − mean(D_w)          (RBI microfinance: all repayments ≤ 50% of income)
+rbi_cap       = 0.5 * P50(I_w) - mean(D_w)         (the demo's internal repayment cap)
 loan_max      = safe_weekly × (1 − (1 + r)^−n) / r,  r = rate/100/52,  floored to ₹100
 ```
 
-- **The instalment comes from a bad week, not an average week.** We take half of the worker's 25th-percentile weekly surplus. It is always stricter than the RBI cap, and existing EMIs are subtracted first.
+- **The instalment comes from a bad week, not an average week.** We take half of the 25th-percentile weekly surplus after existing debt, limited by the demo's internal 50%-of-income cap. This is a prototype risk rule, not a regulatory approval.
 - If even a typical bad week has no surplus (P25(F) ≤ 0), we offer **no loan**.
 - Vector A: P25(F) = ₹900, so safe_weekly = ₹450.
 - Repayments are weekly, on the weekday the worker is usually paid (the most common payout day).
@@ -172,11 +172,11 @@ loan_max      = safe_weekly × (1 − (1 + r)^−n) / r,  r = rate/100/52,  floo
 ### 8.1 Rules built into the design
 
 1. **No protected attributes.** The engine reads only these transaction fields: amount, date, direction, category, kind, flags, balance and an anonymous payee token. It never reads names, gender, age, religion, caste, language, location or even the narration text. (`NO_PROTECTED_INPUTS` checks this automatically by parsing the scoring source code.)
-2. **Habits, not wealth.** Every component is a ratio or a count of weeks, so multiplying every rupee by any factor leaves the score unchanged.
+2. **Habits, not wealth.** The components use ratios and week counts. Scale tests pass for the four personas, but the fixed minimum balance-growth threshold breaks scale invariance for some smaller amounts; the reproducible counterexample and proposed contract decision are in `RAJAT_VERIFICATION_REPORT.md`.
 3. **Missing is not bad.** No bills means bill discipline is "not available" and its weight is re-spread, not scored 0.
 4. **Confidence is separate.** Thin or cash-heavy files get a lower confidence label, not a lower score.
 5. **Monotonic.** Doing a good thing (saving one more week, paying one more bill on time) can never lower the score, because all weights are positive.
-6. **Explained.** Every score comes with the two biggest reasons and a tip with its real point value.
+6. **Explained.** Scores include the largest component shortfalls and simulated tips with approximate point gains; a rounded displayed score may change by one more or one fewer point.
 
 ### 8.2 Automated fairness tests (Fairness Lab screen, all passing on the four personas)
 
@@ -200,7 +200,7 @@ loan_max      = safe_weekly × (1 − (1 + r)^−n) / r,  r = rate/100/52,  floo
 | Arjun | cab driver, very uneven payouts, existing EMI, 1 bounce | ~₹40,000 | 43 | FAIR | HIGH | ₹0 |
 | Meena | tailor, only 5 weeks of history | ~₹15,000 | 94 | STRONG | LOW (provisional) | ₹422 |
 
-The same numbers come out of the CSV, the PDF, the password-locked PDF, the AA JSON and a second bank layout (tested).
+The same numbers come out of CSV, PDF, password-locked PDF and AA JSON for all four personas, plus ALT BANK for Ravi. `python data/verify_pipeline.py` emits the full results, offer costs, reason/tip params and known counterexamples as JSON.
 
 ## 9. Gaming defences
 
@@ -211,7 +211,7 @@ The same numbers come out of the CSV, the PDF, the password-locked PDF, the AA J
 | Refunds or a new loan counted as income | `REV`, `REFUND`, `REVERSAL`, `LOAN DISB` → ignored |
 | Hide a bounced EMI | NACH/ECS/ACH return charges are flagged BOUNCE: −25 each |
 | Unverifiable cash | cash deposits are flagged; > 50% cash lowers confidence |
-| Recategorise to look better | user corrections are marked `user_corrected`; round-trip and reversal legs stay ignored whatever the category; corrections are audited |
+| Recategorise to look better | user corrections are marked `user_corrected`; intentionally ignored transactions, including self transfers, stay ignored across correction chains; corrections are audited |
 | Change names to look like someone else | names never reach the engine (NAME_SWAP test) |
 
 ## 10. Privacy inside the engine
@@ -223,8 +223,8 @@ The same numbers come out of the CSV, the PDF, the password-locked PDF, the AA J
 ## 11. Why rule-based, not machine learning?
 
 - **No labelled data.** There is no repayment history for these workers. That's the whole problem. A model trained on bureau data would learn the bias we are trying to remove.
-- **Explainability is a requirement.** RBI's Fair Practices Code asks lenders to tell applicants the main reasons a loan was rejected, and a first-time borrower needs to understand what to change. Every point here traces to a formula.
-- **Testable fairness.** Invariants like "scaling doesn't matter" and "saving more never hurts" can be *proved* by tests for a rule-based score. For a black-box model they can only be sampled.
+- **Explainability is a requirement.** First-time borrowers need to understand which habits affect the score. Component weights, reason codes and simulated tips make those contributions inspectable.
+- **Testable fairness.** Regression tests check scale and monotonicity on concrete fixtures; they do not prove universal fairness. The fixed balance-growth savings floor has a scale counterexample, reproduced in the verification report.
 - **Next step:** once lenders share repayment outcomes, use them to *calibrate the weights* (e.g. logistic regression on the four component values, constrained to positive weights), keeping the same transparent structure.
 
 ## 12. Limitations and how we would validate
@@ -232,7 +232,7 @@ The same numbers come out of the CSV, the PDF, the password-locked PDF, the AA J
 - **Weights are expert-set** (0.30/0.25/0.25/0.20), not learned. Validation: track 6–12 months of repayments by band, check default rates fall monotonically from BUILDING to STRONG, and refit the weights with monotonic constraints.
 - **12 weeks is short.** It misses seasonality (festivals, monsoon). With AA consent we would read 12 months and compare like-for-like seasons.
 - **Keyword categorisation** misses unusual narrations. Users can correct categories, uncategorised money lowers confidence (not the score), and corrections can become new rules.
-- **Balance-growth saving** credits money that simply wasn't spent. That's intentional (many workers save by not spending), but a large one-off credit can look like saving. Round trips and self transfers are excluded.
+- **Balance-growth saving** credits money that simply wasn't spent. That's intentional (many workers save by not spending), but a large one-off credit can look like saving. Their transaction kinds are excluded from income, but ignored credits can still raise the closing balance and trigger this savings rule. Fixing that interaction changes score interpretation and awaits the contract decision in `RAJAT_VERIFICATION_REPORT.md`.
 - **Synthetic personas only.** Before any real use we would run the same fairness tests on real anonymised statements, and check outcomes across groups we deliberately do not use as inputs.
 
 ## 13. Judge Q&A
@@ -241,7 +241,7 @@ The same numbers come out of the CSV, the PDF, the password-locked PDF, the AA J
 It measures exactly what predicts repayment of a small weekly loan: whether the bad weeks still leave a surplus, whether bills get paid on their day, and whether money gets put aside. The loan itself is sized from the worker's 25th-percentile week, so even the trust we extend is conservative.
 
 **2. How do you know the score isn't biased against women, minorities or particular regions?**
-The engine physically cannot see those attributes: it reads amounts, dates and categories only, and an automated static check proves that. The NAME_SWAP test replaces every name (including switching the owner's gender) and the score doesn't move by a single point.
+The engine physically cannot see those attributes: it reads amounts, dates and categories only, and a static check records which transaction fields the scoring modules access. This does not validate upstream categorisation or real-world group outcomes. The NAME_SWAP test replaces every name (including switching the owner's gender) and the score doesn't move by a single point.
 
 **3. Doesn't a richer person always score higher?**
 No. Every component is a ratio or a count of weeks. Doubling every rupee leaves the score unchanged (tested), and Sunita at ~₹12,500/month scores 99 while Arjun at ~₹40,000/month scores 43.
@@ -256,19 +256,31 @@ Stability matters most (0.30), because a weekly instalment fails in a bad week. 
 No bills means that component is "not available" and its weight is shared, never zero. Four to seven weeks gives a provisional score with LOW confidence, and fewer than four gives no score but a clear "build your profile" path.
 
 **7. How is the loan amount decided?**
-Half of the worker's typical bad-week surplus (P25), minus existing EMIs, capped below RBI's 50%-of-income microfinance limit. That instalment is turned into a principal at the product's rate. Ravi asks for ₹10,000 and we offer ₹7,200, which he can repay in a bad week.
+Half of the typical bad-week surplus after existing debt, limited by the demo's internal repayment cap, becomes the weekly instalment budget. At the product rate this gives Ravi a 26-week maximum of INR 7,200 for an INR 10,000 request. It is a simulated offer.
 
 **8. Why show APR when the lender advertises 24%?**
-Because the processing fee is deducted up front, the worker receives less but repays the full amount. The true yearly cost is 32%, and showing it is what RBI's KFS rules intend.
+The processing fee is deducted up front, so the borrower receives less than the principal on which repayments are calculated. The synthetic INR 7,500 example has a 32.0% nominal annualised IRR under the prototype formula. It is not a compliance certification.
 
 **9. Is the score stable? Will it jump if I upload the same statement twice?**
 It's deterministic: the same input always gives the same output (tested 3×). The CSV, PDF, locked PDF, AA JSON and a second bank's PDF layout all give identical scores.
 
 **10. Why not use machine learning?**
-There are no repayment labels for this population yet, and a model trained on bureau data would import the exclusion we're fixing. Rules let us prove fairness properties with tests and explain every point. ML is the calibration step once outcomes exist.
+There are no repayment labels for this population yet, and a model trained on bureau data would import the exclusion we're fixing. Rules let us test specific fairness properties and explain the component contributions. ML is the calibration step once outcomes exist.
 
 **11. What does the lender actually see?**
 Only the score, band, confidence, reason codes and the safe weekly amount, and only if the worker turns sharing on for that lender. They never see transactions, names or phone numbers. Every view is written to an audit log the worker can read.
 
 **12. What are the biggest weaknesses?**
 The weights are not yet validated on real defaults, 12 weeks can miss seasonal swings, and keyword categorisation is imperfect. Each has a mitigation: positive-constrained calibration, longer AA windows, and user corrections plus confidence labels.
+
+
+## Verification limits (30 October 2026)
+
+The four-persona fairness checks are synthetic regressions. They do not establish
+real-world fairness or universal scale invariance. The scoring weights and demo
+50%-of-income cap are internal prototype rules, not regulatory approval.
+Two counterexamples require owner agreement before changing `fts-2.0`: ignored
+credits can increase balance-growth savings, and the fixed savings floor can
+change scores when all money is scaled. KFS prose also conflicts with its golden
+vector by one paisa; the current schedule exactly matches the golden-vector total.
+See `RAJAT_VERIFICATION_REPORT.md` and `data/verification_results.json`.

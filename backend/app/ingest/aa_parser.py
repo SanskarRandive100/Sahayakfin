@@ -1,12 +1,18 @@
 """Mock Account Aggregator (FIP) JSON (CONTRACTS §2.5)."""
 from app.ingest.amounts import parse_amount, parse_date
+from app.ingest.errors import IngestError
 from app.scoring.types import RawTxn
 
 
 def parse_aa(doc: dict) -> tuple[list[RawTxn], list[str]]:
     raw: list[RawTxn] = []
     warnings: list[str] = []
-    for i, t in enumerate(doc.get("transactions") or []):
+    transactions = doc.get("transactions")
+    if transactions is None:
+        transactions = []
+    if not isinstance(transactions, list):
+        raise IngestError("UNSUPPORTED_FILE")
+    for i, t in enumerate(transactions):
         if not isinstance(t, dict):
             warnings.append(f"Skipped AA transaction {i + 1}: not an object.")
             continue

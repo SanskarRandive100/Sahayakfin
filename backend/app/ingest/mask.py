@@ -31,7 +31,7 @@ def extract_payee(narration: str) -> Optional[str]:
             return parts[3].strip()
         return None
     if upper.startswith("NEFT"):
-        m = re.search(r"CR-([^-]+)-", text, re.I) or re.search(r"(?:CR|DR)-([^-]+)$", text, re.I)
+        m = re.search(r"(?:CR|DR)-([^-]+)-", text, re.I) or re.search(r"(?:CR|DR)-([^-]+)$", text, re.I)
         return m.group(1).strip() if m else None
     m = re.search(r"ACH D-\s*(.+?)\s*(?:\bEMI\b|\bLN\b|$)", text, re.I)
     if m and m.group(1).strip():

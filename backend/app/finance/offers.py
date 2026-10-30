@@ -49,7 +49,7 @@ def match_offers(score_result: dict, afford: dict, lenders: list[dict], products
         # Steps 3–4: amount and caps.
         cap = loan_max(safe, p["rate_pct"], weeks)
         amount = min(requested_paise, p["max_paise"], cap)
-        if lender.get("max_amount_paise"):
+        if lender.get("max_amount_paise") is not None:
             amount = min(amount, lender["max_amount_paise"])
         if band == "FAIR":
             amount = min(amount, FAIR_CAP_PAISE)

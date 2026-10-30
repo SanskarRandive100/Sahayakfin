@@ -1,4 +1,5 @@
 """Tolerant parsing of statement amounts and dates."""
+import math
 import re
 from datetime import date, datetime
 from typing import Optional
@@ -8,10 +9,14 @@ DATE_FORMATS = ("%Y-%m-%d", "%d-%m-%Y", "%d/%m/%Y", "%d/%m/%y", "%d-%m-%y", "%d 
 
 def parse_amount(text) -> Optional[float]:
     """'1,234.50' / '₹1,234.50 Cr' / '(250.00)' / '-250' -> float; blank -> None. A 'Dr' suffix or brackets mean negative."""
-    if text is None:
+    if text is None or isinstance(text, bool):
         return None
     if isinstance(text, (int, float)):
-        return float(text)
+        try:
+            value = float(text)
+        except OverflowError:
+            return None
+        return value if math.isfinite(value * 100) else None
     s = str(text).strip().upper().replace("₹", "").replace("INR", "").replace("RS.", "").replace(",", "")
     s = s.replace(" ", "")
     if s in ("", "-", "--", "NONE", "NULL"):
@@ -26,6 +31,8 @@ def parse_amount(text) -> Optional[float]:
     if not re.fullmatch(r"[+-]?\d+(\.\d+)?", s):
         return None
     value = float(s)
+    if not math.isfinite(value * 100):
+        return None
     return -value if negative else value
 
 
