@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "resumed_active_consent": true,
+  "consent_id_restored": true,
+  "back": true,
+  "consent_not_now": true,
+  "sample_pdf_status": 200,
+  "sample_signature": "%PDF-",
+  "csv_upload_rows": 284,
+  "category_cancel": [
+    "Escape",
+    "backdrop"
+  ]
+}

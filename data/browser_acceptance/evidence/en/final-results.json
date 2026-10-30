@@ -1,0 +1,2341 @@
+{
+  "base": "http://127.0.0.1:15173",
+  "backend": "http://127.0.0.1:18000",
+  "mocks": false,
+  "language": "en",
+  "steps": [
+    {
+      "step": 1,
+      "name": "landing",
+      "viewport": "desktop",
+      "status": "PASS",
+      "evidence": {
+        "real_health": true,
+        "landing_sample_score": 81
+      },
+      "failure": null,
+      "console_errors": [],
+      "api_calls": [
+        {
+          "step": "1-landing",
+          "method": "GET",
+          "path": "/api/v1/health",
+          "status": 200
+        },
+        {
+          "step": "1-landing",
+          "method": "GET",
+          "path": "/api/v1/fairness/report",
+          "status": 200
+        },
+        {
+          "step": "1-landing",
+          "method": "GET",
+          "path": "/api/v1/fairness/report",
+          "status": 200
+        }
+      ],
+      "screenshot": "desktop-1-landing.png",
+      "overflow": {
+        "width": 1440,
+        "scroll": 1440
+      }
+    },
+    {
+      "step": 2,
+      "name": "login-consent",
+      "viewport": "desktop",
+      "status": "PASS",
+      "evidence": {
+        "phone": "9000000001",
+        "consent": "ACTIVE"
+      },
+      "failure": null,
+      "console_errors": [],
+      "api_calls": [
+        {
+          "step": "2-login-consent",
+          "method": "POST",
+          "path": "/api/v1/auth/otp/request",
+          "status": 200
+        },
+        {
+          "step": "2-login-consent",
+          "method": "POST",
+          "path": "/api/v1/auth/otp/verify",
+          "status": 200
+        },
+        {
+          "step": "2-login-consent",
+          "method": "PATCH",
+          "path": "/api/v1/me",
+          "status": 200
+        },
+        {
+          "step": "2-login-consent",
+          "method": "GET",
+          "path": "/api/v1/me",
+          "status": 200
+        },
+        {
+          "step": "2-login-consent",
+          "method": "POST",
+          "path": "/api/v1/consents",
+          "status": 200
+        }
+      ],
+      "screenshot": "desktop-2-login-consent.png",
+      "overflow": {
+        "width": 1440,
+        "scroll": 1440
+      }
+    },
+    {
+      "step": 3,
+      "name": "locked-pdf",
+      "viewport": "desktop",
+      "status": "PASS",
+      "evidence": {
+        "password_error": "PDF_PASSWORD_REQUIRED",
+        "transactions": 284,
+        "score": 85,
+        "stages": [
+          "READ",
+          "MASK",
+          "CATEGORISE",
+          "SCORE"
+        ]
+      },
+      "failure": null,
+      "console_errors": [
+        {
+          "step": "3-locked-pdf",
+          "type": "console",
+          "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+          "url": "http://127.0.0.1:15173/api/v1/statements"
+        }
+      ],
+      "api_calls": [
+        {
+          "step": "3-locked-pdf",
+          "method": "POST",
+          "path": "/api/v1/statements",
+          "status": 400
+        },
+        {
+          "step": "3-locked-pdf",
+          "method": "POST",
+          "path": "/api/v1/statements",
+          "status": 200
+        },
+        {
+          "step": "3-locked-pdf",
+          "method": "GET",
+          "path": "/api/v1/transactions",
+          "status": 200
+        },
+        {
+          "step": "3-locked-pdf",
+          "method": "GET",
+          "path": "/api/v1/transactions",
+          "status": 200
+        }
+      ],
+      "screenshot": "desktop-3-locked-pdf.png",
+      "overflow": {
+        "width": 1440,
+        "scroll": 1440
+      }
+    },
+    {
+      "step": 4,
+      "name": "review-recategorize",
+      "viewport": "desktop",
+      "status": "PASS",
+      "evidence": {
+        "uploaded_rows": 284,
+        "review_rows": 284,
+        "masked": true,
+        "recategorization_score": 85,
+        "toast": "Score updated: 85 → 85"
+      },
+      "failure": null,
+      "console_errors": [],
+      "api_calls": [
+        {
+          "step": "4-review-recategorize",
+          "method": "PATCH",
+          "path": "/api/v1/transactions/065f04ca1b6f7b94000118b952762b3b",
+          "status": 200
+        }
+      ],
+      "screenshot": "desktop-4-review-recategorize.png",
+      "overflow": {
+        "width": 1440,
+        "scroll": 1440
+      }
+    },
+    {
+      "step": 5,
+      "name": "dashboard",
+      "viewport": "desktop",
+      "status": "PASS",
+      "evidence": {
+        "score": 85,
+        "band": "STRONG",
+        "confidence": "HIGH",
+        "charts": 2,
+        "tip": "Save ₹20 or more every week → ≈ +6 to your score",
+        "what_if": {
+          "score_before": 85,
+          "score_after": 92,
+          "points": 6
+        },
+        "read_aloud_clicked": true
+      },
+      "failure": null,
+      "console_errors": [],
+      "api_calls": [
+        {
+          "step": "5-dashboard",
+          "method": "GET",
+          "path": "/api/v1/loans",
+          "status": 200
+        },
+        {
+          "step": "5-dashboard",
+          "method": "GET",
+          "path": "/api/v1/scores/latest",
+          "status": 200
+        },
+        {
+          "step": "5-dashboard",
+          "method": "GET",
+          "path": "/api/v1/loans",
+          "status": 200
+        },
+        {
+          "step": "5-dashboard",
+          "method": "GET",
+          "path": "/api/v1/scores/latest",
+          "status": 200
+        },
+        {
+          "step": "5-dashboard",
+          "method": "GET",
+          "path": "/api/v1/offers",
+          "status": 200
+        },
+        {
+          "step": "5-dashboard",
+          "method": "GET",
+          "path": "/api/v1/offers",
+          "status": 200
+        },
+        {
+          "step": "5-dashboard",
+          "method": "POST",
+          "path": "/api/v1/affordability/stress",
+          "status": 200
+        },
+        {
+          "step": "5-dashboard",
+          "method": "POST",
+          "path": "/api/v1/affordability/stress",
+          "status": 200
+        },
+        {
+          "step": "5-dashboard",
+          "method": "POST",
+          "path": "/api/v1/scores/what-if",
+          "status": 200
+        }
+      ],
+      "screenshot": "desktop-5-dashboard.png",
+      "overflow": {
+        "width": 1440,
+        "scroll": 1440
+      }
+    },
+    {
+      "step": 6,
+      "name": "loan-offers",
+      "viewport": "desktop",
+      "status": "PASS",
+      "evidence": {
+        "request_paise": 1000000,
+        "safe_paise": 720000,
+        "alpha_kfs": {
+          "instalment_paise": 29451,
+          "fee_paise": 14400,
+          "net_disbursed_paise": 705600,
+          "total_repayable_paise": 765722,
+          "total_cost_paise": 60122,
+          "apr_pct": 32,
+          "advertised_rate_pct": 24,
+          "n_instalments": 26,
+          "late_fee_paise": 5000,
+          "cooling_off_days": 3
+        },
+        "beta_apr": 25,
+        "gamma": "OUTSIDE"
+      },
+      "failure": null,
+      "console_errors": [],
+      "api_calls": [
+        {
+          "step": "6-loan-offers",
+          "method": "GET",
+          "path": "/api/v1/affordability",
+          "status": 200
+        },
+        {
+          "step": "6-loan-offers",
+          "method": "GET",
+          "path": "/api/v1/affordability",
+          "status": 200
+        },
+        {
+          "step": "6-loan-offers",
+          "method": "GET",
+          "path": "/api/v1/offers",
+          "status": 200
+        }
+      ],
+      "screenshot": "desktop-6-loan-offers.png",
+      "overflow": {
+        "width": 1440,
+        "scroll": 1440
+      }
+    },
+    {
+      "step": 7,
+      "name": "risk-graph",
+      "viewport": "desktop",
+      "status": "PASS",
+      "evidence": {
+        "covered": [
+          10,
+          9,
+          6,
+          3
+        ],
+        "total_weeks": 12,
+        "shocks": [
+          0,
+          10,
+          20,
+          30
+        ]
+      },
+      "failure": null,
+      "console_errors": [],
+      "api_calls": [
+        {
+          "step": "7-risk-graph",
+          "method": "POST",
+          "path": "/api/v1/affordability/stress",
+          "status": 200
+        },
+        {
+          "step": "7-risk-graph",
+          "method": "POST",
+          "path": "/api/v1/affordability/stress",
+          "status": 200
+        },
+        {
+          "step": "7-risk-graph",
+          "method": "POST",
+          "path": "/api/v1/affordability/stress",
+          "status": 200
+        },
+        {
+          "step": "7-risk-graph",
+          "method": "POST",
+          "path": "/api/v1/affordability/stress",
+          "status": 200
+        },
+        {
+          "step": "7-risk-graph",
+          "method": "POST",
+          "path": "/api/v1/affordability/stress",
+          "status": 200
+        }
+      ],
+      "screenshot": "desktop-7-risk-graph.png",
+      "overflow": {
+        "width": 1440,
+        "scroll": 1440
+      }
+    },
+    {
+      "step": 8,
+      "name": "accept-remind-pay",
+      "viewport": "desktop",
+      "status": "PASS",
+      "evidence": {
+        "schedule_rows": 26,
+        "first_due": "2026-11-06",
+        "days_advanced": 7,
+        "reminders": 1,
+        "payment": "PAID"
+      },
+      "failure": null,
+      "console_errors": [],
+      "api_calls": [
+        {
+          "step": "8-accept-remind-pay",
+          "method": "POST",
+          "path": "/api/v1/offers/577e2614d5854aa494dcd349e790b9d7/accept",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "GET",
+          "path": "/api/v1/loans",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "GET",
+          "path": "/api/v1/loans",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "GET",
+          "path": "/api/v1/reminders",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "GET",
+          "path": "/api/v1/reminders",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "GET",
+          "path": "/api/v1/health",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "POST",
+          "path": "/api/v1/demo/advance-clock",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "GET",
+          "path": "/api/v1/loans",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "POST",
+          "path": "/api/v1/demo/advance-clock",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "GET",
+          "path": "/api/v1/reminders",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "GET",
+          "path": "/api/v1/loans",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "GET",
+          "path": "/api/v1/reminders",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "POST",
+          "path": "/api/v1/demo/advance-clock",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "GET",
+          "path": "/api/v1/loans",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "GET",
+          "path": "/api/v1/reminders",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "POST",
+          "path": "/api/v1/demo/advance-clock",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "GET",
+          "path": "/api/v1/loans",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "GET",
+          "path": "/api/v1/reminders",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "POST",
+          "path": "/api/v1/demo/advance-clock",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "GET",
+          "path": "/api/v1/loans",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "GET",
+          "path": "/api/v1/reminders",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "POST",
+          "path": "/api/v1/demo/advance-clock",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "GET",
+          "path": "/api/v1/loans",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "GET",
+          "path": "/api/v1/reminders",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "POST",
+          "path": "/api/v1/demo/advance-clock",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "GET",
+          "path": "/api/v1/loans",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "GET",
+          "path": "/api/v1/reminders",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "POST",
+          "path": "/api/v1/repayments/a7d9dd47fb7742f4b4c0319b009b24e7/pay",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "GET",
+          "path": "/api/v1/loans",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "GET",
+          "path": "/api/v1/reminders",
+          "status": 200
+        }
+      ],
+      "screenshot": "desktop-8-accept-remind-pay.png",
+      "overflow": {
+        "width": 1440,
+        "scroll": 1440
+      }
+    },
+    {
+      "step": 9,
+      "name": "navigation-locales-logout",
+      "viewport": "desktop",
+      "status": "PASS",
+      "evidence": {
+        "language_switches": [
+          "hi",
+          "mr",
+          "en"
+        ],
+        "navigation": true,
+        "logout": true,
+        "session_cleared": true
+      },
+      "failure": null,
+      "console_errors": [],
+      "api_calls": [
+        {
+          "step": "9-navigation-locales-logout",
+          "method": "GET",
+          "path": "/api/v1/scores/latest",
+          "status": 200
+        },
+        {
+          "step": "9-navigation-locales-logout",
+          "method": "GET",
+          "path": "/api/v1/loans",
+          "status": 200
+        },
+        {
+          "step": "9-navigation-locales-logout",
+          "method": "GET",
+          "path": "/api/v1/scores/latest",
+          "status": 200
+        },
+        {
+          "step": "9-navigation-locales-logout",
+          "method": "GET",
+          "path": "/api/v1/loans",
+          "status": 200
+        },
+        {
+          "step": "9-navigation-locales-logout",
+          "method": "GET",
+          "path": "/api/v1/offers",
+          "status": 200
+        },
+        {
+          "step": "9-navigation-locales-logout",
+          "method": "GET",
+          "path": "/api/v1/offers",
+          "status": 200
+        },
+        {
+          "step": "9-navigation-locales-logout",
+          "method": "GET",
+          "path": "/api/v1/transactions",
+          "status": 200
+        },
+        {
+          "step": "9-navigation-locales-logout",
+          "method": "GET",
+          "path": "/api/v1/transactions",
+          "status": 200
+        },
+        {
+          "step": "9-navigation-locales-logout",
+          "method": "GET",
+          "path": "/api/v1/scores/latest",
+          "status": 200
+        },
+        {
+          "step": "9-navigation-locales-logout",
+          "method": "GET",
+          "path": "/api/v1/loans",
+          "status": 200
+        },
+        {
+          "step": "9-navigation-locales-logout",
+          "method": "GET",
+          "path": "/api/v1/scores/latest",
+          "status": 200
+        },
+        {
+          "step": "9-navigation-locales-logout",
+          "method": "GET",
+          "path": "/api/v1/loans",
+          "status": 200
+        },
+        {
+          "step": "9-navigation-locales-logout",
+          "method": "GET",
+          "path": "/api/v1/offers",
+          "status": 200
+        },
+        {
+          "step": "9-navigation-locales-logout",
+          "method": "GET",
+          "path": "/api/v1/offers",
+          "status": 200
+        },
+        {
+          "step": "9-navigation-locales-logout",
+          "method": "POST",
+          "path": "/api/v1/affordability/stress",
+          "status": 200
+        },
+        {
+          "step": "9-navigation-locales-logout",
+          "method": "POST",
+          "path": "/api/v1/affordability/stress",
+          "status": 200
+        }
+      ],
+      "screenshot": "desktop-9-navigation-locales-logout.png",
+      "overflow": {
+        "width": 1440,
+        "scroll": 1440
+      }
+    },
+    {
+      "step": 1,
+      "name": "landing",
+      "viewport": "mobile",
+      "status": "PASS",
+      "evidence": {
+        "real_health": true,
+        "landing_sample_score": 81
+      },
+      "failure": null,
+      "console_errors": [],
+      "api_calls": [
+        {
+          "step": "1-landing",
+          "method": "GET",
+          "path": "/api/v1/health",
+          "status": 200
+        },
+        {
+          "step": "1-landing",
+          "method": "GET",
+          "path": "/api/v1/fairness/report",
+          "status": 200
+        },
+        {
+          "step": "1-landing",
+          "method": "GET",
+          "path": "/api/v1/fairness/report",
+          "status": 200
+        }
+      ],
+      "screenshot": "mobile-1-landing.png",
+      "overflow": {
+        "width": 390,
+        "scroll": 390
+      }
+    },
+    {
+      "step": 2,
+      "name": "login-consent",
+      "viewport": "mobile",
+      "status": "PASS",
+      "evidence": {
+        "phone": "9000000001",
+        "consent": "ACTIVE"
+      },
+      "failure": null,
+      "console_errors": [],
+      "api_calls": [
+        {
+          "step": "2-login-consent",
+          "method": "POST",
+          "path": "/api/v1/auth/otp/request",
+          "status": 200
+        },
+        {
+          "step": "2-login-consent",
+          "method": "POST",
+          "path": "/api/v1/auth/otp/verify",
+          "status": 200
+        },
+        {
+          "step": "2-login-consent",
+          "method": "PATCH",
+          "path": "/api/v1/me",
+          "status": 200
+        },
+        {
+          "step": "2-login-consent",
+          "method": "GET",
+          "path": "/api/v1/me",
+          "status": 200
+        },
+        {
+          "step": "2-login-consent",
+          "method": "POST",
+          "path": "/api/v1/consents",
+          "status": 200
+        }
+      ],
+      "screenshot": "mobile-2-login-consent.png",
+      "overflow": {
+        "width": 390,
+        "scroll": 390
+      }
+    },
+    {
+      "step": 3,
+      "name": "locked-pdf",
+      "viewport": "mobile",
+      "status": "PASS",
+      "evidence": {
+        "password_error": "PDF_PASSWORD_REQUIRED",
+        "transactions": 284,
+        "score": 85,
+        "stages": [
+          "READ",
+          "MASK",
+          "CATEGORISE",
+          "SCORE"
+        ]
+      },
+      "failure": null,
+      "console_errors": [
+        {
+          "step": "3-locked-pdf",
+          "type": "console",
+          "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+          "url": "http://127.0.0.1:15173/api/v1/statements"
+        }
+      ],
+      "api_calls": [
+        {
+          "step": "3-locked-pdf",
+          "method": "POST",
+          "path": "/api/v1/statements",
+          "status": 400
+        },
+        {
+          "step": "3-locked-pdf",
+          "method": "POST",
+          "path": "/api/v1/statements",
+          "status": 200
+        },
+        {
+          "step": "3-locked-pdf",
+          "method": "GET",
+          "path": "/api/v1/transactions",
+          "status": 200
+        },
+        {
+          "step": "3-locked-pdf",
+          "method": "GET",
+          "path": "/api/v1/transactions",
+          "status": 200
+        }
+      ],
+      "screenshot": "mobile-3-locked-pdf.png",
+      "overflow": {
+        "width": 390,
+        "scroll": 390
+      }
+    },
+    {
+      "step": 4,
+      "name": "review-recategorize",
+      "viewport": "mobile",
+      "status": "PASS",
+      "evidence": {
+        "uploaded_rows": 284,
+        "review_rows": 284,
+        "masked": true,
+        "recategorization_score": 85,
+        "toast": "Score updated: 85 → 85"
+      },
+      "failure": null,
+      "console_errors": [],
+      "api_calls": [
+        {
+          "step": "4-review-recategorize",
+          "method": "PATCH",
+          "path": "/api/v1/transactions/065f04cb329ba938000118810908dfcb",
+          "status": 200
+        }
+      ],
+      "screenshot": "mobile-4-review-recategorize.png",
+      "overflow": {
+        "width": 390,
+        "scroll": 390
+      }
+    },
+    {
+      "step": 5,
+      "name": "dashboard",
+      "viewport": "mobile",
+      "status": "PASS",
+      "evidence": {
+        "score": 85,
+        "band": "STRONG",
+        "confidence": "HIGH",
+        "charts": 2,
+        "tip": "Save ₹20 or more every week → ≈ +6 to your score",
+        "what_if": {
+          "score_before": 85,
+          "score_after": 92,
+          "points": 6
+        },
+        "read_aloud_clicked": true
+      },
+      "failure": null,
+      "console_errors": [],
+      "api_calls": [
+        {
+          "step": "5-dashboard",
+          "method": "GET",
+          "path": "/api/v1/scores/latest",
+          "status": 200
+        },
+        {
+          "step": "5-dashboard",
+          "method": "GET",
+          "path": "/api/v1/loans",
+          "status": 200
+        },
+        {
+          "step": "5-dashboard",
+          "method": "GET",
+          "path": "/api/v1/scores/latest",
+          "status": 200
+        },
+        {
+          "step": "5-dashboard",
+          "method": "GET",
+          "path": "/api/v1/loans",
+          "status": 200
+        },
+        {
+          "step": "5-dashboard",
+          "method": "GET",
+          "path": "/api/v1/offers",
+          "status": 200
+        },
+        {
+          "step": "5-dashboard",
+          "method": "GET",
+          "path": "/api/v1/offers",
+          "status": 200
+        },
+        {
+          "step": "5-dashboard",
+          "method": "POST",
+          "path": "/api/v1/affordability/stress",
+          "status": 200
+        },
+        {
+          "step": "5-dashboard",
+          "method": "POST",
+          "path": "/api/v1/affordability/stress",
+          "status": 200
+        },
+        {
+          "step": "5-dashboard",
+          "method": "POST",
+          "path": "/api/v1/scores/what-if",
+          "status": 200
+        }
+      ],
+      "screenshot": "mobile-5-dashboard.png",
+      "overflow": {
+        "width": 390,
+        "scroll": 390
+      }
+    },
+    {
+      "step": 6,
+      "name": "loan-offers",
+      "viewport": "mobile",
+      "status": "PASS",
+      "evidence": {
+        "request_paise": 1000000,
+        "safe_paise": 720000,
+        "alpha_kfs": {
+          "instalment_paise": 29451,
+          "fee_paise": 14400,
+          "net_disbursed_paise": 705600,
+          "total_repayable_paise": 765722,
+          "total_cost_paise": 60122,
+          "apr_pct": 32,
+          "advertised_rate_pct": 24,
+          "n_instalments": 26,
+          "late_fee_paise": 5000,
+          "cooling_off_days": 3
+        },
+        "beta_apr": 25,
+        "gamma": "OUTSIDE"
+      },
+      "failure": null,
+      "console_errors": [],
+      "api_calls": [
+        {
+          "step": "6-loan-offers",
+          "method": "GET",
+          "path": "/api/v1/affordability",
+          "status": 200
+        },
+        {
+          "step": "6-loan-offers",
+          "method": "GET",
+          "path": "/api/v1/affordability",
+          "status": 200
+        },
+        {
+          "step": "6-loan-offers",
+          "method": "GET",
+          "path": "/api/v1/offers",
+          "status": 200
+        }
+      ],
+      "screenshot": "mobile-6-loan-offers.png",
+      "overflow": {
+        "width": 390,
+        "scroll": 390
+      }
+    },
+    {
+      "step": 7,
+      "name": "risk-graph",
+      "viewport": "mobile",
+      "status": "PASS",
+      "evidence": {
+        "covered": [
+          10,
+          9,
+          6,
+          3
+        ],
+        "total_weeks": 12,
+        "shocks": [
+          0,
+          10,
+          20,
+          30
+        ]
+      },
+      "failure": null,
+      "console_errors": [],
+      "api_calls": [
+        {
+          "step": "7-risk-graph",
+          "method": "POST",
+          "path": "/api/v1/affordability/stress",
+          "status": 200
+        },
+        {
+          "step": "7-risk-graph",
+          "method": "POST",
+          "path": "/api/v1/affordability/stress",
+          "status": 200
+        },
+        {
+          "step": "7-risk-graph",
+          "method": "POST",
+          "path": "/api/v1/affordability/stress",
+          "status": 200
+        },
+        {
+          "step": "7-risk-graph",
+          "method": "GET",
+          "path": "/api/v1/health",
+          "status": 200
+        },
+        {
+          "step": "7-risk-graph",
+          "method": "POST",
+          "path": "/api/v1/affordability/stress",
+          "status": 200
+        },
+        {
+          "step": "7-risk-graph",
+          "method": "POST",
+          "path": "/api/v1/affordability/stress",
+          "status": 200
+        }
+      ],
+      "screenshot": "mobile-7-risk-graph.png",
+      "overflow": {
+        "width": 390,
+        "scroll": 390
+      }
+    },
+    {
+      "step": 8,
+      "name": "accept-remind-pay",
+      "viewport": "mobile",
+      "status": "PASS",
+      "evidence": {
+        "schedule_rows": 26,
+        "first_due": "2026-11-06",
+        "days_advanced": 7,
+        "reminders": 1,
+        "payment": "PAID"
+      },
+      "failure": null,
+      "console_errors": [],
+      "api_calls": [
+        {
+          "step": "8-accept-remind-pay",
+          "method": "POST",
+          "path": "/api/v1/offers/23f15d0180634783accad6ed2fe03cb0/accept",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "GET",
+          "path": "/api/v1/loans",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "GET",
+          "path": "/api/v1/loans",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "GET",
+          "path": "/api/v1/reminders",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "GET",
+          "path": "/api/v1/reminders",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "POST",
+          "path": "/api/v1/demo/advance-clock",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "GET",
+          "path": "/api/v1/loans",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "GET",
+          "path": "/api/v1/reminders",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "POST",
+          "path": "/api/v1/demo/advance-clock",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "GET",
+          "path": "/api/v1/loans",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "GET",
+          "path": "/api/v1/reminders",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "POST",
+          "path": "/api/v1/demo/advance-clock",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "GET",
+          "path": "/api/v1/loans",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "GET",
+          "path": "/api/v1/reminders",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "POST",
+          "path": "/api/v1/demo/advance-clock",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "GET",
+          "path": "/api/v1/loans",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "GET",
+          "path": "/api/v1/reminders",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "POST",
+          "path": "/api/v1/demo/advance-clock",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "GET",
+          "path": "/api/v1/loans",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "GET",
+          "path": "/api/v1/reminders",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "POST",
+          "path": "/api/v1/demo/advance-clock",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "GET",
+          "path": "/api/v1/loans",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "GET",
+          "path": "/api/v1/reminders",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "POST",
+          "path": "/api/v1/demo/advance-clock",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "GET",
+          "path": "/api/v1/loans",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "GET",
+          "path": "/api/v1/reminders",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "POST",
+          "path": "/api/v1/repayments/4c7e103f50f4401ca3308b622dd51061/pay",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "GET",
+          "path": "/api/v1/loans",
+          "status": 200
+        },
+        {
+          "step": "8-accept-remind-pay",
+          "method": "GET",
+          "path": "/api/v1/reminders",
+          "status": 200
+        }
+      ],
+      "screenshot": "mobile-8-accept-remind-pay.png",
+      "overflow": {
+        "width": 390,
+        "scroll": 390
+      }
+    },
+    {
+      "step": 9,
+      "name": "navigation-locales-logout",
+      "viewport": "mobile",
+      "status": "PASS",
+      "evidence": {
+        "language_switches": [
+          "hi",
+          "mr",
+          "en"
+        ],
+        "navigation": true,
+        "logout": true,
+        "session_cleared": true
+      },
+      "failure": null,
+      "console_errors": [],
+      "api_calls": [
+        {
+          "step": "9-navigation-locales-logout",
+          "method": "GET",
+          "path": "/api/v1/scores/latest",
+          "status": 200
+        },
+        {
+          "step": "9-navigation-locales-logout",
+          "method": "GET",
+          "path": "/api/v1/loans",
+          "status": 200
+        },
+        {
+          "step": "9-navigation-locales-logout",
+          "method": "GET",
+          "path": "/api/v1/scores/latest",
+          "status": 200
+        },
+        {
+          "step": "9-navigation-locales-logout",
+          "method": "GET",
+          "path": "/api/v1/loans",
+          "status": 200
+        },
+        {
+          "step": "9-navigation-locales-logout",
+          "method": "GET",
+          "path": "/api/v1/offers",
+          "status": 200
+        },
+        {
+          "step": "9-navigation-locales-logout",
+          "method": "GET",
+          "path": "/api/v1/offers",
+          "status": 200
+        },
+        {
+          "step": "9-navigation-locales-logout",
+          "method": "POST",
+          "path": "/api/v1/affordability/stress",
+          "status": 200
+        },
+        {
+          "step": "9-navigation-locales-logout",
+          "method": "POST",
+          "path": "/api/v1/affordability/stress",
+          "status": 200
+        },
+        {
+          "step": "9-navigation-locales-logout",
+          "method": "GET",
+          "path": "/api/v1/transactions",
+          "status": 200
+        },
+        {
+          "step": "9-navigation-locales-logout",
+          "method": "GET",
+          "path": "/api/v1/transactions",
+          "status": 200
+        },
+        {
+          "step": "9-navigation-locales-logout",
+          "method": "GET",
+          "path": "/api/v1/scores/latest",
+          "status": 200
+        },
+        {
+          "step": "9-navigation-locales-logout",
+          "method": "GET",
+          "path": "/api/v1/loans",
+          "status": 200
+        },
+        {
+          "step": "9-navigation-locales-logout",
+          "method": "GET",
+          "path": "/api/v1/scores/latest",
+          "status": 200
+        },
+        {
+          "step": "9-navigation-locales-logout",
+          "method": "GET",
+          "path": "/api/v1/offers",
+          "status": 200
+        },
+        {
+          "step": "9-navigation-locales-logout",
+          "method": "GET",
+          "path": "/api/v1/loans",
+          "status": 200
+        },
+        {
+          "step": "9-navigation-locales-logout",
+          "method": "GET",
+          "path": "/api/v1/offers",
+          "status": 200
+        },
+        {
+          "step": "9-navigation-locales-logout",
+          "method": "POST",
+          "path": "/api/v1/affordability/stress",
+          "status": 200
+        },
+        {
+          "step": "9-navigation-locales-logout",
+          "method": "POST",
+          "path": "/api/v1/affordability/stress",
+          "status": 200
+        }
+      ],
+      "screenshot": "mobile-9-navigation-locales-logout.png",
+      "overflow": {
+        "width": 390,
+        "scroll": 390
+      }
+    }
+  ],
+  "bugs": [],
+  "desktop_console_errors": [
+    {
+      "step": "3-locked-pdf",
+      "type": "console",
+      "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+      "url": "http://127.0.0.1:15173/api/v1/statements"
+    }
+  ],
+  "desktop_network": [
+    {
+      "step": "1-landing",
+      "method": "GET",
+      "path": "/api/v1/health",
+      "status": 200
+    },
+    {
+      "step": "1-landing",
+      "method": "GET",
+      "path": "/api/v1/fairness/report",
+      "status": 200
+    },
+    {
+      "step": "1-landing",
+      "method": "GET",
+      "path": "/api/v1/fairness/report",
+      "status": 200
+    },
+    {
+      "step": "2-login-consent",
+      "method": "POST",
+      "path": "/api/v1/auth/otp/request",
+      "status": 200
+    },
+    {
+      "step": "2-login-consent",
+      "method": "POST",
+      "path": "/api/v1/auth/otp/verify",
+      "status": 200
+    },
+    {
+      "step": "2-login-consent",
+      "method": "PATCH",
+      "path": "/api/v1/me",
+      "status": 200
+    },
+    {
+      "step": "2-login-consent",
+      "method": "GET",
+      "path": "/api/v1/me",
+      "status": 200
+    },
+    {
+      "step": "2-login-consent",
+      "method": "POST",
+      "path": "/api/v1/consents",
+      "status": 200
+    },
+    {
+      "step": "3-locked-pdf",
+      "method": "POST",
+      "path": "/api/v1/statements",
+      "status": 400
+    },
+    {
+      "step": "3-locked-pdf",
+      "method": "POST",
+      "path": "/api/v1/statements",
+      "status": 200
+    },
+    {
+      "step": "3-locked-pdf",
+      "method": "GET",
+      "path": "/api/v1/transactions",
+      "status": 200
+    },
+    {
+      "step": "3-locked-pdf",
+      "method": "GET",
+      "path": "/api/v1/transactions",
+      "status": 200
+    },
+    {
+      "step": "4-review-recategorize",
+      "method": "PATCH",
+      "path": "/api/v1/transactions/065f04ca1b6f7b94000118b952762b3b",
+      "status": 200
+    },
+    {
+      "step": "5-dashboard",
+      "method": "GET",
+      "path": "/api/v1/loans",
+      "status": 200
+    },
+    {
+      "step": "5-dashboard",
+      "method": "GET",
+      "path": "/api/v1/scores/latest",
+      "status": 200
+    },
+    {
+      "step": "5-dashboard",
+      "method": "GET",
+      "path": "/api/v1/loans",
+      "status": 200
+    },
+    {
+      "step": "5-dashboard",
+      "method": "GET",
+      "path": "/api/v1/scores/latest",
+      "status": 200
+    },
+    {
+      "step": "5-dashboard",
+      "method": "GET",
+      "path": "/api/v1/offers",
+      "status": 200
+    },
+    {
+      "step": "5-dashboard",
+      "method": "GET",
+      "path": "/api/v1/offers",
+      "status": 200
+    },
+    {
+      "step": "5-dashboard",
+      "method": "POST",
+      "path": "/api/v1/affordability/stress",
+      "status": 200
+    },
+    {
+      "step": "5-dashboard",
+      "method": "POST",
+      "path": "/api/v1/affordability/stress",
+      "status": 200
+    },
+    {
+      "step": "5-dashboard",
+      "method": "POST",
+      "path": "/api/v1/scores/what-if",
+      "status": 200
+    },
+    {
+      "step": "6-loan-offers",
+      "method": "GET",
+      "path": "/api/v1/affordability",
+      "status": 200
+    },
+    {
+      "step": "6-loan-offers",
+      "method": "GET",
+      "path": "/api/v1/affordability",
+      "status": 200
+    },
+    {
+      "step": "6-loan-offers",
+      "method": "GET",
+      "path": "/api/v1/offers",
+      "status": 200
+    },
+    {
+      "step": "7-risk-graph",
+      "method": "POST",
+      "path": "/api/v1/affordability/stress",
+      "status": 200
+    },
+    {
+      "step": "7-risk-graph",
+      "method": "POST",
+      "path": "/api/v1/affordability/stress",
+      "status": 200
+    },
+    {
+      "step": "7-risk-graph",
+      "method": "POST",
+      "path": "/api/v1/affordability/stress",
+      "status": 200
+    },
+    {
+      "step": "7-risk-graph",
+      "method": "POST",
+      "path": "/api/v1/affordability/stress",
+      "status": 200
+    },
+    {
+      "step": "7-risk-graph",
+      "method": "POST",
+      "path": "/api/v1/affordability/stress",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "POST",
+      "path": "/api/v1/offers/577e2614d5854aa494dcd349e790b9d7/accept",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "GET",
+      "path": "/api/v1/loans",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "GET",
+      "path": "/api/v1/loans",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "GET",
+      "path": "/api/v1/reminders",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "GET",
+      "path": "/api/v1/reminders",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "GET",
+      "path": "/api/v1/health",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "POST",
+      "path": "/api/v1/demo/advance-clock",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "GET",
+      "path": "/api/v1/loans",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "POST",
+      "path": "/api/v1/demo/advance-clock",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "GET",
+      "path": "/api/v1/reminders",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "GET",
+      "path": "/api/v1/loans",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "GET",
+      "path": "/api/v1/reminders",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "POST",
+      "path": "/api/v1/demo/advance-clock",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "GET",
+      "path": "/api/v1/loans",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "GET",
+      "path": "/api/v1/reminders",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "POST",
+      "path": "/api/v1/demo/advance-clock",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "GET",
+      "path": "/api/v1/loans",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "GET",
+      "path": "/api/v1/reminders",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "POST",
+      "path": "/api/v1/demo/advance-clock",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "GET",
+      "path": "/api/v1/loans",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "GET",
+      "path": "/api/v1/reminders",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "POST",
+      "path": "/api/v1/demo/advance-clock",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "GET",
+      "path": "/api/v1/loans",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "GET",
+      "path": "/api/v1/reminders",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "POST",
+      "path": "/api/v1/demo/advance-clock",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "GET",
+      "path": "/api/v1/loans",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "GET",
+      "path": "/api/v1/reminders",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "POST",
+      "path": "/api/v1/repayments/a7d9dd47fb7742f4b4c0319b009b24e7/pay",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "GET",
+      "path": "/api/v1/loans",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "GET",
+      "path": "/api/v1/reminders",
+      "status": 200
+    },
+    {
+      "step": "9-navigation-locales-logout",
+      "method": "GET",
+      "path": "/api/v1/scores/latest",
+      "status": 200
+    },
+    {
+      "step": "9-navigation-locales-logout",
+      "method": "GET",
+      "path": "/api/v1/loans",
+      "status": 200
+    },
+    {
+      "step": "9-navigation-locales-logout",
+      "method": "GET",
+      "path": "/api/v1/scores/latest",
+      "status": 200
+    },
+    {
+      "step": "9-navigation-locales-logout",
+      "method": "GET",
+      "path": "/api/v1/loans",
+      "status": 200
+    },
+    {
+      "step": "9-navigation-locales-logout",
+      "method": "GET",
+      "path": "/api/v1/offers",
+      "status": 200
+    },
+    {
+      "step": "9-navigation-locales-logout",
+      "method": "GET",
+      "path": "/api/v1/offers",
+      "status": 200
+    },
+    {
+      "step": "9-navigation-locales-logout",
+      "method": "GET",
+      "path": "/api/v1/transactions",
+      "status": 200
+    },
+    {
+      "step": "9-navigation-locales-logout",
+      "method": "GET",
+      "path": "/api/v1/transactions",
+      "status": 200
+    },
+    {
+      "step": "9-navigation-locales-logout",
+      "method": "GET",
+      "path": "/api/v1/scores/latest",
+      "status": 200
+    },
+    {
+      "step": "9-navigation-locales-logout",
+      "method": "GET",
+      "path": "/api/v1/loans",
+      "status": 200
+    },
+    {
+      "step": "9-navigation-locales-logout",
+      "method": "GET",
+      "path": "/api/v1/scores/latest",
+      "status": 200
+    },
+    {
+      "step": "9-navigation-locales-logout",
+      "method": "GET",
+      "path": "/api/v1/loans",
+      "status": 200
+    },
+    {
+      "step": "9-navigation-locales-logout",
+      "method": "GET",
+      "path": "/api/v1/offers",
+      "status": 200
+    },
+    {
+      "step": "9-navigation-locales-logout",
+      "method": "GET",
+      "path": "/api/v1/offers",
+      "status": 200
+    },
+    {
+      "step": "9-navigation-locales-logout",
+      "method": "POST",
+      "path": "/api/v1/affordability/stress",
+      "status": 200
+    },
+    {
+      "step": "9-navigation-locales-logout",
+      "method": "POST",
+      "path": "/api/v1/affordability/stress",
+      "status": 200
+    }
+  ],
+  "mobile_console_errors": [
+    {
+      "step": "3-locked-pdf",
+      "type": "console",
+      "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+      "url": "http://127.0.0.1:15173/api/v1/statements"
+    }
+  ],
+  "mobile_network": [
+    {
+      "step": "1-landing",
+      "method": "GET",
+      "path": "/api/v1/health",
+      "status": 200
+    },
+    {
+      "step": "1-landing",
+      "method": "GET",
+      "path": "/api/v1/fairness/report",
+      "status": 200
+    },
+    {
+      "step": "1-landing",
+      "method": "GET",
+      "path": "/api/v1/fairness/report",
+      "status": 200
+    },
+    {
+      "step": "2-login-consent",
+      "method": "POST",
+      "path": "/api/v1/auth/otp/request",
+      "status": 200
+    },
+    {
+      "step": "2-login-consent",
+      "method": "POST",
+      "path": "/api/v1/auth/otp/verify",
+      "status": 200
+    },
+    {
+      "step": "2-login-consent",
+      "method": "PATCH",
+      "path": "/api/v1/me",
+      "status": 200
+    },
+    {
+      "step": "2-login-consent",
+      "method": "GET",
+      "path": "/api/v1/me",
+      "status": 200
+    },
+    {
+      "step": "2-login-consent",
+      "method": "POST",
+      "path": "/api/v1/consents",
+      "status": 200
+    },
+    {
+      "step": "3-locked-pdf",
+      "method": "POST",
+      "path": "/api/v1/statements",
+      "status": 400
+    },
+    {
+      "step": "3-locked-pdf",
+      "method": "POST",
+      "path": "/api/v1/statements",
+      "status": 200
+    },
+    {
+      "step": "3-locked-pdf",
+      "method": "GET",
+      "path": "/api/v1/transactions",
+      "status": 200
+    },
+    {
+      "step": "3-locked-pdf",
+      "method": "GET",
+      "path": "/api/v1/transactions",
+      "status": 200
+    },
+    {
+      "step": "4-review-recategorize",
+      "method": "PATCH",
+      "path": "/api/v1/transactions/065f04cb329ba938000118810908dfcb",
+      "status": 200
+    },
+    {
+      "step": "5-dashboard",
+      "method": "GET",
+      "path": "/api/v1/scores/latest",
+      "status": 200
+    },
+    {
+      "step": "5-dashboard",
+      "method": "GET",
+      "path": "/api/v1/loans",
+      "status": 200
+    },
+    {
+      "step": "5-dashboard",
+      "method": "GET",
+      "path": "/api/v1/scores/latest",
+      "status": 200
+    },
+    {
+      "step": "5-dashboard",
+      "method": "GET",
+      "path": "/api/v1/loans",
+      "status": 200
+    },
+    {
+      "step": "5-dashboard",
+      "method": "GET",
+      "path": "/api/v1/offers",
+      "status": 200
+    },
+    {
+      "step": "5-dashboard",
+      "method": "GET",
+      "path": "/api/v1/offers",
+      "status": 200
+    },
+    {
+      "step": "5-dashboard",
+      "method": "POST",
+      "path": "/api/v1/affordability/stress",
+      "status": 200
+    },
+    {
+      "step": "5-dashboard",
+      "method": "POST",
+      "path": "/api/v1/affordability/stress",
+      "status": 200
+    },
+    {
+      "step": "5-dashboard",
+      "method": "POST",
+      "path": "/api/v1/scores/what-if",
+      "status": 200
+    },
+    {
+      "step": "6-loan-offers",
+      "method": "GET",
+      "path": "/api/v1/affordability",
+      "status": 200
+    },
+    {
+      "step": "6-loan-offers",
+      "method": "GET",
+      "path": "/api/v1/affordability",
+      "status": 200
+    },
+    {
+      "step": "6-loan-offers",
+      "method": "GET",
+      "path": "/api/v1/offers",
+      "status": 200
+    },
+    {
+      "step": "7-risk-graph",
+      "method": "POST",
+      "path": "/api/v1/affordability/stress",
+      "status": 200
+    },
+    {
+      "step": "7-risk-graph",
+      "method": "POST",
+      "path": "/api/v1/affordability/stress",
+      "status": 200
+    },
+    {
+      "step": "7-risk-graph",
+      "method": "POST",
+      "path": "/api/v1/affordability/stress",
+      "status": 200
+    },
+    {
+      "step": "7-risk-graph",
+      "method": "GET",
+      "path": "/api/v1/health",
+      "status": 200
+    },
+    {
+      "step": "7-risk-graph",
+      "method": "POST",
+      "path": "/api/v1/affordability/stress",
+      "status": 200
+    },
+    {
+      "step": "7-risk-graph",
+      "method": "POST",
+      "path": "/api/v1/affordability/stress",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "POST",
+      "path": "/api/v1/offers/23f15d0180634783accad6ed2fe03cb0/accept",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "GET",
+      "path": "/api/v1/loans",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "GET",
+      "path": "/api/v1/loans",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "GET",
+      "path": "/api/v1/reminders",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "GET",
+      "path": "/api/v1/reminders",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "POST",
+      "path": "/api/v1/demo/advance-clock",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "GET",
+      "path": "/api/v1/loans",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "GET",
+      "path": "/api/v1/reminders",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "POST",
+      "path": "/api/v1/demo/advance-clock",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "GET",
+      "path": "/api/v1/loans",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "GET",
+      "path": "/api/v1/reminders",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "POST",
+      "path": "/api/v1/demo/advance-clock",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "GET",
+      "path": "/api/v1/loans",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "GET",
+      "path": "/api/v1/reminders",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "POST",
+      "path": "/api/v1/demo/advance-clock",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "GET",
+      "path": "/api/v1/loans",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "GET",
+      "path": "/api/v1/reminders",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "POST",
+      "path": "/api/v1/demo/advance-clock",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "GET",
+      "path": "/api/v1/loans",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "GET",
+      "path": "/api/v1/reminders",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "POST",
+      "path": "/api/v1/demo/advance-clock",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "GET",
+      "path": "/api/v1/loans",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "GET",
+      "path": "/api/v1/reminders",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "POST",
+      "path": "/api/v1/demo/advance-clock",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "GET",
+      "path": "/api/v1/loans",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "GET",
+      "path": "/api/v1/reminders",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "POST",
+      "path": "/api/v1/repayments/4c7e103f50f4401ca3308b622dd51061/pay",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "GET",
+      "path": "/api/v1/loans",
+      "status": 200
+    },
+    {
+      "step": "8-accept-remind-pay",
+      "method": "GET",
+      "path": "/api/v1/reminders",
+      "status": 200
+    },
+    {
+      "step": "9-navigation-locales-logout",
+      "method": "GET",
+      "path": "/api/v1/scores/latest",
+      "status": 200
+    },
+    {
+      "step": "9-navigation-locales-logout",
+      "method": "GET",
+      "path": "/api/v1/loans",
+      "status": 200
+    },
+    {
+      "step": "9-navigation-locales-logout",
+      "method": "GET",
+      "path": "/api/v1/scores/latest",
+      "status": 200
+    },
+    {
+      "step": "9-navigation-locales-logout",
+      "method": "GET",
+      "path": "/api/v1/loans",
+      "status": 200
+    },
+    {
+      "step": "9-navigation-locales-logout",
+      "method": "GET",
+      "path": "/api/v1/offers",
+      "status": 200
+    },
+    {
+      "step": "9-navigation-locales-logout",
+      "method": "GET",
+      "path": "/api/v1/offers",
+      "status": 200
+    },
+    {
+      "step": "9-navigation-locales-logout",
+      "method": "POST",
+      "path": "/api/v1/affordability/stress",
+      "status": 200
+    },
+    {
+      "step": "9-navigation-locales-logout",
+      "method": "POST",
+      "path": "/api/v1/affordability/stress",
+      "status": 200
+    },
+    {
+      "step": "9-navigation-locales-logout",
+      "method": "GET",
+      "path": "/api/v1/transactions",
+      "status": 200
+    },
+    {
+      "step": "9-navigation-locales-logout",
+      "method": "GET",
+      "path": "/api/v1/transactions",
+      "status": 200
+    },
+    {
+      "step": "9-navigation-locales-logout",
+      "method": "GET",
+      "path": "/api/v1/scores/latest",
+      "status": 200
+    },
+    {
+      "step": "9-navigation-locales-logout",
+      "method": "GET",
+      "path": "/api/v1/loans",
+      "status": 200
+    },
+    {
+      "step": "9-navigation-locales-logout",
+      "method": "GET",
+      "path": "/api/v1/scores/latest",
+      "status": 200
+    },
+    {
+      "step": "9-navigation-locales-logout",
+      "method": "GET",
+      "path": "/api/v1/offers",
+      "status": 200
+    },
+    {
+      "step": "9-navigation-locales-logout",
+      "method": "GET",
+      "path": "/api/v1/loans",
+      "status": 200
+    },
+    {
+      "step": "9-navigation-locales-logout",
+      "method": "GET",
+      "path": "/api/v1/offers",
+      "status": 200
+    },
+    {
+      "step": "9-navigation-locales-logout",
+      "method": "POST",
+      "path": "/api/v1/affordability/stress",
+      "status": 200
+    },
+    {
+      "step": "9-navigation-locales-logout",
+      "method": "POST",
+      "path": "/api/v1/affordability/stress",
+      "status": 200
+    }
+  ],
+  "unexpected_console_errors": [],
+  "passed": true
+}

@@ -1,5 +1,30 @@
 # Rajat: Scoring engine, statement parsing, loan maths and demo data
 
+## Current final integration (30 October 2026)
+
+`RAJAT_REMAINING.md` is the active handoff and supersedes the older branch/ownership
+workflow below. Work is now on `integration/final`; pull/rebase that same branch
+before every push. No PR is requested. New worker UI ownership follows that handoff.
+
+- [x] R1: both specified branches merged without conflicts; 311 backend tests pass;
+  sample check and pipeline verification exit 0; npm ci, check-i18n and build pass;
+  attribution hook updated and tested; integration/final pushed.
+- [x] R2: visible mock badge/one warning, real backend health banner and recovery,
+  no client fallback; ignored local development environment uses real mode.
+- [x] R3 automated: desktop/mobile worker upload through loan payment; 284 review
+  rows; approximate tips; working mobile review/logout; offer race and resumed
+  consent fixes. Screenshots and executable acceptance evidence are in
+  data/browser_acceptance/. Automated Hindi flow also checked.
+- [x] R4: requested v2.1 limitations and judge answer documented; no engine changes.
+- [ ] R3 manual / R5: human Hindi walkthrough and rehearsal with Sanskar are in
+  progress per Rajat; no passed confirmation yet.
+- [ ] R6: main/v1.0 release must wait for successful human rehearsal confirmation
+  and final release checks. Keep pushing integration/final only until then.
+
+See RAJAT_FINAL_REPORT.md for owner follow-ups and exact evidence. Earlier scoring
+verification and build/night instructions below are historical.
+
+
 ## Active verification handoff (30 October 2026)
 
 The dated handoff `RAJAT_REMAINING_WORK.md` supersedes the historical build/night

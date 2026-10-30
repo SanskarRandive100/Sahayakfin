@@ -1,0 +1,35 @@
+[
+  {
+    "name": "explicit mock mode",
+    "status": "PASS",
+    "warnings": 1,
+    "real_api_requests": 0,
+    "badge_pages": [
+      "landing",
+      "language",
+      "login"
+    ]
+  },
+  {
+    "name": "backend outage and recovery",
+    "status": "PASS",
+    "failed_health": "503 injected for guard only",
+    "no_mock_fallback": true,
+    "login_error_visible": true,
+    "retry_recovers": true
+  },
+  {
+    "name": "offer request ordering and controls",
+    "status": "PASS",
+    "latest_request_paise": 1500000,
+    "old_response_delayed_ms": 1000,
+    "quick_amounts": [
+      500000,
+      1000000,
+      1500000
+    ],
+    "invalid_zero": "visible error",
+    "cancel": "dialog closed",
+    "all_payloads": "actual backend responses"
+  }
+]
