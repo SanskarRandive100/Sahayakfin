@@ -25,7 +25,7 @@ export default function CategorySheet({
             <button
               key={c}
               onClick={() => onPick(c)}
-              className={`flex flex-col items-center gap-1 rounded-xl border p-2 min-h-[72px] ${active ? 'border-brand bg-teal-50' : 'border-line'}`}
+              className={`flex flex-col items-center gap-1 rounded-btn border p-2 min-h-[72px] ${active ? 'border-brand bg-brand-50' : 'border-line'}`}
             >
               <span className="w-9 h-9 rounded-full flex items-center justify-center" style={{ background: s.bg, color: s.color }}>
                 <Icon className="w-5 h-5" />

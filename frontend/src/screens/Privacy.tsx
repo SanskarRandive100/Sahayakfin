@@ -130,7 +130,7 @@ export default function Privacy() {
             <label key={l.id} className="flex items-center justify-between py-2 min-h-[48px]">
               <span className="text-sm">{l.name}</span>
               <input type="checkbox" role="switch" checked={!!shares[l.id]} disabled={!!sharing || consent?.status !== 'ACTIVE'} onChange={() => toggle(l)}
-                className="w-11 h-11 accent-teal-700 disabled:opacity-50" aria-label={l.name} />
+                className="w-11 h-11 accent-brand disabled:opacity-50" aria-label={l.name} />
             </label>
           ))}
         </Card>
@@ -161,7 +161,7 @@ export default function Privacy() {
               {user?.phone_masked && <div className="text-xs text-muted">{user.phone_masked}</div>}
             </div>
             <button onClick={() => { logout(); navigate('/', { replace: true }) }}
-              className="inline-flex items-center gap-2 min-h-11 px-4 rounded-xl border border-line text-sm font-semibold hover:bg-slate-50">
+              className="inline-flex items-center gap-2 min-h-11 px-4 rounded-btn border border-line text-sm font-semibold hover:bg-slate-50">
               <LogOut className="w-4 h-4" />{t('account.logout')}
             </button>
           </div>

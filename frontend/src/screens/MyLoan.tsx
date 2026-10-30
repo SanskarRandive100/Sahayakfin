@@ -53,7 +53,7 @@ export default function MyLoan() {
           <>
             <Card>
               <div className="text-sm text-muted">{loanLender(loan)}</div>
-              <div className="text-3xl font-bold mt-1">{formatINR(loan.principal_paise)}</div>
+              <div className="text-3xl font-semibold mt-1">{formatINR(loan.principal_paise)}</div>
               <div className="flex justify-between mt-3 text-sm">
                 <div>
                   <div className="text-muted">{t('screen.myLoan.weekly')}</div>
@@ -69,7 +69,7 @@ export default function MyLoan() {
             </Card>
             <Card><RepaymentTimeline rows={loan.schedule} /></Card>
             <ReminderChat items={reminders} />
-            <button onClick={nextDay} className="w-full h-11 rounded-xl border border-line bg-white text-sm font-medium">
+            <button onClick={nextDay} className="w-full h-11 rounded-btn border border-line bg-white text-sm font-medium">
               ⏩ {t('screen.myLoan.nextDay')}
             </button>
             <ScheduleList rows={loan.schedule} onPay={pay} payingId={payingId} />

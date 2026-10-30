@@ -12,18 +12,18 @@ export default function WizardLayout() {
   const { token, user } = useSession()
   const dashboard = user?.role === 'LENDER' ? '/lender' : '/app/dashboard'
   return (
-    <div className="min-h-screen bg-gradient-to-b from-brand-50 to-bg flex flex-col items-center px-4 py-8">
+    <div className="min-h-screen bg-paper flex flex-col items-center px-4 py-8">
       <div className="w-full max-w-[560px] flex items-center justify-between gap-3 mb-6">
         <Link to="/" className="inline-flex min-h-11 items-center text-sm font-semibold text-brand hover:underline">{t('nav12.home')}</Link>
-        <Link to="/" className="text-xl font-bold text-brand">Sahayak<span className="text-ink">Fin</span></Link>
+        <Link to="/" className="inline-flex items-center gap-2 text-xl font-semibold text-ink"><span className="w-2.5 h-2.5 rounded-sm bg-terracotta" aria-hidden />Sahayak<span className="text-brand">Fin</span></Link>
         {token ? (
-          <Link to={dashboard} className="inline-flex min-h-11 items-center px-3 rounded-xl bg-brand text-white text-sm font-semibold hover:bg-brand-800">{t('nav12.goDashboard')}</Link>
+          <Link to={dashboard} className="inline-flex min-h-11 items-center px-3 rounded-btn bg-brand text-white text-sm font-semibold hover:bg-brand-800">{t('nav12.goDashboard')}</Link>
         ) : <span className="w-16" aria-hidden="true" />}
       </div>
       <ol className="flex items-center gap-2 mb-6 w-full max-w-[560px]" aria-label="Steps">
         {STEPS.map((s, i) => (
           <li key={s} className="flex-1 flex flex-col items-center gap-1" aria-current={i === current ? 'step' : undefined}>
-            <span className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold border-2 ${
+            <span className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold border ${
               i < current ? 'bg-brand border-brand text-white' : i === current ? 'border-brand text-brand bg-white' : 'border-line text-muted bg-white'}`}>
               {i < current ? <Check className="w-4 h-4" /> : i + 1}
             </span>

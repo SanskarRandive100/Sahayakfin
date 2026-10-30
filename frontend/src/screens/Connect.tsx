@@ -74,7 +74,7 @@ export default function Connect() {
             onChange={(e) => { pick(e.target.files?.[0] ?? null); e.target.value = '' }}
           />
           {file ? (
-            <div className="flex items-center gap-3 border border-line rounded-xl p-3">
+            <div className="flex items-center gap-3 border border-line rounded-btn p-3">
               <FileText className="w-6 h-6 text-brand flex-shrink-0" />
               <div className="min-w-0 flex-1">
                 <div className="text-sm font-semibold truncate">{file.name}</div>
@@ -82,7 +82,7 @@ export default function Connect() {
               </div>
               <button type="button" aria-label={t('screen.connect.remove')} title={t('screen.connect.remove')}
                 onClick={() => pick(null)}
-                className="w-10 h-10 inline-flex items-center justify-center rounded-full hover:bg-gray-100">
+                className="w-10 h-10 inline-flex items-center justify-center rounded-full hover:bg-tint">
                 <X className="w-5 h-5" />
               </button>
             </div>
@@ -94,7 +94,7 @@ export default function Connect() {
               onDragEnter={(e) => { e.preventDefault(); setDrag(true) }}
               onDragLeave={() => setDrag(false)}
               onDrop={(e) => { e.preventDefault(); setDrag(false); pick(e.dataTransfer.files?.[0] ?? null) }}
-              className={`w-full border-2 border-dashed rounded-xl py-8 px-4 text-sm flex flex-col items-center gap-2 transition-colors ${drag ? 'border-brand bg-teal-50 text-brand' : 'border-line text-muted hover:bg-gray-50'}`}
+              className={`w-full border-2 border-dashed rounded-btn py-8 px-4 text-sm flex flex-col items-center gap-2 transition-colors ${drag ? 'border-brand bg-brand-50 text-brand' : 'border-line text-muted hover:bg-tint'}`}
             >
               <UploadCloud className="w-8 h-8" />
               <span className="font-medium">{t('screen.connect.dropHint')}</span>
@@ -106,7 +106,7 @@ export default function Connect() {
               <input
                 type="password" value={password} onChange={(e) => setPassword(e.target.value)}
                 placeholder={t('screen.connect.password')}
-                className="w-full h-[52px] rounded-xl border border-line px-4"
+                className="w-full h-[52px] rounded-btn border border-line px-4"
               />
               <p className="text-xs text-muted mt-1">{t('screen.connect.passwordHint')}</p>
             </div>

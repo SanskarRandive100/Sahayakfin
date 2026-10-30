@@ -19,7 +19,7 @@ export default function ReminderChat({ items }: { items: Reminder[] }) {
   return (
     <div className="rounded-card overflow-hidden border border-line bg-[#efeae2]">
       <div className="flex items-center gap-2 bg-brand text-white px-3 py-2">
-        <div className="w-8 h-8 rounded-full bg-green-400 flex items-center justify-center font-bold text-sm">S</div>
+        <div className="w-8 h-8 rounded-full bg-green-400 flex items-center justify-center font-semibold text-sm">S</div>
         <div className="text-sm font-semibold">{t('reminder.header')}</div>
       </div>
       <div className="p-3 space-y-2 min-h-[80px]">

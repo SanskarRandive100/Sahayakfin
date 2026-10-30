@@ -82,7 +82,7 @@ export default function Loans() {
             inputMode="numeric"
             value={requested / 100}
             onChange={(e) => setRequested(Math.max(0, Number(e.target.value.replace(/\D/g, '')) * 100))}
-            className="w-full h-[52px] rounded-xl border border-line px-4 text-xl font-semibold"
+            className="w-full h-[52px] rounded-btn border border-line px-4 text-xl font-semibold"
             aria-label={t('screen.loans.need')}
           />
           <div className="flex gap-2 mt-3">
@@ -136,7 +136,7 @@ export default function Loans() {
                         <div className="text-sm mt-2">{t('kfs.receive')}: <b>{formatINR(s.kfs.net_disbursed_paise)}</b></div>
                         <div className="text-sm">{t('kfs.payLine', { amount: formatINR(s.kfs.instalment_paise), weeks: s.weeks })}</div>
                         <div className="text-sm">{t('kfs.total')}: <b>{formatINR(s.kfs.total_repayable_paise)}</b> · APR {s.kfs.apr_pct}%</div>
-                        <div className={`mt-3 rounded-xl p-3 text-sm ${amber ? 'bg-amber-50 border border-amber-200 text-amber-900' : 'bg-red-50 border border-red-200 text-red-900'}`}>
+                        <div className={`mt-3 rounded-btn p-3 text-sm ${amber ? 'bg-amber-50 border border-amber-200 text-amber-900' : 'bg-red-50 border border-red-200 text-red-900'}`}>
                           <div className="font-semibold mb-1">{t('loansV11.risksTitle')}</div>
                           <ul className="list-disc pl-5 space-y-0.5">
                             {s.risk.weekly_over_safe_paise > 0 && <li>{t('loansV11.riskOver', { amount: formatINR(s.risk.weekly_over_safe_paise) })}</li>}
@@ -144,7 +144,7 @@ export default function Loans() {
                             <li>{t('loansV11.riskLate', { fee: formatINR(s.kfs.late_fee_paise || 5000) })}</li>
                           </ul>
                         </div>
-                        <button className="mt-3 w-full h-11 rounded-xl border border-line font-semibold"
+                        <button className="mt-3 w-full h-11 rounded-btn border border-line font-semibold"
                           onClick={() => toast.show(t('loansV11.requestSent', { lender: s.lender.name }), 'success')}>
                           {t('loansV11.requestApproval')}
                         </button>

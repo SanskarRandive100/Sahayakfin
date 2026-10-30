@@ -28,15 +28,15 @@ export default function FairnessLab() {
   const arjun = data?.personas.find((p) => p.name.split(' ')[0] === 'Arjun')
 
   return (
-    <div className="min-h-screen bg-bg">
-      <header className="bg-brand-900 text-white">
-        <div className="max-w-[1200px] mx-auto h-16 px-4 flex items-center justify-between">
-          <Link to="/" className="text-xl font-bold min-h-11 inline-flex items-center">Sahayak<span className="text-brand-100">Fin</span></Link>
+    <div className="min-h-screen bg-paper">
+      <header className="bg-white border-b border-line">
+        <div className="max-w-[1160px] mx-auto h-16 px-4 flex items-center justify-between">
+          <Link to="/" className="text-xl font-semibold min-h-11 inline-flex items-center gap-2"><span className="w-2.5 h-2.5 rounded-sm bg-terracotta" aria-hidden />Sahayak<span className="text-brand">Fin</span></Link>
           <LanguageSwitch />
         </div>
       </header>
-      <div className="max-w-[1200px] mx-auto p-4 md:p-8 space-y-8">
-        <h1 className="text-[26px] md:text-[32px] font-bold">{t('screen.fairness.title')}</h1>
+      <div className="max-w-[1160px] mx-auto p-4 md:p-8 space-y-8">
+        <h1 className="font-display text-[28px] md:text-[36px]">{t('screen.fairness.title')}</h1>
         {error && <ErrorBanner onRetry={load}>{error}</ErrorBanner>}
         {!data && !error && <Skeleton className="h-48 w-full" />}
         {data && (
@@ -46,7 +46,7 @@ export default function FairnessLab() {
                 <Reveal key={p.name} delay={i * 0.06} className="bg-white rounded-card border border-line shadow-card p-5">
                   <div className="font-semibold">{p.name}</div>
                   <div className="text-xs text-muted">{t('screen.fairness.income', { amount: formatINR(p.monthly_income_paise) })}</div>
-                  <div className="text-5xl font-bold mt-3" style={{ color: bandColor[p.band] }}>{p.score}</div>
+                  <div className="font-display text-5xl mt-3" style={{ color: bandColor[p.band] }}>{p.score}</div>
                   <div className="text-sm font-semibold" style={{ color: bandColor[p.band] }}>{t(`band.${p.band}`)}</div>
                   <div className="text-xs text-muted mt-1">{t(`screen.lender.conf.${p.confidence}`)}{p.confidence === 'LOW' && <> · {t('confidence.provisional')}</>}</div>
                 </Reveal>
@@ -64,7 +64,7 @@ export default function FairnessLab() {
                     {[sunita, arjun].map((p) => (
                       <div key={p.name}>
                         <div className="text-sm text-muted">{p.name} · {formatINR(p.monthly_income_paise)}</div>
-                        <div className="text-6xl font-bold" style={{ color: bandColor[p.band] }}>{p.score}</div>
+                        <div className="text-6xl font-semibold" style={{ color: bandColor[p.band] }}>{p.score}</div>
                       </div>
                     ))}
                   </div>

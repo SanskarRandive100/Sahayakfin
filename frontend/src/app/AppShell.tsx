@@ -24,44 +24,44 @@ export default function AppShell() {
   const reduce = useReducedMotion()
   return (
     <div className="min-h-screen bg-bg md:flex [&_button]:min-h-11 [&_a]:min-h-11">
-      <aside className="hidden md:flex md:w-[72px] lg:w-[240px] flex-shrink-0 flex-col bg-brand-900 text-white sticky top-0 h-screen">
-        <NavLink to="/" className="h-16 flex items-center px-5 text-lg font-bold tracking-tight">
-          <span className="lg:hidden">S</span>
-          <span className="hidden lg:inline">Sahayak<span className="text-brand-100">Fin</span></span>
+      <aside className="hidden md:flex md:w-[72px] lg:w-[240px] flex-shrink-0 flex-col bg-white border-r border-line text-ink sticky top-0 h-screen">
+        <NavLink to="/" className="h-16 flex items-center gap-2 px-5 text-lg font-semibold tracking-tight border-b border-line">
+          <span className="w-2.5 h-2.5 rounded-sm bg-terracotta flex-shrink-0" aria-hidden />
+          <span className="hidden lg:inline">Sahayak<span className="text-brand">Fin</span></span>
         </NavLink>
-        <nav className="flex-1 px-3 space-y-1" aria-label={t('nav.main')}>
+        <nav className="flex-1 px-3 pt-4 space-y-1" aria-label={t('nav.main')}>
           {NAV.map(({ to, icon: Icon, key }) => (
             <NavLink key={to} to={to} title={t(key)}
               className={({ isActive }) =>
-                `flex items-center gap-3 h-11 px-3 rounded-xl text-sm font-medium ${isActive ? 'bg-brand text-white' : 'text-white/80 hover:bg-white/10'}`}>
+                `relative flex items-center gap-3 h-11 px-3 rounded-btn text-sm font-medium transition-colors duration-150 ${isActive ? 'bg-brand-50 text-brand before:absolute before:left-0 before:top-2 before:bottom-2 before:w-0.5 before:rounded-full before:bg-brand' : 'text-ink-2 hover:bg-tint hover:text-ink'}`}>
               <Icon className="w-6 h-6 flex-shrink-0" strokeWidth={1.75} />
               <span className="hidden lg:inline">{t(key)}</span>
             </NavLink>
           ))}
         </nav>
-        <div className="border-t border-white/10 p-3 space-y-2">
+        <div className="border-t border-line p-3 space-y-2">
           {user && (
             <div className="hidden lg:flex items-center gap-3 px-2">
-              <span className="w-9 h-9 rounded-full bg-white/15 flex items-center justify-center text-sm font-semibold" aria-hidden>
+              <span className="w-9 h-9 rounded-full bg-brand-50 text-brand flex items-center justify-center text-sm font-semibold" aria-hidden>
                 {initials(user.display_name)}
               </span>
               <div className="min-w-0">
-                <div className="text-[11px] text-white/60">{t('account.signedInAs')}</div>
+                <div className="text-[11px] text-muted">{t('account.signedInAs')}</div>
                 <div className="text-sm font-semibold truncate">{user.display_name}</div>
               </div>
             </div>
           )}
           <button onClick={() => { logout(); navigate('/', { replace: true }) }} title={t('account.logout')}
-            className="w-full flex items-center gap-3 h-11 px-3 rounded-xl text-sm font-medium text-white/80 hover:bg-white/10">
+            className="w-full flex items-center gap-3 h-11 px-3 rounded-btn text-sm font-medium text-ink-2 hover:bg-tint hover:text-ink">
             <LogOut className="w-5 h-5 flex-shrink-0" strokeWidth={1.75} />
             <span className="hidden lg:inline">{t('account.logout')}</span>
           </button>
-          <div className="hidden lg:block px-2 text-[11px] leading-4 text-white/50">{t('site.footer.proto')}</div>
+          <div className="hidden lg:block px-2 text-[11px] leading-4 text-muted">{t('site.footer.proto')}</div>
         </div>
       </aside>
       <main className="flex-1 min-w-0">
-        <motion.div key={location.pathname} initial={reduce ? false : { opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }} className="max-w-[1200px] mx-auto">
+        <motion.div key={location.pathname} initial={reduce ? false : { opacity: 0 }} animate={{ opacity: 1 }}
+          transition={{ duration: 0.18, ease: 'easeOut' }} className="max-w-[1160px] mx-auto">
           <Outlet />
         </motion.div>
       </main>

@@ -4,7 +4,7 @@ import type { ScoreResult } from '../api/types'
 import Caption from './Caption'
 
 const KEYS = ['income_stability', 'savings_habit', 'bill_discipline', 'expense_health'] as const
-const SHADES = ['#0F766E', '#0F766Ebf', '#0F766E80', '#0F766E4d']
+const SHADES = ['#1D3557', '#1D3557bf', '#1D355780', '#1D35574d']
 
 export default function ContributionBar({ components }: { components: ScoreResult['components'] }) {
   const { t } = useTranslation()
@@ -33,7 +33,7 @@ export default function ContributionBar({ components }: { components: ScoreResul
         {parts.map((p) => (
           <div key={p.k} className="flex items-center gap-2">
             <span className="w-3 h-3 rounded-sm flex-shrink-0"
-              style={p.available ? { background: p.shade } : { border: '1.5px dashed #64748B' }} />
+              style={p.available ? { background: p.shade } : { border: '1.5px dashed #5F6470' }} />
             <span className="truncate">{t(`component.${p.k}.label`)}</span>
             <span className="ml-auto font-semibold whitespace-nowrap">
               {p.available ? `${Math.round(p.pts)}/${Math.round(p.max)}` : t('chart.contribution.notCounted')}

@@ -9,7 +9,7 @@ export default function ComponentBar({ name, c }: { name: string; c: ScoreCompon
         <span>{t(`component.${name}.label`)}</span>
         <span>{c.available ? Math.round(c.value) : '–'}</span>
       </div>
-      <div className="h-2 bg-gray-100 rounded-full mt-1.5 overflow-hidden">
+      <div className="h-2 bg-tint rounded-full mt-1.5 overflow-hidden">
         {c.available && <div className="h-full bg-brand rounded-full" style={{ width: `${Math.max(0, Math.min(100, c.value))}%` }} />}
       </div>
       <div className="text-xs text-muted mt-1">

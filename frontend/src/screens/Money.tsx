@@ -82,7 +82,7 @@ export default function Money() {
             <GoalPlanner goal={goal ?? null} setGoal={setGoal} essential={essential} />
 
             {data.nudges.map((n) => (
-              <Card key={n.code} className="bg-teal-50 border-teal-200">
+              <Card key={n.code} className="bg-brand-50 border-brand">
                 <div className="text-sm">
                   {t(`nudge.${n.code}`, {
                     amount: formatINR(Number(n.params.amount_paise ?? 0)),
@@ -155,16 +155,16 @@ function GoalPlanner({ goal, setGoal, essential }: { goal: Goal | null; setGoal:
           <div className="font-semibold">{t('goalV11.planTitle')}</div>
           <div className="text-xs text-muted">{t('screen.money.suggest', { amount: formatINR(essential) })}</div>
           <label className="block text-sm">{t('screen.money.goalName')}
-            <input value={name} maxLength={40} onChange={(e) => setName(e.target.value)} className="mt-1 w-full h-12 rounded-xl border border-line px-3" />
+            <input value={name} maxLength={40} onChange={(e) => setName(e.target.value)} className="mt-1 w-full h-12 rounded-btn border border-line px-3" />
           </label>
           <label className="block text-sm">{t('screen.money.goalAmount')}
-            <input value={target} inputMode="numeric" onChange={(e) => setTarget(e.target.value)} className="mt-1 w-full h-12 rounded-xl border border-line px-3" />
+            <input value={target} inputMode="numeric" onChange={(e) => setTarget(e.target.value)} className="mt-1 w-full h-12 rounded-btn border border-line px-3" />
           </label>
           <label className="block text-sm">{t('goalV11.byDate')}
-            <input type="date" value={date} min={minDate} onChange={(e) => setDate(e.target.value)} className="mt-1 w-full h-12 rounded-xl border border-line px-3" />
+            <input type="date" value={date} min={minDate} onChange={(e) => setDate(e.target.value)} className="mt-1 w-full h-12 rounded-btn border border-line px-3" />
           </label>
           <label className="block text-sm">{t('goalV11.already')}
-            <input value={already} inputMode="numeric" onChange={(e) => setAlready(e.target.value)} placeholder="0" className="mt-1 w-full h-12 rounded-xl border border-line px-3" />
+            <input value={already} inputMode="numeric" onChange={(e) => setAlready(e.target.value)} placeholder="0" className="mt-1 w-full h-12 rounded-btn border border-line px-3" />
           </label>
           {date < minDate && <div className="text-xs text-red-700">{t('goalV11.dateTooSoon')}</div>}
           <Button onClick={create} loading={saving} disabled={!valid}>{t('screen.money.createGoal')}</Button>
@@ -186,7 +186,7 @@ function GoalPlanner({ goal, setGoal, essential }: { goal: Goal | null; setGoal:
           <span className={`text-xs font-semibold border rounded-full px-2 py-0.5 ${STATUS_STYLE[goal.status]}`}>{t(`goalV11.status.${goal.status}`)}</span>
         )}
       </div>
-      <div className="h-2 rounded-full bg-gray-100 my-2 overflow-hidden" role="progressbar" aria-valuenow={Math.round(pct)} aria-valuemin={0} aria-valuemax={100}>
+      <div className="h-2 rounded-full bg-tint my-2 overflow-hidden" role="progressbar" aria-valuenow={Math.round(pct)} aria-valuemin={0} aria-valuemax={100}>
         <div className="h-full bg-brand" style={{ width: `${pct}%` }} />
       </div>
       <div className="text-sm text-muted">
@@ -194,7 +194,7 @@ function GoalPlanner({ goal, setGoal, essential }: { goal: Goal | null; setGoal:
         {goal.target_date && <> · {t('goalV11.by', { date: fmtDate(goal.target_date) })}</>}
       </div>
       {goal.status === 'NOT_FEASIBLE' && (
-        <div className="mt-2 text-sm rounded-xl border border-red-200 bg-red-50 text-red-900 p-3">
+        <div className="mt-2 text-sm rounded-btn border border-red-200 bg-red-50 text-red-900 p-3">
           {goal.suggested_date && <div>{t('goalV11.suggestDate', { date: fmtDate(goal.suggested_date) })}</div>}
           {goal.suggested_amount_paise != null && <div>{t('goalV11.suggestAmount', { amount: formatINR(goal.suggested_amount_paise) })}</div>}
         </div>
@@ -216,7 +216,7 @@ function GoalPlanner({ goal, setGoal, essential }: { goal: Goal | null; setGoal:
       )}
       <div className="flex gap-2 mt-3">
         <input value={add} inputMode="numeric" onChange={(e) => setAdd(e.target.value)} placeholder={t('goalV11.amountPh')}
-          aria-label={t('goalV11.amountPh')} className="flex-1 h-11 rounded-xl border border-line px-3" />
+          aria-label={t('goalV11.amountPh')} className="flex-1 h-11 rounded-btn border border-line px-3" />
         <Button onClick={contribute} loading={saving} disabled={rupees(add) <= 0}>{t('goalV11.iSaved')}</Button>
       </div>
       <div className="text-xs text-muted mt-2">{t('goalV11.howAdd')}</div>

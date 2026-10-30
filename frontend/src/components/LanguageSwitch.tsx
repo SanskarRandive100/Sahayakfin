@@ -17,7 +17,7 @@ export default function LanguageSwitch() {
           lang={l}
           className={[
             'px-2 h-11 min-w-[44px]',
-            current === l ? 'bg-brand text-white' : 'text-ink hover:bg-gray-50',
+            current === l ? 'bg-brand text-white' : 'text-ink hover:bg-tint',
           ].join(' ')}
         >
           {labels[l]}

@@ -40,14 +40,12 @@ export default function ScoreGauge({ score, band }: { score: number; band: Band 
   return (
     <div className="flex flex-col items-center">
       <svg viewBox={`0 0 ${W} ${H}`} width={W} height={H} role="img" aria-label={`${score} / 100`}>
-        <path d={arc(0, 39)} stroke="#d1d5db" strokeWidth="14" fill="none" opacity="0.5" />
-        <path d={arc(40, 59)} stroke="#fcd34d" strokeWidth="14" fill="none" opacity="0.5" />
-        <path d={arc(60, 79)} stroke="#86efac" strokeWidth="14" fill="none" opacity="0.5" />
-        <path d={arc(80, 100)} stroke="#4ade80" strokeWidth="14" fill="none" opacity="0.5" />
-        {shown > 0 && <path d={arc(0, Math.min(shown, 99.9))} stroke={color} strokeWidth="14" fill="none" strokeLinecap="round" />}
+        <path d={arc(0, 100)} stroke="#EFECE7" strokeWidth="12" fill="none" strokeLinecap="round" />
+        {shown > 0 && <path d={arc(0, Math.min(shown, 99.9))} stroke={color} strokeWidth="12" fill="none" strokeLinecap="round" />}
+        {shown > 0 && (() => { const n = polar(Math.min(shown, 99.9)); return <circle cx={n.x} cy={n.y} r="7" fill="#FFFFFF" stroke="#1D3557" strokeWidth="3" /> })()}
       </svg>
       <div className="-mt-16 text-center">
-        <div className="text-[56px] leading-none font-bold" style={{ color }}>{shown}</div>
+        <div className="font-display text-[56px] leading-none text-brand">{shown}</div>
         <div className="text-base font-semibold mt-1" style={{ color }}>{t(`band.${band}`)}</div>
       </div>
     </div>

@@ -45,7 +45,7 @@ export default function ChartsGallery() {
 
   return (
     <div className="min-h-screen bg-bg p-4 md:p-8">
-      <h1 className="text-2xl font-bold mb-6">Charts gallery</h1>
+      <h1 className="text-2xl font-semibold mb-6">Charts gallery</h1>
       <div className="grid gap-6 lg:grid-cols-2 max-w-[1200px] mx-auto">
         {score && score.score !== null && <Box title="C1 Score gauge"><ScoreGauge score={score.score} band={score.band} /></Box>}
         {score && <Box title="C2 Contribution bar"><ContributionBar components={score.components} /></Box>}

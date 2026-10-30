@@ -4,23 +4,23 @@
 
 @layer base {
   :root {
-    --background: 210 40% 98%;
-    --foreground: 222 47% 11%;
+    --background: 40 23% 98%;
+    --foreground: 222 14% 12%;
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card-foreground: 222 14% 12%;
     --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
-    --primary: 175 77% 26%;
+    --popover-foreground: 222 14% 12%;
+    --primary: 214 50% 23%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 166 76% 97%;
-    --secondary-foreground: 175 77% 26%;
-    --accent: 166 76% 97%;
-    --accent-foreground: 175 77% 26%;
-    --destructive: 355 70% 47%;
+    --secondary: 40 18% 95%;
+    --secondary-foreground: 222 14% 12%;
+    --accent: 213 45% 94%;
+    --accent-foreground: 214 50% 23%;
+    --destructive: 357 72% 47%;
     --destructive-foreground: 0 0% 100%;
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 175 77% 26%;
+    --border: 36 14% 88%;
+    --input: 36 14% 88%;
+    --ring: 214 50% 23%;
     --radius: 0.75rem;
   }
 }
@@ -31,7 +31,7 @@
 
 :root {
   color-scheme: light;
-  font-family: 'Plus Jakarta Sans', 'Noto Sans Devanagari', system-ui, -apple-system, sans-serif;
+  font-family: 'Inter', 'Noto Sans Devanagari', system-ui, -apple-system, sans-serif;
 }
 
 html, body, #root {
@@ -39,8 +39,11 @@ html, body, #root {
 }
 
 body {
-  background-color: #F8FAFC;
-  color: #0F172A; font-variant-numeric: tabular-nums;
+  background-color: #FBFAF8;
+  color: #1A1D23;
+  font-size: 16px;
+  line-height: 1.55;
+  font-variant-numeric: tabular-nums;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -50,14 +53,14 @@ body {
 }
 
 button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
-  outline: 2px solid #0f766e;
+  outline: 2px solid #1D3557;
   outline-offset: 2px;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 @keyframes fadein {
-  from { opacity: 0; transform: translateY(4px); }
-  to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .fade-in {
@@ -68,3 +71,10 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
 input[type=number] { -moz-appearance: textfield; }
+
+.font-display { font-family: 'Source Serif 4', 'Noto Sans Devanagari', Georgia, serif; font-weight: 600; letter-spacing: -0.01em; }
+
+input:not([type=checkbox]):not([type=radio]):not([type=range]):focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px #1D3557;
+}
